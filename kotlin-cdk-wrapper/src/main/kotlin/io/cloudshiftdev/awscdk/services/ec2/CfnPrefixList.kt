@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html)
  */
-public open class CfnPrefixList internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnPrefixList,
+public open class CfnPrefixList(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnPrefixList,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -371,7 +371,7 @@ public open class CfnPrefixList internal constructor(
         CfnPrefixList(cdkObject)
 
     internal fun unwrap(wrapped: CfnPrefixList): software.amazon.awscdk.services.ec2.CfnPrefixList =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnPrefixList
   }
 
   /**
@@ -451,7 +451,7 @@ public open class CfnPrefixList internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnPrefixList.EntryProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnPrefixList.EntryProperty,
     ) : CdkObject(cdkObject), EntryProperty {
       /**
        * The CIDR block.

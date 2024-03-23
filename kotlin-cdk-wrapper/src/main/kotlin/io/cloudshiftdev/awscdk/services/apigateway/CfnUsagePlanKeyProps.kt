@@ -102,7 +102,7 @@ public interface CfnUsagePlanKeyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlanKeyProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlanKeyProps,
   ) : CdkObject(cdkObject), CfnUsagePlanKeyProps {
     /**
      * The Id of the UsagePlanKey resource.

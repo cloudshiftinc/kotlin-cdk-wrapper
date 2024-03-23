@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
  */
-public open class CfnLaunchTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate,
+public open class CfnLaunchTemplate(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -407,7 +407,8 @@ public open class CfnLaunchTemplate internal constructor(
         CfnLaunchTemplate = CfnLaunchTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchTemplate):
-        software.amazon.awscdk.services.ec2.CfnLaunchTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnLaunchTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnLaunchTemplate
   }
 
   /**
@@ -495,8 +496,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty,
     ) : CdkObject(cdkObject), AcceleratorCountProperty {
       /**
        * The maximum number of accelerators.
@@ -619,8 +619,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty,
     ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBProperty {
       /**
        * The maximum amount of accelerator memory, in MiB.
@@ -747,8 +746,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty,
     ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsProperty {
       /**
        * The maximum baseline bandwidth, in Mbps.
@@ -961,8 +959,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty,
     ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
       /**
        * The device name (for example, /dev/sdh or xvdh).
@@ -1153,8 +1150,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty,
     ) : CdkObject(cdkObject), CapacityReservationSpecificationProperty {
       /**
        * Indicates the instance's Capacity Reservation preferences. Possible preferences include:.
@@ -1281,8 +1277,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty,
     ) : CdkObject(cdkObject), CapacityReservationTargetProperty {
       /**
        * The ID of the Capacity Reservation in which to run the instance.
@@ -1442,8 +1437,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty,
     ) : CdkObject(cdkObject), ConnectionTrackingSpecificationProperty {
       /**
        * Timeout (in seconds) for idle TCP connections in an established state.
@@ -1609,8 +1603,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty,
     ) : CdkObject(cdkObject), CpuOptionsProperty {
       /**
        * Indicates whether to enable the instance for AMD SEV-SNP.
@@ -1720,8 +1713,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty,
     ) : CdkObject(cdkObject), CreditSpecificationProperty {
       /**
        * The credit option for CPU usage of a T instance.
@@ -1862,8 +1854,8 @@ public open class CfnLaunchTemplate internal constructor(
      * The volume type.
      *
      * For more information, see [Amazon EBS volume
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-     * Elastic Compute Cloud User Guide* .
+     * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) in the *Amazon
+     * EBS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-volumetype)
      */
@@ -1954,8 +1946,8 @@ public open class CfnLaunchTemplate internal constructor(
       /**
        * @param volumeType The volume type.
        * For more information, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) in the *Amazon
+       * EBS User Guide* .
        */
       public fun volumeType(volumeType: String)
     }
@@ -2063,8 +2055,8 @@ public open class CfnLaunchTemplate internal constructor(
       /**
        * @param volumeType The volume type.
        * For more information, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) in the *Amazon
+       * EBS User Guide* .
        */
       override fun volumeType(volumeType: String) {
         cdkBuilder.volumeType(volumeType)
@@ -2075,7 +2067,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty,
     ) : CdkObject(cdkObject), EbsProperty {
       /**
        * Indicates whether the EBS volume is deleted on instance termination.
@@ -2160,8 +2152,8 @@ public open class CfnLaunchTemplate internal constructor(
        * The volume type.
        *
        * For more information, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) in the *Amazon
+       * EBS User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-volumetype)
        */
@@ -2261,8 +2253,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty,
     ) : CdkObject(cdkObject), ElasticGpuSpecificationProperty {
       /**
        * The type of Elastic Graphics accelerator.
@@ -2422,8 +2413,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty,
     ) : CdkObject(cdkObject), EnaSrdSpecificationProperty {
       /**
        * Indicates whether ENA Express is enabled for the network interface.
@@ -2540,8 +2530,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty,
     ) : CdkObject(cdkObject), EnaSrdUdpSpecificationProperty {
       /**
        * Indicates whether UDP traffic to and from the instance uses ENA Express.
@@ -2646,8 +2635,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnclaveOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnclaveOptionsProperty,
     ) : CdkObject(cdkObject), EnclaveOptionsProperty {
       /**
        * If this parameter is set to `true` , the instance is enabled for AWS Nitro Enclaves;
@@ -2762,8 +2750,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty,
     ) : CdkObject(cdkObject), HibernationOptionsProperty {
       /**
        * If you set this parameter to `true` , the instance is enabled for hibernation.
@@ -2875,8 +2862,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty,
     ) : CdkObject(cdkObject), IamInstanceProfileProperty {
       /**
        * The Amazon Resource Name (ARN) of the instance profile.
@@ -3023,8 +3009,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty,
     ) : CdkObject(cdkObject), InstanceMarketOptionsProperty {
       /**
        * The market type.
@@ -3411,16 +3396,16 @@ public open class CfnLaunchTemplate internal constructor(
      *
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *
-     * To indicate no price protection threshold, specify a high value, such as `999999` .
-     *
      * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
      * is based on the per vCPU or per memory price instead of the per instance price.
      *
      *
      * Only one of `SpotMaxPricePercentageOverLowestPrice` or
      * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify either,
-     * then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter defaults
-     * to `100` .
+     * Amazon EC2 will automatically apply optimal price protection to consistently select from a wide
+     * range of instance types. To indicate no price protection threshold for Spot Instances, meaning
+     * you want to consider all instance types that match your attributes, include one of these
+     * parameters and specify a high value, such as `999999` .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-maxspotpriceaspercentageofoptimalondemandprice)
@@ -3519,8 +3504,6 @@ public open class CfnLaunchTemplate internal constructor(
      *
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *
-     * To indicate no price protection threshold, specify a high value, such as `999999` .
-     *
      * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
      * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
      * price.
@@ -3534,8 +3517,10 @@ public open class CfnLaunchTemplate internal constructor(
      *
      * Only one of `SpotMaxPricePercentageOverLowestPrice` or
      * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify either,
-     * then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter defaults
-     * to `100` .
+     * Amazon EC2 will automatically apply optimal price protection to consistently select from a wide
+     * range of instance types. To indicate no price protection threshold for Spot Instances, meaning
+     * you want to consider all instance types that match your attributes, include one of these
+     * parameters and specify a high value, such as `999999` .
      *
      *
      * Default: `100`
@@ -3955,16 +3940,16 @@ public open class CfnLaunchTemplate internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
        * is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 will automatically apply optimal price protection to consistently select
+       * from a wide range of instance types. To indicate no price protection threshold for Spot
+       * Instances, meaning you want to consider all instance types that match your attributes, include
+       * one of these parameters and specify a high value, such as `999999` .
        */
       public
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number)
@@ -4114,8 +4099,6 @@ public open class CfnLaunchTemplate internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
        * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
        * price.
@@ -4129,8 +4112,10 @@ public open class CfnLaunchTemplate internal constructor(
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 will automatically apply optimal price protection to consistently select
+       * from a wide range of instance types. To indicate no price protection threshold for Spot
+       * Instances, meaning you want to consider all instance types that match your attributes, include
+       * one of these parameters and specify a high value, such as `999999` .
        *
        *
        * Default: `100`
@@ -4619,16 +4604,16 @@ public open class CfnLaunchTemplate internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
        * is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 will automatically apply optimal price protection to consistently select
+       * from a wide range of instance types. To indicate no price protection threshold for Spot
+       * Instances, meaning you want to consider all instance types that match your attributes, include
+       * one of these parameters and specify a high value, such as `999999` .
        */
       override
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
@@ -4806,8 +4791,6 @@ public open class CfnLaunchTemplate internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
        * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
        * price.
@@ -4821,8 +4804,10 @@ public open class CfnLaunchTemplate internal constructor(
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 will automatically apply optimal price protection to consistently select
+       * from a wide range of instance types. To indicate no price protection threshold for Spot
+       * Instances, meaning you want to consider all instance types that match your attributes, include
+       * one of these parameters and specify a high value, such as `999999` .
        *
        *
        * Default: `100`
@@ -4886,8 +4871,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty,
     ) : CdkObject(cdkObject), InstanceRequirementsProperty {
       /**
        * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) on an
@@ -5138,16 +5122,16 @@ public open class CfnLaunchTemplate internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
        * is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 will automatically apply optimal price protection to consistently select
+       * from a wide range of instance types. To indicate no price protection threshold for Spot
+       * Instances, meaning you want to consider all instance types that match your attributes, include
+       * one of these parameters and specify a high value, such as `999999` .
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-maxspotpriceaspercentageofoptimalondemandprice)
@@ -5247,8 +5231,6 @@ public open class CfnLaunchTemplate internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
        * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
        * price.
@@ -5262,8 +5244,10 @@ public open class CfnLaunchTemplate internal constructor(
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 will automatically apply optimal price protection to consistently select
+       * from a wide range of instance types. To indicate no price protection threshold for Spot
+       * Instances, meaning you want to consider all instance types that match your attributes, include
+       * one of these parameters and specify a high value, such as `999999` .
        *
        *
        * Default: `100`
@@ -5377,8 +5361,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty,
     ) : CdkObject(cdkObject), Ipv4PrefixSpecificationProperty {
       /**
        * The IPv4 prefix.
@@ -5472,7 +5455,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty,
     ) : CdkObject(cdkObject), Ipv6AddProperty {
       /**
        * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet.
@@ -5561,8 +5544,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty,
     ) : CdkObject(cdkObject), Ipv6PrefixSpecificationProperty {
       /**
        * The IPv6 prefix.
@@ -7852,8 +7834,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateDataProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateDataProperty,
     ) : CdkObject(cdkObject), LaunchTemplateDataProperty {
       /**
        * The block device mapping.
@@ -8359,8 +8340,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty,
     ) : CdkObject(cdkObject), LaunchTemplateElasticInferenceAcceleratorProperty {
       /**
        * The number of elastic inference accelerators to attach to the instance.
@@ -8496,8 +8476,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty,
     ) : CdkObject(cdkObject), LaunchTemplateTagSpecificationProperty {
       /**
        * The type of resource.
@@ -8594,8 +8573,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty,
     ) : CdkObject(cdkObject), LicenseSpecificationProperty {
       /**
        * The Amazon Resource Name (ARN) of the license configuration.
@@ -8696,8 +8674,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty,
     ) : CdkObject(cdkObject), MaintenanceOptionsProperty {
       /**
        * Disables the automatic recovery behavior of your instance or sets it to default.
@@ -8811,8 +8788,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty,
     ) : CdkObject(cdkObject), MemoryGiBPerVCpuProperty {
       /**
        * The maximum amount of memory per vCPU, in GiB.
@@ -8931,8 +8907,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty,
     ) : CdkObject(cdkObject), MemoryMiBProperty {
       /**
        * The maximum amount of memory, in MiB.
@@ -9204,8 +9179,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty,
     ) : CdkObject(cdkObject), MetadataOptionsProperty {
       /**
        * Enables or disables the HTTP metadata endpoint on your instances.
@@ -9372,8 +9346,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty,
     ) : CdkObject(cdkObject), MonitoringProperty {
       /**
        * Specify `true` to enable detailed monitoring.
@@ -9495,8 +9468,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty,
     ) : CdkObject(cdkObject), NetworkBandwidthGbpsProperty {
       /**
        * The maximum amount of network bandwidth, in Gbps.
@@ -9618,8 +9590,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty,
     ) : CdkObject(cdkObject), NetworkInterfaceCountProperty {
       /**
        * The maximum number of network interfaces.
@@ -10527,8 +10498,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceProperty,
     ) : CdkObject(cdkObject), NetworkInterfaceProperty {
       /**
        * Associates a Carrier IP address with eth0 for a new network interface.
@@ -10983,8 +10953,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PlacementProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PlacementProperty,
     ) : CdkObject(cdkObject), PlacementProperty {
       /**
        * The affinity setting for an instance on a Dedicated Host.
@@ -11230,8 +11199,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty,
     ) : CdkObject(cdkObject), PrivateDnsNameOptionsProperty {
       /**
        * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
@@ -11380,8 +11348,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty,
     ) : CdkObject(cdkObject), PrivateIpAddProperty {
       /**
        * Indicates whether the private IPv4 address is the primary private IPv4 address.
@@ -11611,8 +11578,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty,
     ) : CdkObject(cdkObject), SpotOptionsProperty {
       /**
        * Deprecated.
@@ -11810,8 +11776,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty,
     ) : CdkObject(cdkObject), TagSpecificationProperty {
       /**
        * The type of resource to tag.
@@ -11937,8 +11902,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty,
     ) : CdkObject(cdkObject), TotalLocalStorageGBProperty {
       /**
        * The maximum amount of total local storage, in GB.
@@ -12057,8 +12021,7 @@ public open class CfnLaunchTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty,
     ) : CdkObject(cdkObject), VCpuCountProperty {
       /**
        * The maximum number of vCPUs.

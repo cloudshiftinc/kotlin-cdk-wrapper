@@ -56,7 +56,7 @@ public interface PrefixListOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.PrefixListOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.PrefixListOptions,
   ) : CdkObject(cdkObject), PrefixListOptions {
     /**
      * The maximum number of entries for the prefix list.

@@ -70,7 +70,7 @@ public interface ServerDeploymentConfigProps : BaseDeploymentConfigOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentConfigProps,
+    cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentConfigProps,
   ) : CdkObject(cdkObject), ServerDeploymentConfigProps {
     /**
      * The physical, human-readable name of the Deployment Configuration.

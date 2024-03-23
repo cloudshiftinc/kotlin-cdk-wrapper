@@ -183,7 +183,7 @@ public interface UsagePlanProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.UsagePlanProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.UsagePlanProps,
   ) : CdkObject(cdkObject), UsagePlanProps {
     /**
      * API Stages to be associated with the usage plan.

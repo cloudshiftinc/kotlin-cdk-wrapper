@@ -82,7 +82,7 @@ public interface TaskEnvironmentVariable {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.targets.TaskEnvironmentVariable,
+    cdkObject: software.amazon.awscdk.services.events.targets.TaskEnvironmentVariable,
   ) : CdkObject(cdkObject), TaskEnvironmentVariable {
     /**
      * Name for the environment variable.

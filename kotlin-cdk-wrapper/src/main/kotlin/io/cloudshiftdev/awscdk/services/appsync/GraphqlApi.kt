@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class GraphqlApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.GraphqlApi,
+public open class GraphqlApi(
+  cdkObject: software.amazon.awscdk.services.appsync.GraphqlApi,
 ) : GraphqlApiBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -479,6 +479,6 @@ public open class GraphqlApi internal constructor(
         GraphqlApi(cdkObject)
 
     internal fun unwrap(wrapped: GraphqlApi): software.amazon.awscdk.services.appsync.GraphqlApi =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.GraphqlApi
   }
 }

@@ -97,7 +97,7 @@ public interface Ec2ServiceAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.Ec2ServiceAttributes,
+    cdkObject: software.amazon.awscdk.services.ecs.Ec2ServiceAttributes,
   ) : CdkObject(cdkObject), Ec2ServiceAttributes {
     /**
      * The cluster that hosts the service.

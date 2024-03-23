@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipampoolcidr.html)
  */
-public open class CfnIPAMPoolCidr internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPoolCidr,
+public open class CfnIPAMPoolCidr(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPoolCidr,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -208,6 +208,7 @@ public open class CfnIPAMPoolCidr internal constructor(
         CfnIPAMPoolCidr = CfnIPAMPoolCidr(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAMPoolCidr):
-        software.amazon.awscdk.services.ec2.CfnIPAMPoolCidr = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnIPAMPoolCidr = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnIPAMPoolCidr
   }
 }

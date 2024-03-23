@@ -240,7 +240,7 @@ public interface CfnClusterParameterGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.redshift.CfnClusterParameterGroupProps,
+    cdkObject: software.amazon.awscdk.services.redshift.CfnClusterParameterGroupProps,
   ) : CdkObject(cdkObject), CfnClusterParameterGroupProps {
     /**
      * The description of the parameter group.

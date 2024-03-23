@@ -98,7 +98,7 @@ public interface ModelClientOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions,
   ) : CdkObject(cdkObject), ModelClientOptions {
     /**
      * The maximum number of retries when invocation requests are failing.

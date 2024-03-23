@@ -396,7 +396,7 @@ public interface CfnGatewayRouteProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRouteProps,
+    cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRouteProps,
   ) : CdkObject(cdkObject), CfnGatewayRouteProps {
     /**
      * The name of the gateway route.

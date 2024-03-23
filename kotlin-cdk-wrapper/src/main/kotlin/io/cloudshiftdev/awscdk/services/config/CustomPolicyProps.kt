@@ -148,7 +148,7 @@ public interface CustomPolicyProps : RuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.config.CustomPolicyProps,
+    cdkObject: software.amazon.awscdk.services.config.CustomPolicyProps,
   ) : CdkObject(cdkObject), CustomPolicyProps {
     /**
      * A name for the AWS Config rule.

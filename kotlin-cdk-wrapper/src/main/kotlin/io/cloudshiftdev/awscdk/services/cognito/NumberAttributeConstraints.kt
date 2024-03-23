@@ -78,7 +78,7 @@ public interface NumberAttributeConstraints {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.NumberAttributeConstraints,
+    cdkObject: software.amazon.awscdk.services.cognito.NumberAttributeConstraints,
   ) : CdkObject(cdkObject), NumberAttributeConstraints {
     /**
      * Maximum value of this attribute.

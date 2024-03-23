@@ -260,7 +260,7 @@ public interface ClusterAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ClusterAttributes,
+    cdkObject: software.amazon.awscdk.services.ecs.ClusterAttributes,
   ) : CdkObject(cdkObject), ClusterAttributes {
     /**
      * Autoscaling group added to the cluster if capacity is added.

@@ -73,8 +73,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)
  */
-public open class CfnAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation,
+public open class CfnAssociation(
+  cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -636,9 +636,15 @@ public open class CfnAssociation internal constructor(
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      * @param targets The targets for the association. 
@@ -649,9 +655,15 @@ public open class CfnAssociation internal constructor(
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      * @param targets The targets for the association. 
@@ -662,9 +674,15 @@ public open class CfnAssociation internal constructor(
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      * @param targets The targets for the association. 
@@ -1001,9 +1019,15 @@ public open class CfnAssociation internal constructor(
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      * @param targets The targets for the association. 
@@ -1016,9 +1040,15 @@ public open class CfnAssociation internal constructor(
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      * @param targets The targets for the association. 
@@ -1031,9 +1061,15 @@ public open class CfnAssociation internal constructor(
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      * @param targets The targets for the association. 
@@ -1083,7 +1119,7 @@ public open class CfnAssociation internal constructor(
         = CfnAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssociation): software.amazon.awscdk.services.ssm.CfnAssociation
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.ssm.CfnAssociation
   }
 
   /**
@@ -1200,8 +1236,7 @@ public open class CfnAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty,
     ) : CdkObject(cdkObject), InstanceAssociationOutputLocationProperty {
       /**
        * `S3OutputLocation` is a property of the
@@ -1329,8 +1364,7 @@ public open class CfnAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty,
     ) : CdkObject(cdkObject), S3OutputLocationProperty {
       /**
        * The name of the S3 bucket.
@@ -1487,7 +1521,7 @@ public open class CfnAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty,
     ) : CdkObject(cdkObject), TargetProperty {
       /**
        * User-defined criteria for sending commands that target managed nodes that meet the

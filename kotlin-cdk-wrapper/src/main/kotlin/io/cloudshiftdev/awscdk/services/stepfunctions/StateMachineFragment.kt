@@ -57,9 +57,8 @@ import kotlin.jvm.JvmName
  * }
  * ```
  */
-public abstract class StateMachineFragment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.StateMachineFragment,
+public abstract class StateMachineFragment(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachineFragment,
 ) : Construct(cdkObject), IChainable {
   /**
    * The states to chain onto if this fragment is used.
@@ -157,7 +156,7 @@ public abstract class StateMachineFragment internal constructor(
       toSingleState(SingleStateOptions(options))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachineFragment,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachineFragment,
   ) : StateMachineFragment(cdkObject)
 
   public companion object {

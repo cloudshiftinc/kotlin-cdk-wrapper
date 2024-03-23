@@ -105,8 +105,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)
  */
-public open class CfnGraphQLApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi,
+public open class CfnGraphQLApi(
+  cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1349,7 +1349,8 @@ public open class CfnGraphQLApi internal constructor(
         CfnGraphQLApi = CfnGraphQLApi(cdkObject)
 
     internal fun unwrap(wrapped: CfnGraphQLApi):
-        software.amazon.awscdk.services.appsync.CfnGraphQLApi = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.CfnGraphQLApi = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.CfnGraphQLApi
   }
 
   /**
@@ -1576,8 +1577,7 @@ public open class CfnGraphQLApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.AdditionalAuthenticationProviderProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.AdditionalAuthenticationProviderProperty,
     ) : CdkObject(cdkObject), AdditionalAuthenticationProviderProperty {
       /**
        * The authentication type for API key, AWS Identity and Access Management , OIDC, Amazon
@@ -1732,8 +1732,7 @@ public open class CfnGraphQLApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.CognitoUserPoolConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.CognitoUserPoolConfigProperty,
     ) : CdkObject(cdkObject), CognitoUserPoolConfigProperty {
       /**
        * A regular expression for validating the incoming Amazon Cognito user pool app client ID.
@@ -1977,8 +1976,7 @@ public open class CfnGraphQLApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.EnhancedMetricsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.EnhancedMetricsConfigProperty,
     ) : CdkObject(cdkObject), EnhancedMetricsConfigProperty {
       /**
        * Controls how data source metrics will be emitted to CloudWatch. Data source metrics
@@ -2199,8 +2197,7 @@ public open class CfnGraphQLApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty,
     ) : CdkObject(cdkObject), LambdaAuthorizerConfigProperty {
       /**
        * The number of seconds a response should be cached for.
@@ -2401,8 +2398,7 @@ public open class CfnGraphQLApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty,
     ) : CdkObject(cdkObject), LogConfigProperty {
       /**
        * The service role that AWS AppSync will assume to publish to Amazon CloudWatch Logs in your
@@ -2589,8 +2585,7 @@ public open class CfnGraphQLApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty,
     ) : CdkObject(cdkObject), OpenIDConnectConfigProperty {
       /**
        * The number of milliseconds that a token is valid after being authenticated.
@@ -2777,8 +2772,7 @@ public open class CfnGraphQLApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty,
     ) : CdkObject(cdkObject), UserPoolConfigProperty {
       /**
        * A regular expression for validating the incoming Amazon Cognito user pool app client ID.

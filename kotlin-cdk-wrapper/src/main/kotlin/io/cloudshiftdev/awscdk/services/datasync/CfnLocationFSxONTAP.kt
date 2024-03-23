@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxontap.html)
  */
-public open class CfnLocationFSxONTAP internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP,
+public open class CfnLocationFSxONTAP(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -491,7 +491,8 @@ public open class CfnLocationFSxONTAP internal constructor(
         CfnLocationFSxONTAP = CfnLocationFSxONTAP(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationFSxONTAP):
-        software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP
   }
 
   /**
@@ -580,8 +581,7 @@ public open class CfnLocationFSxONTAP internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NFSProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NFSProperty,
     ) : CdkObject(cdkObject), NFSProperty {
       /**
        * Specifies how DataSync can access a location using the NFS protocol.
@@ -705,8 +705,7 @@ public open class CfnLocationFSxONTAP internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NfsMountOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NfsMountOptionsProperty,
     ) : CdkObject(cdkObject), NfsMountOptionsProperty {
       /**
        * Specifies the NFS version that you want DataSync to use when mounting your NFS share.
@@ -901,8 +900,7 @@ public open class CfnLocationFSxONTAP internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.ProtocolProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.ProtocolProperty,
     ) : CdkObject(cdkObject), ProtocolProperty {
       /**
        * Specifies the Network File System (NFS) protocol configuration that DataSync uses to access
@@ -1156,8 +1154,7 @@ public open class CfnLocationFSxONTAP internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SMBProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SMBProperty,
     ) : CdkObject(cdkObject), SMBProperty {
       /**
        * Specifies the fully qualified domain name (FQDN) of the Microsoft Active Directory that
@@ -1350,8 +1347,7 @@ public open class CfnLocationFSxONTAP internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SmbMountOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SmbMountOptionsProperty,
     ) : CdkObject(cdkObject), SmbMountOptionsProperty {
       /**
        * By default, DataSync automatically chooses an SMB protocol version based on negotiation

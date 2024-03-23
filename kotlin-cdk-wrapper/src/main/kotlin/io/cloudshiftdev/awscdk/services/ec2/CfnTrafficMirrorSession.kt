@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html)
  */
-public open class CfnTrafficMirrorSession internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorSession,
+public open class CfnTrafficMirrorSession(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorSession,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -435,6 +435,7 @@ public open class CfnTrafficMirrorSession internal constructor(
         CfnTrafficMirrorSession = CfnTrafficMirrorSession(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficMirrorSession):
-        software.amazon.awscdk.services.ec2.CfnTrafficMirrorSession = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnTrafficMirrorSession = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnTrafficMirrorSession
   }
 }

@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-networkprofile.html)
  */
-public open class CfnNetworkProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnNetworkProfile,
+public open class CfnNetworkProfile(
+  cdkObject: software.amazon.awscdk.services.devicefarm.CfnNetworkProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -538,6 +538,7 @@ public open class CfnNetworkProfile internal constructor(
         CfnNetworkProfile = CfnNetworkProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkProfile):
-        software.amazon.awscdk.services.devicefarm.CfnNetworkProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.devicefarm.CfnNetworkProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.devicefarm.CfnNetworkProfile
   }
 }

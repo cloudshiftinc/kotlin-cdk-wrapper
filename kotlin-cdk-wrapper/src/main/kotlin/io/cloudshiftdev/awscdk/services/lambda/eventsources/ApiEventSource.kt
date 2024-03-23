@@ -58,9 +58,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class ApiEventSource internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.eventsources.ApiEventSource,
+public open class ApiEventSource(
+  cdkObject: software.amazon.awscdk.services.lambda.eventsources.ApiEventSource,
 ) : CdkObject(cdkObject), IEventSource {
   public constructor(method: String, path: String) :
       this(software.amazon.awscdk.services.lambda.eventsources.ApiEventSource(method, path)
@@ -547,6 +546,7 @@ public open class ApiEventSource internal constructor(
         ApiEventSource = ApiEventSource(cdkObject)
 
     internal fun unwrap(wrapped: ApiEventSource):
-        software.amazon.awscdk.services.lambda.eventsources.ApiEventSource = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.eventsources.ApiEventSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.eventsources.ApiEventSource
   }
 }

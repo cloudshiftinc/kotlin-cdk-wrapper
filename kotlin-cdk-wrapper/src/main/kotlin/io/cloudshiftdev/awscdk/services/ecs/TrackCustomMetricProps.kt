@@ -159,7 +159,7 @@ public interface TrackCustomMetricProps : BaseTargetTrackingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.TrackCustomMetricProps,
+    cdkObject: software.amazon.awscdk.services.ecs.TrackCustomMetricProps,
   ) : CdkObject(cdkObject), TrackCustomMetricProps {
     /**
      * Indicates whether scale in by the target tracking policy is disabled.

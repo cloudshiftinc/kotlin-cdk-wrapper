@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbsubnetgroup.html)
  */
-public open class CfnDBSubnetGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.docdb.CfnDBSubnetGroup,
+public open class CfnDBSubnetGroup(
+  cdkObject: software.amazon.awscdk.services.docdb.CfnDBSubnetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -294,6 +294,7 @@ public open class CfnDBSubnetGroup internal constructor(
         CfnDBSubnetGroup = CfnDBSubnetGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBSubnetGroup):
-        software.amazon.awscdk.services.docdb.CfnDBSubnetGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.docdb.CfnDBSubnetGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.docdb.CfnDBSubnetGroup
   }
 }

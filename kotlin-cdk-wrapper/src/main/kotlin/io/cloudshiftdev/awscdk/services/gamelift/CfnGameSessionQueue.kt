@@ -66,8 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html)
  */
-public open class CfnGameSessionQueue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue,
+public open class CfnGameSessionQueue(
+  cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -815,7 +815,8 @@ public open class CfnGameSessionQueue internal constructor(
         CfnGameSessionQueue = CfnGameSessionQueue(cdkObject)
 
     internal fun unwrap(wrapped: CfnGameSessionQueue):
-        software.amazon.awscdk.services.gamelift.CfnGameSessionQueue = wrapped.cdkObject
+        software.amazon.awscdk.services.gamelift.CfnGameSessionQueue = wrapped.cdkObject as
+        software.amazon.awscdk.services.gamelift.CfnGameSessionQueue
   }
 
   /**
@@ -867,8 +868,7 @@ public open class CfnGameSessionQueue internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty,
     ) : CdkObject(cdkObject), DestinationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-destination.html#cfn-gamelift-gamesessionqueue-destination-destinationarn)
@@ -968,8 +968,7 @@ public open class CfnGameSessionQueue internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty,
     ) : CdkObject(cdkObject), FilterConfigurationProperty {
       /**
        * A list of locations to allow game session placement in, in the form of AWS Region codes
@@ -1066,8 +1065,7 @@ public open class CfnGameSessionQueue internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty,
     ) : CdkObject(cdkObject), GameSessionQueueDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) that is assigned to fleet or fleet alias.
@@ -1193,8 +1191,7 @@ public open class CfnGameSessionQueue internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty,
     ) : CdkObject(cdkObject), PlayerLatencyPolicyProperty {
       /**
        * The maximum latency value that is allowed for any player, in milliseconds.
@@ -1425,8 +1422,7 @@ public open class CfnGameSessionQueue internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PriorityConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PriorityConfigurationProperty,
     ) : CdkObject(cdkObject), PriorityConfigurationProperty {
       /**
        * The prioritization order to use for fleet locations, when the `PriorityOrder` property

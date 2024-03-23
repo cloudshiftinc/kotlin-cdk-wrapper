@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-rule.html)
  */
-public open class CfnRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnRule,
+public open class CfnRule(
+  cdkObject: software.amazon.awscdk.services.waf.regional.CfnRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -300,7 +300,7 @@ public open class CfnRule internal constructor(
         CfnRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnRule): software.amazon.awscdk.services.waf.regional.CfnRule =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.waf.regional.CfnRule
   }
 
   /**
@@ -471,8 +471,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.regional.CfnRule.PredicateProperty,
+      cdkObject: software.amazon.awscdk.services.waf.regional.CfnRule.PredicateProperty,
     ) : CdkObject(cdkObject), PredicateProperty {
       /**
        * A unique identifier for a predicate in a `Rule` , such as `ByteMatchSetId` or `IPSetId` .

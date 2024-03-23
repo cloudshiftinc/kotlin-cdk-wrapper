@@ -32,8 +32,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class OracleEngineVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.OracleEngineVersion,
+public open class OracleEngineVersion(
+  cdkObject: software.amazon.awscdk.services.rds.OracleEngineVersion,
 ) : CdkObject(cdkObject) {
   /**
    * The full version string, for example, "19.0.0.0.ru-2019-10.rur-2019-10.r1".
@@ -259,6 +259,9 @@ public open class OracleEngineVersion internal constructor(
     public val VER_19_0_0_0_2023_01_R1: OracleEngineVersion =
         OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_19_0_0_0_2023_01_R1)
 
+    public val VER_19_0_0_0_2023_01_R2: OracleEngineVersion =
+        OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_19_0_0_0_2023_01_R2)
+
     public val VER_19_0_0_0_2023_04_R1: OracleEngineVersion =
         OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_19_0_0_0_2023_04_R1)
 
@@ -267,6 +270,9 @@ public open class OracleEngineVersion internal constructor(
 
     public val VER_19_0_0_0_2023_10_R1: OracleEngineVersion =
         OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_19_0_0_0_2023_10_R1)
+
+    public val VER_19_0_0_0_2024_01_R1: OracleEngineVersion =
+        OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_19_0_0_0_2024_01_R1)
 
     public val VER_21: OracleEngineVersion =
         OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_21)
@@ -286,6 +292,9 @@ public open class OracleEngineVersion internal constructor(
     public val VER_21_0_0_0_2023_01_R1: OracleEngineVersion =
         OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_21_0_0_0_2023_01_R1)
 
+    public val VER_21_0_0_0_2023_01_R2: OracleEngineVersion =
+        OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_21_0_0_0_2023_01_R2)
+
     public val VER_21_0_0_0_2023_04_R1: OracleEngineVersion =
         OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_21_0_0_0_2023_04_R1)
 
@@ -295,6 +304,9 @@ public open class OracleEngineVersion internal constructor(
     public val VER_21_0_0_0_2023_10_R1: OracleEngineVersion =
         OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_21_0_0_0_2023_10_R1)
 
+    public val VER_21_0_0_0_2024_01_R1: OracleEngineVersion =
+        OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_21_0_0_0_2024_01_R1)
+
     public fun of(oracleFullVersion: String, oracleMajorVersion: String): OracleEngineVersion =
         software.amazon.awscdk.services.rds.OracleEngineVersion.of(oracleFullVersion,
         oracleMajorVersion).let(OracleEngineVersion::wrap)
@@ -303,6 +315,7 @@ public open class OracleEngineVersion internal constructor(
         OracleEngineVersion = OracleEngineVersion(cdkObject)
 
     internal fun unwrap(wrapped: OracleEngineVersion):
-        software.amazon.awscdk.services.rds.OracleEngineVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.OracleEngineVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.OracleEngineVersion
   }
 }

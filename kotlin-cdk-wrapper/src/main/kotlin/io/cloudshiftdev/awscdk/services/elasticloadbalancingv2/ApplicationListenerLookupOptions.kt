@@ -118,8 +118,7 @@ public interface ApplicationListenerLookupOptions : BaseListenerLookupOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerLookupOptions,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerLookupOptions,
   ) : CdkObject(cdkObject), ApplicationListenerLookupOptions {
     /**
      * ARN of the listener to look up.

@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html)
  */
-public open class CfnServiceLinkedRole internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CfnServiceLinkedRole,
+public open class CfnServiceLinkedRole(
+  cdkObject: software.amazon.awscdk.services.iam.CfnServiceLinkedRole,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.CfnServiceLinkedRole(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -240,6 +240,7 @@ public open class CfnServiceLinkedRole internal constructor(
         CfnServiceLinkedRole = CfnServiceLinkedRole(cdkObject)
 
     internal fun unwrap(wrapped: CfnServiceLinkedRole):
-        software.amazon.awscdk.services.iam.CfnServiceLinkedRole = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.CfnServiceLinkedRole = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.CfnServiceLinkedRole
   }
 }

@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html)
  */
-public open class CfnSkill internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill,
+public open class CfnSkill(
+  cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -377,7 +377,7 @@ public open class CfnSkill internal constructor(
         CfnSkill(cdkObject)
 
     internal fun unwrap(wrapped: CfnSkill): software.amazon.awscdk.alexa.ask.CfnSkill =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.alexa.ask.CfnSkill
   }
 
   /**
@@ -487,8 +487,7 @@ public open class CfnSkill internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty,
     ) : CdkObject(cdkObject), AuthenticationConfigurationProperty {
       /**
        * Client ID from Login with Amazon (LWA).
@@ -595,7 +594,7 @@ public open class CfnSkill internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty,
+      cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty,
     ) : CdkObject(cdkObject), OverridesProperty {
       /**
        * Overrides to apply to the skill manifest inside of the skill package.
@@ -828,7 +827,7 @@ public open class CfnSkill internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty,
+      cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty,
     ) : CdkObject(cdkObject), SkillPackageProperty {
       /**
        * Overrides to the skill package to apply when creating or updating the skill.

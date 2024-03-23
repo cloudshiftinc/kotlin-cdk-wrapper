@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-accessor.html)
  */
-public open class CfnAccessor internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.managedblockchain.CfnAccessor,
+public open class CfnAccessor(
+  cdkObject: software.amazon.awscdk.services.managedblockchain.CfnAccessor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -307,6 +307,7 @@ public open class CfnAccessor internal constructor(
         CfnAccessor = CfnAccessor(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessor):
-        software.amazon.awscdk.services.managedblockchain.CfnAccessor = wrapped.cdkObject
+        software.amazon.awscdk.services.managedblockchain.CfnAccessor = wrapped.cdkObject as
+        software.amazon.awscdk.services.managedblockchain.CfnAccessor
   }
 }

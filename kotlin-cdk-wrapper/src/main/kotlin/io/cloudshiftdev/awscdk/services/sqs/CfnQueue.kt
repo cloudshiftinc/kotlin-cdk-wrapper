@@ -82,8 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html)
  */
-public open class CfnQueue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sqs.CfnQueue,
+public open class CfnQueue(
+  cdkObject: software.amazon.awscdk.services.sqs.CfnQueue,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sqs.CfnQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1153,6 +1153,6 @@ public open class CfnQueue internal constructor(
         CfnQueue(cdkObject)
 
     internal fun unwrap(wrapped: CfnQueue): software.amazon.awscdk.services.sqs.CfnQueue =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sqs.CfnQueue
   }
 }

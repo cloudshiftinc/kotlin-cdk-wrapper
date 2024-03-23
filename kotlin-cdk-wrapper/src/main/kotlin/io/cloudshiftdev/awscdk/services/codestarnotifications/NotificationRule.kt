@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * rule.addTarget(slack);
  * ```
  */
-public open class NotificationRule internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codestarnotifications.NotificationRule,
+public open class NotificationRule(
+  cdkObject: software.amazon.awscdk.services.codestarnotifications.NotificationRule,
 ) : Resource(cdkObject), INotificationRule {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -301,5 +300,6 @@ public open class NotificationRule internal constructor(
 
     internal fun unwrap(wrapped: NotificationRule):
         software.amazon.awscdk.services.codestarnotifications.NotificationRule = wrapped.cdkObject
+        as software.amazon.awscdk.services.codestarnotifications.NotificationRule
   }
 }

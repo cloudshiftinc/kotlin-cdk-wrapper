@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html)
  */
-public open class CfnVolume internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.opsworks.CfnVolume,
+public open class CfnVolume(
+  cdkObject: software.amazon.awscdk.services.opsworks.CfnVolume,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -225,6 +225,6 @@ public open class CfnVolume internal constructor(
         CfnVolume(cdkObject)
 
     internal fun unwrap(wrapped: CfnVolume): software.amazon.awscdk.services.opsworks.CfnVolume =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.opsworks.CfnVolume
   }
 }

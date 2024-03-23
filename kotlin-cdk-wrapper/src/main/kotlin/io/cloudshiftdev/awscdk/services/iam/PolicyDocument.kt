@@ -37,8 +37,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class PolicyDocument internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.PolicyDocument,
+public open class PolicyDocument(
+  cdkObject: software.amazon.awscdk.services.iam.PolicyDocument,
 ) : CdkObject(cdkObject), IResolvable {
   public constructor() : this(software.amazon.awscdk.services.iam.PolicyDocument()
   )
@@ -262,6 +262,6 @@ public open class PolicyDocument internal constructor(
         = PolicyDocument(cdkObject)
 
     internal fun unwrap(wrapped: PolicyDocument): software.amazon.awscdk.services.iam.PolicyDocument
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.iam.PolicyDocument
   }
 }

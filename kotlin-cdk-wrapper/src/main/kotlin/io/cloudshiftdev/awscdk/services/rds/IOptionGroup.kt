@@ -46,7 +46,7 @@ public interface IOptionGroup : IResource {
   public fun optionGroupName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.IOptionGroup,
+    cdkObject: software.amazon.awscdk.services.rds.IOptionGroup,
   ) : CdkObject(cdkObject), IOptionGroup {
     /**
      * Adds a configuration to this OptionGroup.

@@ -169,8 +169,7 @@ public interface CfnApplicationReferenceDataSourceV2Props {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2Props,
+    cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2Props,
   ) : CdkObject(cdkObject), CfnApplicationReferenceDataSourceV2Props {
     /**
      * The name of the application.

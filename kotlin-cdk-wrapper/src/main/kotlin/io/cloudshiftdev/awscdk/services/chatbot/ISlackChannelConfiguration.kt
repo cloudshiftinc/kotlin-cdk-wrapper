@@ -87,7 +87,7 @@ public interface ISlackChannelConfiguration : IResource, IGrantable, INotificati
   public fun slackChannelConfigurationName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.chatbot.ISlackChannelConfiguration,
+    cdkObject: software.amazon.awscdk.services.chatbot.ISlackChannelConfiguration,
   ) : CdkObject(cdkObject), ISlackChannelConfiguration {
     /**
      * Adds a statement to the IAM role.

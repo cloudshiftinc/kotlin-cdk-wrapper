@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html)
  */
-public open class CfnVirtualService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService,
+public open class CfnVirtualService(
+  cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -435,7 +435,8 @@ public open class CfnVirtualService internal constructor(
         CfnVirtualService = CfnVirtualService(cdkObject)
 
     internal fun unwrap(wrapped: CfnVirtualService):
-        software.amazon.awscdk.services.appmesh.CfnVirtualService = wrapped.cdkObject
+        software.amazon.awscdk.services.appmesh.CfnVirtualService = wrapped.cdkObject as
+        software.amazon.awscdk.services.appmesh.CfnVirtualService
   }
 
   /**
@@ -493,8 +494,7 @@ public open class CfnVirtualService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty,
     ) : CdkObject(cdkObject), VirtualNodeServiceProviderProperty {
       /**
        * The name of the virtual node that is acting as a service provider.
@@ -580,8 +580,7 @@ public open class CfnVirtualService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualRouterServiceProviderProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualRouterServiceProviderProperty,
     ) : CdkObject(cdkObject), VirtualRouterServiceProviderProperty {
       /**
        * The name of the virtual router that is acting as a service provider.
@@ -745,8 +744,7 @@ public open class CfnVirtualService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceProviderProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceProviderProperty,
     ) : CdkObject(cdkObject), VirtualServiceProviderProperty {
       /**
        * The virtual node associated with a virtual service.
@@ -877,8 +875,7 @@ public open class CfnVirtualService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty,
     ) : CdkObject(cdkObject), VirtualServiceSpecProperty {
       /**
        * The App Mesh object that is acting as the provider for a virtual service.

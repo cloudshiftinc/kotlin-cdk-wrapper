@@ -76,9 +76,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apigatewaymanagedoverrides.html)
  */
-public open class CfnApiGatewayManagedOverrides internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides,
+public open class CfnApiGatewayManagedOverrides(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -439,7 +438,8 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
 
     internal fun unwrap(wrapped: CfnApiGatewayManagedOverrides):
         software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides
   }
 
   /**
@@ -523,8 +523,7 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty,
     ) : CdkObject(cdkObject), AccessLogSettingsProperty {
       /**
        * The ARN of the CloudWatch Logs log group to receive access logs.
@@ -596,6 +595,9 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
     /**
      * Specifies the integration's HTTP method type.
      *
+     * For WebSocket APIs, if you use a Lambda integration, you must set the integration method to
+     * `POST` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-integrationmethod)
      */
     public fun integrationMethod(): String? = unwrap(this).getIntegrationMethod()
@@ -635,6 +637,8 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
 
       /**
        * @param integrationMethod Specifies the integration's HTTP method type.
+       * For WebSocket APIs, if you use a Lambda integration, you must set the integration method to
+       * `POST` .
        */
       public fun integrationMethod(integrationMethod: String)
 
@@ -671,6 +675,8 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
 
       /**
        * @param integrationMethod Specifies the integration's HTTP method type.
+       * For WebSocket APIs, if you use a Lambda integration, you must set the integration method to
+       * `POST` .
        */
       override fun integrationMethod(integrationMethod: String) {
         cdkBuilder.integrationMethod(integrationMethod)
@@ -703,8 +709,7 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty,
     ) : CdkObject(cdkObject), IntegrationOverridesProperty {
       /**
        * The description of the integration.
@@ -715,6 +720,9 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
 
       /**
        * Specifies the integration's HTTP method type.
+       *
+       * For WebSocket APIs, if you use a Lambda integration, you must set the integration method to
+       * `POST` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-integrationmethod)
        */
@@ -934,8 +942,7 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.RouteOverridesProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.RouteOverridesProperty,
     ) : CdkObject(cdkObject), RouteOverridesProperty {
       /**
        * The authorization scopes supported by this route.
@@ -1183,8 +1190,7 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.RouteSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.RouteSettingsProperty,
     ) : CdkObject(cdkObject), RouteSettingsProperty {
       /**
        * Specifies whether ( `true` ) or not ( `false` ) data trace logging is enabled for this
@@ -1501,8 +1507,7 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.StageOverridesProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.StageOverridesProperty,
     ) : CdkObject(cdkObject), StageOverridesProperty {
       /**
        * Settings for logging access in a stage.

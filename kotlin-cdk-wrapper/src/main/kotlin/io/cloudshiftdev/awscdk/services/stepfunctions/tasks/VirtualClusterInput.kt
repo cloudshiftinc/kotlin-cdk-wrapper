@@ -30,9 +30,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class VirtualClusterInput internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput,
+public open class VirtualClusterInput(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput,
 ) : CdkObject(cdkObject) {
   /**
    * The VirtualCluster Id.
@@ -52,5 +51,6 @@ public open class VirtualClusterInput internal constructor(
 
     internal fun unwrap(wrapped: VirtualClusterInput):
         software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput = wrapped.cdkObject
+        as software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput
   }
 }

@@ -24,8 +24,8 @@ import io.cloudshiftdev.awscdk.services.apigateway.RestApiBase
  * .build();
  * ```
  */
-public open class ApiGateway internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.targets.ApiGateway,
+public open class ApiGateway(
+  cdkObject: software.amazon.awscdk.services.route53.targets.ApiGateway,
 ) : ApiGatewayDomain(cdkObject) {
   public constructor(api: RestApiBase) :
       this(software.amazon.awscdk.services.route53.targets.ApiGateway(api.let(RestApiBase::unwrap))
@@ -36,6 +36,7 @@ public open class ApiGateway internal constructor(
         ApiGateway = ApiGateway(cdkObject)
 
     internal fun unwrap(wrapped: ApiGateway):
-        software.amazon.awscdk.services.route53.targets.ApiGateway = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.targets.ApiGateway = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.targets.ApiGateway
   }
 }

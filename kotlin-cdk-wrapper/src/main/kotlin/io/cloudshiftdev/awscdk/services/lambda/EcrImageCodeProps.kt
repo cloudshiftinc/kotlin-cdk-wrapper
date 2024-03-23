@@ -202,7 +202,7 @@ public interface EcrImageCodeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.EcrImageCodeProps,
+    cdkObject: software.amazon.awscdk.services.lambda.EcrImageCodeProps,
   ) : CdkObject(cdkObject), EcrImageCodeProps {
     /**
      * Specify or override the CMD on the specified Docker image or Dockerfile.

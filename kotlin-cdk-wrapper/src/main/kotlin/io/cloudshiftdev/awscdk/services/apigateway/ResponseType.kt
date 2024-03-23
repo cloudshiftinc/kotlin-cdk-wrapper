@@ -27,8 +27,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/supported-gateway-response-types.html)
  */
-public open class ResponseType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.ResponseType,
+public open class ResponseType(
+  cdkObject: software.amazon.awscdk.services.apigateway.ResponseType,
 ) : CdkObject(cdkObject) {
   /**
    * Valid value of response type.
@@ -106,6 +106,7 @@ public open class ResponseType internal constructor(
         ResponseType = ResponseType(cdkObject)
 
     internal fun unwrap(wrapped: ResponseType):
-        software.amazon.awscdk.services.apigateway.ResponseType = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.ResponseType = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.ResponseType
   }
 }

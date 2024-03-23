@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthimaging-datastore.html)
  */
-public open class CfnDatastore internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.healthimaging.CfnDatastore,
+public open class CfnDatastore(
+  cdkObject: software.amazon.awscdk.services.healthimaging.CfnDatastore,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.healthimaging.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -227,6 +227,7 @@ public open class CfnDatastore internal constructor(
         CfnDatastore = CfnDatastore(cdkObject)
 
     internal fun unwrap(wrapped: CfnDatastore):
-        software.amazon.awscdk.services.healthimaging.CfnDatastore = wrapped.cdkObject
+        software.amazon.awscdk.services.healthimaging.CfnDatastore = wrapped.cdkObject as
+        software.amazon.awscdk.services.healthimaging.CfnDatastore
   }
 }

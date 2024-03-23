@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class Model internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.Model,
+public open class Model(
+  cdkObject: software.amazon.awscdk.services.apigateway.Model,
 ) : Resource(cdkObject), IModel {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -263,6 +263,6 @@ public open class Model internal constructor(
         Model(cdkObject)
 
     internal fun unwrap(wrapped: Model): software.amazon.awscdk.services.apigateway.Model =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigateway.Model
   }
 }

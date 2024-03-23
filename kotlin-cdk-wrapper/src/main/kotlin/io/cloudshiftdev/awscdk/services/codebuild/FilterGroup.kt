@@ -28,8 +28,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class FilterGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.FilterGroup,
+public open class FilterGroup(
+  cdkObject: software.amazon.awscdk.services.codebuild.FilterGroup,
 ) : CdkObject(cdkObject) {
   /**
    * Create a new FilterGroup with an added condition: the account ID of the actor initiating the
@@ -193,6 +193,6 @@ public open class FilterGroup internal constructor(
         = FilterGroup(cdkObject)
 
     internal fun unwrap(wrapped: FilterGroup): software.amazon.awscdk.services.codebuild.FilterGroup
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.codebuild.FilterGroup
   }
 }

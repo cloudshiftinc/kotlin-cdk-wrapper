@@ -1069,7 +1069,7 @@ public interface SingletonFunctionProps : FunctionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.SingletonFunctionProps,
+    cdkObject: software.amazon.awscdk.services.lambda.SingletonFunctionProps,
   ) : CdkObject(cdkObject), SingletonFunctionProps {
     /**
      * Specify the configuration of AWS Distro for OpenTelemetry (ADOT) instrumentation.

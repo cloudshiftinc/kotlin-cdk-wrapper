@@ -14,9 +14,8 @@ import kotlin.Number
 /**
  * The base class for NetworkLoadBalancedEc2Service and NetworkLoadBalancedFargateService services.
  */
-public abstract class NetworkLoadBalancedServiceBase internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBase,
+public abstract class NetworkLoadBalancedServiceBase(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBase,
 ) : Construct(cdkObject) {
   /**
    * The cluster that hosts the service.
@@ -50,8 +49,7 @@ public abstract class NetworkLoadBalancedServiceBase internal constructor(
       unwrap(this).getTargetGroup().let(NetworkTargetGroup::wrap)
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBase,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBase,
   ) : NetworkLoadBalancedServiceBase(cdkObject)
 
   public companion object {

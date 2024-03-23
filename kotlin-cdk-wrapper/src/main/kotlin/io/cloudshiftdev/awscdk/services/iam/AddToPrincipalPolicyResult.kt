@@ -80,7 +80,7 @@ public interface AddToPrincipalPolicyResult {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.AddToPrincipalPolicyResult,
+    cdkObject: software.amazon.awscdk.services.iam.AddToPrincipalPolicyResult,
   ) : CdkObject(cdkObject), AddToPrincipalPolicyResult {
     /**
      * Dependable which allows depending on the policy change being applied.

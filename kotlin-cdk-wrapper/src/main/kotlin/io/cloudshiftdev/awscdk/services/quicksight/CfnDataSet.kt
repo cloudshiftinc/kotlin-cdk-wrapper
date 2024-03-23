@@ -260,8 +260,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html)
  */
-public open class CfnDataSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet,
+public open class CfnDataSet(
+  cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.quicksight.CfnDataSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1525,7 +1525,7 @@ public open class CfnDataSet internal constructor(
         = CfnDataSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataSet): software.amazon.awscdk.services.quicksight.CfnDataSet
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.quicksight.CfnDataSet
   }
 
   /**
@@ -1628,8 +1628,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.CalculatedColumnProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.CalculatedColumnProperty,
     ) : CdkObject(cdkObject), CalculatedColumnProperty {
       /**
        * A unique ID to identify a calculated column.
@@ -1797,8 +1796,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.CastColumnTypeOperationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.CastColumnTypeOperationProperty,
     ) : CdkObject(cdkObject), CastColumnTypeOperationProperty {
       /**
        * Column name.
@@ -1903,8 +1901,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnDescriptionProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnDescriptionProperty,
     ) : CdkObject(cdkObject), ColumnDescriptionProperty {
       /**
        * The text of a description for a column.
@@ -2021,8 +2018,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnGroupProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnGroupProperty,
     ) : CdkObject(cdkObject), ColumnGroupProperty {
       /**
        * Geospatial column group that denotes a hierarchy.
@@ -2153,8 +2149,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnLevelPermissionRuleProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnLevelPermissionRuleProperty,
     ) : CdkObject(cdkObject), ColumnLevelPermissionRuleProperty {
       /**
        * An array of column names.
@@ -2295,8 +2290,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnTagProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnTagProperty,
     ) : CdkObject(cdkObject), ColumnTagProperty {
       /**
        * A description for a column.
@@ -2414,8 +2408,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.CreateColumnsOperationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.CreateColumnsOperationProperty,
     ) : CdkObject(cdkObject), CreateColumnsOperationProperty {
       /**
        * Calculated columns to create.
@@ -2582,8 +2575,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.CustomSqlProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.CustomSqlProperty,
     ) : CdkObject(cdkObject), CustomSqlProperty {
       /**
        * The column schema from the SQL query result set.
@@ -2724,8 +2716,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetRefreshPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetRefreshPropertiesProperty,
     ) : CdkObject(cdkObject), DataSetRefreshPropertiesProperty {
       /**
        * The refresh configuration for a dataset.
@@ -2863,8 +2854,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetUsageConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetUsageConfigurationProperty,
     ) : CdkObject(cdkObject), DataSetUsageConfigurationProperty {
       /**
        * An option that controls whether a child dataset of a direct query can use this dataset as a
@@ -3170,8 +3160,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.DatasetParameterProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DatasetParameterProperty,
     ) : CdkObject(cdkObject), DatasetParameterProperty {
       /**
        * A date time parameter that is created in the dataset.
@@ -3294,8 +3283,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterDefaultValuesProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterDefaultValuesProperty,
     ) : CdkObject(cdkObject), DateTimeDatasetParameterDefaultValuesProperty {
       /**
        * A list of static default values for a given date time parameter.
@@ -3505,8 +3493,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterProperty,
     ) : CdkObject(cdkObject), DateTimeDatasetParameterProperty {
       /**
        * A list of default values for a given date time parameter.
@@ -3646,8 +3633,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterDefaultValuesProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterDefaultValuesProperty,
     ) : CdkObject(cdkObject), DecimalDatasetParameterDefaultValuesProperty {
       /**
        * A list of static default values for a given decimal parameter.
@@ -3835,8 +3821,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterProperty,
     ) : CdkObject(cdkObject), DecimalDatasetParameterProperty {
       /**
        * A list of default values for a given decimal parameter.
@@ -3977,8 +3962,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.FieldFolderProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.FieldFolderProperty,
     ) : CdkObject(cdkObject), FieldFolderProperty {
       /**
        * A folder has a list of columns.
@@ -4072,8 +4056,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.FilterOperationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.FilterOperationProperty,
     ) : CdkObject(cdkObject), FilterOperationProperty {
       /**
        * An expression that must evaluate to a Boolean value.
@@ -4209,8 +4192,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.GeoSpatialColumnGroupProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.GeoSpatialColumnGroupProperty,
     ) : CdkObject(cdkObject), GeoSpatialColumnGroupProperty {
       /**
        * Columns in this hierarchy.
@@ -4336,8 +4318,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.IncrementalRefreshProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.IncrementalRefreshProperty,
     ) : CdkObject(cdkObject), IncrementalRefreshProperty {
       /**
        * The lookback window setup for an incremental refresh configuration.
@@ -4476,8 +4457,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.IngestionWaitPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.IngestionWaitPolicyProperty,
     ) : CdkObject(cdkObject), IngestionWaitPolicyProperty {
       /**
        * The maximum time (in hours) to wait for Ingestion to complete.
@@ -4618,8 +4598,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.InputColumnProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.InputColumnProperty,
     ) : CdkObject(cdkObject), InputColumnProperty {
       /**
        * The name of this column in the underlying data source.
@@ -4743,8 +4722,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterDefaultValuesProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterDefaultValuesProperty,
     ) : CdkObject(cdkObject), IntegerDatasetParameterDefaultValuesProperty {
       /**
        * A list of static default values for a given integer parameter.
@@ -4932,8 +4910,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterProperty,
     ) : CdkObject(cdkObject), IntegerDatasetParameterProperty {
       /**
        * A list of default values for a given integer parameter.
@@ -5202,8 +5179,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.JoinInstructionProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.JoinInstructionProperty,
     ) : CdkObject(cdkObject), JoinInstructionProperty {
       /**
        * Join key properties of the left operand.
@@ -5342,8 +5318,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.JoinKeyPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.JoinKeyPropertiesProperty,
     ) : CdkObject(cdkObject), JoinKeyPropertiesProperty {
       /**
        * A value that indicates that a row in a table is uniquely identified by the columns in a
@@ -5590,8 +5565,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableProperty,
     ) : CdkObject(cdkObject), LogicalTableProperty {
       /**
        * A display name for the logical table.
@@ -5770,8 +5744,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableSourceProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableSourceProperty,
     ) : CdkObject(cdkObject), LogicalTableSourceProperty {
       /**
        * The Amazon Resource Number (ARN) of the parent dataset.
@@ -5910,8 +5883,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.LookbackWindowProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.LookbackWindowProperty,
     ) : CdkObject(cdkObject), LookbackWindowProperty {
       /**
        * The name of the lookback window column.
@@ -6148,8 +6120,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.NewDefaultValuesProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.NewDefaultValuesProperty,
     ) : CdkObject(cdkObject), NewDefaultValuesProperty {
       /**
        * A list of static default values for a given date time parameter.
@@ -6314,8 +6285,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.OutputColumnProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.OutputColumnProperty,
     ) : CdkObject(cdkObject), OutputColumnProperty {
       /**
        * A description for a column.
@@ -6493,8 +6463,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.OverrideDatasetParameterOperationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.OverrideDatasetParameterOperationProperty,
     ) : CdkObject(cdkObject), OverrideDatasetParameterOperationProperty {
       /**
        * The new default values for the parameter.
@@ -6753,8 +6722,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.PhysicalTableProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.PhysicalTableProperty,
     ) : CdkObject(cdkObject), PhysicalTableProperty {
       /**
        * A physical table type built from the results of the custom SQL query.
@@ -6862,8 +6830,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.ProjectOperationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.ProjectOperationProperty,
     ) : CdkObject(cdkObject), ProjectOperationProperty {
       /**
        * Projected columns.
@@ -6981,8 +6948,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshConfigurationProperty,
     ) : CdkObject(cdkObject), RefreshConfigurationProperty {
       /**
        * The incremental refresh for the dataset.
@@ -7176,8 +7142,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.RelationalTableProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RelationalTableProperty,
     ) : CdkObject(cdkObject), RelationalTableProperty {
       /**
        * The catalog associated with a table.
@@ -7310,8 +7275,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.RenameColumnOperationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RenameColumnOperationProperty,
     ) : CdkObject(cdkObject), RenameColumnOperationProperty {
       /**
        * The name of the column to be renamed.
@@ -7452,8 +7416,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.ResourcePermissionProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.ResourcePermissionProperty,
     ) : CdkObject(cdkObject), ResourcePermissionProperty {
       /**
        * The IAM action to grant or revoke permisions on.
@@ -7666,8 +7629,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionDataSetProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionDataSetProperty,
     ) : CdkObject(cdkObject), RowLevelPermissionDataSetProperty {
       /**
        * The Amazon Resource Name (ARN) of the dataset that contains permissions for RLS.
@@ -7870,8 +7832,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagConfigurationProperty,
     ) : CdkObject(cdkObject), RowLevelPermissionTagConfigurationProperty {
       /**
        * The status of row-level security tags.
@@ -8046,8 +8007,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagRuleProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagRuleProperty,
     ) : CdkObject(cdkObject), RowLevelPermissionTagRuleProperty {
       /**
        * The column name that a tag key is assigned to.
@@ -8272,8 +8232,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.S3SourceProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.S3SourceProperty,
     ) : CdkObject(cdkObject), S3SourceProperty {
       /**
        * The Amazon Resource Name (ARN) for the data source.
@@ -8387,8 +8346,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterDefaultValuesProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterDefaultValuesProperty,
     ) : CdkObject(cdkObject), StringDatasetParameterDefaultValuesProperty {
       /**
        * A list of static default values for a given string parameter.
@@ -8576,8 +8534,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterProperty,
     ) : CdkObject(cdkObject), StringDatasetParameterProperty {
       /**
        * A list of default values for a given string dataset parameter type.
@@ -8730,8 +8687,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.TagColumnOperationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.TagColumnOperationProperty,
     ) : CdkObject(cdkObject), TagColumnOperationProperty {
       /**
        * The column that this operation acts on.
@@ -9218,8 +9174,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.TransformOperationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.TransformOperationProperty,
     ) : CdkObject(cdkObject), TransformOperationProperty {
       /**
        * A transform operation that casts a column to a different type.
@@ -9444,8 +9399,7 @@ public open class CfnDataSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSet.UploadSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.UploadSettingsProperty,
     ) : CdkObject(cdkObject), UploadSettingsProperty {
       /**
        * Whether the file has a header row, or the files each have a header row.

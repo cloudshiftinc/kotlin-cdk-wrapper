@@ -38,8 +38,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-wait-state.html)
  */
-public open class WaitTime internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.WaitTime,
+public open class WaitTime(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.WaitTime,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun duration(duration: Duration): WaitTime =
@@ -58,6 +58,6 @@ public open class WaitTime internal constructor(
         WaitTime(cdkObject)
 
     internal fun unwrap(wrapped: WaitTime): software.amazon.awscdk.services.stepfunctions.WaitTime =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.WaitTime
   }
 }

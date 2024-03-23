@@ -42,9 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-logdeliveryconfiguration.html)
  */
-public open class CfnLogDeliveryConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration,
+public open class CfnLogDeliveryConfiguration(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -220,7 +219,8 @@ public open class CfnLogDeliveryConfiguration internal constructor(
         CfnLogDeliveryConfiguration = CfnLogDeliveryConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnLogDeliveryConfiguration):
-        software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration
   }
 
   /**
@@ -306,8 +306,7 @@ public open class CfnLogDeliveryConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty,
     ) : CdkObject(cdkObject), CloudWatchLogsConfigurationProperty {
       /**
        * The Amazon Resource Name (arn) of a CloudWatch Logs log group where your user pool sends
@@ -484,8 +483,7 @@ public open class CfnLogDeliveryConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.LogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.LogConfigurationProperty,
     ) : CdkObject(cdkObject), LogConfigurationProperty {
       /**
        * The CloudWatch logging destination of a user pool detailed activity logging configuration.

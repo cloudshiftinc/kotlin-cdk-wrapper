@@ -119,7 +119,7 @@ public interface MeshProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.MeshProps,
+    cdkObject: software.amazon.awscdk.services.appmesh.MeshProps,
   ) : CdkObject(cdkObject), MeshProps {
     /**
      * Egress filter to be applied to the Mesh.

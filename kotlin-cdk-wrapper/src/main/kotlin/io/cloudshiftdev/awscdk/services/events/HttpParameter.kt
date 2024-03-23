@@ -21,11 +21,11 @@ import kotlin.String
  * HttpParameter httpParameter = HttpParameter.fromSecret(secretValue);
  * ```
  */
-public abstract class HttpParameter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.HttpParameter,
+public abstract class HttpParameter(
+  cdkObject: software.amazon.awscdk.services.events.HttpParameter,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.HttpParameter,
+    cdkObject: software.amazon.awscdk.services.events.HttpParameter,
   ) : HttpParameter(cdkObject)
 
   public companion object {

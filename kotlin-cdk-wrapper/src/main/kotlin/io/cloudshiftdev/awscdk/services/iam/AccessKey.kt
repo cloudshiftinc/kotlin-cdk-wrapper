@@ -25,8 +25,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class AccessKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.AccessKey,
+public open class AccessKey(
+  cdkObject: software.amazon.awscdk.services.iam.AccessKey,
 ) : Resource(cdkObject), IAccessKey {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -163,6 +163,6 @@ public open class AccessKey internal constructor(
         AccessKey(cdkObject)
 
     internal fun unwrap(wrapped: AccessKey): software.amazon.awscdk.services.iam.AccessKey =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.AccessKey
   }
 }

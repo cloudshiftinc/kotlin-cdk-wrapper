@@ -161,7 +161,7 @@ public interface HostedZoneContextQuery {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.HostedZoneContextQuery,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.HostedZoneContextQuery,
   ) : CdkObject(cdkObject), HostedZoneContextQuery {
     /**
      * Query account.

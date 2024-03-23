@@ -257,8 +257,7 @@ public interface DynamoEventSourceProps : StreamEventSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.lambda.eventsources.DynamoEventSourceProps,
+    cdkObject: software.amazon.awscdk.services.lambda.eventsources.DynamoEventSourceProps,
   ) : CdkObject(cdkObject), DynamoEventSourceProps {
     /**
      * The largest number of records that AWS Lambda will retrieve from your event source at the

@@ -213,8 +213,7 @@ public interface CfnOrganizationalUnitProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.organizations.CfnOrganizationalUnitProps,
+    cdkObject: software.amazon.awscdk.services.organizations.CfnOrganizationalUnitProps,
   ) : CdkObject(cdkObject), CfnOrganizationalUnitProps {
     /**
      * The friendly name of this OU.

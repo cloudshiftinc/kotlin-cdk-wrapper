@@ -38,12 +38,11 @@ import kotlin.jvm.JvmName
  * parameter.grantRead(lambdaFunction);
  * ```
  */
-public abstract class ParamsAndSecretsLayerVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion,
+public abstract class ParamsAndSecretsLayerVersion(
+  cdkObject: software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion,
+    cdkObject: software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion,
   ) : ParamsAndSecretsLayerVersion(cdkObject)
 
   public companion object {

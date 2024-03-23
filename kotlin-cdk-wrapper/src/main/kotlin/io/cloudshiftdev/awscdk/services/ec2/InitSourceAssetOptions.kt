@@ -315,7 +315,7 @@ public interface InitSourceAssetOptions : InitSourceOptions, AssetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.InitSourceAssetOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.InitSourceAssetOptions,
   ) : CdkObject(cdkObject), InitSourceAssetOptions {
     /**
      * Specify a custom hash for this asset.

@@ -343,7 +343,7 @@ public interface CfnLocationAzureBlobProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlobProps,
+    cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlobProps,
   ) : CdkObject(cdkObject), CfnLocationAzureBlobProps {
     /**
      * Specifies the Amazon Resource Name (ARN) of the DataSync agent that can connect with your

@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-billinggroup.html)
  */
-public open class CfnBillingGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroup,
+public open class CfnBillingGroup(
+  cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -493,7 +493,8 @@ public open class CfnBillingGroup internal constructor(
         CfnBillingGroup = CfnBillingGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnBillingGroup):
-        software.amazon.awscdk.services.billingconductor.CfnBillingGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.billingconductor.CfnBillingGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.billingconductor.CfnBillingGroup
   }
 
   /**
@@ -612,8 +613,7 @@ public open class CfnBillingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnBillingGroup.AccountGroupingProperty,
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroup.AccountGroupingProperty,
     ) : CdkObject(cdkObject), AccountGroupingProperty {
       /**
        * Specifies if this billing group will automatically associate newly added AWS accounts that
@@ -710,8 +710,7 @@ public open class CfnBillingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnBillingGroup.ComputationPreferenceProperty,
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroup.ComputationPreferenceProperty,
     ) : CdkObject(cdkObject), ComputationPreferenceProperty {
       /**
        * The Amazon Resource Name (ARN) of the pricing plan used to compute the AWS charges for a

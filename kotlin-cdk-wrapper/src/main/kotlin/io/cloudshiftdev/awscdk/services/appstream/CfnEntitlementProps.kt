@@ -168,7 +168,7 @@ public interface CfnEntitlementProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appstream.CfnEntitlementProps,
+    cdkObject: software.amazon.awscdk.services.appstream.CfnEntitlementProps,
   ) : CdkObject(cdkObject), CfnEntitlementProps {
     /**
      * Specifies whether to entitle all apps or only selected apps.

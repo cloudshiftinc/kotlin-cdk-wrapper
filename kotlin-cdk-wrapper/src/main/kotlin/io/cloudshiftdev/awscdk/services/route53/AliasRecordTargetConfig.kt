@@ -73,7 +73,7 @@ public interface AliasRecordTargetConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.AliasRecordTargetConfig,
+    cdkObject: software.amazon.awscdk.services.route53.AliasRecordTargetConfig,
   ) : CdkObject(cdkObject), AliasRecordTargetConfig {
     /**
      * DNS name of the target.

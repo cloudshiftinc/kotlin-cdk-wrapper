@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-simpletable.html)
  */
-public open class CfnSimpleTable internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable,
+public open class CfnSimpleTable(
+  cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sam.CfnSimpleTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -396,7 +396,7 @@ public open class CfnSimpleTable internal constructor(
         = CfnSimpleTable(cdkObject)
 
     internal fun unwrap(wrapped: CfnSimpleTable): software.amazon.awscdk.services.sam.CfnSimpleTable
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.sam.CfnSimpleTable
   }
 
   /**
@@ -466,7 +466,7 @@ public open class CfnSimpleTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty,
     ) : CdkObject(cdkObject), PrimaryKeyProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-primarykey.html#cfn-serverless-simpletable-primarykey-name)
@@ -566,8 +566,7 @@ public open class CfnSimpleTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty,
     ) : CdkObject(cdkObject), ProvisionedThroughputProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-provisionedthroughput.html#cfn-serverless-simpletable-provisionedthroughput-readcapacityunits)
@@ -659,8 +658,7 @@ public open class CfnSimpleTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnSimpleTable.SSESpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.SSESpecificationProperty,
     ) : CdkObject(cdkObject), SSESpecificationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-ssespecification.html#cfn-serverless-simpletable-ssespecification-sseenabled)

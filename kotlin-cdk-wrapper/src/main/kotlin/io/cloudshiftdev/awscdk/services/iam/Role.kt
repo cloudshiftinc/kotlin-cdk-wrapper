@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * stateMachine.grantExecution(role, "states:GetExecutionHistory");
  * ```
  */
-public open class Role internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.Role,
+public open class Role(
+  cdkObject: software.amazon.awscdk.services.iam.Role,
 ) : Resource(cdkObject), IRole {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -674,5 +674,6 @@ public open class Role internal constructor(
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.Role): Role = Role(cdkObject)
 
     internal fun unwrap(wrapped: Role): software.amazon.awscdk.services.iam.Role = wrapped.cdkObject
+        as software.amazon.awscdk.services.iam.Role
   }
 }

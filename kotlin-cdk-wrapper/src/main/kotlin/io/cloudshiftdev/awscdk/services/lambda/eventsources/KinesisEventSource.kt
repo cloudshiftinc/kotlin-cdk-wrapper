@@ -33,9 +33,8 @@ import software.amazon.awscdk.services.kinesis.IStream as AmazonAwscdkServicesKi
  * .build());
  * ```
  */
-public open class KinesisEventSource internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.eventsources.KinesisEventSource,
+public open class KinesisEventSource(
+  cdkObject: software.amazon.awscdk.services.lambda.eventsources.KinesisEventSource,
 ) : StreamEventSource(cdkObject) {
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream,
       props: KinesisEventSourceProps) :
@@ -449,5 +448,6 @@ public open class KinesisEventSource internal constructor(
 
     internal fun unwrap(wrapped: KinesisEventSource):
         software.amazon.awscdk.services.lambda.eventsources.KinesisEventSource = wrapped.cdkObject
+        as software.amazon.awscdk.services.lambda.eventsources.KinesisEventSource
   }
 }

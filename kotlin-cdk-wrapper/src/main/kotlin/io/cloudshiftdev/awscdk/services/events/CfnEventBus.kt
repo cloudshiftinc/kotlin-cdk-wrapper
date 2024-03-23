@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html)
  */
-public open class CfnEventBus internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.CfnEventBus,
+public open class CfnEventBus(
+  cdkObject: software.amazon.awscdk.services.events.CfnEventBus,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -301,6 +301,6 @@ public open class CfnEventBus internal constructor(
         CfnEventBus(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventBus): software.amazon.awscdk.services.events.CfnEventBus =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.CfnEventBus
   }
 }

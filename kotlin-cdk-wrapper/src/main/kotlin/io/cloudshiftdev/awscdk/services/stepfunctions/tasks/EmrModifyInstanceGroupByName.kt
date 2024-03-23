@@ -36,9 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EmrModifyInstanceGroupByName internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName,
+public open class EmrModifyInstanceGroupByName(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -529,7 +528,8 @@ public open class EmrModifyInstanceGroupByName internal constructor(
 
     internal fun unwrap(wrapped: EmrModifyInstanceGroupByName):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName
   }
 
   /**
@@ -702,8 +702,7 @@ public open class EmrModifyInstanceGroupByName internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty,
     ) : CdkObject(cdkObject), InstanceGroupModifyConfigProperty {
       /**
        * A list of new or modified configurations to apply for an instance group.
@@ -894,8 +893,7 @@ public open class EmrModifyInstanceGroupByName internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty,
     ) : CdkObject(cdkObject), InstanceResizePolicyProperty {
       /**
        * Decommissioning timeout override for the specific list of instances to be terminated.
@@ -1049,8 +1047,7 @@ public open class EmrModifyInstanceGroupByName internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty,
     ) : CdkObject(cdkObject), ShrinkPolicyProperty {
       /**
        * The desired timeout for decommissioning an instance.

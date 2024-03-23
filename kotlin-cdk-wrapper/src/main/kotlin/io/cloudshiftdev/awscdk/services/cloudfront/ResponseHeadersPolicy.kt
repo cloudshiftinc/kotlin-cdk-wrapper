@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ResponseHeadersPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy,
+public open class ResponseHeadersPolicy(
+  cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy,
 ) : Resource(cdkObject), IResponseHeadersPolicy {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -401,6 +401,7 @@ public open class ResponseHeadersPolicy internal constructor(
         ResponseHeadersPolicy = ResponseHeadersPolicy(cdkObject)
 
     internal fun unwrap(wrapped: ResponseHeadersPolicy):
-        software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy
   }
 }

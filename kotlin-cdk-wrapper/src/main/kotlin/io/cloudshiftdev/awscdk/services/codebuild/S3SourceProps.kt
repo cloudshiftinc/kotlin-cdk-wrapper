@@ -106,7 +106,7 @@ public interface S3SourceProps : SourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.S3SourceProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.S3SourceProps,
   ) : CdkObject(cdkObject), S3SourceProps {
     /**
      *

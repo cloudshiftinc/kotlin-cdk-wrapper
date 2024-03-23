@@ -21,7 +21,7 @@ public interface IFlowLog : IResource {
   public fun flowLogId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IFlowLog,
+    cdkObject: software.amazon.awscdk.services.ec2.IFlowLog,
   ) : CdkObject(cdkObject), IFlowLog {
     /**
      * Apply the given removal policy to this resource.

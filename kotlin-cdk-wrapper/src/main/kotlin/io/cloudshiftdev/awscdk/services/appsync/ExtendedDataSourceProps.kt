@@ -466,7 +466,7 @@ public interface ExtendedDataSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.ExtendedDataSourceProps,
+    cdkObject: software.amazon.awscdk.services.appsync.ExtendedDataSourceProps,
   ) : CdkObject(cdkObject), ExtendedDataSourceProps {
     /**
      * configuration for DynamoDB Datasource.

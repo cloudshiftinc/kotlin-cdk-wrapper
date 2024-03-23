@@ -310,7 +310,7 @@ public interface CfnVPCCidrBlockProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCCidrBlockProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVPCCidrBlockProps,
   ) : CdkObject(cdkObject), CfnVPCCidrBlockProps {
     /**
      * Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC.

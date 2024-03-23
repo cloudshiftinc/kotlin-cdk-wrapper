@@ -26,8 +26,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class Action internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.Action,
+public open class Action(
+  cdkObject: software.amazon.awscdk.services.appconfig.Action,
 ) : CdkObject(cdkObject) {
   public constructor(props: ActionProps) :
       this(software.amazon.awscdk.services.appconfig.Action(props.let(ActionProps::unwrap))
@@ -229,6 +229,6 @@ public open class Action internal constructor(
         Action(cdkObject)
 
     internal fun unwrap(wrapped: Action): software.amazon.awscdk.services.appconfig.Action =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appconfig.Action
   }
 }

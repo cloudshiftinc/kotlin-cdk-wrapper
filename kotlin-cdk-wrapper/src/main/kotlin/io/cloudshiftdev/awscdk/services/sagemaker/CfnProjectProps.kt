@@ -253,7 +253,7 @@ public interface CfnProjectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnProjectProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnProjectProps,
   ) : CdkObject(cdkObject), CfnProjectProps {
     /**
      * The description of the project.

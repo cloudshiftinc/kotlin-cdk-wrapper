@@ -89,8 +89,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html)
  */
-public open class CfnClientVpnEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint,
+public open class CfnClientVpnEndpoint(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1145,7 +1145,8 @@ public open class CfnClientVpnEndpoint internal constructor(
         CfnClientVpnEndpoint = CfnClientVpnEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnClientVpnEndpoint):
-        software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
   }
 
   /**
@@ -1210,8 +1211,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty,
     ) : CdkObject(cdkObject), CertificateAuthenticationRequestProperty {
       /**
        * The ARN of the client certificate.
@@ -1493,8 +1493,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientAuthenticationRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientAuthenticationRequestProperty,
     ) : CdkObject(cdkObject), ClientAuthenticationRequestProperty {
       /**
        * Information about the Active Directory to be used, if applicable.
@@ -1646,8 +1645,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty,
     ) : CdkObject(cdkObject), ClientConnectOptionsProperty {
       /**
        * Indicates whether client connect options are enabled.
@@ -1802,8 +1800,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty,
     ) : CdkObject(cdkObject), ClientLoginBannerOptionsProperty {
       /**
        * Customizable text that will be displayed in a banner on AWS provided clients when a VPN
@@ -1960,8 +1957,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ConnectionLogOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ConnectionLogOptionsProperty,
     ) : CdkObject(cdkObject), ConnectionLogOptionsProperty {
       /**
        * The name of the CloudWatch Logs log group.
@@ -2060,8 +2056,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty,
     ) : CdkObject(cdkObject), DirectoryServiceAuthenticationRequestProperty {
       /**
        * The ID of the Active Directory to be used for authentication.
@@ -2168,8 +2163,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.FederatedAuthenticationRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.FederatedAuthenticationRequestProperty,
     ) : CdkObject(cdkObject), FederatedAuthenticationRequestProperty {
       /**
        * The Amazon Resource Name (ARN) of the IAM SAML identity provider.
@@ -2303,8 +2297,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty,
     ) : CdkObject(cdkObject), TagSpecificationProperty {
       /**
        * The type of resource to tag.

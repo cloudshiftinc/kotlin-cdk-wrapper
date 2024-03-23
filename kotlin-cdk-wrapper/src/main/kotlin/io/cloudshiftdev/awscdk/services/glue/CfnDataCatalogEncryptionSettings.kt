@@ -48,9 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html)
  */
-public open class CfnDataCatalogEncryptionSettings internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings,
+public open class CfnDataCatalogEncryptionSettings(
+  cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -246,7 +245,8 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
         CfnDataCatalogEncryptionSettings = CfnDataCatalogEncryptionSettings(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataCatalogEncryptionSettings):
-        software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings = wrapped.cdkObject
+        software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings = wrapped.cdkObject as
+        software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings
   }
 
   /**
@@ -378,8 +378,7 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty,
     ) : CdkObject(cdkObject), ConnectionPasswordEncryptionProperty {
       /**
        * An AWS KMS key that is used to encrypt the connection password.
@@ -599,8 +598,7 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty,
     ) : CdkObject(cdkObject), DataCatalogEncryptionSettingsProperty {
       /**
        * When connection password protection is enabled, the Data Catalog uses a customer-provided
@@ -739,8 +737,7 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty,
     ) : CdkObject(cdkObject), EncryptionAtRestProperty {
       /**
        * The encryption-at-rest mode for encrypting Data Catalog data.

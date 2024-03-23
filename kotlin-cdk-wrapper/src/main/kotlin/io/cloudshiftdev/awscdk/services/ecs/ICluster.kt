@@ -64,7 +64,7 @@ public interface ICluster : IResource {
   public fun vpc(): IVpc
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ICluster,
+    cdkObject: software.amazon.awscdk.services.ecs.ICluster,
   ) : CdkObject(cdkObject), ICluster {
     /**
      * Apply the given removal policy to this resource.

@@ -196,7 +196,7 @@ public interface CfnVpcIngressConnectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apprunner.CfnVpcIngressConnectionProps,
+    cdkObject: software.amazon.awscdk.services.apprunner.CfnVpcIngressConnectionProps,
   ) : CdkObject(cdkObject), CfnVpcIngressConnectionProps {
     /**
      * Specifications for the customer’s Amazon VPC and the related AWS PrivateLink VPC endpoint

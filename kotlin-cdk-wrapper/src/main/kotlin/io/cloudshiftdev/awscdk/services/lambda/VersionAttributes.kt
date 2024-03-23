@@ -72,7 +72,7 @@ public interface VersionAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.VersionAttributes,
+    cdkObject: software.amazon.awscdk.services.lambda.VersionAttributes,
   ) : CdkObject(cdkObject), VersionAttributes {
     /**
      * The lambda function.

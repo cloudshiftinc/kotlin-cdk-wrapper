@@ -326,7 +326,7 @@ public interface CfnVolumeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.fsx.CfnVolumeProps,
+    cdkObject: software.amazon.awscdk.services.fsx.CfnVolumeProps,
   ) : CdkObject(cdkObject), CfnVolumeProps {
     /**
      * Specifies the ID of the volume backup to use to create a new volume.

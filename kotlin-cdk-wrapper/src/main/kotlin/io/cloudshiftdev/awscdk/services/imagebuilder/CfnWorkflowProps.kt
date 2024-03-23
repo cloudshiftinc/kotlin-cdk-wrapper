@@ -291,7 +291,7 @@ public interface CfnWorkflowProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnWorkflowProps,
+    cdkObject: software.amazon.awscdk.services.imagebuilder.CfnWorkflowProps,
   ) : CdkObject(cdkObject), CfnWorkflowProps {
     /**
      * Describes what change has been made in this version of the workflow, or what makes this

@@ -315,7 +315,7 @@ public interface CfnDataCatalogProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.athena.CfnDataCatalogProps,
+    cdkObject: software.amazon.awscdk.services.athena.CfnDataCatalogProps,
   ) : CdkObject(cdkObject), CfnDataCatalogProps {
     /**
      * A description of the data catalog.

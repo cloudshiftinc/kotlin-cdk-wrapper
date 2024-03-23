@@ -25,8 +25,8 @@ import kotlin.collections.List
  * Annotations annotations = Annotations.fromStack(stack);
  * ```
  */
-public open class Annotations internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.assertions.Annotations,
+public open class Annotations(
+  cdkObject: software.amazon.awscdk.assertions.Annotations,
 ) : CdkObject(cdkObject) {
   /**
    * Get the set of matching errors of a given construct path and message.
@@ -123,6 +123,6 @@ public open class Annotations internal constructor(
         Annotations(cdkObject)
 
     internal fun unwrap(wrapped: Annotations): software.amazon.awscdk.assertions.Annotations =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.assertions.Annotations
   }
 }

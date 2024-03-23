@@ -15,7 +15,7 @@ public interface ISecretAttachmentTarget {
   public fun asSecretAttachmentTarget(): SecretAttachmentTargetProps
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget,
   ) : CdkObject(cdkObject), ISecretAttachmentTarget {
     /**
      * Renders the target specifications.

@@ -30,8 +30,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class BaseDataSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.BaseDataSource,
+public abstract class BaseDataSource(
+  cdkObject: software.amazon.awscdk.services.appsync.BaseDataSource,
 ) : Construct(cdkObject) {
   /**
    * creates a new appsync function for this datasource and API using the given properties.
@@ -85,7 +85,7 @@ public abstract class BaseDataSource internal constructor(
   public open fun name(): String = unwrap(this).getName()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.BaseDataSource,
+    cdkObject: software.amazon.awscdk.services.appsync.BaseDataSource,
   ) : BaseDataSource(cdkObject)
 
   public companion object {

@@ -240,7 +240,7 @@ public interface ServiceConnectService {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ServiceConnectService,
+    cdkObject: software.amazon.awscdk.services.ecs.ServiceConnectService,
   ) : CdkObject(cdkObject), ServiceConnectService {
     /**
      * Optionally specifies an intermediate dns name to register in the CloudMap namespace.

@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html)
  */
-public open class CfnDeviceDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition,
+public open class CfnDeviceDefinition(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -396,7 +396,8 @@ public open class CfnDeviceDefinition internal constructor(
         CfnDeviceDefinition = CfnDeviceDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeviceDefinition):
-        software.amazon.awscdk.services.greengrass.CfnDeviceDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrass.CfnDeviceDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnDeviceDefinition
   }
 
   /**
@@ -496,8 +497,7 @@ public open class CfnDeviceDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty,
     ) : CdkObject(cdkObject), DeviceDefinitionVersionProperty {
       /**
        * The devices in this version.
@@ -680,8 +680,7 @@ public open class CfnDeviceDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceProperty,
     ) : CdkObject(cdkObject), DeviceProperty {
       /**
        * The Amazon Resource Name (ARN) of the device certificate for the device.

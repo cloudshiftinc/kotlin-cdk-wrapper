@@ -10,8 +10,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/EventTypes.html#codebuild_event_type)
  */
-public open class ReferenceEvent internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codecommit.ReferenceEvent,
+public open class ReferenceEvent(
+  cdkObject: software.amazon.awscdk.services.codecommit.ReferenceEvent,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun commitId(): String =
@@ -39,6 +39,7 @@ public open class ReferenceEvent internal constructor(
         ReferenceEvent = ReferenceEvent(cdkObject)
 
     internal fun unwrap(wrapped: ReferenceEvent):
-        software.amazon.awscdk.services.codecommit.ReferenceEvent = wrapped.cdkObject
+        software.amazon.awscdk.services.codecommit.ReferenceEvent = wrapped.cdkObject as
+        software.amazon.awscdk.services.codecommit.ReferenceEvent
   }
 }

@@ -28,9 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-loganomalydetectionintegration.html)
  */
-public open class CfnLogAnomalyDetectionIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegration,
+public open class CfnLogAnomalyDetectionIntegration(
+  cdkObject: software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -107,6 +106,7 @@ public open class CfnLogAnomalyDetectionIntegration internal constructor(
 
     internal fun unwrap(wrapped: CfnLogAnomalyDetectionIntegration):
         software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegration
   }
 }

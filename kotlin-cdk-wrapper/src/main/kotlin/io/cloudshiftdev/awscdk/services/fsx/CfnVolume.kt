@@ -121,8 +121,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html)
  */
-public open class CfnVolume internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fsx.CfnVolume,
+public open class CfnVolume(
+  cdkObject: software.amazon.awscdk.services.fsx.CfnVolume,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -538,7 +538,7 @@ public open class CfnVolume internal constructor(
         CfnVolume(cdkObject)
 
     internal fun unwrap(wrapped: CfnVolume): software.amazon.awscdk.services.fsx.CfnVolume =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.fsx.CfnVolume
   }
 
   /**
@@ -698,8 +698,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.AggregateConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.AggregateConfigurationProperty,
     ) : CdkObject(cdkObject), AggregateConfigurationProperty {
       /**
        * The list of aggregates that this volume resides on.
@@ -863,8 +862,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty,
     ) : CdkObject(cdkObject), AutocommitPeriodProperty {
       /**
        * Defines the type of time for the autocommit period of a file in an FSx for ONTAP SnapLock
@@ -1056,8 +1054,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.ClientConfigurationsProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.ClientConfigurationsProperty,
     ) : CdkObject(cdkObject), ClientConfigurationsProperty {
       /**
        * A value that specifies who can mount the file system.
@@ -1192,7 +1189,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty,
     ) : CdkObject(cdkObject), NfsExportsProperty {
       /**
        * A list of configuration objects that contain the client and options for mounting the
@@ -1917,8 +1914,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.OntapConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OntapConfigurationProperty,
     ) : CdkObject(cdkObject), OntapConfigurationProperty {
       /**
        * Used to specify the configuration options for an FSx for ONTAP volume's storage aggregate
@@ -2629,8 +2625,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty,
     ) : CdkObject(cdkObject), OpenZFSConfigurationProperty {
       /**
        * A Boolean value indicating whether tags for the volume should be copied to snapshots.
@@ -2889,7 +2884,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty,
     ) : CdkObject(cdkObject), OriginSnapshotProperty {
       /**
        * Specifies the strategy used when copying data from the snapshot to the new volume.
@@ -3061,7 +3056,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty,
     ) : CdkObject(cdkObject), RetentionPeriodProperty {
       /**
        * Defines the type of time for the retention period of an FSx for ONTAP SnapLock volume.
@@ -3455,8 +3450,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.SnaplockConfigurationProperty,
     ) : CdkObject(cdkObject), SnaplockConfigurationProperty {
       /**
        * Enables or disables the audit log volume for an FSx for ONTAP SnapLock volume.
@@ -3790,8 +3784,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty,
     ) : CdkObject(cdkObject), SnaplockRetentionPeriodProperty {
       /**
        * The retention period assigned to a write once, read many (WORM) file by default if an
@@ -3959,7 +3952,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty,
     ) : CdkObject(cdkObject), TieringPolicyProperty {
       /**
        * Specifies the number of days that user data in a volume must remain inactive before it is
@@ -4098,8 +4091,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty,
     ) : CdkObject(cdkObject), UserAndGroupQuotasProperty {
       /**
        * The ID of the user or group that the quota applies to.

@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html)
  */
-public open class CfnFleetMetric internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnFleetMetric,
+public open class CfnFleetMetric(
+  cdkObject: software.amazon.awscdk.services.iot.CfnFleetMetric,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -525,7 +525,7 @@ public open class CfnFleetMetric internal constructor(
         = CfnFleetMetric(cdkObject)
 
     internal fun unwrap(wrapped: CfnFleetMetric): software.amazon.awscdk.services.iot.CfnFleetMetric
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.iot.CfnFleetMetric
   }
 
   /**
@@ -610,8 +610,7 @@ public open class CfnFleetMetric internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnFleetMetric.AggregationTypeProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnFleetMetric.AggregationTypeProperty,
     ) : CdkObject(cdkObject), AggregationTypeProperty {
       /**
        * The name of the aggregation type.

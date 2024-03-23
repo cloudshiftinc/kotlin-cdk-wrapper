@@ -17,8 +17,8 @@ import kotlin.String
  * AppProtocol appProtocol = AppProtocol.getGrpc();
  * ```
  */
-public open class AppProtocol internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.AppProtocol,
+public open class AppProtocol(
+  cdkObject: software.amazon.awscdk.services.ecs.AppProtocol,
 ) : CdkObject(cdkObject) {
   /**
    * Custom value.
@@ -51,6 +51,6 @@ public open class AppProtocol internal constructor(
         AppProtocol(cdkObject)
 
     internal fun unwrap(wrapped: AppProtocol): software.amazon.awscdk.services.ecs.AppProtocol =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecs.AppProtocol
   }
 }

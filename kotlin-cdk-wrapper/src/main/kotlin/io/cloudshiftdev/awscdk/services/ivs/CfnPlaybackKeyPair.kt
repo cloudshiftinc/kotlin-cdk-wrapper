@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackkeypair.html)
  */
-public open class CfnPlaybackKeyPair internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair,
+public open class CfnPlaybackKeyPair(
+  cdkObject: software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -260,6 +260,7 @@ public open class CfnPlaybackKeyPair internal constructor(
         CfnPlaybackKeyPair = CfnPlaybackKeyPair(cdkObject)
 
     internal fun unwrap(wrapped: CfnPlaybackKeyPair):
-        software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair = wrapped.cdkObject
+        software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair = wrapped.cdkObject as
+        software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair
   }
 }

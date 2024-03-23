@@ -19,9 +19,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class EksClusterInput internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput,
+public open class EksClusterInput(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput,
 ) : CdkObject(cdkObject) {
   /**
    * The name of the EKS Cluster.
@@ -40,6 +39,7 @@ public open class EksClusterInput internal constructor(
         EksClusterInput = EksClusterInput(cdkObject)
 
     internal fun unwrap(wrapped: EksClusterInput):
-        software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput
   }
 }

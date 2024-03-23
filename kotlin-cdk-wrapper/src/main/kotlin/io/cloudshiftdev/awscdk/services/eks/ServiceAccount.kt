@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * bucket.grantReadWrite(serviceAccount);
  * ```
  */
-public open class ServiceAccount internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.ServiceAccount,
+public open class ServiceAccount(
+  cdkObject: software.amazon.awscdk.services.eks.ServiceAccount,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IPrincipal {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -246,6 +246,6 @@ public open class ServiceAccount internal constructor(
         = ServiceAccount(cdkObject)
 
     internal fun unwrap(wrapped: ServiceAccount): software.amazon.awscdk.services.eks.ServiceAccount
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.eks.ServiceAccount
   }
 }

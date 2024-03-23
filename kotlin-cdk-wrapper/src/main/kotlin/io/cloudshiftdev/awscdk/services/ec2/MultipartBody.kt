@@ -23,8 +23,8 @@ import kotlin.jvm.JvmName
  * commandsUserData.addCommands("touch /root/userdata.txt");
  * ```
  */
-public abstract class MultipartBody internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.MultipartBody,
+public abstract class MultipartBody(
+  cdkObject: software.amazon.awscdk.services.ec2.MultipartBody,
 ) : CdkObject(cdkObject) {
   /**
    * Render body part as the string.
@@ -34,7 +34,7 @@ public abstract class MultipartBody internal constructor(
   public open fun renderBodyPart(): List<String> = unwrap(this).renderBodyPart()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.MultipartBody,
+    cdkObject: software.amazon.awscdk.services.ec2.MultipartBody,
   ) : MultipartBody(cdkObject)
 
   public companion object {

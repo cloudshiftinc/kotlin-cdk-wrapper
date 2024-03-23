@@ -267,7 +267,7 @@ public interface CfnPolicyStoreProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStoreProps,
+    cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStoreProps,
   ) : CdkObject(cdkObject), CfnPolicyStoreProps {
     /**
      * Descriptive text that you can provide to help with identification of the current policy

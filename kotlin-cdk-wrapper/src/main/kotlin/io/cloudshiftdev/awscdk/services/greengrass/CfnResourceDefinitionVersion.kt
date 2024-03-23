@@ -99,9 +99,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html)
  */
-public open class CfnResourceDefinitionVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion,
+public open class CfnResourceDefinitionVersion(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -282,6 +281,7 @@ public open class CfnResourceDefinitionVersion internal constructor(
 
     internal fun unwrap(wrapped: CfnResourceDefinitionVersion):
         software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion = wrapped.cdkObject
+        as software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion
   }
 
   /**
@@ -398,8 +398,7 @@ public open class CfnResourceDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.GroupOwnerSettingProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.GroupOwnerSettingProperty,
     ) : CdkObject(cdkObject), GroupOwnerSettingProperty {
       /**
        * Indicates whether to give the privileges of the Linux group that owns the resource to the
@@ -569,8 +568,7 @@ public open class CfnResourceDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.LocalDeviceResourceDataProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.LocalDeviceResourceDataProperty,
     ) : CdkObject(cdkObject), LocalDeviceResourceDataProperty {
       /**
        * Settings that define additional Linux OS group permissions to give to the Lambda function
@@ -757,8 +755,7 @@ public open class CfnResourceDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.LocalVolumeResourceDataProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.LocalVolumeResourceDataProperty,
     ) : CdkObject(cdkObject), LocalVolumeResourceDataProperty {
       /**
        * The absolute local path of the resource in the Lambda environment.
@@ -1162,8 +1159,7 @@ public open class CfnResourceDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.ResourceDataContainerProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.ResourceDataContainerProperty,
     ) : CdkObject(cdkObject), ResourceDataContainerProperty {
       /**
        * Settings for a local device resource.
@@ -1321,8 +1317,7 @@ public open class CfnResourceDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.ResourceDownloadOwnerSettingProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.ResourceDownloadOwnerSettingProperty,
     ) : CdkObject(cdkObject), ResourceDownloadOwnerSettingProperty {
       /**
        * The group owner of the machine learning resource.
@@ -1608,8 +1603,7 @@ public open class CfnResourceDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.ResourceInstanceProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.ResourceInstanceProperty,
     ) : CdkObject(cdkObject), ResourceInstanceProperty {
       /**
        * A descriptive or arbitrary ID for the resource.
@@ -1829,8 +1823,7 @@ public open class CfnResourceDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.S3MachineLearningModelResourceDataProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.S3MachineLearningModelResourceDataProperty,
     ) : CdkObject(cdkObject), S3MachineLearningModelResourceDataProperty {
       /**
        * The absolute local path of the resource inside the Lambda environment.
@@ -2043,8 +2036,7 @@ public open class CfnResourceDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.SageMakerMachineLearningModelResourceDataProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.SageMakerMachineLearningModelResourceDataProperty,
     ) : CdkObject(cdkObject), SageMakerMachineLearningModelResourceDataProperty {
       /**
        * The absolute local path of the resource inside the Lambda environment.
@@ -2206,8 +2198,7 @@ public open class CfnResourceDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.SecretsManagerSecretResourceDataProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.SecretsManagerSecretResourceDataProperty,
     ) : CdkObject(cdkObject), SecretsManagerSecretResourceDataProperty {
       /**
        * The staging labels whose values you want to make available on the core, in addition to

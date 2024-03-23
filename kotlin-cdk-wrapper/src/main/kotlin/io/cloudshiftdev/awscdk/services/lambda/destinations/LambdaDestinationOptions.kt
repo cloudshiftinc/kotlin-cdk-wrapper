@@ -87,8 +87,7 @@ public interface LambdaDestinationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.lambda.destinations.LambdaDestinationOptions,
+    cdkObject: software.amazon.awscdk.services.lambda.destinations.LambdaDestinationOptions,
   ) : CdkObject(cdkObject), LambdaDestinationOptions {
     /**
      * Whether the destination function receives only the `responsePayload` of the source function.

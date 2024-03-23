@@ -219,7 +219,7 @@ public interface ConfigurationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationOptions,
+    cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationOptions,
   ) : CdkObject(cdkObject), ConfigurationOptions {
     /**
      * The list of environments to deploy the configuration to.

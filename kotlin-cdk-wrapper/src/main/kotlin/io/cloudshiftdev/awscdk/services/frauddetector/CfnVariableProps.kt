@@ -260,7 +260,7 @@ public interface CfnVariableProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnVariableProps,
+    cdkObject: software.amazon.awscdk.services.frauddetector.CfnVariableProps,
   ) : CdkObject(cdkObject), CfnVariableProps {
     /**
      * The data source of the variable.

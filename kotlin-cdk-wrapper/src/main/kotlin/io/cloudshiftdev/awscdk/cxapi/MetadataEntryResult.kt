@@ -185,7 +185,7 @@ public interface MetadataEntryResult : MetadataEntry {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cxapi.MetadataEntryResult,
+    cdkObject: software.amazon.awscdk.cxapi.MetadataEntryResult,
   ) : CdkObject(cdkObject), MetadataEntryResult {
     /**
      * The data.

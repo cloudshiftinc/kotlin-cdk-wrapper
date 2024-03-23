@@ -84,8 +84,7 @@ public interface CfnDirectoryRegistrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.pcaconnectorad.CfnDirectoryRegistrationProps,
+    cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnDirectoryRegistrationProps,
   ) : CdkObject(cdkObject), CfnDirectoryRegistrationProps {
     /**
      * The identifier of the Active Directory.

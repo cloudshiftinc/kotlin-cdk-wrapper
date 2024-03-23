@@ -29,9 +29,8 @@ import software.amazon.awscdk.services.s3.Bucket as AmazonAwscdkServicesS3Bucket
  * .build());
  * ```
  */
-public open class S3EventSource internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.eventsources.S3EventSource,
+public open class S3EventSource(
+  cdkObject: software.amazon.awscdk.services.lambda.eventsources.S3EventSource,
 ) : CdkObject(cdkObject), IEventSource {
   public constructor(bucket: CloudshiftdevAwscdkServicesS3Bucket, props: S3EventSourceProps) :
       this(software.amazon.awscdk.services.lambda.eventsources.S3EventSource(bucket.let(CloudshiftdevAwscdkServicesS3Bucket::unwrap),
@@ -161,6 +160,7 @@ public open class S3EventSource internal constructor(
         S3EventSource = S3EventSource(cdkObject)
 
     internal fun unwrap(wrapped: S3EventSource):
-        software.amazon.awscdk.services.lambda.eventsources.S3EventSource = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.eventsources.S3EventSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.eventsources.S3EventSource
   }
 }

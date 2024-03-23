@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html)
  */
-public open class CfnSchemaVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersion,
+public open class CfnSchemaVersion(
+  cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -218,7 +218,8 @@ public open class CfnSchemaVersion internal constructor(
         CfnSchemaVersion = CfnSchemaVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchemaVersion):
-        software.amazon.awscdk.services.glue.CfnSchemaVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.glue.CfnSchemaVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.glue.CfnSchemaVersion
   }
 
   /**
@@ -327,7 +328,7 @@ public open class CfnSchemaVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersion.SchemaProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersion.SchemaProperty,
     ) : CdkObject(cdkObject), SchemaProperty {
       /**
        * The name of the registry where the schema is stored.

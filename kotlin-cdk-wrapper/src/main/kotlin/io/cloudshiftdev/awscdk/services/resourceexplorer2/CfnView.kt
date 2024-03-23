@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html)
  */
-public open class CfnView internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView,
+public open class CfnView(
+  cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -517,7 +517,7 @@ public open class CfnView internal constructor(
         = CfnView(cdkObject)
 
     internal fun unwrap(wrapped: CfnView): software.amazon.awscdk.services.resourceexplorer2.CfnView
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.resourceexplorer2.CfnView
   }
 
   /**
@@ -568,8 +568,7 @@ public open class CfnView internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty,
+      cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty,
     ) : CdkObject(cdkObject), FiltersProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-filters.html#cfn-resourceexplorer2-view-filters-filterstring)
@@ -650,8 +649,7 @@ public open class CfnView internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty,
+      cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty,
     ) : CdkObject(cdkObject), IncludedPropertyProperty {
       /**
        * The name of the property that is included in this view.
@@ -773,8 +771,7 @@ public open class CfnView internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty,
+      cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty,
     ) : CdkObject(cdkObject), SearchFilterProperty {
       /**
        * The string that contains the search keywords, prefixes, and operators to control the

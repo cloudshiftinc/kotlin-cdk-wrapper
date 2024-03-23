@@ -471,7 +471,7 @@ public interface CfnPermissionSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSetProps,
+    cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSetProps,
   ) : CdkObject(cdkObject), CfnPermissionSetProps {
     /**
      * Specifies the names and paths of the customer managed policies that you have attached to your

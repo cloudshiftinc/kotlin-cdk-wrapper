@@ -28,8 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class StringParameter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.StringParameter,
+public open class StringParameter(
+  cdkObject: software.amazon.awscdk.services.ssm.StringParameter,
 ) : Resource(cdkObject), IStringParameter, IParameter {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -426,6 +426,7 @@ public open class StringParameter internal constructor(
         StringParameter = StringParameter(cdkObject)
 
     internal fun unwrap(wrapped: StringParameter):
-        software.amazon.awscdk.services.ssm.StringParameter = wrapped.cdkObject
+        software.amazon.awscdk.services.ssm.StringParameter = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssm.StringParameter
   }
 }

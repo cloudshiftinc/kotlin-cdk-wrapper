@@ -27,9 +27,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class CodeStarConnectionsSourceAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction,
+public open class CodeStarConnectionsSourceAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction,
 ) : Action(cdkObject) {
   public constructor(props: CodeStarConnectionsSourceActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction(props.let(CodeStarConnectionsSourceActionProps::unwrap))
@@ -375,6 +374,7 @@ public open class CodeStarConnectionsSourceAction internal constructor(
 
     internal fun unwrap(wrapped: CodeStarConnectionsSourceAction):
         software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction
   }
 }

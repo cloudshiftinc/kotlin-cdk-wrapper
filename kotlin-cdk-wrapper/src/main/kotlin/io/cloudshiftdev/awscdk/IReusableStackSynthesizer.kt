@@ -29,7 +29,7 @@ public interface IReusableStackSynthesizer : IStackSynthesizer {
   public fun reusableBind(stack: Stack): IBoundStackSynthesizer
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IReusableStackSynthesizer,
+    cdkObject: software.amazon.awscdk.IReusableStackSynthesizer,
   ) : CdkObject(cdkObject), IReusableStackSynthesizer {
     /**
      * Register a Docker Image Asset.

@@ -116,7 +116,7 @@ public interface CfnChannelGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannelGroupProps,
+    cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannelGroupProps,
   ) : CdkObject(cdkObject), CfnChannelGroupProps {
     /**
      * The name of the channel group.

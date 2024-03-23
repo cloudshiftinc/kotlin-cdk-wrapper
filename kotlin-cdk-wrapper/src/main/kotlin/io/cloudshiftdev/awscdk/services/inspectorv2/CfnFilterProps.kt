@@ -300,7 +300,7 @@ public interface CfnFilterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilterProps,
+    cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilterProps,
   ) : CdkObject(cdkObject), CfnFilterProps {
     /**
      * A description of the filter.

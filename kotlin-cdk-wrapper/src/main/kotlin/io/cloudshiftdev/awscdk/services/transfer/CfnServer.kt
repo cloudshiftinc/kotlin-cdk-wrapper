@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)
  */
-public open class CfnServer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.transfer.CfnServer,
+public open class CfnServer(
+  cdkObject: software.amazon.awscdk.services.transfer.CfnServer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.transfer.CfnServer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1611,7 +1611,7 @@ public open class CfnServer internal constructor(
         CfnServer(cdkObject)
 
     internal fun unwrap(wrapped: CfnServer): software.amazon.awscdk.services.transfer.CfnServer =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.transfer.CfnServer
   }
 
   /**
@@ -1999,8 +1999,7 @@ public open class CfnServer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnServer.EndpointDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnServer.EndpointDetailsProperty,
     ) : CdkObject(cdkObject), EndpointDetailsProperty {
       /**
        * A list of address allocation IDs that are required to attach an Elastic IP address to your
@@ -2288,8 +2287,7 @@ public open class CfnServer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty,
     ) : CdkObject(cdkObject), IdentityProviderDetailsProperty {
       /**
        * The identifier of the AWS Directory Service directory that you want to use as your identity
@@ -2695,8 +2693,7 @@ public open class CfnServer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty,
     ) : CdkObject(cdkObject), ProtocolDetailsProperty {
       /**
        * List of `As2Transport` objects.
@@ -2881,8 +2878,7 @@ public open class CfnServer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty,
     ) : CdkObject(cdkObject), S3StorageOptionsProperty {
       /**
        * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
@@ -2996,8 +2992,7 @@ public open class CfnServer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty,
     ) : CdkObject(cdkObject), WorkflowDetailProperty {
       /**
        * Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can
@@ -3228,8 +3223,7 @@ public open class CfnServer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty,
     ) : CdkObject(cdkObject), WorkflowDetailsProperty {
       /**
        * A trigger that starts a workflow if a file is only partially uploaded.

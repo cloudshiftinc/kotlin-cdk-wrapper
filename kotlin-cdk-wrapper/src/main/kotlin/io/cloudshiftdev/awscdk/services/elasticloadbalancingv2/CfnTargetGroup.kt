@@ -75,9 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html)
  */
-public open class CfnTargetGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup,
+public open class CfnTargetGroup(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1143,7 +1142,8 @@ public open class CfnTargetGroup internal constructor(
         CfnTargetGroup = CfnTargetGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnTargetGroup):
-        software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup
   }
 
   /**
@@ -1261,8 +1261,7 @@ public open class CfnTargetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.MatcherProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.MatcherProperty,
     ) : CdkObject(cdkObject), MatcherProperty {
       /**
        * You can specify values between 0 and 99.
@@ -1491,8 +1490,7 @@ public open class CfnTargetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetDescriptionProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetDescriptionProperty,
     ) : CdkObject(cdkObject), TargetDescriptionProperty {
       /**
        * An Availability Zone or `all` .
@@ -1954,8 +1952,7 @@ public open class CfnTargetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetGroupAttributeProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetGroupAttributeProperty,
     ) : CdkObject(cdkObject), TargetGroupAttributeProperty {
       /**
        * The name of the attribute.

@@ -34,8 +34,8 @@ import kotlin.Any
  * .build();
  * ```
  */
-public open class DefaultValue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.DefaultValue,
+public open class DefaultValue(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.DefaultValue,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -53,6 +53,7 @@ public open class DefaultValue internal constructor(
         DefaultValue = DefaultValue(cdkObject)
 
     internal fun unwrap(wrapped: DefaultValue):
-        software.amazon.awscdk.services.cloudwatch.DefaultValue = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.DefaultValue = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.DefaultValue
   }
 }

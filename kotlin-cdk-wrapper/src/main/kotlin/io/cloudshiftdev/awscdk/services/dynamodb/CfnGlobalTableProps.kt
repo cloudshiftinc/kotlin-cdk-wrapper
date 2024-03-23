@@ -960,7 +960,7 @@ public interface CfnGlobalTableProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTableProps,
+    cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTableProps,
   ) : CdkObject(cdkObject), CfnGlobalTableProps {
     /**
      * A list of attributes that describe the key schema for the global table and indexes.

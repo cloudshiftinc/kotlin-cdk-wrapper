@@ -53,9 +53,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class CloudFormationCreateUpdateStackAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackAction,
+public open class CloudFormationCreateUpdateStackAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackAction,
 ) : Action(cdkObject) {
   public constructor(props: CloudFormationCreateUpdateStackActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackAction(props.let(CloudFormationCreateUpdateStackActionProps::unwrap))
@@ -718,6 +717,7 @@ public open class CloudFormationCreateUpdateStackAction internal constructor(
 
     internal fun unwrap(wrapped: CloudFormationCreateUpdateStackAction):
         software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackAction =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackAction
   }
 }

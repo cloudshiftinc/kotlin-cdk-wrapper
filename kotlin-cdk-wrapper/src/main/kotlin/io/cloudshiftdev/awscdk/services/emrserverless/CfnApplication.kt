@@ -118,8 +118,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html)
  */
-public open class CfnApplication internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication,
+public open class CfnApplication(
+  cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1272,7 +1272,8 @@ public open class CfnApplication internal constructor(
         CfnApplication = CfnApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplication):
-        software.amazon.awscdk.services.emrserverless.CfnApplication = wrapped.cdkObject
+        software.amazon.awscdk.services.emrserverless.CfnApplication = wrapped.cdkObject as
+        software.amazon.awscdk.services.emrserverless.CfnApplication
   }
 
   /**
@@ -1350,8 +1351,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty,
     ) : CdkObject(cdkObject), AutoStartConfigurationProperty {
       /**
        * If set to true, the Application will automatically start.
@@ -1484,8 +1484,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStopConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStopConfigurationProperty,
     ) : CdkObject(cdkObject), AutoStopConfigurationProperty {
       /**
        * If set to true, the Application will automatically stop after being idle.
@@ -1707,8 +1706,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.CloudWatchLoggingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.CloudWatchLoggingConfigurationProperty,
     ) : CdkObject(cdkObject), CloudWatchLoggingConfigurationProperty {
       /**
        * Enables CloudWatch logging.
@@ -1894,8 +1892,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.ConfigurationObjectProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.ConfigurationObjectProperty,
     ) : CdkObject(cdkObject), ConfigurationObjectProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-configurationobject.html#cfn-emrserverless-application-configurationobject-classification)
@@ -1993,8 +1990,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.ImageConfigurationInputProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.ImageConfigurationInputProperty,
     ) : CdkObject(cdkObject), ImageConfigurationInputProperty {
       /**
        * The URI of an image in the Amazon ECR registry.
@@ -2131,8 +2127,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigKeyValuePairProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigKeyValuePairProperty,
     ) : CdkObject(cdkObject), InitialCapacityConfigKeyValuePairProperty {
       /**
        * Worker type for an analytics framework.
@@ -2281,8 +2276,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigProperty,
     ) : CdkObject(cdkObject), InitialCapacityConfigProperty {
       /**
        * The resource configuration of the initial capacity configuration.
@@ -2398,8 +2392,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty,
     ) : CdkObject(cdkObject), LogTypeMapKeyValuePairProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html#cfn-emrserverless-application-logtypemapkeyvaluepair-key)
@@ -2530,8 +2523,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.ManagedPersistenceMonitoringConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.ManagedPersistenceMonitoringConfigurationProperty,
     ) : CdkObject(cdkObject), ManagedPersistenceMonitoringConfigurationProperty {
       /**
        * Enables managed logging and defaults to true.
@@ -2669,8 +2661,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty,
     ) : CdkObject(cdkObject), MaximumAllowedResourcesProperty {
       /**
        * The maximum allowed CPU for an application.
@@ -2942,8 +2933,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty,
     ) : CdkObject(cdkObject), MonitoringConfigurationProperty {
       /**
        * The Amazon CloudWatch configuration for monitoring logs.
@@ -3085,8 +3075,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty,
     ) : CdkObject(cdkObject), NetworkConfigurationProperty {
       /**
        * The array of security group Ids for customer VPC connectivity.
@@ -3201,8 +3190,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty,
     ) : CdkObject(cdkObject), S3MonitoringConfigurationProperty {
       /**
        * The KMS key ARN to encrypt the logs published to the given Amazon S3 destination.
@@ -3343,8 +3331,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty,
     ) : CdkObject(cdkObject), WorkerConfigurationProperty {
       /**
        * Per worker CPU resource.
@@ -3478,8 +3465,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty,
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty,
     ) : CdkObject(cdkObject), WorkerTypeSpecificationInputProperty {
       /**
        * The image configuration for a worker type.

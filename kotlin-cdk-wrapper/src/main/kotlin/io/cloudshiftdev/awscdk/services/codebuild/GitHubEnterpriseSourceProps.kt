@@ -353,7 +353,7 @@ public interface GitHubEnterpriseSourceProps : SourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceProps,
   ) : CdkObject(cdkObject), GitHubEnterpriseSourceProps {
     /**
      * The commit ID, pull request ID, branch name, or tag name that corresponds to the version of

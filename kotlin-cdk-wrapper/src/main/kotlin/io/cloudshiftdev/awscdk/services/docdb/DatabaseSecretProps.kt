@@ -137,7 +137,7 @@ public interface DatabaseSecretProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.docdb.DatabaseSecretProps,
+    cdkObject: software.amazon.awscdk.services.docdb.DatabaseSecretProps,
   ) : CdkObject(cdkObject), DatabaseSecretProps {
     /**
      * The KMS key to use to encrypt the secret.

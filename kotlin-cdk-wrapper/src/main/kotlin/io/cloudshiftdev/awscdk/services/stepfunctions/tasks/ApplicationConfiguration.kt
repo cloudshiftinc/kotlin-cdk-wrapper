@@ -139,8 +139,7 @@ public interface ApplicationConfiguration {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.ApplicationConfiguration,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ApplicationConfiguration,
   ) : CdkObject(cdkObject), ApplicationConfiguration {
     /**
      * The classification within a configuration.

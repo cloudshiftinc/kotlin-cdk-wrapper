@@ -21,8 +21,8 @@ import io.cloudshiftdev.constructs.Construct
  * new Ec2Action(Ec2InstanceAction.REBOOT));
  * ```
  */
-public open class Ec2Action internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.actions.Ec2Action,
+public open class Ec2Action(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.actions.Ec2Action,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(instanceAction: Ec2InstanceAction) :
       this(software.amazon.awscdk.services.cloudwatch.actions.Ec2Action(instanceAction.let(Ec2InstanceAction::unwrap))
@@ -43,6 +43,7 @@ public open class Ec2Action internal constructor(
         Ec2Action = Ec2Action(cdkObject)
 
     internal fun unwrap(wrapped: Ec2Action):
-        software.amazon.awscdk.services.cloudwatch.actions.Ec2Action = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.actions.Ec2Action = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.actions.Ec2Action
   }
 }

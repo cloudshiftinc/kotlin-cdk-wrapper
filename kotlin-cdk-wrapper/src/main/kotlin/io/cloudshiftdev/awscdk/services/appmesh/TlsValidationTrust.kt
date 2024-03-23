@@ -45,8 +45,8 @@ import kotlin.collections.List
  * Tags.of(node).add("Environment", "Dev");
  * ```
  */
-public abstract class TlsValidationTrust internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrust,
+public abstract class TlsValidationTrust(
+  cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrust,
 ) : CdkObject(cdkObject) {
   /**
    * Returns Trust context based on trust type.
@@ -57,7 +57,7 @@ public abstract class TlsValidationTrust internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(TlsValidationTrustConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrust,
+    cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrust,
   ) : TlsValidationTrust(cdkObject)
 
   public companion object {

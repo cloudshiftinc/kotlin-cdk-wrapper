@@ -61,8 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html)
  */
-public open class CfnConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.msk.CfnConfiguration,
+public open class CfnConfiguration(
+  cdkObject: software.amazon.awscdk.services.msk.CfnConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -381,7 +381,8 @@ public open class CfnConfiguration internal constructor(
         CfnConfiguration = CfnConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfiguration):
-        software.amazon.awscdk.services.msk.CfnConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.msk.CfnConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.msk.CfnConfiguration
   }
 
   /**
@@ -469,8 +470,7 @@ public open class CfnConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnConfiguration.LatestRevisionProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnConfiguration.LatestRevisionProperty,
     ) : CdkObject(cdkObject), LatestRevisionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-configuration-latestrevision.html#cfn-msk-configuration-latestrevision-creationtime)

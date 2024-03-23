@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html)
  */
-public open class CfnSubscriptionFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.CfnSubscriptionFilter,
+public open class CfnSubscriptionFilter(
+  cdkObject: software.amazon.awscdk.services.logs.CfnSubscriptionFilter,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -322,6 +322,7 @@ public open class CfnSubscriptionFilter internal constructor(
         CfnSubscriptionFilter = CfnSubscriptionFilter(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubscriptionFilter):
-        software.amazon.awscdk.services.logs.CfnSubscriptionFilter = wrapped.cdkObject
+        software.amazon.awscdk.services.logs.CfnSubscriptionFilter = wrapped.cdkObject as
+        software.amazon.awscdk.services.logs.CfnSubscriptionFilter
   }
 }

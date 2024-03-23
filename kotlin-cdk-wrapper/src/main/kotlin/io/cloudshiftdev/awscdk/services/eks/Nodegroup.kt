@@ -80,8 +80,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Nodegroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.Nodegroup,
+public open class Nodegroup(
+  cdkObject: software.amazon.awscdk.services.eks.Nodegroup,
 ) : Resource(cdkObject), INodegroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -833,6 +833,6 @@ public open class Nodegroup internal constructor(
         Nodegroup(cdkObject)
 
     internal fun unwrap(wrapped: Nodegroup): software.amazon.awscdk.services.eks.Nodegroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.eks.Nodegroup
   }
 }

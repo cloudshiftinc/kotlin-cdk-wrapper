@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html)
  */
-public open class CfnCertificate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnCertificate,
+public open class CfnCertificate(
+  cdkObject: software.amazon.awscdk.services.iot.CfnCertificate,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -310,6 +310,6 @@ public open class CfnCertificate internal constructor(
         = CfnCertificate(cdkObject)
 
     internal fun unwrap(wrapped: CfnCertificate): software.amazon.awscdk.services.iot.CfnCertificate
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.iot.CfnCertificate
   }
 }

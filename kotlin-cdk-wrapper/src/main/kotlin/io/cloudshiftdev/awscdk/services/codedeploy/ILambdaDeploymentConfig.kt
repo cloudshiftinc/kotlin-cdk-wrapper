@@ -22,7 +22,7 @@ import kotlin.String
  */
 public interface ILambdaDeploymentConfig : IBaseDeploymentConfig {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaDeploymentConfig,
+    cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaDeploymentConfig,
   ) : CdkObject(cdkObject), ILambdaDeploymentConfig {
     /**
      * The ARN of the Deployment Configuration.

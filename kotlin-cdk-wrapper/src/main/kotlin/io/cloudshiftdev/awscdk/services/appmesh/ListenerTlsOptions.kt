@@ -145,7 +145,7 @@ public interface ListenerTlsOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.ListenerTlsOptions,
+    cdkObject: software.amazon.awscdk.services.appmesh.ListenerTlsOptions,
   ) : CdkObject(cdkObject), ListenerTlsOptions {
     /**
      * Represents TLS certificate.

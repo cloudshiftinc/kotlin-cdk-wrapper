@@ -662,7 +662,7 @@ public interface CfnDomainProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomainProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomainProps,
   ) : CdkObject(cdkObject), CfnDomainProps {
     /**
      * Specifies the VPC used for non-EFS traffic. The default value is `PublicInternetOnly` .

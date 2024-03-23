@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html)
  */
-public open class CfnScript internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnScript,
+public open class CfnScript(
+  cdkObject: software.amazon.awscdk.services.gamelift.CfnScript,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -429,7 +429,7 @@ public open class CfnScript internal constructor(
         CfnScript(cdkObject)
 
     internal fun unwrap(wrapped: CfnScript): software.amazon.awscdk.services.gamelift.CfnScript =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.gamelift.CfnScript
   }
 
   /**
@@ -575,7 +575,7 @@ public open class CfnScript internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.gamelift.CfnScript.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnScript.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * An Amazon S3 bucket identifier. Thename of the S3 bucket.

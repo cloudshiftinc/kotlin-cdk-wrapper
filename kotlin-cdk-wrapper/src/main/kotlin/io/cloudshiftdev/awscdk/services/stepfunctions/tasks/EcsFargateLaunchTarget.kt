@@ -44,9 +44,8 @@ import kotlin.jvm.JvmName
  *
  * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/userguide/launch_types.html#launch-type-fargate)
  */
-public open class EcsFargateLaunchTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget,
+public open class EcsFargateLaunchTarget(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget,
 ) : CdkObject(cdkObject), IEcsLaunchTarget {
   public constructor() :
       this(software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget()
@@ -134,6 +133,7 @@ public open class EcsFargateLaunchTarget internal constructor(
 
     internal fun unwrap(wrapped: EcsFargateLaunchTarget):
         software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget
   }
 }

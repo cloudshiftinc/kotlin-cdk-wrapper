@@ -59,8 +59,7 @@ public interface CfnAccessPolicyProps {
   /**
    * The permission level for this access policy.
    *
-   * Choose either a `ADMINISTRATOR` or `VIEWER` . Note that a project `ADMINISTRATOR` is also known
-   * as a project owner.
+   * Note that a project `ADMINISTRATOR` is also known as a project owner.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-accesspolicy.html#cfn-iotsitewise-accesspolicy-accesspolicypermission)
    */
@@ -104,8 +103,7 @@ public interface CfnAccessPolicyProps {
 
     /**
      * @param accessPolicyPermission The permission level for this access policy. 
-     * Choose either a `ADMINISTRATOR` or `VIEWER` . Note that a project `ADMINISTRATOR` is also
-     * known as a project owner.
+     * Note that a project `ADMINISTRATOR` is also known as a project owner.
      */
     public fun accessPolicyPermission(accessPolicyPermission: String)
 
@@ -166,8 +164,7 @@ public interface CfnAccessPolicyProps {
 
     /**
      * @param accessPolicyPermission The permission level for this access policy. 
-     * Choose either a `ADMINISTRATOR` or `VIEWER` . Note that a project `ADMINISTRATOR` is also
-     * known as a project owner.
+     * Note that a project `ADMINISTRATOR` is also known as a project owner.
      */
     override fun accessPolicyPermission(accessPolicyPermission: String) {
       cdkBuilder.accessPolicyPermission(accessPolicyPermission)
@@ -206,7 +203,7 @@ public interface CfnAccessPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicyProps,
+    cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicyProps,
   ) : CdkObject(cdkObject), CfnAccessPolicyProps {
     /**
      * The identity for this access policy.
@@ -220,8 +217,7 @@ public interface CfnAccessPolicyProps {
     /**
      * The permission level for this access policy.
      *
-     * Choose either a `ADMINISTRATOR` or `VIEWER` . Note that a project `ADMINISTRATOR` is also
-     * known as a project owner.
+     * Note that a project `ADMINISTRATOR` is also known as a project owner.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-accesspolicy.html#cfn-iotsitewise-accesspolicy-accesspolicypermission)
      */

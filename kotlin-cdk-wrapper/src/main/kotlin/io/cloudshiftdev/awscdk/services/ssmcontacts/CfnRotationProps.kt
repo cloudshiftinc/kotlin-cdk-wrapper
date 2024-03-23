@@ -274,7 +274,7 @@ public interface CfnRotationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotationProps,
+    cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotationProps,
   ) : CdkObject(cdkObject), CfnRotationProps {
     /**
      * The Amazon Resource Names (ARNs) of the contacts to add to the rotation.

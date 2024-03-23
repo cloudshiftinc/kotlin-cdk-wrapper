@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-feature.html)
  */
-public open class CfnFeature internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.evidently.CfnFeature,
+public open class CfnFeature(
+  cdkObject: software.amazon.awscdk.services.evidently.CfnFeature,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -623,7 +623,7 @@ public open class CfnFeature internal constructor(
         CfnFeature(cdkObject)
 
     internal fun unwrap(wrapped: CfnFeature): software.amazon.awscdk.services.evidently.CfnFeature =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.evidently.CfnFeature
   }
 
   /**
@@ -705,8 +705,7 @@ public open class CfnFeature internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnFeature.EntityOverrideProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnFeature.EntityOverrideProperty,
     ) : CdkObject(cdkObject), EntityOverrideProperty {
       /**
        * The entity ID to be served the variation specified in `Variation` .
@@ -894,8 +893,7 @@ public open class CfnFeature internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnFeature.VariationObjectProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnFeature.VariationObjectProperty,
     ) : CdkObject(cdkObject), VariationObjectProperty {
       /**
        * The value assigned to this variation, if the variation type is boolean.

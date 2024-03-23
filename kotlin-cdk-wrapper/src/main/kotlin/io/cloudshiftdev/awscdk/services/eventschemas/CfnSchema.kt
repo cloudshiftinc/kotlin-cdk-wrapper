@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-schema.html)
  */
-public open class CfnSchema internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eventschemas.CfnSchema,
+public open class CfnSchema(
+  cdkObject: software.amazon.awscdk.services.eventschemas.CfnSchema,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -338,7 +338,7 @@ public open class CfnSchema internal constructor(
         = CfnSchema(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchema): software.amazon.awscdk.services.eventschemas.CfnSchema
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.eventschemas.CfnSchema
   }
 
   /**
@@ -413,8 +413,7 @@ public open class CfnSchema internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eventschemas.CfnSchema.TagsEntryProperty,
+      cdkObject: software.amazon.awscdk.services.eventschemas.CfnSchema.TagsEntryProperty,
     ) : CdkObject(cdkObject), TagsEntryProperty {
       /**
        * The key of a key-value pair.

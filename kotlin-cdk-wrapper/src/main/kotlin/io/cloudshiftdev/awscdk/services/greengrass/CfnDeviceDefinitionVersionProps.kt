@@ -116,8 +116,7 @@ public interface CfnDeviceDefinitionVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersionProps,
+    cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersionProps,
   ) : CdkObject(cdkObject), CfnDeviceDefinitionVersionProps {
     /**
      * The ID of the device definition associated with this version.

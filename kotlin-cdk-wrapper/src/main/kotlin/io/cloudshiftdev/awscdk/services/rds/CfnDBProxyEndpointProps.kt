@@ -232,7 +232,7 @@ public interface CfnDBProxyEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyEndpointProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyEndpointProps,
   ) : CdkObject(cdkObject), CfnDBProxyEndpointProps {
     /**
      * The name of the DB proxy endpoint to create.

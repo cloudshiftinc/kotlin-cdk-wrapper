@@ -374,8 +374,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html)
  */
-public open class CfnDataSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource,
+public open class CfnDataSource(
+  cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.quicksight.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1360,7 +1360,8 @@ public open class CfnDataSource internal constructor(
         CfnDataSource = CfnDataSource(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataSource):
-        software.amazon.awscdk.services.quicksight.CfnDataSource = wrapped.cdkObject
+        software.amazon.awscdk.services.quicksight.CfnDataSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.quicksight.CfnDataSource
   }
 
   /**
@@ -1418,8 +1419,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty,
     ) : CdkObject(cdkObject), AmazonElasticsearchParametersProperty {
       /**
        * The OpenSearch domain.
@@ -1503,8 +1503,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty,
     ) : CdkObject(cdkObject), AmazonOpenSearchParametersProperty {
       /**
        * The OpenSearch domain.
@@ -1623,8 +1622,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty,
     ) : CdkObject(cdkObject), AthenaParametersProperty {
       /**
        * Use the `RoleArn` structure to override an account-wide role for a specific Athena data
@@ -1759,8 +1757,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AuroraParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AuroraParametersProperty,
     ) : CdkObject(cdkObject), AuroraParametersProperty {
       /**
        * Database.
@@ -1897,8 +1894,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AuroraPostgreSqlParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AuroraPostgreSqlParametersProperty,
     ) : CdkObject(cdkObject), AuroraPostgreSqlParametersProperty {
       /**
        * The Amazon Aurora PostgreSQL database to connect to.
@@ -2216,8 +2212,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.CredentialPairProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.CredentialPairProperty,
     ) : CdkObject(cdkObject), CredentialPairProperty {
       /**
        * A set of alternate data source parameters that you want to share for these credentials.
@@ -2534,8 +2529,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty,
     ) : CdkObject(cdkObject), DataSourceCredentialsProperty {
       /**
        * The Amazon Resource Name (ARN) of a data source that has the credential pair that you want
@@ -2660,8 +2654,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty,
     ) : CdkObject(cdkObject), DataSourceErrorInfoProperty {
       /**
        * Error message.
@@ -3797,8 +3790,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceParametersProperty,
     ) : CdkObject(cdkObject), DataSourceParametersProperty {
       /**
        * The parameters for OpenSearch.
@@ -4055,8 +4047,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty,
     ) : CdkObject(cdkObject), DatabricksParametersProperty {
       /**
        * The host name of the Databricks data source.
@@ -4173,8 +4164,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty,
     ) : CdkObject(cdkObject), ManifestFileLocationProperty {
       /**
        * Amazon S3 bucket.
@@ -4303,8 +4293,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty,
     ) : CdkObject(cdkObject), MariaDbParametersProperty {
       /**
        * Database.
@@ -4439,8 +4428,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty,
     ) : CdkObject(cdkObject), MySqlParametersProperty {
       /**
        * Database.
@@ -4576,8 +4564,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty,
     ) : CdkObject(cdkObject), OracleParametersProperty {
       /**
        * Database.
@@ -4714,8 +4701,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty,
     ) : CdkObject(cdkObject), PostgreSqlParametersProperty {
       /**
        * Database.
@@ -4851,8 +4837,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty,
     ) : CdkObject(cdkObject), PrestoParametersProperty {
       /**
        * Catalog.
@@ -4967,8 +4952,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty,
     ) : CdkObject(cdkObject), RdsParametersProperty {
       /**
        * Database.
@@ -5133,8 +5117,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty,
     ) : CdkObject(cdkObject), RedshiftParametersProperty {
       /**
        * Cluster ID.
@@ -5296,8 +5279,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty,
     ) : CdkObject(cdkObject), ResourcePermissionProperty {
       /**
        * The IAM action to grant or revoke permissions on.
@@ -5469,8 +5451,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty,
     ) : CdkObject(cdkObject), S3ParametersProperty {
       /**
        * Location of the Amazon S3 manifest file.
@@ -5606,8 +5587,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SnowflakeParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SnowflakeParametersProperty,
     ) : CdkObject(cdkObject), SnowflakeParametersProperty {
       /**
        * Database.
@@ -5722,8 +5702,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SparkParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SparkParametersProperty,
     ) : CdkObject(cdkObject), SparkParametersProperty {
       /**
        * Host.
@@ -5852,8 +5831,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty,
     ) : CdkObject(cdkObject), SqlServerParametersProperty {
       /**
        * Database.
@@ -5961,8 +5939,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty,
     ) : CdkObject(cdkObject), SslPropertiesProperty {
       /**
        * A Boolean option to control whether SSL should be disabled.
@@ -6105,8 +6082,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.StarburstParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.StarburstParametersProperty,
     ) : CdkObject(cdkObject), StarburstParametersProperty {
       /**
        * The catalog name for the Starburst data source.
@@ -6249,8 +6225,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty,
     ) : CdkObject(cdkObject), TeradataParametersProperty {
       /**
        * Database.
@@ -6385,8 +6360,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty,
     ) : CdkObject(cdkObject), TrinoParametersProperty {
       /**
        * The catalog name for the Trino data source.
@@ -6483,8 +6457,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty,
     ) : CdkObject(cdkObject), VpcConnectionPropertiesProperty {
       /**
        * The Amazon Resource Name (ARN) for the VPC connection.

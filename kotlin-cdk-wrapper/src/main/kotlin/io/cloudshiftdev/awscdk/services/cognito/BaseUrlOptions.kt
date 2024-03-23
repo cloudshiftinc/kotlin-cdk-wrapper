@@ -56,7 +56,7 @@ public interface BaseUrlOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.BaseUrlOptions,
+    cdkObject: software.amazon.awscdk.services.cognito.BaseUrlOptions,
   ) : CdkObject(cdkObject), BaseUrlOptions {
     /**
      * Whether to return the FIPS-compliant endpoint.

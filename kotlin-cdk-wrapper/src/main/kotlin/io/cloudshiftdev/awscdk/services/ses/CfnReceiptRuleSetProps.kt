@@ -59,7 +59,7 @@ public interface CfnReceiptRuleSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRuleSetProps,
+    cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRuleSetProps,
   ) : CdkObject(cdkObject), CfnReceiptRuleSetProps {
     /**
      * The name of the receipt rule set to reorder.

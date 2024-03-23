@@ -179,7 +179,7 @@ public interface CfnDBParameterGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.neptune.CfnDBParameterGroupProps,
+    cdkObject: software.amazon.awscdk.services.neptune.CfnDBParameterGroupProps,
   ) : CdkObject(cdkObject), CfnDBParameterGroupProps {
     /**
      * Provides the customer-specified description for this DB parameter group.

@@ -37,9 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-glue.html)
  */
-public open class GlueStartJobRun internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRun,
+public open class GlueStartJobRun(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRun,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -542,6 +541,7 @@ public open class GlueStartJobRun internal constructor(
         GlueStartJobRun = GlueStartJobRun(cdkObject)
 
     internal fun unwrap(wrapped: GlueStartJobRun):
-        software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRun = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRun = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRun
   }
 }

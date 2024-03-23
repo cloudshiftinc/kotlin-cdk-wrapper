@@ -126,8 +126,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html)
  */
-public open class CfnDataset internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.databrew.CfnDataset,
+public open class CfnDataset(
+  cdkObject: software.amazon.awscdk.services.databrew.CfnDataset,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -583,7 +583,7 @@ public open class CfnDataset internal constructor(
         CfnDataset(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataset): software.amazon.awscdk.services.databrew.CfnDataset =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.databrew.CfnDataset
   }
 
   /**
@@ -683,8 +683,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty,
     ) : CdkObject(cdkObject), CsvOptionsProperty {
       /**
        * A single character that specifies the delimiter being used in the CSV file.
@@ -879,8 +878,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.DataCatalogInputDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DataCatalogInputDefinitionProperty,
     ) : CdkObject(cdkObject), DataCatalogInputDefinitionProperty {
       /**
        * The unique identifier of the AWS account that holds the Data Catalog that stores the data.
@@ -1091,8 +1089,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.DatabaseInputDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DatabaseInputDefinitionProperty,
     ) : CdkObject(cdkObject), DatabaseInputDefinitionProperty {
       /**
        * The table within the target database.
@@ -1377,8 +1374,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty,
     ) : CdkObject(cdkObject), DatasetParameterProperty {
       /**
        * Optional boolean value that defines whether the captured value of this parameter should be
@@ -1555,8 +1551,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.DatetimeOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DatetimeOptionsProperty,
     ) : CdkObject(cdkObject), DatetimeOptionsProperty {
       /**
        * Required option, that defines the datetime format used for a date parameter in the Amazon
@@ -1764,8 +1759,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.ExcelOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.ExcelOptionsProperty,
     ) : CdkObject(cdkObject), ExcelOptionsProperty {
       /**
        * A variable that specifies whether the first row in the file is parsed as the header.
@@ -1917,8 +1911,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty,
     ) : CdkObject(cdkObject), FilesLimitProperty {
       /**
        * The number of Amazon S3 files to select.
@@ -2080,8 +2073,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty,
     ) : CdkObject(cdkObject), FilterExpressionProperty {
       /**
        * The expression which includes condition names followed by substitution variables, possibly
@@ -2194,8 +2186,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty,
     ) : CdkObject(cdkObject), FilterValueProperty {
       /**
        * The value to be associated with the substitution variable.
@@ -2413,8 +2404,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.FormatOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FormatOptionsProperty,
     ) : CdkObject(cdkObject), FormatOptionsProperty {
       /**
        * Options that define how CSV input is to be interpreted by DataBrew.
@@ -2716,7 +2706,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.InputProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.InputProperty,
     ) : CdkObject(cdkObject), InputProperty {
       /**
        * The AWS Glue Data Catalog parameters for the data.
@@ -2832,8 +2822,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty,
     ) : CdkObject(cdkObject), JsonOptionsProperty {
       /**
        * A value that specifies whether JSON input contains embedded new line characters.
@@ -2917,7 +2906,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.MetadataProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.MetadataProperty,
     ) : CdkObject(cdkObject), MetadataProperty {
       /**
        * The Amazon Resource Name (ARN) associated with the dataset.
@@ -3170,8 +3159,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.PathOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.PathOptionsProperty,
     ) : CdkObject(cdkObject), PathOptionsProperty {
       /**
        * If provided, this structure imposes a limit on a number of files that should be selected.
@@ -3334,8 +3322,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.PathParameterProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.PathParameterProperty,
     ) : CdkObject(cdkObject), PathParameterProperty {
       /**
        * The path parameter definition.
@@ -3444,8 +3431,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * The Amazon S3 bucket name.

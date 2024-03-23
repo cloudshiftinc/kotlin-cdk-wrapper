@@ -187,7 +187,7 @@ public interface EfsVolumeConfiguration {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.EfsVolumeConfiguration,
+    cdkObject: software.amazon.awscdk.services.ecs.EfsVolumeConfiguration,
   ) : CdkObject(cdkObject), EfsVolumeConfiguration {
     /**
      * The authorization configuration details for the Amazon EFS file system.

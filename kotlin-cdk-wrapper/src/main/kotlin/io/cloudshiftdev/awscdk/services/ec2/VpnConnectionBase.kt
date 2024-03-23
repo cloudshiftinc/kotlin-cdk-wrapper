@@ -15,8 +15,8 @@ import kotlin.jvm.JvmName
 /**
  * Base class for Vpn connections.
  */
-public abstract class VpnConnectionBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionBase,
+public abstract class VpnConnectionBase(
+  cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionBase,
 ) : Resource(cdkObject), IVpnConnection {
   /**
    * The ASN of the customer gateway.
@@ -164,7 +164,7 @@ public abstract class VpnConnectionBase internal constructor(
   public override fun vpnId(): String = unwrap(this).getVpnId()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionBase,
+    cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionBase,
   ) : VpnConnectionBase(cdkObject)
 
   public companion object {

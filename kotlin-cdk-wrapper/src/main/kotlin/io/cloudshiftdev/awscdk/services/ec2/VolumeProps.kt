@@ -457,7 +457,7 @@ public interface VolumeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.VolumeProps,
+    cdkObject: software.amazon.awscdk.services.ec2.VolumeProps,
   ) : CdkObject(cdkObject), VolumeProps {
     /**
      * Indicates whether the volume is auto-enabled for I/O operations.

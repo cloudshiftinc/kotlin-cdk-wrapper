@@ -273,7 +273,7 @@ public interface CfnProvisioningTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnProvisioningTemplateProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnProvisioningTemplateProps,
   ) : CdkObject(cdkObject), CfnProvisioningTemplateProps {
     /**
      * The description of the fleet provisioning template.

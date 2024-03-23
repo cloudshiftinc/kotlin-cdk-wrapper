@@ -695,7 +695,7 @@ public interface Ec2ServiceProps : BaseServiceOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.Ec2ServiceProps,
+    cdkObject: software.amazon.awscdk.services.ecs.Ec2ServiceProps,
   ) : CdkObject(cdkObject), Ec2ServiceProps {
     /**
      * Specifies whether the task's elastic network interface receives a public IP address.

@@ -41,8 +41,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class StorageClass internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.StorageClass,
+public open class StorageClass(
+  cdkObject: software.amazon.awscdk.services.s3.StorageClass,
 ) : CdkObject(cdkObject) {
   public constructor(`value`: String) :
       this(software.amazon.awscdk.services.s3.StorageClass(`value`)
@@ -76,6 +76,6 @@ public open class StorageClass internal constructor(
         StorageClass(cdkObject)
 
     internal fun unwrap(wrapped: StorageClass): software.amazon.awscdk.services.s3.StorageClass =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.s3.StorageClass
   }
 }

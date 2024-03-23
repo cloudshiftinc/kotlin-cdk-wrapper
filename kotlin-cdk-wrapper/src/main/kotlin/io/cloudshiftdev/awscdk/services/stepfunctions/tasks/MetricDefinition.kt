@@ -76,7 +76,7 @@ public interface MetricDefinition {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition,
   ) : CdkObject(cdkObject), MetricDefinition {
     /**
      * Name of the metric.

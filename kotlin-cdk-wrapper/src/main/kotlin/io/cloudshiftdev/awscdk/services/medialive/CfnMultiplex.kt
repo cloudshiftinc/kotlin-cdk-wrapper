@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplex.html)
  */
-public open class CfnMultiplex internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex,
+public open class CfnMultiplex(
+  cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -441,7 +441,8 @@ public open class CfnMultiplex internal constructor(
         CfnMultiplex = CfnMultiplex(cdkObject)
 
     internal fun unwrap(wrapped: CfnMultiplex):
-        software.amazon.awscdk.services.medialive.CfnMultiplex = wrapped.cdkObject
+        software.amazon.awscdk.services.medialive.CfnMultiplex = wrapped.cdkObject as
+        software.amazon.awscdk.services.medialive.CfnMultiplex
   }
 
   /**
@@ -500,8 +501,7 @@ public open class CfnMultiplex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexMediaConnectOutputDestinationSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexMediaConnectOutputDestinationSettingsProperty,
     ) : CdkObject(cdkObject), MultiplexMediaConnectOutputDestinationSettingsProperty {
       /**
        * The MediaConnect entitlement ARN available as a Flow source.
@@ -628,8 +628,7 @@ public open class CfnMultiplex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty,
     ) : CdkObject(cdkObject), MultiplexOutputDestinationProperty {
       /**
        * Multiplex MediaConnect output destination settings.
@@ -776,8 +775,7 @@ public open class CfnMultiplex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexSettingsProperty,
     ) : CdkObject(cdkObject), MultiplexSettingsProperty {
       /**
        * Maximum video buffer delay in milliseconds.

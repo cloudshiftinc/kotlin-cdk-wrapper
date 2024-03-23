@@ -102,8 +102,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html)
  */
-public open class CfnSecurityProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile,
+public open class CfnSecurityProfile(
+  cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iot.CfnSecurityProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -684,7 +684,8 @@ public open class CfnSecurityProfile internal constructor(
         CfnSecurityProfile = CfnSecurityProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityProfile):
-        software.amazon.awscdk.services.iot.CfnSecurityProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnSecurityProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnSecurityProfile
   }
 
   /**
@@ -763,8 +764,7 @@ public open class CfnSecurityProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty,
     ) : CdkObject(cdkObject), AlertTargetProperty {
       /**
        * The Amazon Resource Name (ARN) of the notification target to which alerts are sent.
@@ -1131,8 +1131,7 @@ public open class CfnSecurityProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorCriteriaProperty,
     ) : CdkObject(cdkObject), BehaviorCriteriaProperty {
       /**
        * The operator that relates the thing measured ( `metric` ) to the criteria (containing a
@@ -1518,8 +1517,7 @@ public open class CfnSecurityProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty,
     ) : CdkObject(cdkObject), BehaviorProperty {
       /**
        * The criteria that determine if a device is behaving normally in regard to the `metric` .
@@ -1658,8 +1656,7 @@ public open class CfnSecurityProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty,
     ) : CdkObject(cdkObject), MachineLearningDetectionConfigProperty {
       /**
        * The model confidence level.
@@ -1771,8 +1768,7 @@ public open class CfnSecurityProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty,
     ) : CdkObject(cdkObject), MetricDimensionProperty {
       /**
        * The name of the dimension.
@@ -1952,8 +1948,7 @@ public open class CfnSecurityProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty,
     ) : CdkObject(cdkObject), MetricToRetainProperty {
       /**
        * The value indicates exporting metrics related to the `MetricToRetain` when it's true.
@@ -2226,8 +2221,7 @@ public open class CfnSecurityProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty,
     ) : CdkObject(cdkObject), MetricValueProperty {
       /**
        * If the `comparisonOperator` calls for a set of CIDRs, use this to specify that set to be
@@ -2372,8 +2366,7 @@ public open class CfnSecurityProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty,
     ) : CdkObject(cdkObject), MetricsExportConfigProperty {
       /**
        * The MQTT topic that Device Defender Detect should publish messages to for metrics export.
@@ -2486,8 +2479,7 @@ public open class CfnSecurityProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty,
     ) : CdkObject(cdkObject), StatisticalThresholdProperty {
       /**
        * The percentile that resolves to a threshold value by which compliance with a behavior is

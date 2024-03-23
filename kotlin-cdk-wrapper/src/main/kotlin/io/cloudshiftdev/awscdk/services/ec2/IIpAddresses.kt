@@ -41,7 +41,7 @@ public interface IIpAddresses {
   public fun allocateVpcCidr(): VpcIpamOptions
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IIpAddresses,
+    cdkObject: software.amazon.awscdk.services.ec2.IIpAddresses,
   ) : CdkObject(cdkObject), IIpAddresses {
     /**
      * Called by the VPC to retrieve Subnet options from the Ipam.

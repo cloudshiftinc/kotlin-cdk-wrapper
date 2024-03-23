@@ -88,9 +88,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
  */
-public open class CfnDataflowEndpointGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup,
+public open class CfnDataflowEndpointGroup(
+  cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -393,6 +392,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
     internal fun unwrap(wrapped: CfnDataflowEndpointGroup):
         software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup = wrapped.cdkObject
+        as software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
   }
 
   /**
@@ -588,8 +588,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty,
     ) : CdkObject(cdkObject), AwsGroundStationAgentEndpointProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-agentstatus)
@@ -734,8 +733,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty,
     ) : CdkObject(cdkObject), ConnectionDetailsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-mtu)
@@ -901,8 +899,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty,
     ) : CdkObject(cdkObject), DataflowEndpointProperty {
       /**
        * The address and port of an endpoint.
@@ -1158,8 +1155,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.EndpointDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.EndpointDetailsProperty,
     ) : CdkObject(cdkObject), EndpointDetailsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html#cfn-groundstation-dataflowendpointgroup-endpointdetails-awsgroundstationagentendpoint)
@@ -1268,8 +1264,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty,
     ) : CdkObject(cdkObject), IntegerRangeProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-maximum)
@@ -1402,8 +1397,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedConnectionDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedConnectionDetailsProperty,
     ) : CdkObject(cdkObject), RangedConnectionDetailsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedconnectiondetails.html#cfn-groundstation-dataflowendpointgroup-rangedconnectiondetails-mtu)
@@ -1532,8 +1526,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedSocketAddressProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedSocketAddressProperty,
     ) : CdkObject(cdkObject), RangedSocketAddressProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedsocketaddress.html#cfn-groundstation-dataflowendpointgroup-rangedsocketaddress-name)
@@ -1697,8 +1690,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SecurityDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SecurityDetailsProperty,
     ) : CdkObject(cdkObject), SecurityDetailsProperty {
       /**
        * The ARN of a role which Ground Station has permission to assume, such as
@@ -1820,8 +1812,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty,
     ) : CdkObject(cdkObject), SocketAddressProperty {
       /**
        * The name of the endpoint, such as `Endpoint 1` .

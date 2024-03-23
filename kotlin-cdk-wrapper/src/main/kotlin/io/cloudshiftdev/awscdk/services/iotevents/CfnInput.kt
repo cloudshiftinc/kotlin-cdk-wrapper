@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-input.html)
  */
-public open class CfnInput internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotevents.CfnInput,
+public open class CfnInput(
+  cdkObject: software.amazon.awscdk.services.iotevents.CfnInput,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -331,7 +331,7 @@ public open class CfnInput internal constructor(
         CfnInput(cdkObject)
 
     internal fun unwrap(wrapped: CfnInput): software.amazon.awscdk.services.iotevents.CfnInput =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iotevents.CfnInput
   }
 
   /**
@@ -409,7 +409,7 @@ public open class CfnInput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iotevents.CfnInput.AttributeProperty,
+      cdkObject: software.amazon.awscdk.services.iotevents.CfnInput.AttributeProperty,
     ) : CdkObject(cdkObject), AttributeProperty {
       /**
        * An expression that specifies an attribute-value pair in a JSON structure.
@@ -555,8 +555,7 @@ public open class CfnInput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnInput.InputDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.iotevents.CfnInput.InputDefinitionProperty,
     ) : CdkObject(cdkObject), InputDefinitionProperty {
       /**
        * The attributes from the JSON payload that are made available by the input.

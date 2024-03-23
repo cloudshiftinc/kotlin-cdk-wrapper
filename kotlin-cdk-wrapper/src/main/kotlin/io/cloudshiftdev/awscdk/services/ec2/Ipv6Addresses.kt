@@ -9,8 +9,8 @@ import io.cloudshiftdev.awscdk.common.CdkObject
  *
  * Note this is specific to the IPv6 CIDR.
  */
-public open class Ipv6Addresses internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.Ipv6Addresses,
+public open class Ipv6Addresses(
+  cdkObject: software.amazon.awscdk.services.ec2.Ipv6Addresses,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun amazonProvided(): IIpv6Addresses =
@@ -20,6 +20,6 @@ public open class Ipv6Addresses internal constructor(
         Ipv6Addresses(cdkObject)
 
     internal fun unwrap(wrapped: Ipv6Addresses): software.amazon.awscdk.services.ec2.Ipv6Addresses =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.Ipv6Addresses
   }
 }

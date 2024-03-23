@@ -89,7 +89,7 @@ public interface IJobQueue : IResource {
       unwrap(this).getSchedulingPolicy()?.let(ISchedulingPolicy::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.IJobQueue,
+    cdkObject: software.amazon.awscdk.services.batch.IJobQueue,
   ) : CdkObject(cdkObject), IJobQueue {
     /**
      * Add a `ComputeEnvironment` to this Queue.

@@ -155,8 +155,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)
  */
-public open class CfnFileSystem internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem,
+public open class CfnFileSystem(
+  cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1305,7 +1305,7 @@ public open class CfnFileSystem internal constructor(
         CfnFileSystem(cdkObject)
 
     internal fun unwrap(wrapped: CfnFileSystem): software.amazon.awscdk.services.fsx.CfnFileSystem =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.fsx.CfnFileSystem
   }
 
   /**
@@ -1470,8 +1470,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty,
     ) : CdkObject(cdkObject), AuditLogConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) for the destination of the audit logs.
@@ -1682,8 +1681,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty,
     ) : CdkObject(cdkObject), ClientConfigurationsProperty {
       /**
        * A value that specifies who can mount the file system.
@@ -1774,7 +1772,7 @@ public open class CfnFileSystem internal constructor(
 
     /**
      * Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS of 3 IOPS per
-     * GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
+     * GB of storage capacity, or if it using a `USER_PROVISIONED` value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html#cfn-fsx-filesystem-diskiopsconfiguration-mode)
      */
@@ -1798,7 +1796,7 @@ public open class CfnFileSystem internal constructor(
 
       /**
        * @param mode Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS
-       * of 3 IOPS per GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
+       * of 3 IOPS per GB of storage capacity, or if it using a `USER_PROVISIONED` value.
        */
       public fun mode(mode: String)
     }
@@ -1823,7 +1821,7 @@ public open class CfnFileSystem internal constructor(
 
       /**
        * @param mode Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS
-       * of 3 IOPS per GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
+       * of 3 IOPS per GB of storage capacity, or if it using a `USER_PROVISIONED` value.
        */
       override fun mode(mode: String) {
         cdkBuilder.mode(mode)
@@ -1835,8 +1833,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty,
     ) : CdkObject(cdkObject), DiskIopsConfigurationProperty {
       /**
        * The total number of SSD IOPS provisioned for the file system.
@@ -1854,7 +1851,7 @@ public open class CfnFileSystem internal constructor(
 
       /**
        * Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS of 3 IOPS
-       * per GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
+       * per GB of storage capacity, or if it using a `USER_PROVISIONED` value.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html#cfn-fsx-filesystem-diskiopsconfiguration-mode)
        */
@@ -2614,8 +2611,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.LustreConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.LustreConfigurationProperty,
     ) : CdkObject(cdkObject), LustreConfigurationProperty {
       /**
        * (Optional) When you create your file system, your existing S3 objects appear as file and
@@ -2958,7 +2954,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty,
     ) : CdkObject(cdkObject), NfsExportsProperty {
       /**
        * A list of configuration objects that contain the client and options for mounting the
@@ -3091,14 +3087,14 @@ public open class CfnFileSystem internal constructor(
      * Specifies how many high-availability (HA) pairs of file servers will power your file system.
      *
      * Scale-up file systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP
-     * scale-out file system are powered by up to six HA pairs. The value of this property affects the
+     * scale-out file systems are powered by up to 12 HA pairs. The value of this property affects the
      * values of `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For more information, see
      * [High-availability (HA) pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html)
      * in the FSx for ONTAP user guide.
      *
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *
-     * * The value of `HAPairs` is less than 1 or greater than 6.
+     * * The value of `HAPairs` is less than 1 or greater than 12.
      * * The value of `HAPairs` is greater than 1 and the value of `DeploymentType` is `SINGLE_AZ_1`
      * or `MULTI_AZ_1` .
      *
@@ -3171,7 +3167,7 @@ public open class CfnFileSystem internal constructor(
      * * The value of `ThroughputCapacity` and `ThroughputCapacityPerHAPair` are not the same value
      * for file systems with one HA pair.
      * * The value of deployment type is `SINGLE_AZ_2` and `ThroughputCapacity` /
-     * `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 6).
+     * `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 12).
      * * The value of `ThroughputCapacityPerHAPair` is not a valid value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-ontapconfiguration.html#cfn-fsx-filesystem-ontapconfiguration-throughputcapacityperhapair)
@@ -3268,7 +3264,7 @@ public open class CfnFileSystem internal constructor(
        * @param haPairs Specifies how many high-availability (HA) pairs of file servers will power
        * your file system.
        * Scale-up file systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP
-       * scale-out file system are powered by up to six HA pairs. The value of this property affects
+       * scale-out file systems are powered by up to 12 HA pairs. The value of this property affects
        * the values of `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For more information,
        * see [High-availability (HA)
        * pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html) in the FSx for ONTAP
@@ -3277,7 +3273,7 @@ public open class CfnFileSystem internal constructor(
        * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following
        * conditions:
        *
-       * * The value of `HAPairs` is less than 1 or greater than 6.
+       * * The value of `HAPairs` is less than 1 or greater than 12.
        * * The value of `HAPairs` is greater than 1 and the value of `DeploymentType` is
        * `SINGLE_AZ_1` or `MULTI_AZ_1` .
        */
@@ -3355,7 +3351,7 @@ public open class CfnFileSystem internal constructor(
        * * The value of `ThroughputCapacity` and `ThroughputCapacityPerHAPair` are not the same
        * value for file systems with one HA pair.
        * * The value of deployment type is `SINGLE_AZ_2` and `ThroughputCapacity` /
-       * `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 6).
+       * `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 12).
        * * The value of `ThroughputCapacityPerHAPair` is not a valid value.
        */
       public fun throughputCapacityPerHaPair(throughputCapacityPerHaPair: Number)
@@ -3462,7 +3458,7 @@ public open class CfnFileSystem internal constructor(
        * @param haPairs Specifies how many high-availability (HA) pairs of file servers will power
        * your file system.
        * Scale-up file systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP
-       * scale-out file system are powered by up to six HA pairs. The value of this property affects
+       * scale-out file systems are powered by up to 12 HA pairs. The value of this property affects
        * the values of `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For more information,
        * see [High-availability (HA)
        * pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html) in the FSx for ONTAP
@@ -3471,7 +3467,7 @@ public open class CfnFileSystem internal constructor(
        * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following
        * conditions:
        *
-       * * The value of `HAPairs` is less than 1 or greater than 6.
+       * * The value of `HAPairs` is less than 1 or greater than 12.
        * * The value of `HAPairs` is greater than 1 and the value of `DeploymentType` is
        * `SINGLE_AZ_1` or `MULTI_AZ_1` .
        */
@@ -3558,7 +3554,7 @@ public open class CfnFileSystem internal constructor(
        * * The value of `ThroughputCapacity` and `ThroughputCapacityPerHAPair` are not the same
        * value for file systems with one HA pair.
        * * The value of deployment type is `SINGLE_AZ_2` and `ThroughputCapacity` /
-       * `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 6).
+       * `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 12).
        * * The value of `ThroughputCapacityPerHAPair` is not a valid value.
        */
       override fun throughputCapacityPerHaPair(throughputCapacityPerHaPair: Number) {
@@ -3586,8 +3582,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.OntapConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.OntapConfigurationProperty,
     ) : CdkObject(cdkObject), OntapConfigurationProperty {
       /**
        * The number of days to retain automatic backups.
@@ -3662,7 +3657,7 @@ public open class CfnFileSystem internal constructor(
        * system.
        *
        * Scale-up file systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP
-       * scale-out file system are powered by up to six HA pairs. The value of this property affects
+       * scale-out file systems are powered by up to 12 HA pairs. The value of this property affects
        * the values of `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For more information,
        * see [High-availability (HA)
        * pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html) in the FSx for ONTAP
@@ -3671,7 +3666,7 @@ public open class CfnFileSystem internal constructor(
        * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following
        * conditions:
        *
-       * * The value of `HAPairs` is less than 1 or greater than 6.
+       * * The value of `HAPairs` is less than 1 or greater than 12.
        * * The value of `HAPairs` is greater than 1 and the value of `DeploymentType` is
        * `SINGLE_AZ_1` or `MULTI_AZ_1` .
        *
@@ -3747,7 +3742,7 @@ public open class CfnFileSystem internal constructor(
        * * The value of `ThroughputCapacity` and `ThroughputCapacityPerHAPair` are not the same
        * value for file systems with one HA pair.
        * * The value of deployment type is `SINGLE_AZ_2` and `ThroughputCapacity` /
-       * `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 6).
+       * `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 12).
        * * The value of `ThroughputCapacityPerHAPair` is not a valid value.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-ontapconfiguration.html#cfn-fsx-filesystem-ontapconfiguration-throughputcapacityperhapair)
@@ -4503,8 +4498,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.OpenZFSConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.OpenZFSConfigurationProperty,
     ) : CdkObject(cdkObject), OpenZFSConfigurationProperty {
       /**
        * The number of days to retain automatic backups.
@@ -5019,8 +5013,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.RootVolumeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.RootVolumeConfigurationProperty,
     ) : CdkObject(cdkObject), RootVolumeConfigurationProperty {
       /**
        * A Boolean value indicating whether tags for the volume should be copied to snapshots of the
@@ -5350,8 +5343,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.SelfManagedActiveDirectoryConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.SelfManagedActiveDirectoryConfigurationProperty,
     ) : CdkObject(cdkObject), SelfManagedActiveDirectoryConfigurationProperty {
       /**
        * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed
@@ -5540,8 +5532,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty,
     ) : CdkObject(cdkObject), UserAndGroupQuotasProperty {
       /**
        * The ID of the user or group that the quota applies to.
@@ -6327,8 +6318,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty,
     ) : CdkObject(cdkObject), WindowsConfigurationProperty {
       /**
        * The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file

@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)
  */
-public open class CfnDomainName internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName,
+public open class CfnDomainName(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -610,7 +610,8 @@ public open class CfnDomainName internal constructor(
         CfnDomainName = CfnDomainName(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainName):
-        software.amazon.awscdk.services.apigateway.CfnDomainName = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CfnDomainName = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnDomainName
   }
 
   /**
@@ -703,8 +704,7 @@ public open class CfnDomainName internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty,
     ) : CdkObject(cdkObject), EndpointConfigurationProperty {
       /**
        * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
@@ -834,8 +834,7 @@ public open class CfnDomainName internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDomainName.MutualTlsAuthenticationProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.MutualTlsAuthenticationProperty,
     ) : CdkObject(cdkObject), MutualTlsAuthenticationProperty {
       /**
        * An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example

@@ -222,7 +222,7 @@ public interface CfnMulticastGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnMulticastGroupProps,
+    cdkObject: software.amazon.awscdk.services.iotwireless.CfnMulticastGroupProps,
   ) : CdkObject(cdkObject), CfnMulticastGroupProps {
     /**
      * The ID of the wireless device to associate with a multicast group.

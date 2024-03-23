@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
  */
-public open class CfnMissionProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfile,
+public open class CfnMissionProfile(
+  cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -563,7 +563,8 @@ public open class CfnMissionProfile internal constructor(
         CfnMissionProfile = CfnMissionProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnMissionProfile):
-        software.amazon.awscdk.services.groundstation.CfnMissionProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.groundstation.CfnMissionProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.groundstation.CfnMissionProfile
   }
 
   /**
@@ -654,8 +655,7 @@ public open class CfnMissionProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnMissionProfile.DataflowEdgeProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfile.DataflowEdgeProperty,
     ) : CdkObject(cdkObject), DataflowEdgeProperty {
       /**
        * The ARN of the destination for this dataflow edge.
@@ -764,8 +764,7 @@ public open class CfnMissionProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty,
     ) : CdkObject(cdkObject), StreamsKmsKeyProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmsaliasarn)

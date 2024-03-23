@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html)
  */
-public open class CfnReplicationTask internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dms.CfnReplicationTask,
+public open class CfnReplicationTask(
+  cdkObject: software.amazon.awscdk.services.dms.CfnReplicationTask,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -666,6 +666,7 @@ public open class CfnReplicationTask internal constructor(
         CfnReplicationTask = CfnReplicationTask(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationTask):
-        software.amazon.awscdk.services.dms.CfnReplicationTask = wrapped.cdkObject
+        software.amazon.awscdk.services.dms.CfnReplicationTask = wrapped.cdkObject as
+        software.amazon.awscdk.services.dms.CfnReplicationTask
   }
 }

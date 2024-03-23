@@ -670,7 +670,7 @@ public interface DeployOptions : DefaultCdkOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.DeployOptions,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.DeployOptions,
   ) : CdkObject(cdkObject), DeployOptions {
     /**
      * Deploy all stacks.

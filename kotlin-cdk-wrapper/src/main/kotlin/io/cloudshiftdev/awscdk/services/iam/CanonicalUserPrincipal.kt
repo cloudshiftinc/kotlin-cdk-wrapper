@@ -25,8 +25,8 @@ import kotlin.String
  * CanonicalUserPrincipal canonicalUserPrincipal = new CanonicalUserPrincipal("canonicalUserId");
  * ```
  */
-public open class CanonicalUserPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CanonicalUserPrincipal,
+public open class CanonicalUserPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.CanonicalUserPrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(canonicalUserId: String) :
       this(software.amazon.awscdk.services.iam.CanonicalUserPrincipal(canonicalUserId)
@@ -56,6 +56,7 @@ public open class CanonicalUserPrincipal internal constructor(
         CanonicalUserPrincipal = CanonicalUserPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: CanonicalUserPrincipal):
-        software.amazon.awscdk.services.iam.CanonicalUserPrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.CanonicalUserPrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.CanonicalUserPrincipal
   }
 }

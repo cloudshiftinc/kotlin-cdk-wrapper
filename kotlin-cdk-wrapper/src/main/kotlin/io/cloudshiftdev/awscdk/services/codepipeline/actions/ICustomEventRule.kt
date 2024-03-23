@@ -39,7 +39,7 @@ public interface ICustomEventRule {
   public fun target(): IRuleTarget
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.actions.ICustomEventRule,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.ICustomEventRule,
   ) : CdkObject(cdkObject), ICustomEventRule {
     /**
      * Description.

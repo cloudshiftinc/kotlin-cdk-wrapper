@@ -83,7 +83,7 @@ public interface IBuildImage {
   public fun validate(buildEnvironment: BuildEnvironment.Builder.() -> Unit): List<String>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.IBuildImage,
+    cdkObject: software.amazon.awscdk.services.codebuild.IBuildImage,
   ) : CdkObject(cdkObject), IBuildImage {
     /**
      * The default `ComputeType` to use with this image, if one was not specified in

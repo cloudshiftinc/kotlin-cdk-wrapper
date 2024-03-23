@@ -10,8 +10,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-notifications.html#sample-build-notifications-ref)
  */
-public open class PhaseChangeEvent internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.PhaseChangeEvent,
+public open class PhaseChangeEvent(
+  cdkObject: software.amazon.awscdk.services.codebuild.PhaseChangeEvent,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun buildComplete(): String =
@@ -36,6 +36,7 @@ public open class PhaseChangeEvent internal constructor(
         PhaseChangeEvent = PhaseChangeEvent(cdkObject)
 
     internal fun unwrap(wrapped: PhaseChangeEvent):
-        software.amazon.awscdk.services.codebuild.PhaseChangeEvent = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.PhaseChangeEvent = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.PhaseChangeEvent
   }
 }

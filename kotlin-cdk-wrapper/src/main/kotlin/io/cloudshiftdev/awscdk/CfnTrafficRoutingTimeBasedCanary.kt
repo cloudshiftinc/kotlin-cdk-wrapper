@@ -87,7 +87,7 @@ public interface CfnTrafficRoutingTimeBasedCanary {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnTrafficRoutingTimeBasedCanary,
+    cdkObject: software.amazon.awscdk.CfnTrafficRoutingTimeBasedCanary,
   ) : CdkObject(cdkObject), CfnTrafficRoutingTimeBasedCanary {
     /**
      * The number of minutes between the first and second traffic shifts of a time-based canary

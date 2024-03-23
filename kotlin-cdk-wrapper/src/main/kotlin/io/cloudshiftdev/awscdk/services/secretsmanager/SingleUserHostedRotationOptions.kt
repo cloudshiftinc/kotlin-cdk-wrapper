@@ -171,8 +171,7 @@ public interface SingleUserHostedRotationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.secretsmanager.SingleUserHostedRotationOptions,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.SingleUserHostedRotationOptions,
   ) : CdkObject(cdkObject), SingleUserHostedRotationOptions {
     /**
      * A string of the characters that you don't want in the password.

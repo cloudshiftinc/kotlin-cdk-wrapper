@@ -179,8 +179,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)
  */
-public open class CfnService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnService,
+public open class CfnService(
+  cdkObject: software.amazon.awscdk.services.ecs.CfnService,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.CfnService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -2217,7 +2217,7 @@ public open class CfnService internal constructor(
         CfnService(cdkObject)
 
     internal fun unwrap(wrapped: CfnService): software.amazon.awscdk.services.ecs.CfnService =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecs.CfnService
   }
 
   /**
@@ -2390,8 +2390,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty,
     ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
       /**
        * Whether the task's elastic network interface receives a public IP address.
@@ -2617,8 +2616,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty,
     ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
       /**
        * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
@@ -2846,8 +2844,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty,
     ) : CdkObject(cdkObject), DeploymentAlarmsProperty {
       /**
        * One or more CloudWatch alarm names.
@@ -3025,8 +3022,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty,
     ) : CdkObject(cdkObject), DeploymentCircuitBreakerProperty {
       /**
        * Determines whether to use the deployment circuit breaker logic for the service.
@@ -3066,8 +3062,8 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * The `DeploymentConfiguration` property specifies optional deployment parameters that control
-   * how many tasks run during the deployment and the ordering of stopping and starting tasks.
+   * Optional deployment parameters that control how many tasks run during a deployment and the
+   * ordering of stopping and starting tasks.
    *
    * Example:
    *
@@ -3464,8 +3460,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty,
     ) : CdkObject(cdkObject), DeploymentConfigurationProperty {
       /**
        * Information about the CloudWatch alarms.
@@ -3678,8 +3673,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty,
     ) : CdkObject(cdkObject), DeploymentControllerProperty {
       /**
        * The deployment controller type to use. There are three deployment controller types
@@ -3843,8 +3837,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty,
     ) : CdkObject(cdkObject), EBSTagSpecificationProperty {
       /**
        * Determines whether to propagate the tags from the task definition to the Amazon EBS volume.
@@ -4104,7 +4097,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnService.LoadBalancerProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.LoadBalancerProperty,
     ) : CdkObject(cdkObject), LoadBalancerProperty {
       /**
        * The name of the container (as it appears in a container definition) to associate with the
@@ -4464,8 +4457,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty,
     ) : CdkObject(cdkObject), LogConfigurationProperty {
       /**
        * The log driver to use for the container.
@@ -4541,8 +4533,7 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * The `NetworkConfiguration` property specifies an object representing the network configuration
-   * for a task or service.
+   * The network configuration for a task or service.
    *
    * Example:
    *
@@ -4650,8 +4641,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty,
     ) : CdkObject(cdkObject), NetworkConfigurationProperty {
       /**
        * The VPC subnets and security groups that are associated with a task.
@@ -4684,12 +4674,15 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * The `PlacementConstraint` property specifies an object representing a constraint on task
-   * placement in the task definition.
+   * An object representing a constraint on task placement.
    *
-   * For more information, see [Task Placement
-   * Constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
+   * For more information, see [Task placement
+   * constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
    * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   *
+   * If you're using the Fargate launch type, task placement constraints aren't supported.
+   *
    *
    * Example:
    *
@@ -4786,8 +4779,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty,
     ) : CdkObject(cdkObject), PlacementConstraintProperty {
       /**
        * A cluster query language expression to apply to the constraint.
@@ -4833,10 +4825,10 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * The `PlacementStrategy` property specifies the task placement strategy for a task or service.
+   * The task placement strategy for a task or service.
    *
-   * For more information, see [Task Placement
-   * Strategies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html)
+   * For more information, see [Task placement
+   * strategies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html)
    * in the *Amazon Elastic Container Service Developer Guide* .
    *
    * Example:
@@ -4859,9 +4851,9 @@ public open class CfnService internal constructor(
      * The field to apply the placement strategy against.
      *
      * For the `spread` placement strategy, valid values are `instanceId` (or `host` , which has the
-     * same effect), or any platform or custom attribute that is applied to a container instance, such
+     * same effect), or any platform or custom attribute that's applied to a container instance, such
      * as `attribute:ecs.availability-zone` . For the `binpack` placement strategy, valid values are
-     * `CPU` and `MEMORY` . For the `random` placement strategy, this field is not used.
+     * `cpu` and `memory` . For the `random` placement strategy, this field is not used.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-field)
      */
@@ -4889,9 +4881,9 @@ public open class CfnService internal constructor(
       /**
        * @param field The field to apply the placement strategy against.
        * For the `spread` placement strategy, valid values are `instanceId` (or `host` , which has
-       * the same effect), or any platform or custom attribute that is applied to a container instance,
+       * the same effect), or any platform or custom attribute that's applied to a container instance,
        * such as `attribute:ecs.availability-zone` . For the `binpack` placement strategy, valid values
-       * are `CPU` and `MEMORY` . For the `random` placement strategy, this field is not used.
+       * are `cpu` and `memory` . For the `random` placement strategy, this field is not used.
        */
       public fun `field`(`field`: String)
 
@@ -4915,9 +4907,9 @@ public open class CfnService internal constructor(
       /**
        * @param field The field to apply the placement strategy against.
        * For the `spread` placement strategy, valid values are `instanceId` (or `host` , which has
-       * the same effect), or any platform or custom attribute that is applied to a container instance,
+       * the same effect), or any platform or custom attribute that's applied to a container instance,
        * such as `attribute:ecs.availability-zone` . For the `binpack` placement strategy, valid values
-       * are `CPU` and `MEMORY` . For the `random` placement strategy, this field is not used.
+       * are `cpu` and `memory` . For the `random` placement strategy, this field is not used.
        */
       override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
@@ -4941,16 +4933,15 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty,
     ) : CdkObject(cdkObject), PlacementStrategyProperty {
       /**
        * The field to apply the placement strategy against.
        *
        * For the `spread` placement strategy, valid values are `instanceId` (or `host` , which has
-       * the same effect), or any platform or custom attribute that is applied to a container instance,
+       * the same effect), or any platform or custom attribute that's applied to a container instance,
        * such as `attribute:ecs.availability-zone` . For the `binpack` placement strategy, valid values
-       * are `CPU` and `MEMORY` . For the `random` placement strategy, this field is not used.
+       * are `cpu` and `memory` . For the `random` placement strategy, this field is not used.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-field)
        */
@@ -5118,7 +5109,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnService.SecretProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.SecretProperty,
     ) : CdkObject(cdkObject), SecretProperty {
       /**
        * The name of the secret.
@@ -5319,8 +5310,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectClientAliasProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectClientAliasProperty,
     ) : CdkObject(cdkObject), ServiceConnectClientAliasProperty {
       /**
        * The `dnsName` is the name that you use in the applications of client tasks to connect to
@@ -5967,8 +5957,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty,
     ) : CdkObject(cdkObject), ServiceConnectConfigurationProperty {
       /**
        * Specifies whether to use Service Connect with this service.
@@ -6457,8 +6446,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectServiceProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectServiceProperty,
     ) : CdkObject(cdkObject), ServiceConnectServiceProperty {
       /**
        * The list of client aliases for this Service Connect service.
@@ -6604,8 +6592,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty,
     ) : CdkObject(cdkObject), ServiceConnectTlsCertificateAuthorityProperty {
       /**
        * The ARN of the AWS Private Certificate Authority certificate.
@@ -6767,8 +6754,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty,
     ) : CdkObject(cdkObject), ServiceConnectTlsConfigurationProperty {
       /**
        * The signer certificate authority.
@@ -7395,8 +7381,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceManagedEBSVolumeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceManagedEBSVolumeConfigurationProperty,
     ) : CdkObject(cdkObject), ServiceManagedEBSVolumeConfigurationProperty {
       /**
        * Indicates whether the volume should be encrypted.
@@ -7589,11 +7574,14 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * The `ServiceRegistry` property specifies details of the service registry.
+   * The details for the service registry.
    *
-   * For more information, see [Service
-   * Discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) in
-   * the *Amazon Elastic Container Service Developer Guide* .
+   * Each service may be associated with one service registry. Multiple service registries for each
+   * service are not supported.
+   *
+   * When you add, update, or remove the service registries configuration, Amazon ECS starts a new
+   * deployment. New tasks are registered and deregistered to the updated service registry
+   * configuration.
    *
    * Example:
    *
@@ -7755,8 +7743,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceRegistryProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceRegistryProperty,
     ) : CdkObject(cdkObject), ServiceRegistryProperty {
       /**
        * The container name value to be used for your service discovery service.
@@ -7986,8 +7973,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceVolumeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceVolumeConfigurationProperty,
     ) : CdkObject(cdkObject), ServiceVolumeConfigurationProperty {
       /**
        * The configuration for the Amazon EBS volume that Amazon ECS creates and manages on your
@@ -8139,8 +8125,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty,
     ) : CdkObject(cdkObject), TimeoutConfigurationProperty {
       /**
        * The amount of time in seconds a connection will stay active while idle.

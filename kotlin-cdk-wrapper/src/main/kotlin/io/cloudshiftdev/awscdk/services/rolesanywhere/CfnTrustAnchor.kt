@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-trustanchor.html)
  */
-public open class CfnTrustAnchor internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor,
+public open class CfnTrustAnchor(
+  cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -440,7 +440,8 @@ public open class CfnTrustAnchor internal constructor(
         CfnTrustAnchor = CfnTrustAnchor(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrustAnchor):
-        software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor = wrapped.cdkObject
+        software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor = wrapped.cdkObject as
+        software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor
   }
 
   /**
@@ -597,8 +598,7 @@ public open class CfnTrustAnchor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.NotificationSettingProperty,
+      cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.NotificationSettingProperty,
     ) : CdkObject(cdkObject), NotificationSettingProperty {
       /**
        * The specified channel of notification.
@@ -751,8 +751,7 @@ public open class CfnTrustAnchor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty,
+      cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty,
     ) : CdkObject(cdkObject), SourceDataProperty {
       /**
        * The root certificate of the AWS Private Certificate Authority specified by this ARN is used
@@ -905,8 +904,7 @@ public open class CfnTrustAnchor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceProperty,
+      cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceProperty,
     ) : CdkObject(cdkObject), SourceProperty {
       /**
        * A union object representing the data field of the TrustAnchor depending on its type.

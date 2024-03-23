@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-browsersettings.html)
  */
-public open class CfnBrowserSettings internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings,
+public open class CfnBrowserSettings(
+  cdkObject: software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -314,6 +314,7 @@ public open class CfnBrowserSettings internal constructor(
         CfnBrowserSettings = CfnBrowserSettings(cdkObject)
 
     internal fun unwrap(wrapped: CfnBrowserSettings):
-        software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings = wrapped.cdkObject
+        software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings = wrapped.cdkObject as
+        software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings
   }
 }

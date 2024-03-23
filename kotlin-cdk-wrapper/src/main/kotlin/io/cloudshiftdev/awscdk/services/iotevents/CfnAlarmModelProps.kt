@@ -488,7 +488,7 @@ public interface CfnAlarmModelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModelProps,
+    cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModelProps,
   ) : CdkObject(cdkObject), CfnAlarmModelProps {
     /**
      * Contains the configuration information of alarm state changes.

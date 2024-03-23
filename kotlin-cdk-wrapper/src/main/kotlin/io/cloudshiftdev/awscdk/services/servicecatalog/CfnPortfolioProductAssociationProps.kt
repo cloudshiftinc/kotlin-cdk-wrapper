@@ -130,8 +130,7 @@ public interface CfnPortfolioProductAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicecatalog.CfnPortfolioProductAssociationProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CfnPortfolioProductAssociationProps,
   ) : CdkObject(cdkObject), CfnPortfolioProductAssociationProps {
     /**
      * The language code.

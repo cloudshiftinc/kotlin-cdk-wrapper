@@ -774,7 +774,7 @@ public interface CfnWorkspaceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspaceProps,
+    cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspaceProps,
   ) : CdkObject(cdkObject), CfnWorkspaceProps {
     /**
      * Specifies whether the workspace can access AWS resources in this AWS account only, or whether

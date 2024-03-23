@@ -26,8 +26,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-keyalgorithm)
  */
-public open class KeyAlgorithm internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.certificatemanager.KeyAlgorithm,
+public open class KeyAlgorithm(
+  cdkObject: software.amazon.awscdk.services.certificatemanager.KeyAlgorithm,
 ) : CdkObject(cdkObject) {
   public constructor(name: String) :
       this(software.amazon.awscdk.services.certificatemanager.KeyAlgorithm(name)
@@ -52,6 +52,7 @@ public open class KeyAlgorithm internal constructor(
         KeyAlgorithm = KeyAlgorithm(cdkObject)
 
     internal fun unwrap(wrapped: KeyAlgorithm):
-        software.amazon.awscdk.services.certificatemanager.KeyAlgorithm = wrapped.cdkObject
+        software.amazon.awscdk.services.certificatemanager.KeyAlgorithm = wrapped.cdkObject as
+        software.amazon.awscdk.services.certificatemanager.KeyAlgorithm
   }
 }

@@ -157,7 +157,7 @@ public interface CfnDiscovererProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eventschemas.CfnDiscovererProps,
+    cdkObject: software.amazon.awscdk.services.eventschemas.CfnDiscovererProps,
   ) : CdkObject(cdkObject), CfnDiscovererProps {
     /**
      * Allows for the discovery of the event schemas that are sent to the event bus from another

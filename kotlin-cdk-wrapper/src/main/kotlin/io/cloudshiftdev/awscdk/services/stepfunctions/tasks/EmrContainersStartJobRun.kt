@@ -51,9 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-emr-eks.html)
  */
-public open class EmrContainersStartJobRun internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun,
+public open class EmrContainersStartJobRun(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun,
 ) : TaskStateBase(cdkObject), IGrantable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -709,6 +708,7 @@ public open class EmrContainersStartJobRun internal constructor(
 
     internal fun unwrap(wrapped: EmrContainersStartJobRun):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun
   }
 }

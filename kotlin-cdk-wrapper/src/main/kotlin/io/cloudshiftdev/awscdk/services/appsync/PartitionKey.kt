@@ -20,8 +20,8 @@ import kotlin.String
  * PartitionKey partitionKey = new PartitionKey(assign);
  * ```
  */
-public open class PartitionKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.PartitionKey,
+public open class PartitionKey(
+  cdkObject: software.amazon.awscdk.services.appsync.PartitionKey,
 ) : PrimaryKey(cdkObject) {
   public constructor(pkey: Assign) :
       this(software.amazon.awscdk.services.appsync.PartitionKey(pkey.let(Assign::unwrap))
@@ -39,6 +39,6 @@ public open class PartitionKey internal constructor(
         = PartitionKey(cdkObject)
 
     internal fun unwrap(wrapped: PartitionKey): software.amazon.awscdk.services.appsync.PartitionKey
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.appsync.PartitionKey
   }
 }

@@ -64,9 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html)
  */
-public open class CfnCalculatedAttributeDefinition internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition,
+public open class CfnCalculatedAttributeDefinition(
+  cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -530,7 +529,8 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
 
     internal fun unwrap(wrapped: CfnCalculatedAttributeDefinition):
         software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition
   }
 
   /**
@@ -646,8 +646,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeDetailsProperty,
     ) : CdkObject(cdkObject), AttributeDetailsProperty {
       /**
        * Mathematical expression and a list of attribute items specified in that expression.
@@ -740,8 +739,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty,
     ) : CdkObject(cdkObject), AttributeItemProperty {
       /**
        * The unique name of the calculated attribute.
@@ -923,8 +921,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ConditionsProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ConditionsProperty,
     ) : CdkObject(cdkObject), ConditionsProperty {
       /**
        * The number of profile objects used for the calculated attribute.
@@ -1040,8 +1037,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty,
     ) : CdkObject(cdkObject), RangeProperty {
       /**
        * The unit of time.
@@ -1149,8 +1145,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty,
     ) : CdkObject(cdkObject), ThresholdProperty {
       /**
        * The operator of the threshold.

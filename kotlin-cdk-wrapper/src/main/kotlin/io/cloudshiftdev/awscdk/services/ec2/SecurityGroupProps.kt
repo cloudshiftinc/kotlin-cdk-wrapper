@@ -227,7 +227,7 @@ public interface SecurityGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.SecurityGroupProps,
+    cdkObject: software.amazon.awscdk.services.ec2.SecurityGroupProps,
   ) : CdkObject(cdkObject), SecurityGroupProps {
     /**
      * Whether to allow all outbound ipv6 traffic by default.

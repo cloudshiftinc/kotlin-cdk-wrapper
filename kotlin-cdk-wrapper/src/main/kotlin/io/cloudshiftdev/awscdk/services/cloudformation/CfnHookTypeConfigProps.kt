@@ -152,7 +152,7 @@ public interface CfnHookTypeConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudformation.CfnHookTypeConfigProps,
+    cdkObject: software.amazon.awscdk.services.cloudformation.CfnHookTypeConfigProps,
   ) : CdkObject(cdkObject), CfnHookTypeConfigProps {
     /**
      * Specifies the activated hook type configuration, in this AWS account and AWS Region .

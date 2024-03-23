@@ -301,7 +301,7 @@ public interface ArtifactManifest {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.ArtifactManifest,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.ArtifactManifest,
   ) : CdkObject(cdkObject), ArtifactManifest {
     /**
      * IDs of artifacts that must be deployed before this artifact.

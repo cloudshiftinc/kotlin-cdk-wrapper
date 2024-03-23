@@ -28,8 +28,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class GatewayRouteSpec internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpec,
+public abstract class GatewayRouteSpec(
+  cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpec,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the GatewayRouteSpec type is initialized.
@@ -43,7 +43,7 @@ public abstract class GatewayRouteSpec internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(GatewayRouteSpecConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpec,
+    cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpec,
   ) : GatewayRouteSpec(cdkObject)
 
   public companion object {

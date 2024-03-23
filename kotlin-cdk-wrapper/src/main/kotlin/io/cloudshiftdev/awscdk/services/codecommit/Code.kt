@@ -20,8 +20,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public abstract class Code internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codecommit.Code,
+public abstract class Code(
+  cdkObject: software.amazon.awscdk.services.codecommit.Code,
 ) : CdkObject(cdkObject) {
   /**
    * This method is called after a repository is passed this instance of Code in its 'code'
@@ -33,7 +33,7 @@ public abstract class Code internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codecommit.Code,
+    cdkObject: software.amazon.awscdk.services.codecommit.Code,
   ) : Code(cdkObject)
 
   public companion object {

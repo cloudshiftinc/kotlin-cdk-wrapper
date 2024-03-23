@@ -21,7 +21,7 @@ public interface IVpcLink : IResource {
   public fun vpcLinkId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IVpcLink,
+    cdkObject: software.amazon.awscdk.services.apigateway.IVpcLink,
   ) : CdkObject(cdkObject), IVpcLink {
     /**
      * Apply the given removal policy to this resource.

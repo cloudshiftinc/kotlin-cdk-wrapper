@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html)
  */
-public open class CfnTopicRuleDestination internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination,
+public open class CfnTopicRuleDestination(
+  cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iot.CfnTopicRuleDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -348,7 +348,8 @@ public open class CfnTopicRuleDestination internal constructor(
         CfnTopicRuleDestination = CfnTopicRuleDestination(cdkObject)
 
     internal fun unwrap(wrapped: CfnTopicRuleDestination):
-        software.amazon.awscdk.services.iot.CfnTopicRuleDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnTopicRuleDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnTopicRuleDestination
   }
 
   /**
@@ -406,8 +407,7 @@ public open class CfnTopicRuleDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty,
     ) : CdkObject(cdkObject), HttpUrlDestinationSummaryProperty {
       /**
        * The URL used to confirm the HTTP topic rule destination URL.
@@ -575,8 +575,7 @@ public open class CfnTopicRuleDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.VpcDestinationPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination.VpcDestinationPropertiesProperty,
     ) : CdkObject(cdkObject), VpcDestinationPropertiesProperty {
       /**
        * The ARN of a role that has permission to create and attach to elastic network interfaces

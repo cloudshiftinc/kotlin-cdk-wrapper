@@ -277,7 +277,7 @@ public interface CachePolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.CachePolicyProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.CachePolicyProps,
   ) : CdkObject(cdkObject), CachePolicyProps {
     /**
      * A unique name to identify the cache policy.

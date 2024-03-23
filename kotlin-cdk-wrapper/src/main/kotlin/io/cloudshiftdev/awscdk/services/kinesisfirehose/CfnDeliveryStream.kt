@@ -57,9 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html)
  */
-public open class CfnDeliveryStream internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream,
+public open class CfnDeliveryStream(
+  cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1739,7 +1738,8 @@ public open class CfnDeliveryStream internal constructor(
         CfnDeliveryStream = CfnDeliveryStream(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeliveryStream):
-        software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream = wrapped.cdkObject
+        software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream = wrapped.cdkObject as
+        software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
   }
 
   /**
@@ -1844,8 +1844,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessBufferingHintsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessBufferingHintsProperty,
     ) : CdkObject(cdkObject), AmazonOpenSearchServerlessBufferingHintsProperty {
       /**
        * Buffer incoming data for the specified period of time, in seconds, before delivering it to
@@ -2397,8 +2396,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessDestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessDestinationConfigurationProperty,
     ) : CdkObject(cdkObject), AmazonOpenSearchServerlessDestinationConfigurationProperty {
       /**
        * The buffering options.
@@ -2566,8 +2564,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty,
     ) : CdkObject(cdkObject), AmazonOpenSearchServerlessRetryOptionsProperty {
       /**
        * After an initial failure to deliver to the Serverless offering for Amazon OpenSearch
@@ -2696,8 +2693,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceBufferingHintsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceBufferingHintsProperty,
     ) : CdkObject(cdkObject), AmazonopensearchserviceBufferingHintsProperty {
       /**
        * Buffer incoming data for the specified period of time, in seconds, before delivering it to
@@ -3381,8 +3377,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceDestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceDestinationConfigurationProperty,
     ) : CdkObject(cdkObject), AmazonopensearchserviceDestinationConfigurationProperty {
       /**
        * The buffering options.
@@ -3586,8 +3581,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceRetryOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceRetryOptionsProperty,
     ) : CdkObject(cdkObject), AmazonopensearchserviceRetryOptionsProperty {
       /**
        * After an initial failure to deliver to Amazon OpenSearch Service, the total amount of time
@@ -3695,8 +3689,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AuthenticationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AuthenticationConfigurationProperty,
     ) : CdkObject(cdkObject), AuthenticationConfigurationProperty {
       /**
        * The type of connectivity used to access the Amazon MSK cluster.
@@ -3836,8 +3829,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.BufferingHintsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.BufferingHintsProperty,
     ) : CdkObject(cdkObject), BufferingHintsProperty {
       /**
        * The length of time, in seconds, that Kinesis Data Firehose buffers incoming data before
@@ -4005,8 +3997,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CloudWatchLoggingOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CloudWatchLoggingOptionsProperty,
     ) : CdkObject(cdkObject), CloudWatchLoggingOptionsProperty {
       /**
        * Indicates whether CloudWatch Logs logging is enabled.
@@ -4165,8 +4156,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CopyCommandProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CopyCommandProperty,
     ) : CdkObject(cdkObject), CopyCommandProperty {
       /**
        * Parameters to use with the Amazon Redshift `COPY` command.
@@ -4538,8 +4528,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DataFormatConversionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DataFormatConversionConfigurationProperty,
     ) : CdkObject(cdkObject), DataFormatConversionConfigurationProperty {
       /**
        * Defaults to `true` .
@@ -4722,8 +4711,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeliveryStreamEncryptionConfigurationInputProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeliveryStreamEncryptionConfigurationInputProperty,
     ) : CdkObject(cdkObject), DeliveryStreamEncryptionConfigurationInputProperty {
       /**
        * If you set `KeyType` to `CUSTOMER_MANAGED_CMK` , you must specify the Amazon Resource Name
@@ -4975,8 +4963,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeserializerProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeserializerProperty,
     ) : CdkObject(cdkObject), DeserializerProperty {
       /**
        * The native Hive / HCatalog JsonSerDe.
@@ -5109,8 +5096,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DocumentIdOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DocumentIdOptionsProperty,
     ) : CdkObject(cdkObject), DocumentIdOptionsProperty {
       /**
        * When the `FIREHOSE_DEFAULT` option is chosen, Firehose generates a unique document ID for
@@ -5279,8 +5265,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DynamicPartitioningConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DynamicPartitioningConfigurationProperty,
     ) : CdkObject(cdkObject), DynamicPartitioningConfigurationProperty {
       /**
        * Specifies whether dynamic partitioning is enabled for this Kinesis Data Firehose delivery
@@ -5428,8 +5413,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchBufferingHintsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchBufferingHintsProperty,
     ) : CdkObject(cdkObject), ElasticsearchBufferingHintsProperty {
       /**
        * The length of time, in seconds, that Kinesis Data Firehose buffers incoming data before
@@ -6151,8 +6135,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty,
     ) : CdkObject(cdkObject), ElasticsearchDestinationConfigurationProperty {
       /**
        * Configures how Kinesis Data Firehose buffers incoming data while delivering it to the
@@ -6374,8 +6357,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchRetryOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchRetryOptionsProperty,
     ) : CdkObject(cdkObject), ElasticsearchRetryOptionsProperty {
       /**
        * After an initial failure to deliver to Amazon ES, the total amount of time during which
@@ -6535,8 +6517,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.EncryptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.EncryptionConfigurationProperty,
     ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
       /**
        * The AWS Key Management Service ( AWS KMS) encryption key that Amazon S3 uses to encrypt
@@ -7341,8 +7322,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty,
     ) : CdkObject(cdkObject), ExtendedS3DestinationConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon S3 bucket.
@@ -7602,8 +7582,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HiveJsonSerDeProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HiveJsonSerDeProperty,
     ) : CdkObject(cdkObject), HiveJsonSerDeProperty {
       /**
        * Indicates how you want Firehose to parse the date and timestamps that may be present in
@@ -7717,8 +7696,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointCommonAttributeProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointCommonAttributeProperty,
     ) : CdkObject(cdkObject), HttpEndpointCommonAttributeProperty {
       /**
        * The name of the HTTP endpoint common attribute.
@@ -7856,8 +7834,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointConfigurationProperty,
     ) : CdkObject(cdkObject), HttpEndpointConfigurationProperty {
       /**
        * The access key required for Kinesis Firehose to authenticate with the HTTP endpoint
@@ -8451,8 +8428,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointDestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointDestinationConfigurationProperty,
     ) : CdkObject(cdkObject), HttpEndpointDestinationConfigurationProperty {
       /**
        * The buffering options that can be used before data is delivered to the specified
@@ -8663,8 +8639,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointRequestConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointRequestConfigurationProperty,
     ) : CdkObject(cdkObject), HttpEndpointRequestConfigurationProperty {
       /**
        * Describes the metadata sent to the HTTP endpoint destination.
@@ -8813,8 +8788,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.InputFormatConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.InputFormatConfigurationProperty,
     ) : CdkObject(cdkObject), InputFormatConfigurationProperty {
       /**
        * Specifies which deserializer to use.
@@ -8908,8 +8882,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KMSEncryptionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KMSEncryptionConfigProperty,
     ) : CdkObject(cdkObject), KMSEncryptionConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the AWS KMS encryption key that Amazon S3 uses to encrypt
@@ -9016,8 +8989,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KinesisStreamSourceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KinesisStreamSourceConfigurationProperty,
     ) : CdkObject(cdkObject), KinesisStreamSourceConfigurationProperty {
       /**
        * The ARN of the source Kinesis data stream.
@@ -9189,8 +9161,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.MSKSourceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.MSKSourceConfigurationProperty,
     ) : CdkObject(cdkObject), MSKSourceConfigurationProperty {
       /**
        * The authentication configuration of the Amazon MSK cluster.
@@ -9427,8 +9398,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OpenXJsonSerDeProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OpenXJsonSerDeProperty,
     ) : CdkObject(cdkObject), OpenXJsonSerDeProperty {
       /**
        * When set to `true` , which is the default, Firehose converts JSON keys to lowercase before
@@ -9844,8 +9814,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OrcSerDeProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OrcSerDeProperty,
     ) : CdkObject(cdkObject), OrcSerDeProperty {
       /**
        * The Hadoop Distributed File System (HDFS) block size.
@@ -10094,8 +10063,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OutputFormatConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OutputFormatConfigurationProperty,
     ) : CdkObject(cdkObject), OutputFormatConfigurationProperty {
       /**
        * Specifies which serializer to use.
@@ -10333,8 +10301,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ParquetSerDeProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ParquetSerDeProperty,
     ) : CdkObject(cdkObject), ParquetSerDeProperty {
       /**
        * The Hadoop Distributed File System (HDFS) block size.
@@ -10531,8 +10498,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessingConfigurationProperty,
     ) : CdkObject(cdkObject), ProcessingConfigurationProperty {
       /**
        * Indicates whether data processing is enabled (true) or disabled (false).
@@ -10655,8 +10621,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorParameterProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorParameterProperty,
     ) : CdkObject(cdkObject), ProcessorParameterProperty {
       /**
        * The name of the parameter.
@@ -10801,8 +10766,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorProperty,
     ) : CdkObject(cdkObject), ProcessorProperty {
       /**
        * The processor parameters.
@@ -11421,8 +11385,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftDestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftDestinationConfigurationProperty,
     ) : CdkObject(cdkObject), RedshiftDestinationConfigurationProperty {
       /**
        * The CloudWatch logging options for your delivery stream.
@@ -11608,8 +11571,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftRetryOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftRetryOptionsProperty,
     ) : CdkObject(cdkObject), RedshiftRetryOptionsProperty {
       /**
        * The length of time during which Firehose retries delivery after a failure, starting from
@@ -11713,8 +11675,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RetryOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RetryOptionsProperty,
     ) : CdkObject(cdkObject), RetryOptionsProperty {
       /**
        * The total amount of time that Kinesis Data Firehose spends on retries.
@@ -12121,8 +12082,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.S3DestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.S3DestinationConfigurationProperty,
     ) : CdkObject(cdkObject), S3DestinationConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon S3 bucket to send data to.
@@ -12446,8 +12406,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaConfigurationProperty,
     ) : CdkObject(cdkObject), SchemaConfigurationProperty {
       /**
        * The ID of the AWS Glue Data Catalog.
@@ -12732,8 +12691,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SerializerProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SerializerProperty,
     ) : CdkObject(cdkObject), SerializerProperty {
       /**
        * A serializer to use for converting data to the ORC format before storing it in Amazon S3.
@@ -13474,8 +13432,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeDestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeDestinationConfigurationProperty,
     ) : CdkObject(cdkObject), SnowflakeDestinationConfigurationProperty {
       /**
        * URL for accessing your Snowflake account.
@@ -13708,8 +13665,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeRetryOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeRetryOptionsProperty,
     ) : CdkObject(cdkObject), SnowflakeRetryOptionsProperty {
       /**
        * the time period where Firehose will retry sending data to the chosen HTTP endpoint.
@@ -13826,8 +13782,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeRoleConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeRoleConfigurationProperty,
     ) : CdkObject(cdkObject), SnowflakeRoleConfigurationProperty {
       /**
        * Enable Snowflake role.
@@ -13928,8 +13883,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeVpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeVpcConfigurationProperty,
     ) : CdkObject(cdkObject), SnowflakeVpcConfigurationProperty {
       /**
        * The VPCE ID for Firehose to privately connect with Snowflake.
@@ -14052,8 +14006,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkBufferingHintsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkBufferingHintsProperty,
     ) : CdkObject(cdkObject), SplunkBufferingHintsProperty {
       /**
        * Buffer incoming data for the specified period of time, in seconds, before delivering it to
@@ -14575,8 +14528,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkDestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkDestinationConfigurationProperty,
     ) : CdkObject(cdkObject), SplunkDestinationConfigurationProperty {
       /**
        * The buffering options.
@@ -14749,8 +14701,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkRetryOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkRetryOptionsProperty,
     ) : CdkObject(cdkObject), SplunkRetryOptionsProperty {
       /**
        * The total amount of time that Firehose spends on retries.
@@ -15041,8 +14992,7 @@ public open class CfnDeliveryStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.VpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.VpcConfigurationProperty,
     ) : CdkObject(cdkObject), VpcConfigurationProperty {
       /**
        * The ARN of the IAM role that you want the delivery stream to use to create endpoints in the

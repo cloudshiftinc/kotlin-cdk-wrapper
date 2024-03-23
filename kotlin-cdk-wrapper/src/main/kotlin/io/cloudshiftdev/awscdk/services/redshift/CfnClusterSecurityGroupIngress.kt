@@ -51,9 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html)
  */
-public open class CfnClusterSecurityGroupIngress internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngress,
+public open class CfnClusterSecurityGroupIngress(
+  cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngress,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -268,5 +267,6 @@ public open class CfnClusterSecurityGroupIngress internal constructor(
 
     internal fun unwrap(wrapped: CfnClusterSecurityGroupIngress):
         software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngress = wrapped.cdkObject
+        as software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngress
   }
 }

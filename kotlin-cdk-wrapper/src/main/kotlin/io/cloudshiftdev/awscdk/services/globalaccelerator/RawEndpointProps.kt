@@ -149,7 +149,7 @@ public interface RawEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.globalaccelerator.RawEndpointProps,
+    cdkObject: software.amazon.awscdk.services.globalaccelerator.RawEndpointProps,
   ) : CdkObject(cdkObject), RawEndpointProps {
     /**
      * Identifier of the endpoint.

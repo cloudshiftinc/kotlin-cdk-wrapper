@@ -47,8 +47,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class AmazonLinux2Kernel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2Kernel,
+public open class AmazonLinux2Kernel(
+  cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2Kernel,
 ) : CdkObject(cdkObject) {
   public constructor(version: String) :
       this(software.amazon.awscdk.services.ec2.AmazonLinux2Kernel(version)
@@ -68,6 +68,7 @@ public open class AmazonLinux2Kernel internal constructor(
         AmazonLinux2Kernel = AmazonLinux2Kernel(cdkObject)
 
     internal fun unwrap(wrapped: AmazonLinux2Kernel):
-        software.amazon.awscdk.services.ec2.AmazonLinux2Kernel = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.AmazonLinux2Kernel = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.AmazonLinux2Kernel
   }
 }

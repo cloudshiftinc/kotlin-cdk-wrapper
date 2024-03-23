@@ -68,7 +68,7 @@ public interface IEcsFargateContainerDefinition : IEcsContainerDefinition {
       unwrap(this).getFargatePlatformVersion()?.let(FargatePlatformVersion::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.IEcsFargateContainerDefinition,
+    cdkObject: software.amazon.awscdk.services.batch.IEcsFargateContainerDefinition,
   ) : CdkObject(cdkObject), IEcsFargateContainerDefinition {
     /**
      * Add a Volume to this container.

@@ -98,7 +98,7 @@ public interface ResponseCustomHeader {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.ResponseCustomHeader,
+    cdkObject: software.amazon.awscdk.services.cloudfront.ResponseCustomHeader,
   ) : CdkObject(cdkObject), ResponseCustomHeader {
     /**
      * The HTTP response header name.

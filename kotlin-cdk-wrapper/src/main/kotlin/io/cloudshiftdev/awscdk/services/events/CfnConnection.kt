@@ -99,8 +99,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html)
  */
-public open class CfnConnection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.CfnConnection,
+public open class CfnConnection(
+  cdkObject: software.amazon.awscdk.services.events.CfnConnection,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -368,7 +368,8 @@ public open class CfnConnection internal constructor(
         CfnConnection = CfnConnection(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnection):
-        software.amazon.awscdk.services.events.CfnConnection = wrapped.cdkObject
+        software.amazon.awscdk.services.events.CfnConnection = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.CfnConnection
   }
 
   /**
@@ -446,8 +447,7 @@ public open class CfnConnection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnConnection.ApiKeyAuthParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnConnection.ApiKeyAuthParametersProperty,
     ) : CdkObject(cdkObject), ApiKeyAuthParametersProperty {
       /**
        * The name of the API key to use for authorization.
@@ -772,8 +772,7 @@ public open class CfnConnection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnConnection.AuthParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnConnection.AuthParametersProperty,
     ) : CdkObject(cdkObject), AuthParametersProperty {
       /**
        * The API Key parameters to use for authorization.
@@ -896,8 +895,7 @@ public open class CfnConnection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty,
     ) : CdkObject(cdkObject), BasicAuthParametersProperty {
       /**
        * The password associated with the user name to use for Basic authorization.
@@ -1007,8 +1005,7 @@ public open class CfnConnection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty,
     ) : CdkObject(cdkObject), ClientParametersProperty {
       /**
        * The client ID to use for OAuth authorization.
@@ -1228,8 +1225,7 @@ public open class CfnConnection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty,
     ) : CdkObject(cdkObject), ConnectionHttpParametersProperty {
       /**
        * Contains additional body string parameters for the connection.
@@ -1479,8 +1475,7 @@ public open class CfnConnection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnConnection.OAuthParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnConnection.OAuthParametersProperty,
     ) : CdkObject(cdkObject), OAuthParametersProperty {
       /**
        * The URL to the authorization endpoint when OAuth is specified as the authorization type.
@@ -1639,8 +1634,7 @@ public open class CfnConnection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnConnection.ParameterProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnConnection.ParameterProperty,
     ) : CdkObject(cdkObject), ParameterProperty {
       /**
        * Specifies whether the value is secret.

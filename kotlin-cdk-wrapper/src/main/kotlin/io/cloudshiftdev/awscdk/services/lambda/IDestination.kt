@@ -50,7 +50,7 @@ public interface IDestination {
   ): DestinationConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.IDestination,
+    cdkObject: software.amazon.awscdk.services.lambda.IDestination,
   ) : CdkObject(cdkObject), IDestination {
     /**
      * Binds this destination to the Lambda function.

@@ -71,7 +71,7 @@ public interface IFairshareSchedulingPolicy : ISchedulingPolicy {
   public fun shares(): List<Share>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.IFairshareSchedulingPolicy,
+    cdkObject: software.amazon.awscdk.services.batch.IFairshareSchedulingPolicy,
   ) : CdkObject(cdkObject), IFairshareSchedulingPolicy {
     /**
      * Apply the given removal policy to this resource.

@@ -174,8 +174,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html)
  */
-public open class CfnScalingPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy,
+public open class CfnScalingPolicy(
+  cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1025,7 +1025,8 @@ public open class CfnScalingPolicy internal constructor(
         CfnScalingPolicy = CfnScalingPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnScalingPolicy):
-        software.amazon.awscdk.services.autoscaling.CfnScalingPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.CfnScalingPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
   }
 
   /**
@@ -1250,8 +1251,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty,
     ) : CdkObject(cdkObject), CustomizedMetricSpecificationProperty {
       /**
        * The dimensions of the metric.
@@ -1621,8 +1621,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty,
     ) : CdkObject(cdkObject), MetricDataQueryProperty {
       /**
        * The math expression to perform on the returned data, if this object is performing a math
@@ -1780,8 +1779,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty,
     ) : CdkObject(cdkObject), MetricDimensionProperty {
       /**
        * The name of the dimension.
@@ -1999,8 +1997,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty,
     ) : CdkObject(cdkObject), MetricProperty {
       /**
        * The dimensions for the metric.
@@ -2262,8 +2259,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty,
     ) : CdkObject(cdkObject), MetricStatProperty {
       /**
        * The CloudWatch metric to return, including the metric name, namespace, and dimensions.
@@ -2493,8 +2489,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredefinedMetricSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredefinedMetricSpecificationProperty,
     ) : CdkObject(cdkObject), PredefinedMetricSpecificationProperty {
       /**
        * The metric type. The following predefined metrics are available:.
@@ -2933,8 +2928,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingConfigurationProperty,
     ) : CdkObject(cdkObject), PredictiveScalingConfigurationProperty {
       /**
        * Defines the behavior that should be applied if the forecast capacity approaches or exceeds
@@ -3152,8 +3146,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty,
     ) : CdkObject(cdkObject), PredictiveScalingCustomizedCapacityMetricProperty {
       /**
        * One or more metric data queries to provide the data points for a capacity metric.
@@ -3307,8 +3300,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty,
     ) : CdkObject(cdkObject), PredictiveScalingCustomizedLoadMetricProperty {
       /**
        * One or more metric data queries to provide the data points for a load metric.
@@ -3463,8 +3455,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty,
     ) : CdkObject(cdkObject), PredictiveScalingCustomizedScalingMetricProperty {
       /**
        * One or more metric data queries to provide the data points for a scaling metric.
@@ -4020,8 +4011,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingMetricSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingMetricSpecificationProperty,
     ) : CdkObject(cdkObject), PredictiveScalingMetricSpecificationProperty {
       /**
        * The customized capacity metric specification.
@@ -4253,8 +4243,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty,
     ) : CdkObject(cdkObject), PredictiveScalingPredefinedLoadMetricProperty {
       /**
        * The metric type.
@@ -4474,8 +4463,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedMetricPairProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedMetricPairProperty,
     ) : CdkObject(cdkObject), PredictiveScalingPredefinedMetricPairProperty {
       /**
        * Indicates which metrics to use.
@@ -4688,8 +4676,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty,
     ) : CdkObject(cdkObject), PredictiveScalingPredefinedScalingMetricProperty {
       /**
        * The metric type.
@@ -4913,8 +4900,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty,
     ) : CdkObject(cdkObject), StepAdjustmentProperty {
       /**
        * The lower bound for the difference between the alarm threshold and the CloudWatch metric.
@@ -5239,8 +5225,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty,
     ) : CdkObject(cdkObject), TargetTrackingConfigurationProperty {
       /**
        * A customized metric.

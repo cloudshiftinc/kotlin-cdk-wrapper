@@ -20,8 +20,8 @@ import kotlin.jvm.JvmName
 /**
  * Reference to a new or existing Amazon SQS queue.
  */
-public abstract class QueueBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sqs.QueueBase,
+public abstract class QueueBase(
+  cdkObject: software.amazon.awscdk.services.sqs.QueueBase,
 ) : Resource(cdkObject), IQueue {
   /**
    * Adds a statement to the IAM resource policy associated with this queue.
@@ -475,7 +475,7 @@ public abstract class QueueBase internal constructor(
   public override fun queueUrl(): String = unwrap(this).getQueueUrl()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sqs.QueueBase,
+    cdkObject: software.amazon.awscdk.services.sqs.QueueBase,
   ) : QueueBase(cdkObject)
 
   public companion object {

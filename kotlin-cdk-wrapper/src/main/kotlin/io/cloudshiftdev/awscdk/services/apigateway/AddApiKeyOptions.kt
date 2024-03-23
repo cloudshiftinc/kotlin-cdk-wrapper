@@ -58,7 +58,7 @@ public interface AddApiKeyOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.AddApiKeyOptions,
+    cdkObject: software.amazon.awscdk.services.apigateway.AddApiKeyOptions,
   ) : CdkObject(cdkObject), AddApiKeyOptions {
     /**
      * Override the CloudFormation logical id of the AWS::ApiGateway::UsagePlanKey resource.

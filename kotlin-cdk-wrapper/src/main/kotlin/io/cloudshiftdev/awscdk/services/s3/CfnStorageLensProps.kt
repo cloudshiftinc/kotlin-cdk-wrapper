@@ -215,7 +215,7 @@ public interface CfnStorageLensProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensProps,
+    cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensProps,
   ) : CdkObject(cdkObject), CfnStorageLensProps {
     /**
      * This resource contains the details Amazon S3 Storage Lens configuration.

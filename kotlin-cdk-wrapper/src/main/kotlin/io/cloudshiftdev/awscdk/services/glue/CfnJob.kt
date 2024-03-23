@@ -75,8 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html)
  */
-public open class CfnJob internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnJob,
+public open class CfnJob(
+  cdkObject: software.amazon.awscdk.services.glue.CfnJob,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1148,7 +1148,7 @@ public open class CfnJob internal constructor(
         CfnJob(cdkObject)
 
     internal fun unwrap(wrapped: CfnJob): software.amazon.awscdk.services.glue.CfnJob =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnJob
   }
 
   /**
@@ -1213,7 +1213,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty,
     ) : CdkObject(cdkObject), ConnectionsListProperty {
       /**
        * A list of connections used by the job.
@@ -1300,7 +1300,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty,
     ) : CdkObject(cdkObject), ExecutionPropertyProperty {
       /**
        * The maximum number of concurrent runs allowed for the job.
@@ -1472,7 +1472,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnJob.JobCommandProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnJob.JobCommandProperty,
     ) : CdkObject(cdkObject), JobCommandProperty {
       /**
        * The name of the job command.
@@ -1587,8 +1587,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty,
     ) : CdkObject(cdkObject), NotificationPropertyProperty {
       /**
        * After a job run starts, the number of minutes to wait before sending a job run delay

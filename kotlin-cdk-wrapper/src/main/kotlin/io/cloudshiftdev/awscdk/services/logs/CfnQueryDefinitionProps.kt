@@ -137,7 +137,7 @@ public interface CfnQueryDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.CfnQueryDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.logs.CfnQueryDefinitionProps,
   ) : CdkObject(cdkObject), CfnQueryDefinitionProps {
     /**
      * Use this parameter if you want the query to query only certain log groups.

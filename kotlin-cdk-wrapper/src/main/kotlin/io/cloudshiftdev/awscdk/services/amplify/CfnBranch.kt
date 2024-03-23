@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html)
  */
-public open class CfnBranch internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.amplify.CfnBranch,
+public open class CfnBranch(
+  cdkObject: software.amazon.awscdk.services.amplify.CfnBranch,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -939,7 +939,7 @@ public open class CfnBranch internal constructor(
         CfnBranch(cdkObject)
 
     internal fun unwrap(wrapped: CfnBranch): software.amazon.awscdk.services.amplify.CfnBranch =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.amplify.CfnBranch
   }
 
   /**
@@ -994,7 +994,7 @@ public open class CfnBranch internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty,
     ) : CdkObject(cdkObject), BackendProperty {
       /**
        * The Amazon Resource Name (ARN) for the AWS CloudFormation stack.
@@ -1124,8 +1124,7 @@ public open class CfnBranch internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplify.CfnBranch.BasicAuthConfigProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BasicAuthConfigProperty,
     ) : CdkObject(cdkObject), BasicAuthConfigProperty {
       /**
        * Enables basic authorization for the branch.
@@ -1240,8 +1239,7 @@ public open class CfnBranch internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty,
     ) : CdkObject(cdkObject), EnvironmentVariableProperty {
       /**
        * The environment variable name.

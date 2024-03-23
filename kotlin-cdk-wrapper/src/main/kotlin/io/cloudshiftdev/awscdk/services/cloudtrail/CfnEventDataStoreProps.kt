@@ -881,7 +881,7 @@ public interface CfnEventDataStoreProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStoreProps,
+    cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStoreProps,
   ) : CdkObject(cdkObject), CfnEventDataStoreProps {
     /**
      * The advanced event selectors to use to select the events for the data store.

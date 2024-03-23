@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplifyuibuilder-theme.html)
  */
-public open class CfnTheme internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme,
+public open class CfnTheme(
+  cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.amplifyuibuilder.CfnTheme(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -419,7 +419,8 @@ public open class CfnTheme internal constructor(
         CfnTheme = CfnTheme(cdkObject)
 
     internal fun unwrap(wrapped: CfnTheme):
-        software.amazon.awscdk.services.amplifyuibuilder.CfnTheme = wrapped.cdkObject
+        software.amazon.awscdk.services.amplifyuibuilder.CfnTheme = wrapped.cdkObject as
+        software.amazon.awscdk.services.amplifyuibuilder.CfnTheme
   }
 
   /**
@@ -521,8 +522,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty,
     ) : CdkObject(cdkObject), ThemeValueProperty {
       /**
        * A list of key-value pairs that define the theme's properties.
@@ -661,8 +661,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValuesProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValuesProperty,
     ) : CdkObject(cdkObject), ThemeValuesProperty {
       /**
        * The name of the property.

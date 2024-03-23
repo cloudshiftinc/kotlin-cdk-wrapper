@@ -69,7 +69,7 @@ public interface IFileSystem : IConnectable, IResourceWithPolicy {
   public fun mountTargetsAvailable(): IDependable
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.efs.IFileSystem,
+    cdkObject: software.amazon.awscdk.services.efs.IFileSystem,
   ) : CdkObject(cdkObject), IFileSystem {
     /**
      * Add a statement to the resource's resource policy.

@@ -406,8 +406,7 @@ public interface CloudFrontWebDistributionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cloudfront.CloudFrontWebDistributionProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.CloudFrontWebDistributionProps,
   ) : CdkObject(cdkObject), CloudFrontWebDistributionProps {
     /**
      * A comment for this distribution in the CloudFront console.

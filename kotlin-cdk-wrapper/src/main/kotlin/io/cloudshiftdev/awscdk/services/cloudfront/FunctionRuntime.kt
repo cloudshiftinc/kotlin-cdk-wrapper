@@ -28,8 +28,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class FunctionRuntime internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionRuntime,
+public open class FunctionRuntime(
+  cdkObject: software.amazon.awscdk.services.cloudfront.FunctionRuntime,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -50,6 +50,7 @@ public open class FunctionRuntime internal constructor(
         FunctionRuntime = FunctionRuntime(cdkObject)
 
     internal fun unwrap(wrapped: FunctionRuntime):
-        software.amazon.awscdk.services.cloudfront.FunctionRuntime = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.FunctionRuntime = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.FunctionRuntime
   }
 }

@@ -139,7 +139,7 @@ public interface CfnGlobalNetworkProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnGlobalNetworkProps,
+    cdkObject: software.amazon.awscdk.services.networkmanager.CfnGlobalNetworkProps,
   ) : CdkObject(cdkObject), CfnGlobalNetworkProps {
     /**
      * The date and time that the global network was created.

@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html)
  */
-public open class CfnTransitGatewayConnect internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect,
+public open class CfnTransitGatewayConnect(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -320,7 +320,8 @@ public open class CfnTransitGatewayConnect internal constructor(
         CfnTransitGatewayConnect = CfnTransitGatewayConnect(cdkObject)
 
     internal fun unwrap(wrapped: CfnTransitGatewayConnect):
-        software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect
   }
 
   /**
@@ -378,8 +379,7 @@ public open class CfnTransitGatewayConnect internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty,
     ) : CdkObject(cdkObject), TransitGatewayConnectOptionsProperty {
       /**
        * The tunnel protocol.

@@ -190,8 +190,7 @@ public interface CfnSiteToSiteVpnAttachmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachmentProps,
+    cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachmentProps,
   ) : CdkObject(cdkObject), CfnSiteToSiteVpnAttachmentProps {
     /**
      * The ID of a core network where you're creating a site-to-site VPN attachment.

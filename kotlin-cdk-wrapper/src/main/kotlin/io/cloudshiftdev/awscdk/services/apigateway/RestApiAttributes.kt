@@ -230,7 +230,7 @@ public interface RestApiAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.RestApiAttributes,
+    cdkObject: software.amazon.awscdk.services.apigateway.RestApiAttributes,
   ) : CdkObject(cdkObject), RestApiAttributes {
     /**
      * The ID of the API Gateway RestApi.

@@ -430,7 +430,7 @@ public interface CfnDBProxyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyProps,
   ) : CdkObject(cdkObject), CfnDBProxyProps {
     /**
      * The authorization mechanism that the proxy uses.

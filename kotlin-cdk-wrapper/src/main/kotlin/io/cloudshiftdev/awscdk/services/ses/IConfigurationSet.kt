@@ -21,7 +21,7 @@ public interface IConfigurationSet : IResource {
   public fun configurationSetName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.IConfigurationSet,
+    cdkObject: software.amazon.awscdk.services.ses.IConfigurationSet,
   ) : CdkObject(cdkObject), IConfigurationSet {
     /**
      * Apply the given removal policy to this resource.

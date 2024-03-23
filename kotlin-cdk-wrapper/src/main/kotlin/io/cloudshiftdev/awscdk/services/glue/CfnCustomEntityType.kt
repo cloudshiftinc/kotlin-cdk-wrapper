@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-customentitytype.html)
  */
-public open class CfnCustomEntityType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnCustomEntityType,
+public open class CfnCustomEntityType(
+  cdkObject: software.amazon.awscdk.services.glue.CfnCustomEntityType,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.glue.CfnCustomEntityType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -288,6 +288,7 @@ public open class CfnCustomEntityType internal constructor(
         CfnCustomEntityType = CfnCustomEntityType(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomEntityType):
-        software.amazon.awscdk.services.glue.CfnCustomEntityType = wrapped.cdkObject
+        software.amazon.awscdk.services.glue.CfnCustomEntityType = wrapped.cdkObject as
+        software.amazon.awscdk.services.glue.CfnCustomEntityType
   }
 }

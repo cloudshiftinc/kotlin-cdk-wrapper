@@ -33,8 +33,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class Capacity internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dynamodb.Capacity,
+public abstract class Capacity(
+  cdkObject: software.amazon.awscdk.services.dynamodb.Capacity,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -42,7 +42,7 @@ public abstract class Capacity internal constructor(
   public open fun mode(): CapacityMode = unwrap(this).getMode().let(CapacityMode::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.Capacity,
+    cdkObject: software.amazon.awscdk.services.dynamodb.Capacity,
   ) : Capacity(cdkObject)
 
   public companion object {

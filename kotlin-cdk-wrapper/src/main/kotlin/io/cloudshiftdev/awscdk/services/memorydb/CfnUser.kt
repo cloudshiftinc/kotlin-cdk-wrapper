@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-user.html)
  */
-public open class CfnUser internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.memorydb.CfnUser,
+public open class CfnUser(
+  cdkObject: software.amazon.awscdk.services.memorydb.CfnUser,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -294,7 +294,7 @@ public open class CfnUser internal constructor(
         CfnUser(cdkObject)
 
     internal fun unwrap(wrapped: CfnUser): software.amazon.awscdk.services.memorydb.CfnUser =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.memorydb.CfnUser
   }
 
   /**
@@ -387,8 +387,7 @@ public open class CfnUser internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.memorydb.CfnUser.AuthenticationModeProperty,
+      cdkObject: software.amazon.awscdk.services.memorydb.CfnUser.AuthenticationModeProperty,
     ) : CdkObject(cdkObject), AuthenticationModeProperty {
       /**
        * The password(s) used for authentication.

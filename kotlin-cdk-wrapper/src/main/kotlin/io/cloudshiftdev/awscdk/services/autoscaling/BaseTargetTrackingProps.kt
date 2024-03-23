@@ -121,7 +121,7 @@ public interface BaseTargetTrackingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.BaseTargetTrackingProps,
+    cdkObject: software.amazon.awscdk.services.autoscaling.BaseTargetTrackingProps,
   ) : CdkObject(cdkObject), BaseTargetTrackingProps {
     /**
      * Period after a scaling completes before another scaling activity can start.

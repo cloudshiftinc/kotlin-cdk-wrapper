@@ -25,8 +25,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class Test internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.synthetics.Test,
+public open class Test(
+  cdkObject: software.amazon.awscdk.services.synthetics.Test,
 ) : CdkObject(cdkObject) {
   /**
    * The code that the canary should run.
@@ -51,6 +51,6 @@ public open class Test internal constructor(
         Test(cdkObject)
 
     internal fun unwrap(wrapped: Test): software.amazon.awscdk.services.synthetics.Test =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.synthetics.Test
   }
 }

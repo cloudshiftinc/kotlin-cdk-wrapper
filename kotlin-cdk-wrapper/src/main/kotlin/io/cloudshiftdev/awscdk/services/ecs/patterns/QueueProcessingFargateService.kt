@@ -55,9 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class QueueProcessingFargateService internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateService,
+public open class QueueProcessingFargateService(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateService,
 ) : QueueProcessingServiceBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1424,6 +1423,7 @@ public open class QueueProcessingFargateService internal constructor(
 
     internal fun unwrap(wrapped: QueueProcessingFargateService):
         software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateService =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateService
   }
 }

@@ -46,8 +46,8 @@ import kotlin.jvm.JvmName
  * newContainer.addSecret("DB_PASSWORD", Secret.fromSecretsManager(secret, "password"));
  * ```
  */
-public abstract class EnvironmentFile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFile,
+public abstract class EnvironmentFile(
+  cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFile,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the container is initialized to allow this object to bind to the stack.
@@ -58,7 +58,7 @@ public abstract class EnvironmentFile internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(EnvironmentFileConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFile,
+    cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFile,
   ) : EnvironmentFile(cdkObject)
 
   public companion object {

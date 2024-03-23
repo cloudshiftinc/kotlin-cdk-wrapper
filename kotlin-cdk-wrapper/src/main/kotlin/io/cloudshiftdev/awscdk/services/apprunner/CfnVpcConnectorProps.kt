@@ -214,7 +214,7 @@ public interface CfnVpcConnectorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apprunner.CfnVpcConnectorProps,
+    cdkObject: software.amazon.awscdk.services.apprunner.CfnVpcConnectorProps,
   ) : CdkObject(cdkObject), CfnVpcConnectorProps {
     /**
      * A list of IDs of security groups that App Runner should use for access to AWS resources under

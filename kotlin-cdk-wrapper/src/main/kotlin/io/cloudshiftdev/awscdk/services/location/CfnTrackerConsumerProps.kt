@@ -114,7 +114,7 @@ public interface CfnTrackerConsumerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.location.CfnTrackerConsumerProps,
+    cdkObject: software.amazon.awscdk.services.location.CfnTrackerConsumerProps,
   ) : CdkObject(cdkObject), CfnTrackerConsumerProps {
     /**
      * The Amazon Resource Name (ARN) for the geofence collection to be associated to tracker

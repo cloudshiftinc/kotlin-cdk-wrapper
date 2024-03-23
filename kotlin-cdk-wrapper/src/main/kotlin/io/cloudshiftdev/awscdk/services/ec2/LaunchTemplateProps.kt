@@ -707,7 +707,7 @@ public interface LaunchTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateProps,
+    cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateProps,
   ) : CdkObject(cdkObject), LaunchTemplateProps {
     /**
      * Whether instances should have a public IP addresses associated with them.

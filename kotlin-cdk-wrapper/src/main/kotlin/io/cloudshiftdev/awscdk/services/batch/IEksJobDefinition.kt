@@ -60,7 +60,7 @@ public interface IEksJobDefinition : IJobDefinition {
   public fun useHostNetwork(): Boolean? = unwrap(this).getUseHostNetwork()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.IEksJobDefinition,
+    cdkObject: software.amazon.awscdk.services.batch.IEksJobDefinition,
   ) : CdkObject(cdkObject), IEksJobDefinition {
     /**
      * Add a RetryStrategy to this JobDefinition.

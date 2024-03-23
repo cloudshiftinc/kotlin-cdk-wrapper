@@ -23,7 +23,7 @@ public interface IPolicy : IResource {
   public fun policyName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.IPolicy,
+    cdkObject: software.amazon.awscdk.services.iam.IPolicy,
   ) : CdkObject(cdkObject), IPolicy {
     /**
      * Apply the given removal policy to this resource.

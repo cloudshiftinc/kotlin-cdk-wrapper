@@ -75,7 +75,7 @@ public interface BaseNamespaceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicediscovery.BaseNamespaceProps,
+    cdkObject: software.amazon.awscdk.services.servicediscovery.BaseNamespaceProps,
   ) : CdkObject(cdkObject), BaseNamespaceProps {
     /**
      * A description of the Namespace.

@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ScheduledEc2Task internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2Task,
+public open class ScheduledEc2Task(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2Task,
 ) : ScheduledTaskBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -549,6 +549,7 @@ public open class ScheduledEc2Task internal constructor(
         ScheduledEc2Task = ScheduledEc2Task(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledEc2Task):
-        software.amazon.awscdk.services.ecs.patterns.ScheduledEc2Task = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.patterns.ScheduledEc2Task = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.patterns.ScheduledEc2Task
   }
 }

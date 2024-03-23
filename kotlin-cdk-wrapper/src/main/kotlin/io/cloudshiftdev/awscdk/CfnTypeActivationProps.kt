@@ -380,7 +380,7 @@ public interface CfnTypeActivationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnTypeActivationProps,
+    cdkObject: software.amazon.awscdk.CfnTypeActivationProps,
   ) : CdkObject(cdkObject), CfnTypeActivationProps {
     /**
      * Whether to automatically update the extension in this account and Region when a new *minor*

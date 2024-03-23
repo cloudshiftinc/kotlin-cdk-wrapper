@@ -84,7 +84,7 @@ public interface LaunchTemplateSpec {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.LaunchTemplateSpec,
+    cdkObject: software.amazon.awscdk.services.eks.LaunchTemplateSpec,
   ) : CdkObject(cdkObject), LaunchTemplateSpec {
     /**
      * The Launch template ID.

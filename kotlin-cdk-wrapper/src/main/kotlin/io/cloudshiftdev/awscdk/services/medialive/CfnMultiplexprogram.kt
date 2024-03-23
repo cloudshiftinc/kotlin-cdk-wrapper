@@ -74,8 +74,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplexprogram.html)
  */
-public open class CfnMultiplexprogram internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram,
+public open class CfnMultiplexprogram(
+  cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.medialive.CfnMultiplexprogram(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -570,7 +570,8 @@ public open class CfnMultiplexprogram internal constructor(
         CfnMultiplexprogram = CfnMultiplexprogram(cdkObject)
 
     internal fun unwrap(wrapped: CfnMultiplexprogram):
-        software.amazon.awscdk.services.medialive.CfnMultiplexprogram = wrapped.cdkObject
+        software.amazon.awscdk.services.medialive.CfnMultiplexprogram = wrapped.cdkObject as
+        software.amazon.awscdk.services.medialive.CfnMultiplexprogram
   }
 
   /**
@@ -930,8 +931,7 @@ public open class CfnMultiplexprogram internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty,
     ) : CdkObject(cdkObject), MultiplexProgramPacketIdentifiersMapProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogrampacketidentifiersmap.html#cfn-medialive-multiplexprogram-multiplexprogrampacketidentifiersmap-audiopids)
@@ -1096,8 +1096,7 @@ public open class CfnMultiplexprogram internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPipelineDetailProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPipelineDetailProperty,
     ) : CdkObject(cdkObject), MultiplexProgramPipelineDetailProperty {
       /**
        * Identifies the channel pipeline that is currently active for the pipeline (identified by
@@ -1209,8 +1208,7 @@ public open class CfnMultiplexprogram internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty,
     ) : CdkObject(cdkObject), MultiplexProgramServiceDescriptorProperty {
       /**
        * Name of the provider.
@@ -1436,8 +1434,7 @@ public open class CfnMultiplexprogram internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramSettingsProperty,
     ) : CdkObject(cdkObject), MultiplexProgramSettingsProperty {
       /**
        * Indicates which pipeline is preferred by the multiplex for program ingest.
@@ -1594,8 +1591,7 @@ public open class CfnMultiplexprogram internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexStatmuxVideoSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexStatmuxVideoSettingsProperty,
     ) : CdkObject(cdkObject), MultiplexStatmuxVideoSettingsProperty {
       /**
        * Maximum statmux bitrate.
@@ -1763,8 +1759,7 @@ public open class CfnMultiplexprogram internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty,
     ) : CdkObject(cdkObject), MultiplexVideoSettingsProperty {
       /**
        * The constant bitrate configuration for the video encode.

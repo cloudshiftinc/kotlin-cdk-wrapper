@@ -21,7 +21,7 @@ public interface IEndpointGroup : IResource {
   public fun endpointGroupArn(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpointGroup,
+    cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpointGroup,
   ) : CdkObject(cdkObject), IEndpointGroup {
     /**
      * Apply the given removal policy to this resource.

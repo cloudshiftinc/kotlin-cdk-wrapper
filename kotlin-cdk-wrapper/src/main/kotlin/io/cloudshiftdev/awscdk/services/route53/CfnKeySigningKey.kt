@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-keysigningkey.html)
  */
-public open class CfnKeySigningKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.CfnKeySigningKey,
+public open class CfnKeySigningKey(
+  cdkObject: software.amazon.awscdk.services.route53.CfnKeySigningKey,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -263,6 +263,7 @@ public open class CfnKeySigningKey internal constructor(
         CfnKeySigningKey = CfnKeySigningKey(cdkObject)
 
     internal fun unwrap(wrapped: CfnKeySigningKey):
-        software.amazon.awscdk.services.route53.CfnKeySigningKey = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.CfnKeySigningKey = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.CfnKeySigningKey
   }
 }

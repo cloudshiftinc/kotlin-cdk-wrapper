@@ -27,7 +27,7 @@ public interface IAliasRecordTarget {
   public fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.IAliasRecordTarget,
+    cdkObject: software.amazon.awscdk.services.route53.IAliasRecordTarget,
   ) : CdkObject(cdkObject), IAliasRecordTarget {
     /**
      * Return hosted zone ID and DNS name, usable for Route53 alias targets.

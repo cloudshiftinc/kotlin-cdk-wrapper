@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html)
  */
-public open class CfnStoredQuery internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.CfnStoredQuery,
+public open class CfnStoredQuery(
+  cdkObject: software.amazon.awscdk.services.config.CfnStoredQuery,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -266,6 +266,7 @@ public open class CfnStoredQuery internal constructor(
         CfnStoredQuery = CfnStoredQuery(cdkObject)
 
     internal fun unwrap(wrapped: CfnStoredQuery):
-        software.amazon.awscdk.services.config.CfnStoredQuery = wrapped.cdkObject
+        software.amazon.awscdk.services.config.CfnStoredQuery = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnStoredQuery
   }
 }

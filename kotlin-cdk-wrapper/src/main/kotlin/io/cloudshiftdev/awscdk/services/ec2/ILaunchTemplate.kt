@@ -35,7 +35,7 @@ public interface ILaunchTemplate : IResource {
   public fun versionNumber(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ILaunchTemplate,
+    cdkObject: software.amazon.awscdk.services.ec2.ILaunchTemplate,
   ) : CdkObject(cdkObject), ILaunchTemplate {
     /**
      * Apply the given removal policy to this resource.

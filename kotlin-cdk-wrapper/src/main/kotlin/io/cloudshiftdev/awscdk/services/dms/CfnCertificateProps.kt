@@ -111,7 +111,7 @@ public interface CfnCertificateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dms.CfnCertificateProps,
+    cdkObject: software.amazon.awscdk.services.dms.CfnCertificateProps,
   ) : CdkObject(cdkObject), CfnCertificateProps {
     /**
      * A customer-assigned name for the certificate.

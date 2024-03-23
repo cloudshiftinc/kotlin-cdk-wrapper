@@ -50,9 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_StartBuildBatch.html)
  */
-public open class CodeBuildStartBuildBatch internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatch,
+public open class CodeBuildStartBuildBatch(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatch,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -499,6 +498,7 @@ public open class CodeBuildStartBuildBatch internal constructor(
 
     internal fun unwrap(wrapped: CodeBuildStartBuildBatch):
         software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatch =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatch
   }
 }

@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-quickconnect.html)
  */
-public open class CfnQuickConnect internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect,
+public open class CfnQuickConnect(
+  cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -372,7 +372,8 @@ public open class CfnQuickConnect internal constructor(
         CfnQuickConnect = CfnQuickConnect(cdkObject)
 
     internal fun unwrap(wrapped: CfnQuickConnect):
-        software.amazon.awscdk.services.connect.CfnQuickConnect = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnQuickConnect = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnQuickConnect
   }
 
   /**
@@ -430,8 +431,7 @@ public open class CfnQuickConnect internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnQuickConnect.PhoneNumberQuickConnectConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.PhoneNumberQuickConnectConfigProperty,
     ) : CdkObject(cdkObject), PhoneNumberQuickConnectConfigProperty {
       /**
        * The phone number in E.164 format.
@@ -537,8 +537,7 @@ public open class CfnQuickConnect internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty,
     ) : CdkObject(cdkObject), QueueQuickConnectConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the flow.
@@ -809,8 +808,7 @@ public open class CfnQuickConnect internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnQuickConnect.QuickConnectConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.QuickConnectConfigProperty,
     ) : CdkObject(cdkObject), QuickConnectConfigProperty {
       /**
        * The phone configuration.
@@ -945,8 +943,7 @@ public open class CfnQuickConnect internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnQuickConnect.UserQuickConnectConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.UserQuickConnectConfigProperty,
     ) : CdkObject(cdkObject), UserQuickConnectConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the flow.

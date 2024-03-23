@@ -68,9 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html)
  */
-public open class CfnInfrastructureConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration,
+public open class CfnInfrastructureConfiguration(
+  cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -764,7 +763,8 @@ public open class CfnInfrastructureConfiguration internal constructor(
 
     internal fun unwrap(wrapped: CfnInfrastructureConfiguration):
         software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration
   }
 
   /**
@@ -889,8 +889,7 @@ public open class CfnInfrastructureConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty,
     ) : CdkObject(cdkObject), InstanceMetadataOptionsProperty {
       /**
        * Limit the number of hops that an instance metadata request can traverse to reach its
@@ -1024,8 +1023,7 @@ public open class CfnInfrastructureConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty,
     ) : CdkObject(cdkObject), LoggingProperty {
       /**
        * The Amazon S3 logging configuration.
@@ -1127,8 +1125,7 @@ public open class CfnInfrastructureConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty,
     ) : CdkObject(cdkObject), S3LogsProperty {
       /**
        * The S3 bucket in which to store the logs.

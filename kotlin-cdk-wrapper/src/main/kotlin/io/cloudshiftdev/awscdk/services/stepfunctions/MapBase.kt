@@ -18,8 +18,8 @@ import kotlin.collections.List
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-map-state.html)
  */
-public abstract class MapBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.MapBase,
+public abstract class MapBase(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.MapBase,
 ) : State(cdkObject), INextable {
   /**
    * Continuable states of this Chainable.
@@ -41,7 +41,7 @@ public abstract class MapBase internal constructor(
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.MapBase,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.MapBase,
   ) : MapBase(cdkObject)
 
   public companion object {

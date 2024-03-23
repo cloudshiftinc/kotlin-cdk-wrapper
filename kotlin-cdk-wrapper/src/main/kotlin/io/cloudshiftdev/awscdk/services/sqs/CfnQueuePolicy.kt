@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queuepolicy.html)
  */
-public open class CfnQueuePolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sqs.CfnQueuePolicy,
+public open class CfnQueuePolicy(
+  cdkObject: software.amazon.awscdk.services.sqs.CfnQueuePolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -218,6 +218,6 @@ public open class CfnQueuePolicy internal constructor(
         = CfnQueuePolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnQueuePolicy): software.amazon.awscdk.services.sqs.CfnQueuePolicy
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.sqs.CfnQueuePolicy
   }
 }

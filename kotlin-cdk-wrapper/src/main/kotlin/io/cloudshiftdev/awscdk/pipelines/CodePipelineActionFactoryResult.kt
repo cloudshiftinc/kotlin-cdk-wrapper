@@ -84,7 +84,7 @@ public interface CodePipelineActionFactoryResult {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.CodePipelineActionFactoryResult,
+    cdkObject: software.amazon.awscdk.pipelines.CodePipelineActionFactoryResult,
   ) : CdkObject(cdkObject), CodePipelineActionFactoryResult {
     /**
      * If a CodeBuild project got created, the project.

@@ -78,7 +78,7 @@ public interface StringAttributeConstraints {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.StringAttributeConstraints,
+    cdkObject: software.amazon.awscdk.services.cognito.StringAttributeConstraints,
   ) : CdkObject(cdkObject), StringAttributeConstraints {
     /**
      * Maximum length of this attribute.

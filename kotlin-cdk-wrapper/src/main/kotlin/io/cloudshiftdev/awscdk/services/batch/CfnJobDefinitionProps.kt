@@ -20,289 +20,6 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.batch.*;
- * Object labels;
- * Object limits;
- * Object options;
- * Object parameters;
- * Object requests;
- * Object tags;
- * CfnJobDefinitionProps cfnJobDefinitionProps = CfnJobDefinitionProps.builder()
- * .type("type")
- * // the properties below are optional
- * .containerProperties(ContainerPropertiesProperty.builder()
- * .image("image")
- * // the properties below are optional
- * .command(List.of("command"))
- * .environment(List.of(EnvironmentProperty.builder()
- * .name("name")
- * .value("value")
- * .build()))
- * .ephemeralStorage(EphemeralStorageProperty.builder()
- * .sizeInGiB(123)
- * .build())
- * .executionRoleArn("executionRoleArn")
- * .fargatePlatformConfiguration(FargatePlatformConfigurationProperty.builder()
- * .platformVersion("platformVersion")
- * .build())
- * .instanceType("instanceType")
- * .jobRoleArn("jobRoleArn")
- * .linuxParameters(LinuxParametersProperty.builder()
- * .devices(List.of(DeviceProperty.builder()
- * .containerPath("containerPath")
- * .hostPath("hostPath")
- * .permissions(List.of("permissions"))
- * .build()))
- * .initProcessEnabled(false)
- * .maxSwap(123)
- * .sharedMemorySize(123)
- * .swappiness(123)
- * .tmpfs(List.of(TmpfsProperty.builder()
- * .containerPath("containerPath")
- * .size(123)
- * // the properties below are optional
- * .mountOptions(List.of("mountOptions"))
- * .build()))
- * .build())
- * .logConfiguration(LogConfigurationProperty.builder()
- * .logDriver("logDriver")
- * // the properties below are optional
- * .options(options)
- * .secretOptions(List.of(SecretProperty.builder()
- * .name("name")
- * .valueFrom("valueFrom")
- * .build()))
- * .build())
- * .memory(123)
- * .mountPoints(List.of(MountPointsProperty.builder()
- * .containerPath("containerPath")
- * .readOnly(false)
- * .sourceVolume("sourceVolume")
- * .build()))
- * .networkConfiguration(NetworkConfigurationProperty.builder()
- * .assignPublicIp("assignPublicIp")
- * .build())
- * .privileged(false)
- * .readonlyRootFilesystem(false)
- * .repositoryCredentials(RepositoryCredentialsProperty.builder()
- * .credentialsParameter("credentialsParameter")
- * .build())
- * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
- * .type("type")
- * .value("value")
- * .build()))
- * .runtimePlatform(RuntimePlatformProperty.builder()
- * .cpuArchitecture("cpuArchitecture")
- * .operatingSystemFamily("operatingSystemFamily")
- * .build())
- * .secrets(List.of(SecretProperty.builder()
- * .name("name")
- * .valueFrom("valueFrom")
- * .build()))
- * .ulimits(List.of(UlimitProperty.builder()
- * .hardLimit(123)
- * .name("name")
- * .softLimit(123)
- * .build()))
- * .user("user")
- * .vcpus(123)
- * .volumes(List.of(VolumesProperty.builder()
- * .efsVolumeConfiguration(EfsVolumeConfigurationProperty.builder()
- * .fileSystemId("fileSystemId")
- * // the properties below are optional
- * .authorizationConfig(AuthorizationConfigProperty.builder()
- * .accessPointId("accessPointId")
- * .iam("iam")
- * .build())
- * .rootDirectory("rootDirectory")
- * .transitEncryption("transitEncryption")
- * .transitEncryptionPort(123)
- * .build())
- * .host(VolumesHostProperty.builder()
- * .sourcePath("sourcePath")
- * .build())
- * .name("name")
- * .build()))
- * .build())
- * .eksProperties(EksPropertiesProperty.builder()
- * .podProperties(PodPropertiesProperty.builder()
- * .containers(List.of(EksContainerProperty.builder()
- * .image("image")
- * // the properties below are optional
- * .args(List.of("args"))
- * .command(List.of("command"))
- * .env(List.of(EksContainerEnvironmentVariableProperty.builder()
- * .name("name")
- * // the properties below are optional
- * .value("value")
- * .build()))
- * .imagePullPolicy("imagePullPolicy")
- * .name("name")
- * .resources(ResourcesProperty.builder()
- * .limits(limits)
- * .requests(requests)
- * .build())
- * .securityContext(SecurityContextProperty.builder()
- * .privileged(false)
- * .readOnlyRootFilesystem(false)
- * .runAsGroup(123)
- * .runAsNonRoot(false)
- * .runAsUser(123)
- * .build())
- * .volumeMounts(List.of(EksContainerVolumeMountProperty.builder()
- * .mountPath("mountPath")
- * .name("name")
- * .readOnly(false)
- * .build()))
- * .build()))
- * .dnsPolicy("dnsPolicy")
- * .hostNetwork(false)
- * .metadata(MetadataProperty.builder()
- * .labels(labels)
- * .build())
- * .serviceAccountName("serviceAccountName")
- * .volumes(List.of(EksVolumeProperty.builder()
- * .name("name")
- * // the properties below are optional
- * .emptyDir(EmptyDirProperty.builder()
- * .medium("medium")
- * .sizeLimit("sizeLimit")
- * .build())
- * .hostPath(HostPathProperty.builder()
- * .path("path")
- * .build())
- * .secret(EksSecretProperty.builder()
- * .secretName("secretName")
- * // the properties below are optional
- * .optional(false)
- * .build())
- * .build()))
- * .build())
- * .build())
- * .jobDefinitionName("jobDefinitionName")
- * .nodeProperties(NodePropertiesProperty.builder()
- * .mainNode(123)
- * .nodeRangeProperties(List.of(NodeRangePropertyProperty.builder()
- * .targetNodes("targetNodes")
- * // the properties below are optional
- * .container(ContainerPropertiesProperty.builder()
- * .image("image")
- * // the properties below are optional
- * .command(List.of("command"))
- * .environment(List.of(EnvironmentProperty.builder()
- * .name("name")
- * .value("value")
- * .build()))
- * .ephemeralStorage(EphemeralStorageProperty.builder()
- * .sizeInGiB(123)
- * .build())
- * .executionRoleArn("executionRoleArn")
- * .fargatePlatformConfiguration(FargatePlatformConfigurationProperty.builder()
- * .platformVersion("platformVersion")
- * .build())
- * .instanceType("instanceType")
- * .jobRoleArn("jobRoleArn")
- * .linuxParameters(LinuxParametersProperty.builder()
- * .devices(List.of(DeviceProperty.builder()
- * .containerPath("containerPath")
- * .hostPath("hostPath")
- * .permissions(List.of("permissions"))
- * .build()))
- * .initProcessEnabled(false)
- * .maxSwap(123)
- * .sharedMemorySize(123)
- * .swappiness(123)
- * .tmpfs(List.of(TmpfsProperty.builder()
- * .containerPath("containerPath")
- * .size(123)
- * // the properties below are optional
- * .mountOptions(List.of("mountOptions"))
- * .build()))
- * .build())
- * .logConfiguration(LogConfigurationProperty.builder()
- * .logDriver("logDriver")
- * // the properties below are optional
- * .options(options)
- * .secretOptions(List.of(SecretProperty.builder()
- * .name("name")
- * .valueFrom("valueFrom")
- * .build()))
- * .build())
- * .memory(123)
- * .mountPoints(List.of(MountPointsProperty.builder()
- * .containerPath("containerPath")
- * .readOnly(false)
- * .sourceVolume("sourceVolume")
- * .build()))
- * .networkConfiguration(NetworkConfigurationProperty.builder()
- * .assignPublicIp("assignPublicIp")
- * .build())
- * .privileged(false)
- * .readonlyRootFilesystem(false)
- * .repositoryCredentials(RepositoryCredentialsProperty.builder()
- * .credentialsParameter("credentialsParameter")
- * .build())
- * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
- * .type("type")
- * .value("value")
- * .build()))
- * .runtimePlatform(RuntimePlatformProperty.builder()
- * .cpuArchitecture("cpuArchitecture")
- * .operatingSystemFamily("operatingSystemFamily")
- * .build())
- * .secrets(List.of(SecretProperty.builder()
- * .name("name")
- * .valueFrom("valueFrom")
- * .build()))
- * .ulimits(List.of(UlimitProperty.builder()
- * .hardLimit(123)
- * .name("name")
- * .softLimit(123)
- * .build()))
- * .user("user")
- * .vcpus(123)
- * .volumes(List.of(VolumesProperty.builder()
- * .efsVolumeConfiguration(EfsVolumeConfigurationProperty.builder()
- * .fileSystemId("fileSystemId")
- * // the properties below are optional
- * .authorizationConfig(AuthorizationConfigProperty.builder()
- * .accessPointId("accessPointId")
- * .iam("iam")
- * .build())
- * .rootDirectory("rootDirectory")
- * .transitEncryption("transitEncryption")
- * .transitEncryptionPort(123)
- * .build())
- * .host(VolumesHostProperty.builder()
- * .sourcePath("sourcePath")
- * .build())
- * .name("name")
- * .build()))
- * .build())
- * .build()))
- * .numNodes(123)
- * .build())
- * .parameters(parameters)
- * .platformCapabilities(List.of("platformCapabilities"))
- * .propagateTags(false)
- * .retryStrategy(RetryStrategyProperty.builder()
- * .attempts(123)
- * .evaluateOnExit(List.of(EvaluateOnExitProperty.builder()
- * .action("action")
- * // the properties below are optional
- * .onExitCode("onExitCode")
- * .onReason("onReason")
- * .onStatusReason("onStatusReason")
- * .build()))
- * .build())
- * .schedulingPriority(123)
- * .tags(tags)
- * .timeout(TimeoutProperty.builder()
- * .attemptDurationSeconds(123)
- * .build())
- * .build();
  * ```
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html)
@@ -317,6 +34,11 @@ public interface CfnJobDefinitionProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-containerproperties)
    */
   public fun containerProperties(): Any? = unwrap(this).getContainerProperties()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-ecsproperties)
+   */
+  public fun ecsProperties(): Any? = unwrap(this).getEcsProperties()
 
   /**
    * An object with properties that are specific to Amazon EKS-based jobs.
@@ -469,6 +191,24 @@ public interface CfnJobDefinitionProps {
     @JvmName("053386f06704f2f46eb669e0aacea0f9c806d04bf5eceb27797cbf2ded5df3fe")
     public
         fun containerProperties(containerProperties: CfnJobDefinition.ContainerPropertiesProperty.Builder.() -> Unit)
+
+    /**
+     * @param ecsProperties the value to be set.
+     */
+    public fun ecsProperties(ecsProperties: IResolvable)
+
+    /**
+     * @param ecsProperties the value to be set.
+     */
+    public fun ecsProperties(ecsProperties: CfnJobDefinition.EcsPropertiesProperty)
+
+    /**
+     * @param ecsProperties the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9d0f7241d0572f1ae89ed491015194934b521dc18be2e856aff197c63c11b9de")
+    public
+        fun ecsProperties(ecsProperties: CfnJobDefinition.EcsPropertiesProperty.Builder.() -> Unit)
 
     /**
      * @param eksProperties An object with properties that are specific to Amazon EKS-based jobs.
@@ -689,6 +429,29 @@ public interface CfnJobDefinitionProps {
         fun containerProperties(containerProperties: CfnJobDefinition.ContainerPropertiesProperty.Builder.() -> Unit):
         Unit =
         containerProperties(CfnJobDefinition.ContainerPropertiesProperty(containerProperties))
+
+    /**
+     * @param ecsProperties the value to be set.
+     */
+    override fun ecsProperties(ecsProperties: IResolvable) {
+      cdkBuilder.ecsProperties(ecsProperties.let(IResolvable::unwrap))
+    }
+
+    /**
+     * @param ecsProperties the value to be set.
+     */
+    override fun ecsProperties(ecsProperties: CfnJobDefinition.EcsPropertiesProperty) {
+      cdkBuilder.ecsProperties(ecsProperties.let(CfnJobDefinition.EcsPropertiesProperty::unwrap))
+    }
+
+    /**
+     * @param ecsProperties the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9d0f7241d0572f1ae89ed491015194934b521dc18be2e856aff197c63c11b9de")
+    override
+        fun ecsProperties(ecsProperties: CfnJobDefinition.EcsPropertiesProperty.Builder.() -> Unit):
+        Unit = ecsProperties(CfnJobDefinition.EcsPropertiesProperty(ecsProperties))
 
     /**
      * @param eksProperties An object with properties that are specific to Amazon EKS-based jobs.
@@ -916,7 +679,7 @@ public interface CfnJobDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinitionProps,
   ) : CdkObject(cdkObject), CfnJobDefinitionProps {
     /**
      * An object with properties specific to Amazon ECS-based jobs.
@@ -927,6 +690,11 @@ public interface CfnJobDefinitionProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-containerproperties)
      */
     override fun containerProperties(): Any? = unwrap(this).getContainerProperties()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-ecsproperties)
+     */
+    override fun ecsProperties(): Any? = unwrap(this).getEcsProperties()
 
     /**
      * An object with properties that are specific to Amazon EKS-based jobs.

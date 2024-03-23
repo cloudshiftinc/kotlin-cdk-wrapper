@@ -642,8 +642,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJobProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJobProps,
   ) : CdkObject(cdkObject), SageMakerCreateTrainingJobProps {
     /**
      * Identifies the training algorithm to use.

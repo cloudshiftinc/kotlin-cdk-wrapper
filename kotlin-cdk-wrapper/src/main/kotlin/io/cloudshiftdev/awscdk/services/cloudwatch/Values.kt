@@ -33,8 +33,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class Values internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Values,
+public abstract class Values(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.Values,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -42,7 +42,7 @@ public abstract class Values internal constructor(
   public open fun toJson(): Any = unwrap(this).toJson()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.Values,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.Values,
   ) : Values(cdkObject)
 
   public companion object {

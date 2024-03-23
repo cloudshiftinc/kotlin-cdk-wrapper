@@ -27,8 +27,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class MysqlEngineVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.MysqlEngineVersion,
+public open class MysqlEngineVersion(
+  cdkObject: software.amazon.awscdk.services.rds.MysqlEngineVersion,
 ) : CdkObject(cdkObject) {
   /**
    * The full version string, for example, "10.5.28".
@@ -41,6 +41,9 @@ public open class MysqlEngineVersion internal constructor(
   public open fun mysqlMajorVersion(): String = unwrap(this).getMysqlMajorVersion()
 
   public companion object {
+    public val VER_5_5_54: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_5_5_54)
+
     public val VER_5_7: MysqlEngineVersion =
         MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_5_7)
 
@@ -158,6 +161,9 @@ public open class MysqlEngineVersion internal constructor(
     public val VER_8_0_28: MysqlEngineVersion =
         MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_28)
 
+    public val VER_8_0_29: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_29)
+
     public val VER_8_0_30: MysqlEngineVersion =
         MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_30)
 
@@ -176,6 +182,9 @@ public open class MysqlEngineVersion internal constructor(
     public val VER_8_0_35: MysqlEngineVersion =
         MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_35)
 
+    public val VER_8_0_36: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_36)
+
     public fun of(mysqlFullVersion: String, mysqlMajorVersion: String): MysqlEngineVersion =
         software.amazon.awscdk.services.rds.MysqlEngineVersion.of(mysqlFullVersion,
         mysqlMajorVersion).let(MysqlEngineVersion::wrap)
@@ -184,6 +193,7 @@ public open class MysqlEngineVersion internal constructor(
         MysqlEngineVersion = MysqlEngineVersion(cdkObject)
 
     internal fun unwrap(wrapped: MysqlEngineVersion):
-        software.amazon.awscdk.services.rds.MysqlEngineVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.MysqlEngineVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.MysqlEngineVersion
   }
 }

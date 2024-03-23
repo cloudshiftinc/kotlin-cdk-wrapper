@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html)
  */
-public open class CfnVpcConnection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.msk.CfnVpcConnection,
+public open class CfnVpcConnection(
+  cdkObject: software.amazon.awscdk.services.msk.CfnVpcConnection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -333,6 +333,7 @@ public open class CfnVpcConnection internal constructor(
         CfnVpcConnection = CfnVpcConnection(cdkObject)
 
     internal fun unwrap(wrapped: CfnVpcConnection):
-        software.amazon.awscdk.services.msk.CfnVpcConnection = wrapped.cdkObject
+        software.amazon.awscdk.services.msk.CfnVpcConnection = wrapped.cdkObject as
+        software.amazon.awscdk.services.msk.CfnVpcConnection
   }
 }

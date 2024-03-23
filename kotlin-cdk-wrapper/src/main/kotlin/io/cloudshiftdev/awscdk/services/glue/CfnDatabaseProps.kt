@@ -140,7 +140,7 @@ public interface CfnDatabaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.glue.CfnDatabaseProps,
+    cdkObject: software.amazon.awscdk.services.glue.CfnDatabaseProps,
   ) : CdkObject(cdkObject), CfnDatabaseProps {
     /**
      * The AWS account ID for the account in which to create the catalog object.

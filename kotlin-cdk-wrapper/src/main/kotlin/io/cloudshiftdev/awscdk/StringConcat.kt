@@ -19,8 +19,8 @@ import kotlin.Any
  * StringConcat stringConcat = new StringConcat();
  * ```
  */
-public open class StringConcat internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.StringConcat,
+public open class StringConcat(
+  cdkObject: software.amazon.awscdk.StringConcat,
 ) : CdkObject(cdkObject), IFragmentConcatenator {
   public constructor() : this(software.amazon.awscdk.StringConcat()
   )
@@ -38,6 +38,6 @@ public open class StringConcat internal constructor(
         StringConcat(cdkObject)
 
     internal fun unwrap(wrapped: StringConcat): software.amazon.awscdk.StringConcat =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.StringConcat
   }
 }

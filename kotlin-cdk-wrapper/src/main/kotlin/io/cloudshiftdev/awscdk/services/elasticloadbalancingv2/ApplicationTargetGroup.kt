@@ -36,9 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ApplicationTargetGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup,
+public open class ApplicationTargetGroup(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup,
 ) : TargetGroupBase(cdkObject), IApplicationTargetGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1062,6 +1061,7 @@ public open class ApplicationTargetGroup internal constructor(
 
     internal fun unwrap(wrapped: ApplicationTargetGroup):
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup
   }
 }

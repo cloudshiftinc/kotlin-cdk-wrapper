@@ -152,8 +152,7 @@ public interface CfnApplicationOutputProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputProps,
+    cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputProps,
   ) : CdkObject(cdkObject), CfnApplicationOutputProps {
     /**
      * Name of the application to which you want to add the output configuration.

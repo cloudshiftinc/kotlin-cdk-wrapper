@@ -58,9 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html)
  */
-public open class CfnEnvironment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment,
+public open class CfnEnvironment(
+  cdkObject: software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -561,7 +560,8 @@ public open class CfnEnvironment internal constructor(
         CfnEnvironment = CfnEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironment):
-        software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment = wrapped.cdkObject
+        software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment = wrapped.cdkObject as
+        software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment
   }
 
   /**
@@ -755,8 +755,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment.MaintenanceWindowProperty,
+      cdkObject: software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment.MaintenanceWindowProperty,
     ) : CdkObject(cdkObject), MaintenanceWindowProperty {
       /**
        * The option to set the maintenance window during the device local time or Universal

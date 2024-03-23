@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html)
  */
-public open class CfnDBParameterGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.neptune.CfnDBParameterGroup,
+public open class CfnDBParameterGroup(
+  cdkObject: software.amazon.awscdk.services.neptune.CfnDBParameterGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -339,6 +339,7 @@ public open class CfnDBParameterGroup internal constructor(
         CfnDBParameterGroup = CfnDBParameterGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBParameterGroup):
-        software.amazon.awscdk.services.neptune.CfnDBParameterGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.neptune.CfnDBParameterGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.neptune.CfnDBParameterGroup
   }
 }

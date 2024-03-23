@@ -248,7 +248,7 @@ public interface CfnTargetGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroupProps,
+    cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroupProps,
   ) : CdkObject(cdkObject), CfnTargetGroupProps {
     /**
      * The target group configuration.

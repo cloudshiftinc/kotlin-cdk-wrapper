@@ -18,7 +18,7 @@ public interface IEventSourceDlq {
   public fun bind(target: IEventSourceMapping, targetHandler: IFunction): DlqDestinationConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.IEventSourceDlq,
+    cdkObject: software.amazon.awscdk.services.lambda.IEventSourceDlq,
   ) : CdkObject(cdkObject), IEventSourceDlq {
     /**
      * Returns the DLQ destination config of the DLQ.

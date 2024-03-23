@@ -211,7 +211,7 @@ public interface SqsEventSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsEventSourceProps,
+    cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsEventSourceProps,
   ) : CdkObject(cdkObject), SqsEventSourceProps {
     /**
      * The largest number of records that AWS Lambda will retrieve from your event source at the

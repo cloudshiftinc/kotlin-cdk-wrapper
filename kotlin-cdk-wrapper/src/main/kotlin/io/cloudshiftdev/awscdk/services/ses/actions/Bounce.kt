@@ -33,8 +33,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class Bounce internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.actions.Bounce,
+public open class Bounce(
+  cdkObject: software.amazon.awscdk.services.ses.actions.Bounce,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
   public constructor(props: BounceProps) :
       this(software.amazon.awscdk.services.ses.actions.Bounce(props.let(BounceProps::unwrap))
@@ -151,6 +151,6 @@ public open class Bounce internal constructor(
         Bounce(cdkObject)
 
     internal fun unwrap(wrapped: Bounce): software.amazon.awscdk.services.ses.actions.Bounce =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ses.actions.Bounce
   }
 }

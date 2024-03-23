@@ -87,8 +87,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-rule.html)
  */
-public open class CfnRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule,
+public open class CfnRule(
+  cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -520,7 +520,7 @@ public open class CfnRule internal constructor(
         CfnRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnRule): software.amazon.awscdk.services.vpclattice.CfnRule =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.vpclattice.CfnRule
   }
 
   /**
@@ -673,7 +673,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * The fixed response action.
@@ -763,8 +763,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty,
     ) : CdkObject(cdkObject), FixedResponseProperty {
       /**
        * The HTTP response code.
@@ -930,7 +929,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty,
     ) : CdkObject(cdkObject), ForwardProperty {
       /**
        * The target groups.
@@ -1106,8 +1105,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchProperty,
     ) : CdkObject(cdkObject), HeaderMatchProperty {
       /**
        * Indicates whether the match is case sensitive.
@@ -1247,8 +1245,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchTypeProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchTypeProperty,
     ) : CdkObject(cdkObject), HeaderMatchTypeProperty {
       /**
        * A contains type match.
@@ -1465,7 +1462,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty,
     ) : CdkObject(cdkObject), HttpMatchProperty {
       /**
        * The header matches.
@@ -1609,7 +1606,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.MatchProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.MatchProperty,
     ) : CdkObject(cdkObject), MatchProperty {
       /**
        * The HTTP criteria that a rule must match.
@@ -1752,7 +1749,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchProperty,
     ) : CdkObject(cdkObject), PathMatchProperty {
       /**
        * Indicates whether the match is case sensitive.
@@ -1863,8 +1860,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty,
     ) : CdkObject(cdkObject), PathMatchTypeProperty {
       /**
        * An exact match of the path.
@@ -1989,8 +1985,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnRule.WeightedTargetGroupProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.WeightedTargetGroupProperty,
     ) : CdkObject(cdkObject), WeightedTargetGroupProperty {
       /**
        * The ID of the target group.

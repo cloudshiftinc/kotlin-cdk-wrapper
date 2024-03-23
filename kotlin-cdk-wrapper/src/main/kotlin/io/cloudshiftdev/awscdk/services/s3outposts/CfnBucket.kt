@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucket.html)
  */
-public open class CfnBucket internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket,
+public open class CfnBucket(
+  cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -514,7 +514,7 @@ public open class CfnBucket internal constructor(
         CfnBucket(cdkObject)
 
     internal fun unwrap(wrapped: CfnBucket): software.amazon.awscdk.services.s3outposts.CfnBucket =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.s3outposts.CfnBucket
   }
 
   /**
@@ -580,8 +580,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty,
+      cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty,
     ) : CdkObject(cdkObject), AbortIncompleteMultipartUploadProperty {
       /**
        * Specifies the number of days after initiation that Amazon S3 on Outposts aborts an
@@ -692,8 +691,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty,
+      cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty,
     ) : CdkObject(cdkObject), FilterAndOperatorProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-prefix)
@@ -873,7 +871,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty,
+      cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty,
     ) : CdkObject(cdkObject), FilterProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-andoperator)
@@ -975,8 +973,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty,
+      cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty,
     ) : CdkObject(cdkObject), FilterTagProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filtertag.html#cfn-s3outposts-bucket-filtertag-key)
@@ -1103,8 +1100,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3outposts.CfnBucket.LifecycleConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.LifecycleConfigurationProperty,
     ) : CdkObject(cdkObject), LifecycleConfigurationProperty {
       /**
        * The container for the lifecycle configuration rules for the objects stored in the S3 on
@@ -1335,7 +1331,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.RuleProperty,
+      cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.RuleProperty,
     ) : CdkObject(cdkObject), RuleProperty {
       /**
        * The container for the abort incomplete multipart upload rule.

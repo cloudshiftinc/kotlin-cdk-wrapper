@@ -79,7 +79,7 @@ public interface CfnResourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnResourceProps,
+    cdkObject: software.amazon.awscdk.CfnResourceProps,
   ) : CdkObject(cdkObject), CfnResourceProps {
     /**
      * Resource properties.

@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Function internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.Function,
+public open class Function(
+  cdkObject: software.amazon.awscdk.services.cloudfront.Function,
 ) : Resource(cdkObject), IFunction {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -222,6 +222,6 @@ public open class Function internal constructor(
         Function(cdkObject)
 
     internal fun unwrap(wrapped: Function): software.amazon.awscdk.services.cloudfront.Function =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudfront.Function
   }
 }

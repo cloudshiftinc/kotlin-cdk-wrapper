@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * myTopic.addSubscription(new UrlSubscription(url.getValueAsString()));
  * ```
  */
-public open class CfnParameter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnParameter,
+public open class CfnParameter(
+  cdkObject: software.amazon.awscdk.CfnParameter,
 ) : CfnElement(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.CfnParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -586,6 +586,6 @@ public open class CfnParameter internal constructor(
         CfnParameter(cdkObject)
 
     internal fun unwrap(wrapped: CfnParameter): software.amazon.awscdk.CfnParameter =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.CfnParameter
   }
 }

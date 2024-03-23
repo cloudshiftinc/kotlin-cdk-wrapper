@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policyprincipalattachment.html)
  */
-public open class CfnPolicyPrincipalAttachment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachment,
+public open class CfnPolicyPrincipalAttachment(
+  cdkObject: software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -167,6 +167,7 @@ public open class CfnPolicyPrincipalAttachment internal constructor(
         CfnPolicyPrincipalAttachment = CfnPolicyPrincipalAttachment(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicyPrincipalAttachment):
-        software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachment = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachment = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachment
   }
 }

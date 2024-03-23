@@ -19,11 +19,11 @@ import kotlin.jvm.JvmName
  * UpdatePolicy updatePolicy = UpdatePolicy.replacingUpdate();
  * ```
  */
-public abstract class UpdatePolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.UpdatePolicy,
+public abstract class UpdatePolicy(
+  cdkObject: software.amazon.awscdk.services.autoscaling.UpdatePolicy,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.UpdatePolicy,
+    cdkObject: software.amazon.awscdk.services.autoscaling.UpdatePolicy,
   ) : UpdatePolicy(cdkObject)
 
   public companion object {

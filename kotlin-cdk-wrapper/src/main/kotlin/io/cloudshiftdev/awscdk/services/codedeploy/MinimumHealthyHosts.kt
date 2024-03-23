@@ -19,8 +19,8 @@ import kotlin.Number
  * .build();
  * ```
  */
-public open class MinimumHealthyHosts internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codedeploy.MinimumHealthyHosts,
+public open class MinimumHealthyHosts(
+  cdkObject: software.amazon.awscdk.services.codedeploy.MinimumHealthyHosts,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun count(`value`: Number): MinimumHealthyHosts =
@@ -33,6 +33,7 @@ public open class MinimumHealthyHosts internal constructor(
         MinimumHealthyHosts = MinimumHealthyHosts(cdkObject)
 
     internal fun unwrap(wrapped: MinimumHealthyHosts):
-        software.amazon.awscdk.services.codedeploy.MinimumHealthyHosts = wrapped.cdkObject
+        software.amazon.awscdk.services.codedeploy.MinimumHealthyHosts = wrapped.cdkObject as
+        software.amazon.awscdk.services.codedeploy.MinimumHealthyHosts
   }
 }

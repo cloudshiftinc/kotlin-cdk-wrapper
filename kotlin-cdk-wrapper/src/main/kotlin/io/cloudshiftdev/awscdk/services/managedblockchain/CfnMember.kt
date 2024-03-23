@@ -67,8 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-member.html)
  */
-public open class CfnMember internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember,
+public open class CfnMember(
+  cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -383,7 +383,8 @@ public open class CfnMember internal constructor(
         CfnMember = CfnMember(cdkObject)
 
     internal fun unwrap(wrapped: CfnMember):
-        software.amazon.awscdk.services.managedblockchain.CfnMember = wrapped.cdkObject
+        software.amazon.awscdk.services.managedblockchain.CfnMember = wrapped.cdkObject as
+        software.amazon.awscdk.services.managedblockchain.CfnMember
   }
 
   /**
@@ -519,8 +520,7 @@ public open class CfnMember internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.ApprovalThresholdPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.ApprovalThresholdPolicyProperty,
     ) : CdkObject(cdkObject), ApprovalThresholdPolicyProperty {
       /**
        * The duration from the time that a proposal is created until it expires.
@@ -712,8 +712,7 @@ public open class CfnMember internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberConfigurationProperty,
     ) : CdkObject(cdkObject), MemberConfigurationProperty {
       /**
        * An optional description of the member.
@@ -845,8 +844,7 @@ public open class CfnMember internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty,
     ) : CdkObject(cdkObject), MemberFabricConfigurationProperty {
       /**
        * The password for the member's initial administrative user.
@@ -978,8 +976,7 @@ public open class CfnMember internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty,
     ) : CdkObject(cdkObject), MemberFrameworkConfigurationProperty {
       /**
        * Configuration properties for Hyperledger Fabric.
@@ -1247,8 +1244,7 @@ public open class CfnMember internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkConfigurationProperty,
     ) : CdkObject(cdkObject), NetworkConfigurationProperty {
       /**
        * Attributes of the blockchain framework for the network.
@@ -1375,8 +1371,7 @@ public open class CfnMember internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFabricConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFabricConfigurationProperty,
     ) : CdkObject(cdkObject), NetworkFabricConfigurationProperty {
       /**
        * The edition of Amazon Managed Blockchain that the network uses.
@@ -1505,8 +1500,7 @@ public open class CfnMember internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty,
     ) : CdkObject(cdkObject), NetworkFrameworkConfigurationProperty {
       /**
        * Configuration properties for Hyperledger Fabric for a member in a Managed Blockchain
@@ -1646,8 +1640,7 @@ public open class CfnMember internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.VotingPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.VotingPolicyProperty,
     ) : CdkObject(cdkObject), VotingPolicyProperty {
       /**
        * Defines the rules for the network for voting on proposals, such as the percentage of `YES`

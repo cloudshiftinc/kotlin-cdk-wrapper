@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-set-up-simple-proxy.html)
  */
-public open class ProxyResource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.ProxyResource,
+public open class ProxyResource(
+  cdkObject: software.amazon.awscdk.services.apigateway.ProxyResource,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -351,6 +351,7 @@ public open class ProxyResource internal constructor(
         ProxyResource = ProxyResource(cdkObject)
 
     internal fun unwrap(wrapped: ProxyResource):
-        software.amazon.awscdk.services.apigateway.ProxyResource = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.ProxyResource = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.ProxyResource
   }
 }

@@ -36,8 +36,8 @@ import kotlin.String
  * }
  * ```
  */
-public open class StackOutputReference internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.StackOutputReference,
+public open class StackOutputReference(
+  cdkObject: software.amazon.awscdk.pipelines.StackOutputReference,
 ) : CdkObject(cdkObject) {
   /**
    * Whether or not this stack output is being produced by the given Stack deployment.
@@ -65,6 +65,7 @@ public open class StackOutputReference internal constructor(
         StackOutputReference = StackOutputReference(cdkObject)
 
     internal fun unwrap(wrapped: StackOutputReference):
-        software.amazon.awscdk.pipelines.StackOutputReference = wrapped.cdkObject
+        software.amazon.awscdk.pipelines.StackOutputReference = wrapped.cdkObject as
+        software.amazon.awscdk.pipelines.StackOutputReference
   }
 }

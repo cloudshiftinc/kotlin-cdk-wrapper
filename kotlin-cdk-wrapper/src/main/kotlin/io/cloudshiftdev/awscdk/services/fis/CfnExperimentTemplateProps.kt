@@ -355,7 +355,7 @@ public interface CfnExperimentTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplateProps,
+    cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplateProps,
   ) : CdkObject(cdkObject), CfnExperimentTemplateProps {
     /**
      * The actions for the experiment.

@@ -260,7 +260,7 @@ public interface CfnLayerVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersionProps,
+    cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersionProps,
   ) : CdkObject(cdkObject), CfnLayerVersionProps {
     /**
      * A list of compatible [instruction set

@@ -79,7 +79,7 @@ public interface IVersion : IFunction {
   public fun version(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.IVersion,
+    cdkObject: software.amazon.awscdk.services.lambda.IVersion,
   ) : CdkObject(cdkObject), IVersion {
     /**
      * (deprecated) Defines an alias for this version.

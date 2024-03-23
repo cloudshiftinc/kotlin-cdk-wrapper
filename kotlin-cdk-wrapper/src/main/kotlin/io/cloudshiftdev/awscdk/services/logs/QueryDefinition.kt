@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class QueryDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.QueryDefinition,
+public open class QueryDefinition(
+  cdkObject: software.amazon.awscdk.services.logs.QueryDefinition,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -174,6 +174,7 @@ public open class QueryDefinition internal constructor(
         QueryDefinition = QueryDefinition(cdkObject)
 
     internal fun unwrap(wrapped: QueryDefinition):
-        software.amazon.awscdk.services.logs.QueryDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.logs.QueryDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.logs.QueryDefinition
   }
 }

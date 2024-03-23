@@ -58,7 +58,7 @@ public interface CfnDomainProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sdb.CfnDomainProps,
+    cdkObject: software.amazon.awscdk.services.sdb.CfnDomainProps,
   ) : CdkObject(cdkObject), CfnDomainProps {
     /**
      * Information about the SimpleDB domain.

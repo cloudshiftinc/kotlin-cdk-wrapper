@@ -88,7 +88,7 @@ public interface TransformDataSource {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformDataSource,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformDataSource,
   ) : CdkObject(cdkObject), TransformDataSource {
     /**
      * S3 location of the input data.

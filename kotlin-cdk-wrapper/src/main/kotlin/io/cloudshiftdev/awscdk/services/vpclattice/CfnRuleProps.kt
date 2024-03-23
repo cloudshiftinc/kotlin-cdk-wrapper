@@ -308,7 +308,7 @@ public interface CfnRuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRuleProps,
+    cdkObject: software.amazon.awscdk.services.vpclattice.CfnRuleProps,
   ) : CdkObject(cdkObject), CfnRuleProps {
     /**
      * Describes the action for a rule.

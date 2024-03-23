@@ -215,7 +215,7 @@ public interface CfnMaintenanceWindowTargetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTargetProps,
+    cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTargetProps,
   ) : CdkObject(cdkObject), CfnMaintenanceWindowTargetProps {
     /**
      * A description for the target.

@@ -20,7 +20,7 @@ public interface IAsset {
   public fun assetHash(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IAsset,
+    cdkObject: software.amazon.awscdk.IAsset,
   ) : CdkObject(cdkObject), IAsset {
     /**
      * A hash of this asset, which is available at construction time.

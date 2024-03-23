@@ -113,7 +113,7 @@ public interface InventoryDestination {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.InventoryDestination,
+    cdkObject: software.amazon.awscdk.services.s3.InventoryDestination,
   ) : CdkObject(cdkObject), InventoryDestination {
     /**
      * Bucket where all inventories will be saved in.

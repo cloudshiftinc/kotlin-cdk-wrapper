@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html)
  */
-public open class CfnApiCache internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnApiCache,
+public open class CfnApiCache(
+  cdkObject: software.amazon.awscdk.services.appsync.CfnApiCache,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -462,6 +462,6 @@ public open class CfnApiCache internal constructor(
         CfnApiCache(cdkObject)
 
     internal fun unwrap(wrapped: CfnApiCache): software.amazon.awscdk.services.appsync.CfnApiCache =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.CfnApiCache
   }
 }

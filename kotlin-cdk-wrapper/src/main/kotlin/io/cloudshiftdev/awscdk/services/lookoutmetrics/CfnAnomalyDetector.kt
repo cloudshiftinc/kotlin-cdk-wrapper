@@ -116,9 +116,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-anomalydetector.html)
  */
-public open class CfnAnomalyDetector internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector,
+public open class CfnAnomalyDetector(
+  cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -447,7 +446,8 @@ public open class CfnAnomalyDetector internal constructor(
         CfnAnomalyDetector = CfnAnomalyDetector(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnomalyDetector):
-        software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector = wrapped.cdkObject
+        software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector = wrapped.cdkObject as
+        software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector
   }
 
   /**
@@ -507,8 +507,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty,
     ) : CdkObject(cdkObject), AnomalyDetectorConfigProperty {
       /**
        * The frequency at which the detector analyzes its source data.
@@ -612,8 +611,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty,
     ) : CdkObject(cdkObject), AppFlowConfigProperty {
       /**
        * name of the flow.
@@ -705,8 +703,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty,
     ) : CdkObject(cdkObject), CloudwatchConfigProperty {
       /**
        * An IAM role that gives Amazon Lookout for Metrics permission to access data in Amazon
@@ -911,8 +908,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CsvFormatDescriptorProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CsvFormatDescriptorProperty,
     ) : CdkObject(cdkObject), CsvFormatDescriptorProperty {
       /**
        * The character set in which the source CSV file is written.
@@ -1130,8 +1126,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty,
     ) : CdkObject(cdkObject), FileFormatDescriptorProperty {
       /**
        * Contains information about how a source CSV data file should be analyzed.
@@ -1241,8 +1236,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty,
     ) : CdkObject(cdkObject), JsonFormatDescriptorProperty {
       /**
        * The character set in which the source JSON file is written.
@@ -1371,8 +1365,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty,
     ) : CdkObject(cdkObject), MetricProperty {
       /**
        * The function with which the metric is calculated.
@@ -1792,8 +1785,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty,
     ) : CdkObject(cdkObject), MetricSetProperty {
       /**
        * A list of the fields you want to treat as dimensions.
@@ -2211,8 +2203,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSourceProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSourceProperty,
     ) : CdkObject(cdkObject), MetricSourceProperty {
       /**
        * Details about an AppFlow datasource.
@@ -2498,8 +2489,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.RDSSourceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.RDSSourceConfigProperty,
     ) : CdkObject(cdkObject), RDSSourceConfigProperty {
       /**
        * The host name of the database.
@@ -2810,8 +2800,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.RedshiftSourceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.RedshiftSourceConfigProperty,
     ) : CdkObject(cdkObject), RedshiftSourceConfigProperty {
       /**
        * A string identifying the Redshift cluster.
@@ -3071,8 +3060,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty,
     ) : CdkObject(cdkObject), S3SourceConfigProperty {
       /**
        * Contains information about a source file's formatting.
@@ -3197,8 +3185,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.TimestampColumnProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.TimestampColumnProperty,
     ) : CdkObject(cdkObject), TimestampColumnProperty {
       /**
        * The format of the timestamp column.
@@ -3333,8 +3320,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.VpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.VpcConfigurationProperty,
     ) : CdkObject(cdkObject), VpcConfigurationProperty {
       /**
        * An array of strings containing the list of security groups.

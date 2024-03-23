@@ -61,8 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html)
  */
-public open class CfnImageVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnImageVersion,
+public open class CfnImageVersion(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnImageVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -534,6 +534,7 @@ public open class CfnImageVersion internal constructor(
         CfnImageVersion = CfnImageVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnImageVersion):
-        software.amazon.awscdk.services.sagemaker.CfnImageVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnImageVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnImageVersion
   }
 }

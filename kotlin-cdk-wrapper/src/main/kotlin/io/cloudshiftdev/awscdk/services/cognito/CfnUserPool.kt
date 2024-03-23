@@ -157,8 +157,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html)
  */
-public open class CfnUserPool internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool,
+public open class CfnUserPool(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cognito.CfnUserPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -2293,7 +2293,7 @@ public open class CfnUserPool internal constructor(
         CfnUserPool(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPool): software.amazon.awscdk.services.cognito.CfnUserPool =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cognito.CfnUserPool
   }
 
   /**
@@ -2383,8 +2383,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty,
     ) : CdkObject(cdkObject), AccountRecoverySettingProperty {
       /**
        * The list of `RecoveryOptionTypes` .
@@ -2618,8 +2617,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.AdminCreateUserConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.AdminCreateUserConfigProperty,
     ) : CdkObject(cdkObject), AdminCreateUserConfigProperty {
       /**
        * Set to `True` if only the administrator is allowed to create user profiles.
@@ -2764,8 +2762,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty,
     ) : CdkObject(cdkObject), CustomEmailSenderProperty {
       /**
        * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Cognito triggers to
@@ -2887,8 +2884,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty,
     ) : CdkObject(cdkObject), CustomSMSSenderProperty {
       /**
        * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Cognito triggers to
@@ -3120,8 +3116,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.DeviceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.DeviceConfigurationProperty,
     ) : CdkObject(cdkObject), DeviceConfigurationProperty {
       /**
        * When true, a remembered device can sign in with device authentication instead of SMS and
@@ -3511,8 +3506,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.EmailConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.EmailConfigurationProperty,
     ) : CdkObject(cdkObject), EmailConfigurationProperty {
       /**
        * The set of configuration rules that can be applied to emails sent using Amazon SES.
@@ -3754,8 +3748,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty,
     ) : CdkObject(cdkObject), InviteMessageTemplateProperty {
       /**
        * The message template for email messages.
@@ -4263,8 +4256,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.LambdaConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.LambdaConfigProperty,
     ) : CdkObject(cdkObject), LambdaConfigProperty {
       /**
        * Creates an authentication challenge.
@@ -4418,7 +4410,10 @@ public open class CfnUserPool internal constructor(
    */
   public interface NumberAttributeConstraintsProperty {
     /**
-     * The maximum value of an attribute that is of the number data type.
+     * The maximum length of a number attribute value.
+     *
+     * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+     * 131072 characters or fewer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-maxvalue)
      */
@@ -4437,7 +4432,9 @@ public open class CfnUserPool internal constructor(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxValue The maximum value of an attribute that is of the number data type.
+       * @param maxValue The maximum length of a number attribute value.
+       * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+       * 131072 characters or fewer.
        */
       public fun maxValue(maxValue: String)
 
@@ -4454,7 +4451,9 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty.builder()
 
       /**
-       * @param maxValue The maximum value of an attribute that is of the number data type.
+       * @param maxValue The maximum length of a number attribute value.
+       * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+       * 131072 characters or fewer.
        */
       override fun maxValue(maxValue: String) {
         cdkBuilder.maxValue(maxValue)
@@ -4473,11 +4472,13 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty,
     ) : CdkObject(cdkObject), NumberAttributeConstraintsProperty {
       /**
-       * The maximum value of an attribute that is of the number data type.
+       * The maximum length of a number attribute value.
+       *
+       * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+       * 131072 characters or fewer.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-maxvalue)
        */
@@ -4760,8 +4761,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty,
     ) : CdkObject(cdkObject), PasswordPolicyProperty {
       /**
        * The minimum length of the password in the policy that you have set.
@@ -4926,7 +4926,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty,
     ) : CdkObject(cdkObject), PoliciesProperty {
       /**
        * The password policy.
@@ -5046,8 +5046,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.PreTokenGenerationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PreTokenGenerationConfigProperty,
     ) : CdkObject(cdkObject), PreTokenGenerationConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the function that you want to assign to your Lambda
@@ -5163,8 +5162,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty,
     ) : CdkObject(cdkObject), RecoveryOptionProperty {
       /**
        * Specifies the recovery method for a user.
@@ -5603,8 +5601,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty,
     ) : CdkObject(cdkObject), SchemaAttributeProperty {
       /**
        * The data format of the values for your attribute.
@@ -5856,8 +5853,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty,
     ) : CdkObject(cdkObject), SmsConfigurationProperty {
       /**
        * The external ID is a value.
@@ -5945,7 +5941,10 @@ public open class CfnUserPool internal constructor(
    */
   public interface StringAttributeConstraintsProperty {
     /**
-     * The maximum length.
+     * The maximum length of a string attribute value.
+     *
+     * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+     * 131072 characters or fewer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-maxlength)
      */
@@ -5964,7 +5963,9 @@ public open class CfnUserPool internal constructor(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxLength The maximum length.
+       * @param maxLength The maximum length of a string attribute value.
+       * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+       * 131072 characters or fewer.
        */
       public fun maxLength(maxLength: String)
 
@@ -5981,7 +5982,9 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty.builder()
 
       /**
-       * @param maxLength The maximum length.
+       * @param maxLength The maximum length of a string attribute value.
+       * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+       * 131072 characters or fewer.
        */
       override fun maxLength(maxLength: String) {
         cdkBuilder.maxLength(maxLength)
@@ -6000,11 +6003,13 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty,
     ) : CdkObject(cdkObject), StringAttributeConstraintsProperty {
       /**
-       * The maximum length.
+       * The maximum length of a string attribute value.
+       *
+       * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+       * 131072 characters or fewer.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-maxlength)
        */
@@ -6199,8 +6204,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.UserAttributeUpdateSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.UserAttributeUpdateSettingsProperty,
     ) : CdkObject(cdkObject), UserAttributeUpdateSettingsProperty {
       /**
        * Requires that your user verifies their email address, phone number, or both before Amazon
@@ -6309,8 +6313,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.UserPoolAddOnsProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.UserPoolAddOnsProperty,
     ) : CdkObject(cdkObject), UserPoolAddOnsProperty {
       /**
        * The operating mode of advanced security features in your user pool.
@@ -6477,8 +6480,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty,
     ) : CdkObject(cdkObject), UsernameConfigurationProperty {
       /**
        * Specifies whether user name case sensitivity will be applied for all users in the user pool
@@ -6746,8 +6748,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty,
     ) : CdkObject(cdkObject), VerificationMessageTemplateProperty {
       /**
        * The default email option.

@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html)
  */
-public open class CfnSubscription internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sns.CfnSubscription,
+public open class CfnSubscription(
+  cdkObject: software.amazon.awscdk.services.sns.CfnSubscription,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -600,6 +600,7 @@ public open class CfnSubscription internal constructor(
         CfnSubscription = CfnSubscription(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubscription):
-        software.amazon.awscdk.services.sns.CfnSubscription = wrapped.cdkObject
+        software.amazon.awscdk.services.sns.CfnSubscription = wrapped.cdkObject as
+        software.amazon.awscdk.services.sns.CfnSubscription
   }
 }

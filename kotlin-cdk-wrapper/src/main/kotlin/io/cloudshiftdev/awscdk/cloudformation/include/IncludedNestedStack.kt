@@ -75,7 +75,7 @@ public interface IncludedNestedStack {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudformation.include.IncludedNestedStack,
+    cdkObject: software.amazon.awscdk.cloudformation.include.IncludedNestedStack,
   ) : CdkObject(cdkObject), IncludedNestedStack {
     /**
      * The CfnInclude that represents the template, which can be used to access Resources and other

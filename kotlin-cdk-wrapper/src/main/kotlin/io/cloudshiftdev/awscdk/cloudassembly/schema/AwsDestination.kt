@@ -99,7 +99,7 @@ public interface AwsDestination {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.AwsDestination,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.AwsDestination,
   ) : CdkObject(cdkObject), AwsDestination {
     /**
      * The role that needs to be assumed while publishing this asset.

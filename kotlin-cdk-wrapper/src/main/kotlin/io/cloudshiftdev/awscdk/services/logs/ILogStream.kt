@@ -21,7 +21,7 @@ public interface ILogStream : IResource {
   public fun logStreamName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.ILogStream,
+    cdkObject: software.amazon.awscdk.services.logs.ILogStream,
   ) : CdkObject(cdkObject), ILogStream {
     /**
      * Apply the given removal policy to this resource.

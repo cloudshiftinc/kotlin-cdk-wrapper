@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class RotationSchedule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.secretsmanager.RotationSchedule,
+public open class RotationSchedule(
+  cdkObject: software.amazon.awscdk.services.secretsmanager.RotationSchedule,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -238,6 +238,7 @@ public open class RotationSchedule internal constructor(
         RotationSchedule = RotationSchedule(cdkObject)
 
     internal fun unwrap(wrapped: RotationSchedule):
-        software.amazon.awscdk.services.secretsmanager.RotationSchedule = wrapped.cdkObject
+        software.amazon.awscdk.services.secretsmanager.RotationSchedule = wrapped.cdkObject as
+        software.amazon.awscdk.services.secretsmanager.RotationSchedule
   }
 }

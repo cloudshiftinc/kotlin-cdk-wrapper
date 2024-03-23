@@ -31,9 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html)
  */
-public open class CfnResolverQueryLoggingConfig internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfig,
+public open class CfnResolverQueryLoggingConfig(
+  cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -227,6 +226,7 @@ public open class CfnResolverQueryLoggingConfig internal constructor(
 
     internal fun unwrap(wrapped: CfnResolverQueryLoggingConfig):
         software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfig =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfig
   }
 }

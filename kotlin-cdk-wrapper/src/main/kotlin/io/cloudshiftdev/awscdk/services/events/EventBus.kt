@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class EventBus internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.EventBus,
+public open class EventBus(
+  cdkObject: software.amazon.awscdk.services.events.EventBus,
 ) : Resource(cdkObject), IEventBus {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.events.EventBus(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -246,6 +246,6 @@ public open class EventBus internal constructor(
         EventBus(cdkObject)
 
     internal fun unwrap(wrapped: EventBus): software.amazon.awscdk.services.events.EventBus =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.EventBus
   }
 }

@@ -76,8 +76,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html)
  */
-public open class CfnTrigger internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnTrigger,
+public open class CfnTrigger(
+  cdkObject: software.amazon.awscdk.services.glue.CfnTrigger,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -667,7 +667,7 @@ public open class CfnTrigger internal constructor(
         CfnTrigger(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrigger): software.amazon.awscdk.services.glue.CfnTrigger =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnTrigger
   }
 
   /**
@@ -908,7 +908,7 @@ public open class CfnTrigger internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * The job arguments used when this trigger fires.
@@ -1127,7 +1127,7 @@ public open class CfnTrigger internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty,
     ) : CdkObject(cdkObject), ConditionProperty {
       /**
        * The state of the crawler to which this condition applies.
@@ -1268,8 +1268,7 @@ public open class CfnTrigger internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty,
     ) : CdkObject(cdkObject), EventBatchingConditionProperty {
       /**
        * Number of events that must be received from Amazon EventBridge before EventBridge event
@@ -1364,8 +1363,7 @@ public open class CfnTrigger internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty,
     ) : CdkObject(cdkObject), NotificationPropertyProperty {
       /**
        * After a job run starts, the number of minutes to wait before sending a job run delay
@@ -1498,7 +1496,7 @@ public open class CfnTrigger internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty,
     ) : CdkObject(cdkObject), PredicateProperty {
       /**
        * A list of the conditions that determine when the trigger will fire.

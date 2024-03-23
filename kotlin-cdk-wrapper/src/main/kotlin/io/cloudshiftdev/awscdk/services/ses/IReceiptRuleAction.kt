@@ -17,7 +17,7 @@ public interface IReceiptRuleAction {
   public fun bind(receiptRule: IReceiptRule): ReceiptRuleActionConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.IReceiptRuleAction,
+    cdkObject: software.amazon.awscdk.services.ses.IReceiptRuleAction,
   ) : CdkObject(cdkObject), IReceiptRuleAction {
     /**
      * Returns the receipt rule action specification.

@@ -509,7 +509,7 @@ public interface DockerImageAssetOptions : FileFingerprintOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAssetOptions,
+    cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAssetOptions,
   ) : CdkObject(cdkObject), DockerImageAssetOptions {
     /**
      * Unique identifier of the docker image asset and its potential revisions.

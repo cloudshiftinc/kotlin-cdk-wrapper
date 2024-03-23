@@ -1491,7 +1491,7 @@ public interface CfnUserPoolClientProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClientProps,
+    cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClientProps,
   ) : CdkObject(cdkObject), CfnUserPoolClientProps {
     /**
      * The access token time limit.

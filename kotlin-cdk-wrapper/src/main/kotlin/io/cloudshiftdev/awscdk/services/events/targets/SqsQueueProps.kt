@@ -157,7 +157,7 @@ public interface SqsQueueProps : TargetBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.targets.SqsQueueProps,
+    cdkObject: software.amazon.awscdk.services.events.targets.SqsQueueProps,
   ) : CdkObject(cdkObject), SqsQueueProps {
     /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a

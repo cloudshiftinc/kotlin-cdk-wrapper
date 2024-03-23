@@ -294,7 +294,7 @@ public interface CfnGitHubRepositoryProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepositoryProps,
+    cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepositoryProps,
   ) : CdkObject(cdkObject), CfnGitHubRepositoryProps {
     /**
      * Information about code to be committed to a repository after it is created in an AWS

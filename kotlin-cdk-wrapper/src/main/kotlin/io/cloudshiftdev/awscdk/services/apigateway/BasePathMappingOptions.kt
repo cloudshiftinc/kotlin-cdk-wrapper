@@ -110,7 +110,7 @@ public interface BasePathMappingOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.BasePathMappingOptions,
+    cdkObject: software.amazon.awscdk.services.apigateway.BasePathMappingOptions,
   ) : CdkObject(cdkObject), BasePathMappingOptions {
     /**
      * Whether to attach the base path mapping to a stage.

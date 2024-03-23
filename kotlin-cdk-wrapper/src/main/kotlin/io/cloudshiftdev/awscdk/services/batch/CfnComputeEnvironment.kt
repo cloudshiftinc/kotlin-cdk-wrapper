@@ -190,8 +190,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html)
  */
-public open class CfnComputeEnvironment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment,
+public open class CfnComputeEnvironment(
+  cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1171,7 +1171,8 @@ public open class CfnComputeEnvironment internal constructor(
         CfnComputeEnvironment = CfnComputeEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: CfnComputeEnvironment):
-        software.amazon.awscdk.services.batch.CfnComputeEnvironment = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.CfnComputeEnvironment = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.CfnComputeEnvironment
   }
 
   /**
@@ -2845,8 +2846,7 @@ public open class CfnComputeEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.ComputeResourcesProperty,
+      cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.ComputeResourcesProperty,
     ) : CdkObject(cdkObject), ComputeResourcesProperty {
       /**
        * The allocation strategy to use for the compute resource if not enough instances of the best
@@ -3579,8 +3579,7 @@ public open class CfnComputeEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty,
+      cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty,
     ) : CdkObject(cdkObject), Ec2ConfigurationObjectProperty {
       /**
        * The AMI ID used for instances launched in the compute environment that match the image
@@ -3777,8 +3776,7 @@ public open class CfnComputeEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty,
     ) : CdkObject(cdkObject), EksConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon EKS cluster.
@@ -3980,8 +3978,7 @@ public open class CfnComputeEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty,
     ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
       /**
        * The ID of the launch template.
@@ -4153,8 +4150,7 @@ public open class CfnComputeEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty,
     ) : CdkObject(cdkObject), UpdatePolicyProperty {
       /**
        * Specifies the job timeout (in minutes) when the compute environment infrastructure is

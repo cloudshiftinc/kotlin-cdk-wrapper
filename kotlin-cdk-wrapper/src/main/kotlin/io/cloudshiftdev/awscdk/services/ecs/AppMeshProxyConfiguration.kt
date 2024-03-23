@@ -44,8 +44,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class AppMeshProxyConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.AppMeshProxyConfiguration,
+public open class AppMeshProxyConfiguration(
+  cdkObject: software.amazon.awscdk.services.ecs.AppMeshProxyConfiguration,
 ) : ProxyConfiguration(cdkObject) {
   public constructor(props: AppMeshProxyConfigurationConfigProps) :
       this(software.amazon.awscdk.services.ecs.AppMeshProxyConfiguration(props.let(AppMeshProxyConfigurationConfigProps::unwrap))
@@ -148,6 +148,7 @@ public open class AppMeshProxyConfiguration internal constructor(
         AppMeshProxyConfiguration = AppMeshProxyConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: AppMeshProxyConfiguration):
-        software.amazon.awscdk.services.ecs.AppMeshProxyConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.AppMeshProxyConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.AppMeshProxyConfiguration
   }
 }

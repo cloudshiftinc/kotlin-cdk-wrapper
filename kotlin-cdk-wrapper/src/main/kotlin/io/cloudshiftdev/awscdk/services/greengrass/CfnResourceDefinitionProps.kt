@@ -293,7 +293,7 @@ public interface CfnResourceDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionProps,
   ) : CdkObject(cdkObject), CfnResourceDefinitionProps {
     /**
      * The resource definition version to include when the resource definition is created.

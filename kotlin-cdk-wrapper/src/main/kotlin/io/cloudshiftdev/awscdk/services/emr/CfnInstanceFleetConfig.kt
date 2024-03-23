@@ -101,8 +101,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancefleetconfig.html)
  */
-public open class CfnInstanceFleetConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig,
+public open class CfnInstanceFleetConfig(
+  cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -610,7 +610,8 @@ public open class CfnInstanceFleetConfig internal constructor(
         CfnInstanceFleetConfig = CfnInstanceFleetConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceFleetConfig):
-        software.amazon.awscdk.services.emr.CfnInstanceFleetConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.emr.CfnInstanceFleetConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.emr.CfnInstanceFleetConfig
   }
 
   /**
@@ -768,8 +769,7 @@ public open class CfnInstanceFleetConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.ConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.ConfigurationProperty,
     ) : CdkObject(cdkObject), ConfigurationProperty {
       /**
        * The classification within a configuration.
@@ -944,8 +944,7 @@ public open class CfnInstanceFleetConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty,
     ) : CdkObject(cdkObject), EbsBlockDeviceConfigProperty {
       /**
        * EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that
@@ -1107,8 +1106,7 @@ public open class CfnInstanceFleetConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty,
     ) : CdkObject(cdkObject), EbsConfigurationProperty {
       /**
        * An array of Amazon EBS volume specifications attached to a cluster instance.
@@ -1336,8 +1334,7 @@ public open class CfnInstanceFleetConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty,
     ) : CdkObject(cdkObject), InstanceFleetProvisioningSpecificationsProperty {
       /**
        * The launch specification for On-Demand Instances in the instance fleet, which determines
@@ -1718,8 +1715,7 @@ public open class CfnInstanceFleetConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceTypeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceTypeConfigProperty,
     ) : CdkObject(cdkObject), InstanceTypeConfigProperty {
       /**
        * The bid price for each Amazon EC2 Spot Instance type as defined by `InstanceType` .
@@ -1881,8 +1877,7 @@ public open class CfnInstanceFleetConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty,
     ) : CdkObject(cdkObject), OnDemandProvisioningSpecificationProperty {
       /**
        * Specifies the strategy to use in launching On-Demand instance fleets.
@@ -2132,8 +2127,7 @@ public open class CfnInstanceFleetConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty,
     ) : CdkObject(cdkObject), SpotProvisioningSpecificationProperty {
       /**
        * Specifies one of the following strategies to launch Spot Instance fleets:
@@ -2350,8 +2344,7 @@ public open class CfnInstanceFleetConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.VolumeSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.VolumeSpecificationProperty,
     ) : CdkObject(cdkObject), VolumeSpecificationProperty {
       /**
        * The number of I/O operations per second (IOPS) that the volume supports.

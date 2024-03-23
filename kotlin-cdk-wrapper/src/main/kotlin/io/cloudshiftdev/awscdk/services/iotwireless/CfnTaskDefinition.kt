@@ -76,8 +76,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html)
  */
-public open class CfnTaskDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition,
+public open class CfnTaskDefinition(
+  cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -526,7 +526,8 @@ public open class CfnTaskDefinition internal constructor(
         CfnTaskDefinition = CfnTaskDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnTaskDefinition):
-        software.amazon.awscdk.services.iotwireless.CfnTaskDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.iotwireless.CfnTaskDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotwireless.CfnTaskDefinition
   }
 
   /**
@@ -624,8 +625,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty,
     ) : CdkObject(cdkObject), LoRaWANGatewayVersionProperty {
       /**
        * The model number of the wireless gateway.
@@ -844,8 +844,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskCreateProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskCreateProperty,
     ) : CdkObject(cdkObject), LoRaWANUpdateGatewayTaskCreateProperty {
       /**
        * The version of the gateways that should receive the update.
@@ -1032,8 +1031,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty,
     ) : CdkObject(cdkObject), LoRaWANUpdateGatewayTaskEntryProperty {
       /**
        * The version of the gateways that should receive the update.
@@ -1204,8 +1202,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty,
     ) : CdkObject(cdkObject), UpdateWirelessGatewayTaskCreateProperty {
       /**
        * The properties that relate to the LoRaWAN wireless gateway.

@@ -31,8 +31,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class Trigger internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codepipeline.Trigger,
+public open class Trigger(
+  cdkObject: software.amazon.awscdk.services.codepipeline.Trigger,
 ) : CdkObject(cdkObject) {
   public constructor(props: TriggerProps) :
       this(software.amazon.awscdk.services.codepipeline.Trigger(props.let(TriggerProps::unwrap))
@@ -140,6 +140,6 @@ public open class Trigger internal constructor(
         Trigger(cdkObject)
 
     internal fun unwrap(wrapped: Trigger): software.amazon.awscdk.services.codepipeline.Trigger =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.codepipeline.Trigger
   }
 }

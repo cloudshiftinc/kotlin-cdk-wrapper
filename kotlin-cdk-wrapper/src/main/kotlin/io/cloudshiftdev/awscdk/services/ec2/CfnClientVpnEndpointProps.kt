@@ -749,7 +749,7 @@ public interface CfnClientVpnEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpointProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpointProps,
   ) : CdkObject(cdkObject), CfnClientVpnEndpointProps {
     /**
      * Information about the authentication method to be used to authenticate clients.

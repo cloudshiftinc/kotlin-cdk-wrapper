@@ -67,8 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html)
  */
-public open class CfnContainer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer,
+public open class CfnContainer(
+  cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -694,7 +694,8 @@ public open class CfnContainer internal constructor(
         CfnContainer = CfnContainer(cdkObject)
 
     internal fun unwrap(wrapped: CfnContainer):
-        software.amazon.awscdk.services.mediastore.CfnContainer = wrapped.cdkObject
+        software.amazon.awscdk.services.mediastore.CfnContainer = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediastore.CfnContainer
   }
 
   /**
@@ -952,8 +953,7 @@ public open class CfnContainer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediastore.CfnContainer.CorsRuleProperty,
+      cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.CorsRuleProperty,
     ) : CdkObject(cdkObject), CorsRuleProperty {
       /**
        * Specifies which headers are allowed in a preflight `OPTIONS` request through the
@@ -1174,8 +1174,7 @@ public open class CfnContainer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty,
     ) : CdkObject(cdkObject), MetricPolicyProperty {
       /**
        * A setting to enable or disable metrics at the container level.
@@ -1298,8 +1297,7 @@ public open class CfnContainer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty,
+      cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty,
     ) : CdkObject(cdkObject), MetricPolicyRuleProperty {
       /**
        * A path or file name that defines which objects to include in the group.

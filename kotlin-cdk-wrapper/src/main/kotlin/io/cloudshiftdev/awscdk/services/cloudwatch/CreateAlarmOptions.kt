@@ -243,7 +243,7 @@ public interface CreateAlarmOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.CreateAlarmOptions,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.CreateAlarmOptions,
   ) : CdkObject(cdkObject), CreateAlarmOptions {
     /**
      * Whether the actions for this alarm are enabled.

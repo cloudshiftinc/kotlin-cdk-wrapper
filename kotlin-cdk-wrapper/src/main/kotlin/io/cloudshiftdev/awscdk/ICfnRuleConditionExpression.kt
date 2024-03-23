@@ -23,7 +23,7 @@ public interface ICfnRuleConditionExpression : ICfnConditionExpression {
   public fun disambiguator(): Boolean
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ICfnRuleConditionExpression,
+    cdkObject: software.amazon.awscdk.ICfnRuleConditionExpression,
   ) : CdkObject(cdkObject), ICfnRuleConditionExpression {
     /**
      * The creation stack of this resolvable which will be appended to errors thrown during

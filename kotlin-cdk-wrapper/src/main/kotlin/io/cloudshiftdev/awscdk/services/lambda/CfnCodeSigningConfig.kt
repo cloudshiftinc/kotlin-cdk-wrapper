@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html)
  */
-public open class CfnCodeSigningConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig,
+public open class CfnCodeSigningConfig(
+  cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -330,7 +330,8 @@ public open class CfnCodeSigningConfig internal constructor(
         CfnCodeSigningConfig = CfnCodeSigningConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnCodeSigningConfig):
-        software.amazon.awscdk.services.lambda.CfnCodeSigningConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.CfnCodeSigningConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.CfnCodeSigningConfig
   }
 
   /**
@@ -408,8 +409,7 @@ public open class CfnCodeSigningConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.AllowedPublishersProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.AllowedPublishersProperty,
     ) : CdkObject(cdkObject), AllowedPublishersProperty {
       /**
        * The Amazon Resource Name (ARN) for each of the signing profiles.
@@ -516,8 +516,7 @@ public open class CfnCodeSigningConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.CodeSigningPoliciesProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.CodeSigningPoliciesProperty,
     ) : CdkObject(cdkObject), CodeSigningPoliciesProperty {
       /**
        * Code signing configuration policy for deployment validation failure.

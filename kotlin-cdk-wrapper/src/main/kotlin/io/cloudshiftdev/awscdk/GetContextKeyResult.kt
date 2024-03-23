@@ -74,7 +74,7 @@ public interface GetContextKeyResult {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.GetContextKeyResult,
+    cdkObject: software.amazon.awscdk.GetContextKeyResult,
   ) : CdkObject(cdkObject), GetContextKeyResult {
     /**
      *

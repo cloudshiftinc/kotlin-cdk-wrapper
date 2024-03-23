@@ -84,7 +84,7 @@ public interface RouteBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.RouteBaseProps,
+    cdkObject: software.amazon.awscdk.services.appmesh.RouteBaseProps,
   ) : CdkObject(cdkObject), RouteBaseProps {
     /**
      * The name of the route.

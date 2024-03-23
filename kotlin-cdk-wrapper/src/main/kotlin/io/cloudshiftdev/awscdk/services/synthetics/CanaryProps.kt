@@ -544,7 +544,7 @@ public interface CanaryProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.synthetics.CanaryProps,
+    cdkObject: software.amazon.awscdk.services.synthetics.CanaryProps,
   ) : CdkObject(cdkObject), CanaryProps {
     /**
      * Lifecycle rules for the generated canary artifact bucket.

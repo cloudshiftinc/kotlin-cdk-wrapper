@@ -32,8 +32,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class RawEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.globalaccelerator.RawEndpoint,
+public open class RawEndpoint(
+  cdkObject: software.amazon.awscdk.services.globalaccelerator.RawEndpoint,
 ) : CdkObject(cdkObject), IEndpoint {
   public constructor(props: RawEndpointProps) :
       this(software.amazon.awscdk.services.globalaccelerator.RawEndpoint(props.let(RawEndpointProps::unwrap))
@@ -179,6 +179,7 @@ public open class RawEndpoint internal constructor(
         RawEndpoint = RawEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: RawEndpoint):
-        software.amazon.awscdk.services.globalaccelerator.RawEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.globalaccelerator.RawEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.globalaccelerator.RawEndpoint
   }
 }

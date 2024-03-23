@@ -84,8 +84,7 @@ public interface BaseLoadBalancerLookupOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancerLookupOptions,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancerLookupOptions,
   ) : CdkObject(cdkObject), BaseLoadBalancerLookupOptions {
     /**
      * Find by load balancer's ARN.

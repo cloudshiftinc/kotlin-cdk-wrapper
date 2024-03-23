@@ -182,7 +182,7 @@ public interface CfnApplicationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationProps,
+    cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationProps,
   ) : CdkObject(cdkObject), CfnApplicationProps {
     /**
      * A name for the Elastic Beanstalk application.

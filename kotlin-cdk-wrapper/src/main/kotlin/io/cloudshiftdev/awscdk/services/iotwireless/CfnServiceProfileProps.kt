@@ -172,7 +172,7 @@ public interface CfnServiceProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnServiceProfileProps,
+    cdkObject: software.amazon.awscdk.services.iotwireless.CfnServiceProfileProps,
   ) : CdkObject(cdkObject), CfnServiceProfileProps {
     /**
      * LoRaWAN service profile object.

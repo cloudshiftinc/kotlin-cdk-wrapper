@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html)
  */
-public open class CfnDashboard internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnDashboard,
+public open class CfnDashboard(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.CfnDashboard,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -184,6 +184,7 @@ public open class CfnDashboard internal constructor(
         CfnDashboard = CfnDashboard(cdkObject)
 
     internal fun unwrap(wrapped: CfnDashboard):
-        software.amazon.awscdk.services.cloudwatch.CfnDashboard = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.CfnDashboard = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.CfnDashboard
   }
 }

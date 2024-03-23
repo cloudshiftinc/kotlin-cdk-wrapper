@@ -423,7 +423,7 @@ public interface CfnWorkGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroupProps,
+    cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroupProps,
   ) : CdkObject(cdkObject), CfnWorkGroupProps {
     /**
      * The workgroup description.

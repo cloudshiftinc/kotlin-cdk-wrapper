@@ -390,7 +390,7 @@ public interface CfnAuthorizerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CfnAuthorizerProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CfnAuthorizerProps,
   ) : CdkObject(cdkObject), CfnAuthorizerProps {
     /**
      * Optional customer-defined field, used in OpenAPI imports and exports without functional

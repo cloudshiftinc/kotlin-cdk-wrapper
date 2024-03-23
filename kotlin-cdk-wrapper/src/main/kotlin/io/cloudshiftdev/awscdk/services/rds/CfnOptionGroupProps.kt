@@ -295,7 +295,7 @@ public interface CfnOptionGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroupProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroupProps,
   ) : CdkObject(cdkObject), CfnOptionGroupProps {
     /**
      * Specifies the name of the engine that this option group should be associated with.

@@ -10,8 +10,8 @@ import kotlin.jvm.JvmName
 /**
  *
  */
-public open class Arn internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Arn,
+public open class Arn(
+  cdkObject: software.amazon.awscdk.Arn,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun extractResourceName(arn: String, resourceType: String): String =
@@ -35,6 +35,7 @@ public open class Arn internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Arn): Arn = Arn(cdkObject)
 
-    internal fun unwrap(wrapped: Arn): software.amazon.awscdk.Arn = wrapped.cdkObject
+    internal fun unwrap(wrapped: Arn): software.amazon.awscdk.Arn = wrapped.cdkObject as
+        software.amazon.awscdk.Arn
   }
 }

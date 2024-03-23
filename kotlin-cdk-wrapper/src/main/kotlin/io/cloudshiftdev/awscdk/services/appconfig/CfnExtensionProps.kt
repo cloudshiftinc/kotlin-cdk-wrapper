@@ -240,7 +240,7 @@ public interface CfnExtensionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.CfnExtensionProps,
+    cdkObject: software.amazon.awscdk.services.appconfig.CfnExtensionProps,
   ) : CdkObject(cdkObject), CfnExtensionProps {
     /**
      * The actions defined in the extension.

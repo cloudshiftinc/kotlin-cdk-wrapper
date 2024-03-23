@@ -25,8 +25,8 @@ import kotlin.jvm.JvmName
  * MatchResult matchResult = new MatchResult(target);
  * ```
  */
-public open class MatchResult internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.assertions.MatchResult,
+public open class MatchResult(
+  cdkObject: software.amazon.awscdk.assertions.MatchResult,
 ) : CdkObject(cdkObject) {
   public constructor(target: Any) : this(software.amazon.awscdk.assertions.MatchResult(target)
   )
@@ -146,6 +146,6 @@ public open class MatchResult internal constructor(
         MatchResult(cdkObject)
 
     internal fun unwrap(wrapped: MatchResult): software.amazon.awscdk.assertions.MatchResult =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.assertions.MatchResult
   }
 }

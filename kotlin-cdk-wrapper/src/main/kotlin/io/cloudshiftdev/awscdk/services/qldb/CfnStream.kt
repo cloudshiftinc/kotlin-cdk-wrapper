@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html)
  */
-public open class CfnStream internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.qldb.CfnStream,
+public open class CfnStream(
+  cdkObject: software.amazon.awscdk.services.qldb.CfnStream,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -505,7 +505,7 @@ public open class CfnStream internal constructor(
         CfnStream(cdkObject)
 
     internal fun unwrap(wrapped: CfnStream): software.amazon.awscdk.services.qldb.CfnStream =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.qldb.CfnStream
   }
 
   /**
@@ -647,8 +647,7 @@ public open class CfnStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.qldb.CfnStream.KinesisConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.qldb.CfnStream.KinesisConfigurationProperty,
     ) : CdkObject(cdkObject), KinesisConfigurationProperty {
       /**
        * Enables QLDB to publish multiple data records in a single Kinesis Data Streams record,

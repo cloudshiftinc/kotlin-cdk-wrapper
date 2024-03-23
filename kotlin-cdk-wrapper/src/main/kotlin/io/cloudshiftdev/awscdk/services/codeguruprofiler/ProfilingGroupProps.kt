@@ -75,7 +75,7 @@ public interface ProfilingGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codeguruprofiler.ProfilingGroupProps,
+    cdkObject: software.amazon.awscdk.services.codeguruprofiler.ProfilingGroupProps,
   ) : CdkObject(cdkObject), ProfilingGroupProps {
     /**
      * The compute platform of the profiling group.

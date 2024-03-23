@@ -103,7 +103,7 @@ public interface CfnClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnClusterProps,
+    cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnClusterProps,
   ) : CdkObject(cdkObject), CfnClusterProps {
     /**
      * Name of the cluster.

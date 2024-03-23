@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistant.html)
  */
-public open class CfnAssistant internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistant,
+public open class CfnAssistant(
+  cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistant,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -410,7 +410,7 @@ public open class CfnAssistant internal constructor(
         = CfnAssistant(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssistant): software.amazon.awscdk.services.wisdom.CfnAssistant
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.wisdom.CfnAssistant
   }
 
   /**
@@ -499,8 +499,7 @@ public open class CfnAssistant internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wisdom.CfnAssistant.ServerSideEncryptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistant.ServerSideEncryptionConfigurationProperty,
     ) : CdkObject(cdkObject), ServerSideEncryptionConfigurationProperty {
       /**
        * The customer managed key used for encryption.

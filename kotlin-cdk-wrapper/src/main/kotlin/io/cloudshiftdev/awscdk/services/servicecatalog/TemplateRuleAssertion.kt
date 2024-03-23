@@ -80,7 +80,7 @@ public interface TemplateRuleAssertion {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicecatalog.TemplateRuleAssertion,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.TemplateRuleAssertion,
   ) : CdkObject(cdkObject), TemplateRuleAssertion {
     /**
      * The assertion condition.

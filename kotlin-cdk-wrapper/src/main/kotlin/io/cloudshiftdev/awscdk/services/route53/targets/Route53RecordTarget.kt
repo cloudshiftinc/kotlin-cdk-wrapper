@@ -22,9 +22,8 @@ import io.cloudshiftdev.awscdk.services.route53.IRecordSet
  * .build();
  * ```
  */
-public open class Route53RecordTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53.targets.Route53RecordTarget,
+public open class Route53RecordTarget(
+  cdkObject: software.amazon.awscdk.services.route53.targets.Route53RecordTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(record: IRecordSet) :
       this(software.amazon.awscdk.services.route53.targets.Route53RecordTarget(record.let(IRecordSet::unwrap))
@@ -55,6 +54,7 @@ public open class Route53RecordTarget internal constructor(
         Route53RecordTarget = Route53RecordTarget(cdkObject)
 
     internal fun unwrap(wrapped: Route53RecordTarget):
-        software.amazon.awscdk.services.route53.targets.Route53RecordTarget = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.targets.Route53RecordTarget = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.targets.Route53RecordTarget
   }
 }

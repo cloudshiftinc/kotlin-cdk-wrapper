@@ -21,7 +21,7 @@ public interface IRecordSet : IResource {
   public fun domainName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.IRecordSet,
+    cdkObject: software.amazon.awscdk.services.route53.IRecordSet,
   ) : CdkObject(cdkObject), IRecordSet {
     /**
      * Apply the given removal policy to this resource.

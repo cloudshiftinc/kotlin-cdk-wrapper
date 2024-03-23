@@ -553,7 +553,7 @@ public interface CfnStateMachineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineProps,
   ) : CdkObject(cdkObject), CfnStateMachineProps {
     /**
      * The Amazon States Language definition of the state machine.

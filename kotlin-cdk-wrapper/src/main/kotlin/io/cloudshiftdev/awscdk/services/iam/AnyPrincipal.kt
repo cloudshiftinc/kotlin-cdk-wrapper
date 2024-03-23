@@ -26,8 +26,8 @@ package io.cloudshiftdev.awscdk.services.iam
  * .build());
  * ```
  */
-public open class AnyPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.AnyPrincipal,
+public open class AnyPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.AnyPrincipal,
 ) : ArnPrincipal(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.iam.AnyPrincipal()
   )
@@ -37,6 +37,6 @@ public open class AnyPrincipal internal constructor(
         AnyPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: AnyPrincipal): software.amazon.awscdk.services.iam.AnyPrincipal =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.AnyPrincipal
   }
 }

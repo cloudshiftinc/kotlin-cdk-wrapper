@@ -32,9 +32,8 @@ import software.amazon.awscdk.services.sns.ITopic as AmazonAwscdkServicesSnsITop
  * .build());
  * ```
  */
-public open class SnsEventSource internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.eventsources.SnsEventSource,
+public open class SnsEventSource(
+  cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsEventSource,
 ) : CdkObject(cdkObject), IEventSource {
   public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic) :
       this(software.amazon.awscdk.services.lambda.eventsources.SnsEventSource(topic.let(CloudshiftdevAwscdkServicesSnsITopic::unwrap))
@@ -164,6 +163,7 @@ public open class SnsEventSource internal constructor(
         SnsEventSource = SnsEventSource(cdkObject)
 
     internal fun unwrap(wrapped: SnsEventSource):
-        software.amazon.awscdk.services.lambda.eventsources.SnsEventSource = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.eventsources.SnsEventSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.eventsources.SnsEventSource
   }
 }

@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html)
  */
-public open class CfnUsagePlanKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlanKey,
+public open class CfnUsagePlanKey(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlanKey,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -196,6 +196,7 @@ public open class CfnUsagePlanKey internal constructor(
         CfnUsagePlanKey = CfnUsagePlanKey(cdkObject)
 
     internal fun unwrap(wrapped: CfnUsagePlanKey):
-        software.amazon.awscdk.services.apigateway.CfnUsagePlanKey = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CfnUsagePlanKey = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnUsagePlanKey
   }
 }

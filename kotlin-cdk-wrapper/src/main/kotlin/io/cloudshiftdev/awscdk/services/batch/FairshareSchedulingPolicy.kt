@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class FairshareSchedulingPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.FairshareSchedulingPolicy,
+public open class FairshareSchedulingPolicy(
+  cdkObject: software.amazon.awscdk.services.batch.FairshareSchedulingPolicy,
 ) : Resource(cdkObject), IFairshareSchedulingPolicy, ISchedulingPolicy {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.batch.FairshareSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -331,6 +331,7 @@ public open class FairshareSchedulingPolicy internal constructor(
         FairshareSchedulingPolicy = FairshareSchedulingPolicy(cdkObject)
 
     internal fun unwrap(wrapped: FairshareSchedulingPolicy):
-        software.amazon.awscdk.services.batch.FairshareSchedulingPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.FairshareSchedulingPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.FairshareSchedulingPolicy
   }
 }

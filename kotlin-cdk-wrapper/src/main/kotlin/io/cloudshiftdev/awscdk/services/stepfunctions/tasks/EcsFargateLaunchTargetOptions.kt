@@ -67,8 +67,7 @@ public interface EcsFargateLaunchTargetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTargetOptions,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTargetOptions,
   ) : CdkObject(cdkObject), EcsFargateLaunchTargetOptions {
     /**
      * Refers to a specific runtime environment for Fargate task infrastructure.

@@ -322,8 +322,7 @@ public interface CfnGlobalReplicationGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroupProps,
+    cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroupProps,
   ) : CdkObject(cdkObject), CfnGlobalReplicationGroupProps {
     /**
      * Specifies whether a read-only replica is automatically promoted to read/write primary if the

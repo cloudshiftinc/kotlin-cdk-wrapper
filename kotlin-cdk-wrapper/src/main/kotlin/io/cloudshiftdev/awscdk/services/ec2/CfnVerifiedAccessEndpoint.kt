@@ -72,8 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html)
  */
-public open class CfnVerifiedAccessEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint,
+public open class CfnVerifiedAccessEndpoint(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -863,7 +863,8 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
         CfnVerifiedAccessEndpoint = CfnVerifiedAccessEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnVerifiedAccessEndpoint):
-        software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint
   }
 
   /**
@@ -991,8 +992,7 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty,
     ) : CdkObject(cdkObject), LoadBalancerOptionsProperty {
       /**
        * The ARN of the load balancer.
@@ -1137,8 +1137,7 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty,
     ) : CdkObject(cdkObject), NetworkInterfaceOptionsProperty {
       /**
        * The ID of the network interface.
@@ -1280,8 +1279,7 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.SseSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.SseSpecificationProperty,
     ) : CdkObject(cdkObject), SseSpecificationProperty {
       /**
        * Enable or disable the use of customer managed KMS keys for server side encryption.

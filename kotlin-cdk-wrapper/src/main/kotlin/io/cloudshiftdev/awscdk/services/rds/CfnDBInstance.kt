@@ -213,8 +213,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html)
  */
-public open class CfnDBInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance,
+public open class CfnDBInstance(
+  cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.rds.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -542,14 +542,24 @@ public open class CfnDBInstance internal constructor(
   }
 
   /**
-   * The compute and memory capacity of the DB instance, for example, `db.m4.large` . Not all DB
-   * instance classes are available in all AWS Regions, or for all database engines.
+   * The compute and memory capacity of the DB instance, for example `db.m5.large` . Not all DB
+   * instance classes are available in all AWS Regions , or for all database engines. For the full list
+   * of DB instance classes, and availability for your engine, see [DB instance
+   * classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in
+   * the *Amazon RDS User Guide* or [Aurora DB instance
+   * classes](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html)
+   * in the *Amazon Aurora User Guide* .
    */
   public open fun dbInstanceClass(): String? = unwrap(this).getDbInstanceClass()
 
   /**
-   * The compute and memory capacity of the DB instance, for example, `db.m4.large` . Not all DB
-   * instance classes are available in all AWS Regions, or for all database engines.
+   * The compute and memory capacity of the DB instance, for example `db.m5.large` . Not all DB
+   * instance classes are available in all AWS Regions , or for all database engines. For the full list
+   * of DB instance classes, and availability for your engine, see [DB instance
+   * classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in
+   * the *Amazon RDS User Guide* or [Aurora DB instance
+   * classes](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html)
+   * in the *Amazon Aurora User Guide* .
    */
   public open fun dbInstanceClass(`value`: String) {
     unwrap(this).setDbInstanceClass(`value`)
@@ -1365,12 +1375,12 @@ public open class CfnDBInstance internal constructor(
   }
 
   /**
-   * Specifies the storage type to be associated with the DB instance.
+   * The storage type to associate with the DB instance.
    */
   public open fun storageType(): String? = unwrap(this).getStorageType()
 
   /**
-   * Specifies the storage type to be associated with the DB instance.
+   * The storage type to associate with the DB instance.
    */
   public open fun storageType(`value`: String) {
     unwrap(this).setStorageType(`value`)
@@ -1936,19 +1946,23 @@ public open class CfnDBInstance internal constructor(
     public fun dbClusterSnapshotIdentifier(dbClusterSnapshotIdentifier: String)
 
     /**
-     * The compute and memory capacity of the DB instance, for example, `db.m4.large` . Not all DB
-     * instance classes are available in all AWS Regions, or for all database engines.
-     *
-     * For the full list of DB instance classes, and availability for your engine, see [DB Instance
-     * Class](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in
-     * the *Amazon RDS User Guide.* For more information about DB instance class pricing and AWS Region
-     * support for DB instance classes, see [Amazon RDS
-     * Pricing](https://docs.aws.amazon.com/rds/pricing/) .
+     * The compute and memory capacity of the DB instance, for example `db.m5.large` . Not all DB
+     * instance classes are available in all AWS Regions , or for all database engines. For the full
+     * list of DB instance classes, and availability for your engine, see [DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon RDS User Guide* or [Aurora DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon Aurora User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-dbinstanceclass)
-     * @param dbInstanceClass The compute and memory capacity of the DB instance, for example,
-     * `db.m4.large` . Not all DB instance classes are available in all AWS Regions, or for all
-     * database engines. 
+     * @param dbInstanceClass The compute and memory capacity of the DB instance, for example
+     * `db.m5.large` . Not all DB instance classes are available in all AWS Regions , or for all
+     * database engines. For the full list of DB instance classes, and availability for your engine,
+     * see [DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon RDS User Guide* or [Aurora DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon Aurora User Guide* . 
      */
     public fun dbInstanceClass(dbInstanceClass: String)
 
@@ -3551,27 +3565,20 @@ public open class CfnDBInstance internal constructor(
     public fun storageThroughput(storageThroughput: Number)
 
     /**
-     * Specifies the storage type to be associated with the DB instance.
+     * The storage type to associate with the DB instance.
      *
-     * Valid values: `gp2 | gp3 | io1 | standard`
+     * If you specify `io1` , `io2` , or `gp3` , you must also include a value for the `Iops`
+     * parameter.
      *
-     * The `standard` value is also known as magnetic.
+     * This setting doesn't apply to Amazon Aurora DB instances. Storage is managed by the DB
+     * cluster.
      *
-     * If you specify `io1` or `gp3` , you must also include a value for the `Iops` parameter.
+     * Valid Values: `gp2 | gp3 | io1 | io2 | standard`
      *
-     * Default: `io1` if the `Iops` parameter is specified, otherwise `gp2`
-     *
-     * For more information, see [Amazon RDS DB Instance
-     * Storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html) in the
-     * *Amazon RDS User Guide* .
-     *
-     * *Amazon Aurora*
-     *
-     * Not applicable. Aurora data is stored in the cluster volume, which is a single, virtual
-     * volume that uses solid state drives (SSDs).
+     * Default: `io1` , if the `Iops` parameter is specified. Otherwise, `gp2` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-storagetype)
-     * @param storageType Specifies the storage type to be associated with the DB instance. 
+     * @param storageType The storage type to associate with the DB instance. 
      */
     public fun storageType(storageType: String)
 
@@ -4244,19 +4251,23 @@ public open class CfnDBInstance internal constructor(
     }
 
     /**
-     * The compute and memory capacity of the DB instance, for example, `db.m4.large` . Not all DB
-     * instance classes are available in all AWS Regions, or for all database engines.
-     *
-     * For the full list of DB instance classes, and availability for your engine, see [DB Instance
-     * Class](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in
-     * the *Amazon RDS User Guide.* For more information about DB instance class pricing and AWS Region
-     * support for DB instance classes, see [Amazon RDS
-     * Pricing](https://docs.aws.amazon.com/rds/pricing/) .
+     * The compute and memory capacity of the DB instance, for example `db.m5.large` . Not all DB
+     * instance classes are available in all AWS Regions , or for all database engines. For the full
+     * list of DB instance classes, and availability for your engine, see [DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon RDS User Guide* or [Aurora DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon Aurora User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-dbinstanceclass)
-     * @param dbInstanceClass The compute and memory capacity of the DB instance, for example,
-     * `db.m4.large` . Not all DB instance classes are available in all AWS Regions, or for all
-     * database engines. 
+     * @param dbInstanceClass The compute and memory capacity of the DB instance, for example
+     * `db.m5.large` . Not all DB instance classes are available in all AWS Regions , or for all
+     * database engines. For the full list of DB instance classes, and availability for your engine,
+     * see [DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon RDS User Guide* or [Aurora DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon Aurora User Guide* . 
      */
     override fun dbInstanceClass(dbInstanceClass: String) {
       cdkBuilder.dbInstanceClass(dbInstanceClass)
@@ -5995,27 +6006,20 @@ public open class CfnDBInstance internal constructor(
     }
 
     /**
-     * Specifies the storage type to be associated with the DB instance.
+     * The storage type to associate with the DB instance.
      *
-     * Valid values: `gp2 | gp3 | io1 | standard`
+     * If you specify `io1` , `io2` , or `gp3` , you must also include a value for the `Iops`
+     * parameter.
      *
-     * The `standard` value is also known as magnetic.
+     * This setting doesn't apply to Amazon Aurora DB instances. Storage is managed by the DB
+     * cluster.
      *
-     * If you specify `io1` or `gp3` , you must also include a value for the `Iops` parameter.
+     * Valid Values: `gp2 | gp3 | io1 | io2 | standard`
      *
-     * Default: `io1` if the `Iops` parameter is specified, otherwise `gp2`
-     *
-     * For more information, see [Amazon RDS DB Instance
-     * Storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html) in the
-     * *Amazon RDS User Guide* .
-     *
-     * *Amazon Aurora*
-     *
-     * Not applicable. Aurora data is stored in the cluster volume, which is a single, virtual
-     * volume that uses solid state drives (SSDs).
+     * Default: `io1` , if the `Iops` parameter is specified. Otherwise, `gp2` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-storagetype)
-     * @param storageType Specifies the storage type to be associated with the DB instance. 
+     * @param storageType The storage type to associate with the DB instance. 
      */
     override fun storageType(storageType: String) {
       cdkBuilder.storageType(storageType)
@@ -6242,7 +6246,7 @@ public open class CfnDBInstance internal constructor(
         CfnDBInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBInstance): software.amazon.awscdk.services.rds.CfnDBInstance =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.rds.CfnDBInstance
   }
 
   /**
@@ -6326,8 +6330,7 @@ public open class CfnDBInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty,
     ) : CdkObject(cdkObject), CertificateDetailsProperty {
       /**
        * The CA identifier of the CA certificate used for the DB instance's server certificate.
@@ -6455,8 +6458,7 @@ public open class CfnDBInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBInstance.DBInstanceRoleProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.DBInstanceRoleProperty,
     ) : CdkObject(cdkObject), DBInstanceRoleProperty {
       /**
        * The name of the feature associated with the AWS Identity and Access Management (IAM) role.
@@ -6600,7 +6602,7 @@ public open class CfnDBInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty,
     ) : CdkObject(cdkObject), EndpointProperty {
       /**
        * Specifies the DNS address of the DB instance.
@@ -6720,8 +6722,7 @@ public open class CfnDBInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty,
     ) : CdkObject(cdkObject), MasterUserSecretProperty {
       /**
        * The AWS KMS key identifier that is used to encrypt the secret.
@@ -6833,8 +6834,7 @@ public open class CfnDBInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty,
     ) : CdkObject(cdkObject), ProcessorFeatureProperty {
       /**
        * The name of the processor feature.

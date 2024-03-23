@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html)
  */
-public open class CfnEntityType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnEntityType,
+public open class CfnEntityType(
+  cdkObject: software.amazon.awscdk.services.frauddetector.CfnEntityType,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -239,6 +239,7 @@ public open class CfnEntityType internal constructor(
         CfnEntityType = CfnEntityType(cdkObject)
 
     internal fun unwrap(wrapped: CfnEntityType):
-        software.amazon.awscdk.services.frauddetector.CfnEntityType = wrapped.cdkObject
+        software.amazon.awscdk.services.frauddetector.CfnEntityType = wrapped.cdkObject as
+        software.amazon.awscdk.services.frauddetector.CfnEntityType
   }
 }

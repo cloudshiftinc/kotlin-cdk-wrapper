@@ -320,8 +320,7 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfigurationProps,
   ) : CdkObject(cdkObject), CfnMicrosoftTeamsChannelConfigurationProps {
     /**
      * The name of the configuration.

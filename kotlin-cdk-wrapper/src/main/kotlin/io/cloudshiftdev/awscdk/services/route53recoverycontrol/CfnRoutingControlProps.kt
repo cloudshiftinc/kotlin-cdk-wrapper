@@ -110,8 +110,7 @@ public interface CfnRoutingControlProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControlProps,
+    cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControlProps,
   ) : CdkObject(cdkObject), CfnRoutingControlProps {
     /**
      * The Amazon Resource Name (ARN) of the cluster that hosts the routing control.

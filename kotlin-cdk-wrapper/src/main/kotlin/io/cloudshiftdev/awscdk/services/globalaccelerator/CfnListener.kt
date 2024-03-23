@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html)
  */
-public open class CfnListener internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnListener,
+public open class CfnListener(
+  cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnListener,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -338,7 +338,8 @@ public open class CfnListener internal constructor(
         CfnListener = CfnListener(cdkObject)
 
     internal fun unwrap(wrapped: CfnListener):
-        software.amazon.awscdk.services.globalaccelerator.CfnListener = wrapped.cdkObject
+        software.amazon.awscdk.services.globalaccelerator.CfnListener = wrapped.cdkObject as
+        software.amazon.awscdk.services.globalaccelerator.CfnListener
   }
 
   /**
@@ -414,8 +415,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.globalaccelerator.CfnListener.PortRangeProperty,
+      cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnListener.PortRangeProperty,
     ) : CdkObject(cdkObject), PortRangeProperty {
       /**
        * The first port in the range of ports, inclusive.

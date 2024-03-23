@@ -397,7 +397,7 @@ public interface BundlingOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.BundlingOptions,
+    cdkObject: software.amazon.awscdk.BundlingOptions,
   ) : CdkObject(cdkObject), BundlingOptions {
     /**
      * The access mechanism used to make source files available to the bundling container and to

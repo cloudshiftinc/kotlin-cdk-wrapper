@@ -131,7 +131,7 @@ public interface ConnectionsProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ConnectionsProps,
+    cdkObject: software.amazon.awscdk.services.ec2.ConnectionsProps,
   ) : CdkObject(cdkObject), ConnectionsProps {
     /**
      * Default port range for initiating connections to and from this object.

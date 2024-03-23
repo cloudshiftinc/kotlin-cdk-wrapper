@@ -87,7 +87,7 @@ public interface VirtualRouterBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterBaseProps,
+    cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterBaseProps,
   ) : CdkObject(cdkObject), VirtualRouterBaseProps {
     /**
      * Listener specification for the VirtualRouter.

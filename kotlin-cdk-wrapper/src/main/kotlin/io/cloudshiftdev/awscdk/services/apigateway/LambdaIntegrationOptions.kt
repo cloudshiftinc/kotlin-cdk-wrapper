@@ -349,7 +349,7 @@ public interface LambdaIntegrationOptions : IntegrationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.LambdaIntegrationOptions,
+    cdkObject: software.amazon.awscdk.services.apigateway.LambdaIntegrationOptions,
   ) : CdkObject(cdkObject), LambdaIntegrationOptions {
     /**
      * Allow invoking method from AWS Console UI (for testing purposes).

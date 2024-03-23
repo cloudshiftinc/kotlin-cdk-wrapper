@@ -127,8 +127,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html)
  */
-public open class CfnDetector internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector,
+public open class CfnDetector(
+  cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -701,7 +701,8 @@ public open class CfnDetector internal constructor(
         CfnDetector = CfnDetector(cdkObject)
 
     internal fun unwrap(wrapped: CfnDetector):
-        software.amazon.awscdk.services.frauddetector.CfnDetector = wrapped.cdkObject
+        software.amazon.awscdk.services.frauddetector.CfnDetector = wrapped.cdkObject as
+        software.amazon.awscdk.services.frauddetector.CfnDetector
   }
 
   /**
@@ -973,8 +974,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty,
     ) : CdkObject(cdkObject), EntityTypeProperty {
       /**
        * The entity type ARN.
@@ -1493,8 +1493,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EventTypeProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EventTypeProperty,
     ) : CdkObject(cdkObject), EventTypeProperty {
       /**
        * The entity type ARN.
@@ -1984,8 +1983,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty,
     ) : CdkObject(cdkObject), EventVariableProperty {
       /**
        * The event variable ARN.
@@ -2381,8 +2379,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty,
     ) : CdkObject(cdkObject), LabelProperty {
       /**
        * The label ARN.
@@ -2519,8 +2516,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty,
     ) : CdkObject(cdkObject), ModelProperty {
       /**
        * The ARN of the model.
@@ -2815,8 +2811,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.OutcomeProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.OutcomeProperty,
     ) : CdkObject(cdkObject), OutcomeProperty {
       /**
        * The outcome ARN.
@@ -3227,8 +3222,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.RuleProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.RuleProperty,
     ) : CdkObject(cdkObject), RuleProperty {
       /**
        * The rule ARN.

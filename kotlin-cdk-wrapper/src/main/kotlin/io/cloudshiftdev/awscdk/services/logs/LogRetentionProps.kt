@@ -181,7 +181,7 @@ public interface LogRetentionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.LogRetentionProps,
+    cdkObject: software.amazon.awscdk.services.logs.LogRetentionProps,
   ) : CdkObject(cdkObject), LogRetentionProps {
     /**
      * The log group name.

@@ -25,8 +25,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class LogFormat internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.LogFormat,
+public open class LogFormat(
+  cdkObject: software.amazon.awscdk.services.ec2.LogFormat,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -134,6 +134,6 @@ public open class LogFormat internal constructor(
         LogFormat(cdkObject)
 
     internal fun unwrap(wrapped: LogFormat): software.amazon.awscdk.services.ec2.LogFormat =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.LogFormat
   }
 }

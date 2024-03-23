@@ -13,8 +13,8 @@ import kotlin.collections.List
 /**
  * An element of a CloudFormation stack.
  */
-public abstract class CfnElement internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnElement,
+public abstract class CfnElement(
+  cdkObject: software.amazon.awscdk.CfnElement,
 ) : Construct(cdkObject) {
   /**
    * @return the stack trace of the point where this Resource was created from, sourced
@@ -53,7 +53,7 @@ public abstract class CfnElement internal constructor(
   public open fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnElement,
+    cdkObject: software.amazon.awscdk.CfnElement,
   ) : CfnElement(cdkObject)
 
   public companion object {

@@ -75,8 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html)
  */
-public open class CfnStack internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnStack,
+public open class CfnStack(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnStack,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appstream.CfnStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1018,7 +1018,7 @@ public open class CfnStack internal constructor(
         CfnStack(cdkObject)
 
     internal fun unwrap(wrapped: CfnStack): software.amazon.awscdk.services.appstream.CfnStack =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appstream.CfnStack
   }
 
   /**
@@ -1097,8 +1097,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty,
     ) : CdkObject(cdkObject), AccessEndpointProperty {
       /**
        * The type of interface endpoint.
@@ -1233,8 +1232,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnStack.ApplicationSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnStack.ApplicationSettingsProperty,
     ) : CdkObject(cdkObject), ApplicationSettingsProperty {
       /**
        * Enables or disables persistent application settings for users during their streaming
@@ -1377,8 +1375,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnStack.StorageConnectorProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnStack.StorageConnectorProperty,
     ) : CdkObject(cdkObject), StorageConnectorProperty {
       /**
        * The type of storage connector.
@@ -1479,8 +1476,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty,
     ) : CdkObject(cdkObject), StreamingExperienceSettingsProperty {
       /**
        * The preferred protocol that you want to use while streaming your application.
@@ -1628,8 +1624,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnStack.UserSettingProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnStack.UserSettingProperty,
     ) : CdkObject(cdkObject), UserSettingProperty {
       /**
        * The action that is enabled or disabled.

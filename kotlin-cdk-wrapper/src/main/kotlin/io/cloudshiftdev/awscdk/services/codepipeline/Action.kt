@@ -19,8 +19,8 @@ import kotlin.jvm.JvmName
  * If you're writing your own Action class,
  * feel free to extend this class.
  */
-public abstract class Action internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codepipeline.Action,
+public abstract class Action(
+  cdkObject: software.amazon.awscdk.services.codepipeline.Action,
 ) : CdkObject(cdkObject), IAction {
   /**
    * The simple properties of the Action, like its Owner, name, etc.
@@ -109,7 +109,7 @@ public abstract class Action internal constructor(
   ): Rule = onStateChange(name, target, RuleProps(options))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.Action,
+    cdkObject: software.amazon.awscdk.services.codepipeline.Action,
   ) : Action(cdkObject)
 
   public companion object {

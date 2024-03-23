@@ -60,9 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html)
  */
-public open class CfnConnectAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.networkmanager.CfnConnectAttachment,
+public open class CfnConnectAttachment(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -511,7 +510,8 @@ public open class CfnConnectAttachment internal constructor(
         CfnConnectAttachment = CfnConnectAttachment(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnectAttachment):
-        software.amazon.awscdk.services.networkmanager.CfnConnectAttachment = wrapped.cdkObject
+        software.amazon.awscdk.services.networkmanager.CfnConnectAttachment = wrapped.cdkObject as
+        software.amazon.awscdk.services.networkmanager.CfnConnectAttachment
   }
 
   /**
@@ -569,8 +569,7 @@ public open class CfnConnectAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ConnectAttachmentOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ConnectAttachmentOptionsProperty,
     ) : CdkObject(cdkObject), ConnectAttachmentOptionsProperty {
       /**
        * The protocol used for the attachment connection.
@@ -710,8 +709,7 @@ public open class CfnConnectAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ProposedSegmentChangeProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ProposedSegmentChangeProperty,
     ) : CdkObject(cdkObject), ProposedSegmentChangeProperty {
       /**
        * The rule number in the policy document that applies to this change.

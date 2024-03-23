@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html)
  */
-public open class FileSystem internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.efs.FileSystem,
+public open class FileSystem(
+  cdkObject: software.amazon.awscdk.services.efs.FileSystem,
 ) : Resource(cdkObject), IFileSystem {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -696,6 +696,6 @@ public open class FileSystem internal constructor(
         FileSystem(cdkObject)
 
     internal fun unwrap(wrapped: FileSystem): software.amazon.awscdk.services.efs.FileSystem =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.efs.FileSystem
   }
 }

@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-coderepository.html)
  */
-public open class CfnCodeRepository internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnCodeRepository,
+public open class CfnCodeRepository(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnCodeRepository,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -328,7 +328,8 @@ public open class CfnCodeRepository internal constructor(
         CfnCodeRepository = CfnCodeRepository(cdkObject)
 
     internal fun unwrap(wrapped: CfnCodeRepository):
-        software.amazon.awscdk.services.sagemaker.CfnCodeRepository = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnCodeRepository = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnCodeRepository
   }
 
   /**
@@ -438,8 +439,7 @@ public open class CfnCodeRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnCodeRepository.GitConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnCodeRepository.GitConfigProperty,
     ) : CdkObject(cdkObject), GitConfigProperty {
       /**
        * The default branch for the Git repository.

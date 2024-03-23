@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-profile.html)
  */
-public open class CfnProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.transfer.CfnProfile,
+public open class CfnProfile(
+  cdkObject: software.amazon.awscdk.services.transfer.CfnProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -317,6 +317,6 @@ public open class CfnProfile internal constructor(
         CfnProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnProfile): software.amazon.awscdk.services.transfer.CfnProfile =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.transfer.CfnProfile
   }
 }

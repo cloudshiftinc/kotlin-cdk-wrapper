@@ -329,7 +329,7 @@ public interface CfnNetworkProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnNetworkProfileProps,
+    cdkObject: software.amazon.awscdk.services.devicefarm.CfnNetworkProfileProps,
   ) : CdkObject(cdkObject), CfnNetworkProfileProps {
     /**
      * The description of the network profile.

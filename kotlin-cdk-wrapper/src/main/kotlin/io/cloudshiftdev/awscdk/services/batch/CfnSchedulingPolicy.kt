@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html)
  */
-public open class CfnSchedulingPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy,
+public open class CfnSchedulingPolicy(
+  cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.batch.CfnSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -304,7 +304,8 @@ public open class CfnSchedulingPolicy internal constructor(
         CfnSchedulingPolicy = CfnSchedulingPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchedulingPolicy):
-        software.amazon.awscdk.services.batch.CfnSchedulingPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.CfnSchedulingPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.CfnSchedulingPolicy
   }
 
   /**
@@ -492,8 +493,7 @@ public open class CfnSchedulingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty,
     ) : CdkObject(cdkObject), FairsharePolicyProperty {
       /**
        * A value used to reserve some of the available maximum vCPU for fair share identifiers that
@@ -675,8 +675,7 @@ public open class CfnSchedulingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty,
     ) : CdkObject(cdkObject), ShareAttributesProperty {
       /**
        * A fair share identifier or fair share identifier prefix.

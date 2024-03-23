@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html)
  */
-public open class CfnAlias internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnAlias,
+public open class CfnAlias(
+  cdkObject: software.amazon.awscdk.services.lambda.CfnAlias,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -91,12 +91,12 @@ public open class CfnAlias internal constructor(
   }
 
   /**
-   * The name of the Lambda function.
+   * The name or ARN of the Lambda function.
    */
   public open fun functionName(): String = unwrap(this).getFunctionName()
 
   /**
-   * The name of the Lambda function.
+   * The name or ARN of the Lambda function.
    */
   public open fun functionName(`value`: String) {
     unwrap(this).setFunctionName(`value`)
@@ -222,7 +222,7 @@ public open class CfnAlias internal constructor(
     public fun description(description: String)
 
     /**
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      *
      * **Name formats** - *Function name* - `MyFunction` .
      *
@@ -233,7 +233,7 @@ public open class CfnAlias internal constructor(
      * is limited to 64 characters in length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-functionname)
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      */
     public fun functionName(functionName: String)
 
@@ -350,7 +350,7 @@ public open class CfnAlias internal constructor(
     }
 
     /**
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      *
      * **Name formats** - *Function name* - `MyFunction` .
      *
@@ -361,7 +361,7 @@ public open class CfnAlias internal constructor(
      * is limited to 64 characters in length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-functionname)
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      */
     override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
@@ -496,7 +496,7 @@ public open class CfnAlias internal constructor(
         CfnAlias(cdkObject)
 
     internal fun unwrap(wrapped: CfnAlias): software.amazon.awscdk.services.lambda.CfnAlias =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lambda.CfnAlias
   }
 
   /**
@@ -588,8 +588,7 @@ public open class CfnAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnAlias.AliasRoutingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnAlias.AliasRoutingConfigurationProperty,
     ) : CdkObject(cdkObject), AliasRoutingConfigurationProperty {
       /**
        * The second version, and the percentage of traffic that's routed to it.
@@ -675,8 +674,7 @@ public open class CfnAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnAlias.ProvisionedConcurrencyConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnAlias.ProvisionedConcurrencyConfigurationProperty,
     ) : CdkObject(cdkObject), ProvisionedConcurrencyConfigurationProperty {
       /**
        * The amount of provisioned concurrency to allocate for the alias.
@@ -782,7 +780,7 @@ public open class CfnAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lambda.CfnAlias.VersionWeightProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnAlias.VersionWeightProperty,
     ) : CdkObject(cdkObject), VersionWeightProperty {
       /**
        * The qualifier of the second version.

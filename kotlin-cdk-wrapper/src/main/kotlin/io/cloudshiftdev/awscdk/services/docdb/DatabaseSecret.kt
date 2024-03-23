@@ -29,8 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .secret(myUserSecretAttached).build());
  * ```
  */
-public open class DatabaseSecret internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.docdb.DatabaseSecret,
+public open class DatabaseSecret(
+  cdkObject: software.amazon.awscdk.services.docdb.DatabaseSecret,
 ) : Secret(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -174,6 +174,7 @@ public open class DatabaseSecret internal constructor(
         DatabaseSecret = DatabaseSecret(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseSecret):
-        software.amazon.awscdk.services.docdb.DatabaseSecret = wrapped.cdkObject
+        software.amazon.awscdk.services.docdb.DatabaseSecret = wrapped.cdkObject as
+        software.amazon.awscdk.services.docdb.DatabaseSecret
   }
 }

@@ -48,7 +48,7 @@ public interface IAccelerator : IResource {
   public fun ipv6Addresses(): List<String> = unwrap(this).getIpv6Addresses() ?: emptyList()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.globalaccelerator.IAccelerator,
+    cdkObject: software.amazon.awscdk.services.globalaccelerator.IAccelerator,
   ) : CdkObject(cdkObject), IAccelerator {
     /**
      * The ARN of the accelerator.

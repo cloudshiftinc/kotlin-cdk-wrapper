@@ -198,8 +198,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html)
  */
-public open class CfnOriginEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint,
+public open class CfnOriginEndpoint(
+  cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1058,7 +1058,8 @@ public open class CfnOriginEndpoint internal constructor(
         CfnOriginEndpoint = CfnOriginEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnOriginEndpoint):
-        software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint
   }
 
   /**
@@ -1143,8 +1144,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty,
     ) : CdkObject(cdkObject), AuthorizationProperty {
       /**
        * The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager that your Content
@@ -1351,8 +1351,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty,
     ) : CdkObject(cdkObject), CmafEncryptionProperty {
       /**
        * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in
@@ -1675,8 +1674,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafPackageProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafPackageProperty,
     ) : CdkObject(cdkObject), CmafPackageProperty {
       /**
        * Parameters for encrypting content.
@@ -1855,8 +1853,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty,
     ) : CdkObject(cdkObject), DashEncryptionProperty {
       /**
        * Number of seconds before AWS Elemental MediaPackage rotates to a new key.
@@ -2585,8 +2582,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashPackageProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashPackageProperty,
     ) : CdkObject(cdkObject), DashPackageProperty {
       /**
        * Specifies the SCTE-35 message types that AWS Elemental MediaPackage treats as ad markers in
@@ -2976,8 +2972,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty,
     ) : CdkObject(cdkObject), EncryptionContractConfigurationProperty {
       /**
        * A collection of audio encryption presets.
@@ -3249,8 +3244,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty,
     ) : CdkObject(cdkObject), HlsEncryptionProperty {
       /**
        * A 128-bit, 16-byte hex value represented by a 32-character string, used with the key for
@@ -3719,8 +3713,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty,
     ) : CdkObject(cdkObject), HlsManifestProperty {
       /**
        * Controls how ad markers are included in the packaged endpoint.
@@ -4415,8 +4408,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty,
     ) : CdkObject(cdkObject), HlsPackageProperty {
       /**
        * Controls how ad markers are included in the packaged endpoint.
@@ -4660,8 +4652,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssEncryptionProperty,
     ) : CdkObject(cdkObject), MssEncryptionProperty {
       /**
        * Parameters for the SPEKE key provider.
@@ -4884,8 +4875,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty,
     ) : CdkObject(cdkObject), MssPackageProperty {
       /**
        * Parameters for encrypting content.
@@ -5194,8 +5184,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty,
     ) : CdkObject(cdkObject), SpekeKeyProviderProperty {
       /**
        * The Amazon Resource Name (ARN) for the certificate that you imported to AWS Certificate
@@ -5385,8 +5374,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty,
     ) : CdkObject(cdkObject), StreamSelectionProperty {
       /**
        * The upper limit of the bitrates that this endpoint serves.

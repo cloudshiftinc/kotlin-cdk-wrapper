@@ -67,8 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-datarepositoryassociation.html)
  */
-public open class CfnDataRepositoryAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation,
+public open class CfnDataRepositoryAssociation(
+  cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -588,7 +588,8 @@ public open class CfnDataRepositoryAssociation internal constructor(
         CfnDataRepositoryAssociation = CfnDataRepositoryAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataRepositoryAssociation):
-        software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation
   }
 
   /**
@@ -704,8 +705,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty,
     ) : CdkObject(cdkObject), AutoExportPolicyProperty {
       /**
        * The `AutoExportPolicy` can have the following event values:.
@@ -854,8 +854,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty,
     ) : CdkObject(cdkObject), AutoImportPolicyProperty {
       /**
        * The `AutoImportPolicy` can have the following event values:.
@@ -1127,8 +1126,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property,
     ) : CdkObject(cdkObject), S3Property {
       /**
        * Describes a data repository association's automatic export policy.

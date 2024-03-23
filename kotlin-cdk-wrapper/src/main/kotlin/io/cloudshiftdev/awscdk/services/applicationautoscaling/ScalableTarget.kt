@@ -34,9 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class ScalableTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.applicationautoscaling.ScalableTarget,
+public open class ScalableTarget(
+  cdkObject: software.amazon.awscdk.services.applicationautoscaling.ScalableTarget,
 ) : Resource(cdkObject), IScalableTarget {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -334,6 +333,7 @@ public open class ScalableTarget internal constructor(
         ScalableTarget = ScalableTarget(cdkObject)
 
     internal fun unwrap(wrapped: ScalableTarget):
-        software.amazon.awscdk.services.applicationautoscaling.ScalableTarget = wrapped.cdkObject
+        software.amazon.awscdk.services.applicationautoscaling.ScalableTarget = wrapped.cdkObject as
+        software.amazon.awscdk.services.applicationautoscaling.ScalableTarget
   }
 }

@@ -88,7 +88,7 @@ public interface ArbitraryIntervals {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.common.ArbitraryIntervals,
+    cdkObject: software.amazon.awscdk.services.autoscaling.common.ArbitraryIntervals,
   ) : CdkObject(cdkObject), ArbitraryIntervals {
     /**
      *

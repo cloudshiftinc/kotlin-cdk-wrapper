@@ -263,8 +263,7 @@ public interface CloudFormationDeployStackInstancesActionProps : CommonAwsAction
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackInstancesActionProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackInstancesActionProps,
   ) : CdkObject(cdkObject), CloudFormationDeployStackInstancesActionProps {
     /**
      * The physical, human-readable name of the Action.

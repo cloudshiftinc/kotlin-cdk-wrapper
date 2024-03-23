@@ -109,7 +109,7 @@ public interface BlockPublicAccessOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.BlockPublicAccessOptions,
+    cdkObject: software.amazon.awscdk.services.s3.BlockPublicAccessOptions,
   ) : CdkObject(cdkObject), BlockPublicAccessOptions {
     /**
      * Whether to block public ACLs.

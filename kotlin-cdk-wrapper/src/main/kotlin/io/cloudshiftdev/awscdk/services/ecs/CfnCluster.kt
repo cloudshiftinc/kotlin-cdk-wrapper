@@ -69,8 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html)
  */
-public open class CfnCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnCluster,
+public open class CfnCluster(
+  cdkObject: software.amazon.awscdk.services.ecs.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -877,7 +877,7 @@ public open class CfnCluster internal constructor(
         CfnCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCluster): software.amazon.awscdk.services.ecs.CfnCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecs.CfnCluster
   }
 
   /**
@@ -1038,8 +1038,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty,
     ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
       /**
        * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
@@ -1199,8 +1198,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty,
     ) : CdkObject(cdkObject), ClusterConfigurationProperty {
       /**
        * The details of the execute command configuration.
@@ -1334,8 +1332,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty,
     ) : CdkObject(cdkObject), ClusterSettingsProperty {
       /**
        * The name of the cluster setting.
@@ -1558,8 +1555,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty,
     ) : CdkObject(cdkObject), ExecuteCommandConfigurationProperty {
       /**
        * Specify an AWS Key Management Service key ID to encrypt the data between the local client
@@ -1807,8 +1803,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandLogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandLogConfigurationProperty,
     ) : CdkObject(cdkObject), ExecuteCommandLogConfigurationProperty {
       /**
        * Determines whether to use encryption on the CloudWatch logs.
@@ -2006,8 +2001,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCluster.ServiceConnectDefaultsProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ServiceConnectDefaultsProperty,
     ) : CdkObject(cdkObject), ServiceConnectDefaultsProperty {
       /**
        * The namespace name or full Amazon Resource Name (ARN) of the AWS Cloud Map namespace that's

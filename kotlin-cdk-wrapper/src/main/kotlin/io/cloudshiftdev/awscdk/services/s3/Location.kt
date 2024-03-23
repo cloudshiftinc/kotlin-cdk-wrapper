@@ -182,7 +182,7 @@ public interface Location {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.Location,
+    cdkObject: software.amazon.awscdk.services.s3.Location,
   ) : CdkObject(cdkObject), Location {
     /**
      * The name of the S3 Bucket the object is in.

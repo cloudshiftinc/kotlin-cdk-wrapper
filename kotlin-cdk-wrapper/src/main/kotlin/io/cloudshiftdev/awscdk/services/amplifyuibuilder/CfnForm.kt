@@ -183,8 +183,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplifyuibuilder-form.html)
  */
-public open class CfnForm internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm,
+public open class CfnForm(
+  cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.amplifyuibuilder.CfnForm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -845,7 +845,7 @@ public open class CfnForm internal constructor(
         = CfnForm(cdkObject)
 
     internal fun unwrap(wrapped: CfnForm): software.amazon.awscdk.services.amplifyuibuilder.CfnForm
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.amplifyuibuilder.CfnForm
   }
 
   /**
@@ -1142,8 +1142,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty,
     ) : CdkObject(cdkObject), FieldConfigProperty {
       /**
        * Specifies whether to hide a field.
@@ -1710,8 +1709,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldInputConfigProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldInputConfigProperty,
     ) : CdkObject(cdkObject), FieldInputConfigProperty {
       /**
        * Specifies whether a field has a default value.
@@ -1939,8 +1937,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty,
     ) : CdkObject(cdkObject), FieldPositionProperty {
       /**
        * The field position is below the field specified by the string.
@@ -2134,8 +2131,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty,
     ) : CdkObject(cdkObject), FieldValidationConfigurationProperty {
       /**
        * The validation to perform on a number value.
@@ -2442,8 +2438,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty,
     ) : CdkObject(cdkObject), FileUploaderFieldConfigProperty {
       /**
        * The file types that are allowed to be uploaded by the file uploader.
@@ -2661,8 +2656,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty,
     ) : CdkObject(cdkObject), FormButtonProperty {
       /**
        * Describes the button's properties.
@@ -2921,8 +2915,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty,
     ) : CdkObject(cdkObject), FormCTAProperty {
       /**
        * Displays a cancel button.
@@ -3050,8 +3043,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty,
     ) : CdkObject(cdkObject), FormDataTypeConfigProperty {
       /**
        * The data source type, either an Amplify DataStore model or a custom data type.
@@ -3145,8 +3137,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty,
     ) : CdkObject(cdkObject), FormInputBindingPropertiesValuePropertiesProperty {
       /**
        * An Amplify DataStore model.
@@ -3286,8 +3277,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty,
     ) : CdkObject(cdkObject), FormInputBindingPropertiesValueProperty {
       /**
        * Describes the properties to customize with data at runtime.
@@ -3402,8 +3392,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty,
     ) : CdkObject(cdkObject), FormInputValuePropertyBindingPropertiesProperty {
       /**
        * The data field to bind the property to.
@@ -3602,8 +3591,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty,
     ) : CdkObject(cdkObject), FormInputValuePropertyProperty {
       /**
        * The information to bind fields to data at runtime.
@@ -3723,8 +3711,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty,
     ) : CdkObject(cdkObject), FormStyleConfigProperty {
       /**
        * A reference to a design token to use to bind the form's style properties to an existing
@@ -3942,8 +3929,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty,
     ) : CdkObject(cdkObject), FormStyleProperty {
       /**
        * The spacing for the horizontal gap.
@@ -4209,8 +4195,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.SectionalElementProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.SectionalElementProperty,
     ) : CdkObject(cdkObject), SectionalElementProperty {
       /**
        * Excludes a sectional element that was generated by default for a specified data model.
@@ -4427,8 +4412,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingProperty,
     ) : CdkObject(cdkObject), ValueMappingProperty {
       /**
        * The value to display for the complex object.
@@ -4598,8 +4582,7 @@ public open class CfnForm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty,
     ) : CdkObject(cdkObject), ValueMappingsProperty {
       /**
        * The information to bind fields to data at runtime.

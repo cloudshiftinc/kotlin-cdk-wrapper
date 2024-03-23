@@ -205,8 +205,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
  */
-public open class CfnAutoScalingGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup,
+public open class CfnAutoScalingGroup(
+  cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -2472,7 +2472,8 @@ public open class CfnAutoScalingGroup internal constructor(
         CfnAutoScalingGroup = CfnAutoScalingGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnAutoScalingGroup):
-        software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
   }
 
   /**
@@ -2553,8 +2554,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorCountRequestProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorCountRequestProperty,
     ) : CdkObject(cdkObject), AcceleratorCountRequestProperty {
       /**
        * The maximum value.
@@ -2668,8 +2668,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty,
     ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBRequestProperty {
       /**
        * The memory maximum in MiB.
@@ -2784,8 +2783,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty,
     ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsRequestProperty {
       /**
        * The maximum value in Mbps.
@@ -2940,8 +2938,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty,
     ) : CdkObject(cdkObject), InstanceMaintenancePolicyProperty {
       /**
        * Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling
@@ -3277,16 +3274,16 @@ public open class CfnAutoScalingGroup internal constructor(
      *
      * The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage.
      *
-     * To indicate no price protection threshold, specify a high value, such as `999999` .
-     *
      * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
      * is based on the per-vCPU or per-memory price instead of the per instance price.
      *
      *
      * Only one of `SpotMaxPricePercentageOverLowestPrice` or
      * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify either,
-     * then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter defaults
-     * to `100` .
+     * Amazon EC2 Auto Scaling will automatically apply optimal price protection to consistently select
+     * from a wide range of instance types. To indicate no price protection threshold for Spot
+     * Instances, meaning you want to consider all instance types that match your attributes, include
+     * one of these parameters and specify a high value, such as `999999` .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancerequirements.html#cfn-autoscaling-autoscalinggroup-instancerequirements-maxspotpriceaspercentageofoptimalondemandprice)
@@ -3375,17 +3372,17 @@ public open class CfnAutoScalingGroup internal constructor(
      *
      * The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage.
      *
-     * To turn off price protection, specify a high value, such as `999999` .
-     *
      * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
      * is based on the per-vCPU or per-memory price instead of the per instance price.
      *
      *
      * Only one of `SpotMaxPricePercentageOverLowestPrice` or
-     * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified.
+     * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify either,
+     * Amazon EC2 Auto Scaling will automatically apply optimal price protection to consistently select
+     * from a wide range of instance types. To indicate no price protection threshold for Spot
+     * Instances, meaning you want to consider all instance types that match your attributes, include
+     * one of these parameters and specify a high value, such as `999999` .
      *
-     *
-     * Default: `100`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancerequirements.html#cfn-autoscaling-autoscalinggroup-instancerequirements-spotmaxpricepercentageoverlowestprice)
      */
@@ -3773,16 +3770,16 @@ public open class CfnAutoScalingGroup internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
        * is based on the per-vCPU or per-memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 Auto Scaling will automatically apply optimal price protection to
+       * consistently select from a wide range of instance types. To indicate no price protection
+       * threshold for Spot Instances, meaning you want to consider all instance types that match your
+       * attributes, include one of these parameters and specify a high value, such as `999999` .
        */
       public
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number)
@@ -3929,17 +3926,16 @@ public open class CfnAutoScalingGroup internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage.
        *
-       * To turn off price protection, specify a high value, such as `999999` .
-       *
        * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
        * is based on the per-vCPU or per-memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
-       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified.
-       *
-       *
-       * Default: `100`
+       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
+       * either, Amazon EC2 Auto Scaling will automatically apply optimal price protection to
+       * consistently select from a wide range of instance types. To indicate no price protection
+       * threshold for Spot Instances, meaning you want to consider all instance types that match your
+       * attributes, include one of these parameters and specify a high value, such as `999999` .
        */
       public
           fun spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice: Number)
@@ -4399,16 +4395,16 @@ public open class CfnAutoScalingGroup internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
        * is based on the per-vCPU or per-memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 Auto Scaling will automatically apply optimal price protection to
+       * consistently select from a wide range of instance types. To indicate no price protection
+       * threshold for Spot Instances, meaning you want to consider all instance types that match your
+       * attributes, include one of these parameters and specify a high value, such as `999999` .
        */
       override
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
@@ -4584,17 +4580,16 @@ public open class CfnAutoScalingGroup internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage.
        *
-       * To turn off price protection, specify a high value, such as `999999` .
-       *
        * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
        * is based on the per-vCPU or per-memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
-       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified.
-       *
-       *
-       * Default: `100`
+       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
+       * either, Amazon EC2 Auto Scaling will automatically apply optimal price protection to
+       * consistently select from a wide range of instance types. To indicate no price protection
+       * threshold for Spot Instances, meaning you want to consider all instance types that match your
+       * attributes, include one of these parameters and specify a high value, such as `999999` .
        */
       override
           fun spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice: Number) {
@@ -4658,8 +4653,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceRequirementsProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceRequirementsProperty,
     ) : CdkObject(cdkObject), InstanceRequirementsProperty {
       /**
        * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) for
@@ -4888,16 +4882,16 @@ public open class CfnAutoScalingGroup internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
        * is based on the per-vCPU or per-memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 Auto Scaling will automatically apply optimal price protection to
+       * consistently select from a wide range of instance types. To indicate no price protection
+       * threshold for Spot Instances, meaning you want to consider all instance types that match your
+       * attributes, include one of these parameters and specify a high value, such as `999999` .
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancerequirements.html#cfn-autoscaling-autoscalinggroup-instancerequirements-maxspotpriceaspercentageofoptimalondemandprice)
@@ -4988,17 +4982,17 @@ public open class CfnAutoScalingGroup internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage.
        *
-       * To turn off price protection, specify a high value, such as `999999` .
-       *
        * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
        * is based on the per-vCPU or per-memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
-       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified.
+       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
+       * either, Amazon EC2 Auto Scaling will automatically apply optimal price protection to
+       * consistently select from a wide range of instance types. To indicate no price protection
+       * threshold for Spot Instances, meaning you want to consider all instance types that match your
+       * attributes, include one of these parameters and specify a high value, such as `999999` .
        *
-       *
-       * Default: `100`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancerequirements.html#cfn-autoscaling-autoscalinggroup-instancerequirements-spotmaxpricepercentageoverlowestprice)
        */
@@ -5456,8 +5450,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty,
     ) : CdkObject(cdkObject), InstancesDistributionProperty {
       /**
        * The allocation strategy to apply to your On-Demand Instances when they are launched.
@@ -6083,8 +6076,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty,
     ) : CdkObject(cdkObject), LaunchTemplateOverridesProperty {
       /**
        * The instance requirements.
@@ -6392,8 +6384,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty,
     ) : CdkObject(cdkObject), LaunchTemplateProperty {
       /**
        * The launch template.
@@ -6588,8 +6579,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty,
     ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
       /**
        * The ID of the launch template.
@@ -6902,8 +6892,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LifecycleHookSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LifecycleHookSpecificationProperty,
     ) : CdkObject(cdkObject), LifecycleHookSpecificationProperty {
       /**
        * The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an
@@ -7078,8 +7067,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty,
     ) : CdkObject(cdkObject), MemoryGiBPerVCpuRequestProperty {
       /**
        * The memory maximum in GiB.
@@ -7192,8 +7180,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty,
     ) : CdkObject(cdkObject), MemoryMiBRequestProperty {
       /**
        * The memory maximum in MiB.
@@ -7469,8 +7456,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty,
     ) : CdkObject(cdkObject), MetricsCollectionProperty {
       /**
        * The frequency at which Amazon EC2 Auto Scaling sends aggregated data to CloudWatch.
@@ -7777,8 +7763,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MixedInstancesPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MixedInstancesPolicyProperty,
     ) : CdkObject(cdkObject), MixedInstancesPolicyProperty {
       /**
        * The instances distribution.
@@ -7902,8 +7887,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty,
     ) : CdkObject(cdkObject), NetworkBandwidthGbpsRequestProperty {
       /**
        * The maximum amount of network bandwidth, in gigabits per second (Gbps).
@@ -8018,8 +8002,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty,
     ) : CdkObject(cdkObject), NetworkInterfaceCountRequestProperty {
       /**
        * The maximum number of network interfaces.
@@ -8195,8 +8178,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty,
     ) : CdkObject(cdkObject), NotificationConfigurationProperty {
       /**
        * A list of event types that send a notification. Event types can include any of the
@@ -8378,8 +8360,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty,
     ) : CdkObject(cdkObject), TagPropertyProperty {
       /**
        * The tag key.
@@ -8504,8 +8485,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty,
     ) : CdkObject(cdkObject), TotalLocalStorageGBRequestProperty {
       /**
        * The storage maximum in GB.
@@ -8618,8 +8598,7 @@ public open class CfnAutoScalingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty,
     ) : CdkObject(cdkObject), VCpuCountRequestProperty {
       /**
        * The maximum number of vCPUs.

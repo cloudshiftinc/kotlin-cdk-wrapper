@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html)
  */
-public open class CfnStream internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kinesis.CfnStream,
+public open class CfnStream(
+  cdkObject: software.amazon.awscdk.services.kinesis.CfnStream,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.kinesis.CfnStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -542,7 +542,7 @@ public open class CfnStream internal constructor(
         CfnStream(cdkObject)
 
     internal fun unwrap(wrapped: CfnStream): software.amazon.awscdk.services.kinesis.CfnStream =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.kinesis.CfnStream
   }
 
   /**
@@ -671,8 +671,7 @@ public open class CfnStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesis.CfnStream.StreamEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.kinesis.CfnStream.StreamEncryptionProperty,
     ) : CdkObject(cdkObject), StreamEncryptionProperty {
       /**
        * The encryption type to use.
@@ -783,8 +782,7 @@ public open class CfnStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty,
     ) : CdkObject(cdkObject), StreamModeDetailsProperty {
       /**
        * Specifies the capacity mode to which you want to set your data stream.

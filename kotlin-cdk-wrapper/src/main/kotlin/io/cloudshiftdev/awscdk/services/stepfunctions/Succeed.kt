@@ -21,8 +21,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Succeed success = new Succeed(this, "We did it!");
  * ```
  */
-public open class Succeed internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Succeed,
+public open class Succeed(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Succeed,
 ) : State(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.Succeed(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -182,6 +182,6 @@ public open class Succeed internal constructor(
         Succeed(cdkObject)
 
     internal fun unwrap(wrapped: Succeed): software.amazon.awscdk.services.stepfunctions.Succeed =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.Succeed
   }
 }

@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-application.html)
  */
-public open class CfnApplication internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication,
+public open class CfnApplication(
+  cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.elasticbeanstalk.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -307,7 +307,8 @@ public open class CfnApplication internal constructor(
         CfnApplication = CfnApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplication):
-        software.amazon.awscdk.services.elasticbeanstalk.CfnApplication = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticbeanstalk.CfnApplication = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticbeanstalk.CfnApplication
   }
 
   /**
@@ -454,8 +455,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationResourceLifecycleConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationResourceLifecycleConfigProperty,
     ) : CdkObject(cdkObject), ApplicationResourceLifecycleConfigProperty {
       /**
        * The ARN of an IAM service role that Elastic Beanstalk has permission to assume.
@@ -661,8 +661,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationVersionLifecycleConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationVersionLifecycleConfigProperty,
     ) : CdkObject(cdkObject), ApplicationVersionLifecycleConfigProperty {
       /**
        * Specify a max age rule to restrict the length of time that application versions are
@@ -831,8 +830,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty,
+      cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty,
     ) : CdkObject(cdkObject), MaxAgeRuleProperty {
       /**
        * Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk
@@ -1007,8 +1005,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty,
+      cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty,
     ) : CdkObject(cdkObject), MaxCountRuleProperty {
       /**
        * Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk

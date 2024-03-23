@@ -113,8 +113,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html)
  */
-public open class CfnEntity internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity,
+public open class CfnEntity(
+  cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -548,7 +548,7 @@ public open class CfnEntity internal constructor(
         = CfnEntity(cdkObject)
 
     internal fun unwrap(wrapped: CfnEntity): software.amazon.awscdk.services.iottwinmaker.CfnEntity
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.iottwinmaker.CfnEntity
   }
 
   /**
@@ -820,8 +820,7 @@ public open class CfnEntity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnEntity.ComponentProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.ComponentProperty,
     ) : CdkObject(cdkObject), ComponentProperty {
       /**
        * The name of the component.
@@ -1154,8 +1153,7 @@ public open class CfnEntity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnEntity.CompositeComponentProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.CompositeComponentProperty,
     ) : CdkObject(cdkObject), CompositeComponentProperty {
       /**
        * The name of the component.
@@ -1453,8 +1451,7 @@ public open class CfnEntity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnEntity.DataTypeProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.DataTypeProperty,
     ) : CdkObject(cdkObject), DataTypeProperty {
       /**
        * The allowed values.
@@ -1771,8 +1768,7 @@ public open class CfnEntity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnEntity.DataValueProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.DataValueProperty,
     ) : CdkObject(cdkObject), DataValueProperty {
       /**
        * A boolean value.
@@ -2273,8 +2269,7 @@ public open class CfnEntity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnEntity.DefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.DefinitionProperty,
     ) : CdkObject(cdkObject), DefinitionProperty {
       /**
        * The configuration.
@@ -2437,7 +2432,7 @@ public open class CfnEntity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.ErrorProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.ErrorProperty,
     ) : CdkObject(cdkObject), ErrorProperty {
       /**
        * The entity error code.
@@ -2555,8 +2550,7 @@ public open class CfnEntity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnEntity.PropertyGroupProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.PropertyGroupProperty,
     ) : CdkObject(cdkObject), PropertyGroupProperty {
       /**
        * The group type.
@@ -2704,8 +2698,7 @@ public open class CfnEntity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnEntity.PropertyProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.PropertyProperty,
     ) : CdkObject(cdkObject), PropertyProperty {
       /**
        * An object that specifies information about a property.
@@ -2813,8 +2806,7 @@ public open class CfnEntity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnEntity.RelationshipProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.RelationshipProperty,
     ) : CdkObject(cdkObject), RelationshipProperty {
       /**
        * The relationship type.
@@ -2922,8 +2914,7 @@ public open class CfnEntity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnEntity.RelationshipValueProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.RelationshipValueProperty,
     ) : CdkObject(cdkObject), RelationshipValueProperty {
       /**
        * The target component name.
@@ -3035,7 +3026,7 @@ public open class CfnEntity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.StatusProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.StatusProperty,
     ) : CdkObject(cdkObject), StatusProperty {
       /**
        * The error message.

@@ -56,7 +56,7 @@ public interface ParameterGroupInstanceConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.ParameterGroupInstanceConfig,
+    cdkObject: software.amazon.awscdk.services.rds.ParameterGroupInstanceConfig,
   ) : CdkObject(cdkObject), ParameterGroupInstanceConfig {
     /**
      * The name of this parameter group.

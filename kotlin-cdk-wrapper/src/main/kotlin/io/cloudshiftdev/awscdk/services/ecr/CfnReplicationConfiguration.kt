@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html)
  */
-public open class CfnReplicationConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration,
+public open class CfnReplicationConfiguration(
+  cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -214,7 +214,8 @@ public open class CfnReplicationConfiguration internal constructor(
         CfnReplicationConfiguration = CfnReplicationConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationConfiguration):
-        software.amazon.awscdk.services.ecr.CfnReplicationConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.ecr.CfnReplicationConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecr.CfnReplicationConfiguration
   }
 
   /**
@@ -311,8 +312,7 @@ public open class CfnReplicationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationConfigurationProperty,
     ) : CdkObject(cdkObject), ReplicationConfigurationProperty {
       /**
        * An array of objects representing the replication destinations and repository filters for a
@@ -423,8 +423,7 @@ public open class CfnReplicationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty,
     ) : CdkObject(cdkObject), ReplicationDestinationProperty {
       /**
        * The Region to replicate to.
@@ -617,8 +616,7 @@ public open class CfnReplicationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationRuleProperty,
+      cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationRuleProperty,
     ) : CdkObject(cdkObject), ReplicationRuleProperty {
       /**
        * An array of objects representing the destination for a replication rule.
@@ -748,8 +746,7 @@ public open class CfnReplicationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.RepositoryFilterProperty,
+      cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.RepositoryFilterProperty,
     ) : CdkObject(cdkObject), RepositoryFilterProperty {
       /**
        * The repository filter details.

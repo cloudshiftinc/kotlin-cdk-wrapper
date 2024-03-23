@@ -69,9 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingconfiguration.html)
  */
-public open class CfnMatchmakingConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration,
+public open class CfnMatchmakingConfiguration(
+  cdkObject: software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1055,7 +1054,8 @@ public open class CfnMatchmakingConfiguration internal constructor(
         CfnMatchmakingConfiguration = CfnMatchmakingConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnMatchmakingConfiguration):
-        software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration
   }
 
   /**
@@ -1144,8 +1144,7 @@ public open class CfnMatchmakingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration.GamePropertyProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration.GamePropertyProperty,
     ) : CdkObject(cdkObject), GamePropertyProperty {
       /**
        * The game property identifier.

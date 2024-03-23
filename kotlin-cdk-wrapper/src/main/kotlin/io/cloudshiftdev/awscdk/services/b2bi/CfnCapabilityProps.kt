@@ -265,7 +265,7 @@ public interface CfnCapabilityProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapabilityProps,
+    cdkObject: software.amazon.awscdk.services.b2bi.CfnCapabilityProps,
   ) : CdkObject(cdkObject), CfnCapabilityProps {
     /**
      * Specifies a structure that contains the details for a capability.

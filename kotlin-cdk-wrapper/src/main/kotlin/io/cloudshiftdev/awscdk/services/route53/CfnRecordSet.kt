@@ -80,8 +80,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html)
  */
-public open class CfnRecordSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet,
+public open class CfnRecordSet(
+  cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -2026,7 +2026,7 @@ public open class CfnRecordSet internal constructor(
         = CfnRecordSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnRecordSet): software.amazon.awscdk.services.route53.CfnRecordSet
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.route53.CfnRecordSet
   }
 
   /**
@@ -2986,8 +2986,7 @@ public open class CfnRecordSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSet.AliasTargetProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet.AliasTargetProperty,
     ) : CdkObject(cdkObject), AliasTargetProperty {
       /**
        * *Alias records only:* The value that you specify depends on where you want to route
@@ -3356,8 +3355,7 @@ public open class CfnRecordSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSet.CidrRoutingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet.CidrRoutingConfigProperty,
     ) : CdkObject(cdkObject), CidrRoutingConfigProperty {
       /**
        * The CIDR collection ID.
@@ -3470,8 +3468,7 @@ public open class CfnRecordSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSet.CoordinatesProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet.CoordinatesProperty,
     ) : CdkObject(cdkObject), CoordinatesProperty {
       /**
        * Specifies a coordinate of the north–south position of a geographic point on the surface of
@@ -3662,8 +3659,7 @@ public open class CfnRecordSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSet.GeoLocationProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet.GeoLocationProperty,
     ) : CdkObject(cdkObject), GeoLocationProperty {
       /**
        * For geolocation resource record sets, a two-letter abbreviation that identifies a
@@ -3936,8 +3932,7 @@ public open class CfnRecordSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSet.GeoProximityLocationProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet.GeoProximityLocationProperty,
     ) : CdkObject(cdkObject), GeoProximityLocationProperty {
       /**
        * The AWS Region the resource you are directing DNS traffic to, is in.

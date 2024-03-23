@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-contactflowmodule.html)
  */
-public open class CfnContactFlowModule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnContactFlowModule,
+public open class CfnContactFlowModule(
+  cdkObject: software.amazon.awscdk.services.connect.CfnContactFlowModule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -338,6 +338,7 @@ public open class CfnContactFlowModule internal constructor(
         CfnContactFlowModule = CfnContactFlowModule(cdkObject)
 
     internal fun unwrap(wrapped: CfnContactFlowModule):
-        software.amazon.awscdk.services.connect.CfnContactFlowModule = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnContactFlowModule = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnContactFlowModule
   }
 }

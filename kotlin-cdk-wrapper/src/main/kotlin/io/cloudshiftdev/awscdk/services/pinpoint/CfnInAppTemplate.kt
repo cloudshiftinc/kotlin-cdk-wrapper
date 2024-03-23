@@ -105,8 +105,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-inapptemplate.html)
  */
-public open class CfnInAppTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate,
+public open class CfnInAppTemplate(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -457,7 +457,8 @@ public open class CfnInAppTemplate internal constructor(
         CfnInAppTemplate = CfnInAppTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnInAppTemplate):
-        software.amazon.awscdk.services.pinpoint.CfnInAppTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnInAppTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnInAppTemplate
   }
 
   /**
@@ -559,8 +560,7 @@ public open class CfnInAppTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty,
     ) : CdkObject(cdkObject), BodyConfigProperty {
       /**
        * The text alignment of the main body text of the message.
@@ -899,8 +899,7 @@ public open class CfnInAppTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty,
     ) : CdkObject(cdkObject), ButtonConfigProperty {
       /**
        * Optional button configuration to use for in-app messages sent to Android devices.
@@ -1139,8 +1138,7 @@ public open class CfnInAppTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty,
     ) : CdkObject(cdkObject), DefaultButtonConfigurationProperty {
       /**
        * The background color of a button, expressed as a hex color code (such as #000000 for
@@ -1311,8 +1309,7 @@ public open class CfnInAppTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty,
     ) : CdkObject(cdkObject), HeaderConfigProperty {
       /**
        * The text alignment of the title of the message.
@@ -1700,8 +1697,7 @@ public open class CfnInAppTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.InAppMessageContentProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.InAppMessageContentProperty,
     ) : CdkObject(cdkObject), InAppMessageContentProperty {
       /**
        * The background color for an in-app message banner, expressed as a hex color code (such as
@@ -1863,8 +1859,7 @@ public open class CfnInAppTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.OverrideButtonConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.OverrideButtonConfigurationProperty,
     ) : CdkObject(cdkObject), OverrideButtonConfigurationProperty {
       /**
        * The action that occurs when a recipient chooses a button in an in-app message.

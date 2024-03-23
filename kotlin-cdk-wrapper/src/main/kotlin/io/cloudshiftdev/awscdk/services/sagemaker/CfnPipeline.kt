@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html)
  */
-public open class CfnPipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline,
+public open class CfnPipeline(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -356,7 +356,7 @@ public open class CfnPipeline internal constructor(
         = CfnPipeline(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipeline): software.amazon.awscdk.services.sagemaker.CfnPipeline
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnPipeline
   }
 
   /**
@@ -417,8 +417,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty,
     ) : CdkObject(cdkObject), ParallelismConfigurationProperty {
       /**
        * The max number of steps that can be executed in parallel.
@@ -577,8 +576,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty,
     ) : CdkObject(cdkObject), PipelineDefinitionProperty {
       /**
        * The [JSON pipeline
@@ -739,8 +737,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * The name of the S3 bucket.

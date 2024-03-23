@@ -176,7 +176,7 @@ public interface ServerlessClusterAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterAttributes,
+    cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterAttributes,
   ) : CdkObject(cdkObject), ServerlessClusterAttributes {
     /**
      * Cluster endpoint address.

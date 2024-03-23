@@ -92,7 +92,7 @@ public interface DatabaseInstanceAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.docdb.DatabaseInstanceAttributes,
+    cdkObject: software.amazon.awscdk.services.docdb.DatabaseInstanceAttributes,
   ) : CdkObject(cdkObject), DatabaseInstanceAttributes {
     /**
      * The endpoint address.

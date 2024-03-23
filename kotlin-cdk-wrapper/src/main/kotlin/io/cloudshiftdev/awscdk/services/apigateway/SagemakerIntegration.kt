@@ -24,8 +24,8 @@ import software.amazon.awscdk.services.sagemaker.IEndpoint as AmazonAwscdkServic
  * resource.addMethod("POST", new SagemakerIntegration(endpoint));
  * ```
  */
-public open class SagemakerIntegration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.SagemakerIntegration,
+public open class SagemakerIntegration(
+  cdkObject: software.amazon.awscdk.services.apigateway.SagemakerIntegration,
 ) : AwsIntegration(cdkObject) {
   public constructor(endpoint: CloudshiftdevAwscdkServicesSagemakerIEndpoint) :
       this(software.amazon.awscdk.services.apigateway.SagemakerIntegration(endpoint.let(CloudshiftdevAwscdkServicesSagemakerIEndpoint::unwrap))
@@ -444,6 +444,7 @@ public open class SagemakerIntegration internal constructor(
         SagemakerIntegration = SagemakerIntegration(cdkObject)
 
     internal fun unwrap(wrapped: SagemakerIntegration):
-        software.amazon.awscdk.services.apigateway.SagemakerIntegration = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.SagemakerIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.SagemakerIntegration
   }
 }

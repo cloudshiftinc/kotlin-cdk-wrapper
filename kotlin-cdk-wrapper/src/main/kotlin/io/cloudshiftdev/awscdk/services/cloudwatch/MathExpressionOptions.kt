@@ -224,7 +224,7 @@ public interface MathExpressionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.MathExpressionOptions,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.MathExpressionOptions,
   ) : CdkObject(cdkObject), MathExpressionOptions {
     /**
      * Color for this metric when added to a Graph in a Dashboard.

@@ -26,8 +26,8 @@ import kotlin.Unit
  * Aspects.of(this).add(aspect);
  * ```
  */
-public open class InstanceRequireImdsv2Aspect internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect,
+public open class InstanceRequireImdsv2Aspect(
+  cdkObject: software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect,
 ) : CdkObject(cdkObject), IAspect {
   public constructor() : this(software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect()
   )
@@ -129,6 +129,7 @@ public open class InstanceRequireImdsv2Aspect internal constructor(
         InstanceRequireImdsv2Aspect = InstanceRequireImdsv2Aspect(cdkObject)
 
     internal fun unwrap(wrapped: InstanceRequireImdsv2Aspect):
-        software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect
   }
 }

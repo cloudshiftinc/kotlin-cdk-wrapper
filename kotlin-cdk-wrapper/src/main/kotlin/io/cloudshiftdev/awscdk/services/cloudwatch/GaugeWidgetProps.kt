@@ -382,7 +382,7 @@ public interface GaugeWidgetProps : MetricWidgetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.GaugeWidgetProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.GaugeWidgetProps,
   ) : CdkObject(cdkObject), GaugeWidgetProps {
     /**
      * Annotations for the left Y axis.

@@ -21,9 +21,8 @@ import kotlin.String
  * IntegrationCredentials integrationCredentials = IntegrationCredentials.fromRole(role);
  * ```
  */
-public abstract class IntegrationCredentials internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigatewayv2.IntegrationCredentials,
+public abstract class IntegrationCredentials(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.IntegrationCredentials,
 ) : CdkObject(cdkObject) {
   /**
    * The ARN of the credentials.
@@ -31,7 +30,7 @@ public abstract class IntegrationCredentials internal constructor(
   public open fun credentialsArn(): String = unwrap(this).getCredentialsArn()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IntegrationCredentials,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IntegrationCredentials,
   ) : IntegrationCredentials(cdkObject)
 
   public companion object {

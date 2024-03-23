@@ -201,8 +201,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)
  */
-public open class CfnRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.CfnRule,
+public open class CfnRule(
+  cdkObject: software.amazon.awscdk.services.events.CfnRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.events.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1206,7 +1206,7 @@ public open class CfnRule internal constructor(
         CfnRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnRule): software.amazon.awscdk.services.events.CfnRule =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.CfnRule
   }
 
   /**
@@ -1275,8 +1275,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty,
     ) : CdkObject(cdkObject), AppSyncParametersProperty {
       /**
        * The GraphQL operation; that is, the query, mutation, or subscription to be parsed and
@@ -1453,8 +1452,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.AwsVpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.AwsVpcConfigurationProperty,
     ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
       /**
        * Specifies whether the task's elastic network interface receives a public IP address.
@@ -1565,8 +1563,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty,
     ) : CdkObject(cdkObject), BatchArrayPropertiesProperty {
       /**
        * The size of the array, if this is an array batch job.
@@ -1825,8 +1822,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty,
     ) : CdkObject(cdkObject), BatchParametersProperty {
       /**
        * The array properties for the submitted job, such as the size of the array.
@@ -1943,8 +1939,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty,
     ) : CdkObject(cdkObject), BatchRetryStrategyProperty {
       /**
        * The number of times to attempt to retry, if the job fails.
@@ -2093,8 +2088,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty,
     ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
       /**
        * The base value designates how many tasks, at a minimum, to run on the specified capacity
@@ -2197,8 +2191,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty,
     ) : CdkObject(cdkObject), DeadLetterConfigProperty {
       /**
        * The ARN of the SQS queue specified as the target for the dead-letter queue.
@@ -2920,7 +2913,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.EcsParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.EcsParametersProperty,
     ) : CdkObject(cdkObject), EcsParametersProperty {
       /**
        * The capacity provider strategy to use for the task.
@@ -3236,7 +3229,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty,
     ) : CdkObject(cdkObject), HttpParametersProperty {
       /**
        * The headers that need to be sent as part of request invoking the API Gateway API or
@@ -3544,8 +3537,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty,
     ) : CdkObject(cdkObject), InputTransformerProperty {
       /**
        * Map of JSON paths to be extracted from the event.
@@ -3703,8 +3695,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty,
     ) : CdkObject(cdkObject), KinesisParametersProperty {
       /**
        * The JSON path to be extracted from the event and used as the partition key.
@@ -3839,8 +3830,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty,
     ) : CdkObject(cdkObject), NetworkConfigurationProperty {
       /**
        * Use this structure to specify the VPC subnets and security groups for the task, and whether
@@ -3969,8 +3959,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty,
     ) : CdkObject(cdkObject), PlacementConstraintProperty {
       /**
        * A cluster query language expression to apply to the constraint.
@@ -4122,8 +4111,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty,
     ) : CdkObject(cdkObject), PlacementStrategyProperty {
       /**
        * The field to apply the placement strategy against.
@@ -4409,8 +4397,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty,
     ) : CdkObject(cdkObject), RedshiftDataParametersProperty {
       /**
        * The name of the database.
@@ -4576,7 +4563,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty,
     ) : CdkObject(cdkObject), RetryPolicyProperty {
       /**
        * The maximum amount of time, in seconds, to continue to make retry attempts.
@@ -4701,8 +4688,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty,
     ) : CdkObject(cdkObject), RunCommandParametersProperty {
       /**
        * Currently, we support including only one RunCommandTarget block, which specifies either an
@@ -4823,8 +4809,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty,
     ) : CdkObject(cdkObject), RunCommandTargetProperty {
       /**
        * Can be either `tag:` *tag-key* or `InstanceIds` .
@@ -4936,8 +4921,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty,
     ) : CdkObject(cdkObject), SageMakerPipelineParameterProperty {
       /**
        * Name of parameter to start execution of a SageMaker Model Building Pipeline.
@@ -5061,8 +5045,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParametersProperty,
     ) : CdkObject(cdkObject), SageMakerPipelineParametersProperty {
       /**
        * List of Parameter names and values for SageMaker Model Building Pipeline execution.
@@ -5143,7 +5126,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty,
     ) : CdkObject(cdkObject), SqsParametersProperty {
       /**
        * The FIFO message group ID to use as the target.
@@ -5253,7 +5236,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.TagProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.TagProperty,
     ) : CdkObject(cdkObject), TagProperty {
       /**
        * A string you can use to assign a value.
@@ -6361,7 +6344,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.TargetProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnRule.TargetProperty,
     ) : CdkObject(cdkObject), TargetProperty {
       /**
        * Contains the GraphQL operation to be parsed and executed, if the event target is an AWS

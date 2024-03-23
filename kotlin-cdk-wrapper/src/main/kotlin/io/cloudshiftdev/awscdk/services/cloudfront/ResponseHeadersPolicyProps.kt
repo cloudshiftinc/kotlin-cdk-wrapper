@@ -292,7 +292,7 @@ public interface ResponseHeadersPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicyProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicyProps,
   ) : CdkObject(cdkObject), ResponseHeadersPolicyProps {
     /**
      * A comment to describe the response headers policy.

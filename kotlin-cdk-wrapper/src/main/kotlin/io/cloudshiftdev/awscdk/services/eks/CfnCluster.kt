@@ -121,8 +121,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html)
  */
-public open class CfnCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.CfnCluster,
+public open class CfnCluster(
+  cdkObject: software.amazon.awscdk.services.eks.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1039,7 +1039,7 @@ public open class CfnCluster internal constructor(
         CfnCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCluster): software.amazon.awscdk.services.eks.CfnCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.eks.CfnCluster
   }
 
   /**
@@ -1152,7 +1152,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.AccessConfigProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.AccessConfigProperty,
     ) : CdkObject(cdkObject), AccessConfigProperty {
       /**
        * The desired authentication mode for the cluster.
@@ -1307,7 +1307,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ClusterLoggingProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ClusterLoggingProperty,
     ) : CdkObject(cdkObject), ClusterLoggingProperty {
       /**
        * The enabled control plane logs for your cluster. All log types are disabled if the array is
@@ -1406,8 +1406,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty,
     ) : CdkObject(cdkObject), ControlPlanePlacementProperty {
       /**
        * The name of the placement group for the Kubernetes control plane instances.
@@ -1554,8 +1553,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty,
     ) : CdkObject(cdkObject), EncryptionConfigProperty {
       /**
        * The encryption provider for the cluster.
@@ -1782,8 +1780,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty,
     ) : CdkObject(cdkObject), KubernetesNetworkConfigProperty {
       /**
        * Specify which IP family is used to assign Kubernetes pod and service IP addresses.
@@ -1954,7 +1951,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty,
     ) : CdkObject(cdkObject), LoggingProperty {
       /**
        * The cluster control plane logging configuration for your cluster.
@@ -2036,8 +2033,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty,
     ) : CdkObject(cdkObject), LoggingTypeConfigProperty {
       /**
        * The name of the log type.
@@ -2271,7 +2267,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty,
     ) : CdkObject(cdkObject), OutpostConfigProperty {
       /**
        * The Amazon EC2 instance type that you want to use for your local Amazon EKS cluster on
@@ -2404,7 +2400,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty,
     ) : CdkObject(cdkObject), ProviderProperty {
       /**
        * Amazon Resource Name (ARN) or alias of the KMS key.
@@ -2801,8 +2797,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty,
     ) : CdkObject(cdkObject), ResourcesVpcConfigProperty {
       /**
        * Set this value to `true` to enable private access for your cluster's Kubernetes API server

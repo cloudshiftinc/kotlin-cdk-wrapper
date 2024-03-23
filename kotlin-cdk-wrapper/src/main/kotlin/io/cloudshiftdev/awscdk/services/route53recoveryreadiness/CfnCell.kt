@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-cell.html)
  */
-public open class CfnCell internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnCell,
+public open class CfnCell(
+  cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnCell,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53recoveryreadiness.CfnCell(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -290,6 +290,7 @@ public open class CfnCell internal constructor(
         CfnCell = CfnCell(cdkObject)
 
     internal fun unwrap(wrapped: CfnCell):
-        software.amazon.awscdk.services.route53recoveryreadiness.CfnCell = wrapped.cdkObject
+        software.amazon.awscdk.services.route53recoveryreadiness.CfnCell = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53recoveryreadiness.CfnCell
   }
 }

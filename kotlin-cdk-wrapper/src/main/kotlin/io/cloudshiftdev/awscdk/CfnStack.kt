@@ -98,8 +98,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html)
  */
-public open class CfnStack internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnStack,
+public open class CfnStack(
+  cdkObject: software.amazon.awscdk.CfnStack,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.CfnStack(scope.let(CloudshiftdevConstructsConstruct::unwrap), id)
@@ -575,7 +575,8 @@ public open class CfnStack internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnStack): CfnStack = CfnStack(cdkObject)
 
-    internal fun unwrap(wrapped: CfnStack): software.amazon.awscdk.CfnStack = wrapped.cdkObject
+    internal fun unwrap(wrapped: CfnStack): software.amazon.awscdk.CfnStack = wrapped.cdkObject as
+        software.amazon.awscdk.CfnStack
   }
 
   /**
@@ -688,7 +689,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.CfnStack.OutputProperty,
+      cdkObject: software.amazon.awscdk.CfnStack.OutputProperty,
     ) : CdkObject(cdkObject), OutputProperty {
       /**
        * User defined description associated with the output.

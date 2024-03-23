@@ -281,7 +281,7 @@ public interface CfnGlobalClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnGlobalClusterProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnGlobalClusterProps,
   ) : CdkObject(cdkObject), CfnGlobalClusterProps {
     /**
      * Specifies whether to enable deletion protection for the new global database cluster.

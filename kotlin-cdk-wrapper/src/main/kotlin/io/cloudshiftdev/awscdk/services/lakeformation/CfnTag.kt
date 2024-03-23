@@ -89,8 +89,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tag.html)
  */
-public open class CfnTag internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnTag,
+public open class CfnTag(
+  cdkObject: software.amazon.awscdk.services.lakeformation.CfnTag,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -313,6 +313,6 @@ public open class CfnTag internal constructor(
         CfnTag(cdkObject)
 
     internal fun unwrap(wrapped: CfnTag): software.amazon.awscdk.services.lakeformation.CfnTag =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lakeformation.CfnTag
   }
 }

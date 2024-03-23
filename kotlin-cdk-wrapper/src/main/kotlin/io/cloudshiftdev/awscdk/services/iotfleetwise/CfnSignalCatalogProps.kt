@@ -264,7 +264,7 @@ public interface CfnSignalCatalogProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalogProps,
+    cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalogProps,
   ) : CdkObject(cdkObject), CfnSignalCatalogProps {
     /**
      * (Optional) A brief description of the signal catalog.

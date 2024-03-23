@@ -168,7 +168,7 @@ public interface VpcEndpointServiceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.VpcEndpointServiceProps,
+    cdkObject: software.amazon.awscdk.services.ec2.VpcEndpointServiceProps,
   ) : CdkObject(cdkObject), VpcEndpointServiceProps {
     /**
      * Whether requests from service consumers to connect to the service through an endpoint must be

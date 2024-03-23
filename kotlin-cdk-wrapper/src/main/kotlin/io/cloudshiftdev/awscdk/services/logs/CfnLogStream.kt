@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html)
  */
-public open class CfnLogStream internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.CfnLogStream,
+public open class CfnLogStream(
+  cdkObject: software.amazon.awscdk.services.logs.CfnLogStream,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -166,6 +166,6 @@ public open class CfnLogStream internal constructor(
         CfnLogStream(cdkObject)
 
     internal fun unwrap(wrapped: CfnLogStream): software.amazon.awscdk.services.logs.CfnLogStream =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.logs.CfnLogStream
   }
 }

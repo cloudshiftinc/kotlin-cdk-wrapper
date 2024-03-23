@@ -86,8 +86,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html)
  */
-public open class CfnDBInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.neptune.CfnDBInstance,
+public open class CfnDBInstance(
+  cdkObject: software.amazon.awscdk.services.neptune.CfnDBInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -670,6 +670,7 @@ public open class CfnDBInstance internal constructor(
         CfnDBInstance = CfnDBInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBInstance):
-        software.amazon.awscdk.services.neptune.CfnDBInstance = wrapped.cdkObject
+        software.amazon.awscdk.services.neptune.CfnDBInstance = wrapped.cdkObject as
+        software.amazon.awscdk.services.neptune.CfnDBInstance
   }
 }

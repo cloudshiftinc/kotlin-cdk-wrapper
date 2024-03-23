@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-subnetgroup.html)
  */
-public open class CfnSubnetGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnSubnetGroup,
+public open class CfnSubnetGroup(
+  cdkObject: software.amazon.awscdk.services.elasticache.CfnSubnetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -299,6 +299,7 @@ public open class CfnSubnetGroup internal constructor(
         CfnSubnetGroup = CfnSubnetGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubnetGroup):
-        software.amazon.awscdk.services.elasticache.CfnSubnetGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticache.CfnSubnetGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticache.CfnSubnetGroup
   }
 }

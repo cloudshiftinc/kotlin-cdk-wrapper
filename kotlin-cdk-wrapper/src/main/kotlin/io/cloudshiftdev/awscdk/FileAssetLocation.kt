@@ -198,7 +198,7 @@ public interface FileAssetLocation {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.FileAssetLocation,
+    cdkObject: software.amazon.awscdk.FileAssetLocation,
   ) : CdkObject(cdkObject), FileAssetLocation {
     /**
      * The name of the Amazon S3 bucket.

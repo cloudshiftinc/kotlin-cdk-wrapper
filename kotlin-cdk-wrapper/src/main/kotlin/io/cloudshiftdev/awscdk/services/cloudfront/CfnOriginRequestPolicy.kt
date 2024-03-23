@@ -67,9 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originrequestpolicy.html)
  */
-public open class CfnOriginRequestPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy,
+public open class CfnOriginRequestPolicy(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -233,7 +232,8 @@ public open class CfnOriginRequestPolicy internal constructor(
         CfnOriginRequestPolicy = CfnOriginRequestPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnOriginRequestPolicy):
-        software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy
   }
 
   /**
@@ -355,8 +355,7 @@ public open class CfnOriginRequestPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty,
     ) : CdkObject(cdkObject), CookiesConfigProperty {
       /**
        * Determines whether cookies in viewer requests are included in requests that CloudFront
@@ -531,8 +530,7 @@ public open class CfnOriginRequestPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty,
     ) : CdkObject(cdkObject), HeadersConfigProperty {
       /**
        * Determines whether any HTTP headers are included in requests that CloudFront sends to the
@@ -845,8 +843,7 @@ public open class CfnOriginRequestPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty,
     ) : CdkObject(cdkObject), OriginRequestPolicyConfigProperty {
       /**
        * A comment to describe the origin request policy.
@@ -1034,8 +1031,7 @@ public open class CfnOriginRequestPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.QueryStringsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.QueryStringsConfigProperty,
     ) : CdkObject(cdkObject), QueryStringsConfigProperty {
       /**
        * Determines whether any URL query strings in viewer requests are included in requests that

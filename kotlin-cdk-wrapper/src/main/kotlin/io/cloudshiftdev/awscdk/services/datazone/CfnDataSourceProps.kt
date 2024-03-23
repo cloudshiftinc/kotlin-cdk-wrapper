@@ -478,7 +478,7 @@ public interface CfnDataSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datazone.CfnDataSourceProps,
+    cdkObject: software.amazon.awscdk.services.datazone.CfnDataSourceProps,
   ) : CdkObject(cdkObject), CfnDataSourceProps {
     /**
      * The metadata forms attached to the assets that the data source works with.

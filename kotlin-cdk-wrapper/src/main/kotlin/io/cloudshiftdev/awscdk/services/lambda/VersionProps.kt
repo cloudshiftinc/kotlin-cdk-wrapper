@@ -167,7 +167,7 @@ public interface VersionProps : VersionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.VersionProps,
+    cdkObject: software.amazon.awscdk.services.lambda.VersionProps,
   ) : CdkObject(cdkObject), VersionProps {
     /**
      * SHA256 of the version of the Lambda source code.

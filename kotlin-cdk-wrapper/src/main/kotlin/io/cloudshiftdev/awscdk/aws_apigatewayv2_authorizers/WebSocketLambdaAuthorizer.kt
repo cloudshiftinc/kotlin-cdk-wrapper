@@ -36,9 +36,8 @@ import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesL
  * .build();
  * ```
  */
-public open class WebSocketLambdaAuthorizer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizer,
+public open class WebSocketLambdaAuthorizer(
+  cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizer,
 ) : CdkObject(cdkObject), IWebSocketRouteAuthorizer {
   public constructor(id: String, handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizer(id,
@@ -192,6 +191,7 @@ public open class WebSocketLambdaAuthorizer internal constructor(
 
     internal fun unwrap(wrapped: WebSocketLambdaAuthorizer):
         software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizer =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizer
   }
 }

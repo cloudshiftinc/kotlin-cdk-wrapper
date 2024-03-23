@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-sink.html)
  */
-public open class CfnSink internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.oam.CfnSink,
+public open class CfnSink(
+  cdkObject: software.amazon.awscdk.services.oam.CfnSink,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -229,6 +229,6 @@ public open class CfnSink internal constructor(
         CfnSink(cdkObject)
 
     internal fun unwrap(wrapped: CfnSink): software.amazon.awscdk.services.oam.CfnSink =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.oam.CfnSink
   }
 }

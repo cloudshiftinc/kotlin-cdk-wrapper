@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channelgroup.html)
  */
-public open class CfnChannelGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannelGroup,
+public open class CfnChannelGroup(
+  cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannelGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -236,6 +236,7 @@ public open class CfnChannelGroup internal constructor(
         CfnChannelGroup = CfnChannelGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnChannelGroup):
-        software.amazon.awscdk.services.mediapackagev2.CfnChannelGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.mediapackagev2.CfnChannelGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediapackagev2.CfnChannelGroup
   }
 }

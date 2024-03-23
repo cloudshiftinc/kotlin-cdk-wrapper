@@ -36,9 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class CallAwsService internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.CallAwsService,
+public open class CallAwsService(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CallAwsService,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -640,6 +639,7 @@ public open class CallAwsService internal constructor(
         CallAwsService = CallAwsService(cdkObject)
 
     internal fun unwrap(wrapped: CallAwsService):
-        software.amazon.awscdk.services.stepfunctions.tasks.CallAwsService = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.CallAwsService = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.CallAwsService
   }
 }

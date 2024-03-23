@@ -175,7 +175,7 @@ public interface ResponseHeadersXSSProtection {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersXSSProtection,
+    cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersXSSProtection,
   ) : CdkObject(cdkObject), ResponseHeadersXSSProtection {
     /**
      * A Boolean that determines whether CloudFront includes the mode=block directive in the

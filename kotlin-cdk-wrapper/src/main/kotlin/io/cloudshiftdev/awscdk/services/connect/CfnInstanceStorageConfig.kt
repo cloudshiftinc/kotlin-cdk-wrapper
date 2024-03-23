@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-instancestorageconfig.html)
  */
-public open class CfnInstanceStorageConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig,
+public open class CfnInstanceStorageConfig(
+  cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -568,7 +568,8 @@ public open class CfnInstanceStorageConfig internal constructor(
         CfnInstanceStorageConfig = CfnInstanceStorageConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceStorageConfig):
-        software.amazon.awscdk.services.connect.CfnInstanceStorageConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnInstanceStorageConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnInstanceStorageConfig
   }
 
   /**
@@ -665,8 +666,7 @@ public open class CfnInstanceStorageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty,
     ) : CdkObject(cdkObject), EncryptionConfigProperty {
       /**
        * The type of encryption.
@@ -764,8 +764,7 @@ public open class CfnInstanceStorageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisFirehoseConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisFirehoseConfigProperty,
     ) : CdkObject(cdkObject), KinesisFirehoseConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the delivery stream.
@@ -847,8 +846,7 @@ public open class CfnInstanceStorageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty,
     ) : CdkObject(cdkObject), KinesisStreamConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the data stream.
@@ -1011,8 +1009,7 @@ public open class CfnInstanceStorageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty,
     ) : CdkObject(cdkObject), KinesisVideoStreamConfigProperty {
       /**
        * The encryption configuration.
@@ -1183,8 +1180,7 @@ public open class CfnInstanceStorageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty,
     ) : CdkObject(cdkObject), S3ConfigProperty {
       /**
        * The S3 bucket name.

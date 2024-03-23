@@ -102,7 +102,7 @@ public interface CpuUtilizationScalingProps : BaseTargetTrackingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.CpuUtilizationScalingProps,
+    cdkObject: software.amazon.awscdk.services.autoscaling.CpuUtilizationScalingProps,
   ) : CdkObject(cdkObject), CpuUtilizationScalingProps {
     /**
      * Period after a scaling completes before another scaling activity can start.

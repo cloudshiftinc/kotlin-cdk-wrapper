@@ -26,7 +26,7 @@ public interface IEnvironmentPlaceholderProvider {
   public fun region(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cxapi.IEnvironmentPlaceholderProvider,
+    cdkObject: software.amazon.awscdk.cxapi.IEnvironmentPlaceholderProvider,
   ) : CdkObject(cdkObject), IEnvironmentPlaceholderProvider {
     /**
      * Return the account.

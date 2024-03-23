@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html)
  */
-public open class CfnPricingRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRule,
+public open class CfnPricingRule(
+  cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -582,7 +582,8 @@ public open class CfnPricingRule internal constructor(
         CfnPricingRule = CfnPricingRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnPricingRule):
-        software.amazon.awscdk.services.billingconductor.CfnPricingRule = wrapped.cdkObject
+        software.amazon.awscdk.services.billingconductor.CfnPricingRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.billingconductor.CfnPricingRule
   }
 
   /**
@@ -650,8 +651,7 @@ public open class CfnPricingRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnPricingRule.FreeTierProperty,
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRule.FreeTierProperty,
     ) : CdkObject(cdkObject), FreeTierProperty {
       /**
        * Activate or deactivate AWS Free Tier.
@@ -761,8 +761,7 @@ public open class CfnPricingRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnPricingRule.TieringProperty,
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRule.TieringProperty,
     ) : CdkObject(cdkObject), TieringProperty {
       /**
        * The possible AWS Free Tier configurations.

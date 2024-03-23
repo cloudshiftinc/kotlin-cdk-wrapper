@@ -159,7 +159,7 @@ public interface CfnConnectorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProps,
+    cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProps,
   ) : CdkObject(cdkObject), CfnConnectorProps {
     /**
      * The label used for registering the connector.

@@ -31,9 +31,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class S3ManifestItemReader internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.S3ManifestItemReader,
+public open class S3ManifestItemReader(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.S3ManifestItemReader,
 ) : CdkObject(cdkObject), IItemReader {
   public constructor(props: S3FileItemReaderProps) :
       this(software.amazon.awscdk.services.stepfunctions.S3ManifestItemReader(props.let(S3FileItemReaderProps::unwrap))
@@ -160,6 +159,7 @@ public open class S3ManifestItemReader internal constructor(
         S3ManifestItemReader = S3ManifestItemReader(cdkObject)
 
     internal fun unwrap(wrapped: S3ManifestItemReader):
-        software.amazon.awscdk.services.stepfunctions.S3ManifestItemReader = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.S3ManifestItemReader = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.S3ManifestItemReader
   }
 }

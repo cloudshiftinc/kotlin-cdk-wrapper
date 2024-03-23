@@ -144,7 +144,7 @@ public interface CfnBaiduChannelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnBaiduChannelProps,
+    cdkObject: software.amazon.awscdk.services.pinpoint.CfnBaiduChannelProps,
   ) : CdkObject(cdkObject), CfnBaiduChannelProps {
     /**
      * The API key that you received from the Baidu Cloud Push service to communicate with the

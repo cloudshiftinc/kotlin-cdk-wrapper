@@ -123,7 +123,7 @@ public interface CfnTopicPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sns.CfnTopicPolicyProps,
+    cdkObject: software.amazon.awscdk.services.sns.CfnTopicPolicyProps,
   ) : CdkObject(cdkObject), CfnTopicPolicyProps {
     /**
      * A policy document that contains permissions to add to the specified SNS topics.

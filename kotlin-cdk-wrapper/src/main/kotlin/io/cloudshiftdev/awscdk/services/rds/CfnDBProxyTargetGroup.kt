@@ -77,8 +77,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html)
  */
-public open class CfnDBProxyTargetGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup,
+public open class CfnDBProxyTargetGroup(
+  cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -430,7 +430,8 @@ public open class CfnDBProxyTargetGroup internal constructor(
         CfnDBProxyTargetGroup = CfnDBProxyTargetGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBProxyTargetGroup):
-        software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup
   }
 
   /**
@@ -746,8 +747,7 @@ public open class CfnDBProxyTargetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty,
     ) : CdkObject(cdkObject), ConnectionPoolConfigurationInfoFormatProperty {
       /**
        * The number of seconds for a proxy to wait for a connection to become available in the

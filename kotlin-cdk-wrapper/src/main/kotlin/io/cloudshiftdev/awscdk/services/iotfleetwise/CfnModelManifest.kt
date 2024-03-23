@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html)
  */
-public open class CfnModelManifest internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnModelManifest,
+public open class CfnModelManifest(
+  cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnModelManifest,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -364,6 +364,7 @@ public open class CfnModelManifest internal constructor(
         CfnModelManifest = CfnModelManifest(cdkObject)
 
     internal fun unwrap(wrapped: CfnModelManifest):
-        software.amazon.awscdk.services.iotfleetwise.CfnModelManifest = wrapped.cdkObject
+        software.amazon.awscdk.services.iotfleetwise.CfnModelManifest = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotfleetwise.CfnModelManifest
   }
 }

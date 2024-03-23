@@ -654,7 +654,7 @@ public interface DistributionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.DistributionProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.DistributionProps,
   ) : CdkObject(cdkObject), DistributionProps {
     /**
      * Additional behaviors for the distribution, mapped by the pathPattern that specifies which

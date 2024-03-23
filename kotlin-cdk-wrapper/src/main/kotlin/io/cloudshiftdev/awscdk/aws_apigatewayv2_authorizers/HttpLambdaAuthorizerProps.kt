@@ -170,8 +170,7 @@ public interface HttpLambdaAuthorizerProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizerProps,
+    cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizerProps,
   ) : CdkObject(cdkObject), HttpLambdaAuthorizerProps {
     /**
      * Friendly authorizer name.

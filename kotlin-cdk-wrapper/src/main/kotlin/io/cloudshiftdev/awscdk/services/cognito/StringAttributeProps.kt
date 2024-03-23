@@ -99,7 +99,7 @@ public interface StringAttributeProps : StringAttributeConstraints, CustomAttrib
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.StringAttributeProps,
+    cdkObject: software.amazon.awscdk.services.cognito.StringAttributeProps,
   ) : CdkObject(cdkObject), StringAttributeProps {
     /**
      * Maximum length of this attribute.

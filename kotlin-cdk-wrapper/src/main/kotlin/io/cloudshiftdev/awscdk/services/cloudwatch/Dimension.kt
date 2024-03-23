@@ -76,7 +76,7 @@ public interface Dimension {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.Dimension,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.Dimension,
   ) : CdkObject(cdkObject), Dimension {
     /**
      * Name of the dimension.

@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class SingletonFunction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.SingletonFunction,
+public open class SingletonFunction(
+  cdkObject: software.amazon.awscdk.services.lambda.SingletonFunction,
 ) : FunctionBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1829,6 +1829,7 @@ public open class SingletonFunction internal constructor(
         SingletonFunction = SingletonFunction(cdkObject)
 
     internal fun unwrap(wrapped: SingletonFunction):
-        software.amazon.awscdk.services.lambda.SingletonFunction = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.SingletonFunction = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.SingletonFunction
   }
 }

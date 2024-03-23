@@ -316,7 +316,7 @@ public interface CfnEventBusPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.CfnEventBusPolicyProps,
+    cdkObject: software.amazon.awscdk.services.events.CfnEventBusPolicyProps,
   ) : CdkObject(cdkObject), CfnEventBusPolicyProps {
     /**
      * The action that you are enabling the other account to perform.

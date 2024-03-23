@@ -144,7 +144,7 @@ public interface CfnProfilePermissionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.signer.CfnProfilePermissionProps,
+    cdkObject: software.amazon.awscdk.services.signer.CfnProfilePermissionProps,
   ) : CdkObject(cdkObject), CfnProfilePermissionProps {
     /**
      * The AWS Signer action permitted as part of cross-account permissions.

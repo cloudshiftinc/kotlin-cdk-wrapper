@@ -122,8 +122,7 @@ public interface CfnSqlInjectionMatchSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSetProps,
+    cdkObject: software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSetProps,
   ) : CdkObject(cdkObject), CfnSqlInjectionMatchSetProps {
     /**
      * The name, if any, of the `SqlInjectionMatchSet` .

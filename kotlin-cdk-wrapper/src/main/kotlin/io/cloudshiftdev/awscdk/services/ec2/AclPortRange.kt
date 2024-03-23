@@ -80,7 +80,7 @@ public interface AclPortRange {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.AclPortRange,
+    cdkObject: software.amazon.awscdk.services.ec2.AclPortRange,
   ) : CdkObject(cdkObject), AclPortRange {
     /**
      * The first port in the range.

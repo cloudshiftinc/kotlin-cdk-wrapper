@@ -77,8 +77,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html)
  */
-public open class CfnStage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnStage,
+public open class CfnStage(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnStage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -904,7 +904,7 @@ public open class CfnStage internal constructor(
         CfnStage(cdkObject)
 
     internal fun unwrap(wrapped: CfnStage): software.amazon.awscdk.services.apigateway.CfnStage =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigateway.CfnStage
   }
 
   /**
@@ -1005,8 +1005,7 @@ public open class CfnStage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnStage.AccessLogSettingProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnStage.AccessLogSettingProperty,
     ) : CdkObject(cdkObject), AccessLogSettingProperty {
       /**
        * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose
@@ -1205,8 +1204,7 @@ public open class CfnStage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnStage.CanarySettingProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnStage.CanarySettingProperty,
     ) : CdkObject(cdkObject), CanarySettingProperty {
       /**
        * The ID of the canary deployment.
@@ -1619,8 +1617,7 @@ public open class CfnStage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnStage.MethodSettingProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnStage.MethodSettingProperty,
     ) : CdkObject(cdkObject), MethodSettingProperty {
       /**
        * Specifies whether the cached responses are encrypted.

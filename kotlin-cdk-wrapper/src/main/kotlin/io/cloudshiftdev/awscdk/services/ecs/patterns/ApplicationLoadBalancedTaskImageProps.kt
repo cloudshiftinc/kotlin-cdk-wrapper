@@ -395,8 +395,7 @@ public interface ApplicationLoadBalancedTaskImageProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageProps,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageProps,
   ) : CdkObject(cdkObject), ApplicationLoadBalancedTaskImageProps {
     /**
      * The container name value to be specified in the task definition.

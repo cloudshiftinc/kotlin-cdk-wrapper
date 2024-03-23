@@ -299,7 +299,7 @@ public interface IRepository : IResource {
   public fun repositoryUriForTagOrDigest(tagOrDigest: String): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecr.IRepository,
+    cdkObject: software.amazon.awscdk.services.ecr.IRepository,
   ) : CdkObject(cdkObject), IRepository {
     /**
      * Add a policy statement to the repository's resource policy.

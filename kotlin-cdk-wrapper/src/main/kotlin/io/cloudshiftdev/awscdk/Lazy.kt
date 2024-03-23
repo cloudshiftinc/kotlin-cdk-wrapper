@@ -15,8 +15,8 @@ import kotlin.jvm.JvmName
  * Can be used to return a string, list or numeric value whose actual value
  * will only be calculated later, during synthesis.
  */
-public open class Lazy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Lazy,
+public open class Lazy(
+  cdkObject: software.amazon.awscdk.Lazy,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun any(producer: IStableAnyProducer): IResolvable =
@@ -103,6 +103,7 @@ public open class Lazy internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Lazy): Lazy = Lazy(cdkObject)
 
-    internal fun unwrap(wrapped: Lazy): software.amazon.awscdk.Lazy = wrapped.cdkObject
+    internal fun unwrap(wrapped: Lazy): software.amazon.awscdk.Lazy = wrapped.cdkObject as
+        software.amazon.awscdk.Lazy
   }
 }

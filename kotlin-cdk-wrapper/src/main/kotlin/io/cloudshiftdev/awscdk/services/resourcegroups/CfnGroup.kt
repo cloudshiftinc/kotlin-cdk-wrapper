@@ -74,8 +74,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html)
  */
-public open class CfnGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup,
+public open class CfnGroup(
+  cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -670,7 +670,7 @@ public open class CfnGroup internal constructor(
         = CfnGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnGroup): software.amazon.awscdk.services.resourcegroups.CfnGroup
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.resourcegroups.CfnGroup
   }
 
   /**
@@ -819,8 +819,7 @@ public open class CfnGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty,
+      cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty,
     ) : CdkObject(cdkObject), ConfigurationItemProperty {
       /**
        * A collection of parameters for this configuration item.
@@ -983,8 +982,7 @@ public open class CfnGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty,
+      cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty,
     ) : CdkObject(cdkObject), ConfigurationParameterProperty {
       /**
        * The name of the group configuration parameter.
@@ -1236,7 +1234,7 @@ public open class CfnGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty,
+      cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty,
     ) : CdkObject(cdkObject), QueryProperty {
       /**
        * Specifies limits to the types of resources that can be included in the resource group.
@@ -1515,8 +1513,7 @@ public open class CfnGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ResourceQueryProperty,
+      cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ResourceQueryProperty,
     ) : CdkObject(cdkObject), ResourceQueryProperty {
       /**
        * The query that defines the membership of the group.
@@ -1698,8 +1695,7 @@ public open class CfnGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty,
+      cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty,
     ) : CdkObject(cdkObject), TagFilterProperty {
       /**
        * A string that defines a tag key.

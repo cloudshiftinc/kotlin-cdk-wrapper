@@ -75,7 +75,7 @@ public interface RoleOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.RoleOptions,
+    cdkObject: software.amazon.awscdk.RoleOptions,
   ) : CdkObject(cdkObject), RoleOptions {
     /**
      * ARN of the role to assume.

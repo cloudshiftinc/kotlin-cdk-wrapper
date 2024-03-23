@@ -1124,7 +1124,7 @@ public interface TriggerFunctionProps : FunctionProps, TriggerOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.triggers.TriggerFunctionProps,
+    cdkObject: software.amazon.awscdk.triggers.TriggerFunctionProps,
   ) : CdkObject(cdkObject), TriggerFunctionProps {
     /**
      * Specify the configuration of AWS Distro for OpenTelemetry (ADOT) instrumentation.

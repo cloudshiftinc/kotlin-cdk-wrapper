@@ -29,8 +29,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class FlowLogDestination internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestination,
+public abstract class FlowLogDestination(
+  cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestination,
 ) : CdkObject(cdkObject) {
   /**
    * Generates a flow log destination configuration.
@@ -43,7 +43,7 @@ public abstract class FlowLogDestination internal constructor(
       flowLog.let(FlowLog::unwrap)).let(FlowLogDestinationConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestination,
+    cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestination,
   ) : FlowLogDestination(cdkObject)
 
   public companion object {

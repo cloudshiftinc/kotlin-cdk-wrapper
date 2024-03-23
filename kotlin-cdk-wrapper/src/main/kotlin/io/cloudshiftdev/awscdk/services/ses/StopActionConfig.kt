@@ -81,7 +81,7 @@ public interface StopActionConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.StopActionConfig,
+    cdkObject: software.amazon.awscdk.services.ses.StopActionConfig,
   ) : CdkObject(cdkObject), StopActionConfig {
     /**
      * The scope of the StopAction.

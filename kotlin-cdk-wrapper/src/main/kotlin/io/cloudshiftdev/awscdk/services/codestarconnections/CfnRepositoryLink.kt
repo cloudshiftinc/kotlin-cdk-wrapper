@@ -41,9 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-repositorylink.html)
  */
-public open class CfnRepositoryLink internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codestarconnections.CfnRepositoryLink,
+public open class CfnRepositoryLink(
+  cdkObject: software.amazon.awscdk.services.codestarconnections.CfnRepositoryLink,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -313,6 +312,7 @@ public open class CfnRepositoryLink internal constructor(
         CfnRepositoryLink = CfnRepositoryLink(cdkObject)
 
     internal fun unwrap(wrapped: CfnRepositoryLink):
-        software.amazon.awscdk.services.codestarconnections.CfnRepositoryLink = wrapped.cdkObject
+        software.amazon.awscdk.services.codestarconnections.CfnRepositoryLink = wrapped.cdkObject as
+        software.amazon.awscdk.services.codestarconnections.CfnRepositoryLink
   }
 }

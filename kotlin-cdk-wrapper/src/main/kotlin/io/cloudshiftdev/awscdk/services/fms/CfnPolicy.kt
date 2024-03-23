@@ -96,8 +96,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html)
  */
-public open class CfnPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy,
+public open class CfnPolicy(
+  cdkObject: software.amazon.awscdk.services.fms.CfnPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -2489,7 +2489,7 @@ public open class CfnPolicy internal constructor(
         CfnPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicy): software.amazon.awscdk.services.fms.CfnPolicy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.fms.CfnPolicy
   }
 
   /**
@@ -2598,7 +2598,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.IEMapProperty,
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.IEMapProperty,
     ) : CdkObject(cdkObject), IEMapProperty {
       /**
        * The account list for the map.
@@ -2701,8 +2701,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty,
     ) : CdkObject(cdkObject), NetworkFirewallPolicyProperty {
       /**
        * Defines the deployment model to use for the firewall policy.
@@ -2878,7 +2877,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyOptionProperty,
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyOptionProperty,
     ) : CdkObject(cdkObject), PolicyOptionProperty {
       /**
        * Defines the deployment model to use for the firewall policy.
@@ -3002,7 +3001,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty,
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty,
     ) : CdkObject(cdkObject), PolicyTagProperty {
       /**
        * Part of the key:value pair that defines a tag.
@@ -3121,7 +3120,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty,
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty,
     ) : CdkObject(cdkObject), ResourceTagProperty {
       /**
        * The resource tag key.
@@ -3768,8 +3767,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fms.CfnPolicy.SecurityServicePolicyDataProperty,
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.SecurityServicePolicyDataProperty,
     ) : CdkObject(cdkObject), SecurityServicePolicyDataProperty {
       /**
        * Details about the service that are specific to the service type, in JSON format.
@@ -4029,8 +4027,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty,
     ) : CdkObject(cdkObject), ThirdPartyFirewallPolicyProperty {
       /**
        * Defines the deployment model to use for the third-party firewall policy.

@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html)
  */
-public open class CfnDataProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider,
+public open class CfnDataProvider(
+  cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -474,7 +474,8 @@ public open class CfnDataProvider internal constructor(
         CfnDataProvider = CfnDataProvider(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataProvider):
-        software.amazon.awscdk.services.dms.CfnDataProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.dms.CfnDataProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.dms.CfnDataProvider
   }
 
   /**
@@ -638,8 +639,7 @@ public open class CfnDataProvider internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty,
     ) : CdkObject(cdkObject), PostgreSqlSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html#cfn-dms-dataprovider-postgresqlsettings-certificatearn)
@@ -788,7 +788,7 @@ public open class CfnDataProvider internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty,
     ) : CdkObject(cdkObject), SettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-postgresqlsettings)

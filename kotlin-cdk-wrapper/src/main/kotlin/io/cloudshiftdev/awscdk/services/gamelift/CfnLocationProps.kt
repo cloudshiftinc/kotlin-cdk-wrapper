@@ -116,7 +116,7 @@ public interface CfnLocationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.gamelift.CfnLocationProps,
+    cdkObject: software.amazon.awscdk.services.gamelift.CfnLocationProps,
   ) : CdkObject(cdkObject), CfnLocationProps {
     /**
      * A descriptive name for the custom location.

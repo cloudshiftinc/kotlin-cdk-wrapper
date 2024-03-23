@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html)
  */
-public open class CfnConformancePack internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.CfnConformancePack,
+public open class CfnConformancePack(
+  cdkObject: software.amazon.awscdk.services.config.CfnConformancePack,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -415,7 +415,8 @@ public open class CfnConformancePack internal constructor(
         CfnConformancePack = CfnConformancePack(cdkObject)
 
     internal fun unwrap(wrapped: CfnConformancePack):
-        software.amazon.awscdk.services.config.CfnConformancePack = wrapped.cdkObject
+        software.amazon.awscdk.services.config.CfnConformancePack = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnConformancePack
   }
 
   /**
@@ -497,8 +498,7 @@ public open class CfnConformancePack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty,
     ) : CdkObject(cdkObject), ConformancePackInputParameterProperty {
       /**
        * One part of a key-value pair.
@@ -642,8 +642,7 @@ public open class CfnConformancePack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty,
     ) : CdkObject(cdkObject), TemplateSSMDocumentDetailsProperty {
       /**
        * The name or Amazon Resource Name (ARN) of the SSM document to use to create a conformance

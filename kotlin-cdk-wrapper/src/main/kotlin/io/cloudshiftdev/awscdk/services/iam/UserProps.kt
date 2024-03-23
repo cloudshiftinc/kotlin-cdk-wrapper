@@ -298,7 +298,7 @@ public interface UserProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.UserProps,
+    cdkObject: software.amazon.awscdk.services.iam.UserProps,
   ) : CdkObject(cdkObject), UserProps {
     /**
      * Groups to add this user to.

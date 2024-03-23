@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Queue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sqs.Queue,
+public open class Queue(
+  cdkObject: software.amazon.awscdk.services.sqs.Queue,
 ) : QueueBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sqs.Queue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -672,6 +672,6 @@ public open class Queue internal constructor(
         Queue(cdkObject)
 
     internal fun unwrap(wrapped: Queue): software.amazon.awscdk.services.sqs.Queue =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sqs.Queue
   }
 }

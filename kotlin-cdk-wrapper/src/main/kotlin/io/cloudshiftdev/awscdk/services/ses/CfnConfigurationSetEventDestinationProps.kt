@@ -137,8 +137,7 @@ public interface CfnConfigurationSetEventDestinationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestinationProps,
+    cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestinationProps,
   ) : CdkObject(cdkObject), CfnConfigurationSetEventDestinationProps {
     /**
      * The name of the configuration set that contains the event destination.

@@ -42,9 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class NetworkLoadBalancer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer,
+public open class NetworkLoadBalancer(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer,
 ) : BaseLoadBalancer(cdkObject), INetworkLoadBalancer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -731,6 +730,7 @@ public open class NetworkLoadBalancer internal constructor(
 
     internal fun unwrap(wrapped: NetworkLoadBalancer):
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer
   }
 }

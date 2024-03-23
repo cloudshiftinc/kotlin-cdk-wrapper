@@ -18,8 +18,8 @@ import kotlin.String
  * SortKeyStep sortKeyStep = new SortKeyStep(assign, "skey");
  * ```
  */
-public open class SortKeyStep internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.SortKeyStep,
+public open class SortKeyStep(
+  cdkObject: software.amazon.awscdk.services.appsync.SortKeyStep,
 ) : CdkObject(cdkObject) {
   public constructor(pkey: Assign, skey: String) :
       this(software.amazon.awscdk.services.appsync.SortKeyStep(pkey.let(Assign::unwrap), skey)
@@ -42,6 +42,6 @@ public open class SortKeyStep internal constructor(
         SortKeyStep(cdkObject)
 
     internal fun unwrap(wrapped: SortKeyStep): software.amazon.awscdk.services.appsync.SortKeyStep =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.SortKeyStep
   }
 }

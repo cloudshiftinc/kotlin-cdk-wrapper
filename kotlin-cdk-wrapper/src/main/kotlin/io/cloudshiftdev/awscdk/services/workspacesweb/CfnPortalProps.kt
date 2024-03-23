@@ -376,7 +376,7 @@ public interface CfnPortalProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnPortalProps,
+    cdkObject: software.amazon.awscdk.services.workspacesweb.CfnPortalProps,
   ) : CdkObject(cdkObject), CfnPortalProps {
     /**
      * The additional encryption context of the portal.

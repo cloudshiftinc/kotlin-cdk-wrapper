@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxopenzfs.html)
  */
-public open class CfnLocationFSxOpenZFS internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS,
+public open class CfnLocationFSxOpenZFS(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -420,7 +420,8 @@ public open class CfnLocationFSxOpenZFS internal constructor(
         CfnLocationFSxOpenZFS = CfnLocationFSxOpenZFS(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationFSxOpenZFS):
-        software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS
   }
 
   /**
@@ -520,8 +521,7 @@ public open class CfnLocationFSxOpenZFS internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty,
     ) : CdkObject(cdkObject), MountOptionsProperty {
       /**
        * The specific NFS version that you want DataSync to use to mount your NFS share.
@@ -651,8 +651,7 @@ public open class CfnLocationFSxOpenZFS internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty,
     ) : CdkObject(cdkObject), NFSProperty {
       /**
        * Represents the mount options that are available for DataSync to access an NFS location.
@@ -770,8 +769,7 @@ public open class CfnLocationFSxOpenZFS internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty,
     ) : CdkObject(cdkObject), ProtocolProperty {
       /**
        * Represents the Network File System (NFS) protocol that DataSync uses to access your FSx for

@@ -106,8 +106,7 @@ public interface CloudFormationRuleConstraintOptions : CommonConstraintOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicecatalog.CloudFormationRuleConstraintOptions,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationRuleConstraintOptions,
   ) : CdkObject(cdkObject), CloudFormationRuleConstraintOptions {
     /**
      * The description of the constraint.

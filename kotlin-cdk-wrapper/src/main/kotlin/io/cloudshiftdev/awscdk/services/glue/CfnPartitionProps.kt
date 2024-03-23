@@ -207,7 +207,7 @@ public interface CfnPartitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.glue.CfnPartitionProps,
+    cdkObject: software.amazon.awscdk.services.glue.CfnPartitionProps,
   ) : CdkObject(cdkObject), CfnPartitionProps {
     /**
      * The AWS account ID of the catalog in which the partion is to be created.

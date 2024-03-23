@@ -11,8 +11,8 @@ import kotlin.String
 /**
  * Base class for creating a custom resource provider.
  */
-public abstract class CustomResourceProviderBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CustomResourceProviderBase,
+public abstract class CustomResourceProviderBase(
+  cdkObject: software.amazon.awscdk.CustomResourceProviderBase,
 ) : Construct(cdkObject) {
   /**
    * Add an IAM policy statement to the inline policy of the provider's lambda function's role.
@@ -56,7 +56,7 @@ public abstract class CustomResourceProviderBase internal constructor(
   public open fun serviceToken(): String = unwrap(this).getServiceToken()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CustomResourceProviderBase,
+    cdkObject: software.amazon.awscdk.CustomResourceProviderBase,
   ) : CustomResourceProviderBase(cdkObject)
 
   public companion object {

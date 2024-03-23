@@ -60,7 +60,7 @@ public interface ReverseOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ReverseOptions,
+    cdkObject: software.amazon.awscdk.ReverseOptions,
   ) : CdkObject(cdkObject), ReverseOptions {
     /**
      * Fail if the given string is a concatenation.

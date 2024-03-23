@@ -20,8 +20,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class AuroraEngineVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.AuroraEngineVersion,
+public open class AuroraEngineVersion(
+  cdkObject: software.amazon.awscdk.services.rds.AuroraEngineVersion,
 ) : CdkObject(cdkObject) {
   /**
    * The full version string, for example, "5.6.mysql_aurora.1.78.3.6".
@@ -113,6 +113,7 @@ public open class AuroraEngineVersion internal constructor(
         AuroraEngineVersion = AuroraEngineVersion(cdkObject)
 
     internal fun unwrap(wrapped: AuroraEngineVersion):
-        software.amazon.awscdk.services.rds.AuroraEngineVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.AuroraEngineVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.AuroraEngineVersion
   }
 }

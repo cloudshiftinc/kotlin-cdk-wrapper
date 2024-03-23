@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class LogRetention internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.LogRetention,
+public open class LogRetention(
+  cdkObject: software.amazon.awscdk.services.logs.LogRetention,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -233,6 +233,6 @@ public open class LogRetention internal constructor(
         LogRetention(cdkObject)
 
     internal fun unwrap(wrapped: LogRetention): software.amazon.awscdk.services.logs.LogRetention =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.logs.LogRetention
   }
 }

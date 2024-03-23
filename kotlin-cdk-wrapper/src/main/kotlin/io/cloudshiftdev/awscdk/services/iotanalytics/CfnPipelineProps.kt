@@ -286,7 +286,7 @@ public interface CfnPipelineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipelineProps,
+    cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipelineProps,
   ) : CdkObject(cdkObject), CfnPipelineProps {
     /**
      * A list of "PipelineActivity" objects.

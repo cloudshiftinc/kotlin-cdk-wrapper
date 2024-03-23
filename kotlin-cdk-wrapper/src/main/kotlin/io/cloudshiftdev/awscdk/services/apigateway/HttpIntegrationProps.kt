@@ -141,7 +141,7 @@ public interface HttpIntegrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.HttpIntegrationProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.HttpIntegrationProps,
   ) : CdkObject(cdkObject), HttpIntegrationProps {
     /**
      * HTTP method to use when invoking the backend URL.

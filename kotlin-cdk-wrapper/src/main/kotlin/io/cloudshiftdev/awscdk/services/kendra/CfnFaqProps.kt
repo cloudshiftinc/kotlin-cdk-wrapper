@@ -300,7 +300,7 @@ public interface CfnFaqProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kendra.CfnFaqProps,
+    cdkObject: software.amazon.awscdk.services.kendra.CfnFaqProps,
   ) : CdkObject(cdkObject), CfnFaqProps {
     /**
      * A description for the FAQ.

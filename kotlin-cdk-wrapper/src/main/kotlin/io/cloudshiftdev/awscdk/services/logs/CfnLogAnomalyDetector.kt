@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loganomalydetector.html)
  */
-public open class CfnLogAnomalyDetector internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.CfnLogAnomalyDetector,
+public open class CfnLogAnomalyDetector(
+  cdkObject: software.amazon.awscdk.services.logs.CfnLogAnomalyDetector,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.logs.CfnLogAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -440,6 +440,7 @@ public open class CfnLogAnomalyDetector internal constructor(
         CfnLogAnomalyDetector = CfnLogAnomalyDetector(cdkObject)
 
     internal fun unwrap(wrapped: CfnLogAnomalyDetector):
-        software.amazon.awscdk.services.logs.CfnLogAnomalyDetector = wrapped.cdkObject
+        software.amazon.awscdk.services.logs.CfnLogAnomalyDetector = wrapped.cdkObject as
+        software.amazon.awscdk.services.logs.CfnLogAnomalyDetector
   }
 }

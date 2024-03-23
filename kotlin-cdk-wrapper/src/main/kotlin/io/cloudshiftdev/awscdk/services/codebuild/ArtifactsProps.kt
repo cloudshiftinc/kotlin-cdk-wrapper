@@ -59,7 +59,7 @@ public interface ArtifactsProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.ArtifactsProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.ArtifactsProps,
   ) : CdkObject(cdkObject), ArtifactsProps {
     /**
      * The artifact identifier.

@@ -87,8 +87,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-allowlist.html)
  */
-public open class CfnAllowList internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.macie.CfnAllowList,
+public open class CfnAllowList(
+  cdkObject: software.amazon.awscdk.services.macie.CfnAllowList,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -447,7 +447,7 @@ public open class CfnAllowList internal constructor(
         CfnAllowList(cdkObject)
 
     internal fun unwrap(wrapped: CfnAllowList): software.amazon.awscdk.services.macie.CfnAllowList =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.macie.CfnAllowList
   }
 
   /**
@@ -571,7 +571,7 @@ public open class CfnAllowList internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty,
     ) : CdkObject(cdkObject), CriteriaProperty {
       /**
        * The regular expression ( *regex* ) that defines the text pattern to ignore.
@@ -710,8 +710,7 @@ public open class CfnAllowList internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty,
+      cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty,
     ) : CdkObject(cdkObject), S3WordsListProperty {
       /**
        * The full name of the S3 bucket that contains the object.

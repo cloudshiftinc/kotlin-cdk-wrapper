@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html)
  */
-public open class CfnWebACL internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.waf.CfnWebACL,
+public open class CfnWebACL(
+  cdkObject: software.amazon.awscdk.services.waf.CfnWebACL,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -399,7 +399,7 @@ public open class CfnWebACL internal constructor(
         CfnWebACL(cdkObject)
 
     internal fun unwrap(wrapped: CfnWebACL): software.amazon.awscdk.services.waf.CfnWebACL =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.waf.CfnWebACL
   }
 
   /**
@@ -630,7 +630,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.waf.CfnWebACL.ActivatedRuleProperty,
+      cdkObject: software.amazon.awscdk.services.waf.CfnWebACL.ActivatedRuleProperty,
     ) : CdkObject(cdkObject), ActivatedRuleProperty {
       /**
        * Specifies the action that Amazon CloudFront or AWS WAF takes when a web request matches the
@@ -784,7 +784,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.waf.CfnWebACL.WafActionProperty,
+      cdkObject: software.amazon.awscdk.services.waf.CfnWebACL.WafActionProperty,
     ) : CdkObject(cdkObject), WafActionProperty {
       /**
        * Specifies how you want AWS WAF to respond to requests that match the settings in a `Rule` .

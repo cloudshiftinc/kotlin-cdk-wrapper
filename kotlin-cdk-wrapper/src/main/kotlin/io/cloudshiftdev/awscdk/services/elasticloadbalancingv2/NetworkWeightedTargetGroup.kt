@@ -83,8 +83,7 @@ public interface NetworkWeightedTargetGroup {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkWeightedTargetGroup,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkWeightedTargetGroup,
   ) : CdkObject(cdkObject), NetworkWeightedTargetGroup {
     /**
      * The target group.

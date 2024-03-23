@@ -293,7 +293,7 @@ public interface CfnInferenceComponentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponentProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponentProps,
   ) : CdkObject(cdkObject), CfnInferenceComponentProps {
     /**
      * The Amazon Resource Name (ARN) of the endpoint that hosts the inference component.

@@ -103,8 +103,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html)
  */
-public open class CfnDomain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain,
+public open class CfnDomain(
+  cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -561,7 +561,8 @@ public open class CfnDomain internal constructor(
         CfnDomain = CfnDomain(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomain):
-        software.amazon.awscdk.services.customerprofiles.CfnDomain = wrapped.cdkObject
+        software.amazon.awscdk.services.customerprofiles.CfnDomain = wrapped.cdkObject as
+        software.amazon.awscdk.services.customerprofiles.CfnDomain
   }
 
   /**
@@ -788,8 +789,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty,
     ) : CdkObject(cdkObject), AttributeTypesSelectorProperty {
       /**
        * The `Address` type.
@@ -1091,8 +1091,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty,
     ) : CdkObject(cdkObject), AutoMergingProperty {
       /**
        * Determines how the auto-merging process should resolve conflicts between different
@@ -1235,8 +1234,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty,
     ) : CdkObject(cdkObject), ConflictResolutionProperty {
       /**
        * How the auto-merging process should resolve conflicts between different profiles.
@@ -1351,8 +1349,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty,
     ) : CdkObject(cdkObject), ConsolidationProperty {
       /**
        * A list of matching criteria.
@@ -1502,8 +1499,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty,
     ) : CdkObject(cdkObject), DomainStatsProperty {
       /**
        * The number of profiles that you are currently paying for in the domain.
@@ -1641,8 +1637,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty,
     ) : CdkObject(cdkObject), ExportingConfigProperty {
       /**
        * The S3 location where Identity Resolution Jobs write result files.
@@ -1743,8 +1738,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty,
     ) : CdkObject(cdkObject), JobScheduleProperty {
       /**
        * The day when the Identity Resolution Job should run every week.
@@ -2020,8 +2014,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty,
     ) : CdkObject(cdkObject), MatchingProperty {
       /**
        * Configuration information about the auto-merging process.
@@ -2139,8 +2132,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty,
     ) : CdkObject(cdkObject), MatchingRuleProperty {
       /**
        * A single rule level of the `MatchRules` .
@@ -2549,8 +2541,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty,
     ) : CdkObject(cdkObject), RuleBasedMatchingProperty {
       /**
        * Configures information about the `AttributeTypesSelector` where the rule-based identity
@@ -2715,8 +2706,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty,
     ) : CdkObject(cdkObject), S3ExportingConfigProperty {
       /**
        * The name of the S3 bucket where Identity Resolution Jobs write result files.

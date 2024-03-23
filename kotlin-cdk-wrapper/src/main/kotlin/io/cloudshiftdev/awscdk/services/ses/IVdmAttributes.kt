@@ -21,7 +21,7 @@ public interface IVdmAttributes : IResource {
   public fun vdmAttributesName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.IVdmAttributes,
+    cdkObject: software.amazon.awscdk.services.ses.IVdmAttributes,
   ) : CdkObject(cdkObject), IVdmAttributes {
     /**
      * Apply the given removal policy to this resource.

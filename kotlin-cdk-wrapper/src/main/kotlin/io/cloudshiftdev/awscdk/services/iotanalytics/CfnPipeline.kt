@@ -117,8 +117,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-pipeline.html)
  */
-public open class CfnPipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline,
+public open class CfnPipeline(
+  cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -425,7 +425,8 @@ public open class CfnPipeline internal constructor(
         CfnPipeline = CfnPipeline(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipeline):
-        software.amazon.awscdk.services.iotanalytics.CfnPipeline = wrapped.cdkObject
+        software.amazon.awscdk.services.iotanalytics.CfnPipeline = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotanalytics.CfnPipeline
   }
 
   /**
@@ -1006,8 +1007,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty,
     ) : CdkObject(cdkObject), ActivityProperty {
       /**
        * Adds other attributes based on existing attributes in the message.
@@ -1228,8 +1228,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty,
     ) : CdkObject(cdkObject), AddAttributesProperty {
       /**
        * A list of 1-50 "AttributeNameMapping" objects that map an existing attribute to a new
@@ -1370,8 +1369,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty,
     ) : CdkObject(cdkObject), ChannelProperty {
       /**
        * The name of the channel from which the messages are processed.
@@ -1485,8 +1483,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty,
     ) : CdkObject(cdkObject), DatastoreProperty {
       /**
        * The name of the data store where processed messages are stored.
@@ -1661,8 +1658,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty,
     ) : CdkObject(cdkObject), DeviceRegistryEnrichProperty {
       /**
        * The name of the attribute that is added to the message.
@@ -1855,8 +1851,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty,
     ) : CdkObject(cdkObject), DeviceShadowEnrichProperty {
       /**
        * The name of the attribute that is added to the message.
@@ -2007,8 +2002,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.FilterProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.FilterProperty,
     ) : CdkObject(cdkObject), FilterProperty {
       /**
        * An expression that looks like an SQL WHERE clause that must return a Boolean value.
@@ -2170,8 +2164,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty,
     ) : CdkObject(cdkObject), LambdaProperty {
       /**
        * The number of messages passed to the Lambda function for processing.
@@ -2338,7 +2331,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.MathProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.MathProperty,
     ) : CdkObject(cdkObject), MathProperty {
       /**
        * The name of the attribute that contains the result of the math operation.
@@ -2491,8 +2484,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty,
     ) : CdkObject(cdkObject), RemoveAttributesProperty {
       /**
        * A list of 1-50 attributes to remove from the message.
@@ -2639,8 +2631,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty,
     ) : CdkObject(cdkObject), SelectAttributesProperty {
       /**
        * A list of the attributes to select from the message.

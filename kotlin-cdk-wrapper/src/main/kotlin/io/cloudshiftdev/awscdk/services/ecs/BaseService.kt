@@ -47,8 +47,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class BaseService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.BaseService,
+public abstract class BaseService(
+  cdkObject: software.amazon.awscdk.services.ecs.BaseService,
 ) : Resource(cdkObject), IBaseService, IApplicationLoadBalancerTarget, INetworkLoadBalancerTarget,
     ILoadBalancerTarget {
   /**
@@ -547,7 +547,7 @@ public abstract class BaseService internal constructor(
       unwrap(this).getTaskDefinition().let(TaskDefinition::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.BaseService,
+    cdkObject: software.amazon.awscdk.services.ecs.BaseService,
   ) : BaseService(cdkObject)
 
   public companion object {

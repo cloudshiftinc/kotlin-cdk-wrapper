@@ -321,7 +321,7 @@ public interface CfnStreamProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.qldb.CfnStreamProps,
+    cdkObject: software.amazon.awscdk.services.qldb.CfnStreamProps,
   ) : CdkObject(cdkObject), CfnStreamProps {
     /**
      * The exclusive date and time that specifies when the stream ends.

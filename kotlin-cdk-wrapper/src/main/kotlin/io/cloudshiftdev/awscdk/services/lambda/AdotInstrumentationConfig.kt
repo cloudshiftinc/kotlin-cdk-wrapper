@@ -80,7 +80,7 @@ public interface AdotInstrumentationConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.AdotInstrumentationConfig,
+    cdkObject: software.amazon.awscdk.services.lambda.AdotInstrumentationConfig,
   ) : CdkObject(cdkObject), AdotInstrumentationConfig {
     /**
      * The startup script to run, see ADOT documentation to pick the right script for your use case:

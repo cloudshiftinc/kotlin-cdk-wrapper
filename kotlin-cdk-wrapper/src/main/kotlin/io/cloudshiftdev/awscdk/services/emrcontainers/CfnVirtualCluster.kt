@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html)
  */
-public open class CfnVirtualCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster,
+public open class CfnVirtualCluster(
+  cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -316,7 +316,8 @@ public open class CfnVirtualCluster internal constructor(
         CfnVirtualCluster = CfnVirtualCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnVirtualCluster):
-        software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster = wrapped.cdkObject
+        software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster = wrapped.cdkObject as
+        software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster
   }
 
   /**
@@ -402,8 +403,7 @@ public open class CfnVirtualCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty,
+      cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty,
     ) : CdkObject(cdkObject), ContainerInfoProperty {
       /**
        * The information about the Amazon EKS cluster.
@@ -576,8 +576,7 @@ public open class CfnVirtualCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerProviderProperty,
+      cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerProviderProperty,
     ) : CdkObject(cdkObject), ContainerProviderProperty {
       /**
        * The ID of the container cluster.
@@ -696,8 +695,7 @@ public open class CfnVirtualCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty,
+      cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty,
     ) : CdkObject(cdkObject), EksInfoProperty {
       /**
        * The namespaces of the EKS cluster.

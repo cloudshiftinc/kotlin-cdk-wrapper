@@ -85,8 +85,7 @@ public interface CfnResolverQueryLoggingConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigProps,
+    cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigProps,
   ) : CdkObject(cdkObject), CfnResolverQueryLoggingConfigProps {
     /**
      * The ARN of the resource that you want Resolver to send query logs: an Amazon S3 bucket, a

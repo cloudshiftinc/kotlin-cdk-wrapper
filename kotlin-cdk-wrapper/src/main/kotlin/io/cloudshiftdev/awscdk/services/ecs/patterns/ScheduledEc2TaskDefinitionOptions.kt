@@ -69,8 +69,7 @@ public interface ScheduledEc2TaskDefinitionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskDefinitionOptions,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskDefinitionOptions,
   ) : CdkObject(cdkObject), ScheduledEc2TaskDefinitionOptions {
     /**
      * The task definition to use for tasks in the service. One of image or taskDefinition must be

@@ -45,7 +45,7 @@ public interface IEmailIdentity : IResource {
   public fun grantSendEmail(grantee: IGrantable): Grant
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.IEmailIdentity,
+    cdkObject: software.amazon.awscdk.services.ses.IEmailIdentity,
   ) : CdkObject(cdkObject), IEmailIdentity {
     /**
      * Apply the given removal policy to this resource.

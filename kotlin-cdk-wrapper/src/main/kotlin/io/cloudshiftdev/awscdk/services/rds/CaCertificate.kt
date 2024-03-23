@@ -21,8 +21,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html)
  */
-public open class CaCertificate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CaCertificate,
+public open class CaCertificate(
+  cdkObject: software.amazon.awscdk.services.rds.CaCertificate,
 ) : CdkObject(cdkObject) {
   public companion object {
     public val RDS_CA_2019: CaCertificate =
@@ -44,6 +44,6 @@ public open class CaCertificate internal constructor(
         CaCertificate(cdkObject)
 
     internal fun unwrap(wrapped: CaCertificate): software.amazon.awscdk.services.rds.CaCertificate =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.rds.CaCertificate
   }
 }

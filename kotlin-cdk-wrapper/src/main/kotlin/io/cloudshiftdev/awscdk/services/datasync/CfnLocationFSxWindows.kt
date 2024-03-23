@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html)
  */
-public open class CfnLocationFSxWindows internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxWindows,
+public open class CfnLocationFSxWindows(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxWindows,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -460,6 +460,7 @@ public open class CfnLocationFSxWindows internal constructor(
         CfnLocationFSxWindows = CfnLocationFSxWindows(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationFSxWindows):
-        software.amazon.awscdk.services.datasync.CfnLocationFSxWindows = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnLocationFSxWindows = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationFSxWindows
   }
 }

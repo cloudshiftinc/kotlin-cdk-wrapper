@@ -15,8 +15,8 @@ import kotlin.String
  * EnvironmentUtils environmentUtils = new EnvironmentUtils();
  * ```
  */
-public open class EnvironmentUtils internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.cxapi.EnvironmentUtils,
+public open class EnvironmentUtils(
+  cdkObject: software.amazon.awscdk.cxapi.EnvironmentUtils,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.cxapi.EnvironmentUtils()
   )
@@ -35,6 +35,6 @@ public open class EnvironmentUtils internal constructor(
         EnvironmentUtils(cdkObject)
 
     internal fun unwrap(wrapped: EnvironmentUtils): software.amazon.awscdk.cxapi.EnvironmentUtils =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.cxapi.EnvironmentUtils
   }
 }

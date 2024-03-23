@@ -81,7 +81,7 @@ public interface NetworkTargetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps,
   ) : CdkObject(cdkObject), NetworkTargetProps {
     /**
      * The port number of the container.

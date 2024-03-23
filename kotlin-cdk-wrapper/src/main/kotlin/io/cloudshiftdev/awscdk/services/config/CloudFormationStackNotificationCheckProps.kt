@@ -143,8 +143,7 @@ public interface CloudFormationStackNotificationCheckProps : RuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.config.CloudFormationStackNotificationCheckProps,
+    cdkObject: software.amazon.awscdk.services.config.CloudFormationStackNotificationCheckProps,
   ) : CdkObject(cdkObject), CloudFormationStackNotificationCheckProps {
     /**
      * A name for the AWS Config rule.

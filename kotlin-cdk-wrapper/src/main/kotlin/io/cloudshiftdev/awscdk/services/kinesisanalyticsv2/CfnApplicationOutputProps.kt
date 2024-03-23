@@ -147,8 +147,7 @@ public interface CfnApplicationOutputProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutputProps,
+    cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutputProps,
   ) : CdkObject(cdkObject), CfnApplicationOutputProps {
     /**
      * The name of the application.

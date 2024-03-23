@@ -101,7 +101,7 @@ public interface HttpTimeout {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.HttpTimeout,
+    cdkObject: software.amazon.awscdk.services.appmesh.HttpTimeout,
   ) : CdkObject(cdkObject), HttpTimeout {
     /**
      * Represents an idle timeout.

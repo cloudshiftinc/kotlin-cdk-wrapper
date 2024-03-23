@@ -226,7 +226,7 @@ public interface CfnInstanceConnectEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpointProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpointProps,
   ) : CdkObject(cdkObject), CfnInstanceConnectEndpointProps {
     /**
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request.

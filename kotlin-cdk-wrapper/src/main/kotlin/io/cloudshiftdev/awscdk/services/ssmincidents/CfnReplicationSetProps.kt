@@ -167,7 +167,7 @@ public interface CfnReplicationSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSetProps,
+    cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSetProps,
   ) : CdkObject(cdkObject), CfnReplicationSetProps {
     /**
      * Determines if the replication set deletion protection is enabled or not.

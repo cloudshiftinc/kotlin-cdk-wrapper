@@ -38,7 +38,7 @@ public interface SchemaBindOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.SchemaBindOptions,
+    cdkObject: software.amazon.awscdk.services.appsync.SchemaBindOptions,
   ) : CdkObject(cdkObject), SchemaBindOptions
 
   public companion object {

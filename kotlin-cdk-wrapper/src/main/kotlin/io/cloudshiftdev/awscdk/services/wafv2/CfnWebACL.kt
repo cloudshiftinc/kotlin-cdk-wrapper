@@ -74,8 +74,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)
  */
-public open class CfnWebACL internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL,
+public open class CfnWebACL(
+  cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1221,7 +1221,7 @@ public open class CfnWebACL internal constructor(
         CfnWebACL(cdkObject)
 
     internal fun unwrap(wrapped: CfnWebACL): software.amazon.awscdk.services.wafv2.CfnWebACL =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.wafv2.CfnWebACL
   }
 
   /**
@@ -1626,8 +1626,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesACFPRuleSetProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesACFPRuleSetProperty,
     ) : CdkObject(cdkObject), AWSManagedRulesACFPRuleSetProperty {
       /**
        * The path of the account creation endpoint for your application.
@@ -2043,8 +2042,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesATPRuleSetProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesATPRuleSetProperty,
     ) : CdkObject(cdkObject), AWSManagedRulesATPRuleSetProperty {
       /**
        * Allow the use of regular expressions in the login page path.
@@ -2278,8 +2276,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesBotControlRuleSetProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesBotControlRuleSetProperty,
     ) : CdkObject(cdkObject), AWSManagedRulesBotControlRuleSetProperty {
       /**
        * Applies only to the targeted inspection level.
@@ -2452,7 +2449,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AllowActionProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AllowActionProperty,
     ) : CdkObject(cdkObject), AllowActionProperty {
       /**
        * Defines custom handling for the web request.
@@ -2563,7 +2560,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AndStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AndStatementProperty,
     ) : CdkObject(cdkObject), AndStatementProperty {
       /**
        * The statements to combine with AND logic.
@@ -2707,8 +2704,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.AssociationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AssociationConfigProperty,
     ) : CdkObject(cdkObject), AssociationConfigProperty {
       /**
        * Customizes the maximum size of the request body that your protected CloudFront
@@ -2865,7 +2861,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.BlockActionProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.BlockActionProperty,
     ) : CdkObject(cdkObject), BlockActionProperty {
       /**
        * Defines a custom response for the web request.
@@ -3015,7 +3011,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.BodyProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.BodyProperty,
     ) : CdkObject(cdkObject), BodyProperty {
       /**
        * What AWS WAF should do if the body is larger than AWS WAF can inspect.
@@ -3105,6 +3101,9 @@ public open class CfnWebACL internal constructor(
    * .build())
    * .matchScope("matchScope")
    * .oversizeHandling("oversizeHandling")
+   * .build())
+   * .ja3Fingerprint(JA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
    * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
@@ -3481,8 +3480,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.ByteMatchStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ByteMatchStatementProperty,
     ) : CdkObject(cdkObject), ByteMatchStatementProperty {
       /**
        * The part of the web request that you want AWS WAF to inspect.
@@ -3736,7 +3734,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CaptchaActionProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CaptchaActionProperty,
     ) : CdkObject(cdkObject), CaptchaActionProperty {
       /**
        * Defines custom handling for the web request, used when the `CAPTCHA` inspection determines
@@ -3863,7 +3861,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CaptchaConfigProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CaptchaConfigProperty,
     ) : CdkObject(cdkObject), CaptchaConfigProperty {
       /**
        * Determines how long a `CAPTCHA` timestamp in the token remains valid after the client
@@ -4050,8 +4048,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.ChallengeActionProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ChallengeActionProperty,
     ) : CdkObject(cdkObject), ChallengeActionProperty {
       /**
        * Defines custom handling for the web request, used when the challenge inspection determines
@@ -4178,8 +4175,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.ChallengeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ChallengeConfigProperty,
     ) : CdkObject(cdkObject), ChallengeConfigProperty {
       /**
        * Determines how long a challenge timestamp in the token remains valid after the client
@@ -4335,8 +4331,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.CookieMatchPatternProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CookieMatchPatternProperty,
     ) : CdkObject(cdkObject), CookieMatchPatternProperty {
       /**
        * Inspect all cookies.
@@ -4604,7 +4599,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CookiesProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CookiesProperty,
     ) : CdkObject(cdkObject), CookiesProperty {
       /**
        * The filter to use to identify the subset of cookies to inspect in a web request.
@@ -4788,7 +4783,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CountActionProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CountActionProperty,
     ) : CdkObject(cdkObject), CountActionProperty {
       /**
        * Defines custom handling for the web request.
@@ -4908,8 +4903,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.CustomHTTPHeaderProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CustomHTTPHeaderProperty,
     ) : CdkObject(cdkObject), CustomHTTPHeaderProperty {
       /**
        * The name of the custom header.
@@ -5071,8 +5065,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.CustomRequestHandlingProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CustomRequestHandlingProperty,
     ) : CdkObject(cdkObject), CustomRequestHandlingProperty {
       /**
        * The HTTP headers to insert into the request. Duplicate header names are not allowed.
@@ -5202,8 +5195,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.CustomResponseBodyProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CustomResponseBodyProperty,
     ) : CdkObject(cdkObject), CustomResponseBodyProperty {
       /**
        * The payload of the custom response.
@@ -5454,8 +5446,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.CustomResponseProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CustomResponseProperty,
     ) : CdkObject(cdkObject), CustomResponseProperty {
       /**
        * References the response body that you want AWS WAF to return to the web request client.
@@ -5662,7 +5653,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.DefaultActionProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.DefaultActionProperty,
     ) : CdkObject(cdkObject), DefaultActionProperty {
       /**
        * Specifies that AWS WAF should allow requests by default.
@@ -5754,7 +5745,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ExcludedRuleProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ExcludedRuleProperty,
     ) : CdkObject(cdkObject), ExcludedRuleProperty {
       /**
        * The name of the rule whose action you want to override to `Count` .
@@ -5868,8 +5859,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.FieldIdentifierProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.FieldIdentifierProperty,
     ) : CdkObject(cdkObject), FieldIdentifierProperty {
       /**
        * The name of the field.
@@ -5970,6 +5960,9 @@ public open class CfnWebACL internal constructor(
    * .matchScope("matchScope")
    * .oversizeHandling("oversizeHandling")
    * .build())
+   * .ja3Fingerprint(JA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -6046,6 +6039,32 @@ public open class CfnWebACL internal constructor(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-headers)
      */
     public fun headers(): Any? = unwrap(this).getHeaders()
+
+    /**
+     * Match against the request's JA3 fingerprint.
+     *
+     * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
+     * request. This fingerprint serves as a unique identifier for the client's TLS configuration. AWS
+     * WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
+     * information for the calculation. Almost all web requests include this information.
+     *
+     *
+     * You can use this choice only with a string match `ByteMatchStatement` with the
+     * `PositionalConstraint` set to `EXACTLY` .
+     *
+     *
+     * You can obtain the JA3 fingerprint for client requests from the web ACL logs. If AWS WAF is
+     * able to calculate the fingerprint, it includes it in the logs. For information about the logging
+     * fields, see [Log
+     * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+     * WAF Developer Guide* .
+     *
+     * Provide the JA3 fingerprint string from the logs in your string match statement
+     * specification, to match with any future requests that have the same TLS configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-ja3fingerprint)
+     */
+    public fun ja3Fingerprint(): Any? = unwrap(this).getJa3Fingerprint()
 
     /**
      * Inspect the request body as JSON.
@@ -6256,6 +6275,77 @@ public open class CfnWebACL internal constructor(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a201e91ef2b6c5f336390bbdf975a593aa050cbd4acec2da27d5c1e4d138bd7a")
       public fun headers(headers: HeadersProperty.Builder.() -> Unit)
+
+      /**
+       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
+       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
+       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
+       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
+       * information for the calculation. Almost all web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA3 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA3 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      public fun ja3Fingerprint(ja3Fingerprint: IResolvable)
+
+      /**
+       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
+       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
+       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
+       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
+       * information for the calculation. Almost all web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA3 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA3 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      public fun ja3Fingerprint(ja3Fingerprint: JA3FingerprintProperty)
+
+      /**
+       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
+       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
+       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
+       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
+       * information for the calculation. Almost all web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA3 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA3 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e5502e93f7bb9dedd4f78f24b7389e8870ef4deb5dd0b43e27396206a84a9b8a")
+      public fun ja3Fingerprint(ja3Fingerprint: JA3FingerprintProperty.Builder.() -> Unit)
 
       /**
        * @param jsonBody Inspect the request body as JSON.
@@ -6502,6 +6592,82 @@ public open class CfnWebACL internal constructor(
           headers(HeadersProperty(headers))
 
       /**
+       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
+       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
+       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
+       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
+       * information for the calculation. Almost all web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA3 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA3 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      override fun ja3Fingerprint(ja3Fingerprint: IResolvable) {
+        cdkBuilder.ja3Fingerprint(ja3Fingerprint.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
+       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
+       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
+       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
+       * information for the calculation. Almost all web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA3 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA3 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      override fun ja3Fingerprint(ja3Fingerprint: JA3FingerprintProperty) {
+        cdkBuilder.ja3Fingerprint(ja3Fingerprint.let(JA3FingerprintProperty::unwrap))
+      }
+
+      /**
+       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
+       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
+       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
+       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
+       * information for the calculation. Almost all web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA3 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA3 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e5502e93f7bb9dedd4f78f24b7389e8870ef4deb5dd0b43e27396206a84a9b8a")
+      override fun ja3Fingerprint(ja3Fingerprint: JA3FingerprintProperty.Builder.() -> Unit): Unit =
+          ja3Fingerprint(JA3FingerprintProperty(ja3Fingerprint))
+
+      /**
        * @param jsonBody Inspect the request body as JSON.
        * The request body immediately follows the request headers. This is the part of a request
        * that contains any additional data that you want to send to your web server as the HTTP request
@@ -6612,7 +6778,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.FieldToMatchProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.FieldToMatchProperty,
     ) : CdkObject(cdkObject), FieldToMatchProperty {
       /**
        * Inspect all query arguments.
@@ -6669,6 +6835,32 @@ public open class CfnWebACL internal constructor(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-headers)
        */
       override fun headers(): Any? = unwrap(this).getHeaders()
+
+      /**
+       * Match against the request's JA3 fingerprint.
+       *
+       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
+       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
+       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
+       * information for the calculation. Almost all web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA3 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA3 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-ja3fingerprint)
+       */
+      override fun ja3Fingerprint(): Any? = unwrap(this).getJa3Fingerprint()
 
       /**
        * Inspect the request body as JSON.
@@ -6902,8 +7094,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.ForwardedIPConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ForwardedIPConfigurationProperty,
     ) : CdkObject(cdkObject), ForwardedIPConfigurationProperty {
       /**
        * The match status to assign to the web request if the request doesn't have a valid IP
@@ -7178,8 +7369,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.GeoMatchStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.GeoMatchStatementProperty,
     ) : CdkObject(cdkObject), GeoMatchStatementProperty {
       /**
        * An array of two-character country codes that you want to match against, for example, `[
@@ -7356,8 +7546,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.HeaderMatchPatternProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.HeaderMatchPatternProperty,
     ) : CdkObject(cdkObject), HeaderMatchPatternProperty {
       /**
        * Inspect all headers.
@@ -7628,7 +7817,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.HeadersProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.HeadersProperty,
     ) : CdkObject(cdkObject), HeadersProperty {
       /**
        * The filter to use to identify the subset of headers to inspect in a web request.
@@ -7884,8 +8073,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.IPSetForwardedIPConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.IPSetForwardedIPConfigurationProperty,
     ) : CdkObject(cdkObject), IPSetForwardedIPConfigurationProperty {
       /**
        * The match status to assign to the web request if the request doesn't have a valid IP
@@ -8126,8 +8314,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.IPSetReferenceStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.IPSetReferenceStatementProperty,
     ) : CdkObject(cdkObject), IPSetReferenceStatementProperty {
       /**
        * The Amazon Resource Name (ARN) of the `IPSet` that this statement references.
@@ -8240,8 +8427,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.ImmunityTimePropertyProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ImmunityTimePropertyProperty,
     ) : CdkObject(cdkObject), ImmunityTimePropertyProperty {
       /**
        * The amount of time, in seconds, that a `CAPTCHA` or challenge timestamp is considered valid
@@ -8271,6 +8457,130 @@ public open class CfnWebACL internal constructor(
           software.amazon.awscdk.services.wafv2.CfnWebACL.ImmunityTimePropertyProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.wafv2.CfnWebACL.ImmunityTimePropertyProperty
+    }
+  }
+
+  /**
+   * Match against the request's JA3 fingerprint.
+   *
+   * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
+   * request. This fingerprint serves as a unique identifier for the client's TLS configuration. AWS
+   * WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
+   * information for the calculation. Almost all web requests include this information.
+   *
+   *
+   * You can use this choice only with a string match `ByteMatchStatement` with the
+   * `PositionalConstraint` set to `EXACTLY` .
+   *
+   *
+   * You can obtain the JA3 fingerprint for client requests from the web ACL logs. If AWS WAF is
+   * able to calculate the fingerprint, it includes it in the logs. For information about the logging
+   * fields, see [Log
+   * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS WAF
+   * Developer Guide* .
+   *
+   * Provide the JA3 fingerprint string from the logs in your string match statement specification,
+   * to match with any future requests that have the same TLS configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * JA3FingerprintProperty jA3FingerprintProperty = JA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ja3fingerprint.html)
+   */
+  public interface JA3FingerprintProperty {
+    /**
+     * The match status to assign to the web request if the request doesn't have a JA3 fingerprint.
+     *
+     * You can specify the following fallback behaviors:
+     *
+     * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+     * action to the request.
+     * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ja3fingerprint.html#cfn-wafv2-webacl-ja3fingerprint-fallbackbehavior)
+     */
+    public fun fallbackBehavior(): String
+
+    /**
+     * A builder for [JA3FingerprintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if the request
+       * doesn't have a JA3 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      public fun fallbackBehavior(fallbackBehavior: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.JA3FingerprintProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.JA3FingerprintProperty.builder()
+
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if the request
+       * doesn't have a JA3 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      override fun fallbackBehavior(fallbackBehavior: String) {
+        cdkBuilder.fallbackBehavior(fallbackBehavior)
+      }
+
+      public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.JA3FingerprintProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.JA3FingerprintProperty,
+    ) : CdkObject(cdkObject), JA3FingerprintProperty {
+      /**
+       * The match status to assign to the web request if the request doesn't have a JA3
+       * fingerprint.
+       *
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ja3fingerprint.html#cfn-wafv2-webacl-ja3fingerprint-fallbackbehavior)
+       */
+      override fun fallbackBehavior(): String = unwrap(this).getFallbackBehavior()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JA3FingerprintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.JA3FingerprintProperty):
+          JA3FingerprintProperty = CdkObjectWrappers.wrap(cdkObject) as? JA3FingerprintProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JA3FingerprintProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.JA3FingerprintProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.JA3FingerprintProperty
     }
   }
 
@@ -8578,7 +8888,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.JsonBodyProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.JsonBodyProperty,
     ) : CdkObject(cdkObject), JsonBodyProperty {
       /**
        * What AWS WAF should do if it fails to completely parse the JSON body. The options are the
@@ -8823,8 +9133,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.JsonMatchPatternProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.JsonMatchPatternProperty,
     ) : CdkObject(cdkObject), JsonMatchPatternProperty {
       /**
        * Match all of the elements. See also `MatchScope` in the `JsonBody` `FieldToMatch`
@@ -8986,8 +9295,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.LabelMatchStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.LabelMatchStatementProperty,
     ) : CdkObject(cdkObject), LabelMatchStatementProperty {
       /**
        * The string to match against. The setting you provide for this depends on the match
@@ -9086,7 +9394,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.LabelProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.LabelProperty,
     ) : CdkObject(cdkObject), LabelProperty {
       /**
        * The label string.
@@ -9779,8 +10087,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.ManagedRuleGroupConfigProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ManagedRuleGroupConfigProperty,
     ) : CdkObject(cdkObject), ManagedRuleGroupConfigProperty {
       /**
        * Additional configuration for using the account creation fraud prevention (ACFP) managed
@@ -10373,8 +10680,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.ManagedRuleGroupStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ManagedRuleGroupStatementProperty,
     ) : CdkObject(cdkObject), ManagedRuleGroupStatementProperty {
       /**
        * Rules in the referenced rule group whose actions are set to `Count` .
@@ -10568,7 +10874,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.NotStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.NotStatementProperty,
     ) : CdkObject(cdkObject), NotStatementProperty {
       /**
        * The statement to negate.
@@ -10676,7 +10982,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.OrStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.OrStatementProperty,
     ) : CdkObject(cdkObject), OrStatementProperty {
       /**
        * The statements to combine with OR logic.
@@ -10814,8 +11120,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.OverrideActionProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.OverrideActionProperty,
     ) : CdkObject(cdkObject), OverrideActionProperty {
       /**
        * Override the rule group evaluation result to count only.
@@ -11473,8 +11778,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RateBasedStatementCustomKeyProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateBasedStatementCustomKeyProperty,
     ) : CdkObject(cdkObject), RateBasedStatementCustomKeyProperty {
       /**
        * Use the value of a cookie in the request as an aggregate key.
@@ -11737,6 +12041,11 @@ public open class CfnWebACL internal constructor(
     public fun customKeys(): Any? = unwrap(this).getCustomKeys()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatement.html#cfn-wafv2-webacl-ratebasedstatement-evaluationwindowsec)
+     */
+    public fun evaluationWindowSec(): Number? = unwrap(this).getEvaluationWindowSec()
+
+    /**
      * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of
      * using the IP address that's reported by the web request origin.
      *
@@ -11839,6 +12148,11 @@ public open class CfnWebACL internal constructor(
        * @param customKeys Specifies the aggregate keys to use in a rate-base rule.
        */
       public fun customKeys(vararg customKeys: Any)
+
+      /**
+       * @param evaluationWindowSec the value to be set.
+       */
+      public fun evaluationWindowSec(evaluationWindowSec: Number)
 
       /**
        * @param forwardedIpConfig The configuration for inspecting IP addresses in an HTTP header
@@ -11997,6 +12311,13 @@ public open class CfnWebACL internal constructor(
       override fun customKeys(vararg customKeys: Any): Unit = customKeys(customKeys.toList())
 
       /**
+       * @param evaluationWindowSec the value to be set.
+       */
+      override fun evaluationWindowSec(evaluationWindowSec: Number) {
+        cdkBuilder.evaluationWindowSec(evaluationWindowSec)
+      }
+
+      /**
        * @param forwardedIpConfig The configuration for inspecting IP addresses in an HTTP header
        * that you specify, instead of using the IP address that's reported by the web request origin.
        * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
@@ -12105,8 +12426,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RateBasedStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateBasedStatementProperty,
     ) : CdkObject(cdkObject), RateBasedStatementProperty {
       /**
        * Setting that indicates how to aggregate the request counts.
@@ -12154,6 +12474,11 @@ public open class CfnWebACL internal constructor(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatement.html#cfn-wafv2-webacl-ratebasedstatement-customkeys)
        */
       override fun customKeys(): Any? = unwrap(this).getCustomKeys()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatement.html#cfn-wafv2-webacl-ratebasedstatement-evaluationwindowsec)
+       */
+      override fun evaluationWindowSec(): Number? = unwrap(this).getEvaluationWindowSec()
 
       /**
        * The configuration for inspecting IP addresses in an HTTP header that you specify, instead
@@ -12372,8 +12697,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitCookieProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitCookieProperty,
     ) : CdkObject(cdkObject), RateLimitCookieProperty {
       /**
        * The name of the cookie to use.
@@ -12566,8 +12890,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitHeaderProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitHeaderProperty,
     ) : CdkObject(cdkObject), RateLimitHeaderProperty {
       /**
        * The name of the header to use.
@@ -12675,8 +12998,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitLabelNamespaceProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitLabelNamespaceProperty,
     ) : CdkObject(cdkObject), RateLimitLabelNamespaceProperty {
       /**
        * The namespace to use for aggregation.
@@ -12857,8 +13179,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitQueryArgumentProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitQueryArgumentProperty,
     ) : CdkObject(cdkObject), RateLimitQueryArgumentProperty {
       /**
        * The name of the query argument to use.
@@ -13033,8 +13354,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitQueryStringProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitQueryStringProperty,
     ) : CdkObject(cdkObject), RateLimitQueryStringProperty {
       /**
        * Text transformations eliminate some of the unusual formatting that attackers use in web
@@ -13200,8 +13520,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitUriPathProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitUriPathProperty,
     ) : CdkObject(cdkObject), RateLimitUriPathProperty {
       /**
        * Text transformations eliminate some of the unusual formatting that attackers use in web
@@ -13277,6 +13596,9 @@ public open class CfnWebACL internal constructor(
    * .build())
    * .matchScope("matchScope")
    * .oversizeHandling("oversizeHandling")
+   * .build())
+   * .ja3Fingerprint(JA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
    * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
@@ -13458,8 +13780,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RegexMatchStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RegexMatchStatementProperty,
     ) : CdkObject(cdkObject), RegexMatchStatementProperty {
       /**
        * The part of the web request that you want AWS WAF to inspect.
@@ -13555,6 +13876,9 @@ public open class CfnWebACL internal constructor(
    * .build())
    * .matchScope("matchScope")
    * .oversizeHandling("oversizeHandling")
+   * .build())
+   * .ja3Fingerprint(JA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
    * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
@@ -13738,8 +14062,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RegexPatternSetReferenceStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RegexPatternSetReferenceStatementProperty,
     ) : CdkObject(cdkObject), RegexPatternSetReferenceStatementProperty {
       /**
        * The Amazon Resource Name (ARN) of the `RegexPatternSet` that this statement references.
@@ -13866,8 +14189,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RequestBodyAssociatedResourceTypeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RequestBodyAssociatedResourceTypeConfigProperty,
     ) : CdkObject(cdkObject), RequestBodyAssociatedResourceTypeConfigProperty {
       /**
        * Specifies the maximum size of the web request body component that an associated CloudFront
@@ -14807,8 +15129,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RequestInspectionACFPProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RequestInspectionACFPProperty,
     ) : CdkObject(cdkObject), RequestInspectionACFPProperty {
       /**
        * The names of the fields in the request payload that contain your customer's primary
@@ -15326,8 +15647,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RequestInspectionProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RequestInspectionProperty,
     ) : CdkObject(cdkObject), RequestInspectionProperty {
       /**
        * The name of the field in the request payload that contains your customer's password.
@@ -15560,8 +15880,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionBodyContainsProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionBodyContainsProperty,
     ) : CdkObject(cdkObject), ResponseInspectionBodyContainsProperty {
       /**
        * Strings in the body of the response that indicate a failed login or account creation
@@ -15799,8 +16118,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionHeaderProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionHeaderProperty,
     ) : CdkObject(cdkObject), ResponseInspectionHeaderProperty {
       /**
        * Values in the response header with the specified name that indicate a failed login or
@@ -16047,8 +16365,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionJsonProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionJsonProperty,
     ) : CdkObject(cdkObject), ResponseInspectionJsonProperty {
       /**
        * Values for the specified identifier in the response JSON that indicate a failed login or
@@ -16394,8 +16711,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionProperty,
     ) : CdkObject(cdkObject), ResponseInspectionProperty {
       /**
        * Configures inspection of the response body for success and failure indicators.
@@ -16644,8 +16960,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionStatusCodeProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionStatusCodeProperty,
     ) : CdkObject(cdkObject), ResponseInspectionStatusCodeProperty {
       /**
        * Status codes in the response that indicate a failed login or account creation attempt.
@@ -16847,8 +17162,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RuleActionOverrideProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RuleActionOverrideProperty,
     ) : CdkObject(cdkObject), RuleActionOverrideProperty {
       /**
        * The override action to use, in place of the configured action of the rule in the rule
@@ -17317,7 +17631,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RuleActionProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RuleActionProperty,
     ) : CdkObject(cdkObject), RuleActionProperty {
       /**
        * Instructs AWS WAF to allow the web request.
@@ -17663,8 +17977,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.RuleGroupReferenceStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RuleGroupReferenceStatementProperty,
     ) : CdkObject(cdkObject), RuleGroupReferenceStatementProperty {
       /**
        * The Amazon Resource Name (ARN) of the entity.
@@ -18506,7 +18819,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RuleProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RuleProperty,
     ) : CdkObject(cdkObject), RuleProperty {
       /**
        * The action that AWS WAF should take on a web request when it matches the rule's statement.
@@ -18715,7 +19028,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.SingleHeaderProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.SingleHeaderProperty,
     ) : CdkObject(cdkObject), SingleHeaderProperty {
       /**
        * The name of the query header to inspect.
@@ -18804,8 +19117,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.SingleQueryArgumentProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.SingleQueryArgumentProperty,
     ) : CdkObject(cdkObject), SingleQueryArgumentProperty {
       /**
        * The name of the query argument to inspect.
@@ -18888,6 +19200,9 @@ public open class CfnWebACL internal constructor(
    * .build())
    * .matchScope("matchScope")
    * .oversizeHandling("oversizeHandling")
+   * .build())
+   * .ja3Fingerprint(JA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
    * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
@@ -19090,8 +19405,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.SizeConstraintStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.SizeConstraintStatementProperty,
     ) : CdkObject(cdkObject), SizeConstraintStatementProperty {
       /**
        * The operator to use to compare the request part to the size setting.
@@ -19187,6 +19501,9 @@ public open class CfnWebACL internal constructor(
    * .build())
    * .matchScope("matchScope")
    * .oversizeHandling("oversizeHandling")
+   * .build())
+   * .ja3Fingerprint(JA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
    * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
@@ -19401,8 +19718,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.SqliMatchStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.SqliMatchStatementProperty,
     ) : CdkObject(cdkObject), SqliMatchStatementProperty {
       /**
        * The part of the web request that you want AWS WAF to inspect.
@@ -21470,7 +21786,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.StatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.StatementProperty,
     ) : CdkObject(cdkObject), StatementProperty {
       /**
        * A logical rule statement used to combine other rule statements with AND logic.
@@ -21872,8 +22188,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.TextTransformationProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.TextTransformationProperty,
     ) : CdkObject(cdkObject), TextTransformationProperty {
       /**
        * Sets the relative processing order for multiple transformations.
@@ -22105,8 +22420,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.VisibilityConfigProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.VisibilityConfigProperty,
     ) : CdkObject(cdkObject), VisibilityConfigProperty {
       /**
        * Indicates whether the associated resource sends metrics to Amazon CloudWatch.
@@ -22207,6 +22521,9 @@ public open class CfnWebACL internal constructor(
    * .build())
    * .matchScope("matchScope")
    * .oversizeHandling("oversizeHandling")
+   * .build())
+   * .ja3Fingerprint(JA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
    * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
@@ -22367,8 +22684,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnWebACL.XssMatchStatementProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.XssMatchStatementProperty,
     ) : CdkObject(cdkObject), XssMatchStatementProperty {
       /**
        * The part of the web request that you want AWS WAF to inspect.

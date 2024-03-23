@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * app.synth();
  * ```
  */
-public open class HttpNamespace internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicediscovery.HttpNamespace,
+public open class HttpNamespace(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.HttpNamespace,
 ) : Resource(cdkObject), IHttpNamespace {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -208,6 +208,7 @@ public open class HttpNamespace internal constructor(
         HttpNamespace = HttpNamespace(cdkObject)
 
     internal fun unwrap(wrapped: HttpNamespace):
-        software.amazon.awscdk.services.servicediscovery.HttpNamespace = wrapped.cdkObject
+        software.amazon.awscdk.services.servicediscovery.HttpNamespace = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicediscovery.HttpNamespace
   }
 }

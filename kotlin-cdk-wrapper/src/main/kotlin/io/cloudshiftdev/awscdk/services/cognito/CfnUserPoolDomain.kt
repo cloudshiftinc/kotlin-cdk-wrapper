@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html)
  */
-public open class CfnUserPoolDomain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolDomain,
+public open class CfnUserPoolDomain(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolDomain,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -302,7 +302,8 @@ public open class CfnUserPoolDomain internal constructor(
         CfnUserPoolDomain = CfnUserPoolDomain(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPoolDomain):
-        software.amazon.awscdk.services.cognito.CfnUserPoolDomain = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.CfnUserPoolDomain = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnUserPoolDomain
   }
 
   /**
@@ -367,8 +368,7 @@ public open class CfnUserPoolDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolDomain.CustomDomainConfigTypeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolDomain.CustomDomainConfigTypeProperty,
     ) : CdkObject(cdkObject), CustomDomainConfigTypeProperty {
       /**
        * The Amazon Resource Name (ARN) of an AWS Certificate Manager SSL certificate.

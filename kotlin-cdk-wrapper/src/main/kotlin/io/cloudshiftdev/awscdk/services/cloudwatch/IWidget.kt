@@ -52,7 +52,7 @@ public interface IWidget {
   public fun width(): Number
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.IWidget,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.IWidget,
   ) : CdkObject(cdkObject), IWidget {
     /**
      * The amount of vertical grid units the widget will take up.

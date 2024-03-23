@@ -186,7 +186,7 @@ public interface BaseLogDriverProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.BaseLogDriverProps,
+    cdkObject: software.amazon.awscdk.services.ecs.BaseLogDriverProps,
   ) : CdkObject(cdkObject), BaseLogDriverProps {
     /**
      * The env option takes an array of keys.

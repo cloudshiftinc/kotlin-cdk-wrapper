@@ -179,7 +179,7 @@ public interface CfnGatewayResponseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CfnGatewayResponseProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CfnGatewayResponseProps,
   ) : CdkObject(cdkObject), CfnGatewayResponseProps {
     /**
      * Response parameters (paths, query strings and headers) of the GatewayResponse as a

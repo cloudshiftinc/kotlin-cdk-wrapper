@@ -19,9 +19,8 @@ import kotlin.String
  * AdotLambdaLayerJavaAutoInstrumentationVersion.LATEST;
  * ```
  */
-public open class AdotLambdaLayerJavaAutoInstrumentationVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion,
+public open class AdotLambdaLayerJavaAutoInstrumentationVersion(
+  cdkObject: software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion,
 ) : CdkObject(cdkObject) {
   /**
    * The ARN of the Lambda layer.
@@ -58,6 +57,7 @@ public open class AdotLambdaLayerJavaAutoInstrumentationVersion internal constru
 
     internal fun unwrap(wrapped: AdotLambdaLayerJavaAutoInstrumentationVersion):
         software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion
   }
 }

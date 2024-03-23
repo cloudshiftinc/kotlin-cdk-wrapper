@@ -190,7 +190,7 @@ public interface TriggerProps : TriggerOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.triggers.TriggerProps,
+    cdkObject: software.amazon.awscdk.triggers.TriggerProps,
   ) : CdkObject(cdkObject), TriggerProps {
     /**
      * Adds trigger dependencies. Execute this trigger only after these construct scopes have been

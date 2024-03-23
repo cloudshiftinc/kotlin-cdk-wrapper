@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-custommetric.html)
  */
-public open class CfnCustomMetric internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnCustomMetric,
+public open class CfnCustomMetric(
+  cdkObject: software.amazon.awscdk.services.iot.CfnCustomMetric,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -289,6 +289,7 @@ public open class CfnCustomMetric internal constructor(
         CfnCustomMetric = CfnCustomMetric(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomMetric):
-        software.amazon.awscdk.services.iot.CfnCustomMetric = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnCustomMetric = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnCustomMetric
   }
 }

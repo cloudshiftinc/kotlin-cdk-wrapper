@@ -99,7 +99,7 @@ public interface HttpConnectionPool {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.HttpConnectionPool,
+    cdkObject: software.amazon.awscdk.services.appmesh.HttpConnectionPool,
   ) : CdkObject(cdkObject), HttpConnectionPool {
     /**
      * The maximum connections in the pool.

@@ -210,7 +210,7 @@ public interface CfnScalingPlanProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlanProps,
+    cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlanProps,
   ) : CdkObject(cdkObject), CfnScalingPlanProps {
     /**
      * A CloudFormation stack or a set of tags.

@@ -158,7 +158,7 @@ public interface CfnBotVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lex.CfnBotVersionProps,
+    cdkObject: software.amazon.awscdk.services.lex.CfnBotVersionProps,
   ) : CdkObject(cdkObject), CfnBotVersionProps {
     /**
      * The unique identifier of the bot.

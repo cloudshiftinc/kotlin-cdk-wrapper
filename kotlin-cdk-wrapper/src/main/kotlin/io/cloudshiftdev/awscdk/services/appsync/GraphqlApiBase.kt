@@ -24,8 +24,8 @@ import io.cloudshiftdev.awscdk.services.opensearchservice.IDomain as Opensearchs
 /**
  * Base Class for GraphQL API.
  */
-public abstract class GraphqlApiBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiBase,
+public abstract class GraphqlApiBase(
+  cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiBase,
 ) : Resource(cdkObject), IGraphqlApi {
   /**
    * add a new DynamoDB data source to this API.
@@ -475,7 +475,7 @@ public abstract class GraphqlApiBase internal constructor(
       unwrap(this).grantSubscription(grantee.let(IGrantable::unwrap), *fields).let(Grant::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiBase,
+    cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiBase,
   ) : GraphqlApiBase(cdkObject)
 
   public companion object {

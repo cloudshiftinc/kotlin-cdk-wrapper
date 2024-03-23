@@ -165,7 +165,7 @@ public interface CfnIPAMAllocationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMAllocationProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMAllocationProps,
   ) : CdkObject(cdkObject), CfnIPAMAllocationProps {
     /**
      * The CIDR you would like to allocate from the IPAM pool. Note the following:.

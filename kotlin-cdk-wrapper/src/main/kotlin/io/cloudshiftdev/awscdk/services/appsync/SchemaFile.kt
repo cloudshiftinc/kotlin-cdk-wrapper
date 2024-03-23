@@ -49,8 +49,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class SchemaFile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.SchemaFile,
+public open class SchemaFile(
+  cdkObject: software.amazon.awscdk.services.appsync.SchemaFile,
 ) : CdkObject(cdkObject), ISchema {
   public constructor(options: SchemaProps) :
       this(software.amazon.awscdk.services.appsync.SchemaFile(options.let(SchemaProps::unwrap))
@@ -151,6 +151,6 @@ public open class SchemaFile internal constructor(
         SchemaFile(cdkObject)
 
     internal fun unwrap(wrapped: SchemaFile): software.amazon.awscdk.services.appsync.SchemaFile =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.SchemaFile
   }
 }

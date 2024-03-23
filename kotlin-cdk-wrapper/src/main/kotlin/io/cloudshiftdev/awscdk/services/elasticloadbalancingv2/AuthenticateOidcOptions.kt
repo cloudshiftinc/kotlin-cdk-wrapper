@@ -331,8 +331,7 @@ public interface AuthenticateOidcOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.AuthenticateOidcOptions,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AuthenticateOidcOptions,
   ) : CdkObject(cdkObject), AuthenticateOidcOptions {
     /**
      * Allow HTTPS outbound traffic to communicate with the IdP.

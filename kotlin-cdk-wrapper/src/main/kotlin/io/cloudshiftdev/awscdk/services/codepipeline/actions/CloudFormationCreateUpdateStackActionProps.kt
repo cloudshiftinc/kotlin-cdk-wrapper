@@ -661,8 +661,7 @@ public interface CloudFormationCreateUpdateStackActionProps : CommonAwsActionPro
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackActionProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackActionProps,
   ) : CdkObject(cdkObject), CloudFormationCreateUpdateStackActionProps {
     /**
      * The AWS account this Action is supposed to operate in.

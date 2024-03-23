@@ -100,7 +100,7 @@ public interface CfnDedicatedIpPoolProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPoolProps,
+    cdkObject: software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPoolProps,
   ) : CdkObject(cdkObject), CfnDedicatedIpPoolProps {
     /**
      * The name of the dedicated IP pool.

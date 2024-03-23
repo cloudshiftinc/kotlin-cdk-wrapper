@@ -82,8 +82,7 @@ public interface NotificationRuleTargetConfig {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codestarnotifications.NotificationRuleTargetConfig,
+    cdkObject: software.amazon.awscdk.services.codestarnotifications.NotificationRuleTargetConfig,
   ) : CdkObject(cdkObject), NotificationRuleTargetConfig {
     /**
      * The Amazon Resource Name (ARN) of the Amazon SNS topic or AWS Chatbot client.

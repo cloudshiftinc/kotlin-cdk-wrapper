@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-osis-pipeline.html)
  */
-public open class CfnPipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.osis.CfnPipeline,
+public open class CfnPipeline(
+  cdkObject: software.amazon.awscdk.services.osis.CfnPipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -703,7 +703,7 @@ public open class CfnPipeline internal constructor(
         CfnPipeline(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipeline): software.amazon.awscdk.services.osis.CfnPipeline =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.osis.CfnPipeline
   }
 
   /**
@@ -775,8 +775,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty,
     ) : CdkObject(cdkObject), BufferOptionsProperty {
       /**
        * Whether persistent buffering should be enabled.
@@ -866,8 +865,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty,
     ) : CdkObject(cdkObject), CloudWatchLogDestinationProperty {
       /**
        * The name of the CloudWatch Logs group to send pipeline logs to.
@@ -956,8 +954,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty,
     ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
       /**
        * The ARN of the KMS key used to encrypt buffer data.
@@ -1124,8 +1121,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.osis.CfnPipeline.LogPublishingOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.LogPublishingOptionsProperty,
     ) : CdkObject(cdkObject), LogPublishingOptionsProperty {
       /**
        * The destination for OpenSearch Ingestion logs sent to Amazon CloudWatch Logs.
@@ -1295,7 +1291,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty,
     ) : CdkObject(cdkObject), VpcEndpointProperty {
       /**
        * The unique identifier of the endpoint.
@@ -1433,7 +1429,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcOptionsProperty,
     ) : CdkObject(cdkObject), VpcOptionsProperty {
       /**
        * A list of security groups associated with the VPC endpoint.

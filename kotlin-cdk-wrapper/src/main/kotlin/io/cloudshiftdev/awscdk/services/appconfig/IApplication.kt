@@ -376,7 +376,7 @@ public interface IApplication : IResource {
       options: ExtensionOptions.Builder.() -> Unit)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.IApplication,
+    cdkObject: software.amazon.awscdk.services.appconfig.IApplication,
   ) : CdkObject(cdkObject), IApplication {
     /**
      * Adds an environment.

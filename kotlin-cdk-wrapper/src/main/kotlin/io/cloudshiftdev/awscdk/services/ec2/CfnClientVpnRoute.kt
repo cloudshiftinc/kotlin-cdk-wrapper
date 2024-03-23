@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnroute.html)
  */
-public open class CfnClientVpnRoute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnRoute,
+public open class CfnClientVpnRoute(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnRoute,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -253,6 +253,7 @@ public open class CfnClientVpnRoute internal constructor(
         CfnClientVpnRoute = CfnClientVpnRoute(cdkObject)
 
     internal fun unwrap(wrapped: CfnClientVpnRoute):
-        software.amazon.awscdk.services.ec2.CfnClientVpnRoute = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnClientVpnRoute = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnClientVpnRoute
   }
 }

@@ -71,9 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-customlineitem.html)
  */
-public open class CfnCustomLineItem internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.billingconductor.CfnCustomLineItem,
+public open class CfnCustomLineItem(
+  cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -548,7 +547,8 @@ public open class CfnCustomLineItem internal constructor(
         CfnCustomLineItem = CfnCustomLineItem(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomLineItem):
-        software.amazon.awscdk.services.billingconductor.CfnCustomLineItem = wrapped.cdkObject
+        software.amazon.awscdk.services.billingconductor.CfnCustomLineItem = wrapped.cdkObject as
+        software.amazon.awscdk.services.billingconductor.CfnCustomLineItem
   }
 
   /**
@@ -632,8 +632,7 @@ public open class CfnCustomLineItem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty,
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty,
     ) : CdkObject(cdkObject), BillingPeriodRangeProperty {
       /**
        * The exclusive end billing period that defines a billing period range where a custom line is
@@ -895,8 +894,7 @@ public open class CfnCustomLineItem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemChargeDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemChargeDetailsProperty,
     ) : CdkObject(cdkObject), CustomLineItemChargeDetailsProperty {
       /**
        * A `CustomLineItemFlatChargeDetails` that describes the charge details of a flat custom line
@@ -1005,8 +1003,7 @@ public open class CfnCustomLineItem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty,
     ) : CdkObject(cdkObject), CustomLineItemFlatChargeDetailsProperty {
       /**
        * The custom line item's fixed charge value in USD.
@@ -1134,8 +1131,7 @@ public open class CfnCustomLineItem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty,
     ) : CdkObject(cdkObject), CustomLineItemPercentageChargeDetailsProperty {
       /**
        * A list of resource ARNs to associate to the percentage custom line item.
@@ -1305,8 +1301,7 @@ public open class CfnCustomLineItem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty,
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty,
     ) : CdkObject(cdkObject), LineItemFilterProperty {
       /**
        * The attribute of the line item filter.

@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html)
  */
-public open class CfnRecordingConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration,
+public open class CfnRecordingConfiguration(
+  cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -627,7 +627,8 @@ public open class CfnRecordingConfiguration internal constructor(
         CfnRecordingConfiguration = CfnRecordingConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnRecordingConfiguration):
-        software.amazon.awscdk.services.ivs.CfnRecordingConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.ivs.CfnRecordingConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.ivs.CfnRecordingConfiguration
   }
 
   /**
@@ -740,8 +741,7 @@ public open class CfnRecordingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty,
     ) : CdkObject(cdkObject), DestinationConfigurationProperty {
       /**
        * An S3 destination configuration where recorded videos will be stored.
@@ -898,8 +898,7 @@ public open class CfnRecordingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty,
     ) : CdkObject(cdkObject), RenditionConfigurationProperty {
       /**
        * The set of renditions are recorded for a stream.
@@ -1001,8 +1000,7 @@ public open class CfnRecordingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty,
     ) : CdkObject(cdkObject), S3DestinationConfigurationProperty {
       /**
        * Location (S3 bucket name) where recorded videos will be stored.
@@ -1266,8 +1264,7 @@ public open class CfnRecordingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty,
     ) : CdkObject(cdkObject), ThumbnailConfigurationProperty {
       /**
        * Thumbnail recording mode. Valid values:.

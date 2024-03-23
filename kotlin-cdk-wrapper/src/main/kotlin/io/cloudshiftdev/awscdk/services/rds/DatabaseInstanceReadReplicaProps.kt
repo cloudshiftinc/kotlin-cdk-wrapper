@@ -861,7 +861,7 @@ public interface DatabaseInstanceReadReplicaProps : DatabaseInstanceNewProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceReadReplicaProps,
+    cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceReadReplicaProps,
   ) : CdkObject(cdkObject), DatabaseInstanceReadReplicaProps {
     /**
      * The allocated storage size, specified in gibibytes (GiB).

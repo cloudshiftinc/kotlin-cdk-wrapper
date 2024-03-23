@@ -119,7 +119,7 @@ public interface BootstrapRole {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.BootstrapRole,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.BootstrapRole,
   ) : CdkObject(cdkObject), BootstrapRole {
     /**
      * The ARN of the IAM role created as part of bootrapping e.g. lookupRoleArn.

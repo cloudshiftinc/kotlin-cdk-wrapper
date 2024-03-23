@@ -31,9 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationfleetassociation.html)
  */
-public open class CfnApplicationFleetAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.appstream.CfnApplicationFleetAssociation,
+public open class CfnApplicationFleetAssociation(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnApplicationFleetAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -159,5 +158,6 @@ public open class CfnApplicationFleetAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnApplicationFleetAssociation):
         software.amazon.awscdk.services.appstream.CfnApplicationFleetAssociation = wrapped.cdkObject
+        as software.amazon.awscdk.services.appstream.CfnApplicationFleetAssociation
   }
 }

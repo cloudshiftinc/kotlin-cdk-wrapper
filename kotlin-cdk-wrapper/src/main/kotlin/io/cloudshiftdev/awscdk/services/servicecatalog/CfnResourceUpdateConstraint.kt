@@ -33,9 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-resourceupdateconstraint.html)
  */
-public open class CfnResourceUpdateConstraint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraint,
+public open class CfnResourceUpdateConstraint(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -283,6 +282,7 @@ public open class CfnResourceUpdateConstraint internal constructor(
 
     internal fun unwrap(wrapped: CfnResourceUpdateConstraint):
         software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraint =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraint
   }
 }

@@ -34,8 +34,8 @@ import kotlin.String
  * map.itemProcessor(definition);
  * ```
  */
-public abstract class Condition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Condition,
+public abstract class Condition(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Condition,
 ) : CdkObject(cdkObject) {
   /**
    * Render Amazon States Language JSON for the condition.
@@ -43,7 +43,7 @@ public abstract class Condition internal constructor(
   public open fun renderCondition(): Any = unwrap(this).renderCondition()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.Condition,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.Condition,
   ) : Condition(cdkObject)
 
   public companion object {

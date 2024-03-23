@@ -217,7 +217,7 @@ public interface ICfnResourceOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ICfnResourceOptions,
+    cdkObject: software.amazon.awscdk.ICfnResourceOptions,
   ) : CdkObject(cdkObject), ICfnResourceOptions {
     /**
      * A condition to associate with this resource.

@@ -100,7 +100,7 @@ public interface NamedPackageOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.NamedPackageOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.NamedPackageOptions,
   ) : CdkObject(cdkObject), NamedPackageOptions {
     /**
      * Restart the given services after this command has run.

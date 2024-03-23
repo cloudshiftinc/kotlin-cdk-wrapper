@@ -106,7 +106,7 @@ public interface EncryptionAtRestOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticsearch.EncryptionAtRestOptions,
+    cdkObject: software.amazon.awscdk.services.elasticsearch.EncryptionAtRestOptions,
   ) : CdkObject(cdkObject), EncryptionAtRestOptions {
     /**
      * (deprecated) Specify true to enable encryption at rest.

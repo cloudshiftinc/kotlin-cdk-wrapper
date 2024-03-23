@@ -25,9 +25,8 @@ import kotlin.collections.List
  * .build());
  * ```
  */
-public abstract class ListenerCondition internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition,
+public abstract class ListenerCondition(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition,
 ) : CdkObject(cdkObject) {
   /**
    * Render the raw Cfn listener rule condition object.
@@ -35,8 +34,7 @@ public abstract class ListenerCondition internal constructor(
   public open fun renderRawCondition(): Any = unwrap(this).renderRawCondition()
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition,
   ) : ListenerCondition(cdkObject)
 
   public companion object {

@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html)
  */
-public open class CfnAccessPoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint,
+public open class CfnAccessPoint(
+  cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -483,7 +483,7 @@ public open class CfnAccessPoint internal constructor(
         = CfnAccessPoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessPoint): software.amazon.awscdk.services.efs.CfnAccessPoint
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.efs.CfnAccessPoint
   }
 
   /**
@@ -565,8 +565,7 @@ public open class CfnAccessPoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty,
     ) : CdkObject(cdkObject), AccessPointTagProperty {
       /**
        * The tag key (String).
@@ -721,8 +720,7 @@ public open class CfnAccessPoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty,
     ) : CdkObject(cdkObject), CreationInfoProperty {
       /**
        * Specifies the POSIX group ID to apply to the `RootDirectory` .
@@ -879,7 +877,7 @@ public open class CfnAccessPoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty,
     ) : CdkObject(cdkObject), PosixUserProperty {
       /**
        * The POSIX group ID used for all file system operations using this access point.
@@ -1096,8 +1094,7 @@ public open class CfnAccessPoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty,
     ) : CdkObject(cdkObject), RootDirectoryProperty {
       /**
        * (Optional) Specifies the POSIX IDs and permissions to apply to the access point's

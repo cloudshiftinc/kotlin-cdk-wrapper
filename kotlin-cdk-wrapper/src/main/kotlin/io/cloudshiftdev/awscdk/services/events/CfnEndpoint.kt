@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-endpoint.html)
  */
-public open class CfnEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.CfnEndpoint,
+public open class CfnEndpoint(
+  cdkObject: software.amazon.awscdk.services.events.CfnEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -514,7 +514,7 @@ public open class CfnEndpoint internal constructor(
         CfnEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpoint): software.amazon.awscdk.services.events.CfnEndpoint =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.CfnEndpoint
   }
 
   /**
@@ -570,8 +570,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty,
     ) : CdkObject(cdkObject), EndpointEventBusProperty {
       /**
        * The ARN of the event bus the endpoint is associated with.
@@ -738,8 +737,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty,
     ) : CdkObject(cdkObject), FailoverConfigProperty {
       /**
        * The main Region of the endpoint.
@@ -829,7 +827,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.PrimaryProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.PrimaryProperty,
     ) : CdkObject(cdkObject), PrimaryProperty {
       /**
        * The ARN of the health check used by the endpoint to determine whether failover is
@@ -910,8 +908,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty,
     ) : CdkObject(cdkObject), ReplicationConfigProperty {
       /**
        * The state of event replication.
@@ -1033,8 +1030,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty,
     ) : CdkObject(cdkObject), RoutingConfigProperty {
       /**
        * The failover configuration for an endpoint.
@@ -1117,7 +1113,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty,
     ) : CdkObject(cdkObject), SecondaryProperty {
       /**
        * Defines the secondary Region.

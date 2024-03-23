@@ -176,7 +176,7 @@ public interface OnCloudTrailImagePushedOptions : OnEventOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecr.OnCloudTrailImagePushedOptions,
+    cdkObject: software.amazon.awscdk.services.ecr.OnCloudTrailImagePushedOptions,
   ) : CdkObject(cdkObject), OnCloudTrailImagePushedOptions {
     /**
      * The scope to use if the source of the rule and its target are in different Stacks (but in the

@@ -38,8 +38,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class SnapshotCredentials internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentials,
+public abstract class SnapshotCredentials(
+  cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentials,
 ) : CdkObject(cdkObject) {
   /**
    * KMS encryption key to encrypt the generated secret.
@@ -105,7 +105,7 @@ public abstract class SnapshotCredentials internal constructor(
   public open fun username(): String? = unwrap(this).getUsername()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentials,
+    cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentials,
   ) : SnapshotCredentials(cdkObject)
 
   public companion object {

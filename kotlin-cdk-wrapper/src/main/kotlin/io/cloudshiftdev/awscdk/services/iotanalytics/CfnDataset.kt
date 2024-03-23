@@ -129,8 +129,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html)
  */
-public open class CfnDataset internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset,
+public open class CfnDataset(
+  cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -872,7 +872,8 @@ public open class CfnDataset internal constructor(
         CfnDataset = CfnDataset(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataset):
-        software.amazon.awscdk.services.iotanalytics.CfnDataset = wrapped.cdkObject
+        software.amazon.awscdk.services.iotanalytics.CfnDataset = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotanalytics.CfnDataset
   }
 
   /**
@@ -1075,8 +1076,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * The name of the data set action by which data set contents are automatically created.
@@ -1346,8 +1346,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ContainerActionProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ContainerActionProperty,
     ) : CdkObject(cdkObject), ContainerActionProperty {
       /**
        * The ARN of the role which gives permission to the system to access needed resources in
@@ -1572,8 +1571,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleDestinationProperty,
     ) : CdkObject(cdkObject), DatasetContentDeliveryRuleDestinationProperty {
       /**
        * Configuration information for delivery of dataset contents to AWS IoT Events .
@@ -1730,8 +1728,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty,
     ) : CdkObject(cdkObject), DatasetContentDeliveryRuleProperty {
       /**
        * The destination to which dataset contents are delivered.
@@ -1825,8 +1822,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty,
     ) : CdkObject(cdkObject), DatasetContentVersionValueProperty {
       /**
        * The name of the dataset whose latest contents are used as input to the notebook or
@@ -1958,8 +1954,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty,
     ) : CdkObject(cdkObject), DeltaTimeProperty {
       /**
        * The number of seconds of estimated in-flight lag time of message data.
@@ -2091,8 +2086,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty,
     ) : CdkObject(cdkObject), DeltaTimeSessionWindowConfigurationProperty {
       /**
        * A time interval.
@@ -2219,8 +2213,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty,
     ) : CdkObject(cdkObject), FilterProperty {
       /**
        * Used to limit data to that which has arrived since the last execution of the action.
@@ -2339,8 +2332,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty,
     ) : CdkObject(cdkObject), GlueConfigurationProperty {
       /**
        * The name of the database in your AWS Glue Data Catalog in which the table is located.
@@ -2461,8 +2453,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty,
     ) : CdkObject(cdkObject), IotEventsDestinationConfigurationProperty {
       /**
        * The name of the AWS IoT Events input to which dataset contents are delivered.
@@ -2597,8 +2588,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty,
     ) : CdkObject(cdkObject), LateDataRuleConfigurationProperty {
       /**
        * The information needed to configure a delta time session window.
@@ -2735,8 +2725,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleProperty,
     ) : CdkObject(cdkObject), LateDataRuleProperty {
       /**
        * The information needed to configure the late data rule.
@@ -2828,8 +2817,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty,
     ) : CdkObject(cdkObject), OutputFileUriValueProperty {
       /**
        * The URI of the location where dataset contents are stored, usually the URI of a file in an
@@ -2963,8 +2951,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty,
     ) : CdkObject(cdkObject), QueryActionProperty {
       /**
        * Pre-filters applied to message data.
@@ -3084,8 +3071,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty,
     ) : CdkObject(cdkObject), ResourceConfigurationProperty {
       /**
        * The type of the compute resource used to execute the `containerAction` .
@@ -3212,8 +3198,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty,
     ) : CdkObject(cdkObject), RetentionPeriodProperty {
       /**
        * The number of days that message data is kept.
@@ -3457,8 +3442,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty,
     ) : CdkObject(cdkObject), S3DestinationConfigurationProperty {
       /**
        * The name of the S3 bucket to which dataset contents are delivered.
@@ -3590,8 +3574,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty,
     ) : CdkObject(cdkObject), ScheduleProperty {
       /**
        * The expression that defines when to trigger an update.
@@ -3761,8 +3744,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggerProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggerProperty,
     ) : CdkObject(cdkObject), TriggerProperty {
       /**
        * The "Schedule" when the trigger is initiated.
@@ -3856,8 +3838,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty,
     ) : CdkObject(cdkObject), TriggeringDatasetProperty {
       /**
        * The name of the data set whose content generation triggers the new data set content
@@ -4099,8 +4080,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.VariableProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.VariableProperty,
     ) : CdkObject(cdkObject), VariableProperty {
       /**
        * The value of the variable as a structure that specifies a dataset content version.
@@ -4247,8 +4227,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.VersioningConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.VersioningConfigurationProperty,
     ) : CdkObject(cdkObject), VersioningConfigurationProperty {
       /**
        * How many versions of dataset contents are kept.

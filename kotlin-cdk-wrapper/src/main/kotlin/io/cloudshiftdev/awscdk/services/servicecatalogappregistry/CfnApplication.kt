@@ -35,9 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html)
  */
-public open class CfnApplication internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication,
+public open class CfnApplication(
+  cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -235,5 +234,6 @@ public open class CfnApplication internal constructor(
 
     internal fun unwrap(wrapped: CfnApplication):
         software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication = wrapped.cdkObject
+        as software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication
   }
 }

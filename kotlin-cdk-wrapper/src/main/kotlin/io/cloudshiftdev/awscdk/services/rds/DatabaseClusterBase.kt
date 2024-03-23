@@ -19,8 +19,8 @@ import kotlin.jvm.JvmName
 /**
  * A new or imported clustered database.
  */
-public abstract class DatabaseClusterBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterBase,
+public abstract class DatabaseClusterBase(
+  cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterBase,
 ) : Resource(cdkObject), IDatabaseCluster {
   /**
    * Add a new db proxy to this cluster.
@@ -603,7 +603,7 @@ public abstract class DatabaseClusterBase internal constructor(
       metricVolumeWriteIoPs(MetricOptions(props))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterBase,
+    cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterBase,
   ) : DatabaseClusterBase(cdkObject)
 
   public companion object {

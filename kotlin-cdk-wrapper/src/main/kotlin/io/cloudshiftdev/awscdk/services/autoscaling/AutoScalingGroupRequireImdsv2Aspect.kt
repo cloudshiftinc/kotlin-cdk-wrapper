@@ -16,9 +16,8 @@ import io.cloudshiftdev.constructs.IConstruct
  * Aspects.of(this).add(aspect);
  * ```
  */
-public open class AutoScalingGroupRequireImdsv2Aspect internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.autoscaling.AutoScalingGroupRequireImdsv2Aspect,
+public open class AutoScalingGroupRequireImdsv2Aspect(
+  cdkObject: software.amazon.awscdk.services.autoscaling.AutoScalingGroupRequireImdsv2Aspect,
 ) : CdkObject(cdkObject), IAspect {
   public constructor() :
       this(software.amazon.awscdk.services.autoscaling.AutoScalingGroupRequireImdsv2Aspect()
@@ -40,6 +39,7 @@ public open class AutoScalingGroupRequireImdsv2Aspect internal constructor(
 
     internal fun unwrap(wrapped: AutoScalingGroupRequireImdsv2Aspect):
         software.amazon.awscdk.services.autoscaling.AutoScalingGroupRequireImdsv2Aspect =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.AutoScalingGroupRequireImdsv2Aspect
   }
 }

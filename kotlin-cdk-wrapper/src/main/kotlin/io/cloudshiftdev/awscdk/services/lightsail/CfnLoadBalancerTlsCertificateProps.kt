@@ -233,8 +233,7 @@ public interface CfnLoadBalancerTlsCertificateProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificateProps,
+    cdkObject: software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificateProps,
   ) : CdkObject(cdkObject), CfnLoadBalancerTlsCertificateProps {
     /**
      * An array of alternative domain names and subdomain names for your SSL/TLS certificate.

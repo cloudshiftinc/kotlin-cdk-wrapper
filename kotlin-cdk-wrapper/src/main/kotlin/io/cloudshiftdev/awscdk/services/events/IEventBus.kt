@@ -74,7 +74,7 @@ public interface IEventBus : IResource {
   public fun grantPutEventsTo(grantee: IGrantable): Grant
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.IEventBus,
+    cdkObject: software.amazon.awscdk.services.events.IEventBus,
   ) : CdkObject(cdkObject), IEventBus {
     /**
      * Apply the given removal policy to this resource.

@@ -47,9 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfaceattachment.html)
  */
-public open class CfnNetworkInterfaceAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment,
+public open class CfnNetworkInterfaceAttachment(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -377,7 +376,8 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
         CfnNetworkInterfaceAttachment = CfnNetworkInterfaceAttachment(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInterfaceAttachment):
-        software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment
   }
 
   /**
@@ -507,8 +507,7 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty,
     ) : CdkObject(cdkObject), EnaSrdSpecificationProperty {
       /**
        * Indicates whether ENA Express is enabled for the network interface.
@@ -625,8 +624,7 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty,
     ) : CdkObject(cdkObject), EnaSrdUdpSpecificationProperty {
       /**
        * Indicates whether UDP traffic to and from the instance uses ENA Express.

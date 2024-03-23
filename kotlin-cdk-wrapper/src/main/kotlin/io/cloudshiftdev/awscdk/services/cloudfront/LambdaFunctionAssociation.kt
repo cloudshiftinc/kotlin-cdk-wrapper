@@ -108,7 +108,7 @@ public interface LambdaFunctionAssociation {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation,
+    cdkObject: software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation,
   ) : CdkObject(cdkObject), LambdaFunctionAssociation {
     /**
      * The lambda event type defines at which event the lambda is called during the request

@@ -21,7 +21,7 @@ public interface IPrefixList : IResource {
   public fun prefixListId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IPrefixList,
+    cdkObject: software.amazon.awscdk.services.ec2.IPrefixList,
   ) : CdkObject(cdkObject), IPrefixList {
     /**
      * Apply the given removal policy to this resource.

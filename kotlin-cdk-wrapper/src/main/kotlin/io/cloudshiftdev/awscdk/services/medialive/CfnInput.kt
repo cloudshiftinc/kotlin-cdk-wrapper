@@ -61,8 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html)
  */
-public open class CfnInput internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.medialive.CfnInput,
+public open class CfnInput(
+  cdkObject: software.amazon.awscdk.services.medialive.CfnInput,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.medialive.CfnInput(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -751,7 +751,7 @@ public open class CfnInput internal constructor(
         CfnInput(cdkObject)
 
     internal fun unwrap(wrapped: CfnInput): software.amazon.awscdk.services.medialive.CfnInput =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.medialive.CfnInput
   }
 
   /**
@@ -814,8 +814,7 @@ public open class CfnInput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty,
     ) : CdkObject(cdkObject), InputDestinationRequestProperty {
       /**
        * The stream name (application name/application instance) for the location the RTMP source
@@ -893,8 +892,7 @@ public open class CfnInput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty,
     ) : CdkObject(cdkObject), InputDeviceRequestProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicerequest.html#cfn-medialive-input-inputdevicerequest-id)
@@ -975,8 +973,7 @@ public open class CfnInput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty,
     ) : CdkObject(cdkObject), InputDeviceSettingsProperty {
       /**
        * The unique ID for the device.
@@ -1109,8 +1106,7 @@ public open class CfnInput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnInput.InputSourceRequestProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputSourceRequestProperty,
     ) : CdkObject(cdkObject), InputSourceRequestProperty {
       /**
        * The password parameter that holds the password for accessing the upstream system.
@@ -1272,8 +1268,7 @@ public open class CfnInput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnInput.InputVpcRequestProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputVpcRequestProperty,
     ) : CdkObject(cdkObject), InputVpcRequestProperty {
       /**
        * The list of up to five VPC security group IDs to attach to the input VPC network
@@ -1374,8 +1369,7 @@ public open class CfnInput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnInput.MediaConnectFlowRequestProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.MediaConnectFlowRequestProperty,
     ) : CdkObject(cdkObject), MediaConnectFlowRequestProperty {
       /**
        * The ARN of one or two MediaConnect flows that are the sources for this MediaConnect input.

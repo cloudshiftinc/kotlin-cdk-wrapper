@@ -14,8 +14,8 @@ import kotlin.jvm.JvmName
 /**
  * Less oft-needed functions to manipulate Tokens.
  */
-public open class Tokenization internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Tokenization,
+public open class Tokenization(
+  cdkObject: software.amazon.awscdk.Tokenization,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun isResolvable(obj: Any): Boolean =
@@ -62,6 +62,6 @@ public open class Tokenization internal constructor(
         Tokenization(cdkObject)
 
     internal fun unwrap(wrapped: Tokenization): software.amazon.awscdk.Tokenization =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.Tokenization
   }
 }

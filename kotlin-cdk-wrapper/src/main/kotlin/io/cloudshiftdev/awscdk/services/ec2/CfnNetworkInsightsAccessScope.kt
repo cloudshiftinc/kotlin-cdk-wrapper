@@ -124,9 +124,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html)
  */
-public open class CfnNetworkInsightsAccessScope internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope,
+public open class CfnNetworkInsightsAccessScope(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -424,7 +423,8 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
         CfnNetworkInsightsAccessScope = CfnNetworkInsightsAccessScope(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInsightsAccessScope):
-        software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope
   }
 
   /**
@@ -632,8 +632,7 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.AccessScopePathRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.AccessScopePathRequestProperty,
     ) : CdkObject(cdkObject), AccessScopePathRequestProperty {
       /**
        * The destination.
@@ -928,8 +927,7 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty,
     ) : CdkObject(cdkObject), PacketHeaderStatementRequestProperty {
       /**
        * The destination addresses.
@@ -1150,8 +1148,7 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty,
     ) : CdkObject(cdkObject), PathStatementRequestProperty {
       /**
        * The packet header statement.
@@ -1282,8 +1279,7 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty,
     ) : CdkObject(cdkObject), ResourceStatementRequestProperty {
       /**
        * The resource types.
@@ -1405,8 +1401,7 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty,
     ) : CdkObject(cdkObject), ThroughResourcesStatementRequestProperty {
       /**
        * The resource statement.

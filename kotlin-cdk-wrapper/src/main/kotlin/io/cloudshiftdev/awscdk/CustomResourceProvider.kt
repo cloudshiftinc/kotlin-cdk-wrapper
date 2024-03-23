@@ -46,8 +46,8 @@ import kotlin.jvm.JvmName
  * "Resource", "*"));
  * ```
  */
-public open class CustomResourceProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CustomResourceProvider,
+public open class CustomResourceProvider(
+  cdkObject: software.amazon.awscdk.CustomResourceProvider,
 ) : CustomResourceProviderBase(cdkObject) {
   public companion object {
     public fun orCreate(
@@ -87,6 +87,7 @@ public open class CustomResourceProvider internal constructor(
         CustomResourceProvider = CustomResourceProvider(cdkObject)
 
     internal fun unwrap(wrapped: CustomResourceProvider):
-        software.amazon.awscdk.CustomResourceProvider = wrapped.cdkObject
+        software.amazon.awscdk.CustomResourceProvider = wrapped.cdkObject as
+        software.amazon.awscdk.CustomResourceProvider
   }
 }

@@ -79,8 +79,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html)
  */
-public open class CfnTaskSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet,
+public open class CfnTaskSet(
+  cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -859,7 +859,7 @@ public open class CfnTaskSet internal constructor(
         CfnTaskSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnTaskSet): software.amazon.awscdk.services.ecs.CfnTaskSet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecs.CfnTaskSet
   }
 
   /**
@@ -1033,8 +1033,7 @@ public open class CfnTaskSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty,
     ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
       /**
        * Whether the task's elastic network interface receives a public IP address.
@@ -1274,7 +1273,7 @@ public open class CfnTaskSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.LoadBalancerProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.LoadBalancerProperty,
     ) : CdkObject(cdkObject), LoadBalancerProperty {
       /**
        * The name of the container (as it appears in a container definition) to associate with the
@@ -1455,8 +1454,7 @@ public open class CfnTaskSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty,
     ) : CdkObject(cdkObject), NetworkConfigurationProperty {
       /**
        * The VPC subnets and security groups that are associated with a task.
@@ -1567,7 +1565,7 @@ public open class CfnTaskSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty,
     ) : CdkObject(cdkObject), ScaleProperty {
       /**
        * The unit of measure for the scale value.
@@ -1772,8 +1770,7 @@ public open class CfnTaskSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskSet.ServiceRegistryProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.ServiceRegistryProperty,
     ) : CdkObject(cdkObject), ServiceRegistryProperty {
       /**
        * The container name value to be used for your service discovery service.

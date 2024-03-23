@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-ipset.html)
  */
-public open class CfnIPSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.waf.CfnIPSet,
+public open class CfnIPSet(
+  cdkObject: software.amazon.awscdk.services.waf.CfnIPSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -273,7 +273,7 @@ public open class CfnIPSet internal constructor(
         CfnIPSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPSet): software.amazon.awscdk.services.waf.CfnIPSet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.waf.CfnIPSet
   }
 
   /**
@@ -411,7 +411,7 @@ public open class CfnIPSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.waf.CfnIPSet.IPSetDescriptorProperty,
+      cdkObject: software.amazon.awscdk.services.waf.CfnIPSet.IPSetDescriptorProperty,
     ) : CdkObject(cdkObject), IPSetDescriptorProperty {
       /**
        * Specify `IPV4` or `IPV6` .

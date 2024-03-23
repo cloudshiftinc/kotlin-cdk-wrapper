@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html)
  */
-public open class CfnScheduledAction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction,
+public open class CfnScheduledAction(
+  cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -544,7 +544,8 @@ public open class CfnScheduledAction internal constructor(
         CfnScheduledAction = CfnScheduledAction(cdkObject)
 
     internal fun unwrap(wrapped: CfnScheduledAction):
-        software.amazon.awscdk.services.redshift.CfnScheduledAction = wrapped.cdkObject
+        software.amazon.awscdk.services.redshift.CfnScheduledAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.redshift.CfnScheduledAction
   }
 
   /**
@@ -603,8 +604,7 @@ public open class CfnScheduledAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty,
+      cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty,
     ) : CdkObject(cdkObject), PauseClusterMessageProperty {
       /**
        * The identifier of the cluster to be paused.
@@ -804,8 +804,7 @@ public open class CfnScheduledAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnScheduledAction.ResizeClusterMessageProperty,
+      cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.ResizeClusterMessageProperty,
     ) : CdkObject(cdkObject), ResizeClusterMessageProperty {
       /**
        * A boolean value indicating whether the resize operation is using the classic resize
@@ -926,8 +925,7 @@ public open class CfnScheduledAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnScheduledAction.ResumeClusterMessageProperty,
+      cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.ResumeClusterMessageProperty,
     ) : CdkObject(cdkObject), ResumeClusterMessageProperty {
       /**
        * The identifier of the cluster to be resumed.
@@ -1142,8 +1140,7 @@ public open class CfnScheduledAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnScheduledAction.ScheduledActionTypeProperty,
+      cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.ScheduledActionTypeProperty,
     ) : CdkObject(cdkObject), ScheduledActionTypeProperty {
       /**
        * An action that runs a `PauseCluster` API operation.

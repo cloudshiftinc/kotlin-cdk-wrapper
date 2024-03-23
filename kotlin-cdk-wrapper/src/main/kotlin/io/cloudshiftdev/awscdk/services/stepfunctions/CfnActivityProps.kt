@@ -129,7 +129,7 @@ public interface CfnActivityProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.CfnActivityProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.CfnActivityProps,
   ) : CdkObject(cdkObject), CfnActivityProps {
     /**
      * The name of the activity.

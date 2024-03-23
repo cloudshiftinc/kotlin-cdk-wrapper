@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-admchannel.html)
  */
-public open class CfnADMChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnADMChannel,
+public open class CfnADMChannel(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnADMChannel,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -259,6 +259,7 @@ public open class CfnADMChannel internal constructor(
         CfnADMChannel = CfnADMChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnADMChannel):
-        software.amazon.awscdk.services.pinpoint.CfnADMChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnADMChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnADMChannel
   }
 }

@@ -211,7 +211,7 @@ public interface CfnCollectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnCollectionProps,
+    cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnCollectionProps,
   ) : CdkObject(cdkObject), CfnCollectionProps {
     /**
      * A description of the collection.

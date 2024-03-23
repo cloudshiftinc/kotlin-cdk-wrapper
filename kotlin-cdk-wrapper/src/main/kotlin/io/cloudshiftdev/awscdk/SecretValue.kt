@@ -54,8 +54,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class SecretValue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.SecretValue,
+public open class SecretValue(
+  cdkObject: software.amazon.awscdk.SecretValue,
 ) : Intrinsic(cdkObject) {
   public constructor(protectedValue: Any) : this(software.amazon.awscdk.SecretValue(protectedValue)
   )
@@ -199,6 +199,6 @@ public open class SecretValue internal constructor(
         SecretValue(cdkObject)
 
     internal fun unwrap(wrapped: SecretValue): software.amazon.awscdk.SecretValue =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.SecretValue
   }
 }

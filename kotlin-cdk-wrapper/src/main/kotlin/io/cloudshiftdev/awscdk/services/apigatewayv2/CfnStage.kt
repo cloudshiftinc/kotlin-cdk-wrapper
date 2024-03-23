@@ -67,8 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-stage.html)
  */
-public open class CfnStage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage,
+public open class CfnStage(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -668,7 +668,7 @@ public open class CfnStage internal constructor(
         CfnStage(cdkObject)
 
     internal fun unwrap(wrapped: CfnStage): software.amazon.awscdk.services.apigatewayv2.CfnStage =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigatewayv2.CfnStage
   }
 
   /**
@@ -757,8 +757,7 @@ public open class CfnStage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty,
     ) : CdkObject(cdkObject), AccessLogSettingsProperty {
       /**
        * The ARN of the CloudWatch Logs log group to receive access logs.
@@ -980,8 +979,7 @@ public open class CfnStage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnStage.RouteSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage.RouteSettingsProperty,
     ) : CdkObject(cdkObject), RouteSettingsProperty {
       /**
        * Specifies whether ( `true` ) or not ( `false` ) data trace logging is enabled for this

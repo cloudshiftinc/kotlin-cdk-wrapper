@@ -42,9 +42,8 @@ import kotlin.Number
  * nlb.getLoadBalancerDnsName())).build();
  * ```
  */
-public open class AlbTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbTarget,
+public open class AlbTarget(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbTarget,
 ) : AlbArnTarget(cdkObject) {
   public constructor(alb: IApplicationLoadBalancer, port: Number) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbTarget(alb.let(IApplicationLoadBalancer::unwrap),
@@ -58,5 +57,6 @@ public open class AlbTarget internal constructor(
 
     internal fun unwrap(wrapped: AlbTarget):
         software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbTarget = wrapped.cdkObject
+        as software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbTarget
   }
 }

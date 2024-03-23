@@ -168,7 +168,7 @@ public interface HttpsRedirectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.patterns.HttpsRedirectProps,
+    cdkObject: software.amazon.awscdk.services.route53.patterns.HttpsRedirectProps,
   ) : CdkObject(cdkObject), HttpsRedirectProps {
     /**
      * The AWS Certificate Manager (ACM) certificate that will be associated with the CloudFront

@@ -155,7 +155,7 @@ public interface SecurityGroupContextQuery {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery,
   ) : CdkObject(cdkObject), SecurityGroupContextQuery {
     /**
      * Query account.

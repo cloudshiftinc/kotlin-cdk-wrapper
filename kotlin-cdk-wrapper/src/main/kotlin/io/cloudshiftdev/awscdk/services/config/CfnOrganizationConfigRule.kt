@@ -117,8 +117,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconfigrule.html)
  */
-public open class CfnOrganizationConfigRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule,
+public open class CfnOrganizationConfigRule(
+  cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -581,7 +581,8 @@ public open class CfnOrganizationConfigRule internal constructor(
         CfnOrganizationConfigRule = CfnOrganizationConfigRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnOrganizationConfigRule):
-        software.amazon.awscdk.services.config.CfnOrganizationConfigRule = wrapped.cdkObject
+        software.amazon.awscdk.services.config.CfnOrganizationConfigRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnOrganizationConfigRule
   }
 
   /**
@@ -976,8 +977,7 @@ public open class CfnOrganizationConfigRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty,
     ) : CdkObject(cdkObject), OrganizationCustomPolicyRuleMetadataProperty {
       /**
        * A list of accounts that you can enable debug logging for your organization AWS Config
@@ -1437,8 +1437,7 @@ public open class CfnOrganizationConfigRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty,
     ) : CdkObject(cdkObject), OrganizationCustomRuleMetadataProperty {
       /**
        * The description that you provide for your organization AWS Config rule.
@@ -1806,8 +1805,7 @@ public open class CfnOrganizationConfigRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty,
     ) : CdkObject(cdkObject), OrganizationManagedRuleMetadataProperty {
       /**
        * The description that you provide for your organization AWS Config rule.

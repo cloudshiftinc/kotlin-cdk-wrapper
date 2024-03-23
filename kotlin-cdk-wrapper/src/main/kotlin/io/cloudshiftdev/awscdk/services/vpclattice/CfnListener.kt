@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-listener.html)
  */
-public open class CfnListener internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener,
+public open class CfnListener(
+  cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -436,7 +436,8 @@ public open class CfnListener internal constructor(
         CfnListener = CfnListener(cdkObject)
 
     internal fun unwrap(wrapped: CfnListener):
-        software.amazon.awscdk.services.vpclattice.CfnListener = wrapped.cdkObject
+        software.amazon.awscdk.services.vpclattice.CfnListener = wrapped.cdkObject as
+        software.amazon.awscdk.services.vpclattice.CfnListener
   }
 
   /**
@@ -584,8 +585,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty,
     ) : CdkObject(cdkObject), DefaultActionProperty {
       /**
        * Describes an action that returns a custom HTTP response.
@@ -675,8 +675,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnListener.FixedResponseProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.FixedResponseProperty,
     ) : CdkObject(cdkObject), FixedResponseProperty {
       /**
        * The HTTP response code.
@@ -842,8 +841,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnListener.ForwardProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.ForwardProperty,
     ) : CdkObject(cdkObject), ForwardProperty {
       /**
        * The target groups.
@@ -971,8 +969,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty,
     ) : CdkObject(cdkObject), WeightedTargetGroupProperty {
       /**
        * The ID of the target group.

@@ -99,9 +99,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html)
  */
-public open class CfnLaunchConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration,
+public open class CfnLaunchConfiguration(
+  cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1375,7 +1374,8 @@ public open class CfnLaunchConfiguration internal constructor(
         CfnLaunchConfiguration = CfnLaunchConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchConfiguration):
-        software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration
   }
 
   /**
@@ -1601,8 +1601,7 @@ public open class CfnLaunchConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty,
     ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
       /**
        * The device name assigned to the volume (for example, `/dev/sdh` or `xvdh` ).
@@ -2052,8 +2051,7 @@ public open class CfnLaunchConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty,
     ) : CdkObject(cdkObject), BlockDeviceProperty {
       /**
        * Indicates whether the volume is deleted on instance termination.
@@ -2338,8 +2336,7 @@ public open class CfnLaunchConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.MetadataOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.MetadataOptionsProperty,
     ) : CdkObject(cdkObject), MetadataOptionsProperty {
       /**
        * This parameter enables or disables the HTTP metadata endpoint on your instances.

@@ -63,8 +63,6 @@ public interface CfnGatewayProps {
   /**
    * A unique, friendly name for the gateway.
    *
-   * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayname)
    */
   public fun gatewayName(): String
@@ -126,7 +124,6 @@ public interface CfnGatewayProps {
 
     /**
      * @param gatewayName A unique, friendly name for the gateway. 
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
      */
     public fun gatewayName(gatewayName: String)
 
@@ -209,7 +206,6 @@ public interface CfnGatewayProps {
 
     /**
      * @param gatewayName A unique, friendly name for the gateway. 
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
      */
     override fun gatewayName(gatewayName: String) {
       cdkBuilder.gatewayName(gatewayName)
@@ -264,7 +260,7 @@ public interface CfnGatewayProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGatewayProps,
+    cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGatewayProps,
   ) : CdkObject(cdkObject), CfnGatewayProps {
     /**
      * A list of gateway capability summaries that each contain a namespace and status.
@@ -280,8 +276,6 @@ public interface CfnGatewayProps {
 
     /**
      * A unique, friendly name for the gateway.
-     *
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayname)
      */

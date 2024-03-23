@@ -242,7 +242,7 @@ public interface MethodDeploymentOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.MethodDeploymentOptions,
+    cdkObject: software.amazon.awscdk.services.apigateway.MethodDeploymentOptions,
   ) : CdkObject(cdkObject), MethodDeploymentOptions {
     /**
      * Indicates whether the cached responses are encrypted.

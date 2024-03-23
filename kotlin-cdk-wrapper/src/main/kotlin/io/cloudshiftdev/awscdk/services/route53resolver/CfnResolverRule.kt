@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html)
  */
-public open class CfnResolverRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRule,
+public open class CfnResolverRule(
+  cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -484,7 +484,8 @@ public open class CfnResolverRule internal constructor(
         CfnResolverRule = CfnResolverRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnResolverRule):
-        software.amazon.awscdk.services.route53resolver.CfnResolverRule = wrapped.cdkObject
+        software.amazon.awscdk.services.route53resolver.CfnResolverRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53resolver.CfnResolverRule
   }
 
   /**
@@ -651,8 +652,7 @@ public open class CfnResolverRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53resolver.CfnResolverRule.TargetAddressProperty,
+      cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRule.TargetAddressProperty,
     ) : CdkObject(cdkObject), TargetAddressProperty {
       /**
        * One IPv4 address that you want to forward DNS queries to.

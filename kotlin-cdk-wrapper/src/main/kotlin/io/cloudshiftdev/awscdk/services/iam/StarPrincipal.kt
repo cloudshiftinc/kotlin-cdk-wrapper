@@ -22,8 +22,8 @@ import kotlin.String
  * StarPrincipal starPrincipal = new StarPrincipal();
  * ```
  */
-public open class StarPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.StarPrincipal,
+public open class StarPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.StarPrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.iam.StarPrincipal()
   )
@@ -44,6 +44,6 @@ public open class StarPrincipal internal constructor(
         StarPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: StarPrincipal): software.amazon.awscdk.services.iam.StarPrincipal =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.StarPrincipal
   }
 }

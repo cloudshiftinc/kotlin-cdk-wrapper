@@ -102,7 +102,7 @@ public interface ThrottlingPerMethod {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.ThrottlingPerMethod,
+    cdkObject: software.amazon.awscdk.services.apigateway.ThrottlingPerMethod,
   ) : CdkObject(cdkObject), ThrottlingPerMethod {
     /**
      * [disable-awslint:ref-via-interface] The method for which you specify the throttling settings.

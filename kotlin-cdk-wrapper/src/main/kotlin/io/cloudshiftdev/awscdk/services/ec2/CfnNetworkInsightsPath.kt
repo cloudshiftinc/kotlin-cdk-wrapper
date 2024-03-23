@@ -77,8 +77,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightspath.html)
  */
-public open class CfnNetworkInsightsPath internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath,
+public open class CfnNetworkInsightsPath(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -626,7 +626,8 @@ public open class CfnNetworkInsightsPath internal constructor(
         CfnNetworkInsightsPath = CfnNetworkInsightsPath(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInsightsPath):
-        software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath
   }
 
   /**
@@ -703,8 +704,7 @@ public open class CfnNetworkInsightsPath internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty,
     ) : CdkObject(cdkObject), FilterPortRangeProperty {
       /**
        * The first port in the range.
@@ -916,8 +916,7 @@ public open class CfnNetworkInsightsPath internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty,
     ) : CdkObject(cdkObject), PathFilterProperty {
       /**
        * The destination IPv4 address.

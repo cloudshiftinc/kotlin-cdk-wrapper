@@ -518,7 +518,7 @@ public interface DefaultStackSynthesizerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.DefaultStackSynthesizerProps,
+    cdkObject: software.amazon.awscdk.DefaultStackSynthesizerProps,
   ) : CdkObject(cdkObject), DefaultStackSynthesizerProps {
     /**
      * Bootstrap stack version SSM parameter.

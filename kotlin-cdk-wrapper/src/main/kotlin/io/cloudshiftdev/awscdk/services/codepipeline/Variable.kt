@@ -42,8 +42,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class Variable internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codepipeline.Variable,
+public open class Variable(
+  cdkObject: software.amazon.awscdk.services.codepipeline.Variable,
 ) : CdkObject(cdkObject) {
   public constructor(props: VariableProps) :
       this(software.amazon.awscdk.services.codepipeline.Variable(props.let(VariableProps::unwrap))
@@ -149,6 +149,6 @@ public open class Variable internal constructor(
         Variable(cdkObject)
 
     internal fun unwrap(wrapped: Variable): software.amazon.awscdk.services.codepipeline.Variable =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.codepipeline.Variable
   }
 }

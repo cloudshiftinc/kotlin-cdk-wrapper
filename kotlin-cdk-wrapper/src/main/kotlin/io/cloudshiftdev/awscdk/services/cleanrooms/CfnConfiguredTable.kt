@@ -87,8 +87,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html)
  */
-public open class CfnConfiguredTable internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable,
+public open class CfnConfiguredTable(
+  cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -549,7 +549,8 @@ public open class CfnConfiguredTable internal constructor(
         CfnConfiguredTable = CfnConfiguredTable(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfiguredTable):
-        software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable = wrapped.cdkObject
+        software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable = wrapped.cdkObject as
+        software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable
   }
 
   /**
@@ -636,8 +637,7 @@ public open class CfnConfiguredTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty,
     ) : CdkObject(cdkObject), AggregateColumnProperty {
       /**
        * Column names in configured table of aggregate columns.
@@ -784,8 +784,7 @@ public open class CfnConfiguredTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregationConstraintProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregationConstraintProperty,
     ) : CdkObject(cdkObject), AggregationConstraintProperty {
       /**
        * Column in aggregation constraint for which there must be a minimum number of distinct
@@ -1152,8 +1151,7 @@ public open class CfnConfiguredTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleAggregationProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleAggregationProperty,
     ) : CdkObject(cdkObject), AnalysisRuleAggregationProperty {
       /**
        * The columns that query runners are allowed to use in aggregation queries.
@@ -1347,8 +1345,7 @@ public open class CfnConfiguredTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty,
     ) : CdkObject(cdkObject), AnalysisRuleCustomProperty {
       /**
        * The ARN of the analysis templates that are allowed by the custom analysis rule.
@@ -1528,8 +1525,7 @@ public open class CfnConfiguredTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleListProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleListProperty,
     ) : CdkObject(cdkObject), AnalysisRuleListProperty {
       /**
        * The logical operators (if any) that are to be used in an INNER JOIN match condition.
@@ -1707,8 +1703,7 @@ public open class CfnConfiguredTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleProperty,
     ) : CdkObject(cdkObject), AnalysisRuleProperty {
       /**
        * A policy that describes the associated data usage limitations.
@@ -1854,8 +1849,7 @@ public open class CfnConfiguredTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty,
     ) : CdkObject(cdkObject), ConfiguredTableAnalysisRulePolicyProperty {
       /**
        * Controls on the query specifications that can be run on a configured table.
@@ -2091,8 +2085,7 @@ public open class CfnConfiguredTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyV1Property,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyV1Property,
     ) : CdkObject(cdkObject), ConfiguredTableAnalysisRulePolicyV1Property {
       /**
        * Analysis rule type that enables only aggregation queries on a configured table.
@@ -2209,8 +2202,7 @@ public open class CfnConfiguredTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty,
     ) : CdkObject(cdkObject), GlueTableReferenceProperty {
       /**
        * The name of the database the AWS Glue table belongs to.
@@ -2337,8 +2329,7 @@ public open class CfnConfiguredTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty,
     ) : CdkObject(cdkObject), TableReferenceProperty {
       /**
        * If present, a reference to the AWS Glue table referred to by this table reference.

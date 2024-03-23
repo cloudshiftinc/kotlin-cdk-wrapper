@@ -142,7 +142,7 @@ public interface CredentialsBaseOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CredentialsBaseOptions,
+    cdkObject: software.amazon.awscdk.services.rds.CredentialsBaseOptions,
   ) : CdkObject(cdkObject), CredentialsBaseOptions {
     /**
      * KMS encryption key to encrypt the generated secret.

@@ -23,8 +23,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ReceiptFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.ReceiptFilter,
+public open class ReceiptFilter(
+  cdkObject: software.amazon.awscdk.services.ses.ReceiptFilter,
 ) : Resource(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.ReceiptFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -137,6 +137,6 @@ public open class ReceiptFilter internal constructor(
         ReceiptFilter(cdkObject)
 
     internal fun unwrap(wrapped: ReceiptFilter): software.amazon.awscdk.services.ses.ReceiptFilter =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ses.ReceiptFilter
   }
 }

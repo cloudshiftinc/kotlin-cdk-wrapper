@@ -66,8 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-accessentry.html)
  */
-public open class CfnAccessEntry internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry,
+public open class CfnAccessEntry(
+  cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -601,7 +601,7 @@ public open class CfnAccessEntry internal constructor(
         = CfnAccessEntry(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessEntry): software.amazon.awscdk.services.eks.CfnAccessEntry
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.eks.CfnAccessEntry
   }
 
   /**
@@ -717,8 +717,7 @@ public open class CfnAccessEntry internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty,
     ) : CdkObject(cdkObject), AccessPolicyProperty {
       /**
        * The scope of an `AccessPolicy` that's associated to an `AccessEntry` .
@@ -842,8 +841,7 @@ public open class CfnAccessEntry internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty,
     ) : CdkObject(cdkObject), AccessScopeProperty {
       /**
        * A Kubernetes `namespace` that an access policy is scoped to.

@@ -38,8 +38,8 @@ import kotlin.collections.Map
  * .build());
  * ```
  */
-public abstract class ServiceDiscovery internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.ServiceDiscovery,
+public abstract class ServiceDiscovery(
+  cdkObject: software.amazon.awscdk.services.appmesh.ServiceDiscovery,
 ) : CdkObject(cdkObject) {
   /**
    * Binds the current object when adding Service Discovery to a VirtualNode.
@@ -50,7 +50,7 @@ public abstract class ServiceDiscovery internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(ServiceDiscoveryConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.ServiceDiscovery,
+    cdkObject: software.amazon.awscdk.services.appmesh.ServiceDiscovery,
   ) : ServiceDiscovery(cdkObject)
 
   public companion object {

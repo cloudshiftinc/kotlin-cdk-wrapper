@@ -148,7 +148,7 @@ public interface EnvironmentAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.EnvironmentAttributes,
+    cdkObject: software.amazon.awscdk.services.appconfig.EnvironmentAttributes,
   ) : CdkObject(cdkObject), EnvironmentAttributes {
     /**
      * The application associated with the environment.

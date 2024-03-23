@@ -69,8 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrant.html)
  */
-public open class CfnAccessGrant internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant,
+public open class CfnAccessGrant(
+  cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -602,7 +602,7 @@ public open class CfnAccessGrant internal constructor(
         = CfnAccessGrant(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessGrant): software.amazon.awscdk.services.s3.CfnAccessGrant
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.s3.CfnAccessGrant
   }
 
   /**
@@ -699,8 +699,7 @@ public open class CfnAccessGrant internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnAccessGrant.AccessGrantsLocationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant.AccessGrantsLocationConfigurationProperty,
     ) : CdkObject(cdkObject), AccessGrantsLocationConfigurationProperty {
       /**
        * The `S3SubPrefix` is appended to the location scope creating the grant scope.
@@ -855,7 +854,7 @@ public open class CfnAccessGrant internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant.GranteeProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant.GranteeProperty,
     ) : CdkObject(cdkObject), GranteeProperty {
       /**
        * The unique identifier of the `Grantee` .

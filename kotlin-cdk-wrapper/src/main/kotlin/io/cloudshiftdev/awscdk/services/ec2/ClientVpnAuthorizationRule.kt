@@ -29,8 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ClientVpnAuthorizationRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule,
+public open class ClientVpnAuthorizationRule(
+  cdkObject: software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -163,6 +163,7 @@ public open class ClientVpnAuthorizationRule internal constructor(
         ClientVpnAuthorizationRule = ClientVpnAuthorizationRule(cdkObject)
 
     internal fun unwrap(wrapped: ClientVpnAuthorizationRule):
-        software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule
   }
 }

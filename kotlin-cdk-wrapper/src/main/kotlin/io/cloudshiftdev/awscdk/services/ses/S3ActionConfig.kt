@@ -120,7 +120,7 @@ public interface S3ActionConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.S3ActionConfig,
+    cdkObject: software.amazon.awscdk.services.ses.S3ActionConfig,
   ) : CdkObject(cdkObject), S3ActionConfig {
     /**
      * The name of the Amazon S3 bucket that you want to send incoming mail to.

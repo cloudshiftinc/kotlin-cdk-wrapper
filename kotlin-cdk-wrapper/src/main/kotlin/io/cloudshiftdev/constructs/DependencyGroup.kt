@@ -4,8 +4,8 @@ package io.cloudshiftdev.constructs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
-public open class DependencyGroup internal constructor(
-  internal override val cdkObject: software.constructs.DependencyGroup,
+public open class DependencyGroup(
+  cdkObject: software.constructs.DependencyGroup,
 ) : CdkObject(cdkObject), IDependable {
   public constructor(deps: IDependable) :
       this(software.constructs.DependencyGroup(deps.let(IDependable::unwrap))
@@ -20,6 +20,6 @@ public open class DependencyGroup internal constructor(
         DependencyGroup(cdkObject)
 
     internal fun unwrap(wrapped: DependencyGroup): software.constructs.DependencyGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.constructs.DependencyGroup
   }
 }

@@ -169,7 +169,7 @@ public interface ClusterInstanceBindOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.ClusterInstanceBindOptions,
+    cdkObject: software.amazon.awscdk.services.rds.ClusterInstanceBindOptions,
   ) : CdkObject(cdkObject), ClusterInstanceBindOptions {
     /**
      * The interval, in seconds, between points when Amazon RDS collects enhanced monitoring metrics

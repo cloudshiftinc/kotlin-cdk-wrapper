@@ -335,7 +335,7 @@ public interface CfnDeviceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnDeviceProps,
+    cdkObject: software.amazon.awscdk.services.networkmanager.CfnDeviceProps,
   ) : CdkObject(cdkObject), CfnDeviceProps {
     /**
      * The AWS location of the device.

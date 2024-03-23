@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Distribution internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.Distribution,
+public open class Distribution(
+  cdkObject: software.amazon.awscdk.services.cloudfront.Distribution,
 ) : Resource(cdkObject), IDistribution {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1370,6 +1370,7 @@ public open class Distribution internal constructor(
         Distribution = Distribution(cdkObject)
 
     internal fun unwrap(wrapped: Distribution):
-        software.amazon.awscdk.services.cloudfront.Distribution = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.Distribution = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.Distribution
   }
 }

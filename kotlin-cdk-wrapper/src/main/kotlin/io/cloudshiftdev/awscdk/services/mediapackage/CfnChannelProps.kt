@@ -277,7 +277,7 @@ public interface CfnChannelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannelProps,
+    cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannelProps,
   ) : CdkObject(cdkObject), CfnChannelProps {
     /**
      * Any descriptive information that you want to add to the channel for future identification

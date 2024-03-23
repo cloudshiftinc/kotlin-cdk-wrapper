@@ -23,8 +23,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class TrafficRouting internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codedeploy.TrafficRouting,
+public abstract class TrafficRouting(
+  cdkObject: software.amazon.awscdk.services.codedeploy.TrafficRouting,
 ) : CdkObject(cdkObject) {
   /**
    * Returns the traffic routing configuration.
@@ -35,7 +35,7 @@ public abstract class TrafficRouting internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.TrafficRouting,
+    cdkObject: software.amazon.awscdk.services.codedeploy.TrafficRouting,
   ) : TrafficRouting(cdkObject)
 
   public companion object {

@@ -251,7 +251,7 @@ public interface DatabaseSecretProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.DatabaseSecretProps,
+    cdkObject: software.amazon.awscdk.services.rds.DatabaseSecretProps,
   ) : CdkObject(cdkObject), DatabaseSecretProps {
     /**
      * The database name, if not using the default one.

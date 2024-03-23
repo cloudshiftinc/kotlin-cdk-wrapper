@@ -237,7 +237,7 @@ public interface WebSocketApiProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApiProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApiProps,
   ) : CdkObject(cdkObject), WebSocketApiProps {
     /**
      * An API key selection expression.

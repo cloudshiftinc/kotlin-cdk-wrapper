@@ -60,9 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html)
  */
-public open class CfnConfigurationSetEventDestination internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination,
+public open class CfnConfigurationSetEventDestination(
+  cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -249,6 +248,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
     internal fun unwrap(wrapped: CfnConfigurationSetEventDestination):
         software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination = wrapped.cdkObject
+        as software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination
   }
 
   /**
@@ -346,8 +346,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty,
     ) : CdkObject(cdkObject), CloudWatchDestinationProperty {
       /**
        * A list of dimensions upon which to categorize your emails when you publish email sending
@@ -527,8 +526,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.DimensionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.DimensionConfigurationProperty,
     ) : CdkObject(cdkObject), DimensionConfigurationProperty {
       /**
        * The default value of the dimension that is published to Amazon CloudWatch if you do not
@@ -1062,8 +1060,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventDestinationProperty,
     ) : CdkObject(cdkObject), EventDestinationProperty {
       /**
        * An object that contains the names, default values, and sources of the dimensions associated
@@ -1251,8 +1248,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty,
     ) : CdkObject(cdkObject), KinesisFirehoseDestinationProperty {
       /**
        * The ARN of the Amazon Kinesis Firehose stream that email sending events should be published
@@ -1369,8 +1365,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.SnsDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.SnsDestinationProperty,
     ) : CdkObject(cdkObject), SnsDestinationProperty {
       /**
        * The ARN of the Amazon SNS topic for email sending events.

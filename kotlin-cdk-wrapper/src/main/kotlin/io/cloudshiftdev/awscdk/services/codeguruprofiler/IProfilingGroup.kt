@@ -52,7 +52,7 @@ public interface IProfilingGroup : IResource {
   public fun profilingGroupName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codeguruprofiler.IProfilingGroup,
+    cdkObject: software.amazon.awscdk.services.codeguruprofiler.IProfilingGroup,
   ) : CdkObject(cdkObject), IProfilingGroup {
     /**
      * Apply the given removal policy to this resource.

@@ -603,7 +603,7 @@ public interface CfnClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.CfnClusterProps,
+    cdkObject: software.amazon.awscdk.services.eks.CfnClusterProps,
   ) : CdkObject(cdkObject), CfnClusterProps {
     /**
      * The access configuration for the cluster.

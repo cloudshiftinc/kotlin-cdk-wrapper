@@ -60,9 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html)
  */
-public open class CfnPrivateDnsNamespace internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace,
+public open class CfnPrivateDnsNamespace(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -396,6 +395,7 @@ public open class CfnPrivateDnsNamespace internal constructor(
 
     internal fun unwrap(wrapped: CfnPrivateDnsNamespace):
         software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace = wrapped.cdkObject
+        as software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace
   }
 
   /**
@@ -488,8 +488,7 @@ public open class CfnPrivateDnsNamespace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty,
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty,
     ) : CdkObject(cdkObject), PrivateDnsPropertiesMutableProperty {
       /**
        * Fields for the Start of Authority (SOA) record for the hosted zone for the private DNS
@@ -606,8 +605,7 @@ public open class CfnPrivateDnsNamespace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty,
     ) : CdkObject(cdkObject), PropertiesProperty {
       /**
        * DNS properties for the private DNS namespace.
@@ -689,8 +687,7 @@ public open class CfnPrivateDnsNamespace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty,
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty,
     ) : CdkObject(cdkObject), SOAProperty {
       /**
        * The time to live (TTL) for purposes of negative caching.

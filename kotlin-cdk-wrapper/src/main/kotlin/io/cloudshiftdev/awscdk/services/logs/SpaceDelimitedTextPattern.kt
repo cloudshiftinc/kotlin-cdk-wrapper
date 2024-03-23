@@ -20,8 +20,8 @@ import kotlin.collections.List
  * "!=", 200);
  * ```
  */
-public open class SpaceDelimitedTextPattern internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.SpaceDelimitedTextPattern,
+public open class SpaceDelimitedTextPattern(
+  cdkObject: software.amazon.awscdk.services.logs.SpaceDelimitedTextPattern,
 ) : CdkObject(cdkObject), IFilterPattern {
   /**
    *
@@ -67,6 +67,7 @@ public open class SpaceDelimitedTextPattern internal constructor(
         SpaceDelimitedTextPattern = SpaceDelimitedTextPattern(cdkObject)
 
     internal fun unwrap(wrapped: SpaceDelimitedTextPattern):
-        software.amazon.awscdk.services.logs.SpaceDelimitedTextPattern = wrapped.cdkObject
+        software.amazon.awscdk.services.logs.SpaceDelimitedTextPattern = wrapped.cdkObject as
+        software.amazon.awscdk.services.logs.SpaceDelimitedTextPattern
   }
 }

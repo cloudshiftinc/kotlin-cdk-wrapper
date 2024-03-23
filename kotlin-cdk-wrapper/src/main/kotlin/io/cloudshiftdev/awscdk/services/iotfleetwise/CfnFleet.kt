@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html)
  */
-public open class CfnFleet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnFleet,
+public open class CfnFleet(
+  cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnFleet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -270,6 +270,6 @@ public open class CfnFleet internal constructor(
         CfnFleet(cdkObject)
 
     internal fun unwrap(wrapped: CfnFleet): software.amazon.awscdk.services.iotfleetwise.CfnFleet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iotfleetwise.CfnFleet
   }
 }

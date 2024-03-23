@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-primarytaskset.html)
  */
-public open class CfnPrimaryTaskSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnPrimaryTaskSet,
+public open class CfnPrimaryTaskSet(
+  cdkObject: software.amazon.awscdk.services.ecs.CfnPrimaryTaskSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -201,6 +201,7 @@ public open class CfnPrimaryTaskSet internal constructor(
         CfnPrimaryTaskSet = CfnPrimaryTaskSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnPrimaryTaskSet):
-        software.amazon.awscdk.services.ecs.CfnPrimaryTaskSet = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.CfnPrimaryTaskSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.CfnPrimaryTaskSet
   }
 }

@@ -633,7 +633,7 @@ public interface CfnPatchBaselineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaselineProps,
+    cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaselineProps,
   ) : CdkObject(cdkObject), CfnPatchBaselineProps {
     /**
      * A set of rules used to include patches in the baseline.

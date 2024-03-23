@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html)
  */
-public open class CfnServiceNetwork internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetwork,
+public open class CfnServiceNetwork(
+  cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetwork,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.vpclattice.CfnServiceNetwork(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -272,6 +272,7 @@ public open class CfnServiceNetwork internal constructor(
         CfnServiceNetwork = CfnServiceNetwork(cdkObject)
 
     internal fun unwrap(wrapped: CfnServiceNetwork):
-        software.amazon.awscdk.services.vpclattice.CfnServiceNetwork = wrapped.cdkObject
+        software.amazon.awscdk.services.vpclattice.CfnServiceNetwork = wrapped.cdkObject as
+        software.amazon.awscdk.services.vpclattice.CfnServiceNetwork
   }
 }

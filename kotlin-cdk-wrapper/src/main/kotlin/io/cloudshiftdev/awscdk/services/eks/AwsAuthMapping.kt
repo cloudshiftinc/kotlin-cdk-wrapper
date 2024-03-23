@@ -84,7 +84,7 @@ public interface AwsAuthMapping {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.AwsAuthMapping,
+    cdkObject: software.amazon.awscdk.services.eks.AwsAuthMapping,
   ) : CdkObject(cdkObject), AwsAuthMapping {
     /**
      * A list of groups within Kubernetes to which the role is mapped.

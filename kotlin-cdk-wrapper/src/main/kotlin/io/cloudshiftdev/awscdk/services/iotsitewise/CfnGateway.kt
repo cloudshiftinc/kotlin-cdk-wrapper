@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html)
  */
-public open class CfnGateway internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway,
+public open class CfnGateway(
+  cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -229,8 +229,6 @@ public open class CfnGateway internal constructor(
     /**
      * A unique, friendly name for the gateway.
      *
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayname)
      * @param gatewayName A unique, friendly name for the gateway. 
      */
@@ -350,8 +348,6 @@ public open class CfnGateway internal constructor(
     /**
      * A unique, friendly name for the gateway.
      *
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayname)
      * @param gatewayName A unique, friendly name for the gateway. 
      */
@@ -442,7 +438,7 @@ public open class CfnGateway internal constructor(
         = CfnGateway(cdkObject)
 
     internal fun unwrap(wrapped: CfnGateway): software.amazon.awscdk.services.iotsitewise.CfnGateway
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.iotsitewise.CfnGateway
   }
 
   /**
@@ -483,8 +479,6 @@ public open class CfnGateway internal constructor(
      * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
      * `version` is a number such as `1` .
      *
-     * The maximum length is 512 characters with the pattern `^[a-zA-Z]+:[a-zA-Z]+:[0-9]+$` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilitynamespace)
      */
     public fun capabilityNamespace(): String
@@ -508,8 +502,6 @@ public open class CfnGateway internal constructor(
        * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
        * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
        * `version` is a number such as `1` .
-       *
-       * The maximum length is 512 characters with the pattern `^[a-zA-Z]+:[a-zA-Z]+:[0-9]+$` .
        */
       public fun capabilityNamespace(capabilityNamespace: String)
     }
@@ -536,8 +528,6 @@ public open class CfnGateway internal constructor(
        * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
        * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
        * `version` is a number such as `1` .
-       *
-       * The maximum length is 512 characters with the pattern `^[a-zA-Z]+:[a-zA-Z]+:[0-9]+$` .
        */
       override fun capabilityNamespace(capabilityNamespace: String) {
         cdkBuilder.capabilityNamespace(capabilityNamespace)
@@ -549,8 +539,7 @@ public open class CfnGateway internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty,
+      cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty,
     ) : CdkObject(cdkObject), GatewayCapabilitySummaryProperty {
       /**
        * The JSON document that defines the configuration for the gateway capability.
@@ -569,8 +558,6 @@ public open class CfnGateway internal constructor(
        * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
        * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
        * `version` is a number such as `1` .
-       *
-       * The maximum length is 512 characters with the pattern `^[a-zA-Z]+:[a-zA-Z]+:[0-9]+$` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilitynamespace)
        */
@@ -726,8 +713,7 @@ public open class CfnGateway internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayPlatformProperty,
+      cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayPlatformProperty,
     ) : CdkObject(cdkObject), GatewayPlatformProperty {
       /**
        * A gateway that runs on AWS IoT Greengrass .
@@ -788,9 +774,9 @@ public open class CfnGateway internal constructor(
     /**
      * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
      * Greengrass group. For more information about how to find a group's ARN, see
-     * [ListGroups](https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html) and
-     * [GetGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html) in the
-     * *AWS IoT Greengrass API Reference* .
+     * [ListGroups](https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html) and
+     * [GetGroup](https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html) in the *AWS
+     * IoT Greengrass V1 API Reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrass.html#cfn-iotsitewise-gateway-greengrass-grouparn)
      */
@@ -805,9 +791,9 @@ public open class CfnGateway internal constructor(
        * @param groupArn The
        * [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
        * Greengrass group. For more information about how to find a group's ARN, see
-       * [ListGroups](https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html)
-       * and [GetGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html)
-       * in the *AWS IoT Greengrass API Reference* . 
+       * [ListGroups](https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html) and
+       * [GetGroup](https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html) in the
+       * *AWS IoT Greengrass V1 API Reference* . 
        */
       public fun groupArn(groupArn: String)
     }
@@ -821,9 +807,9 @@ public open class CfnGateway internal constructor(
        * @param groupArn The
        * [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
        * Greengrass group. For more information about how to find a group's ARN, see
-       * [ListGroups](https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html)
-       * and [GetGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html)
-       * in the *AWS IoT Greengrass API Reference* . 
+       * [ListGroups](https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html) and
+       * [GetGroup](https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html) in the
+       * *AWS IoT Greengrass V1 API Reference* . 
        */
       override fun groupArn(groupArn: String) {
         cdkBuilder.groupArn(groupArn)
@@ -834,15 +820,14 @@ public open class CfnGateway internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty,
+      cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty,
     ) : CdkObject(cdkObject), GreengrassProperty {
       /**
        * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of
        * the Greengrass group. For more information about how to find a group's ARN, see
-       * [ListGroups](https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html)
-       * and [GetGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html)
-       * in the *AWS IoT Greengrass API Reference* .
+       * [ListGroups](https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html) and
+       * [GetGroup](https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html) in the
+       * *AWS IoT Greengrass V1 API Reference* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrass.html#cfn-iotsitewise-gateway-greengrass-grouparn)
        */
@@ -929,8 +914,7 @@ public open class CfnGateway internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property,
+      cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property,
     ) : CdkObject(cdkObject), GreengrassV2Property {
       /**
        * The name of the AWS IoT thing for your AWS IoT Greengrass V2 core device.

@@ -92,8 +92,7 @@ public interface TransformS3DataSource {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource,
   ) : CdkObject(cdkObject), TransformS3DataSource {
     /**
      * S3 Data Type.

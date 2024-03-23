@@ -30,9 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainnameapiassociation.html)
  */
-public open class CfnDomainNameApiAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociation,
+public open class CfnDomainNameApiAssociation(
+  cdkObject: software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -162,6 +161,7 @@ public open class CfnDomainNameApiAssociation internal constructor(
         CfnDomainNameApiAssociation = CfnDomainNameApiAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainNameApiAssociation):
-        software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociation
   }
 }

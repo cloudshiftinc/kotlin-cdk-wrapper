@@ -105,8 +105,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html)
  */
-public open class CfnEventSourceMapping internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping,
+public open class CfnEventSourceMapping(
+  cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -329,12 +329,12 @@ public open class CfnEventSourceMapping internal constructor(
       filterCriteria(FilterCriteriaProperty(`value`))
 
   /**
-   * The name of the Lambda function.
+   * The name or ARN of the Lambda function.
    */
   public open fun functionName(): String = unwrap(this).getFunctionName()
 
   /**
-   * The name of the Lambda function.
+   * The name or ARN of the Lambda function.
    */
   public open fun functionName(`value`: String) {
     unwrap(this).setFunctionName(`value`)
@@ -847,7 +847,7 @@ public open class CfnEventSourceMapping internal constructor(
     public fun filterCriteria(filterCriteria: FilterCriteriaProperty.Builder.() -> Unit)
 
     /**
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      *
      * **Name formats** - *Function name* – `MyFunction` .
      *
@@ -859,7 +859,7 @@ public open class CfnEventSourceMapping internal constructor(
      * it's limited to 64 characters in length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionname)
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      */
     public fun functionName(functionName: String)
 
@@ -1413,7 +1413,7 @@ public open class CfnEventSourceMapping internal constructor(
         filterCriteria(FilterCriteriaProperty(filterCriteria))
 
     /**
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      *
      * **Name formats** - *Function name* – `MyFunction` .
      *
@@ -1425,7 +1425,7 @@ public open class CfnEventSourceMapping internal constructor(
      * it's limited to 64 characters in length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionname)
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      */
     override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
@@ -1772,7 +1772,8 @@ public open class CfnEventSourceMapping internal constructor(
         CfnEventSourceMapping = CfnEventSourceMapping(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventSourceMapping):
-        software.amazon.awscdk.services.lambda.CfnEventSourceMapping = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.CfnEventSourceMapping = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.CfnEventSourceMapping
   }
 
   /**
@@ -1846,8 +1847,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty,
     ) : CdkObject(cdkObject), AmazonManagedKafkaEventSourceConfigProperty {
       /**
        * The identifier for the Kafka consumer group to join.
@@ -1965,8 +1965,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty,
     ) : CdkObject(cdkObject), DestinationConfigProperty {
       /**
        * The destination configuration for failed invocations.
@@ -2105,8 +2104,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty,
     ) : CdkObject(cdkObject), DocumentDBEventSourceConfigProperty {
       /**
        * The name of the collection to consume within the database.
@@ -2226,8 +2224,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty,
     ) : CdkObject(cdkObject), EndpointsProperty {
       /**
        * The list of bootstrap servers for your Kafka brokers in the following format:
@@ -2335,8 +2332,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty,
     ) : CdkObject(cdkObject), FilterCriteriaProperty {
       /**
        * A list of filters.
@@ -2427,8 +2423,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty,
     ) : CdkObject(cdkObject), FilterProperty {
       /**
        * A filter pattern.
@@ -2559,8 +2554,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty,
     ) : CdkObject(cdkObject), OnFailureProperty {
       /**
        * The Amazon Resource Name (ARN) of the destination resource.
@@ -2662,8 +2656,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty,
     ) : CdkObject(cdkObject), ScalingConfigProperty {
       /**
        * Limits the number of concurrent instances that the Amazon SQS event source can invoke.
@@ -2782,8 +2775,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty,
     ) : CdkObject(cdkObject), SelfManagedEventSourceProperty {
       /**
        * The list of bootstrap servers for your Kafka brokers in the following format:
@@ -2882,8 +2874,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty,
     ) : CdkObject(cdkObject), SelfManagedKafkaEventSourceConfigProperty {
       /**
        * The identifier for the Kafka consumer group to join.
@@ -3074,8 +3065,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty,
     ) : CdkObject(cdkObject), SourceAccessConfigurationProperty {
       /**
        * The type of authentication protocol, VPC components, or virtual host for your event source.

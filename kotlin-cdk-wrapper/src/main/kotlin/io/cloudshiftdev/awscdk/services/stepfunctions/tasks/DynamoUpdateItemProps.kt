@@ -494,8 +494,7 @@ public interface DynamoUpdateItemProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.DynamoUpdateItemProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoUpdateItemProps,
   ) : CdkObject(cdkObject), DynamoUpdateItemProps {
     /**
      * An optional description for this state.

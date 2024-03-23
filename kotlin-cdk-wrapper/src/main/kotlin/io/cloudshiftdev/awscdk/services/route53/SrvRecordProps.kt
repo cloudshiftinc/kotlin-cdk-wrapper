@@ -283,7 +283,7 @@ public interface SrvRecordProps : RecordSetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.SrvRecordProps,
+    cdkObject: software.amazon.awscdk.services.route53.SrvRecordProps,
   ) : CdkObject(cdkObject), SrvRecordProps {
     /**
      * A comment to add on the record.

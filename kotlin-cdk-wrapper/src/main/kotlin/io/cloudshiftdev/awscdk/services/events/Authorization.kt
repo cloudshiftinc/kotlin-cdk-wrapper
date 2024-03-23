@@ -30,11 +30,11 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class Authorization internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.Authorization,
+public abstract class Authorization(
+  cdkObject: software.amazon.awscdk.services.events.Authorization,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.Authorization,
+    cdkObject: software.amazon.awscdk.services.events.Authorization,
   ) : Authorization(cdkObject)
 
   public companion object {

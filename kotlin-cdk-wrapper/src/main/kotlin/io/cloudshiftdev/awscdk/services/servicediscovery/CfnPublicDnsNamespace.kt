@@ -63,9 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html)
  */
-public open class CfnPublicDnsNamespace internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace,
+public open class CfnPublicDnsNamespace(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -372,6 +371,7 @@ public open class CfnPublicDnsNamespace internal constructor(
 
     internal fun unwrap(wrapped: CfnPublicDnsNamespace):
         software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace = wrapped.cdkObject
+        as software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace
   }
 
   /**
@@ -460,8 +460,7 @@ public open class CfnPublicDnsNamespace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty,
     ) : CdkObject(cdkObject), PropertiesProperty {
       /**
        * DNS properties for the public DNS namespace.
@@ -578,8 +577,7 @@ public open class CfnPublicDnsNamespace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty,
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty,
     ) : CdkObject(cdkObject), PublicDnsPropertiesMutableProperty {
       /**
        * Start of Authority (SOA) record for the hosted zone for the public DNS namespace.
@@ -662,8 +660,7 @@ public open class CfnPublicDnsNamespace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.SOAProperty,
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.SOAProperty,
     ) : CdkObject(cdkObject), SOAProperty {
       /**
        * The time to live (TTL) for purposes of negative caching.

@@ -72,8 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html)
  */
-public open class CfnNetworkInterface internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface,
+public open class CfnNetworkInterface(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1324,7 +1324,8 @@ public open class CfnNetworkInterface internal constructor(
         CfnNetworkInterface = CfnNetworkInterface(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInterface):
-        software.amazon.awscdk.services.ec2.CfnNetworkInterface = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnNetworkInterface = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnNetworkInterface
   }
 
   /**
@@ -1449,8 +1450,7 @@ public open class CfnNetworkInterface internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.ConnectionTrackingSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.ConnectionTrackingSpecificationProperty,
     ) : CdkObject(cdkObject), ConnectionTrackingSpecificationProperty {
       /**
        * Timeout (in seconds) for idle TCP connections in an established state.
@@ -1556,8 +1556,7 @@ public open class CfnNetworkInterface internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.InstanceIpv6AddressProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.InstanceIpv6AddressProperty,
     ) : CdkObject(cdkObject), InstanceIpv6AddressProperty {
       /**
        * An IPv6 address to associate with the network interface.
@@ -1650,8 +1649,7 @@ public open class CfnNetworkInterface internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv4PrefixSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv4PrefixSpecificationProperty,
     ) : CdkObject(cdkObject), Ipv4PrefixSpecificationProperty {
       /**
        * The IPv4 prefix.
@@ -1748,8 +1746,7 @@ public open class CfnNetworkInterface internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty,
     ) : CdkObject(cdkObject), Ipv6PrefixSpecificationProperty {
       /**
        * The IPv6 prefix.
@@ -1879,8 +1876,7 @@ public open class CfnNetworkInterface internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty,
     ) : CdkObject(cdkObject), PrivateIpAddressSpecificationProperty {
       /**
        * Sets the private IP address as the primary private address.

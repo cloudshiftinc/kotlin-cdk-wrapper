@@ -287,7 +287,7 @@ public interface CfnVerifiedAccessInstanceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstanceProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstanceProps,
   ) : CdkObject(cdkObject), CfnVerifiedAccessInstanceProps {
     /**
      * A description for the AWS Verified Access instance.

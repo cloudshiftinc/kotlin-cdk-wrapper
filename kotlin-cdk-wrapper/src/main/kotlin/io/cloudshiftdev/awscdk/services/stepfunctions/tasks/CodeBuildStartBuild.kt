@@ -47,9 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-codebuild.html)
  */
-public open class CodeBuildStartBuild internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuild,
+public open class CodeBuildStartBuild(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuild,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -496,5 +495,6 @@ public open class CodeBuildStartBuild internal constructor(
 
     internal fun unwrap(wrapped: CodeBuildStartBuild):
         software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuild = wrapped.cdkObject
+        as software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuild
   }
 }

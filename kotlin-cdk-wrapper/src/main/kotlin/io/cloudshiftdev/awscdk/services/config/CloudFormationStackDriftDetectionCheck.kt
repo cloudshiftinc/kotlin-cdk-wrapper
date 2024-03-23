@@ -30,9 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/config/latest/developerguide/cloudformation-stack-drift-detection-check.html)
  */
-public open class CloudFormationStackDriftDetectionCheck internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck,
+public open class CloudFormationStackDriftDetectionCheck(
+  cdkObject: software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck,
 ) : ManagedRule(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -248,6 +247,7 @@ public open class CloudFormationStackDriftDetectionCheck internal constructor(
 
     internal fun unwrap(wrapped: CloudFormationStackDriftDetectionCheck):
         software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck
   }
 }

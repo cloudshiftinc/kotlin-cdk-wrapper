@@ -335,7 +335,7 @@ public interface CfnDomainProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomainProps,
+    cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomainProps,
   ) : CdkObject(cdkObject), CfnDomainProps {
     /**
      * The URL of the SQS dead letter queue, which is used for reporting errors associated with

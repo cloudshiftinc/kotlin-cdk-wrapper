@@ -49,8 +49,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class InitConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.InitConfig,
+public open class InitConfig(
+  cdkObject: software.amazon.awscdk.services.ec2.InitConfig,
 ) : CdkObject(cdkObject) {
   public constructor(elements: List<InitElement>) :
       this(software.amazon.awscdk.services.ec2.InitConfig(elements.map(InitElement::unwrap))
@@ -78,6 +78,6 @@ public open class InitConfig internal constructor(
         InitConfig(cdkObject)
 
     internal fun unwrap(wrapped: InitConfig): software.amazon.awscdk.services.ec2.InitConfig =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.InitConfig
   }
 }

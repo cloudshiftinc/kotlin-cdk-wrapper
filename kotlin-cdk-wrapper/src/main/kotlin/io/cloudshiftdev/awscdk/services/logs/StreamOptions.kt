@@ -60,7 +60,7 @@ public interface StreamOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.StreamOptions,
+    cdkObject: software.amazon.awscdk.services.logs.StreamOptions,
   ) : CdkObject(cdkObject), StreamOptions {
     /**
      * The name of the log stream to create.

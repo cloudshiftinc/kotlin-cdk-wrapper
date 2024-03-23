@@ -74,8 +74,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class AssetImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.AssetImage,
+public open class AssetImage(
+  cdkObject: software.amazon.awscdk.services.ecs.AssetImage,
 ) : ContainerImage(cdkObject) {
   public constructor(directory: String) :
       this(software.amazon.awscdk.services.ecs.AssetImage(directory)
@@ -646,6 +646,6 @@ public open class AssetImage internal constructor(
         AssetImage(cdkObject)
 
     internal fun unwrap(wrapped: AssetImage): software.amazon.awscdk.services.ecs.AssetImage =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecs.AssetImage
   }
 }

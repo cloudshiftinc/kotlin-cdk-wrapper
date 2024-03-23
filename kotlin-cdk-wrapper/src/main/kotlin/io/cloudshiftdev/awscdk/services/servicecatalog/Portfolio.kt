@@ -26,8 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Portfolio internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.Portfolio,
+public open class Portfolio(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.Portfolio,
 ) : Resource(cdkObject), IPortfolio {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -554,6 +554,7 @@ public open class Portfolio internal constructor(
         Portfolio = Portfolio(cdkObject)
 
     internal fun unwrap(wrapped: Portfolio):
-        software.amazon.awscdk.services.servicecatalog.Portfolio = wrapped.cdkObject
+        software.amazon.awscdk.services.servicecatalog.Portfolio = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.Portfolio
   }
 }

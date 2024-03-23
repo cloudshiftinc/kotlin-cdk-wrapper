@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class PrivateDnsNamespace internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace,
+public open class PrivateDnsNamespace(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace,
 ) : Resource(cdkObject), IPrivateDnsNamespace {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -230,6 +229,7 @@ public open class PrivateDnsNamespace internal constructor(
         PrivateDnsNamespace = PrivateDnsNamespace(cdkObject)
 
     internal fun unwrap(wrapped: PrivateDnsNamespace):
-        software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace = wrapped.cdkObject
+        software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace
   }
 }

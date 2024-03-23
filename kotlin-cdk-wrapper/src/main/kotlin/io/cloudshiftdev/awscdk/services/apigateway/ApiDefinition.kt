@@ -26,8 +26,8 @@ import kotlin.jvm.JvmName
  * booksResource.addMethod("GET", integration);
  * ```
  */
-public abstract class ApiDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinition,
+public abstract class ApiDefinition(
+  cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinition,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the specification is initialized to allow this object to bind to the stack, add
@@ -53,7 +53,7 @@ public abstract class ApiDefinition internal constructor(
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinition,
+    cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinition,
   ) : ApiDefinition(cdkObject)
 
   public companion object {

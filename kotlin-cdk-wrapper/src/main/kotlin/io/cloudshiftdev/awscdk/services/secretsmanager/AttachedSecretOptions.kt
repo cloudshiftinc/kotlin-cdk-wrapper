@@ -56,7 +56,7 @@ public interface AttachedSecretOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.AttachedSecretOptions,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.AttachedSecretOptions,
   ) : CdkObject(cdkObject), AttachedSecretOptions {
     /**
      * The target to attach the secret to.

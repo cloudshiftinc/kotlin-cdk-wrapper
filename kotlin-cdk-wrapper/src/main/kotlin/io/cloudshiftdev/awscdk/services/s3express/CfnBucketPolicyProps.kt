@@ -105,7 +105,7 @@ public interface CfnBucketPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3express.CfnBucketPolicyProps,
+    cdkObject: software.amazon.awscdk.services.s3express.CfnBucketPolicyProps,
   ) : CdkObject(cdkObject), CfnBucketPolicyProps {
     /**
      * The name of the S3 directory bucket to which the policy applies.

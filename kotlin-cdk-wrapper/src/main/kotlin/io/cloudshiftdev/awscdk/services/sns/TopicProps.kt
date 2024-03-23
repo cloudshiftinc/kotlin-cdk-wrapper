@@ -240,7 +240,7 @@ public interface TopicProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sns.TopicProps,
+    cdkObject: software.amazon.awscdk.services.sns.TopicProps,
   ) : CdkObject(cdkObject), TopicProps {
     /**
      * Enables content-based deduplication for FIFO topics.

@@ -49,9 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html)
  */
-public open class CfnTransitGatewayPeeringAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment,
+public open class CfnTransitGatewayPeeringAttachment(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -326,6 +325,7 @@ public open class CfnTransitGatewayPeeringAttachment internal constructor(
 
     internal fun unwrap(wrapped: CfnTransitGatewayPeeringAttachment):
         software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment = wrapped.cdkObject
+        as software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment
   }
 
   /**
@@ -403,8 +403,7 @@ public open class CfnTransitGatewayPeeringAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty,
     ) : CdkObject(cdkObject), PeeringAttachmentStatusProperty {
       /**
        * The status code.

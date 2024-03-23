@@ -260,8 +260,7 @@ public interface CfnIntegrationResponseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponseProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponseProps,
   ) : CdkObject(cdkObject), CfnIntegrationResponseProps {
     /**
      * The API identifier.

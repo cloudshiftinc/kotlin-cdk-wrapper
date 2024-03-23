@@ -45,9 +45,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class WebSocketAwsIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegration,
+public open class WebSocketAwsIntegration(
+  cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegration,
 ) : WebSocketRouteIntegration(cdkObject) {
   public constructor(id: String, props: WebSocketAwsIntegrationProps) :
       this(software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegration(id,
@@ -272,6 +271,7 @@ public open class WebSocketAwsIntegration internal constructor(
 
     internal fun unwrap(wrapped: WebSocketAwsIntegration):
         software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegration
   }
 }

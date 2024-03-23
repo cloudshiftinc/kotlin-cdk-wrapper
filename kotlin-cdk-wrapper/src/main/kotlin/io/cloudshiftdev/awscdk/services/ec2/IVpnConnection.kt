@@ -154,7 +154,7 @@ public interface IVpnConnection : IResource {
   public fun vpnId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IVpnConnection,
+    cdkObject: software.amazon.awscdk.services.ec2.IVpnConnection,
   ) : CdkObject(cdkObject), IVpnConnection {
     /**
      * Apply the given removal policy to this resource.

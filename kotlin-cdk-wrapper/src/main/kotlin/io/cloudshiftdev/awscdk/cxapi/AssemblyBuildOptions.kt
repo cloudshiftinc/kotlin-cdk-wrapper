@@ -32,7 +32,7 @@ public interface AssemblyBuildOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cxapi.AssemblyBuildOptions,
+    cdkObject: software.amazon.awscdk.cxapi.AssemblyBuildOptions,
   ) : CdkObject(cdkObject), AssemblyBuildOptions
 
   public companion object {

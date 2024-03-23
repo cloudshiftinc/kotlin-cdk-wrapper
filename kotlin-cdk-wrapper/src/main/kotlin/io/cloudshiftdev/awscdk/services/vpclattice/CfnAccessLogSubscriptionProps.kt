@@ -126,8 +126,7 @@ public interface CfnAccessLogSubscriptionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscriptionProps,
+    cdkObject: software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscriptionProps,
   ) : CdkObject(cdkObject), CfnAccessLogSubscriptionProps {
     /**
      * The Amazon Resource Name (ARN) of the destination.

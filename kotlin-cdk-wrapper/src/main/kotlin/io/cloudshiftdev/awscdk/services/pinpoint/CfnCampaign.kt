@@ -462,8 +462,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html)
  */
-public open class CfnCampaign internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign,
+public open class CfnCampaign(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1580,7 +1580,7 @@ public open class CfnCampaign internal constructor(
         = CfnCampaign(cdkObject)
 
     internal fun unwrap(wrapped: CfnCampaign): software.amazon.awscdk.services.pinpoint.CfnCampaign
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.pinpoint.CfnCampaign
   }
 
   /**
@@ -1660,8 +1660,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty,
     ) : CdkObject(cdkObject), AttributeDimensionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html#cfn-pinpoint-campaign-attributedimension-attributetype)
@@ -1752,8 +1751,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignCustomMessageProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignCustomMessageProperty,
     ) : CdkObject(cdkObject), CampaignCustomMessageProperty {
       /**
        * The raw, JSON-formatted string to use as the payload for the message.
@@ -1910,8 +1908,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEmailMessageProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEmailMessageProperty,
     ) : CdkObject(cdkObject), CampaignEmailMessageProperty {
       /**
        * The body of the email for recipients whose email clients don't render HTML content.
@@ -2080,8 +2077,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty,
     ) : CdkObject(cdkObject), CampaignEventFilterProperty {
       /**
        * The dimension settings of the event filter for the campaign.
@@ -2234,8 +2230,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty,
     ) : CdkObject(cdkObject), CampaignHookProperty {
       /**
        * The name or Amazon Resource Name (ARN) of the Lambda function that Amazon Pinpoint invokes
@@ -2498,8 +2493,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignInAppMessageProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignInAppMessageProperty,
     ) : CdkObject(cdkObject), CampaignInAppMessageProperty {
       /**
        * An array that contains configurtion information about the in-app message for the campaign,
@@ -2745,8 +2739,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignSmsMessageProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignSmsMessageProperty,
     ) : CdkObject(cdkObject), CampaignSmsMessageProperty {
       /**
        * The body of the SMS message.
@@ -2940,8 +2933,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CustomDeliveryConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CustomDeliveryConfigurationProperty,
     ) : CdkObject(cdkObject), CustomDeliveryConfigurationProperty {
       /**
        * The destination to send the campaign or treatment to. This value can be one of the
@@ -3167,8 +3159,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty,
     ) : CdkObject(cdkObject), DefaultButtonConfigurationProperty {
       /**
        * The background color of a button, expressed as a hex color code (such as #000000 for
@@ -3421,8 +3412,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty,
     ) : CdkObject(cdkObject), EventDimensionsProperty {
       /**
        * One or more custom attributes that your application reports to Amazon Pinpoint.
@@ -3577,8 +3567,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty,
     ) : CdkObject(cdkObject), InAppMessageBodyConfigProperty {
       /**
        * The text alignment of the main body text of the message.
@@ -3887,8 +3876,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty,
     ) : CdkObject(cdkObject), InAppMessageButtonProperty {
       /**
        * An object that defines the default behavior for a button in in-app messages sent to
@@ -4280,8 +4268,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageContentProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageContentProperty,
     ) : CdkObject(cdkObject), InAppMessageContentProperty {
       /**
        * The background color for an in-app message banner, expressed as a hex color code (such as
@@ -4449,8 +4436,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty,
     ) : CdkObject(cdkObject), InAppMessageHeaderConfigProperty {
       /**
        * The text alignment of the title of the message.
@@ -4654,7 +4640,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty,
     ) : CdkObject(cdkObject), LimitsProperty {
       /**
        * The maximum number of messages that a campaign can send to a single endpoint during a
@@ -5437,8 +5423,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageConfigurationProperty,
     ) : CdkObject(cdkObject), MessageConfigurationProperty {
       /**
        * The message that the campaign sends through the ADM (Amazon Device Messaging) channel.
@@ -5905,7 +5890,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageProperty,
     ) : CdkObject(cdkObject), MessageProperty {
       /**
        * The action to occur if a recipient taps the push notification. Valid values are:.
@@ -6103,8 +6088,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty,
     ) : CdkObject(cdkObject), MetricDimensionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-metricdimension.html#cfn-pinpoint-campaign-metricdimension-comparisonoperator)
@@ -6229,8 +6213,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty,
     ) : CdkObject(cdkObject), OverrideButtonConfigurationProperty {
       /**
        * The action that occurs when a recipient chooses a button in an in-app message.
@@ -6365,8 +6348,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty,
     ) : CdkObject(cdkObject), QuietTimeProperty {
       /**
        * The specific time when quiet time ends.
@@ -6784,7 +6766,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty,
     ) : CdkObject(cdkObject), ScheduleProperty {
       /**
        * The scheduled time, in ISO 8601 format, when the campaign ended or will end.
@@ -6980,8 +6962,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty,
     ) : CdkObject(cdkObject), SetDimensionProperty {
       /**
        * The type of segment dimension to use.
@@ -7265,8 +7246,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty,
     ) : CdkObject(cdkObject), TemplateConfigurationProperty {
       /**
        * The email template to use for the message.
@@ -7423,7 +7403,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty,
     ) : CdkObject(cdkObject), TemplateProperty {
       /**
        * The name of the message template to use for the message.
@@ -7981,8 +7961,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty,
     ) : CdkObject(cdkObject), WriteTreatmentResourceProperty {
       /**
        * The delivery configuration settings for sending the treatment through a custom channel.

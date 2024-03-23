@@ -28,8 +28,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class SqlServerEngineVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.SqlServerEngineVersion,
+public open class SqlServerEngineVersion(
+  cdkObject: software.amazon.awscdk.services.rds.SqlServerEngineVersion,
 ) : CdkObject(cdkObject) {
   /**
    * The full version string, for example, "15.00.3049.1.v1".
@@ -62,6 +62,9 @@ public open class SqlServerEngineVersion internal constructor(
 
     public val VER_12: SqlServerEngineVersion =
         SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_12)
+
+    public val VER_12_00_4422_0_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_12_00_4422_0_V1)
 
     public val VER_12_00_5000_0_V1: SqlServerEngineVersion =
         SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_12_00_5000_0_V1)
@@ -225,6 +228,9 @@ public open class SqlServerEngineVersion internal constructor(
     public val VER_15_00_4345_5_V1: SqlServerEngineVersion =
         SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_15_00_4345_5_V1)
 
+    public val VER_15_00_4355_3_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_15_00_4355_3_V1)
+
     public val VER_16: SqlServerEngineVersion =
         SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_16)
 
@@ -233,6 +239,9 @@ public open class SqlServerEngineVersion internal constructor(
 
     public val VER_16_00_4095_4_V1: SqlServerEngineVersion =
         SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_16_00_4095_4_V1)
+
+    public val VER_16_00_4105_2_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_16_00_4105_2_V1)
 
     public fun of(sqlServerFullVersion: String, sqlServerMajorVersion: String):
         SqlServerEngineVersion =
@@ -243,6 +252,7 @@ public open class SqlServerEngineVersion internal constructor(
         SqlServerEngineVersion = SqlServerEngineVersion(cdkObject)
 
     internal fun unwrap(wrapped: SqlServerEngineVersion):
-        software.amazon.awscdk.services.rds.SqlServerEngineVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.SqlServerEngineVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.SqlServerEngineVersion
   }
 }

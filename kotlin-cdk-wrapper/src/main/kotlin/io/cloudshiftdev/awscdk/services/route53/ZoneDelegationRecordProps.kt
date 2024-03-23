@@ -280,7 +280,7 @@ public interface ZoneDelegationRecordProps : RecordSetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.ZoneDelegationRecordProps,
+    cdkObject: software.amazon.awscdk.services.route53.ZoneDelegationRecordProps,
   ) : CdkObject(cdkObject), ZoneDelegationRecordProps {
     /**
      * A comment to add on the record.

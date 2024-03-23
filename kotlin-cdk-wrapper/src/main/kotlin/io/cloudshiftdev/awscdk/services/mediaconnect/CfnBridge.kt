@@ -82,8 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html)
  */
-public open class CfnBridge internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge,
+public open class CfnBridge(
+  cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -664,7 +664,7 @@ public open class CfnBridge internal constructor(
         = CfnBridge(cdkObject)
 
     internal fun unwrap(wrapped: CfnBridge): software.amazon.awscdk.services.mediaconnect.CfnBridge
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.mediaconnect.CfnBridge
   }
 
   /**
@@ -803,8 +803,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty,
     ) : CdkObject(cdkObject), BridgeFlowSourceProperty {
       /**
        * The ARN of the cloud flow used as a source of this bridge.
@@ -1002,8 +1001,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkOutputProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkOutputProperty,
     ) : CdkObject(cdkObject), BridgeNetworkOutputProperty {
       /**
        * The network output IP Address.
@@ -1206,8 +1204,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty,
     ) : CdkObject(cdkObject), BridgeNetworkSourceProperty {
       /**
        * The network source multicast IP.
@@ -1360,8 +1357,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty,
     ) : CdkObject(cdkObject), BridgeOutputProperty {
       /**
        * The output of the bridge.
@@ -1547,8 +1543,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty,
     ) : CdkObject(cdkObject), BridgeSourceProperty {
       /**
        * The source of the bridge.
@@ -1644,8 +1639,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty,
     ) : CdkObject(cdkObject), EgressGatewayBridgeProperty {
       /**
        * The maximum expected bitrate (in bps) of the egress bridge.
@@ -1825,8 +1819,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty,
     ) : CdkObject(cdkObject), FailoverConfigProperty {
       /**
        * The type of failover you choose for this flow.
@@ -1955,8 +1948,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty,
     ) : CdkObject(cdkObject), IngressGatewayBridgeProperty {
       /**
        * The maximum expected bitrate (in bps) of the ingress bridge.
@@ -2047,8 +2039,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty,
     ) : CdkObject(cdkObject), SourcePriorityProperty {
       /**
        * The name of the source you choose as the primary source for this flow.
@@ -2131,8 +2122,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty,
     ) : CdkObject(cdkObject), VpcInterfaceAttachmentProperty {
       /**
        * The name of the VPC interface that you want to send your output to.

@@ -35,8 +35,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class HttpIntegration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.HttpIntegration,
+public open class HttpIntegration(
+  cdkObject: software.amazon.awscdk.services.apigateway.HttpIntegration,
 ) : Integration(cdkObject) {
   public constructor(url: String) :
       this(software.amazon.awscdk.services.apigateway.HttpIntegration(url)
@@ -160,6 +160,7 @@ public open class HttpIntegration internal constructor(
         HttpIntegration = HttpIntegration(cdkObject)
 
     internal fun unwrap(wrapped: HttpIntegration):
-        software.amazon.awscdk.services.apigateway.HttpIntegration = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.HttpIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.HttpIntegration
   }
 }

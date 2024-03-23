@@ -110,7 +110,7 @@ public interface CfnSubnetGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dax.CfnSubnetGroupProps,
+    cdkObject: software.amazon.awscdk.services.dax.CfnSubnetGroupProps,
   ) : CdkObject(cdkObject), CfnSubnetGroupProps {
     /**
      * The description of the subnet group.

@@ -109,9 +109,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html)
  */
-public open class CfnListener internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener,
+public open class CfnListener(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -459,6 +458,9 @@ public open class CfnListener internal constructor(
      * [HTTPS and TLS listeners] The security policy that defines which protocols and ciphers are
      * supported.
      *
+     * Updating the security policy can result in interruptions if the load balancer is handling a
+     * high volume of traffic.
+     *
      * For more information, see [Security
      * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies)
      * in the *Application Load Balancers Guide* and [Security
@@ -663,6 +665,9 @@ public open class CfnListener internal constructor(
      * [HTTPS and TLS listeners] The security policy that defines which protocols and ciphers are
      * supported.
      *
+     * Updating the security policy can result in interruptions if the load balancer is handling a
+     * high volume of traffic.
+     *
      * For more information, see [Security
      * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies)
      * in the *Application Load Balancers Guide* and [Security
@@ -699,7 +704,8 @@ public open class CfnListener internal constructor(
         CfnListener = CfnListener(cdkObject)
 
     internal fun unwrap(wrapped: CfnListener):
-        software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener
   }
 
   /**
@@ -1196,8 +1202,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * [HTTPS listeners] Information for using Amazon Cognito to authenticate users.
@@ -1545,8 +1550,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty,
     ) : CdkObject(cdkObject), AuthenticateCognitoConfigProperty {
       /**
        * The query parameters (up to 10) to include in the redirect request to the authorization
@@ -2009,8 +2013,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateOidcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateOidcConfigProperty,
     ) : CdkObject(cdkObject), AuthenticateOidcConfigProperty {
       /**
        * The query parameters (up to 10) to include in the redirect request to the authorization
@@ -2195,8 +2198,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty,
     ) : CdkObject(cdkObject), CertificateProperty {
       /**
        * The Amazon Resource Name (ARN) of the certificate.
@@ -2323,8 +2325,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty,
     ) : CdkObject(cdkObject), FixedResponseConfigProperty {
       /**
        * The content type.
@@ -2521,8 +2522,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty,
     ) : CdkObject(cdkObject), ForwardConfigProperty {
       /**
        * Information about the target group stickiness for a rule.
@@ -2675,8 +2675,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty,
     ) : CdkObject(cdkObject), MutualAuthenticationProperty {
       /**
        * Indicates whether expired client certificates are ignored.
@@ -2921,8 +2920,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.RedirectConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.RedirectConfigProperty,
     ) : CdkObject(cdkObject), RedirectConfigProperty {
       /**
        * The hostname.
@@ -3093,8 +3091,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty,
     ) : CdkObject(cdkObject), TargetGroupStickinessConfigProperty {
       /**
        * The time period, in seconds, during which requests from a client should be routed to the
@@ -3212,8 +3209,7 @@ public open class CfnListener internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty,
     ) : CdkObject(cdkObject), TargetGroupTupleProperty {
       /**
        * The Amazon Resource Name (ARN) of the target group.

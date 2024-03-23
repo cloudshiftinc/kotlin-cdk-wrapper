@@ -25,8 +25,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public abstract class ClientVpnRouteTarget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnRouteTarget,
+public abstract class ClientVpnRouteTarget(
+  cdkObject: software.amazon.awscdk.services.ec2.ClientVpnRouteTarget,
 ) : CdkObject(cdkObject) {
   /**
    * The subnet ID.
@@ -34,7 +34,7 @@ public abstract class ClientVpnRouteTarget internal constructor(
   public open fun subnetId(): String = unwrap(this).getSubnetId()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnRouteTarget,
+    cdkObject: software.amazon.awscdk.services.ec2.ClientVpnRouteTarget,
   ) : ClientVpnRouteTarget(cdkObject)
 
   public companion object {

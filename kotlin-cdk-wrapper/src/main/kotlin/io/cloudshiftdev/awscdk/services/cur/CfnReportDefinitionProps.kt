@@ -356,7 +356,7 @@ public interface CfnReportDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cur.CfnReportDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.cur.CfnReportDefinitionProps,
   ) : CdkObject(cdkObject), CfnReportDefinitionProps {
     /**
      * A list of manifests that you want AWS to create for this report.

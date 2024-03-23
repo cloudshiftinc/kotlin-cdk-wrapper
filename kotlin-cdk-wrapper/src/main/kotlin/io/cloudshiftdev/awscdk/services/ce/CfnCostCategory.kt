@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html)
  */
-public open class CfnCostCategory internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ce.CfnCostCategory,
+public open class CfnCostCategory(
+  cdkObject: software.amazon.awscdk.services.ce.CfnCostCategory,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -274,6 +274,7 @@ public open class CfnCostCategory internal constructor(
         CfnCostCategory = CfnCostCategory(cdkObject)
 
     internal fun unwrap(wrapped: CfnCostCategory):
-        software.amazon.awscdk.services.ce.CfnCostCategory = wrapped.cdkObject
+        software.amazon.awscdk.services.ce.CfnCostCategory = wrapped.cdkObject as
+        software.amazon.awscdk.services.ce.CfnCostCategory
   }
 }

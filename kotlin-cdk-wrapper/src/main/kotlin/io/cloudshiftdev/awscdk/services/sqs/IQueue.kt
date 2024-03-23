@@ -424,7 +424,7 @@ public interface IQueue : IResource {
   public fun queueUrl(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sqs.IQueue,
+    cdkObject: software.amazon.awscdk.services.sqs.IQueue,
   ) : CdkObject(cdkObject), IQueue {
     /**
      * Adds a statement to the IAM resource policy associated with this queue.

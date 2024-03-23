@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class KeyGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.KeyGroup,
+public open class KeyGroup(
+  cdkObject: software.amazon.awscdk.services.cloudfront.KeyGroup,
 ) : Resource(cdkObject), IKeyGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -165,6 +165,6 @@ public open class KeyGroup internal constructor(
         KeyGroup(cdkObject)
 
     internal fun unwrap(wrapped: KeyGroup): software.amazon.awscdk.services.cloudfront.KeyGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudfront.KeyGroup
   }
 }

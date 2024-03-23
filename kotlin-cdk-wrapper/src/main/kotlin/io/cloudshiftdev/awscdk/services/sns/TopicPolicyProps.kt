@@ -138,7 +138,7 @@ public interface TopicPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sns.TopicPolicyProps,
+    cdkObject: software.amazon.awscdk.services.sns.TopicPolicyProps,
   ) : CdkObject(cdkObject), TopicPolicyProps {
     /**
      * Adds a statement to enforce encryption of data in transit when publishing to the topic.

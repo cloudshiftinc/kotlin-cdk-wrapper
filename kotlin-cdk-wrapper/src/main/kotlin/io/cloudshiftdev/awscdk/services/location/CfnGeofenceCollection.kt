@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html)
  */
-public open class CfnGeofenceCollection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.location.CfnGeofenceCollection,
+public open class CfnGeofenceCollection(
+  cdkObject: software.amazon.awscdk.services.location.CfnGeofenceCollection,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -431,6 +431,7 @@ public open class CfnGeofenceCollection internal constructor(
         CfnGeofenceCollection = CfnGeofenceCollection(cdkObject)
 
     internal fun unwrap(wrapped: CfnGeofenceCollection):
-        software.amazon.awscdk.services.location.CfnGeofenceCollection = wrapped.cdkObject
+        software.amazon.awscdk.services.location.CfnGeofenceCollection = wrapped.cdkObject as
+        software.amazon.awscdk.services.location.CfnGeofenceCollection
   }
 }

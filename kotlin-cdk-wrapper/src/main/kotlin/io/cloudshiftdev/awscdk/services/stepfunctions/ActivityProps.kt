@@ -57,7 +57,7 @@ public interface ActivityProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.ActivityProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.ActivityProps,
   ) : CdkObject(cdkObject), ActivityProps {
     /**
      * The name for this activity.

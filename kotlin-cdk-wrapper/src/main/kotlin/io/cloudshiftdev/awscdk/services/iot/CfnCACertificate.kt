@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-cacertificate.html)
  */
-public open class CfnCACertificate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnCACertificate,
+public open class CfnCACertificate(
+  cdkObject: software.amazon.awscdk.services.iot.CfnCACertificate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -519,7 +519,8 @@ public open class CfnCACertificate internal constructor(
         CfnCACertificate = CfnCACertificate(cdkObject)
 
     internal fun unwrap(wrapped: CfnCACertificate):
-        software.amazon.awscdk.services.iot.CfnCACertificate = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnCACertificate = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnCACertificate
   }
 
   /**
@@ -615,8 +616,7 @@ public open class CfnCACertificate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnCACertificate.RegistrationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnCACertificate.RegistrationConfigProperty,
     ) : CdkObject(cdkObject), RegistrationConfigProperty {
       /**
        * The ARN of the role.

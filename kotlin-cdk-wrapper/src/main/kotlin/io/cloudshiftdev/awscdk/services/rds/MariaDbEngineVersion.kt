@@ -18,8 +18,8 @@ import kotlin.String
  * MariaDbEngineVersion mariaDbEngineVersion = MariaDbEngineVersion.VER_10_11;
  * ```
  */
-public open class MariaDbEngineVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.MariaDbEngineVersion,
+public open class MariaDbEngineVersion(
+  cdkObject: software.amazon.awscdk.services.rds.MariaDbEngineVersion,
 ) : CdkObject(cdkObject) {
   /**
    * The full version string, for example, "10.5.28".
@@ -43,6 +43,9 @@ public open class MariaDbEngineVersion internal constructor(
 
     public val VER_10_11_6: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_11_6)
+
+    public val VER_10_11_7: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_11_7)
 
     public val VER_10_2: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_2)
@@ -73,6 +76,12 @@ public open class MariaDbEngineVersion internal constructor(
 
     public val VER_10_2_41: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_2_41)
+
+    public val VER_10_2_43: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_2_43)
+
+    public val VER_10_2_44: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_2_44)
 
     public val VER_10_3: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_3)
@@ -158,6 +167,9 @@ public open class MariaDbEngineVersion internal constructor(
     public val VER_10_4_32: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_4_32)
 
+    public val VER_10_4_33: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_4_33)
+
     public val VER_10_4_8: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_4_8)
 
@@ -197,6 +209,9 @@ public open class MariaDbEngineVersion internal constructor(
     public val VER_10_5_23: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_5_23)
 
+    public val VER_10_5_24: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_5_24)
+
     public val VER_10_5_8: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_5_8)
 
@@ -227,6 +242,9 @@ public open class MariaDbEngineVersion internal constructor(
     public val VER_10_6_16: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_6_16)
 
+    public val VER_10_6_17: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_6_17)
+
     public val VER_10_6_5: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_6_5)
 
@@ -244,6 +262,7 @@ public open class MariaDbEngineVersion internal constructor(
         MariaDbEngineVersion = MariaDbEngineVersion(cdkObject)
 
     internal fun unwrap(wrapped: MariaDbEngineVersion):
-        software.amazon.awscdk.services.rds.MariaDbEngineVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.MariaDbEngineVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.MariaDbEngineVersion
   }
 }

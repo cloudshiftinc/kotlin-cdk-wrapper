@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * service.node.addDependency(namespace);
  * ```
  */
-public open class KubernetesManifest internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.KubernetesManifest,
+public open class KubernetesManifest(
+  cdkObject: software.amazon.awscdk.services.eks.KubernetesManifest,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -364,6 +364,7 @@ public open class KubernetesManifest internal constructor(
         KubernetesManifest = KubernetesManifest(cdkObject)
 
     internal fun unwrap(wrapped: KubernetesManifest):
-        software.amazon.awscdk.services.eks.KubernetesManifest = wrapped.cdkObject
+        software.amazon.awscdk.services.eks.KubernetesManifest = wrapped.cdkObject as
+        software.amazon.awscdk.services.eks.KubernetesManifest
   }
 }

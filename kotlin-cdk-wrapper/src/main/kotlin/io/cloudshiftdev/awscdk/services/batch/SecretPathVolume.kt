@@ -29,8 +29,8 @@ import kotlin.Unit
  *
  * [Documentation](https://kubernetes.io/docs/concepts/storage/volumes/#secret)
  */
-public open class SecretPathVolume internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.SecretPathVolume,
+public open class SecretPathVolume(
+  cdkObject: software.amazon.awscdk.services.batch.SecretPathVolume,
 ) : EksVolume(cdkObject) {
   public constructor(options: SecretPathVolumeOptions) :
       this(software.amazon.awscdk.services.batch.SecretPathVolume(options.let(SecretPathVolumeOptions::unwrap))
@@ -190,6 +190,7 @@ public open class SecretPathVolume internal constructor(
         SecretPathVolume = SecretPathVolume(cdkObject)
 
     internal fun unwrap(wrapped: SecretPathVolume):
-        software.amazon.awscdk.services.batch.SecretPathVolume = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.SecretPathVolume = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.SecretPathVolume
   }
 }

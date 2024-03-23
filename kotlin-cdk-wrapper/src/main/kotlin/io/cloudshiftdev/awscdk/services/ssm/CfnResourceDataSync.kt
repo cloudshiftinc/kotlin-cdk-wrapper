@@ -92,8 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html)
  */
-public open class CfnResourceDataSync internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync,
+public open class CfnResourceDataSync(
+  cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -552,7 +552,8 @@ public open class CfnResourceDataSync internal constructor(
         CfnResourceDataSync = CfnResourceDataSync(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceDataSync):
-        software.amazon.awscdk.services.ssm.CfnResourceDataSync = wrapped.cdkObject
+        software.amazon.awscdk.services.ssm.CfnResourceDataSync = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssm.CfnResourceDataSync
   }
 
   /**
@@ -656,8 +657,7 @@ public open class CfnResourceDataSync internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnResourceDataSync.AwsOrganizationsSourceProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync.AwsOrganizationsSourceProperty,
     ) : CdkObject(cdkObject), AwsOrganizationsSourceProperty {
       /**
        * If an AWS organization is present, this is either `OrganizationalUnits` or
@@ -839,8 +839,7 @@ public open class CfnResourceDataSync internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnResourceDataSync.S3DestinationProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync.S3DestinationProperty,
     ) : CdkObject(cdkObject), S3DestinationProperty {
       /**
        * The name of the S3 bucket where the aggregated data is stored.
@@ -1095,8 +1094,7 @@ public open class CfnResourceDataSync internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnResourceDataSync.SyncSourceProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync.SyncSourceProperty,
     ) : CdkObject(cdkObject), SyncSourceProperty {
       /**
        * Information about the AwsOrganizationsSource resource data sync source.

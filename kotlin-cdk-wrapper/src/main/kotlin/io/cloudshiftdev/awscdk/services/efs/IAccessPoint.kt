@@ -31,7 +31,7 @@ public interface IAccessPoint : IResource {
   public fun fileSystem(): IFileSystem
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.efs.IAccessPoint,
+    cdkObject: software.amazon.awscdk.services.efs.IAccessPoint,
   ) : CdkObject(cdkObject), IAccessPoint {
     /**
      * The ARN of the AccessPoint.

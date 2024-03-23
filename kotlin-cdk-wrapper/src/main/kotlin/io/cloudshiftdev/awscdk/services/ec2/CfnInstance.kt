@@ -158,8 +158,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html)
  */
-public open class CfnInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance,
+public open class CfnInstance(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -3450,7 +3450,7 @@ public open class CfnInstance internal constructor(
         CfnInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstance): software.amazon.awscdk.services.ec2.CfnInstance =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnInstance
   }
 
   /**
@@ -3541,8 +3541,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty,
     ) : CdkObject(cdkObject), AssociationParameterProperty {
       /**
        * The name of an input parameter that is in the associated SSM document.
@@ -3907,8 +3906,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty,
     ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
       /**
        * The device name (for example, `/dev/sdh` or `xvdh` ).
@@ -4077,7 +4075,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty,
     ) : CdkObject(cdkObject), CpuOptionsProperty {
       /**
        * The number of CPU cores for the instance.
@@ -4182,8 +4180,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty,
     ) : CdkObject(cdkObject), CreditSpecificationProperty {
       /**
        * The credit option for CPU usage of the instance.
@@ -4732,7 +4729,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty,
     ) : CdkObject(cdkObject), EbsProperty {
       /**
        * Indicates whether the EBS volume is deleted on instance termination.
@@ -4978,8 +4975,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty,
     ) : CdkObject(cdkObject), ElasticGpuSpecificationProperty {
       /**
        * The type of Elastic Graphics accelerator.
@@ -5099,8 +5095,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty,
     ) : CdkObject(cdkObject), ElasticInferenceAcceleratorProperty {
       /**
        * The number of elastic inference accelerators to attach to the instance.
@@ -5213,8 +5208,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty,
     ) : CdkObject(cdkObject), EnclaveOptionsProperty {
       /**
        * If this parameter is set to `true` , the instance is enabled for AWS Nitro Enclaves;
@@ -5363,8 +5357,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty,
     ) : CdkObject(cdkObject), HibernationOptionsProperty {
       /**
        * Set to `true` to enable your instance for hibernation.
@@ -5460,8 +5453,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty,
     ) : CdkObject(cdkObject), InstanceIpv6AddressProperty {
       /**
        * The IPv6 address.
@@ -5628,8 +5620,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty,
     ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
       /**
        * The ID of the launch template.
@@ -5742,8 +5733,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty,
     ) : CdkObject(cdkObject), LicenseSpecificationProperty {
       /**
        * The Amazon Resource Name (ARN) of the license configuration.
@@ -6333,8 +6323,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty,
     ) : CdkObject(cdkObject), NetworkInterfaceProperty {
       /**
        * Indicates whether to assign a carrier IP address to the network interface.
@@ -6517,7 +6506,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty,
     ) : CdkObject(cdkObject), NoDeviceProperty
 
     public companion object {
@@ -6722,8 +6711,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty,
     ) : CdkObject(cdkObject), PrivateDnsNameOptionsProperty {
       /**
        * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
@@ -6879,8 +6867,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty,
     ) : CdkObject(cdkObject), PrivateIpAddressSpecificationProperty {
       /**
        * Indicates whether the private IPv4 address is the primary private IPv4 address.
@@ -7028,8 +7015,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty,
     ) : CdkObject(cdkObject), SsmAssociationProperty {
       /**
        * The input parameter values to use with the associated SSM document.
@@ -7143,7 +7129,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty,
     ) : CdkObject(cdkObject), VolumeProperty {
       /**
        * The device name (for example, `/dev/sdh` or `xvdh` ).

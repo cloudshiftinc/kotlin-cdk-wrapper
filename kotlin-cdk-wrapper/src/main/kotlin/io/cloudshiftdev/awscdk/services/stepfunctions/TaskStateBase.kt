@@ -22,8 +22,8 @@ import kotlin.jvm.JvmName
  * For some resource types, more specific subclasses of Task may be available
  * which are more convenient to use.
  */
-public abstract class TaskStateBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.TaskStateBase,
+public abstract class TaskStateBase(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.TaskStateBase,
 ) : State(cdkObject), INextable {
   /**
    * Add a recovery handler for this state.
@@ -436,7 +436,7 @@ public abstract class TaskStateBase internal constructor(
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.TaskStateBase,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.TaskStateBase,
   ) : TaskStateBase(cdkObject)
 
   public companion object {

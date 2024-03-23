@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * @deprecated use opensearchservice module instead
  */
-public open class Domain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticsearch.Domain,
+public open class Domain(
+  cdkObject: software.amazon.awscdk.services.elasticsearch.Domain,
 ) : Resource(cdkObject), IDomain, IConnectable {
   @Deprecated(message = "deprecated in CDK")
   public constructor(
@@ -1906,6 +1906,6 @@ public open class Domain internal constructor(
         Domain(cdkObject)
 
     internal fun unwrap(wrapped: Domain): software.amazon.awscdk.services.elasticsearch.Domain =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.elasticsearch.Domain
   }
 }

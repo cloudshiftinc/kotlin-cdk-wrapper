@@ -29,7 +29,7 @@ public interface ISchedulingPolicy : IResource {
   public fun schedulingPolicyName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.ISchedulingPolicy,
+    cdkObject: software.amazon.awscdk.services.batch.ISchedulingPolicy,
   ) : CdkObject(cdkObject), ISchedulingPolicy {
     /**
      * Apply the given removal policy to this resource.

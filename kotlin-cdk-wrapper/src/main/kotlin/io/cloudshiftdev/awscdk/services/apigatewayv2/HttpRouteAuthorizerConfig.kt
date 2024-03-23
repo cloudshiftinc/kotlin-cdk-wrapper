@@ -129,7 +129,7 @@ public interface HttpRouteAuthorizerConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerConfig,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerConfig,
   ) : CdkObject(cdkObject), HttpRouteAuthorizerConfig {
     /**
      * The list of OIDC scopes to include in the authorization.

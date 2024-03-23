@@ -173,7 +173,7 @@ public interface CfnWaitConditionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudformation.CfnWaitConditionProps,
+    cdkObject: software.amazon.awscdk.services.cloudformation.CfnWaitConditionProps,
   ) : CdkObject(cdkObject), CfnWaitConditionProps {
     /**
      * The number of success signals that CloudFormation must receive before it continues the stack

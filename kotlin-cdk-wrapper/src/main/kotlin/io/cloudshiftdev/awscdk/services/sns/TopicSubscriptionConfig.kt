@@ -276,7 +276,7 @@ public interface TopicSubscriptionConfig : SubscriptionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sns.TopicSubscriptionConfig,
+    cdkObject: software.amazon.awscdk.services.sns.TopicSubscriptionConfig,
   ) : CdkObject(cdkObject), TopicSubscriptionConfig {
     /**
      * Queue to be used as dead letter queue.

@@ -69,8 +69,7 @@ public interface ScheduledFargateTaskDefinitionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions,
   ) : CdkObject(cdkObject), ScheduledFargateTaskDefinitionOptions {
     /**
      * The task definition to use for tasks in the service. Image or taskDefinition must be

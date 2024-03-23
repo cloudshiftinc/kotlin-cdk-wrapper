@@ -73,7 +73,7 @@ public interface RuleScope {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.RuleScope,
+    cdkObject: software.amazon.awscdk.services.ec2.RuleScope,
   ) : CdkObject(cdkObject), RuleScope {
     /**
      * The construct ID to use for the rule.

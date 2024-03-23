@@ -200,7 +200,7 @@ public interface OptionConfiguration {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.OptionConfiguration,
+    cdkObject: software.amazon.awscdk.services.rds.OptionConfiguration,
   ) : CdkObject(cdkObject), OptionConfiguration {
     /**
      * The name of the option.

@@ -15,8 +15,8 @@ import kotlin.jvm.JvmName
 /**
  * Base class for all other state classes.
  */
-public abstract class State internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.State,
+public abstract class State(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.State,
 ) : Construct(cdkObject), IChainable {
   /**
    * Add a prefix to the stateId of this state.
@@ -66,7 +66,7 @@ public abstract class State internal constructor(
   public open fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.State,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.State,
   ) : State(cdkObject)
 
   public companion object {

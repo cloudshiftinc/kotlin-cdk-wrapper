@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class Listener internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.globalaccelerator.Listener,
+public open class Listener(
+  cdkObject: software.amazon.awscdk.services.globalaccelerator.Listener,
 ) : Resource(cdkObject), IListener {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -269,6 +269,7 @@ public open class Listener internal constructor(
         Listener = Listener(cdkObject)
 
     internal fun unwrap(wrapped: Listener):
-        software.amazon.awscdk.services.globalaccelerator.Listener = wrapped.cdkObject
+        software.amazon.awscdk.services.globalaccelerator.Listener = wrapped.cdkObject as
+        software.amazon.awscdk.services.globalaccelerator.Listener
   }
 }

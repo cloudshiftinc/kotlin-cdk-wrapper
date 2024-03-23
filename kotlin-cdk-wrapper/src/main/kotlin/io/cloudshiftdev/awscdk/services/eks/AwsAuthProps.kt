@@ -58,7 +58,7 @@ public interface AwsAuthProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.AwsAuthProps,
+    cdkObject: software.amazon.awscdk.services.eks.AwsAuthProps,
   ) : CdkObject(cdkObject), AwsAuthProps {
     /**
      * The EKS cluster to apply this configuration to.

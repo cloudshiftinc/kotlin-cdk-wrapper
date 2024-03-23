@@ -115,7 +115,8 @@ public interface PipelineProps {
   /**
    * Type of the pipeline.
    *
-   * Default: - PipelineType.V1
+   * Default: - PipelineType.V2 if the feature flag `CODEPIPELINE_DEFAULT_PIPELINE_TYPE_TO_V2`
+   * is true, PipelineType.V1 otherwise
    *
    * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html)
    */
@@ -451,7 +452,7 @@ public interface PipelineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.PipelineProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.PipelineProps,
   ) : CdkObject(cdkObject), PipelineProps {
     /**
      * The S3 bucket used by this Pipeline to store artifacts.
@@ -520,7 +521,8 @@ public interface PipelineProps {
     /**
      * Type of the pipeline.
      *
-     * Default: - PipelineType.V1
+     * Default: - PipelineType.V2 if the feature flag `CODEPIPELINE_DEFAULT_PIPELINE_TYPE_TO_V2`
+     * is true, PipelineType.V1 otherwise
      *
      * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html)
      */

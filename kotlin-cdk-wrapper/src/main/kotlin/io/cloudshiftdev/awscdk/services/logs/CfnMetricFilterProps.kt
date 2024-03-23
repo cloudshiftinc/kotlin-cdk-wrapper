@@ -166,7 +166,7 @@ public interface CfnMetricFilterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilterProps,
+    cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilterProps,
   ) : CdkObject(cdkObject), CfnMetricFilterProps {
     /**
      * The name of the metric filter.

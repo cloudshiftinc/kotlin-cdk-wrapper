@@ -18,7 +18,7 @@ public interface IAspect {
   public fun visit(node: IConstruct)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IAspect,
+    cdkObject: software.amazon.awscdk.IAspect,
   ) : CdkObject(cdkObject), IAspect {
     /**
      * All aspects can visit an IConstruct.

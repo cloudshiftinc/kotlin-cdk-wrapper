@@ -621,8 +621,7 @@ public interface CfnLoadBalancerProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancerProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancerProps,
   ) : CdkObject(cdkObject), CfnLoadBalancerProps {
     /**
      * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load

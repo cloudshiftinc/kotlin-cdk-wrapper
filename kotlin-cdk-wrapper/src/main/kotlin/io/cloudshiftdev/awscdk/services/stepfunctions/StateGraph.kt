@@ -43,8 +43,8 @@ import kotlin.jvm.JvmName
  * StateGraph stateGraph = new StateGraph(state, "graphDescription");
  * ```
  */
-public open class StateGraph internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.StateGraph,
+public open class StateGraph(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.StateGraph,
 ) : CdkObject(cdkObject) {
   public constructor(startState: State, graphDescription: String) :
       this(software.amazon.awscdk.services.stepfunctions.StateGraph(startState.let(State::unwrap),
@@ -144,6 +144,7 @@ public open class StateGraph internal constructor(
         StateGraph = StateGraph(cdkObject)
 
     internal fun unwrap(wrapped: StateGraph):
-        software.amazon.awscdk.services.stepfunctions.StateGraph = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.StateGraph = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.StateGraph
   }
 }

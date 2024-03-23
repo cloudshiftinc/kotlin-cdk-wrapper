@@ -105,8 +105,7 @@ public interface ContainerImageAssetCacheOption {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetCacheOption,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetCacheOption,
   ) : CdkObject(cdkObject), ContainerImageAssetCacheOption {
     /**
      * Any parameters to pass into the docker cache backend configuration.

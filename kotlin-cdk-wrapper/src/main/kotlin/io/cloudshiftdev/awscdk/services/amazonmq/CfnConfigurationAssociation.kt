@@ -46,9 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configurationassociation.html)
  */
-public open class CfnConfigurationAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation,
+public open class CfnConfigurationAssociation(
+  cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -231,7 +230,8 @@ public open class CfnConfigurationAssociation internal constructor(
         CfnConfigurationAssociation = CfnConfigurationAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationAssociation):
-        software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation
   }
 
   /**
@@ -309,8 +309,7 @@ public open class CfnConfigurationAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty,
+      cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty,
     ) : CdkObject(cdkObject), ConfigurationIdProperty {
       /**
        * The unique ID that Amazon MQ generates for the configuration.

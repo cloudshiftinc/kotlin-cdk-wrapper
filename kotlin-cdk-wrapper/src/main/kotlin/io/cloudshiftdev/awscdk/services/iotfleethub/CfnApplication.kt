@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleethub-application.html)
  */
-public open class CfnApplication internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotfleethub.CfnApplication,
+public open class CfnApplication(
+  cdkObject: software.amazon.awscdk.services.iotfleethub.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -311,6 +311,7 @@ public open class CfnApplication internal constructor(
         CfnApplication = CfnApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplication):
-        software.amazon.awscdk.services.iotfleethub.CfnApplication = wrapped.cdkObject
+        software.amazon.awscdk.services.iotfleethub.CfnApplication = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotfleethub.CfnApplication
   }
 }

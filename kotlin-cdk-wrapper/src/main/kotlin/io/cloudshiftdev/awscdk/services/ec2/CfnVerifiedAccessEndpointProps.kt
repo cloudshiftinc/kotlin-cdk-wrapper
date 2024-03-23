@@ -492,7 +492,7 @@ public interface CfnVerifiedAccessEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpointProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpointProps,
   ) : CdkObject(cdkObject), CfnVerifiedAccessEndpointProps {
     /**
      * The DNS name for users to reach your application.

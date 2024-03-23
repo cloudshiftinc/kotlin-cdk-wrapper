@@ -861,7 +861,7 @@ public interface CfnJobProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.databrew.CfnJobProps,
+    cdkObject: software.amazon.awscdk.services.databrew.CfnJobProps,
   ) : CdkObject(cdkObject), CfnJobProps {
     /**
      * One or more artifacts that represent the AWS Glue Data Catalog output from running the job.

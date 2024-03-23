@@ -187,7 +187,7 @@ public interface ScheduledActionProps : BasicScheduledActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.ScheduledActionProps,
+    cdkObject: software.amazon.awscdk.services.autoscaling.ScheduledActionProps,
   ) : CdkObject(cdkObject), ScheduledActionProps {
     /**
      * The AutoScalingGroup to apply the scheduled actions to.

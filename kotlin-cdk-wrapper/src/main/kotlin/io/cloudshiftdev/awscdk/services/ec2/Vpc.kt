@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Vpc internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.Vpc,
+public open class Vpc(
+  cdkObject: software.amazon.awscdk.services.ec2.Vpc,
 ) : Resource(cdkObject), IVpc {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.Vpc(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1205,5 +1205,6 @@ public open class Vpc internal constructor(
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.Vpc): Vpc = Vpc(cdkObject)
 
     internal fun unwrap(wrapped: Vpc): software.amazon.awscdk.services.ec2.Vpc = wrapped.cdkObject
+        as software.amazon.awscdk.services.ec2.Vpc
   }
 }

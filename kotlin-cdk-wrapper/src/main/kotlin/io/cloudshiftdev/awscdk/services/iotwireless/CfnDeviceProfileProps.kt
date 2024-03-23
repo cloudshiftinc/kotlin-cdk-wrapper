@@ -171,7 +171,7 @@ public interface CfnDeviceProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnDeviceProfileProps,
+    cdkObject: software.amazon.awscdk.services.iotwireless.CfnDeviceProfileProps,
   ) : CdkObject(cdkObject), CfnDeviceProfileProps {
     /**
      * LoRaWAN device profile object.

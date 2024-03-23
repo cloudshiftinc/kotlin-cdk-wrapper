@@ -73,7 +73,7 @@ public interface StageAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.StageAttributes,
+    cdkObject: software.amazon.awscdk.services.apigateway.StageAttributes,
   ) : CdkObject(cdkObject), StageAttributes {
     /**
      * The RestApi that the stage belongs to.

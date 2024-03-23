@@ -27,8 +27,8 @@ import kotlin.jvm.JvmName
  * .build()));
  * ```
  */
-public abstract class InitSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.InitSource,
+public abstract class InitSource(
+  cdkObject: software.amazon.awscdk.services.ec2.InitSource,
 ) : InitElement(cdkObject) {
   /**
    * Returns the init element type for this element.
@@ -36,7 +36,7 @@ public abstract class InitSource internal constructor(
   public override fun elementType(): String = unwrap(this).getElementType()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.InitSource,
+    cdkObject: software.amazon.awscdk.services.ec2.InitSource,
   ) : InitSource(cdkObject)
 
   public companion object {

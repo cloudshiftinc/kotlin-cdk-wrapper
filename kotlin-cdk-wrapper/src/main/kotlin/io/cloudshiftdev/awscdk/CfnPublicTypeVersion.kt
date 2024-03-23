@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html)
  */
-public open class CfnPublicTypeVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnPublicTypeVersion,
+public open class CfnPublicTypeVersion(
+  cdkObject: software.amazon.awscdk.CfnPublicTypeVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.CfnPublicTypeVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -355,6 +355,6 @@ public open class CfnPublicTypeVersion internal constructor(
         = CfnPublicTypeVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnPublicTypeVersion): software.amazon.awscdk.CfnPublicTypeVersion
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.CfnPublicTypeVersion
   }
 }

@@ -2047,7 +2047,7 @@ public interface CfnReplicationGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroupProps,
+    cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroupProps,
   ) : CdkObject(cdkObject), CfnReplicationGroupProps {
     /**
      * A flag that enables encryption at rest when set to `true` .

@@ -32,8 +32,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#SysMetadata)
  */
-public open class CacheControl internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.deployment.CacheControl,
+public open class CacheControl(
+  cdkObject: software.amazon.awscdk.services.s3.deployment.CacheControl,
 ) : CdkObject(cdkObject) {
   /**
    * The raw cache control setting.
@@ -87,6 +87,7 @@ public open class CacheControl internal constructor(
         CacheControl = CacheControl(cdkObject)
 
     internal fun unwrap(wrapped: CacheControl):
-        software.amazon.awscdk.services.s3.deployment.CacheControl = wrapped.cdkObject
+        software.amazon.awscdk.services.s3.deployment.CacheControl = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3.deployment.CacheControl
   }
 }

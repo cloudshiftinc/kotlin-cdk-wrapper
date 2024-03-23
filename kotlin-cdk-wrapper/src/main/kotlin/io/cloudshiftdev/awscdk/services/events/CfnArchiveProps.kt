@@ -146,7 +146,7 @@ public interface CfnArchiveProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.CfnArchiveProps,
+    cdkObject: software.amazon.awscdk.services.events.CfnArchiveProps,
   ) : CdkObject(cdkObject), CfnArchiveProps {
     /**
      * The name for the archive to create.

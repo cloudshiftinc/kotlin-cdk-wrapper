@@ -19,7 +19,7 @@ public interface IPostProcessor {
   public fun postProcess(input: Any, context: IResolveContext): Any
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IPostProcessor,
+    cdkObject: software.amazon.awscdk.IPostProcessor,
   ) : CdkObject(cdkObject), IPostProcessor {
     /**
      * Process the completely resolved value, after full recursion/resolution has happened.

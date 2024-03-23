@@ -139,8 +139,7 @@ public interface CfnSecretTargetAttachmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachmentProps,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachmentProps,
   ) : CdkObject(cdkObject), CfnSecretTargetAttachmentProps {
     /**
      * The ARN or name of the secret.

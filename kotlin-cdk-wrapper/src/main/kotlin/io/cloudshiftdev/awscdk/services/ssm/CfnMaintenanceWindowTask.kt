@@ -100,8 +100,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html)
  */
-public open class CfnMaintenanceWindowTask internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask,
+public open class CfnMaintenanceWindowTask(
+  cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1007,7 +1007,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
         CfnMaintenanceWindowTask = CfnMaintenanceWindowTask(cdkObject)
 
     internal fun unwrap(wrapped: CfnMaintenanceWindowTask):
-        software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask = wrapped.cdkObject
+        software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask
   }
 
   /**
@@ -1116,8 +1117,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty,
     ) : CdkObject(cdkObject), CloudWatchOutputConfigProperty {
       /**
        * The name of the CloudWatch Logs log group where you want to send command output.
@@ -1265,8 +1265,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty,
     ) : CdkObject(cdkObject), LoggingInfoProperty {
       /**
        * The AWS Region where the S3 bucket is located.
@@ -1394,8 +1393,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty,
     ) : CdkObject(cdkObject), MaintenanceWindowAutomationParametersProperty {
       /**
        * The version of an Automation runbook to use during task execution.
@@ -1569,8 +1567,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty,
     ) : CdkObject(cdkObject), MaintenanceWindowLambdaParametersProperty {
       /**
        * Client-specific information to pass to the AWS Lambda function that you're invoking.
@@ -2039,8 +2036,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty,
     ) : CdkObject(cdkObject), MaintenanceWindowRunCommandParametersProperty {
       /**
        * Configuration options for sending command output to Amazon CloudWatch Logs.
@@ -2242,8 +2238,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty,
     ) : CdkObject(cdkObject), MaintenanceWindowStepFunctionsParametersProperty {
       /**
        * The inputs for the `STEP_FUNCTIONS` task.
@@ -2433,8 +2428,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.NotificationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.NotificationConfigProperty,
     ) : CdkObject(cdkObject), NotificationConfigProperty {
       /**
        * An Amazon Resource Name (ARN) for an Amazon Simple Notification Service (Amazon SNS) topic.
@@ -2639,8 +2633,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty,
     ) : CdkObject(cdkObject), TargetProperty {
       /**
        * User-defined criteria for sending commands that target instances that meet the criteria.
@@ -2984,8 +2977,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty,
     ) : CdkObject(cdkObject), TaskInvocationParametersProperty {
       /**
        * The parameters for an `AUTOMATION` task type.

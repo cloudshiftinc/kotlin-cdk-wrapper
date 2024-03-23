@@ -248,7 +248,7 @@ public interface CfnIntegrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnIntegrationProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnIntegrationProps,
   ) : CdkObject(cdkObject), CfnIntegrationProps {
     /**
      * An optional set of non-secret key–value pairs that contains additional contextual information

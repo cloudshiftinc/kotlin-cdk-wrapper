@@ -156,7 +156,7 @@ public interface CfnAppProps {
   public fun enableBranchAutoDeletion(): Any? = unwrap(this).getEnableBranchAutoDeletion()
 
   /**
-   * The environment variables map for an Amplify app.
+   * The environment variables for the Amplify app.
    *
    * For a list of the environment variables that are accessible to Amplify by default, see [Amplify
    * Environment
@@ -336,7 +336,7 @@ public interface CfnAppProps {
     public fun enableBranchAutoDeletion(enableBranchAutoDeletion: IResolvable)
 
     /**
-     * @param environmentVariables The environment variables map for an Amplify app.
+     * @param environmentVariables The environment variables for the Amplify app.
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment
      * variables](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-console-environment-variables.html)
@@ -345,7 +345,7 @@ public interface CfnAppProps {
     public fun environmentVariables(environmentVariables: IResolvable)
 
     /**
-     * @param environmentVariables The environment variables map for an Amplify app.
+     * @param environmentVariables The environment variables for the Amplify app.
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment
      * variables](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-console-environment-variables.html)
@@ -354,7 +354,7 @@ public interface CfnAppProps {
     public fun environmentVariables(environmentVariables: List<Any>)
 
     /**
-     * @param environmentVariables The environment variables map for an Amplify app.
+     * @param environmentVariables The environment variables for the Amplify app.
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment
      * variables](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-console-environment-variables.html)
@@ -550,7 +550,7 @@ public interface CfnAppProps {
     }
 
     /**
-     * @param environmentVariables The environment variables map for an Amplify app.
+     * @param environmentVariables The environment variables for the Amplify app.
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment
      * variables](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-console-environment-variables.html)
@@ -561,7 +561,7 @@ public interface CfnAppProps {
     }
 
     /**
-     * @param environmentVariables The environment variables map for an Amplify app.
+     * @param environmentVariables The environment variables for the Amplify app.
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment
      * variables](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-console-environment-variables.html)
@@ -572,7 +572,7 @@ public interface CfnAppProps {
     }
 
     /**
-     * @param environmentVariables The environment variables map for an Amplify app.
+     * @param environmentVariables The environment variables for the Amplify app.
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment
      * variables](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-console-environment-variables.html)
@@ -649,7 +649,7 @@ public interface CfnAppProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.amplify.CfnAppProps,
+    cdkObject: software.amazon.awscdk.services.amplify.CfnAppProps,
   ) : CdkObject(cdkObject), CfnAppProps {
     /**
      * The personal access token for a GitHub repository for an Amplify app.
@@ -726,7 +726,7 @@ public interface CfnAppProps {
     override fun enableBranchAutoDeletion(): Any? = unwrap(this).getEnableBranchAutoDeletion()
 
     /**
-     * The environment variables map for an Amplify app.
+     * The environment variables for the Amplify app.
      *
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment

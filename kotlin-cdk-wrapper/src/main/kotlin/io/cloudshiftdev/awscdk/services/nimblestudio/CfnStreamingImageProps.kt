@@ -157,7 +157,7 @@ public interface CfnStreamingImageProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStreamingImageProps,
+    cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStreamingImageProps,
   ) : CdkObject(cdkObject), CfnStreamingImageProps {
     /**
      * A human-readable description of the streaming image.

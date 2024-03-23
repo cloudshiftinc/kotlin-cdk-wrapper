@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class WebSocketStage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStage,
+public open class WebSocketStage(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStage,
 ) : Resource(cdkObject), IWebSocketStage, IStage {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -304,6 +304,7 @@ public open class WebSocketStage internal constructor(
         WebSocketStage = WebSocketStage(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketStage):
-        software.amazon.awscdk.services.apigatewayv2.WebSocketStage = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.WebSocketStage = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.WebSocketStage
   }
 }

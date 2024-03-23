@@ -128,8 +128,7 @@ public interface CloudFormationProductVersion {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion,
   ) : CdkObject(cdkObject), CloudFormationProductVersion {
     /**
      * The S3 template that points to the provisioning version template.

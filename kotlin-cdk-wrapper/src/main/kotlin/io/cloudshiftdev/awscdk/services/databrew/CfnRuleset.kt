@@ -66,8 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-ruleset.html)
  */
-public open class CfnRuleset internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset,
+public open class CfnRuleset(
+  cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -368,7 +368,7 @@ public open class CfnRuleset internal constructor(
         CfnRuleset(cdkObject)
 
     internal fun unwrap(wrapped: CfnRuleset): software.amazon.awscdk.services.databrew.CfnRuleset =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.databrew.CfnRuleset
   }
 
   /**
@@ -445,8 +445,7 @@ public open class CfnRuleset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnRuleset.ColumnSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.ColumnSelectorProperty,
     ) : CdkObject(cdkObject), ColumnSelectorProperty {
       /**
        * The name of a column from a dataset.
@@ -827,7 +826,7 @@ public open class CfnRuleset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.RuleProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.RuleProperty,
     ) : CdkObject(cdkObject), RuleProperty {
       /**
        * The expression which includes column references, condition names followed by variable
@@ -984,8 +983,7 @@ public open class CfnRuleset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty,
     ) : CdkObject(cdkObject), SubstitutionValueProperty {
       /**
        * Value or column name.
@@ -1126,7 +1124,7 @@ public open class CfnRuleset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty,
     ) : CdkObject(cdkObject), ThresholdProperty {
       /**
        * The type of a threshold.

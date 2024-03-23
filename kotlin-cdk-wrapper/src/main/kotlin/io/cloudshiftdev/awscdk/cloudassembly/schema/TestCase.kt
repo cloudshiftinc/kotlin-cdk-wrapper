@@ -377,7 +377,7 @@ public interface TestCase : TestOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.TestCase,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.TestCase,
   ) : CdkObject(cdkObject), TestCase {
     /**
      * List of CloudFormation resource types in this stack that can be destroyed as part of an

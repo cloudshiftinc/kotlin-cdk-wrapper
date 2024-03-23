@@ -29,9 +29,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public open class CertificateValidation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.certificatemanager.CertificateValidation,
+public open class CertificateValidation(
+  cdkObject: software.amazon.awscdk.services.certificatemanager.CertificateValidation,
 ) : CdkObject(cdkObject) {
   /**
    * The validation method.
@@ -66,5 +65,6 @@ public open class CertificateValidation internal constructor(
 
     internal fun unwrap(wrapped: CertificateValidation):
         software.amazon.awscdk.services.certificatemanager.CertificateValidation = wrapped.cdkObject
+        as software.amazon.awscdk.services.certificatemanager.CertificateValidation
   }
 }

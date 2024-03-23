@@ -39,9 +39,8 @@ import software.amazon.awscdk.services.dynamodb.ITable as AmazonAwscdkServicesDy
  * .build());
  * ```
  */
-public open class DynamoEventSource internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.eventsources.DynamoEventSource,
+public open class DynamoEventSource(
+  cdkObject: software.amazon.awscdk.services.lambda.eventsources.DynamoEventSource,
 ) : StreamEventSource(cdkObject) {
   public constructor(table: CloudshiftdevAwscdkServicesDynamodbITable,
       props: DynamoEventSourceProps) :
@@ -427,6 +426,7 @@ public open class DynamoEventSource internal constructor(
         DynamoEventSource = DynamoEventSource(cdkObject)
 
     internal fun unwrap(wrapped: DynamoEventSource):
-        software.amazon.awscdk.services.lambda.eventsources.DynamoEventSource = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.eventsources.DynamoEventSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.eventsources.DynamoEventSource
   }
 }

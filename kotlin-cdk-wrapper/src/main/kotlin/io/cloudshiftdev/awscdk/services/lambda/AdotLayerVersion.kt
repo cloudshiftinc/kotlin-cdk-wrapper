@@ -25,11 +25,11 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
  * .build();
  * ```
  */
-public abstract class AdotLayerVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.AdotLayerVersion,
+public abstract class AdotLayerVersion(
+  cdkObject: software.amazon.awscdk.services.lambda.AdotLayerVersion,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.AdotLayerVersion,
+    cdkObject: software.amazon.awscdk.services.lambda.AdotLayerVersion,
   ) : AdotLayerVersion(cdkObject)
 
   public companion object {

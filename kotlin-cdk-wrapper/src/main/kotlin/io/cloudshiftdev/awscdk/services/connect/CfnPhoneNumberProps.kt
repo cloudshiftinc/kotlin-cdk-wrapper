@@ -220,7 +220,7 @@ public interface CfnPhoneNumberProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnPhoneNumberProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnPhoneNumberProps,
   ) : CdkObject(cdkObject), CfnPhoneNumberProps {
     /**
      * The ISO country code.

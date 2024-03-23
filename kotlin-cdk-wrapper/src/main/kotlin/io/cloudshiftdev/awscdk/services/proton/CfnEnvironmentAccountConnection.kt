@@ -41,9 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-proton-environmentaccountconnection.html)
  */
-public open class CfnEnvironmentAccountConnection internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnection,
+public open class CfnEnvironmentAccountConnection(
+  cdkObject: software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -442,5 +441,6 @@ public open class CfnEnvironmentAccountConnection internal constructor(
 
     internal fun unwrap(wrapped: CfnEnvironmentAccountConnection):
         software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnection = wrapped.cdkObject
+        as software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnection
   }
 }

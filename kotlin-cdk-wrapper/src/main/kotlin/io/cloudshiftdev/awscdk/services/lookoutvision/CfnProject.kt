@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutvision-project.html)
  */
-public open class CfnProject internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lookoutvision.CfnProject,
+public open class CfnProject(
+  cdkObject: software.amazon.awscdk.services.lookoutvision.CfnProject,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -127,6 +127,7 @@ public open class CfnProject internal constructor(
         CfnProject = CfnProject(cdkObject)
 
     internal fun unwrap(wrapped: CfnProject):
-        software.amazon.awscdk.services.lookoutvision.CfnProject = wrapped.cdkObject
+        software.amazon.awscdk.services.lookoutvision.CfnProject = wrapped.cdkObject as
+        software.amazon.awscdk.services.lookoutvision.CfnProject
   }
 }

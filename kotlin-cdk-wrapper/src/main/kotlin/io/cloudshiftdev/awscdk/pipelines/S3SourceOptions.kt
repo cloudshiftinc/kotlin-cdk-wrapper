@@ -115,7 +115,7 @@ public interface S3SourceOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.S3SourceOptions,
+    cdkObject: software.amazon.awscdk.pipelines.S3SourceOptions,
   ) : CdkObject(cdkObject), S3SourceOptions {
     /**
      * The action name used for this source in the CodePipeline.

@@ -61,7 +61,7 @@ public interface CfnEgressOnlyInternetGatewayProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGatewayProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGatewayProps,
   ) : CdkObject(cdkObject), CfnEgressOnlyInternetGatewayProps {
     /**
      * The ID of the VPC for which to create the egress-only internet gateway.

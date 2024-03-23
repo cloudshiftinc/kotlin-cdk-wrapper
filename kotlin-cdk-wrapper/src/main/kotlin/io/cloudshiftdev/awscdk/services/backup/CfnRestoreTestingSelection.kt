@@ -72,9 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingselection.html)
  */
-public open class CfnRestoreTestingSelection internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.backup.CfnRestoreTestingSelection,
+public open class CfnRestoreTestingSelection(
+  cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -585,7 +584,8 @@ public open class CfnRestoreTestingSelection internal constructor(
         CfnRestoreTestingSelection = CfnRestoreTestingSelection(cdkObject)
 
     internal fun unwrap(wrapped: CfnRestoreTestingSelection):
-        software.amazon.awscdk.services.backup.CfnRestoreTestingSelection = wrapped.cdkObject
+        software.amazon.awscdk.services.backup.CfnRestoreTestingSelection = wrapped.cdkObject as
+        software.amazon.awscdk.services.backup.CfnRestoreTestingSelection
   }
 
   /**
@@ -685,8 +685,7 @@ public open class CfnRestoreTestingSelection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty,
     ) : CdkObject(cdkObject), KeyValueProperty {
       /**
        * The tag key (String). The key can't start with `aws:` .
@@ -889,8 +888,7 @@ public open class CfnRestoreTestingSelection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.ProtectedResourceConditionsProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.ProtectedResourceConditionsProperty,
     ) : CdkObject(cdkObject), ProtectedResourceConditionsProperty {
       /**
        * Filters the values of your tagged resources for only those resources that you tagged with

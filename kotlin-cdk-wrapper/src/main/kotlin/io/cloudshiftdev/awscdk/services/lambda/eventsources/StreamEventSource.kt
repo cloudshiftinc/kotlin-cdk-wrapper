@@ -10,9 +10,8 @@ import io.cloudshiftdev.awscdk.services.lambda.IFunction
 /**
  * Use an stream as an event source for AWS Lambda.
  */
-public abstract class StreamEventSource internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.eventsources.StreamEventSource,
+public abstract class StreamEventSource(
+  cdkObject: software.amazon.awscdk.services.lambda.eventsources.StreamEventSource,
 ) : CdkObject(cdkObject), IEventSource {
   /**
    * Called by `lambda.addEventSource` to allow the event source to bind to this function.
@@ -24,7 +23,7 @@ public abstract class StreamEventSource internal constructor(
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.eventsources.StreamEventSource,
+    cdkObject: software.amazon.awscdk.services.lambda.eventsources.StreamEventSource,
   ) : StreamEventSource(cdkObject)
 
   public companion object {

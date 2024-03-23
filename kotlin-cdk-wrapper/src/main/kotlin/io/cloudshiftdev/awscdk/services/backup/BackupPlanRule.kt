@@ -25,8 +25,8 @@ import kotlin.collections.Map
  * .build());
  * ```
  */
-public open class BackupPlanRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backup.BackupPlanRule,
+public open class BackupPlanRule(
+  cdkObject: software.amazon.awscdk.services.backup.BackupPlanRule,
 ) : CdkObject(cdkObject) {
   public constructor(props: BackupPlanRuleProps) :
       this(software.amazon.awscdk.services.backup.BackupPlanRule(props.let(BackupPlanRuleProps::unwrap))
@@ -356,6 +356,7 @@ public open class BackupPlanRule internal constructor(
         BackupPlanRule = BackupPlanRule(cdkObject)
 
     internal fun unwrap(wrapped: BackupPlanRule):
-        software.amazon.awscdk.services.backup.BackupPlanRule = wrapped.cdkObject
+        software.amazon.awscdk.services.backup.BackupPlanRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.backup.BackupPlanRule
   }
 }

@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-vpceconfiguration.html)
  */
-public open class CfnVPCEConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnVPCEConfiguration,
+public open class CfnVPCEConfiguration(
+  cdkObject: software.amazon.awscdk.services.devicefarm.CfnVPCEConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -322,6 +322,7 @@ public open class CfnVPCEConfiguration internal constructor(
         CfnVPCEConfiguration = CfnVPCEConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCEConfiguration):
-        software.amazon.awscdk.services.devicefarm.CfnVPCEConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.devicefarm.CfnVPCEConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.devicefarm.CfnVPCEConfiguration
   }
 }

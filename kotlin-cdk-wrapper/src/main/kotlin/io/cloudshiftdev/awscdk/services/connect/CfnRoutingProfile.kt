@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-routingprofile.html)
  */
-public open class CfnRoutingProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile,
+public open class CfnRoutingProfile(
+  cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -527,7 +527,8 @@ public open class CfnRoutingProfile internal constructor(
         CfnRoutingProfile = CfnRoutingProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnRoutingProfile):
-        software.amazon.awscdk.services.connect.CfnRoutingProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnRoutingProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnRoutingProfile
   }
 
   /**
@@ -588,8 +589,7 @@ public open class CfnRoutingProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnRoutingProfile.CrossChannelBehaviorProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile.CrossChannelBehaviorProperty,
     ) : CdkObject(cdkObject), CrossChannelBehaviorProperty {
       /**
        * Specifies the other channels that can be routed to an agent handling their current channel.
@@ -782,8 +782,7 @@ public open class CfnRoutingProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnRoutingProfile.MediaConcurrencyProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile.MediaConcurrencyProperty,
     ) : CdkObject(cdkObject), MediaConcurrencyProperty {
       /**
        * The channels that agents can handle in the Contact Control Panel (CCP).
@@ -985,8 +984,7 @@ public open class CfnRoutingProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueConfigProperty,
     ) : CdkObject(cdkObject), RoutingProfileQueueConfigProperty {
       /**
        * The delay, in seconds, a contact should be in the queue before they are routed to an
@@ -1115,8 +1113,7 @@ public open class CfnRoutingProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueReferenceProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueReferenceProperty,
     ) : CdkObject(cdkObject), RoutingProfileQueueReferenceProperty {
       /**
        * The channels agents can handle in the Contact Control Panel (CCP) for this routing profile.

@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-regexpatternset.html)
  */
-public open class CfnRegexPatternSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet,
+public open class CfnRegexPatternSet(
+  cdkObject: software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -204,6 +204,7 @@ public open class CfnRegexPatternSet internal constructor(
         CfnRegexPatternSet = CfnRegexPatternSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnRegexPatternSet):
-        software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet = wrapped.cdkObject
+        software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet
   }
 }

@@ -246,7 +246,7 @@ public interface CfnFunctionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunctionProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunctionProps,
   ) : CdkObject(cdkObject), CfnFunctionProps {
     /**
      * A flag that determines whether to automatically publish the function to the `LIVE` stage when

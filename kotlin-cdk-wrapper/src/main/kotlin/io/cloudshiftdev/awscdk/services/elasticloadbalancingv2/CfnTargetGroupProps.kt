@@ -752,8 +752,7 @@ public interface CfnTargetGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroupProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroupProps,
   ) : CdkObject(cdkObject), CfnTargetGroupProps {
     /**
      * Indicates whether health checks are enabled.

@@ -161,7 +161,7 @@ public interface AcceleratorAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.globalaccelerator.AcceleratorAttributes,
+    cdkObject: software.amazon.awscdk.services.globalaccelerator.AcceleratorAttributes,
   ) : CdkObject(cdkObject), AcceleratorAttributes {
     /**
      * The ARN of the accelerator.

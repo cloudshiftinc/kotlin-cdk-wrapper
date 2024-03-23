@@ -24,8 +24,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class LustreMaintenanceTime internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fsx.LustreMaintenanceTime,
+public open class LustreMaintenanceTime(
+  cdkObject: software.amazon.awscdk.services.fsx.LustreMaintenanceTime,
 ) : CdkObject(cdkObject) {
   public constructor(props: LustreMaintenanceTimeProps) :
       this(software.amazon.awscdk.services.fsx.LustreMaintenanceTime(props.let(LustreMaintenanceTimeProps::unwrap))
@@ -113,6 +113,7 @@ public open class LustreMaintenanceTime internal constructor(
         LustreMaintenanceTime = LustreMaintenanceTime(cdkObject)
 
     internal fun unwrap(wrapped: LustreMaintenanceTime):
-        software.amazon.awscdk.services.fsx.LustreMaintenanceTime = wrapped.cdkObject
+        software.amazon.awscdk.services.fsx.LustreMaintenanceTime = wrapped.cdkObject as
+        software.amazon.awscdk.services.fsx.LustreMaintenanceTime
   }
 }

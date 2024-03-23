@@ -74,9 +74,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public open class AuthenticateCognitoAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoAction,
+public open class AuthenticateCognitoAction(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoAction,
 ) : ListenerAction(cdkObject) {
   public constructor(options: AuthenticateCognitoActionProps) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoAction(options.let(AuthenticateCognitoActionProps::unwrap))
@@ -359,6 +358,7 @@ public open class AuthenticateCognitoAction internal constructor(
 
     internal fun unwrap(wrapped: AuthenticateCognitoAction):
         software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoAction =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoAction
   }
 }

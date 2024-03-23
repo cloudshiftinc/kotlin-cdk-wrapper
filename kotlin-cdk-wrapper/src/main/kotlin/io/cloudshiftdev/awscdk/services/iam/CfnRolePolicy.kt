@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-rolepolicy.html)
  */
-public open class CfnRolePolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CfnRolePolicy,
+public open class CfnRolePolicy(
+  cdkObject: software.amazon.awscdk.services.iam.CfnRolePolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -252,6 +252,6 @@ public open class CfnRolePolicy internal constructor(
         CfnRolePolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnRolePolicy): software.amazon.awscdk.services.iam.CfnRolePolicy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.CfnRolePolicy
   }
 }

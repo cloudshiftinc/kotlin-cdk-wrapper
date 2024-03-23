@@ -157,7 +157,7 @@ public interface StackAsset {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.StackAsset,
+    cdkObject: software.amazon.awscdk.pipelines.StackAsset,
   ) : CdkObject(cdkObject), StackAsset {
     /**
      * Asset identifier.

@@ -375,7 +375,7 @@ public interface CfnIPSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.wafv2.CfnIPSetProps,
+    cdkObject: software.amazon.awscdk.services.wafv2.CfnIPSetProps,
   ) : CdkObject(cdkObject), CfnIPSetProps {
     /**
      * Contains an array of strings that specifies zero or more IP addresses or blocks of IP

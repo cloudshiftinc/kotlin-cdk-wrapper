@@ -182,8 +182,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelcard.html)
  */
-public open class CfnModelCard internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard,
+public open class CfnModelCard(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -865,7 +865,8 @@ public open class CfnModelCard internal constructor(
         CfnModelCard = CfnModelCard(cdkObject)
 
     internal fun unwrap(wrapped: CfnModelCard):
-        software.amazon.awscdk.services.sagemaker.CfnModelCard = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnModelCard = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnModelCard
   }
 
   /**
@@ -980,8 +981,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.AdditionalInformationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.AdditionalInformationProperty,
     ) : CdkObject(cdkObject), AdditionalInformationProperty {
       /**
        * Caveats and recommendations for those who might use this model in their applications.
@@ -1117,8 +1117,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.BusinessDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.BusinessDetailsProperty,
     ) : CdkObject(cdkObject), BusinessDetailsProperty {
       /**
        * The specific business problem that the model is trying to solve.
@@ -1260,8 +1259,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.ContainerProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.ContainerProperty,
     ) : CdkObject(cdkObject), ContainerProperty {
       /**
        * Inference environment path.
@@ -1784,8 +1782,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.ContentProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.ContentProperty,
     ) : CdkObject(cdkObject), ContentProperty {
       /**
        * Additional information about the model.
@@ -2067,8 +2064,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.EvaluationDetailProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.EvaluationDetailProperty,
     ) : CdkObject(cdkObject), EvaluationDetailProperty {
       /**
        * The location of the datasets used to evaluate the model.
@@ -2260,8 +2256,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.FunctionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.FunctionProperty,
     ) : CdkObject(cdkObject), FunctionProperty {
       /**
        * An optional description of any conditions of your objective function metric.
@@ -2382,8 +2377,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.InferenceEnvironmentProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.InferenceEnvironmentProperty,
     ) : CdkObject(cdkObject), InferenceEnvironmentProperty {
       /**
        * The container used to run the inference environment.
@@ -2499,8 +2493,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.InferenceSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.InferenceSpecificationProperty,
     ) : CdkObject(cdkObject), InferenceSpecificationProperty {
       /**
        * The Amazon ECR registry path of the Docker image that contains the inference code.
@@ -2680,8 +2673,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.IntendedUsesProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.IntendedUsesProperty,
     ) : CdkObject(cdkObject), IntendedUsesProperty {
       /**
        * An explanation of why your organization categorizes the model with its risk rating.
@@ -2913,8 +2905,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.MetricDataItemsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.MetricDataItemsProperty,
     ) : CdkObject(cdkObject), MetricDataItemsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-metricdataitems.html#cfn-sagemaker-modelcard-metricdataitems-name)
@@ -3138,8 +3129,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.MetricGroupProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.MetricGroupProperty,
     ) : CdkObject(cdkObject), MetricGroupProperty {
       /**
        * A list of metric objects. The `MetricDataItems` list can have one of the following values:.
@@ -3459,8 +3449,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.ModelOverviewProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.ModelOverviewProperty,
     ) : CdkObject(cdkObject), ModelOverviewProperty {
       /**
        * The algorithm used to solve the problem.
@@ -3603,8 +3592,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.ModelPackageCreatorProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.ModelPackageCreatorProperty,
     ) : CdkObject(cdkObject), ModelPackageCreatorProperty {
       /**
        * The name of the user's profile in Studio.
@@ -4023,8 +4011,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.ModelPackageDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.ModelPackageDetailsProperty,
     ) : CdkObject(cdkObject), ModelPackageDetailsProperty {
       /**
        * A description provided for the model approval.
@@ -4248,8 +4235,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.ObjectiveFunctionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.ObjectiveFunctionProperty,
     ) : CdkObject(cdkObject), ObjectiveFunctionProperty {
       /**
        * A function object that details optimization direction, metric, and additional descriptions.
@@ -4344,8 +4330,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.SecurityConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.SecurityConfigProperty,
     ) : CdkObject(cdkObject), SecurityConfigProperty {
       /**
        * A AWS Key Management Service [key
@@ -4477,8 +4462,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.SourceAlgorithmProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.SourceAlgorithmProperty,
     ) : CdkObject(cdkObject), SourceAlgorithmProperty {
       /**
        * The name of an algorithm that was used to create the model package.
@@ -4706,8 +4690,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingDetailsProperty,
     ) : CdkObject(cdkObject), TrainingDetailsProperty {
       /**
        * The function that is optimized during model training.
@@ -4814,8 +4797,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingEnvironmentProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingEnvironmentProperty,
     ) : CdkObject(cdkObject), TrainingEnvironmentProperty {
       /**
        * SageMaker inference image URI.
@@ -4918,8 +4900,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingHyperParameterProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingHyperParameterProperty,
     ) : CdkObject(cdkObject), TrainingHyperParameterProperty {
       /**
        * The name of the hyper parameter.
@@ -5284,8 +5265,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingJobDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingJobDetailsProperty,
     ) : CdkObject(cdkObject), TrainingJobDetailsProperty {
       /**
        * The hyper parameters used in the training job.
@@ -5452,8 +5432,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingMetricProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingMetricProperty,
     ) : CdkObject(cdkObject), TrainingMetricProperty {
       /**
        * The name of the result from the SageMaker training job.
@@ -5594,8 +5573,7 @@ public open class CfnModelCard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelCard.UserContextProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.UserContextProperty,
     ) : CdkObject(cdkObject), UserContextProperty {
       /**
        * The domain associated with the user.

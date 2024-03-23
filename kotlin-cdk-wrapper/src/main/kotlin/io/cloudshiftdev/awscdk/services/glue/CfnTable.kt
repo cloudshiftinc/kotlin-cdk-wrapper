@@ -111,8 +111,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html)
  */
-public open class CfnTable internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnTable,
+public open class CfnTable(
+  cdkObject: software.amazon.awscdk.services.glue.CfnTable,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -417,7 +417,7 @@ public open class CfnTable internal constructor(
         CfnTable(cdkObject)
 
     internal fun unwrap(wrapped: CfnTable): software.amazon.awscdk.services.glue.CfnTable =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnTable
   }
 
   /**
@@ -512,7 +512,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTable.ColumnProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTable.ColumnProperty,
     ) : CdkObject(cdkObject), ColumnProperty {
       /**
        * A free-form text comment.
@@ -632,7 +632,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty,
     ) : CdkObject(cdkObject), IcebergInputProperty {
       /**
        * A required metadata operation.
@@ -759,8 +759,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty,
     ) : CdkObject(cdkObject), OpenTableFormatInputProperty {
       /**
        * Specifies an `IcebergInput` structure that defines an Apache Iceberg metadata table.
@@ -862,7 +861,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTable.OrderProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTable.OrderProperty,
     ) : CdkObject(cdkObject), OrderProperty {
       /**
        * The name of the column.
@@ -1000,7 +999,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty,
     ) : CdkObject(cdkObject), SchemaIdProperty {
       /**
        * The name of the schema registry that contains the schema.
@@ -1187,7 +1186,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty,
     ) : CdkObject(cdkObject), SchemaReferenceProperty {
       /**
        * A structure that contains schema identity fields.
@@ -1332,7 +1331,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty,
     ) : CdkObject(cdkObject), SerdeInfoProperty {
       /**
        * Name of the SerDe.
@@ -1500,7 +1499,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty,
     ) : CdkObject(cdkObject), SkewedInfoProperty {
       /**
        * A list of names of columns that contain skewed values.
@@ -2055,8 +2054,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty,
     ) : CdkObject(cdkObject), StorageDescriptorProperty {
       /**
        * A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
@@ -2285,7 +2283,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty,
     ) : CdkObject(cdkObject), TableIdentifierProperty {
       /**
        * The ID of the Data Catalog in which the table resides.
@@ -2808,7 +2806,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTable.TableInputProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTable.TableInputProperty,
     ) : CdkObject(cdkObject), TableInputProperty {
       /**
        * A description of the table.

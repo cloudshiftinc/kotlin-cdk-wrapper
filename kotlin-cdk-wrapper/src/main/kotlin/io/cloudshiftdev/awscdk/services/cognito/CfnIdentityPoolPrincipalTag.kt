@@ -36,9 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolprincipaltag.html)
  */
-public open class CfnIdentityPoolPrincipalTag internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTag,
+public open class CfnIdentityPoolPrincipalTag(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTag,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -278,6 +277,7 @@ public open class CfnIdentityPoolPrincipalTag internal constructor(
         CfnIdentityPoolPrincipalTag = CfnIdentityPoolPrincipalTag(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentityPoolPrincipalTag):
-        software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTag = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTag = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTag
   }
 }

@@ -207,7 +207,7 @@ public interface CfnRealtimeLogConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfigProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfigProps,
   ) : CdkObject(cdkObject), CfnRealtimeLogConfigProps {
     /**
      * Contains information about the Amazon Kinesis data stream where you are sending real-time log

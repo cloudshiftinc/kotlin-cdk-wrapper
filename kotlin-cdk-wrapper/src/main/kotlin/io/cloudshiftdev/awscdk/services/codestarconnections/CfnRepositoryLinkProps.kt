@@ -164,8 +164,7 @@ public interface CfnRepositoryLinkProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codestarconnections.CfnRepositoryLinkProps,
+    cdkObject: software.amazon.awscdk.services.codestarconnections.CfnRepositoryLinkProps,
   ) : CdkObject(cdkObject), CfnRepositoryLinkProps {
     /**
      * The Amazon Resource Name (ARN) of the connection associated with the repository link.

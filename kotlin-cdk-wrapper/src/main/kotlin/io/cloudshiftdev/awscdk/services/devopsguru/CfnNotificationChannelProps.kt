@@ -106,7 +106,7 @@ public interface CfnNotificationChannelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannelProps,
+    cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannelProps,
   ) : CdkObject(cdkObject), CfnNotificationChannelProps {
     /**
      * A `NotificationChannelConfig` object that contains information about configured notification

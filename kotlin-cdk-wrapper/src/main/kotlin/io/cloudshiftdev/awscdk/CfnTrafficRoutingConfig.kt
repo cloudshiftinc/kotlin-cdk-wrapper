@@ -145,7 +145,7 @@ public interface CfnTrafficRoutingConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnTrafficRoutingConfig,
+    cdkObject: software.amazon.awscdk.CfnTrafficRoutingConfig,
   ) : CdkObject(cdkObject), CfnTrafficRoutingConfig {
     /**
      * The configuration for traffic routing when `type` is

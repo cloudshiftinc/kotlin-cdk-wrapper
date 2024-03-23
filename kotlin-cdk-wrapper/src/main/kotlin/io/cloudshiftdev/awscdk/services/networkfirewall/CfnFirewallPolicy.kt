@@ -86,9 +86,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html)
  */
-public open class CfnFirewallPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy,
+public open class CfnFirewallPolicy(
+  cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -397,7 +396,8 @@ public open class CfnFirewallPolicy internal constructor(
         CfnFirewallPolicy = CfnFirewallPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnFirewallPolicy):
-        software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
   }
 
   /**
@@ -537,8 +537,7 @@ public open class CfnFirewallPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.ActionDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.ActionDefinitionProperty,
     ) : CdkObject(cdkObject), ActionDefinitionProperty {
       /**
        * Stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for
@@ -701,8 +700,7 @@ public open class CfnFirewallPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.CustomActionProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.CustomActionProperty,
     ) : CdkObject(cdkObject), CustomActionProperty {
       /**
        * The custom action associated with the action name.
@@ -804,8 +802,7 @@ public open class CfnFirewallPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty,
     ) : CdkObject(cdkObject), DimensionProperty {
       /**
        * The value to use in the custom metric dimension.
@@ -1493,8 +1490,7 @@ public open class CfnFirewallPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FirewallPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FirewallPolicyProperty,
     ) : CdkObject(cdkObject), FirewallPolicyProperty {
       /**
        * Contains variables that you can use to override default Suricata settings in your firewall
@@ -1698,8 +1694,7 @@ public open class CfnFirewallPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty,
     ) : CdkObject(cdkObject), IPSetProperty {
       /**
        * The list of IP addresses and address ranges, in CIDR notation.
@@ -1815,8 +1810,7 @@ public open class CfnFirewallPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty,
     ) : CdkObject(cdkObject), PolicyVariablesProperty {
       /**
        * The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata `HOME_NET` variable.
@@ -1927,8 +1921,7 @@ public open class CfnFirewallPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty,
     ) : CdkObject(cdkObject), PublishMetricActionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-publishmetricaction.html#cfn-networkfirewall-firewallpolicy-publishmetricaction-dimensions)
@@ -2098,8 +2091,7 @@ public open class CfnFirewallPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty,
     ) : CdkObject(cdkObject), StatefulEngineOptionsProperty {
       /**
        * Indicates how to manage the order of stateful rule evaluation for the policy.
@@ -2218,8 +2210,7 @@ public open class CfnFirewallPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupOverrideProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupOverrideProperty,
     ) : CdkObject(cdkObject), StatefulRuleGroupOverrideProperty {
       /**
        * The action that changes the rule group from `DROP` to `ALERT` .
@@ -2417,8 +2408,7 @@ public open class CfnFirewallPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty,
     ) : CdkObject(cdkObject), StatefulRuleGroupReferenceProperty {
       /**
        * The action that allows the policy owner to override the behavior of the rule group within a
@@ -2563,8 +2553,7 @@ public open class CfnFirewallPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty,
     ) : CdkObject(cdkObject), StatelessRuleGroupReferenceProperty {
       /**
        * An integer setting that indicates the order in which to run the stateless rule groups in a

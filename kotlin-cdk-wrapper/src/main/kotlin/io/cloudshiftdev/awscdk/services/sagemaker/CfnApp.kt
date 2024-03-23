@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html)
  */
-public open class CfnApp internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnApp,
+public open class CfnApp(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnApp,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -413,7 +413,7 @@ public open class CfnApp internal constructor(
         CfnApp(cdkObject)
 
     internal fun unwrap(wrapped: CfnApp): software.amazon.awscdk.services.sagemaker.CfnApp =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnApp
   }
 
   /**
@@ -526,7 +526,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnApp.ResourceSpecProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnApp.ResourceSpecProperty,
     ) : CdkObject(cdkObject), ResourceSpecProperty {
       /**
        * The instance type that the image version runs on.

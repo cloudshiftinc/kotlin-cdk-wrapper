@@ -113,7 +113,7 @@ public interface IRestApi : io.cloudshiftdev.awscdk.IResource {
   public fun root(): IResource
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IRestApi,
+    cdkObject: software.amazon.awscdk.services.apigateway.IRestApi,
   ) : CdkObject(cdkObject), IRestApi {
     /**
      * Apply the given removal policy to this resource.

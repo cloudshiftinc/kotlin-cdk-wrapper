@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html)
  */
-public open class CfnEnvironment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironment,
+public open class CfnEnvironment(
+  cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -460,7 +460,8 @@ public open class CfnEnvironment internal constructor(
         CfnEnvironment = CfnEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironment):
-        software.amazon.awscdk.services.datazone.CfnEnvironment = wrapped.cdkObject
+        software.amazon.awscdk.services.datazone.CfnEnvironment = wrapped.cdkObject as
+        software.amazon.awscdk.services.datazone.CfnEnvironment
   }
 
   /**
@@ -538,8 +539,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnEnvironment.EnvironmentParameterProperty,
+      cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironment.EnvironmentParameterProperty,
     ) : CdkObject(cdkObject), EnvironmentParameterProperty {
       /**
        * The name of the environment parameter.

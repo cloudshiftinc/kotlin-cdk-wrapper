@@ -126,8 +126,7 @@ public interface CfnCertificateAuthorityActivationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.acmpca.CfnCertificateAuthorityActivationProps,
+    cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthorityActivationProps,
   ) : CdkObject(cdkObject), CfnCertificateAuthorityActivationProps {
     /**
      * The Base64 PEM-encoded certificate authority certificate.

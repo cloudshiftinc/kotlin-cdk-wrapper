@@ -23,6 +23,7 @@ import kotlin.Unit
  * .warmNodes(2)
  * .warmInstanceType("ultrawarm1.medium.search")
  * .build())
+ * .coldStorageEnabled(true)
  * .build();
  * ```
  */
@@ -217,7 +218,7 @@ public interface CapacityConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.opensearchservice.CapacityConfig,
+    cdkObject: software.amazon.awscdk.services.opensearchservice.CapacityConfig,
   ) : CdkObject(cdkObject), CapacityConfig {
     /**
      * The instance type for your data nodes, such as `m3.medium.search`. For valid values, see

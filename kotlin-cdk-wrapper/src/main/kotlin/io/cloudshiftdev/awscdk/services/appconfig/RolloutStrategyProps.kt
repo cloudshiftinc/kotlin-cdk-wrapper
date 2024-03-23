@@ -131,7 +131,7 @@ public interface RolloutStrategyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.RolloutStrategyProps,
+    cdkObject: software.amazon.awscdk.services.appconfig.RolloutStrategyProps,
   ) : CdkObject(cdkObject), RolloutStrategyProps {
     /**
      * The deployment duration of the deployment strategy.

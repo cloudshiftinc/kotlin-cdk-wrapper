@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-storagevirtualmachine.html)
  */
-public open class CfnStorageVirtualMachine internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine,
+public open class CfnStorageVirtualMachine(
+  cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -467,7 +467,8 @@ public open class CfnStorageVirtualMachine internal constructor(
         CfnStorageVirtualMachine = CfnStorageVirtualMachine(cdkObject)
 
     internal fun unwrap(wrapped: CfnStorageVirtualMachine):
-        software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine = wrapped.cdkObject
+        software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine = wrapped.cdkObject as
+        software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine
   }
 
   /**
@@ -605,8 +606,7 @@ public open class CfnStorageVirtualMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty,
     ) : CdkObject(cdkObject), ActiveDirectoryConfigurationProperty {
       /**
        * The NetBIOS name of the Active Directory computer object that will be created for your SVM.
@@ -882,8 +882,7 @@ public open class CfnStorageVirtualMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty,
     ) : CdkObject(cdkObject), SelfManagedActiveDirectoryConfigurationProperty {
       /**
        * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed

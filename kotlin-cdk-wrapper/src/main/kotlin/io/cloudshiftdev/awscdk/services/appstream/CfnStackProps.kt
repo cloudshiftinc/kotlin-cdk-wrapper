@@ -586,7 +586,7 @@ public interface CfnStackProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appstream.CfnStackProps,
+    cdkObject: software.amazon.awscdk.services.appstream.CfnStackProps,
   ) : CdkObject(cdkObject), CfnStackProps {
     /**
      * The list of virtual private cloud (VPC) interface endpoint objects.

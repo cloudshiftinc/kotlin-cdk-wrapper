@@ -91,8 +91,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)
  */
-public open class CfnStackSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet,
+public open class CfnStackSet(
+  cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1131,7 +1131,8 @@ public open class CfnStackSet internal constructor(
         CfnStackSet = CfnStackSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnStackSet):
-        software.amazon.awscdk.services.cloudformation.CfnStackSet = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudformation.CfnStackSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudformation.CfnStackSet
   }
 
   /**
@@ -1269,8 +1270,7 @@ public open class CfnStackSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudformation.CfnStackSet.AutoDeploymentProperty,
+      cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.AutoDeploymentProperty,
     ) : CdkObject(cdkObject), AutoDeploymentProperty {
       /**
        * If set to `true` , StackSets automatically deploys additional stack instances to AWS
@@ -1512,8 +1512,7 @@ public open class CfnStackSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudformation.CfnStackSet.DeploymentTargetsProperty,
+      cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.DeploymentTargetsProperty,
     ) : CdkObject(cdkObject), DeploymentTargetsProperty {
       /**
        * Limit deployment targets to individual accounts or include additional accounts with
@@ -1709,8 +1708,7 @@ public open class CfnStackSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudformation.CfnStackSet.ManagedExecutionProperty,
+      cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.ManagedExecutionProperty,
     ) : CdkObject(cdkObject), ManagedExecutionProperty {
       /**
        * When `true` , StackSets performs non-conflicting operations concurrently and queues
@@ -2048,8 +2046,7 @@ public open class CfnStackSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudformation.CfnStackSet.OperationPreferencesProperty,
+      cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.OperationPreferencesProperty,
     ) : CdkObject(cdkObject), OperationPreferencesProperty {
       /**
        * The number of accounts, per Region, for which this operation can fail before AWS
@@ -2237,8 +2234,7 @@ public open class CfnStackSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudformation.CfnStackSet.ParameterProperty,
+      cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.ParameterProperty,
     ) : CdkObject(cdkObject), ParameterProperty {
       /**
        * The key associated with the parameter.
@@ -2459,8 +2455,7 @@ public open class CfnStackSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudformation.CfnStackSet.StackInstancesProperty,
+      cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.StackInstancesProperty,
     ) : CdkObject(cdkObject), StackInstancesProperty {
       /**
        * The AWS `OrganizationalUnitIds` or `Accounts` for which to create stack instances in the

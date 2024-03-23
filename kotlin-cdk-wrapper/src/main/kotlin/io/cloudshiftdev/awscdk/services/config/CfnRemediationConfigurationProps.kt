@@ -364,7 +364,7 @@ public interface CfnRemediationConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfigurationProps,
   ) : CdkObject(cdkObject), CfnRemediationConfigurationProps {
     /**
      * The remediation is triggered automatically.

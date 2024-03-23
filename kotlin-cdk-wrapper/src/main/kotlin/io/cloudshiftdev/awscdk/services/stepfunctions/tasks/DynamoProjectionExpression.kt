@@ -18,9 +18,8 @@ import kotlin.String
  * DynamoProjectionExpression dynamoProjectionExpression = new DynamoProjectionExpression();
  * ```
  */
-public open class DynamoProjectionExpression internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.DynamoProjectionExpression,
+public open class DynamoProjectionExpression(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoProjectionExpression,
 ) : CdkObject(cdkObject) {
   public constructor() :
       this(software.amazon.awscdk.services.stepfunctions.tasks.DynamoProjectionExpression()
@@ -49,6 +48,7 @@ public open class DynamoProjectionExpression internal constructor(
 
     internal fun unwrap(wrapped: DynamoProjectionExpression):
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoProjectionExpression =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.DynamoProjectionExpression
   }
 }

@@ -19,8 +19,8 @@ import kotlin.collections.Map
  * TreeInspector treeInspector = new TreeInspector();
  * ```
  */
-public open class TreeInspector internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.TreeInspector,
+public open class TreeInspector(
+  cdkObject: software.amazon.awscdk.TreeInspector,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.TreeInspector()
   )
@@ -48,6 +48,6 @@ public open class TreeInspector internal constructor(
         TreeInspector(cdkObject)
 
     internal fun unwrap(wrapped: TreeInspector): software.amazon.awscdk.TreeInspector =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.TreeInspector
   }
 }

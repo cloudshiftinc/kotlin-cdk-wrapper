@@ -333,7 +333,7 @@ public interface CfnTrafficMirrorFilterRuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRuleProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRuleProps,
   ) : CdkObject(cdkObject), CfnTrafficMirrorFilterRuleProps {
     /**
      * The description of the Traffic Mirror rule.

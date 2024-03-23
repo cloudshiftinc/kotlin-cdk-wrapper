@@ -53,7 +53,7 @@ public interface IComputeEnvironment : IResource {
   public fun serviceRole(): IRole? = unwrap(this).getServiceRole()?.let(IRole::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.IComputeEnvironment,
+    cdkObject: software.amazon.awscdk.services.batch.IComputeEnvironment,
   ) : CdkObject(cdkObject), IComputeEnvironment {
     /**
      * Apply the given removal policy to this resource.

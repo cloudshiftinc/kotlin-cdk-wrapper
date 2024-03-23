@@ -92,9 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html)
  */
-public open class CfnDataLakeSettings internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings,
+public open class CfnDataLakeSettings(
+  cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1113,7 +1112,8 @@ public open class CfnDataLakeSettings internal constructor(
         CfnDataLakeSettings = CfnDataLakeSettings(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataLakeSettings):
-        software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings = wrapped.cdkObject
+        software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings = wrapped.cdkObject as
+        software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings
   }
 
   /**
@@ -1170,8 +1170,7 @@ public open class CfnDataLakeSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty,
     ) : CdkObject(cdkObject), DataLakePrincipalProperty {
       /**
        * An identifier for the Lake Formation principal.
@@ -1314,8 +1313,7 @@ public open class CfnDataLakeSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.PrincipalPermissionsProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.PrincipalPermissionsProperty,
     ) : CdkObject(cdkObject), PrincipalPermissionsProperty {
       /**
        * The permissions that are granted to the principal.

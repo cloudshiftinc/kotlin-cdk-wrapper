@@ -104,7 +104,7 @@ public interface CfnDocumentationVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationVersionProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationVersionProps,
   ) : CdkObject(cdkObject), CfnDocumentationVersionProps {
     /**
      * A description about the new documentation snapshot.

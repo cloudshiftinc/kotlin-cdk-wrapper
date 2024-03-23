@@ -44,9 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html)
  */
-public open class CfnEnvironmentBlueprintConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration,
+public open class CfnEnvironmentBlueprintConfiguration(
+  cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -395,7 +394,8 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
 
     internal fun unwrap(wrapped: CfnEnvironmentBlueprintConfiguration):
         software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration
   }
 
   /**
@@ -485,8 +485,7 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.RegionalParameterProperty,
+      cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.RegionalParameterProperty,
     ) : CdkObject(cdkObject), RegionalParameterProperty {
       /**
        * A string to string map containing parameters for the region.

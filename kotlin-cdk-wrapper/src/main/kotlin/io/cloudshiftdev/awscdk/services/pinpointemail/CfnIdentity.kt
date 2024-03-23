@@ -67,8 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-identity.html)
  */
-public open class CfnIdentity internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentity,
+public open class CfnIdentity(
+  cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentity,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -568,7 +568,8 @@ public open class CfnIdentity internal constructor(
         CfnIdentity = CfnIdentity(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentity):
-        software.amazon.awscdk.services.pinpointemail.CfnIdentity = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpointemail.CfnIdentity = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpointemail.CfnIdentity
   }
 
   /**
@@ -669,8 +670,7 @@ public open class CfnIdentity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnIdentity.MailFromAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentity.MailFromAttributesProperty,
     ) : CdkObject(cdkObject), MailFromAttributesProperty {
       /**
        * The action that Amazon Pinpoint to takes if it can't read the required MX record for a

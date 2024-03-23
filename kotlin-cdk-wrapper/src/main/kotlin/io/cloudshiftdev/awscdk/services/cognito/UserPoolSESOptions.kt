@@ -185,7 +185,7 @@ public interface UserPoolSESOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolSESOptions,
+    cdkObject: software.amazon.awscdk.services.cognito.UserPoolSESOptions,
   ) : CdkObject(cdkObject), UserPoolSESOptions {
     /**
      * The name of a configuration set in Amazon SES that should be applied to emails sent via

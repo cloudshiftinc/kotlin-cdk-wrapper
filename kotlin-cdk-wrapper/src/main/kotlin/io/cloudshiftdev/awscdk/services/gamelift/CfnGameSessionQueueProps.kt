@@ -508,7 +508,7 @@ public interface CfnGameSessionQueueProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueueProps,
+    cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueueProps,
   ) : CdkObject(cdkObject), CfnGameSessionQueueProps {
     /**
      * Information to be added to all events that are related to this game session queue.

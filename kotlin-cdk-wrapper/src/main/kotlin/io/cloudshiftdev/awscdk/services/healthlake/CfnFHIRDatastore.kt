@@ -67,8 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html)
  */
-public open class CfnFHIRDatastore internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore,
+public open class CfnFHIRDatastore(
+  cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -600,7 +600,8 @@ public open class CfnFHIRDatastore internal constructor(
         CfnFHIRDatastore = CfnFHIRDatastore(cdkObject)
 
     internal fun unwrap(wrapped: CfnFHIRDatastore):
-        software.amazon.awscdk.services.healthlake.CfnFHIRDatastore = wrapped.cdkObject
+        software.amazon.awscdk.services.healthlake.CfnFHIRDatastore = wrapped.cdkObject as
+        software.amazon.awscdk.services.healthlake.CfnFHIRDatastore
   }
 
   /**
@@ -676,8 +677,7 @@ public open class CfnFHIRDatastore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty,
+      cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty,
     ) : CdkObject(cdkObject), CreatedAtProperty {
       /**
        * Nanoseconds.
@@ -907,8 +907,7 @@ public open class CfnFHIRDatastore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.IdentityProviderConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.IdentityProviderConfigurationProperty,
     ) : CdkObject(cdkObject), IdentityProviderConfigurationProperty {
       /**
        * The authorization strategy that you selected when you created the data store.
@@ -1071,8 +1070,7 @@ public open class CfnFHIRDatastore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.KmsEncryptionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.KmsEncryptionConfigProperty,
     ) : CdkObject(cdkObject), KmsEncryptionConfigProperty {
       /**
        * The type of customer-managed-key(CMK) used for encryption.
@@ -1172,8 +1170,7 @@ public open class CfnFHIRDatastore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty,
+      cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty,
     ) : CdkObject(cdkObject), PreloadDataConfigProperty {
       /**
        * The type of preloaded data.
@@ -1296,8 +1293,7 @@ public open class CfnFHIRDatastore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty,
     ) : CdkObject(cdkObject), SseConfigurationProperty {
       /**
        * The server-side encryption key configuration for a customer provided encryption key (CMK).

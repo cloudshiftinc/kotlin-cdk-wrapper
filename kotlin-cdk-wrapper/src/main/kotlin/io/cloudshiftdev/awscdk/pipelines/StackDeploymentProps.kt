@@ -273,7 +273,7 @@ public interface StackDeploymentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.StackDeploymentProps,
+    cdkObject: software.amazon.awscdk.pipelines.StackDeploymentProps,
   ) : CdkObject(cdkObject), StackDeploymentProps {
     /**
      * Template path on disk to cloud assembly (cdk.out).

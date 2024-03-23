@@ -26,8 +26,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class MappingValue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.MappingValue,
+public open class MappingValue(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.MappingValue,
 ) : CdkObject(cdkObject), IMappingValue {
   /**
    * Represents a Mapping Value.
@@ -66,6 +66,7 @@ public open class MappingValue internal constructor(
         MappingValue = MappingValue(cdkObject)
 
     internal fun unwrap(wrapped: MappingValue):
-        software.amazon.awscdk.services.apigatewayv2.MappingValue = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.MappingValue = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.MappingValue
   }
 }

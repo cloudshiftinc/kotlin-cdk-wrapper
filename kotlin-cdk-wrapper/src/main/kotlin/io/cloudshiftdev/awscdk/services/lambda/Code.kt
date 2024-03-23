@@ -34,8 +34,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class Code internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.Code,
+public abstract class Code(
+  cdkObject: software.amazon.awscdk.services.lambda.Code,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the lambda or layer is initialized to allow this object to bind to the stack, add
@@ -89,7 +89,7 @@ public abstract class Code internal constructor(
       ResourceBindOptions(options))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.Code,
+    cdkObject: software.amazon.awscdk.services.lambda.Code,
   ) : Code(cdkObject)
 
   public companion object {

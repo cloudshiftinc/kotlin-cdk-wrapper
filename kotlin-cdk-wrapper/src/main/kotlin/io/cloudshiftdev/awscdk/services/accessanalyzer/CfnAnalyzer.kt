@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html)
  */
-public open class CfnAnalyzer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer,
+public open class CfnAnalyzer(
+  cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -443,7 +443,8 @@ public open class CfnAnalyzer internal constructor(
         CfnAnalyzer = CfnAnalyzer(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnalyzer):
-        software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer = wrapped.cdkObject
+        software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer = wrapped.cdkObject as
+        software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer
   }
 
   /**
@@ -550,8 +551,7 @@ public open class CfnAnalyzer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty,
     ) : CdkObject(cdkObject), AnalyzerConfigurationProperty {
       /**
        * Specifies the configuration of an unused access analyzer for an AWS organization or
@@ -684,8 +684,7 @@ public open class CfnAnalyzer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty,
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty,
     ) : CdkObject(cdkObject), ArchiveRuleProperty {
       /**
        * The criteria for the rule.
@@ -899,8 +898,7 @@ public open class CfnAnalyzer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty,
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty,
     ) : CdkObject(cdkObject), FilterProperty {
       /**
        * A "contains" condition to match for the rule.
@@ -1023,8 +1021,7 @@ public open class CfnAnalyzer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.UnusedAccessConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.UnusedAccessConfigurationProperty,
     ) : CdkObject(cdkObject), UnusedAccessConfigurationProperty {
       /**
        * The specified access age in days for which to generate findings for unused access.

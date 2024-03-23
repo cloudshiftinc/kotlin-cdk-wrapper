@@ -116,8 +116,7 @@ public interface CfnConfigurationAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociationProps,
+    cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociationProps,
   ) : CdkObject(cdkObject), CfnConfigurationAssociationProps {
     /**
      * The broker to associate with a configuration.

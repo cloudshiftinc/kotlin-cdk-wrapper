@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-connection.html)
  */
-public open class CfnConnection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnConnection,
+public open class CfnConnection(
+  cdkObject: software.amazon.awscdk.services.glue.CfnConnection,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -246,7 +246,7 @@ public open class CfnConnection internal constructor(
         = CfnConnection(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnection): software.amazon.awscdk.services.glue.CfnConnection
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnConnection
   }
 
   /**
@@ -650,8 +650,7 @@ public open class CfnConnection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnConnection.ConnectionInputProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnConnection.ConnectionInputProperty,
     ) : CdkObject(cdkObject), ConnectionInputProperty {
       /**
        * These key-value pairs define parameters for the connection.
@@ -894,8 +893,7 @@ public open class CfnConnection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnConnection.PhysicalConnectionRequirementsProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnConnection.PhysicalConnectionRequirementsProperty,
     ) : CdkObject(cdkObject), PhysicalConnectionRequirementsProperty {
       /**
        * The connection's Availability Zone.

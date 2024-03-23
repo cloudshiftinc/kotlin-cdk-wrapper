@@ -90,8 +90,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html)
  */
-public open class CfnResponsePlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan,
+public open class CfnResponsePlan(
+  cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -678,7 +678,8 @@ public open class CfnResponsePlan internal constructor(
         CfnResponsePlan = CfnResponsePlan(cdkObject)
 
     internal fun unwrap(wrapped: CfnResponsePlan):
-        software.amazon.awscdk.services.ssmincidents.CfnResponsePlan = wrapped.cdkObject
+        software.amazon.awscdk.services.ssmincidents.CfnResponsePlan = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
   }
 
   /**
@@ -784,8 +785,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * Details about the Systems Manager automation document that will be used as a runbook during
@@ -893,8 +893,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty,
     ) : CdkObject(cdkObject), ChatChannelProperty {
       /**
        * The Amazon SNS targets that AWS Chatbot uses to notify the chat channel of updates to an
@@ -1055,8 +1054,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterProperty,
     ) : CdkObject(cdkObject), DynamicSsmParameterProperty {
       /**
        * The key parameter to use when running the Systems Manager Automation runbook.
@@ -1150,8 +1148,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterValueProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterValueProperty,
     ) : CdkObject(cdkObject), DynamicSsmParameterValueProperty {
       /**
        * Variable dynamic parameters.
@@ -1453,8 +1450,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IncidentTemplateProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IncidentTemplateProperty,
     ) : CdkObject(cdkObject), IncidentTemplateProperty {
       /**
        * Used to create only one incident record for an incident.
@@ -1628,8 +1624,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty,
     ) : CdkObject(cdkObject), IntegrationProperty {
       /**
        * Information about the PagerDuty service where the response plan creates an incident.
@@ -1712,8 +1707,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty,
     ) : CdkObject(cdkObject), NotificationTargetItemProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon SNS topic.
@@ -1879,8 +1873,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyConfigurationProperty,
     ) : CdkObject(cdkObject), PagerDutyConfigurationProperty {
       /**
        * The name of the PagerDuty configuration.
@@ -1982,8 +1975,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty,
     ) : CdkObject(cdkObject), PagerDutyIncidentConfigurationProperty {
       /**
        * The ID of the PagerDuty service that the response plan associates with an incident when it
@@ -2236,8 +2228,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty,
     ) : CdkObject(cdkObject), SsmAutomationProperty {
       /**
        * The automation document's name.
@@ -2388,8 +2379,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty,
     ) : CdkObject(cdkObject), SsmParameterProperty {
       /**
        * The key parameter to use when running the Automation runbook.

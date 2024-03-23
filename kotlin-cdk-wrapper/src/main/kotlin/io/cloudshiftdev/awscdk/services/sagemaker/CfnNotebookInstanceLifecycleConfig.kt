@@ -44,9 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html)
  */
-public open class CfnNotebookInstanceLifecycleConfig internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig,
+public open class CfnNotebookInstanceLifecycleConfig(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -351,7 +350,8 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
 
     internal fun unwrap(wrapped: CfnNotebookInstanceLifecycleConfig):
         software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig
   }
 
   /**
@@ -414,8 +414,7 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty,
     ) : CdkObject(cdkObject), NotebookInstanceLifecycleHookProperty {
       /**
        * A base64-encoded string that contains a shell script for a notebook instance lifecycle

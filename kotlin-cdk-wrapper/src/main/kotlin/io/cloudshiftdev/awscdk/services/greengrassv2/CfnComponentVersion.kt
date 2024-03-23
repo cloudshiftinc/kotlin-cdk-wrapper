@@ -119,8 +119,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrassv2-componentversion.html)
  */
-public open class CfnComponentVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion,
+public open class CfnComponentVersion(
+  cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.greengrassv2.CfnComponentVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -401,7 +401,8 @@ public open class CfnComponentVersion internal constructor(
         CfnComponentVersion = CfnComponentVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnComponentVersion):
-        software.amazon.awscdk.services.greengrassv2.CfnComponentVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrassv2.CfnComponentVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
   }
 
   /**
@@ -499,8 +500,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty,
     ) : CdkObject(cdkObject), ComponentDependencyRequirementProperty {
       /**
        * The type of this dependency. Choose from the following options:.
@@ -664,8 +664,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty,
     ) : CdkObject(cdkObject), ComponentPlatformProperty {
       /**
        * A dictionary of attributes for the platform.
@@ -904,8 +903,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaContainerParamsProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaContainerParamsProperty,
     ) : CdkObject(cdkObject), LambdaContainerParamsProperty {
       /**
        * The list of system devices that the container can access.
@@ -1080,8 +1078,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaDeviceMountProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaDeviceMountProperty,
     ) : CdkObject(cdkObject), LambdaDeviceMountProperty {
       /**
        * Whether or not to add the component's system user as an owner of the device.
@@ -1217,8 +1214,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty,
     ) : CdkObject(cdkObject), LambdaEventSourceProperty {
       /**
        * The topic to which to subscribe to receive event messages.
@@ -1710,8 +1706,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaExecutionParametersProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaExecutionParametersProperty,
     ) : CdkObject(cdkObject), LambdaExecutionParametersProperty {
       /**
        * The map of environment variables that are available to the Lambda function when it runs.
@@ -2120,8 +2115,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty,
     ) : CdkObject(cdkObject), LambdaFunctionRecipeSourceProperty {
       /**
        * The component versions on which this Lambda function component depends.
@@ -2324,8 +2318,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty,
     ) : CdkObject(cdkObject), LambdaLinuxProcessParamsProperty {
       /**
        * The parameters for the container in which the Lambda function runs.
@@ -2510,8 +2503,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaVolumeMountProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaVolumeMountProperty,
     ) : CdkObject(cdkObject), LambdaVolumeMountProperty {
       /**
        * Whether or not to add the AWS IoT Greengrass user group as an owner of the volume.

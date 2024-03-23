@@ -22,7 +22,7 @@ public interface IAuthorizer {
   public fun authorizerId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IAuthorizer,
+    cdkObject: software.amazon.awscdk.services.apigateway.IAuthorizer,
   ) : CdkObject(cdkObject), IAuthorizer {
     /**
      * The authorization type of this authorizer.

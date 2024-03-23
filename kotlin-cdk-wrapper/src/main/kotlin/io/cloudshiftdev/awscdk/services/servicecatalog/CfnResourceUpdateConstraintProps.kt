@@ -166,8 +166,7 @@ public interface CfnResourceUpdateConstraintProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraintProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraintProps,
   ) : CdkObject(cdkObject), CfnResourceUpdateConstraintProps {
     /**
      * The language code.

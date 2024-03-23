@@ -76,7 +76,7 @@ public interface CodeConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.CodeConfig,
+    cdkObject: software.amazon.awscdk.services.appsync.CodeConfig,
   ) : CdkObject(cdkObject), CodeConfig {
     /**
      * Inline code (mutually exclusive with `s3Location`).

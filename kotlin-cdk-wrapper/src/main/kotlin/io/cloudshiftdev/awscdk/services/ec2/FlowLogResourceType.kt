@@ -18,8 +18,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public abstract class FlowLogResourceType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.FlowLogResourceType,
+public abstract class FlowLogResourceType(
+  cdkObject: software.amazon.awscdk.services.ec2.FlowLogResourceType,
 ) : CdkObject(cdkObject) {
   /**
    * The Id of the resource that the flow log should be attached to.
@@ -46,7 +46,7 @@ public abstract class FlowLogResourceType internal constructor(
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.FlowLogResourceType,
+    cdkObject: software.amazon.awscdk.services.ec2.FlowLogResourceType,
   ) : FlowLogResourceType(cdkObject)
 
   public companion object {

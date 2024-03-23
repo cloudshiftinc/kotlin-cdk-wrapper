@@ -125,7 +125,7 @@ public interface GrpcHealthCheckOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GrpcHealthCheckOptions,
+    cdkObject: software.amazon.awscdk.services.appmesh.GrpcHealthCheckOptions,
   ) : CdkObject(cdkObject), GrpcHealthCheckOptions {
     /**
      * The number of consecutive successful health checks that must occur before declaring listener

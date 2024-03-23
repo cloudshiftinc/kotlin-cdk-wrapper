@@ -41,8 +41,8 @@ import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesL
  * .build());
  * ```
  */
-public open class LambdaFunction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.targets.LambdaFunction,
+public open class LambdaFunction(
+  cdkObject: software.amazon.awscdk.services.events.targets.LambdaFunction,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.services.events.targets.LambdaFunction(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
@@ -227,6 +227,7 @@ public open class LambdaFunction internal constructor(
         LambdaFunction = LambdaFunction(cdkObject)
 
     internal fun unwrap(wrapped: LambdaFunction):
-        software.amazon.awscdk.services.events.targets.LambdaFunction = wrapped.cdkObject
+        software.amazon.awscdk.services.events.targets.LambdaFunction = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.targets.LambdaFunction
   }
 }

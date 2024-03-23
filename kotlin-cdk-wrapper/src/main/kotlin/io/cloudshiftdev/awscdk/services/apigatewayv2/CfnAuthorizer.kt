@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html)
  */
-public open class CfnAuthorizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer,
+public open class CfnAuthorizer(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -733,7 +733,8 @@ public open class CfnAuthorizer internal constructor(
         CfnAuthorizer = CfnAuthorizer(cdkObject)
 
     internal fun unwrap(wrapped: CfnAuthorizer):
-        software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer
   }
 
   /**
@@ -848,8 +849,7 @@ public open class CfnAuthorizer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer.JWTConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer.JWTConfigurationProperty,
     ) : CdkObject(cdkObject), JWTConfigurationProperty {
       /**
        * A list of the intended recipients of the JWT.

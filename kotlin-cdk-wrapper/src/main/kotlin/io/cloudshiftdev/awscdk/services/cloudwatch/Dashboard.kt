@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Dashboard internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Dashboard,
+public open class Dashboard(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.Dashboard,
 ) : Resource(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudwatch.Dashboard(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -363,6 +363,6 @@ public open class Dashboard internal constructor(
         Dashboard(cdkObject)
 
     internal fun unwrap(wrapped: Dashboard): software.amazon.awscdk.services.cloudwatch.Dashboard =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudwatch.Dashboard
   }
 }

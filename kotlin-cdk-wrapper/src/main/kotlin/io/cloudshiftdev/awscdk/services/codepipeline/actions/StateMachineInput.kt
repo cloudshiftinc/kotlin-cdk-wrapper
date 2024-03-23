@@ -32,9 +32,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class StateMachineInput internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.StateMachineInput,
+public open class StateMachineInput(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.StateMachineInput,
 ) : CdkObject(cdkObject) {
   /**
    * When InputType is set to Literal (default), the Input field is used directly as the input for
@@ -81,5 +80,6 @@ public open class StateMachineInput internal constructor(
 
     internal fun unwrap(wrapped: StateMachineInput):
         software.amazon.awscdk.services.codepipeline.actions.StateMachineInput = wrapped.cdkObject
+        as software.amazon.awscdk.services.codepipeline.actions.StateMachineInput
   }
 }

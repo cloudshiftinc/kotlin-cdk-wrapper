@@ -12,8 +12,8 @@ import kotlin.jvm.JvmName
  * Represents a distribution origin, that describes the Amazon S3 bucket, HTTP server (for example,
  * a web server), Amazon MediaStore, or other server from which CloudFront gets your files.
  */
-public abstract class OriginBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginBase,
+public abstract class OriginBase(
+  cdkObject: software.amazon.awscdk.services.cloudfront.OriginBase,
 ) : CdkObject(cdkObject), IOrigin {
   /**
    * Binds the origin to the associated Distribution.
@@ -41,7 +41,7 @@ public abstract class OriginBase internal constructor(
       OriginBindConfig = bind(scope, OriginBindOptions(options))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginBase,
+    cdkObject: software.amazon.awscdk.services.cloudfront.OriginBase,
   ) : OriginBase(cdkObject)
 
   public companion object {

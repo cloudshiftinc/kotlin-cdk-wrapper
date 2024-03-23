@@ -34,8 +34,7 @@ public interface INetworkTargetGroup : ITargetGroup {
   public fun registerListener(listener: INetworkListener)
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup,
   ) : CdkObject(cdkObject), INetworkTargetGroup {
     /**
      * Add a load balancing target to this target group.

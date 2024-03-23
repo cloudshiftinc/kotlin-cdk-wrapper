@@ -407,7 +407,7 @@ public interface KeyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kms.KeyProps,
+    cdkObject: software.amazon.awscdk.services.kms.KeyProps,
   ) : CdkObject(cdkObject), KeyProps {
     /**
      * A list of principals to add as key administrators to the key policy.

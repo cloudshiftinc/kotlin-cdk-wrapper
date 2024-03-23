@@ -119,7 +119,7 @@ public interface CfnCodeDeployLambdaAliasUpdate {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnCodeDeployLambdaAliasUpdate,
+    cdkObject: software.amazon.awscdk.CfnCodeDeployLambdaAliasUpdate,
   ) : CdkObject(cdkObject), CfnCodeDeployLambdaAliasUpdate {
     /**
      * The name of the Lambda function to run after traffic routing completes.

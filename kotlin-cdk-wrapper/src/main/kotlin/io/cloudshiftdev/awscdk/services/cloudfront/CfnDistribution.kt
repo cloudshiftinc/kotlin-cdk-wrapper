@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)
  */
-public open class CfnDistribution internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution,
+public open class CfnDistribution(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -257,7 +257,8 @@ public open class CfnDistribution internal constructor(
         CfnDistribution = CfnDistribution(cdkObject)
 
     internal fun unwrap(wrapped: CfnDistribution):
-        software.amazon.awscdk.services.cloudfront.CfnDistribution = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnDistribution = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnDistribution
   }
 
   /**
@@ -1639,8 +1640,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.CacheBehaviorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.CacheBehaviorProperty,
     ) : CdkObject(cdkObject), CacheBehaviorProperty {
       /**
        * A complex type that controls which HTTP methods CloudFront processes and forwards to your
@@ -2277,8 +2277,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.CookiesProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.CookiesProperty,
     ) : CdkObject(cdkObject), CookiesProperty {
       /**
        * This field is deprecated.
@@ -2604,8 +2603,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.CustomErrorResponseProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.CustomErrorResponseProperty,
     ) : CdkObject(cdkObject), CustomErrorResponseProperty {
       /**
        * The minimum amount of time, in seconds, that you want CloudFront to cache the HTTP status
@@ -2976,8 +2974,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.CustomOriginConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.CustomOriginConfigProperty,
     ) : CdkObject(cdkObject), CustomOriginConfigProperty {
       /**
        * The HTTP port that CloudFront uses to connect to the origin.
@@ -4387,8 +4384,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.DefaultCacheBehaviorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.DefaultCacheBehaviorProperty,
     ) : CdkObject(cdkObject), DefaultCacheBehaviorProperty {
       /**
        * A complex type that controls which HTTP methods CloudFront processes and forwards to your
@@ -5041,8 +5037,8 @@ public open class CfnDistribution internal constructor(
     public fun enabled(): Any
 
     /**
-     * (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate
-     * with CloudFront .
+     * (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with
+     * CloudFront .
      *
      * The default value for new distributions is `http1.1` .
      *
@@ -5376,8 +5372,8 @@ public open class CfnDistribution internal constructor(
       public fun enabled(enabled: IResolvable)
 
       /**
-       * @param httpVersion (Optional) Specify the maximum HTTP version(s) that you want viewers to
-       * use to communicate with CloudFront .
+       * @param httpVersion (Optional) Specify the HTTP version(s) that you want viewers to use to
+       * communicate with CloudFront .
        * The default value for new distributions is `http1.1` .
        *
        * For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must
@@ -5846,8 +5842,8 @@ public open class CfnDistribution internal constructor(
       }
 
       /**
-       * @param httpVersion (Optional) Specify the maximum HTTP version(s) that you want viewers to
-       * use to communicate with CloudFront .
+       * @param httpVersion (Optional) Specify the HTTP version(s) that you want viewers to use to
+       * communicate with CloudFront .
        * The default value for new distributions is `http1.1` .
        *
        * For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must
@@ -6161,8 +6157,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.DistributionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.DistributionConfigProperty,
     ) : CdkObject(cdkObject), DistributionConfigProperty {
       /**
        * A complex type that contains information about CNAMEs (alternate domain names), if any, for
@@ -6272,8 +6267,8 @@ public open class CfnDistribution internal constructor(
       override fun enabled(): Any = unwrap(this).getEnabled()
 
       /**
-       * (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate
-       * with CloudFront .
+       * (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with
+       * CloudFront .
        *
        * The default value for new distributions is `http1.1` .
        *
@@ -7109,8 +7104,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.ForwardedValuesProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.ForwardedValuesProperty,
     ) : CdkObject(cdkObject), ForwardedValuesProperty {
       /**
        * This field is deprecated.
@@ -7331,8 +7325,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.FunctionAssociationProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.FunctionAssociationProperty,
     ) : CdkObject(cdkObject), FunctionAssociationProperty {
       /**
        * The event type of the function, either `viewer-request` or `viewer-response` .
@@ -7531,8 +7524,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.GeoRestrictionProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.GeoRestrictionProperty,
     ) : CdkObject(cdkObject), GeoRestrictionProperty {
       /**
        * A complex type that contains a `Location` element for each country in which you want
@@ -7759,8 +7751,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.LambdaFunctionAssociationProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.LambdaFunctionAssociationProperty,
     ) : CdkObject(cdkObject), LambdaFunctionAssociationProperty {
       /**
        * Specifies the event type that triggers a Lambda&#64;Edge function invocation. You can
@@ -7962,8 +7953,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyCustomOriginProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyCustomOriginProperty,
     ) : CdkObject(cdkObject), LegacyCustomOriginProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-dnsname)
@@ -8084,8 +8074,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyS3OriginProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyS3OriginProperty,
     ) : CdkObject(cdkObject), LegacyS3OriginProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacys3origin.html#cfn-cloudfront-distribution-legacys3origin-dnsname)
@@ -8266,8 +8255,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.LoggingProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.LoggingProperty,
     ) : CdkObject(cdkObject), LoggingProperty {
       /**
        * The Amazon S3 bucket to store the access logs in, for example,
@@ -8409,8 +8397,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginCustomHeaderProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginCustomHeaderProperty,
     ) : CdkObject(cdkObject), OriginCustomHeaderProperty {
       /**
        * The name of a header that you want CloudFront to send to your origin.
@@ -8543,8 +8530,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupFailoverCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupFailoverCriteriaProperty,
     ) : CdkObject(cdkObject), OriginGroupFailoverCriteriaProperty {
       /**
        * The status codes that, when returned from the primary origin, will trigger CloudFront to
@@ -8628,8 +8614,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupMemberProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupMemberProperty,
     ) : CdkObject(cdkObject), OriginGroupMemberProperty {
       /**
        * The ID for an origin in an origin group.
@@ -8755,8 +8740,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupMembersProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupMembersProperty,
     ) : CdkObject(cdkObject), OriginGroupMembersProperty {
       /**
        * Items (origins) in an origin group.
@@ -8968,8 +8952,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupProperty,
     ) : CdkObject(cdkObject), OriginGroupProperty {
       /**
        * A complex type that contains information about the failover criteria for an origin group.
@@ -9121,8 +9104,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupsProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupsProperty,
     ) : CdkObject(cdkObject), OriginGroupsProperty {
       /**
        * The items (origin groups) in a distribution.
@@ -9743,8 +9725,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginProperty,
     ) : CdkObject(cdkObject), OriginProperty {
       /**
        * The number of times that CloudFront attempts to connect to the origin.
@@ -10025,8 +10006,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginShieldProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginShieldProperty,
     ) : CdkObject(cdkObject), OriginShieldProperty {
       /**
        * A flag that specifies whether Origin Shield is enabled.
@@ -10194,8 +10174,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.RestrictionsProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.RestrictionsProperty,
     ) : CdkObject(cdkObject), RestrictionsProperty {
       /**
        * A complex type that controls the countries in which your content is distributed.
@@ -10366,8 +10345,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.S3OriginConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.S3OriginConfigProperty,
     ) : CdkObject(cdkObject), S3OriginConfigProperty {
       /**
        * If you're using origin access control (OAC) instead of origin access identity, specify an
@@ -10520,8 +10498,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.StatusCodesProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.StatusCodesProperty,
     ) : CdkObject(cdkObject), StatusCodesProperty {
       /**
        * The items (status codes) for an origin group.
@@ -10967,8 +10944,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnDistribution.ViewerCertificateProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.ViewerCertificateProperty,
     ) : CdkObject(cdkObject), ViewerCertificateProperty {
       /**
        * In CloudFormation, this field name is `AcmCertificateArn` . Note the different

@@ -402,7 +402,7 @@ public interface CfnPipelineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.osis.CfnPipelineProps,
+    cdkObject: software.amazon.awscdk.services.osis.CfnPipelineProps,
   ) : CdkObject(cdkObject), CfnPipelineProps {
     /**
      * Options that specify the configuration of a persistent buffer.

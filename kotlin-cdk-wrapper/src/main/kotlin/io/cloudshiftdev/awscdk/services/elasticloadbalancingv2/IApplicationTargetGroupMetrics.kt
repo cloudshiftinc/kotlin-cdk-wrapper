@@ -350,8 +350,7 @@ public interface IApplicationTargetGroupMetrics {
   public fun unhealthyHostCount(props: MetricOptions.Builder.() -> Unit): Metric
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationTargetGroupMetrics,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationTargetGroupMetrics,
   ) : CdkObject(cdkObject), IApplicationTargetGroupMetrics {
     /**
      * Return the given named metric for this Network Target Group.

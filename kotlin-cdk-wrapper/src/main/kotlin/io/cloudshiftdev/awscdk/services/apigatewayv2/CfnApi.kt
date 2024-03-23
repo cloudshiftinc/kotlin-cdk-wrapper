@@ -75,8 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html)
  */
-public open class CfnApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi,
+public open class CfnApi(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigatewayv2.CfnApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1029,7 +1029,7 @@ public open class CfnApi internal constructor(
         CfnApi(cdkObject)
 
     internal fun unwrap(wrapped: CfnApi): software.amazon.awscdk.services.apigatewayv2.CfnApi =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigatewayv2.CfnApi
   }
 
   /**
@@ -1155,8 +1155,7 @@ public open class CfnApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnApi.BodyS3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi.BodyS3LocationProperty,
     ) : CdkObject(cdkObject), BodyS3LocationProperty {
       /**
        * The S3 bucket that contains the OpenAPI definition to import.
@@ -1457,7 +1456,7 @@ public open class CfnApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi.CorsProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi.CorsProperty,
     ) : CdkObject(cdkObject), CorsProperty {
       /**
        * Specifies whether credentials are included in the CORS request.

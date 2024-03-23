@@ -344,7 +344,7 @@ public interface CfnSimpleADProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.directoryservice.CfnSimpleADProps,
+    cdkObject: software.amazon.awscdk.services.directoryservice.CfnSimpleADProps,
   ) : CdkObject(cdkObject), CfnSimpleADProps {
     /**
      * If set to `true` , specifies an alias for a directory and assigns the alias to the directory.

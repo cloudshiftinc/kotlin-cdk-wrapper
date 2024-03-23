@@ -33,7 +33,7 @@ public interface ISchemaConfig {
   public fun definition(`value`: String)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.ISchemaConfig,
+    cdkObject: software.amazon.awscdk.services.appsync.ISchemaConfig,
   ) : CdkObject(cdkObject), ISchemaConfig {
     /**
      * The ID of the api the schema is bound to.

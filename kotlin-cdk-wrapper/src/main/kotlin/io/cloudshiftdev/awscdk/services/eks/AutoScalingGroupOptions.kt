@@ -172,7 +172,7 @@ public interface AutoScalingGroupOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.AutoScalingGroupOptions,
+    cdkObject: software.amazon.awscdk.services.eks.AutoScalingGroupOptions,
   ) : CdkObject(cdkObject), AutoScalingGroupOptions {
     /**
      * Configures the EC2 user-data script for instances in this autoscaling group to bootstrap the

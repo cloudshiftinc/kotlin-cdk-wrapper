@@ -83,8 +83,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html)
  */
-public open class CfnMonitor internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor,
+public open class CfnMonitor(
+  cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1045,7 +1045,8 @@ public open class CfnMonitor internal constructor(
         CfnMonitor = CfnMonitor(cdkObject)
 
     internal fun unwrap(wrapped: CfnMonitor):
-        software.amazon.awscdk.services.internetmonitor.CfnMonitor = wrapped.cdkObject
+        software.amazon.awscdk.services.internetmonitor.CfnMonitor = wrapped.cdkObject as
+        software.amazon.awscdk.services.internetmonitor.CfnMonitor
   }
 
   /**
@@ -1289,8 +1290,7 @@ public open class CfnMonitor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.HealthEventsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.HealthEventsConfigProperty,
     ) : CdkObject(cdkObject), HealthEventsConfigProperty {
       /**
        * The configuration that determines the threshold and other conditions for when Internet
@@ -1444,8 +1444,7 @@ public open class CfnMonitor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty,
+      cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty,
     ) : CdkObject(cdkObject), InternetMeasurementsLogDeliveryProperty {
       /**
        * The configuration for publishing Amazon CloudWatch Internet Monitor internet measurements
@@ -1603,8 +1602,7 @@ public open class CfnMonitor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.LocalHealthEventsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.LocalHealthEventsConfigProperty,
     ) : CdkObject(cdkObject), LocalHealthEventsConfigProperty {
       /**
        * The health event threshold percentage set for a local health score.
@@ -1764,8 +1762,7 @@ public open class CfnMonitor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.S3ConfigProperty,
+      cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.S3ConfigProperty,
     ) : CdkObject(cdkObject), S3ConfigProperty {
       /**
        * The Amazon S3 bucket name for internet measurements publishing.

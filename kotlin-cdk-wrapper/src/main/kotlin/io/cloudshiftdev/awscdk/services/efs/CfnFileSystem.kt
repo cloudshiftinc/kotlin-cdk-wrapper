@@ -73,8 +73,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html)
  */
-public open class CfnFileSystem internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem,
+public open class CfnFileSystem(
+  cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.efs.CfnFileSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1157,7 +1157,7 @@ public open class CfnFileSystem internal constructor(
         CfnFileSystem(cdkObject)
 
     internal fun unwrap(wrapped: CfnFileSystem): software.amazon.awscdk.services.efs.CfnFileSystem =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.efs.CfnFileSystem
   }
 
   /**
@@ -1219,8 +1219,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty,
     ) : CdkObject(cdkObject), BackupPolicyProperty {
       /**
        * Set the backup policy status for the file system.
@@ -1332,8 +1331,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty,
     ) : CdkObject(cdkObject), ElasticFileSystemTagProperty {
       /**
        * The tag key (String).
@@ -1461,8 +1459,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.FileSystemProtectionProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.FileSystemProtectionProperty,
     ) : CdkObject(cdkObject), FileSystemProtectionProperty {
       /**
        * The status of the file system's replication overwrite protection.
@@ -1639,8 +1636,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty,
     ) : CdkObject(cdkObject), LifecyclePolicyProperty {
       /**
        * The number of days after files were last accessed in primary storage (the Standard storage
@@ -1786,8 +1782,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty,
     ) : CdkObject(cdkObject), ReplicationConfigurationProperty {
       /**
        * An array of destination objects.
@@ -1973,8 +1968,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty,
     ) : CdkObject(cdkObject), ReplicationDestinationProperty {
       /**
        * The AWS For One Zone file systems, the replication configuration must specify the

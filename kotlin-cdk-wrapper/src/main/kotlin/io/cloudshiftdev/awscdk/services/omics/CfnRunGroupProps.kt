@@ -161,7 +161,7 @@ public interface CfnRunGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.omics.CfnRunGroupProps,
+    cdkObject: software.amazon.awscdk.services.omics.CfnRunGroupProps,
   ) : CdkObject(cdkObject), CfnRunGroupProps {
     /**
      * The group's maximum CPU count setting.

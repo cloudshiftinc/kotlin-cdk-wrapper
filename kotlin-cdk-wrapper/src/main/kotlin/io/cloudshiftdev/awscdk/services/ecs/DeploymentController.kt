@@ -73,7 +73,7 @@ public interface DeploymentController {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.DeploymentController,
+    cdkObject: software.amazon.awscdk.services.ecs.DeploymentController,
   ) : CdkObject(cdkObject), DeploymentController {
     /**
      * The deployment controller type to use.

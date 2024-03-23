@@ -159,8 +159,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)
  */
-public open class CfnCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster,
+public open class CfnCluster(
+  cdkObject: software.amazon.awscdk.services.msk.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -962,7 +962,7 @@ public open class CfnCluster internal constructor(
         CfnCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCluster): software.amazon.awscdk.services.msk.CfnCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.msk.CfnCluster
   }
 
   /**
@@ -1156,7 +1156,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.BrokerLogsProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.BrokerLogsProperty,
     ) : CdkObject(cdkObject), BrokerLogsProperty {
       /**
        * Details of the CloudWatch Logs destination for broker logs.
@@ -1545,8 +1545,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.BrokerNodeGroupInfoProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.BrokerNodeGroupInfoProperty,
     ) : CdkObject(cdkObject), BrokerNodeGroupInfoProperty {
       /**
        * This parameter is currently not in use.
@@ -1851,8 +1850,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.ClientAuthenticationProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.ClientAuthenticationProperty,
     ) : CdkObject(cdkObject), ClientAuthenticationProperty {
       /**
        * Details for client authentication using SASL.
@@ -1990,7 +1988,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.CloudWatchLogsProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.CloudWatchLogsProperty,
     ) : CdkObject(cdkObject), CloudWatchLogsProperty {
       /**
        * Specifies whether broker logs get sent to the specified CloudWatch Logs destination.
@@ -2097,8 +2095,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.ConfigurationInfoProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.ConfigurationInfoProperty,
     ) : CdkObject(cdkObject), ConfigurationInfoProperty {
       /**
        * ARN of the configuration to use.
@@ -2275,8 +2272,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.ConnectivityInfoProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.ConnectivityInfoProperty,
     ) : CdkObject(cdkObject), ConnectivityInfoProperty {
       /**
        * Access control settings for the cluster's brokers.
@@ -2415,7 +2411,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.EBSStorageInfoProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.EBSStorageInfoProperty,
     ) : CdkObject(cdkObject), EBSStorageInfoProperty {
       /**
        * EBS volume provisioned throughput information.
@@ -2510,8 +2506,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.EncryptionAtRestProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.EncryptionAtRestProperty,
     ) : CdkObject(cdkObject), EncryptionAtRestProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon KMS key for encrypting data at rest.
@@ -2679,8 +2674,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.EncryptionInTransitProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.EncryptionInTransitProperty,
     ) : CdkObject(cdkObject), EncryptionInTransitProperty {
       /**
        * Indicates the encryption setting for data in transit between clients and brokers.
@@ -2865,7 +2859,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.EncryptionInfoProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.EncryptionInfoProperty,
     ) : CdkObject(cdkObject), EncryptionInfoProperty {
       /**
        * The data-volume encryption details.
@@ -2992,7 +2986,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.FirehoseProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.FirehoseProperty,
     ) : CdkObject(cdkObject), FirehoseProperty {
       /**
        * The Kinesis Data Firehose delivery stream that is the destination for broker logs.
@@ -3089,7 +3083,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.IamProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.IamProperty,
     ) : CdkObject(cdkObject), IamProperty {
       /**
        * SASL/IAM authentication is enabled or not.
@@ -3178,7 +3172,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.JmxExporterProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.JmxExporterProperty,
     ) : CdkObject(cdkObject), JmxExporterProperty {
       /**
        * Indicates whether you want to enable or disable the JMX Exporter.
@@ -3317,7 +3311,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.LoggingInfoProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.LoggingInfoProperty,
     ) : CdkObject(cdkObject), LoggingInfoProperty {
       /**
        * You can configure your MSK cluster to send broker logs to different destination types.
@@ -3410,7 +3404,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.NodeExporterProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.NodeExporterProperty,
     ) : CdkObject(cdkObject), NodeExporterProperty {
       /**
        * Indicates whether you want to enable or disable the Node Exporter.
@@ -3524,7 +3518,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.OpenMonitoringProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.OpenMonitoringProperty,
     ) : CdkObject(cdkObject), OpenMonitoringProperty {
       /**
        * Prometheus exporter settings.
@@ -3682,7 +3676,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.PrometheusProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.PrometheusProperty,
     ) : CdkObject(cdkObject), PrometheusProperty {
       /**
        * Indicates whether you want to enable or disable the JMX Exporter.
@@ -3806,8 +3800,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.ProvisionedThroughputProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.ProvisionedThroughputProperty,
     ) : CdkObject(cdkObject), ProvisionedThroughputProperty {
       /**
        * Provisioned throughput is enabled or not.
@@ -3899,7 +3892,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.PublicAccessProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.PublicAccessProperty,
     ) : CdkObject(cdkObject), PublicAccessProperty {
       /**
        * DISABLED means that public access is turned off.
@@ -4037,7 +4030,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.S3Property,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.S3Property,
     ) : CdkObject(cdkObject), S3Property {
       /**
        * The name of the S3 bucket that is the destination for broker logs.
@@ -4208,7 +4201,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.SaslProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.SaslProperty,
     ) : CdkObject(cdkObject), SaslProperty {
       /**
        * Details for ClientAuthentication using IAM.
@@ -4303,7 +4296,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.ScramProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.ScramProperty,
     ) : CdkObject(cdkObject), ScramProperty {
       /**
        * SASL/SCRAM authentication is enabled or not.
@@ -4413,7 +4406,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.StorageInfoProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.StorageInfoProperty,
     ) : CdkObject(cdkObject), StorageInfoProperty {
       /**
        * EBS volume information.
@@ -4535,7 +4528,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnCluster.TlsProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.TlsProperty,
     ) : CdkObject(cdkObject), TlsProperty {
       /**
        * List of AWS Private CA Amazon Resource Name (ARN)s.
@@ -4632,8 +4625,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.UnauthenticatedProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.UnauthenticatedProperty,
     ) : CdkObject(cdkObject), UnauthenticatedProperty {
       /**
        * Unauthenticated is enabled or not.
@@ -4799,8 +4791,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityClientAuthenticationProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityClientAuthenticationProperty,
     ) : CdkObject(cdkObject), VpcConnectivityClientAuthenticationProperty {
       /**
        * Details for VpcConnectivity ClientAuthentication using SASL.
@@ -4900,8 +4891,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityIamProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityIamProperty,
     ) : CdkObject(cdkObject), VpcConnectivityIamProperty {
       /**
        * SASL/IAM authentication is enabled or not.
@@ -5025,8 +5015,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityProperty,
     ) : CdkObject(cdkObject), VpcConnectivityProperty {
       /**
        * VPC connection control settings for brokers.
@@ -5184,8 +5173,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivitySaslProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivitySaslProperty,
     ) : CdkObject(cdkObject), VpcConnectivitySaslProperty {
       /**
        * Details for ClientAuthentication using IAM for VpcConnectivity.
@@ -5286,8 +5274,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityScramProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityScramProperty,
     ) : CdkObject(cdkObject), VpcConnectivityScramProperty {
       /**
        * SASL/SCRAM authentication is enabled or not.
@@ -5379,8 +5366,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityTlsProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityTlsProperty,
     ) : CdkObject(cdkObject), VpcConnectivityTlsProperty {
       /**
        * TLS authentication is enabled or not.

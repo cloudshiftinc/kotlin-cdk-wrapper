@@ -257,7 +257,7 @@ public interface CfnRepositoryProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codeartifact.CfnRepositoryProps,
+    cdkObject: software.amazon.awscdk.services.codeartifact.CfnRepositoryProps,
   ) : CdkObject(cdkObject), CfnRepositoryProps {
     /**
      * A text description of the repository.

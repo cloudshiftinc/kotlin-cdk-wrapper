@@ -21,8 +21,8 @@ import kotlin.String
  * "email", AccessLogField.contextAuthorizerClaims("email")))));
  * ```
  */
-public open class AccessLogField internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.AccessLogField,
+public open class AccessLogField(
+  cdkObject: software.amazon.awscdk.services.apigateway.AccessLogField,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.apigateway.AccessLogField()
   )
@@ -252,6 +252,7 @@ public open class AccessLogField internal constructor(
         AccessLogField = AccessLogField(cdkObject)
 
     internal fun unwrap(wrapped: AccessLogField):
-        software.amazon.awscdk.services.apigateway.AccessLogField = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.AccessLogField = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.AccessLogField
   }
 }

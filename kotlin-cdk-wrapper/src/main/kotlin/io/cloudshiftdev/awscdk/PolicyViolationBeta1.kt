@@ -183,7 +183,7 @@ public interface PolicyViolationBeta1 {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.PolicyViolationBeta1,
+    cdkObject: software.amazon.awscdk.PolicyViolationBeta1,
   ) : CdkObject(cdkObject), PolicyViolationBeta1 {
     /**
      * The description of the violation.

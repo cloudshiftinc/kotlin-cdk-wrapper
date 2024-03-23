@@ -76,8 +76,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-emailidentity.html)
  */
-public open class CfnEmailIdentity internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity,
+public open class CfnEmailIdentity(
+  cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -695,7 +695,8 @@ public open class CfnEmailIdentity internal constructor(
         CfnEmailIdentity = CfnEmailIdentity(cdkObject)
 
     internal fun unwrap(wrapped: CfnEmailIdentity):
-        software.amazon.awscdk.services.ses.CfnEmailIdentity = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.CfnEmailIdentity = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.CfnEmailIdentity
   }
 
   /**
@@ -753,8 +754,7 @@ public open class CfnEmailIdentity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty,
     ) : CdkObject(cdkObject), ConfigurationSetAttributesProperty {
       /**
        * The configuration set to associate with an email identity.
@@ -863,8 +863,7 @@ public open class CfnEmailIdentity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty,
     ) : CdkObject(cdkObject), DkimAttributesProperty {
       /**
        * Sets the DKIM signing configuration for the identity.
@@ -1055,8 +1054,7 @@ public open class CfnEmailIdentity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty,
     ) : CdkObject(cdkObject), DkimSigningAttributesProperty {
       /**
        * [Bring Your Own DKIM] A private key that's used to generate a DKIM signature.
@@ -1226,8 +1224,7 @@ public open class CfnEmailIdentity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty,
     ) : CdkObject(cdkObject), FeedbackAttributesProperty {
       /**
        * Sets the feedback forwarding configuration for the identity.
@@ -1385,8 +1382,7 @@ public open class CfnEmailIdentity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty,
     ) : CdkObject(cdkObject), MailFromAttributesProperty {
       /**
        * The action to take if the required MX record isn't found when you send an email.

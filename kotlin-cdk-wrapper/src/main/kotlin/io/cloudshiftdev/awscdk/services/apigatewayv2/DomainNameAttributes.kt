@@ -96,7 +96,7 @@ public interface DomainNameAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainNameAttributes,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainNameAttributes,
   ) : CdkObject(cdkObject), DomainNameAttributes {
     /**
      * domain name string.

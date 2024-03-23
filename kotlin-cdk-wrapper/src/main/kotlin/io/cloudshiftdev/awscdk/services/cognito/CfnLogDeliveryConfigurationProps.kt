@@ -114,8 +114,7 @@ public interface CfnLogDeliveryConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cognito.CfnLogDeliveryConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfigurationProps,
   ) : CdkObject(cdkObject), CfnLogDeliveryConfigurationProps {
     /**
      * The detailed activity logging destination of a user pool.

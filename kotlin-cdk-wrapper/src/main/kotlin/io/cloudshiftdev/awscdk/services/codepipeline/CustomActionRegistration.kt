@@ -51,9 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class CustomActionRegistration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.CustomActionRegistration,
+public open class CustomActionRegistration(
+  cdkObject: software.amazon.awscdk.services.codepipeline.CustomActionRegistration,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -277,6 +276,7 @@ public open class CustomActionRegistration internal constructor(
         CustomActionRegistration = CustomActionRegistration(cdkObject)
 
     internal fun unwrap(wrapped: CustomActionRegistration):
-        software.amazon.awscdk.services.codepipeline.CustomActionRegistration = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.CustomActionRegistration = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.CustomActionRegistration
   }
 }

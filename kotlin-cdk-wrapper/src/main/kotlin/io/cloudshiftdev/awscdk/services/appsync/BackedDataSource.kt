@@ -12,8 +12,8 @@ import io.cloudshiftdev.awscdk.services.iam.IPrincipal
  *
  * Do not use directly but use subclasses for resource backed datasources
  */
-public abstract class BackedDataSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.BackedDataSource,
+public abstract class BackedDataSource(
+  cdkObject: software.amazon.awscdk.services.appsync.BackedDataSource,
 ) : BaseDataSource(cdkObject), IGrantable {
   /**
    * the principal of the data source to be IGrantable.
@@ -22,7 +22,7 @@ public abstract class BackedDataSource internal constructor(
       unwrap(this).getGrantPrincipal().let(IPrincipal::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.BackedDataSource,
+    cdkObject: software.amazon.awscdk.services.appsync.BackedDataSource,
   ) : BackedDataSource(cdkObject)
 
   public companion object {

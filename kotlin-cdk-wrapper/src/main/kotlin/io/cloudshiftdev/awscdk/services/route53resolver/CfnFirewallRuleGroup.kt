@@ -57,9 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html)
  */
-public open class CfnFirewallRuleGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup,
+public open class CfnFirewallRuleGroup(
+  cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -357,7 +356,8 @@ public open class CfnFirewallRuleGroup internal constructor(
         CfnFirewallRuleGroup = CfnFirewallRuleGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnFirewallRuleGroup):
-        software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup
   }
 
   /**
@@ -685,8 +685,7 @@ public open class CfnFirewallRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup.FirewallRuleProperty,
+      cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup.FirewallRuleProperty,
     ) : CdkObject(cdkObject), FirewallRuleProperty {
       /**
        * The action that DNS Firewall should take on a DNS query when it matches one of the domains

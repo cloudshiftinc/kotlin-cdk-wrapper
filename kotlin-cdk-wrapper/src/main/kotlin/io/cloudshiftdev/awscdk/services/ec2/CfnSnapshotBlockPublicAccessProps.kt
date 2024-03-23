@@ -113,7 +113,7 @@ public interface CfnSnapshotBlockPublicAccessProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccessProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccessProps,
   ) : CdkObject(cdkObject), CfnSnapshotBlockPublicAccessProps {
     /**
      * The mode in which to enable block public access for snapshots for the Region.

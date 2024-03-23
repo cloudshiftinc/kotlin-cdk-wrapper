@@ -322,8 +322,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pipes-pipe.html)
  */
-public open class CfnPipe internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pipes.CfnPipe,
+public open class CfnPipe(
+  cdkObject: software.amazon.awscdk.services.pipes.CfnPipe,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1027,7 +1027,7 @@ public open class CfnPipe internal constructor(
         CfnPipe(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipe): software.amazon.awscdk.services.pipes.CfnPipe =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.pipes.CfnPipe
   }
 
   /**
@@ -1174,8 +1174,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.AwsVpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.AwsVpcConfigurationProperty,
     ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
       /**
        * Specifies whether the task's elastic network interface receives a public IP address.
@@ -1283,8 +1282,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.BatchArrayPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchArrayPropertiesProperty,
     ) : CdkObject(cdkObject), BatchArrayPropertiesProperty {
       /**
        * The size of the array, if this is an array batch job.
@@ -1564,8 +1562,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.BatchContainerOverridesProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchContainerOverridesProperty,
     ) : CdkObject(cdkObject), BatchContainerOverridesProperty {
       /**
        * The command to send to the container that overrides the default command from the Docker
@@ -1721,8 +1718,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.BatchEnvironmentVariableProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchEnvironmentVariableProperty,
     ) : CdkObject(cdkObject), BatchEnvironmentVariableProperty {
       /**
        * The name of the key-value pair.
@@ -1833,8 +1829,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.BatchJobDependencyProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchJobDependencyProperty,
     ) : CdkObject(cdkObject), BatchJobDependencyProperty {
       /**
        * The job ID of the AWS Batch job that's associated with this dependency.
@@ -2205,8 +2200,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.BatchResourceRequirementProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchResourceRequirementProperty,
     ) : CdkObject(cdkObject), BatchResourceRequirementProperty {
       /**
        * The type of resource to assign to a container.
@@ -2394,8 +2388,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.BatchRetryStrategyProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchRetryStrategyProperty,
     ) : CdkObject(cdkObject), BatchRetryStrategyProperty {
       /**
        * The number of times to move a job to the `RUNNABLE` status.
@@ -2551,8 +2544,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.CapacityProviderStrategyItemProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.CapacityProviderStrategyItemProperty,
     ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
       /**
        * The base value designates how many tasks, at a minimum, to run on the specified capacity
@@ -2669,8 +2661,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.CloudwatchLogsLogDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.CloudwatchLogsLogDestinationProperty,
     ) : CdkObject(cdkObject), CloudwatchLogsLogDestinationProperty {
       /**
        * The AWS Resource Name (ARN) for the CloudWatch log group to which EventBridge sends the log
@@ -2759,8 +2750,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.DeadLetterConfigProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.DeadLetterConfigProperty,
     ) : CdkObject(cdkObject), DeadLetterConfigProperty {
       /**
        * The ARN of the specified target for the dead-letter queue.
@@ -3158,8 +3148,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.EcsContainerOverrideProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsContainerOverrideProperty,
     ) : CdkObject(cdkObject), EcsContainerOverrideProperty {
       /**
        * The command to send to the container that overrides the default command from the Docker
@@ -3358,8 +3347,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.EcsEnvironmentFileProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsEnvironmentFileProperty,
     ) : CdkObject(cdkObject), EcsEnvironmentFileProperty {
       /**
        * The file type to use.
@@ -3483,8 +3471,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.EcsEnvironmentVariableProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsEnvironmentVariableProperty,
     ) : CdkObject(cdkObject), EcsEnvironmentVariableProperty {
       /**
        * The name of the key-value pair.
@@ -3591,8 +3578,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.EcsEphemeralStorageProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsEphemeralStorageProperty,
     ) : CdkObject(cdkObject), EcsEphemeralStorageProperty {
       /**
        * The total amount, in GiB, of ephemeral storage to set for the task.
@@ -3708,8 +3694,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.EcsInferenceAcceleratorOverrideProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsInferenceAcceleratorOverrideProperty,
     ) : CdkObject(cdkObject), EcsInferenceAcceleratorOverrideProperty {
       /**
        * The Elastic Inference accelerator device name to override for the task.
@@ -3854,8 +3839,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.EcsResourceRequirementProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsResourceRequirementProperty,
     ) : CdkObject(cdkObject), EcsResourceRequirementProperty {
       /**
        * The type of resource to assign to a container.
@@ -4247,7 +4231,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsTaskOverrideProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsTaskOverrideProperty,
     ) : CdkObject(cdkObject), EcsTaskOverrideProperty {
       /**
        * One or more container overrides that are sent to a task.
@@ -4417,7 +4401,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.FilterCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.FilterCriteriaProperty,
     ) : CdkObject(cdkObject), FilterCriteriaProperty {
       /**
        * The event patterns.
@@ -4500,7 +4484,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.FilterProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.FilterProperty,
     ) : CdkObject(cdkObject), FilterProperty {
       /**
        * The event pattern.
@@ -4583,8 +4567,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.FirehoseLogDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.FirehoseLogDestinationProperty,
     ) : CdkObject(cdkObject), FirehoseLogDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Firehose delivery stream to which EventBridge
@@ -4667,8 +4650,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.MQBrokerAccessCredentialsProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.MQBrokerAccessCredentialsProperty,
     ) : CdkObject(cdkObject), MQBrokerAccessCredentialsProperty {
       /**
        * The ARN of the Secrets Manager secret.
@@ -4770,8 +4752,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.MSKAccessCredentialsProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.MSKAccessCredentialsProperty,
     ) : CdkObject(cdkObject), MSKAccessCredentialsProperty {
       /**
        * The ARN of the Secrets Manager secret.
@@ -4908,8 +4889,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.NetworkConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.NetworkConfigurationProperty,
     ) : CdkObject(cdkObject), NetworkConfigurationProperty {
       /**
        * Use this structure to specify the VPC subnets and security groups for the task, and whether
@@ -5092,8 +5072,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeEnrichmentHttpParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeEnrichmentHttpParametersProperty,
     ) : CdkObject(cdkObject), PipeEnrichmentHttpParametersProperty {
       /**
        * The headers that need to be sent as part of request invoking the API Gateway REST API or
@@ -5305,8 +5284,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeEnrichmentParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeEnrichmentParametersProperty,
     ) : CdkObject(cdkObject), PipeEnrichmentParametersProperty {
       /**
        * Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or
@@ -5647,8 +5625,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeLogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeLogConfigurationProperty,
     ) : CdkObject(cdkObject), PipeLogConfigurationProperty {
       /**
        * The logging configuration settings for the pipe.
@@ -5863,8 +5840,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceActiveMQBrokerParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceActiveMQBrokerParametersProperty,
     ) : CdkObject(cdkObject), PipeSourceActiveMQBrokerParametersProperty {
       /**
        * The maximum number of records to include in each batch.
@@ -6181,8 +6157,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceDynamoDBStreamParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceDynamoDBStreamParametersProperty,
     ) : CdkObject(cdkObject), PipeSourceDynamoDBStreamParametersProperty {
       /**
        * The maximum number of records to include in each batch.
@@ -6562,8 +6537,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceKinesisStreamParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceKinesisStreamParametersProperty,
     ) : CdkObject(cdkObject), PipeSourceKinesisStreamParametersProperty {
       /**
        * The maximum number of records to include in each batch.
@@ -6855,8 +6829,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceManagedStreamingKafkaParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceManagedStreamingKafkaParametersProperty,
     ) : CdkObject(cdkObject), PipeSourceManagedStreamingKafkaParametersProperty {
       /**
        * The maximum number of records to include in each batch.
@@ -7485,8 +7458,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceParametersProperty,
     ) : CdkObject(cdkObject), PipeSourceParametersProperty {
       /**
        * The parameters for using an Active MQ broker as a source.
@@ -7737,8 +7709,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceRabbitMQBrokerParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceRabbitMQBrokerParametersProperty,
     ) : CdkObject(cdkObject), PipeSourceRabbitMQBrokerParametersProperty {
       /**
        * The maximum number of records to include in each batch.
@@ -8101,8 +8072,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceSelfManagedKafkaParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceSelfManagedKafkaParametersProperty,
     ) : CdkObject(cdkObject), PipeSourceSelfManagedKafkaParametersProperty {
       /**
        * An array of server URLs.
@@ -8266,8 +8236,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceSqsQueueParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceSqsQueueParametersProperty,
     ) : CdkObject(cdkObject), PipeSourceSqsQueueParametersProperty {
       /**
        * The maximum number of records to include in each batch.
@@ -8721,8 +8690,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetBatchJobParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetBatchJobParametersProperty,
     ) : CdkObject(cdkObject), PipeTargetBatchJobParametersProperty {
       /**
        * The array properties for the submitted job, such as the size of the array.
@@ -8894,8 +8862,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetCloudWatchLogsParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetCloudWatchLogsParametersProperty,
     ) : CdkObject(cdkObject), PipeTargetCloudWatchLogsParametersProperty {
       /**
        * The name of the log stream.
@@ -9689,8 +9656,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetEcsTaskParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetEcsTaskParametersProperty,
     ) : CdkObject(cdkObject), PipeTargetEcsTaskParametersProperty {
       /**
        * The capacity provider strategy to use for the task.
@@ -10046,8 +10012,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetEventBridgeEventBusParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetEventBridgeEventBusParametersProperty,
     ) : CdkObject(cdkObject), PipeTargetEventBridgeEventBusParametersProperty {
       /**
        * A free-form string, with a maximum of 128 characters, used to decide what fields to expect
@@ -10263,8 +10228,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetHttpParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetHttpParametersProperty,
     ) : CdkObject(cdkObject), PipeTargetHttpParametersProperty {
       /**
        * The headers that need to be sent as part of request invoking the API Gateway REST API or
@@ -10384,8 +10348,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetKinesisStreamParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetKinesisStreamParametersProperty,
     ) : CdkObject(cdkObject), PipeTargetKinesisStreamParametersProperty {
       /**
        * Determines which shard in the stream the data record is assigned to.
@@ -10515,8 +10478,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetLambdaFunctionParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetLambdaFunctionParametersProperty,
     ) : CdkObject(cdkObject), PipeTargetLambdaFunctionParametersProperty {
       /**
        * Specify whether to invoke the function synchronously or asynchronously.
@@ -11224,8 +11186,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetParametersProperty,
     ) : CdkObject(cdkObject), PipeTargetParametersProperty {
       /**
        * The parameters for using an AWS Batch job as a target.
@@ -11542,8 +11503,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetRedshiftDataParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetRedshiftDataParametersProperty,
     ) : CdkObject(cdkObject), PipeTargetRedshiftDataParametersProperty {
       /**
        * The name of the database.
@@ -11704,8 +11664,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetSageMakerPipelineParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetSageMakerPipelineParametersProperty,
     ) : CdkObject(cdkObject), PipeTargetSageMakerPipelineParametersProperty {
       /**
        * List of Parameter names and values for SageMaker Model Building Pipeline execution.
@@ -11815,8 +11774,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetSqsQueueParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetSqsQueueParametersProperty,
     ) : CdkObject(cdkObject), PipeTargetSqsQueueParametersProperty {
       /**
        * This parameter applies only to FIFO (first-in-first-out) queues.
@@ -11957,8 +11915,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetStateMachineParametersProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetStateMachineParametersProperty,
     ) : CdkObject(cdkObject), PipeTargetStateMachineParametersProperty {
       /**
        * Specify whether to invoke the Step Functions state machine synchronously or asynchronously.
@@ -12101,8 +12058,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PlacementConstraintProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PlacementConstraintProperty,
     ) : CdkObject(cdkObject), PlacementConstraintProperty {
       /**
        * A cluster query language expression to apply to the constraint.
@@ -12254,8 +12210,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.PlacementStrategyProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PlacementStrategyProperty,
     ) : CdkObject(cdkObject), PlacementStrategyProperty {
       /**
        * The field to apply the placement strategy against.
@@ -12442,8 +12397,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.S3LogDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.S3LogDestinationProperty,
     ) : CdkObject(cdkObject), S3LogDestinationProperty {
       /**
        * The name of the Amazon S3 bucket to which EventBridge delivers the log records for the
@@ -12577,8 +12531,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.SageMakerPipelineParameterProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.SageMakerPipelineParameterProperty,
     ) : CdkObject(cdkObject), SageMakerPipelineParameterProperty {
       /**
        * Name of parameter to start execution of a SageMaker Model Building Pipeline.
@@ -12730,8 +12683,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationCredentialsProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationCredentialsProperty,
     ) : CdkObject(cdkObject), SelfManagedKafkaAccessConfigurationCredentialsProperty {
       /**
        * The ARN of the Secrets Manager secret.
@@ -12899,8 +12851,7 @@ public open class CfnPipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationVpcProperty,
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationVpcProperty,
     ) : CdkObject(cdkObject), SelfManagedKafkaAccessConfigurationVpcProperty {
       /**
        * Specifies the security groups associated with the stream.

@@ -103,8 +103,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html)
  */
-public open class CfnTheme internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme,
+public open class CfnTheme(
+  cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -649,7 +649,7 @@ public open class CfnTheme internal constructor(
         CfnTheme(cdkObject)
 
     internal fun unwrap(wrapped: CfnTheme): software.amazon.awscdk.services.quicksight.CfnTheme =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.quicksight.CfnTheme
   }
 
   /**
@@ -716,8 +716,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty,
     ) : CdkObject(cdkObject), BorderStyleProperty {
       /**
        * The option to enable display of borders for visuals.
@@ -868,8 +867,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty,
     ) : CdkObject(cdkObject), DataColorPaletteProperty {
       /**
        * The hexadecimal codes for the colors.
@@ -963,7 +961,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty,
     ) : CdkObject(cdkObject), FontProperty {
       /**
        * Determines the font family settings.
@@ -1057,8 +1055,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty,
     ) : CdkObject(cdkObject), GutterStyleProperty {
       /**
        * This Boolean value controls whether to display a gutter space between sheet tiles.
@@ -1150,8 +1147,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty,
     ) : CdkObject(cdkObject), MarginStyleProperty {
       /**
        * This Boolean value controls whether to display sheet margins.
@@ -1304,8 +1300,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty,
     ) : CdkObject(cdkObject), ResourcePermissionProperty {
       /**
        * The IAM action to grant or revoke permissions on.
@@ -1490,8 +1485,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty,
     ) : CdkObject(cdkObject), SheetStyleProperty {
       /**
        * The display options for tiles.
@@ -1792,8 +1786,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ThemeConfigurationProperty,
     ) : CdkObject(cdkObject), ThemeConfigurationProperty {
       /**
        * Color properties that apply to chart data colors.
@@ -1913,8 +1906,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty,
     ) : CdkObject(cdkObject), ThemeErrorProperty {
       /**
        * The error message.
@@ -2249,8 +2241,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeVersionProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ThemeVersionProperty,
     ) : CdkObject(cdkObject), ThemeVersionProperty {
       /**
        * The Amazon Resource Name (ARN) of the resource.
@@ -2460,8 +2451,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty,
     ) : CdkObject(cdkObject), TileLayoutStyleProperty {
       /**
        * The gutter settings that apply between tiles.
@@ -2577,7 +2567,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty,
     ) : CdkObject(cdkObject), TileStyleProperty {
       /**
        * The border around a tile.
@@ -2682,8 +2672,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty,
     ) : CdkObject(cdkObject), TypographyProperty {
       /**
        * Determines the list of font families.
@@ -3103,8 +3092,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.UIColorPaletteProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.UIColorPaletteProperty,
     ) : CdkObject(cdkObject), UIColorPaletteProperty {
       /**
        * This color is that applies to selected states and buttons.

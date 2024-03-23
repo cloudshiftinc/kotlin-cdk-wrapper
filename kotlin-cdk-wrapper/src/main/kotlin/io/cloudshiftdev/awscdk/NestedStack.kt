@@ -178,8 +178,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * new RootStack(new App());
  * ```
  */
-public open class NestedStack internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.NestedStack,
+public open class NestedStack(
+  cdkObject: software.amazon.awscdk.NestedStack,
 ) : Stack(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.NestedStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -454,6 +454,6 @@ public open class NestedStack internal constructor(
         NestedStack(cdkObject)
 
     internal fun unwrap(wrapped: NestedStack): software.amazon.awscdk.NestedStack =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.NestedStack
   }
 }

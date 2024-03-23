@@ -20,8 +20,8 @@ import kotlin.collections.List
  * List.of("patterns"));
  * ```
  */
-public open class DockerIgnoreStrategy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.DockerIgnoreStrategy,
+public open class DockerIgnoreStrategy(
+  cdkObject: software.amazon.awscdk.DockerIgnoreStrategy,
 ) : IgnoreStrategy(cdkObject) {
   public constructor(absoluteRootPath: String, patterns: List<String>) :
       this(software.amazon.awscdk.DockerIgnoreStrategy(absoluteRootPath, patterns)
@@ -50,6 +50,6 @@ public open class DockerIgnoreStrategy internal constructor(
         = DockerIgnoreStrategy(cdkObject)
 
     internal fun unwrap(wrapped: DockerIgnoreStrategy): software.amazon.awscdk.DockerIgnoreStrategy
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.DockerIgnoreStrategy
   }
 }

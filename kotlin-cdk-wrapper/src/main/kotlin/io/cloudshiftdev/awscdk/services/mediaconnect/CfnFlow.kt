@@ -89,8 +89,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html)
  */
-public open class CfnFlow internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow,
+public open class CfnFlow(
+  cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -413,7 +413,7 @@ public open class CfnFlow internal constructor(
         CfnFlow(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlow): software.amazon.awscdk.services.mediaconnect.CfnFlow =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.mediaconnect.CfnFlow
   }
 
   /**
@@ -683,8 +683,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.EncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.EncryptionProperty,
     ) : CdkObject(cdkObject), EncryptionProperty {
       /**
        * The type of algorithm that is used for static key encryption (such as aes128, aes192, or
@@ -979,8 +978,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty,
     ) : CdkObject(cdkObject), FailoverConfigProperty {
       /**
        * The type of failover you choose for this flow.
@@ -1155,8 +1153,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty,
     ) : CdkObject(cdkObject), GatewayBridgeSourceProperty {
       /**
        * The ARN of the bridge feeding this flow.
@@ -1249,8 +1246,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty,
     ) : CdkObject(cdkObject), SourcePriorityProperty {
       /**
        * The name of the source you choose as the primary source for this flow.
@@ -1865,7 +1861,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.SourceProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.SourceProperty,
     ) : CdkObject(cdkObject), SourceProperty {
       /**
        * The type of encryption that is used on the content ingested from the source.
@@ -2108,8 +2104,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.VpcInterfaceAttachmentProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.VpcInterfaceAttachmentProperty,
     ) : CdkObject(cdkObject), VpcInterfaceAttachmentProperty {
       /**
        * The name of the VPC interface that you want to send your output to.

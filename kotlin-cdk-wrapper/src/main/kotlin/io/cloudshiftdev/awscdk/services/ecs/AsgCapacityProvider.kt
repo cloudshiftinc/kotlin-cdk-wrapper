@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * cluster.addAsgCapacityProvider(capacityProvider);
  * ```
  */
-public open class AsgCapacityProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.AsgCapacityProvider,
+public open class AsgCapacityProvider(
+  cdkObject: software.amazon.awscdk.services.ecs.AsgCapacityProvider,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -527,6 +527,7 @@ public open class AsgCapacityProvider internal constructor(
         AsgCapacityProvider = AsgCapacityProvider(cdkObject)
 
     internal fun unwrap(wrapped: AsgCapacityProvider):
-        software.amazon.awscdk.services.ecs.AsgCapacityProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.AsgCapacityProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.AsgCapacityProvider
   }
 }

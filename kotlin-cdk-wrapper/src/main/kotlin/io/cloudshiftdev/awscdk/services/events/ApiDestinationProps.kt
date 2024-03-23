@@ -158,7 +158,7 @@ public interface ApiDestinationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.ApiDestinationProps,
+    cdkObject: software.amazon.awscdk.services.events.ApiDestinationProps,
   ) : CdkObject(cdkObject), ApiDestinationProps {
     /**
      * The name for the API destination.

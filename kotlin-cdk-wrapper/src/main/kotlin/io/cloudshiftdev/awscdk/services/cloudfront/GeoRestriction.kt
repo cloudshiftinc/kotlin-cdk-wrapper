@@ -25,8 +25,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class GeoRestriction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.GeoRestriction,
+public open class GeoRestriction(
+  cdkObject: software.amazon.awscdk.services.cloudfront.GeoRestriction,
 ) : CdkObject(cdkObject) {
   /**
    * Two-letter, uppercase country code for a country that you want to allow/deny.
@@ -52,6 +52,7 @@ public open class GeoRestriction internal constructor(
         GeoRestriction = GeoRestriction(cdkObject)
 
     internal fun unwrap(wrapped: GeoRestriction):
-        software.amazon.awscdk.services.cloudfront.GeoRestriction = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.GeoRestriction = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.GeoRestriction
   }
 }

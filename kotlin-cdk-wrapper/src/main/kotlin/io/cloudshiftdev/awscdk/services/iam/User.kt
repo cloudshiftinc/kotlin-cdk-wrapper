@@ -28,8 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * stateMachine.grant(user, "states:SendTaskSuccess");
  * ```
  */
-public open class User internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.User,
+public open class User(
+  cdkObject: software.amazon.awscdk.services.iam.User,
 ) : Resource(cdkObject), IIdentity, IUser {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.User(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -488,5 +488,6 @@ public open class User internal constructor(
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.User): User = User(cdkObject)
 
     internal fun unwrap(wrapped: User): software.amazon.awscdk.services.iam.User = wrapped.cdkObject
+        as software.amazon.awscdk.services.iam.User
   }
 }

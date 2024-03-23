@@ -113,7 +113,7 @@ public interface KeyGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.KeyGroupProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.KeyGroupProps,
   ) : CdkObject(cdkObject), KeyGroupProps {
     /**
      * A comment to describe the key group.

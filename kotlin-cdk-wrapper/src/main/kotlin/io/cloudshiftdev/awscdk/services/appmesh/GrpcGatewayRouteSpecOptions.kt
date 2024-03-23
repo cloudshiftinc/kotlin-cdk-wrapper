@@ -111,7 +111,7 @@ public interface GrpcGatewayRouteSpecOptions : CommonGatewayRouteSpecOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GrpcGatewayRouteSpecOptions,
+    cdkObject: software.amazon.awscdk.services.appmesh.GrpcGatewayRouteSpecOptions,
   ) : CdkObject(cdkObject), GrpcGatewayRouteSpecOptions {
     /**
      * The criterion for determining a request match for this GatewayRoute.

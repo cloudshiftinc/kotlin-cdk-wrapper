@@ -21,9 +21,8 @@ import kotlin.jvm.JvmName
  * WebSocketMockIntegration webSocketMockIntegration = new WebSocketMockIntegration("id");
  * ```
  */
-public open class WebSocketMockIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketMockIntegration,
+public open class WebSocketMockIntegration(
+  cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketMockIntegration,
 ) : WebSocketRouteIntegration(cdkObject) {
   public constructor(id: String) :
       this(software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketMockIntegration(id)
@@ -55,6 +54,7 @@ public open class WebSocketMockIntegration internal constructor(
 
     internal fun unwrap(wrapped: WebSocketMockIntegration):
         software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketMockIntegration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketMockIntegration
   }
 }

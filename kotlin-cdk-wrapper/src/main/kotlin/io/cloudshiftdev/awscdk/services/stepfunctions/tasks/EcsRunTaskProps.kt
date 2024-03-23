@@ -528,7 +528,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTaskProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTaskProps,
   ) : CdkObject(cdkObject), EcsRunTaskProps {
     /**
      * Assign public IP addresses to each task.

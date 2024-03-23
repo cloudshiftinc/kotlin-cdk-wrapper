@@ -138,7 +138,7 @@ public interface TransformOutput {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformOutput,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformOutput,
   ) : CdkObject(cdkObject), TransformOutput {
     /**
      * MIME type used to specify the output data.

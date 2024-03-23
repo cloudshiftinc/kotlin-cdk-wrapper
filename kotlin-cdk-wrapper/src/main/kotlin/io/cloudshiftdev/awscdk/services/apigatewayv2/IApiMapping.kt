@@ -23,7 +23,7 @@ public interface IApiMapping : IResource {
   public fun apiMappingId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IApiMapping,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IApiMapping,
   ) : CdkObject(cdkObject), IApiMapping {
     /**
      * ID of the api mapping.

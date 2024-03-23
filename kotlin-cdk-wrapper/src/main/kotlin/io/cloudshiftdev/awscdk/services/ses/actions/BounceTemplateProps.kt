@@ -96,7 +96,7 @@ public interface BounceTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.actions.BounceTemplateProps,
+    cdkObject: software.amazon.awscdk.services.ses.actions.BounceTemplateProps,
   ) : CdkObject(cdkObject), BounceTemplateProps {
     /**
      * Human-readable text to include in the bounce message.

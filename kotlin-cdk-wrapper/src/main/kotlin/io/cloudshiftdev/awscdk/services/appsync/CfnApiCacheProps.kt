@@ -319,7 +319,7 @@ public interface CfnApiCacheProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.CfnApiCacheProps,
+    cdkObject: software.amazon.awscdk.services.appsync.CfnApiCacheProps,
   ) : CdkObject(cdkObject), CfnApiCacheProps {
     /**
      * Caching behavior.

@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html)
  */
-public open class CfnMetricFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilter,
+public open class CfnMetricFilter(
+  cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilter,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -291,7 +291,8 @@ public open class CfnMetricFilter internal constructor(
         CfnMetricFilter = CfnMetricFilter(cdkObject)
 
     internal fun unwrap(wrapped: CfnMetricFilter):
-        software.amazon.awscdk.services.logs.CfnMetricFilter = wrapped.cdkObject
+        software.amazon.awscdk.services.logs.CfnMetricFilter = wrapped.cdkObject as
+        software.amazon.awscdk.services.logs.CfnMetricFilter
   }
 
   /**
@@ -404,8 +405,7 @@ public open class CfnMetricFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.logs.CfnMetricFilter.DimensionProperty,
+      cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilter.DimensionProperty,
     ) : CdkObject(cdkObject), DimensionProperty {
       /**
        * The name for the CloudWatch metric dimension that the metric filter creates.
@@ -768,8 +768,7 @@ public open class CfnMetricFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.logs.CfnMetricFilter.MetricTransformationProperty,
+      cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilter.MetricTransformationProperty,
     ) : CdkObject(cdkObject), MetricTransformationProperty {
       /**
        * (Optional) The value to emit when a filter pattern does not match a log event.

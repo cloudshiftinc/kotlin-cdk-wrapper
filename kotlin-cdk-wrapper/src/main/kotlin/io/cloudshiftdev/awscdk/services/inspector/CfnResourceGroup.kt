@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html)
  */
-public open class CfnResourceGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.inspector.CfnResourceGroup,
+public open class CfnResourceGroup(
+  cdkObject: software.amazon.awscdk.services.inspector.CfnResourceGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -210,6 +210,7 @@ public open class CfnResourceGroup internal constructor(
         CfnResourceGroup = CfnResourceGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceGroup):
-        software.amazon.awscdk.services.inspector.CfnResourceGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.inspector.CfnResourceGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.inspector.CfnResourceGroup
   }
 }

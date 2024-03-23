@@ -26,7 +26,7 @@ public interface ICodeSigningConfig : IResource {
   public fun codeSigningConfigId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.ICodeSigningConfig,
+    cdkObject: software.amazon.awscdk.services.lambda.ICodeSigningConfig,
   ) : CdkObject(cdkObject), ICodeSigningConfig {
     /**
      * Apply the given removal policy to this resource.

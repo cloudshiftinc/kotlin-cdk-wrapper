@@ -24,8 +24,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class Parameter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.Parameter,
+public open class Parameter(
+  cdkObject: software.amazon.awscdk.services.appconfig.Parameter,
 ) : CdkObject(cdkObject) {
   /**
    * The description of the parameter.
@@ -77,6 +77,6 @@ public open class Parameter internal constructor(
         Parameter(cdkObject)
 
     internal fun unwrap(wrapped: Parameter): software.amazon.awscdk.services.appconfig.Parameter =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appconfig.Parameter
   }
 }

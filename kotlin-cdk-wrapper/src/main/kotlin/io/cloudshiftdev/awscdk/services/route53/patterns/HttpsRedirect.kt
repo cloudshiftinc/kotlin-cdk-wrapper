@@ -29,8 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class HttpsRedirect internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.patterns.HttpsRedirect,
+public open class HttpsRedirect(
+  cdkObject: software.amazon.awscdk.services.route53.patterns.HttpsRedirect,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -205,6 +205,7 @@ public open class HttpsRedirect internal constructor(
         HttpsRedirect = HttpsRedirect(cdkObject)
 
     internal fun unwrap(wrapped: HttpsRedirect):
-        software.amazon.awscdk.services.route53.patterns.HttpsRedirect = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.patterns.HttpsRedirect = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.patterns.HttpsRedirect
   }
 }

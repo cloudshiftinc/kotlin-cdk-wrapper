@@ -294,7 +294,7 @@ public interface ShellStepProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.ShellStepProps,
+    cdkObject: software.amazon.awscdk.pipelines.ShellStepProps,
   ) : CdkObject(cdkObject), ShellStepProps {
     /**
      * Additional FileSets to put in other directories.

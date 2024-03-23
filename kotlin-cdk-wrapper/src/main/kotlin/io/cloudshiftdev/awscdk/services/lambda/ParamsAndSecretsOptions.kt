@@ -317,7 +317,7 @@ public interface ParamsAndSecretsOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.ParamsAndSecretsOptions,
+    cdkObject: software.amazon.awscdk.services.lambda.ParamsAndSecretsOptions,
   ) : CdkObject(cdkObject), ParamsAndSecretsOptions {
     /**
      * Whether the Parameters and Secrets Extension will cache parameters and secrets.

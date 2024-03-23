@@ -72,8 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html)
  */
-public open class CfnService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService,
+public open class CfnService(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.servicediscovery.CfnService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -756,7 +756,8 @@ public open class CfnService internal constructor(
         CfnService = CfnService(cdkObject)
 
     internal fun unwrap(wrapped: CfnService):
-        software.amazon.awscdk.services.servicediscovery.CfnService = wrapped.cdkObject
+        software.amazon.awscdk.services.servicediscovery.CfnService = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicediscovery.CfnService
   }
 
   /**
@@ -1024,8 +1025,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty,
     ) : CdkObject(cdkObject), DnsConfigProperty {
       /**
        * An array that contains one `DnsRecord` object for each Route 53 DNS record that you want
@@ -1393,8 +1393,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty,
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty,
     ) : CdkObject(cdkObject), DnsRecordProperty {
       /**
        * The amount of time, in seconds, that you want DNS resolvers to cache the settings for this
@@ -1743,8 +1742,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty,
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty,
     ) : CdkObject(cdkObject), HealthCheckConfigProperty {
       /**
        * The number of consecutive health checks that an endpoint must pass or fail for Route 53 to
@@ -1944,8 +1942,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty,
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty,
     ) : CdkObject(cdkObject), HealthCheckCustomConfigProperty {
       /**
        * This parameter is no longer supported and is always set to 1.

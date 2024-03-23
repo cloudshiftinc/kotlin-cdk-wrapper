@@ -69,8 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html)
  */
-public open class CfnAppImageConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig,
+public open class CfnAppImageConfig(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -442,7 +442,8 @@ public open class CfnAppImageConfig internal constructor(
         CfnAppImageConfig = CfnAppImageConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnAppImageConfig):
-        software.amazon.awscdk.services.sagemaker.CfnAppImageConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnAppImageConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnAppImageConfig
   }
 
   /**
@@ -594,8 +595,7 @@ public open class CfnAppImageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.ContainerConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.ContainerConfigProperty,
     ) : CdkObject(cdkObject), ContainerConfigProperty {
       /**
        * The arguments for the container when you're running the application.
@@ -715,8 +715,7 @@ public open class CfnAppImageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty,
     ) : CdkObject(cdkObject), CustomImageContainerEnvironmentVariableProperty {
       /**
        * The key that identifies a container environment variable.
@@ -858,8 +857,7 @@ public open class CfnAppImageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty,
     ) : CdkObject(cdkObject), FileSystemConfigProperty {
       /**
        * The default POSIX group ID (GID).
@@ -999,8 +997,7 @@ public open class CfnAppImageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty,
     ) : CdkObject(cdkObject), JupyterLabAppImageConfigProperty {
       /**
        * The configuration used to run the application image container.
@@ -1168,8 +1165,7 @@ public open class CfnAppImageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelGatewayImageConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelGatewayImageConfigProperty,
     ) : CdkObject(cdkObject), KernelGatewayImageConfigProperty {
       /**
        * The Amazon Elastic File System storage configuration for a SageMaker image.
@@ -1282,8 +1278,7 @@ public open class CfnAppImageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty,
     ) : CdkObject(cdkObject), KernelSpecProperty {
       /**
        * The display name of the kernel.

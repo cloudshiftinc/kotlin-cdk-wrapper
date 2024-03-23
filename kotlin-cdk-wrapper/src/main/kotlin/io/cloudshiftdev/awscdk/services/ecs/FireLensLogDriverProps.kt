@@ -189,7 +189,7 @@ public interface FireLensLogDriverProps : BaseLogDriverProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.FireLensLogDriverProps,
+    cdkObject: software.amazon.awscdk.services.ecs.FireLensLogDriverProps,
   ) : CdkObject(cdkObject), FireLensLogDriverProps {
     /**
      * The env option takes an array of keys.

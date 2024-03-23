@@ -31,8 +31,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public abstract class TableEncryptionV2 internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dynamodb.TableEncryptionV2,
+public abstract class TableEncryptionV2(
+  cdkObject: software.amazon.awscdk.services.dynamodb.TableEncryptionV2,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -51,7 +51,7 @@ public abstract class TableEncryptionV2 internal constructor(
   public open fun type(): TableEncryption = unwrap(this).getType().let(TableEncryption::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.TableEncryptionV2,
+    cdkObject: software.amazon.awscdk.services.dynamodb.TableEncryptionV2,
   ) : TableEncryptionV2(cdkObject)
 
   public companion object {

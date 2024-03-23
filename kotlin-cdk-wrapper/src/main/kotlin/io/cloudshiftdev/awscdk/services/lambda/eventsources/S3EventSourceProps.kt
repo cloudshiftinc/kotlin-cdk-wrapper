@@ -112,7 +112,7 @@ public interface S3EventSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.eventsources.S3EventSourceProps,
+    cdkObject: software.amazon.awscdk.services.lambda.eventsources.S3EventSourceProps,
   ) : CdkObject(cdkObject), S3EventSourceProps {
     /**
      * The s3 event types that will trigger the notification.

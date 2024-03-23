@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html)
  */
-public open class CfnDeployment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.CfnDeployment,
+public open class CfnDeployment(
+  cdkObject: software.amazon.awscdk.services.appconfig.CfnDeployment,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -422,6 +422,7 @@ public open class CfnDeployment internal constructor(
         CfnDeployment = CfnDeployment(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeployment):
-        software.amazon.awscdk.services.appconfig.CfnDeployment = wrapped.cdkObject
+        software.amazon.awscdk.services.appconfig.CfnDeployment = wrapped.cdkObject as
+        software.amazon.awscdk.services.appconfig.CfnDeployment
   }
 }

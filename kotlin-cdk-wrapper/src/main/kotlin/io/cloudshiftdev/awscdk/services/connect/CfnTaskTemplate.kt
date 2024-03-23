@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-tasktemplate.html)
  */
-public open class CfnTaskTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate,
+public open class CfnTaskTemplate(
+  cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -586,7 +586,8 @@ public open class CfnTaskTemplate internal constructor(
         CfnTaskTemplate = CfnTaskTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnTaskTemplate):
-        software.amazon.awscdk.services.connect.CfnTaskTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnTaskTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnTaskTemplate
   }
 
   /**
@@ -763,8 +764,7 @@ public open class CfnTaskTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty,
     ) : CdkObject(cdkObject), ConstraintsProperty {
       /**
        * Lists the fields that are invisible to agents.
@@ -909,8 +909,7 @@ public open class CfnTaskTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.DefaultFieldValueProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.DefaultFieldValueProperty,
     ) : CdkObject(cdkObject), DefaultFieldValueProperty {
       /**
        * Default value for the field.
@@ -998,8 +997,7 @@ public open class CfnTaskTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldIdentifierProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldIdentifierProperty,
     ) : CdkObject(cdkObject), FieldIdentifierProperty {
       /**
        * The name of the task template field.
@@ -1191,7 +1189,7 @@ public open class CfnTaskTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldProperty,
     ) : CdkObject(cdkObject), FieldProperty {
       /**
        * The description of the field.
@@ -1327,8 +1325,7 @@ public open class CfnTaskTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty,
     ) : CdkObject(cdkObject), InvisibleFieldInfoProperty {
       /**
        * Identifier of the invisible field.
@@ -1439,8 +1436,7 @@ public open class CfnTaskTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty,
     ) : CdkObject(cdkObject), ReadOnlyFieldInfoProperty {
       /**
        * Identifier of the read-only field.
@@ -1551,8 +1547,7 @@ public open class CfnTaskTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty,
     ) : CdkObject(cdkObject), RequiredFieldInfoProperty {
       /**
        * The unique identifier for the field.

@@ -22,8 +22,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public abstract class JsonSchemaValidator internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.JsonSchemaValidator,
+public abstract class JsonSchemaValidator(
+  cdkObject: software.amazon.awscdk.services.appconfig.JsonSchemaValidator,
 ) : CdkObject(cdkObject), IValidator {
   /**
    * The content of the validator.
@@ -36,7 +36,7 @@ public abstract class JsonSchemaValidator internal constructor(
   public override fun type(): ValidatorType = unwrap(this).getType().let(ValidatorType::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.JsonSchemaValidator,
+    cdkObject: software.amazon.awscdk.services.appconfig.JsonSchemaValidator,
   ) : JsonSchemaValidator(cdkObject)
 
   public companion object {

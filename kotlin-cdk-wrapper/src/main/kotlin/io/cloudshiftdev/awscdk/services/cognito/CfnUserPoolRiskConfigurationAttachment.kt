@@ -96,9 +96,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html)
  */
-public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment,
+public open class CfnUserPoolRiskConfigurationAttachment(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -546,7 +545,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
     internal fun unwrap(wrapped: CfnUserPoolRiskConfigurationAttachment):
         software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment
   }
 
   /**
@@ -656,8 +656,7 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionTypeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionTypeProperty,
     ) : CdkObject(cdkObject), AccountTakeoverActionTypeProperty {
       /**
        * The action to take in response to the account takeover action. Valid values are as
@@ -886,8 +885,7 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty,
     ) : CdkObject(cdkObject), AccountTakeoverActionsTypeProperty {
       /**
        * Action to take for a high risk.
@@ -1099,8 +1097,7 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty,
     ) : CdkObject(cdkObject), AccountTakeoverRiskConfigurationTypeProperty {
       /**
        * Account takeover risk configuration actions.
@@ -1191,8 +1188,7 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty,
     ) : CdkObject(cdkObject), CompromisedCredentialsActionsTypeProperty {
       /**
        * The event action.
@@ -1343,8 +1339,7 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty,
     ) : CdkObject(cdkObject), CompromisedCredentialsRiskConfigurationTypeProperty {
       /**
        * The compromised credentials risk configuration actions.
@@ -1658,8 +1653,7 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyConfigurationTypeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyConfigurationTypeProperty,
     ) : CdkObject(cdkObject), NotifyConfigurationTypeProperty {
       /**
        * Email template used when a detected risk event is blocked.
@@ -1825,8 +1819,7 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty,
     ) : CdkObject(cdkObject), NotifyEmailTypeProperty {
       /**
        * The email HTML body.
@@ -1992,8 +1985,7 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty,
     ) : CdkObject(cdkObject), RiskExceptionConfigurationTypeProperty {
       /**
        * Overrides the risk decision to always block the pre-authentication requests.

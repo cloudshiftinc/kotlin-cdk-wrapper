@@ -963,7 +963,7 @@ public interface CfnTrailProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrailProps,
+    cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrailProps,
   ) : CdkObject(cdkObject), CfnTrailProps {
     /**
      * Specifies the settings for advanced event selectors.

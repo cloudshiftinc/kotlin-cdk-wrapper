@@ -60,9 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-autoscalingconfiguration.html)
  */
-public open class CfnAutoScalingConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration,
+public open class CfnAutoScalingConfiguration(
+  cdkObject: software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -377,6 +376,7 @@ public open class CfnAutoScalingConfiguration internal constructor(
         CfnAutoScalingConfiguration = CfnAutoScalingConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnAutoScalingConfiguration):
-        software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration
   }
 }

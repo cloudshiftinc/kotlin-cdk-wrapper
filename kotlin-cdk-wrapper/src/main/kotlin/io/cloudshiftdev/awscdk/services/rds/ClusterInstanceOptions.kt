@@ -359,7 +359,7 @@ public interface ClusterInstanceOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.ClusterInstanceOptions,
+    cdkObject: software.amazon.awscdk.services.rds.ClusterInstanceOptions,
   ) : CdkObject(cdkObject), ClusterInstanceOptions {
     /**
      * Whether to allow upgrade of major version for the DB instance.

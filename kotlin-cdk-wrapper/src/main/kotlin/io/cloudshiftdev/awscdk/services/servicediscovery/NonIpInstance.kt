@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class NonIpInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicediscovery.NonIpInstance,
+public open class NonIpInstance(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.NonIpInstance,
 ) : InstanceBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -146,6 +146,7 @@ public open class NonIpInstance internal constructor(
         NonIpInstance = NonIpInstance(cdkObject)
 
     internal fun unwrap(wrapped: NonIpInstance):
-        software.amazon.awscdk.services.servicediscovery.NonIpInstance = wrapped.cdkObject
+        software.amazon.awscdk.services.servicediscovery.NonIpInstance = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicediscovery.NonIpInstance
   }
 }

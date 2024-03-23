@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html)
  */
-public open class CfnEventInvokeConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig,
+public open class CfnEventInvokeConfig(
+  cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -384,7 +384,8 @@ public open class CfnEventInvokeConfig internal constructor(
         CfnEventInvokeConfig = CfnEventInvokeConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventInvokeConfig):
-        software.amazon.awscdk.services.lambda.CfnEventInvokeConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.CfnEventInvokeConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.CfnEventInvokeConfig
   }
 
   /**
@@ -519,8 +520,7 @@ public open class CfnEventInvokeConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.DestinationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.DestinationConfigProperty,
     ) : CdkObject(cdkObject), DestinationConfigProperty {
       /**
        * The destination configuration for failed invocations.
@@ -654,8 +654,7 @@ public open class CfnEventInvokeConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty,
     ) : CdkObject(cdkObject), OnFailureProperty {
       /**
        * The Amazon Resource Name (ARN) of the destination resource.
@@ -752,8 +751,7 @@ public open class CfnEventInvokeConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnSuccessProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnSuccessProperty,
     ) : CdkObject(cdkObject), OnSuccessProperty {
       /**
        * The Amazon Resource Name (ARN) of the destination resource.

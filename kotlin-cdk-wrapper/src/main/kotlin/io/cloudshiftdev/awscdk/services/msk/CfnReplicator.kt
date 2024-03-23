@@ -75,8 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html)
  */
-public open class CfnReplicator internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.msk.CfnReplicator,
+public open class CfnReplicator(
+  cdkObject: software.amazon.awscdk.services.msk.CfnReplicator,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -495,7 +495,7 @@ public open class CfnReplicator internal constructor(
         CfnReplicator(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicator): software.amazon.awscdk.services.msk.CfnReplicator =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.msk.CfnReplicator
   }
 
   /**
@@ -550,8 +550,7 @@ public open class CfnReplicator internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnReplicator.AmazonMskClusterProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.AmazonMskClusterProperty,
     ) : CdkObject(cdkObject), AmazonMskClusterProperty {
       /**
        * The ARN of an Amazon MSK cluster.
@@ -762,8 +761,7 @@ public open class CfnReplicator internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty,
     ) : CdkObject(cdkObject), ConsumerGroupReplicationProperty {
       /**
        * List of regular expression patterns indicating the consumer groups that should not be
@@ -937,8 +935,7 @@ public open class CfnReplicator internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterClientVpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterClientVpcConfigProperty,
     ) : CdkObject(cdkObject), KafkaClusterClientVpcConfigProperty {
       /**
        * The AWS security groups to associate with the elastic network interfaces in order to
@@ -1119,8 +1116,7 @@ public open class CfnReplicator internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterProperty,
     ) : CdkObject(cdkObject), KafkaClusterProperty {
       /**
        * Details of an Amazon MSK cluster.
@@ -1359,8 +1355,7 @@ public open class CfnReplicator internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnReplicator.ReplicationInfoProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ReplicationInfoProperty,
     ) : CdkObject(cdkObject), ReplicationInfoProperty {
       /**
        * Configuration relating to consumer group replication.
@@ -1621,8 +1616,7 @@ public open class CfnReplicator internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty,
     ) : CdkObject(cdkObject), TopicReplicationProperty {
       /**
        * Whether to periodically configure remote topic ACLs to match their corresponding upstream

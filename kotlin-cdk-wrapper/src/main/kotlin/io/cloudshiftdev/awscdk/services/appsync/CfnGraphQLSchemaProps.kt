@@ -117,7 +117,7 @@ public interface CfnGraphQLSchemaProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLSchemaProps,
+    cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLSchemaProps,
   ) : CdkObject(cdkObject), CfnGraphQLSchemaProps {
     /**
      * The AWS AppSync GraphQL API identifier to which you want to apply this schema.

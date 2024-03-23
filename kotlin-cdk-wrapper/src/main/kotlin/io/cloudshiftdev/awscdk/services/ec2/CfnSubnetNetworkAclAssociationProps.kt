@@ -81,7 +81,7 @@ public interface CfnSubnetNetworkAclAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociationProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociationProps,
   ) : CdkObject(cdkObject), CfnSubnetNetworkAclAssociationProps {
     /**
      * The ID of the network ACL.

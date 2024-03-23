@@ -89,8 +89,7 @@ public interface BedrockInvokeModelInputProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelInputProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelInputProps,
   ) : CdkObject(cdkObject), BedrockInvokeModelInputProps {
     /**
      * S3 object to retrieve the input data from.

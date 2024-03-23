@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class CustomRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.CustomRule,
+public open class CustomRule(
+  cdkObject: software.amazon.awscdk.services.config.CustomRule,
 ) : Resource(cdkObject), IRule {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -368,6 +368,6 @@ public open class CustomRule internal constructor(
         CustomRule(cdkObject)
 
     internal fun unwrap(wrapped: CustomRule): software.amazon.awscdk.services.config.CustomRule =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.config.CustomRule
   }
 }

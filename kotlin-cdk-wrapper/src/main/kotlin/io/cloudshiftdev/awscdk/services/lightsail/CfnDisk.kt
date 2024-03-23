@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html)
  */
-public open class CfnDisk internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk,
+public open class CfnDisk(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -554,7 +554,7 @@ public open class CfnDisk internal constructor(
         CfnDisk(cdkObject)
 
     internal fun unwrap(wrapped: CfnDisk): software.amazon.awscdk.services.lightsail.CfnDisk =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lightsail.CfnDisk
   }
 
   /**
@@ -702,7 +702,7 @@ public open class CfnDisk internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty,
     ) : CdkObject(cdkObject), AddOnProperty {
       /**
        * The add-on type (for example, `AutoSnapshot` ).
@@ -822,8 +822,7 @@ public open class CfnDisk internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty,
     ) : CdkObject(cdkObject), AutoSnapshotAddOnProperty {
       /**
        * The daily time when an automatic snapshot will be created.
@@ -930,7 +929,7 @@ public open class CfnDisk internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty,
     ) : CdkObject(cdkObject), LocationProperty {
       /**
        * The Availability Zone where the disk is located.

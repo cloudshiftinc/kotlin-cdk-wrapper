@@ -25,8 +25,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class Source internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.Source,
+public abstract class Source(
+  cdkObject: software.amazon.awscdk.services.codebuild.Source,
 ) : CdkObject(cdkObject), ISource {
   /**
    *
@@ -58,7 +58,7 @@ public abstract class Source internal constructor(
   public override fun type(): String = unwrap(this).getType()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.Source,
+    cdkObject: software.amazon.awscdk.services.codebuild.Source,
   ) : Source(cdkObject)
 
   public companion object {

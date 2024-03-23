@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblockbuilder.html)
  */
-public open class CfnAppBlockBuilder internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlockBuilder,
+public open class CfnAppBlockBuilder(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlockBuilder,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -652,7 +652,8 @@ public open class CfnAppBlockBuilder internal constructor(
         CfnAppBlockBuilder = CfnAppBlockBuilder(cdkObject)
 
     internal fun unwrap(wrapped: CfnAppBlockBuilder):
-        software.amazon.awscdk.services.appstream.CfnAppBlockBuilder = wrapped.cdkObject
+        software.amazon.awscdk.services.appstream.CfnAppBlockBuilder = wrapped.cdkObject as
+        software.amazon.awscdk.services.appstream.CfnAppBlockBuilder
   }
 
   /**
@@ -733,8 +734,7 @@ public open class CfnAppBlockBuilder internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.AccessEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.AccessEndpointProperty,
     ) : CdkObject(cdkObject), AccessEndpointProperty {
       /**
        * The type of interface endpoint.
@@ -878,8 +878,7 @@ public open class CfnAppBlockBuilder internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * The identifiers of the security groups for the fleet or image builder.

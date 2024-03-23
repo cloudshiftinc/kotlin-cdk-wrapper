@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-environment.html)
  */
-public open class Environment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.Environment,
+public open class Environment(
+  cdkObject: software.amazon.awscdk.services.appconfig.Environment,
 ) : Resource(cdkObject), IEnvironment, IExtensible {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -548,6 +548,6 @@ public open class Environment internal constructor(
         = Environment(cdkObject)
 
     internal fun unwrap(wrapped: Environment): software.amazon.awscdk.services.appconfig.Environment
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.appconfig.Environment
   }
 }

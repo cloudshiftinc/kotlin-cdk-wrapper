@@ -30,9 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class PrivateCertificate internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.certificatemanager.PrivateCertificate,
+public open class PrivateCertificate(
+  cdkObject: software.amazon.awscdk.services.certificatemanager.PrivateCertificate,
 ) : Resource(cdkObject), ICertificate {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -257,6 +256,7 @@ public open class PrivateCertificate internal constructor(
         PrivateCertificate = PrivateCertificate(cdkObject)
 
     internal fun unwrap(wrapped: PrivateCertificate):
-        software.amazon.awscdk.services.certificatemanager.PrivateCertificate = wrapped.cdkObject
+        software.amazon.awscdk.services.certificatemanager.PrivateCertificate = wrapped.cdkObject as
+        software.amazon.awscdk.services.certificatemanager.PrivateCertificate
   }
 }

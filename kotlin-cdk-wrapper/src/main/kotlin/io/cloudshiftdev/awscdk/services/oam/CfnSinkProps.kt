@@ -126,7 +126,7 @@ public interface CfnSinkProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.oam.CfnSinkProps,
+    cdkObject: software.amazon.awscdk.services.oam.CfnSinkProps,
   ) : CdkObject(cdkObject), CfnSinkProps {
     /**
      * A name for the sink.

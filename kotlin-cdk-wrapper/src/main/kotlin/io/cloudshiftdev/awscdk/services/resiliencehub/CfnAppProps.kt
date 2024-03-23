@@ -1016,7 +1016,7 @@ public interface CfnAppProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.resiliencehub.CfnAppProps,
+    cdkObject: software.amazon.awscdk.services.resiliencehub.CfnAppProps,
   ) : CdkObject(cdkObject), CfnAppProps {
     /**
      * Assessment execution schedule with 'Daily' or 'Disabled' values.

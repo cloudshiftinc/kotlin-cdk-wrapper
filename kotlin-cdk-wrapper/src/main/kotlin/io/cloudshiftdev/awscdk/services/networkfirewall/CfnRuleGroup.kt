@@ -134,8 +134,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html)
  */
-public open class CfnRuleGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup,
+public open class CfnRuleGroup(
+  cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -501,7 +501,8 @@ public open class CfnRuleGroup internal constructor(
         CfnRuleGroup = CfnRuleGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnRuleGroup):
-        software.amazon.awscdk.services.networkfirewall.CfnRuleGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.networkfirewall.CfnRuleGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
   }
 
   /**
@@ -641,8 +642,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty,
     ) : CdkObject(cdkObject), ActionDefinitionProperty {
       /**
        * Stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for
@@ -790,8 +790,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty,
     ) : CdkObject(cdkObject), AddressProperty {
       /**
        * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
@@ -966,8 +965,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.CustomActionProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.CustomActionProperty,
     ) : CdkObject(cdkObject), CustomActionProperty {
       /**
        * The custom action associated with the action name.
@@ -1068,8 +1066,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty,
     ) : CdkObject(cdkObject), DimensionProperty {
       /**
        * The value to use in the custom metric dimension.
@@ -1409,8 +1406,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty,
     ) : CdkObject(cdkObject), HeaderProperty {
       /**
        * The destination IP address or address range to inspect for, in CIDR notation.
@@ -1592,8 +1588,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty,
     ) : CdkObject(cdkObject), IPSetProperty {
       /**
        * The list of IP addresses and address ranges, in CIDR notation.
@@ -1684,8 +1679,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty,
     ) : CdkObject(cdkObject), IPSetReferenceProperty {
       /**
        * The Amazon Resource Name (ARN) of the resource to include in the `RuleGroup.IPSetReference`
@@ -2144,8 +2138,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.MatchAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.MatchAttributesProperty,
     ) : CdkObject(cdkObject), MatchAttributesProperty {
       /**
        * The destination ports to inspect for.
@@ -2314,8 +2307,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty,
     ) : CdkObject(cdkObject), PortRangeProperty {
       /**
        * The lower limit of the port range.
@@ -2417,8 +2409,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortSetProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortSetProperty,
     ) : CdkObject(cdkObject), PortSetProperty {
       /**
        * The set of port ranges.
@@ -2525,8 +2516,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PublishMetricActionProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PublishMetricActionProperty,
     ) : CdkObject(cdkObject), PublishMetricActionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-publishmetricaction.html#cfn-networkfirewall-rulegroup-publishmetricaction-dimensions)
@@ -2624,8 +2614,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty,
     ) : CdkObject(cdkObject), ReferenceSetsProperty {
       /**
        * The IP set references to use in the stateful rule group.
@@ -2941,8 +2930,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty,
     ) : CdkObject(cdkObject), RuleDefinitionProperty {
       /**
        * The actions to take on a packet that matches one of the stateless rule definition's match
@@ -3368,8 +3356,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleGroupProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleGroupProperty,
     ) : CdkObject(cdkObject), RuleGroupProperty {
       /**
        * The reference sets for the stateful rule group.
@@ -3552,8 +3539,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty,
     ) : CdkObject(cdkObject), RuleOptionProperty {
       /**
        * The Suricata rule option keywords.
@@ -3703,8 +3689,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty,
     ) : CdkObject(cdkObject), RuleVariablesProperty {
       /**
        * A list of IP addresses and address ranges, in CIDR notation.
@@ -3902,8 +3887,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty,
     ) : CdkObject(cdkObject), RulesSourceListProperty {
       /**
        * Whether you want to allow or deny access to the domains in your target list.
@@ -4290,8 +4274,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty,
     ) : CdkObject(cdkObject), RulesSourceProperty {
       /**
        * Stateful inspection criteria for a domain list rule group.
@@ -4433,8 +4416,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty,
     ) : CdkObject(cdkObject), StatefulRuleOptionsProperty {
       /**
        * Indicates how to manage the order of the rule evaluation for the rule group.
@@ -4715,8 +4697,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty,
     ) : CdkObject(cdkObject), StatefulRuleProperty {
       /**
        * Defines what Network Firewall should do with the packets in a traffic flow when the flow
@@ -4955,8 +4936,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty,
     ) : CdkObject(cdkObject), StatelessRuleProperty {
       /**
        * Indicates the order in which to run this rule relative to all of the rules that are defined
@@ -5199,8 +5179,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty,
     ) : CdkObject(cdkObject), StatelessRulesAndCustomActionsProperty {
       /**
        * Defines an array of individual custom action definitions that are available for use by the
@@ -5387,8 +5366,7 @@ public open class CfnRuleGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.TCPFlagFieldProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.TCPFlagFieldProperty,
     ) : CdkObject(cdkObject), TCPFlagFieldProperty {
       /**
        * Used in conjunction with the `Masks` setting to define the flags that must be set and flags

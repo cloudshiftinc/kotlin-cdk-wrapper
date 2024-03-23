@@ -587,7 +587,7 @@ public interface CfnResolverProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.CfnResolverProps,
+    cdkObject: software.amazon.awscdk.services.appsync.CfnResolverProps,
   ) : CdkObject(cdkObject), CfnResolverProps {
     /**
      * The AWS AppSync GraphQL API to which you want to attach this resolver.

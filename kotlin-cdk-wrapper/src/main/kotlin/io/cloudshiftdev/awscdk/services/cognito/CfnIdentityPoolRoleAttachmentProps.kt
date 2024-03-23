@@ -190,8 +190,7 @@ public interface CfnIdentityPoolRoleAttachmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachmentProps,
+    cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachmentProps,
   ) : CdkObject(cdkObject), CfnIdentityPoolRoleAttachmentProps {
     /**
      * An identity pool ID in the format `REGION:GUID` .

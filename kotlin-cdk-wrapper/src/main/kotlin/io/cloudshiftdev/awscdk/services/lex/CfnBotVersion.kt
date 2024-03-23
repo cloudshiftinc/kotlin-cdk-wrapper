@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-botversion.html)
  */
-public open class CfnBotVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion,
+public open class CfnBotVersion(
+  cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -283,7 +283,7 @@ public open class CfnBotVersion internal constructor(
         CfnBotVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnBotVersion): software.amazon.awscdk.services.lex.CfnBotVersion =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lex.CfnBotVersion
   }
 
   /**
@@ -341,8 +341,7 @@ public open class CfnBotVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty,
     ) : CdkObject(cdkObject), BotVersionLocaleDetailsProperty {
       /**
        * The version of a bot used for a bot locale.
@@ -481,8 +480,7 @@ public open class CfnBotVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleSpecificationProperty,
     ) : CdkObject(cdkObject), BotVersionLocaleSpecificationProperty {
       /**
        * The version of a bot used for a bot locale.

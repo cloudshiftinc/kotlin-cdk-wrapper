@@ -263,7 +263,7 @@ public interface KubernetesManifestProps : KubernetesManifestOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.KubernetesManifestProps,
+    cdkObject: software.amazon.awscdk.services.eks.KubernetesManifestProps,
   ) : CdkObject(cdkObject), KubernetesManifestProps {
     /**
      * The EKS cluster to apply this manifest to.

@@ -118,7 +118,7 @@ public interface EventBridgeDataSourceProps : BackedDataSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.EventBridgeDataSourceProps,
+    cdkObject: software.amazon.awscdk.services.appsync.EventBridgeDataSourceProps,
   ) : CdkObject(cdkObject), EventBridgeDataSourceProps {
     /**
      * The API to attach this data source to.

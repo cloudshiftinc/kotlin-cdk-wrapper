@@ -119,7 +119,7 @@ public interface CfnIPSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnIPSetProps,
+    cdkObject: software.amazon.awscdk.services.waf.regional.CfnIPSetProps,
   ) : CdkObject(cdkObject), CfnIPSetProps {
     /**
      * The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in CIDR notation) that web

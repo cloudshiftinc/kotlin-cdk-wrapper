@@ -463,7 +463,7 @@ public interface StackProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.StackProps,
+    cdkObject: software.amazon.awscdk.StackProps,
   ) : CdkObject(cdkObject), StackProps {
     /**
      * Include runtime versioning information in this Stack.

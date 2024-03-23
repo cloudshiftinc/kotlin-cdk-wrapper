@@ -123,9 +123,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelexplainabilityjobdefinition.html)
  */
-public open class CfnModelExplainabilityJobDefinition internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition,
+public open class CfnModelExplainabilityJobDefinition(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1013,7 +1012,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
     internal fun unwrap(wrapped: CfnModelExplainabilityJobDefinition):
         software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition
   }
 
   /**
@@ -1268,8 +1268,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty,
     ) : CdkObject(cdkObject), BatchTransformInputProperty {
       /**
        * The Amazon S3 location being used to capture the data.
@@ -1485,8 +1484,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty,
     ) : CdkObject(cdkObject), ClusterConfigProperty {
       /**
        * The number of ML compute instances to use in the model monitoring job.
@@ -1594,8 +1592,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ConstraintsResourceProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ConstraintsResourceProperty,
     ) : CdkObject(cdkObject), ConstraintsResourceProperty {
       /**
        * The Amazon S3 URI for the constraints resource.
@@ -1689,8 +1686,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty,
     ) : CdkObject(cdkObject), CsvProperty {
       /**
        * A boolean flag indicating if given CSV has header.
@@ -1879,8 +1875,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.DatasetFormatProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.DatasetFormatProperty,
     ) : CdkObject(cdkObject), DatasetFormatProperty {
       /**
        * The CSV format.
@@ -2122,8 +2117,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty,
     ) : CdkObject(cdkObject), EndpointInputProperty {
       /**
        * An endpoint in customer's account which has enabled `DataCaptureConfig` enabled.
@@ -2266,8 +2260,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty,
     ) : CdkObject(cdkObject), JsonProperty {
       /**
        * A boolean flag indicating if it is JSON line format.
@@ -2413,8 +2406,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty,
     ) : CdkObject(cdkObject), ModelExplainabilityAppSpecificationProperty {
       /**
        * JSON formatted Amazon S3 file that defines explainability parameters.
@@ -2567,8 +2559,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityBaselineConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityBaselineConfigProperty,
     ) : CdkObject(cdkObject), ModelExplainabilityBaselineConfigProperty {
       /**
        * The name of the baseline model explainability job.
@@ -2762,8 +2753,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityJobInputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityJobInputProperty,
     ) : CdkObject(cdkObject), ModelExplainabilityJobInputProperty {
       /**
        * Input object for the batch transform job.
@@ -2916,8 +2906,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty,
     ) : CdkObject(cdkObject), MonitoringOutputConfigProperty {
       /**
        * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
@@ -3047,8 +3036,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty,
     ) : CdkObject(cdkObject), MonitoringOutputProperty {
       /**
        * The Amazon S3 storage location where the results of a monitoring job are saved.
@@ -3169,8 +3157,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty,
     ) : CdkObject(cdkObject), MonitoringResourcesProperty {
       /**
        * The configuration for the cluster resources used to run the processing job.
@@ -3381,8 +3368,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.NetworkConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.NetworkConfigProperty,
     ) : CdkObject(cdkObject), NetworkConfigProperty {
       /**
        * Whether to encrypt all communications between distributed processing jobs.
@@ -3538,8 +3524,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.S3OutputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.S3OutputProperty,
     ) : CdkObject(cdkObject), S3OutputProperty {
       /**
        * The local path to the Amazon S3 storage location where Amazon SageMaker saves the results
@@ -3697,8 +3682,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty,
     ) : CdkObject(cdkObject), StoppingConditionProperty {
       /**
        * The maximum length of time, in seconds, that a training or compilation job can run before
@@ -3865,8 +3849,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * The VPC security group IDs, in the form `sg-xxxxxxxx` .

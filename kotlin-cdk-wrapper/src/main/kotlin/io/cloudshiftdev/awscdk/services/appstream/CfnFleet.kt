@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html)
  */
-public open class CfnFleet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnFleet,
+public open class CfnFleet(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnFleet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1392,7 +1392,7 @@ public open class CfnFleet internal constructor(
         CfnFleet(cdkObject)
 
     internal fun unwrap(wrapped: CfnFleet): software.amazon.awscdk.services.appstream.CfnFleet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appstream.CfnFleet
   }
 
   /**
@@ -1485,8 +1485,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnFleet.ComputeCapacityProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.ComputeCapacityProperty,
     ) : CdkObject(cdkObject), ComputeCapacityProperty {
       /**
        * The desired number of streaming instances.
@@ -1606,8 +1605,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty,
     ) : CdkObject(cdkObject), DomainJoinInfoProperty {
       /**
        * The fully qualified name of the directory (for example, corp.example.com).
@@ -1715,7 +1713,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * The S3 bucket of the S3 object.
@@ -1854,7 +1852,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * The identifiers of the security groups for the fleet.

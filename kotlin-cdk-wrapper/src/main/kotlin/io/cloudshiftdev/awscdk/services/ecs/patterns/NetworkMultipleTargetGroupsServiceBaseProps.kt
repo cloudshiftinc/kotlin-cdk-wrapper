@@ -466,8 +466,7 @@ public interface NetworkMultipleTargetGroupsServiceBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsServiceBaseProps,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsServiceBaseProps,
   ) : CdkObject(cdkObject), NetworkMultipleTargetGroupsServiceBaseProps {
     /**
      * The options for configuring an Amazon ECS service to use service discovery.

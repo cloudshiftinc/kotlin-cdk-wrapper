@@ -19,8 +19,8 @@ import kotlin.String
  * Fact.register(new MyFact());
  * ```
  */
-public open class FactName internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.regioninfo.FactName,
+public open class FactName(
+  cdkObject: software.amazon.awscdk.regioninfo.FactName,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.regioninfo.FactName()
   )
@@ -92,6 +92,6 @@ public open class FactName internal constructor(
         FactName(cdkObject)
 
     internal fun unwrap(wrapped: FactName): software.amazon.awscdk.regioninfo.FactName =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.regioninfo.FactName
   }
 }

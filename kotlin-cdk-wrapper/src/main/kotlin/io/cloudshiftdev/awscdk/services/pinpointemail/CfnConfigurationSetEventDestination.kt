@@ -67,9 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationseteventdestination.html)
  */
-public open class CfnConfigurationSetEventDestination internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination,
+public open class CfnConfigurationSetEventDestination(
+  cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -289,7 +288,8 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
     internal fun unwrap(wrapped: CfnConfigurationSetEventDestination):
         software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination
   }
 
   /**
@@ -383,8 +383,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty,
     ) : CdkObject(cdkObject), CloudWatchDestinationProperty {
       /**
        * An array of objects that define the dimensions to use when you send email events to Amazon
@@ -568,8 +567,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.DimensionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.DimensionConfigurationProperty,
     ) : CdkObject(cdkObject), DimensionConfigurationProperty {
       /**
        * The default value of the dimension that is published to Amazon CloudWatch if you don't
@@ -1051,8 +1049,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.EventDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.EventDestinationProperty,
     ) : CdkObject(cdkObject), EventDestinationProperty {
       /**
        * An object that defines an Amazon CloudWatch destination for email events.
@@ -1218,8 +1215,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty,
     ) : CdkObject(cdkObject), KinesisFirehoseDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose stream that Amazon
@@ -1317,8 +1313,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty,
     ) : CdkObject(cdkObject), PinpointDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon Pinpoint project that you want to send email
@@ -1413,8 +1408,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.SnsDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.SnsDestinationProperty,
     ) : CdkObject(cdkObject), SnsDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon SNS topic that you want to publish email

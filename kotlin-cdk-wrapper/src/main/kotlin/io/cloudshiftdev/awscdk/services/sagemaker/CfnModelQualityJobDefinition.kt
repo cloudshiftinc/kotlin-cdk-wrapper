@@ -138,9 +138,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelqualityjobdefinition.html)
  */
-public open class CfnModelQualityJobDefinition internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition,
+public open class CfnModelQualityJobDefinition(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1023,6 +1022,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
     internal fun unwrap(wrapped: CfnModelQualityJobDefinition):
         software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition = wrapped.cdkObject
+        as software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition
   }
 
   /**
@@ -1348,8 +1348,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.BatchTransformInputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.BatchTransformInputProperty,
     ) : CdkObject(cdkObject), BatchTransformInputProperty {
       /**
        * The Amazon S3 location being used to capture the data.
@@ -1590,8 +1589,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty,
     ) : CdkObject(cdkObject), ClusterConfigProperty {
       /**
        * The number of ML compute instances to use in the model monitoring job.
@@ -1699,8 +1697,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty,
     ) : CdkObject(cdkObject), ConstraintsResourceProperty {
       /**
        * The Amazon S3 URI for the constraints resource.
@@ -1794,8 +1791,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty,
     ) : CdkObject(cdkObject), CsvProperty {
       /**
        * A boolean flag indicating if given CSV has header.
@@ -1984,8 +1980,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty,
     ) : CdkObject(cdkObject), DatasetFormatProperty {
       /**
        * The CSV format.
@@ -2298,8 +2293,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty,
     ) : CdkObject(cdkObject), EndpointInputProperty {
       /**
        * If specified, monitoring jobs substract this time from the end time.
@@ -2467,8 +2461,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.JsonProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.JsonProperty,
     ) : CdkObject(cdkObject), JsonProperty {
       /**
        * A boolean flag indicating if it is JSON line format.
@@ -2741,8 +2734,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty,
     ) : CdkObject(cdkObject), ModelQualityAppSpecificationProperty {
       /**
        * An array of arguments for the container used to run the monitoring job.
@@ -2934,8 +2926,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty,
     ) : CdkObject(cdkObject), ModelQualityBaselineConfigProperty {
       /**
        * The name of the job that performs baselining for the monitoring job.
@@ -3187,8 +3178,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty,
     ) : CdkObject(cdkObject), ModelQualityJobInputProperty {
       /**
        * Input object for the batch transform job.
@@ -3285,8 +3275,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty,
     ) : CdkObject(cdkObject), MonitoringGroundTruthS3InputProperty {
       /**
        * The address of the Amazon S3 location of the ground truth labels.
@@ -3432,8 +3421,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty,
     ) : CdkObject(cdkObject), MonitoringOutputConfigProperty {
       /**
        * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
@@ -3563,8 +3551,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty,
     ) : CdkObject(cdkObject), MonitoringOutputProperty {
       /**
        * The Amazon S3 storage location where the results of a monitoring job are saved.
@@ -3685,8 +3672,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringResourcesProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringResourcesProperty,
     ) : CdkObject(cdkObject), MonitoringResourcesProperty {
       /**
        * The configuration for the cluster resources used to run the processing job.
@@ -3897,8 +3883,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty,
     ) : CdkObject(cdkObject), NetworkConfigProperty {
       /**
        * Whether to encrypt all communications between distributed processing jobs.
@@ -4054,8 +4039,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.S3OutputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.S3OutputProperty,
     ) : CdkObject(cdkObject), S3OutputProperty {
       /**
        * The local path to the Amazon S3 storage location where Amazon SageMaker saves the results
@@ -4213,8 +4197,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.StoppingConditionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.StoppingConditionProperty,
     ) : CdkObject(cdkObject), StoppingConditionProperty {
       /**
        * The maximum length of time, in seconds, that a training or compilation job can run before
@@ -4381,8 +4364,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * The VPC security group IDs, in the form `sg-xxxxxxxx` .

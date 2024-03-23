@@ -366,7 +366,7 @@ public interface DockerImageAssetProps : DockerImageAssetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAssetProps,
+    cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAssetProps,
   ) : CdkObject(cdkObject), DockerImageAssetProps {
     /**
      * Unique identifier of the docker image asset and its potential revisions.

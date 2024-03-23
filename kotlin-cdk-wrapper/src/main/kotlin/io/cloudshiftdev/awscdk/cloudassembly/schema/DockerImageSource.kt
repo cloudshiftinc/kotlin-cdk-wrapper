@@ -408,7 +408,7 @@ public interface DockerImageSource {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.DockerImageSource,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.DockerImageSource,
   ) : CdkObject(cdkObject), DockerImageSource {
     /**
      * Disable the cache and pass `--no-cache` to the `docker build` command.

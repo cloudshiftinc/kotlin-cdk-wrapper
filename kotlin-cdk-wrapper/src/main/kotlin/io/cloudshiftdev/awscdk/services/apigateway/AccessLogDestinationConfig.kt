@@ -56,7 +56,7 @@ public interface AccessLogDestinationConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig,
+    cdkObject: software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig,
   ) : CdkObject(cdkObject), AccessLogDestinationConfig {
     /**
      * The Amazon Resource Name (ARN) of the destination resource.

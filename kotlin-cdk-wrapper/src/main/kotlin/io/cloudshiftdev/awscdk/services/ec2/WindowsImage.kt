@@ -37,8 +37,8 @@ import kotlin.Unit
  * "eu-west-1", "ami-12345678"));
  * ```
  */
-public open class WindowsImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.WindowsImage,
+public open class WindowsImage(
+  cdkObject: software.amazon.awscdk.services.ec2.WindowsImage,
 ) : GenericSSMParameterImage(cdkObject) {
   public constructor(version: WindowsVersion) :
       this(software.amazon.awscdk.services.ec2.WindowsImage(version.let(WindowsVersion::unwrap))
@@ -99,6 +99,6 @@ public open class WindowsImage internal constructor(
         WindowsImage(cdkObject)
 
     internal fun unwrap(wrapped: WindowsImage): software.amazon.awscdk.services.ec2.WindowsImage =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.WindowsImage
   }
 }

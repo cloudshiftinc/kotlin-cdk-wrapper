@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html)
  */
-public open class CfnProject internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject,
+public open class CfnProject(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -431,7 +431,7 @@ public open class CfnProject internal constructor(
         CfnProject(cdkObject)
 
     internal fun unwrap(wrapped: CfnProject): software.amazon.awscdk.services.sagemaker.CfnProject =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnProject
   }
 
   /**
@@ -512,8 +512,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty,
     ) : CdkObject(cdkObject), ProvisioningParameterProperty {
       /**
        * The key that identifies a provisioning parameter.
@@ -667,8 +666,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty,
     ) : CdkObject(cdkObject), ServiceCatalogProvisionedProductDetailsProperty {
       /**
        * The ID of the provisioned product.
@@ -877,8 +875,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty,
     ) : CdkObject(cdkObject), ServiceCatalogProvisioningDetailsProperty {
       /**
        * The path identifier of the product.

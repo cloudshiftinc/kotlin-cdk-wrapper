@@ -96,8 +96,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html)
  */
-public open class CfnWorkflow internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow,
+public open class CfnWorkflow(
+  cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -431,7 +431,7 @@ public open class CfnWorkflow internal constructor(
         = CfnWorkflow(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkflow): software.amazon.awscdk.services.transfer.CfnWorkflow
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.transfer.CfnWorkflow
   }
 
   /**
@@ -715,8 +715,7 @@ public open class CfnWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty,
     ) : CdkObject(cdkObject), CopyStepDetailsProperty {
       /**
        * Specifies the location for the file being copied.
@@ -928,8 +927,7 @@ public open class CfnWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty,
     ) : CdkObject(cdkObject), CustomStepDetailsProperty {
       /**
        * The name of the step, used as an identifier.
@@ -1297,8 +1295,7 @@ public open class CfnWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty,
     ) : CdkObject(cdkObject), DecryptStepDetailsProperty {
       /**
        * Specifies the location for the file being decrypted.
@@ -1477,8 +1474,7 @@ public open class CfnWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty,
     ) : CdkObject(cdkObject), DeleteStepDetailsProperty {
       /**
        * The name of the step, used as an identifier.
@@ -1595,8 +1591,7 @@ public open class CfnWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty,
     ) : CdkObject(cdkObject), EfsInputFileLocationProperty {
       /**
        * The identifier of the file system, assigned by Amazon EFS.
@@ -1778,8 +1773,7 @@ public open class CfnWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty,
     ) : CdkObject(cdkObject), InputFileLocationProperty {
       /**
        * Specifies the details for the Amazon Elastic File System (Amazon EFS) file that's being
@@ -1912,8 +1906,7 @@ public open class CfnWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty,
     ) : CdkObject(cdkObject), S3FileLocationProperty {
       /**
        * Specifies the details for the file location for the file that's being used in the workflow.
@@ -2020,8 +2013,7 @@ public open class CfnWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty,
     ) : CdkObject(cdkObject), S3InputFileLocationProperty {
       /**
        * Specifies the S3 bucket for the customer input file.
@@ -2131,7 +2123,7 @@ public open class CfnWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty,
     ) : CdkObject(cdkObject), S3TagProperty {
       /**
        * The name assigned to the tag that you create.
@@ -2292,8 +2284,7 @@ public open class CfnWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty,
     ) : CdkObject(cdkObject), TagStepDetailsProperty {
       /**
        * The name of the step, used as an identifier.
@@ -2650,8 +2641,7 @@ public open class CfnWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty,
     ) : CdkObject(cdkObject), WorkflowStepProperty {
       /**
        * Details for a step that performs a file copy.

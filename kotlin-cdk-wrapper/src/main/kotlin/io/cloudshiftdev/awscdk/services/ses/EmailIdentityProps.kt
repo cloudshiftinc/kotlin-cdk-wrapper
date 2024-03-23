@@ -223,7 +223,7 @@ public interface EmailIdentityProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.EmailIdentityProps,
+    cdkObject: software.amazon.awscdk.services.ses.EmailIdentityProps,
   ) : CdkObject(cdkObject), EmailIdentityProps {
     /**
      * The configuration set to associate with the email identity.

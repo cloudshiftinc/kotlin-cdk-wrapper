@@ -29,7 +29,7 @@ public interface IKubectlProvider : IConstruct {
   public fun serviceToken(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.IKubectlProvider,
+    cdkObject: software.amazon.awscdk.services.eks.IKubectlProvider,
   ) : CdkObject(cdkObject), IKubectlProvider {
     /**
      * The IAM execution role of the handler.

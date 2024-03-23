@@ -254,8 +254,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)
  */
-public open class CfnGlobalTable internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable,
+public open class CfnGlobalTable(
+  cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1462,7 +1462,8 @@ public open class CfnGlobalTable internal constructor(
         CfnGlobalTable = CfnGlobalTable(cdkObject)
 
     internal fun unwrap(wrapped: CfnGlobalTable):
-        software.amazon.awscdk.services.dynamodb.CfnGlobalTable = wrapped.cdkObject
+        software.amazon.awscdk.services.dynamodb.CfnGlobalTable = wrapped.cdkObject as
+        software.amazon.awscdk.services.dynamodb.CfnGlobalTable
   }
 
   /**
@@ -1549,8 +1550,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty,
     ) : CdkObject(cdkObject), AttributeDefinitionProperty {
       /**
        * A name for the attribute.
@@ -1807,8 +1807,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.CapacityAutoScalingSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.CapacityAutoScalingSettingsProperty,
     ) : CdkObject(cdkObject), CapacityAutoScalingSettingsProperty {
       /**
        * The maximum provisioned capacity units for the global table.
@@ -1952,8 +1951,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty,
     ) : CdkObject(cdkObject), ContributorInsightsSpecificationProperty {
       /**
        * Indicates whether CloudWatch Contributor Insights are to be enabled (true) or disabled
@@ -2316,8 +2314,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty,
     ) : CdkObject(cdkObject), GlobalSecondaryIndexProperty {
       /**
        * The name of the global secondary index.
@@ -2506,8 +2503,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty,
     ) : CdkObject(cdkObject), KeySchemaProperty {
       /**
        * The name of a key attribute.
@@ -2635,8 +2631,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty,
     ) : CdkObject(cdkObject), KinesisStreamSpecificationProperty {
       /**
        * The precision for the time and date that the stream was created.
@@ -2915,8 +2910,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty,
     ) : CdkObject(cdkObject), LocalSecondaryIndexProperty {
       /**
        * The name of the local secondary index.
@@ -3046,8 +3040,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty,
     ) : CdkObject(cdkObject), PointInTimeRecoverySpecificationProperty {
       /**
        * Indicates whether point in time recovery is enabled (true) or disabled (false) on the
@@ -3202,8 +3195,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty,
     ) : CdkObject(cdkObject), ProjectionProperty {
       /**
        * Represents the non-key attribute names which will be projected into the index.
@@ -3382,8 +3374,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty,
     ) : CdkObject(cdkObject), ReadProvisionedThroughputSettingsProperty {
       /**
        * Specifies auto scaling settings for the replica table or global secondary index.
@@ -3654,8 +3645,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty,
     ) : CdkObject(cdkObject), ReplicaGlobalSecondaryIndexSpecificationProperty {
       /**
        * Updates the status for contributor insights for a specific table or index.
@@ -3777,8 +3767,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty,
     ) : CdkObject(cdkObject), ReplicaSSESpecificationProperty {
       /**
        * The AWS KMS key that should be used for the AWS KMS encryption.
@@ -4399,8 +4388,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSpecificationProperty,
     ) : CdkObject(cdkObject), ReplicaSpecificationProperty {
       /**
        * The settings used to enable or disable CloudWatch Contributor Insights for the specified
@@ -4637,8 +4625,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.SSESpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.SSESpecificationProperty,
     ) : CdkObject(cdkObject), SSESpecificationProperty {
       /**
        * Indicates whether server-side encryption is performed using an AWS managed key or an AWS
@@ -4772,8 +4759,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty,
     ) : CdkObject(cdkObject), StreamSpecificationProperty {
       /**
        * When an item in the table is modified, `StreamViewType` determines what information is
@@ -4957,8 +4943,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty,
     ) : CdkObject(cdkObject), TargetTrackingScalingPolicyConfigurationProperty {
       /**
        * Indicates whether scale in by the target tracking scaling policy is disabled.
@@ -5121,8 +5106,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty,
     ) : CdkObject(cdkObject), TimeToLiveSpecificationProperty {
       /**
        * The name of the attribute used to store the expiration time for items in the table.
@@ -5271,8 +5255,7 @@ public open class CfnGlobalTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WriteProvisionedThroughputSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WriteProvisionedThroughputSettingsProperty,
     ) : CdkObject(cdkObject), WriteProvisionedThroughputSettingsProperty {
       /**
        * Specifies auto scaling settings for the replica table or global secondary index.

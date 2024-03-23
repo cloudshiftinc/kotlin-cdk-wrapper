@@ -75,8 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html)
  */
-public open class CfnCachePolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy,
+public open class CfnCachePolicy(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -233,7 +233,8 @@ public open class CfnCachePolicy internal constructor(
         CfnCachePolicy = CfnCachePolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnCachePolicy):
-        software.amazon.awscdk.services.cloudfront.CfnCachePolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnCachePolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnCachePolicy
   }
 
   /**
@@ -559,8 +560,7 @@ public open class CfnCachePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty,
     ) : CdkObject(cdkObject), CachePolicyConfigProperty {
       /**
        * A comment to describe the cache policy.
@@ -782,8 +782,7 @@ public open class CfnCachePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty,
     ) : CdkObject(cdkObject), CookiesConfigProperty {
       /**
        * Determines whether any cookies in viewer requests are included in the cache key and in
@@ -942,8 +941,7 @@ public open class CfnCachePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty,
     ) : CdkObject(cdkObject), HeadersConfigProperty {
       /**
        * Determines whether any HTTP headers are included in the cache key and in requests that
@@ -1515,8 +1513,7 @@ public open class CfnCachePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty,
     ) : CdkObject(cdkObject), ParametersInCacheKeyAndForwardedToOriginProperty {
       /**
        * An object that determines whether any cookies in viewer requests (and if so, which cookies)
@@ -1753,8 +1750,7 @@ public open class CfnCachePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty,
     ) : CdkObject(cdkObject), QueryStringsConfigProperty {
       /**
        * Determines whether any URL query strings in viewer requests are included in the cache key

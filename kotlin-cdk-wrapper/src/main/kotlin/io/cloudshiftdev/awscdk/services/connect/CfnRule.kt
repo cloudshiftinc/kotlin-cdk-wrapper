@@ -108,8 +108,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-rule.html)
  */
-public open class CfnRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnRule,
+public open class CfnRule(
+  cdkObject: software.amazon.awscdk.services.connect.CfnRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -533,7 +533,7 @@ public open class CfnRule internal constructor(
         CfnRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnRule): software.amazon.awscdk.services.connect.CfnRule =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.connect.CfnRule
   }
 
   /**
@@ -944,7 +944,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.connect.CfnRule.ActionsProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRule.ActionsProperty,
     ) : CdkObject(cdkObject), ActionsProperty {
       /**
        * Information about the contact category action.
@@ -1121,8 +1121,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnRule.CreateCaseActionProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRule.CreateCaseActionProperty,
     ) : CdkObject(cdkObject), CreateCaseActionProperty {
       /**
        * An array of case fields.
@@ -1209,8 +1208,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnRule.EventBridgeActionProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRule.EventBridgeActionProperty,
     ) : CdkObject(cdkObject), EventBridgeActionProperty {
       /**
        * The name.
@@ -1342,7 +1340,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.connect.CfnRule.FieldProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRule.FieldProperty,
     ) : CdkObject(cdkObject), FieldProperty {
       /**
        * The Id of the field.
@@ -1491,7 +1489,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.connect.CfnRule.FieldValueProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRule.FieldValueProperty,
     ) : CdkObject(cdkObject), FieldValueProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-fieldvalue.html#cfn-connect-rule-fieldvalue-booleanvalue)
@@ -1640,8 +1638,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnRule.NotificationRecipientTypeProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRule.NotificationRecipientTypeProperty,
     ) : CdkObject(cdkObject), NotificationRecipientTypeProperty {
       /**
        * The Amazon Resource Name (ARN) of the user account.
@@ -1765,7 +1762,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.connect.CfnRule.ReferenceProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRule.ReferenceProperty,
     ) : CdkObject(cdkObject), ReferenceProperty {
       /**
        * The type of the reference. `DATE` must be of type Epoch timestamp.
@@ -1888,8 +1885,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnRule.RuleTriggerEventSourceProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRule.RuleTriggerEventSourceProperty,
     ) : CdkObject(cdkObject), RuleTriggerEventSourceProperty {
       /**
        * The name of the event source.
@@ -2122,8 +2118,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnRule.SendNotificationActionProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRule.SendNotificationActionProperty,
     ) : CdkObject(cdkObject), SendNotificationActionProperty {
       /**
        * Notification content.
@@ -2354,7 +2349,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.connect.CfnRule.TaskActionProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRule.TaskActionProperty,
     ) : CdkObject(cdkObject), TaskActionProperty {
       /**
        * The Amazon Resource Name (ARN) of the flow.
@@ -2496,8 +2491,7 @@ public open class CfnRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnRule.UpdateCaseActionProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnRule.UpdateCaseActionProperty,
     ) : CdkObject(cdkObject), UpdateCaseActionProperty {
       /**
        * An array of case fields.

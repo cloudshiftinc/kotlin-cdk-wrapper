@@ -184,8 +184,7 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicecatalog.StackSetsConstraintOptions,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.StackSetsConstraintOptions,
   ) : CdkObject(cdkObject), StackSetsConstraintOptions {
     /**
      * List of accounts to deploy stacks to.

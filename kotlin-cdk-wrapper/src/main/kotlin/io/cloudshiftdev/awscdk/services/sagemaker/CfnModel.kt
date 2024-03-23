@@ -115,8 +115,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html)
  */
-public open class CfnModel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel,
+public open class CfnModel(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sagemaker.CfnModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -881,7 +881,7 @@ public open class CfnModel internal constructor(
         CfnModel(cdkObject)
 
     internal fun unwrap(wrapped: CfnModel): software.amazon.awscdk.services.sagemaker.CfnModel =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnModel
   }
 
   /**
@@ -1460,8 +1460,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.ContainerDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ContainerDefinitionProperty,
     ) : CdkObject(cdkObject), ContainerDefinitionProperty {
       /**
        * This parameter is ignored for models that contain only a `PrimaryContainer` .
@@ -1762,8 +1761,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.ImageConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ImageConfigProperty,
     ) : CdkObject(cdkObject), ImageConfigProperty {
       /**
        * Set this to one of the following values:.
@@ -1868,8 +1866,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.InferenceExecutionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.InferenceExecutionConfigProperty,
     ) : CdkObject(cdkObject), InferenceExecutionConfigProperty {
       /**
        * How containers in a multi-container are run. The following values are valid.
@@ -1997,8 +1994,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.ModelAccessConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ModelAccessConfigProperty,
     ) : CdkObject(cdkObject), ModelAccessConfigProperty {
       /**
        * Specifies agreement to the model end-user license agreement (EULA).
@@ -2120,8 +2116,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty,
     ) : CdkObject(cdkObject), ModelDataSourceProperty {
       /**
        * Specifies the S3 location of ML model data to deploy.
@@ -2218,8 +2213,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty,
     ) : CdkObject(cdkObject), MultiModelConfigProperty {
       /**
        * Whether to cache models for a multi-model endpoint.
@@ -2331,8 +2325,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty,
     ) : CdkObject(cdkObject), RepositoryAuthConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of an AWS Lambda function that provides credentials to
@@ -2657,8 +2650,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty,
     ) : CdkObject(cdkObject), S3DataSourceProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-compressiontype)
@@ -2878,7 +2870,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * The VPC security group IDs, in the form `sg-xxxxxxxx` .

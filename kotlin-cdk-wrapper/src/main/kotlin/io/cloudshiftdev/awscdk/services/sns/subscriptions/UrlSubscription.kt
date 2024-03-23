@@ -30,9 +30,8 @@ import kotlin.collections.Map
  *
  * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-http-https-endpoint-as-subscriber.html)
  */
-public open class UrlSubscription internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.sns.subscriptions.UrlSubscription,
+public open class UrlSubscription(
+  cdkObject: software.amazon.awscdk.services.sns.subscriptions.UrlSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
   public constructor(url: String) :
       this(software.amazon.awscdk.services.sns.subscriptions.UrlSubscription(url)
@@ -197,6 +196,7 @@ public open class UrlSubscription internal constructor(
         UrlSubscription = UrlSubscription(cdkObject)
 
     internal fun unwrap(wrapped: UrlSubscription):
-        software.amazon.awscdk.services.sns.subscriptions.UrlSubscription = wrapped.cdkObject
+        software.amazon.awscdk.services.sns.subscriptions.UrlSubscription = wrapped.cdkObject as
+        software.amazon.awscdk.services.sns.subscriptions.UrlSubscription
   }
 }

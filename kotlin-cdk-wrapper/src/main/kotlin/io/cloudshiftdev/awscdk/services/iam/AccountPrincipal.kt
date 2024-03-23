@@ -23,8 +23,8 @@ import kotlin.String
  * cluster.grant(role, "neptune-db:ReadDataViaQuery", "neptune-db:WriteDataViaQuery");
  * ```
  */
-public open class AccountPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.AccountPrincipal,
+public open class AccountPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.AccountPrincipal,
 ) : ArnPrincipal(cdkObject) {
   public constructor(accountId: Any) :
       this(software.amazon.awscdk.services.iam.AccountPrincipal(accountId)
@@ -50,6 +50,7 @@ public open class AccountPrincipal internal constructor(
         AccountPrincipal = AccountPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: AccountPrincipal):
-        software.amazon.awscdk.services.iam.AccountPrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.AccountPrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.AccountPrincipal
   }
 }

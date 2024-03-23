@@ -21,7 +21,7 @@ public interface IFragmentConcatenator {
   public fun join(left: Any, right: Any): Any
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IFragmentConcatenator,
+    cdkObject: software.amazon.awscdk.IFragmentConcatenator,
   ) : CdkObject(cdkObject), IFragmentConcatenator {
     /**
      * Join the fragment on the left and on the right.

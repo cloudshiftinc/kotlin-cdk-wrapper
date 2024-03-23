@@ -37,8 +37,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class DockerCredential internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.DockerCredential,
+public abstract class DockerCredential(
+  cdkObject: software.amazon.awscdk.pipelines.DockerCredential,
 ) : CdkObject(cdkObject) {
   /**
    * Grant read-only access to the registry credentials.
@@ -54,7 +54,7 @@ public abstract class DockerCredential internal constructor(
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.DockerCredential,
+    cdkObject: software.amazon.awscdk.pipelines.DockerCredential,
   ) : DockerCredential(cdkObject)
 
   public companion object {

@@ -18,9 +18,8 @@ import kotlin.String
  * fn.addLayers(new NodeProxyAgentLayer(this, "NodeProxyAgentLayer"));
  * ```
  */
-public open class NodeProxyAgentLayer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer,
+public open class NodeProxyAgentLayer(
+  cdkObject: software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer,
 ) : LayerVersion(cdkObject) {
   public constructor(scope: Construct, id: String) :
       this(software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer(scope.let(Construct::unwrap),
@@ -34,5 +33,6 @@ public open class NodeProxyAgentLayer internal constructor(
 
     internal fun unwrap(wrapped: NodeProxyAgentLayer):
         software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer = wrapped.cdkObject
+        as software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer
   }
 }

@@ -104,7 +104,7 @@ public interface SubnetNetworkAclAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociationProps,
+    cdkObject: software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociationProps,
   ) : CdkObject(cdkObject), SubnetNetworkAclAssociationProps {
     /**
      * The Network ACL this association is defined for.

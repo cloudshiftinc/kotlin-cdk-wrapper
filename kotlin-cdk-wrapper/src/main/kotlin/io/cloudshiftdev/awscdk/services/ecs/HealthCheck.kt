@@ -203,7 +203,7 @@ public interface HealthCheck {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.HealthCheck,
+    cdkObject: software.amazon.awscdk.services.ecs.HealthCheck,
   ) : CdkObject(cdkObject), HealthCheck {
     /**
      * A string array representing the command that the container runs to determine if it is

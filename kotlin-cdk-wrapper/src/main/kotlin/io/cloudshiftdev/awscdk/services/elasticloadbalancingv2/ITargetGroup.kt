@@ -35,7 +35,7 @@ public interface ITargetGroup : IConstruct {
   public fun targetGroupName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ITargetGroup,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ITargetGroup,
   ) : CdkObject(cdkObject), ITargetGroup {
     /**
      * A token representing a list of ARNs of the load balancers that route traffic to this target

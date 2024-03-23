@@ -27,9 +27,8 @@ import kotlin.String
  *
  * @deprecated Use `cdk.SecretValue` instead.
  */
-public open class SecretStringValueBeta1 internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.secretsmanager.SecretStringValueBeta1,
+public open class SecretStringValueBeta1(
+  cdkObject: software.amazon.awscdk.services.secretsmanager.SecretStringValueBeta1,
 ) : CdkObject(cdkObject) {
   /**
    * (deprecated) Returns the secret value.
@@ -51,6 +50,7 @@ public open class SecretStringValueBeta1 internal constructor(
         SecretStringValueBeta1 = SecretStringValueBeta1(cdkObject)
 
     internal fun unwrap(wrapped: SecretStringValueBeta1):
-        software.amazon.awscdk.services.secretsmanager.SecretStringValueBeta1 = wrapped.cdkObject
+        software.amazon.awscdk.services.secretsmanager.SecretStringValueBeta1 = wrapped.cdkObject as
+        software.amazon.awscdk.services.secretsmanager.SecretStringValueBeta1
   }
 }

@@ -109,7 +109,7 @@ public interface CfnVPCGatewayAttachmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachmentProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachmentProps,
   ) : CdkObject(cdkObject), CfnVPCGatewayAttachmentProps {
     /**
      * The ID of the internet gateway.

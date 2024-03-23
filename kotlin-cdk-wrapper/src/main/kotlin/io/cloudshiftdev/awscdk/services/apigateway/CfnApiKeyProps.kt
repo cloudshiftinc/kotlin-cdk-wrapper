@@ -318,7 +318,7 @@ public interface CfnApiKeyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CfnApiKeyProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CfnApiKeyProps,
   ) : CdkObject(cdkObject), CfnApiKeyProps {
     /**
      * An AWS Marketplace customer identifier, when integrating with the AWS SaaS Marketplace.

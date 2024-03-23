@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html)
  */
-public open class CfnDeploymentConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig,
+public open class CfnDeploymentConfig(
+  cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -682,7 +682,8 @@ public open class CfnDeploymentConfig internal constructor(
         CfnDeploymentConfig = CfnDeploymentConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeploymentConfig):
-        software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig
   }
 
   /**
@@ -760,8 +761,7 @@ public open class CfnDeploymentConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty,
     ) : CdkObject(cdkObject), MinimumHealthyHostsPerZoneProperty {
       /**
        * The `type` associated with the `MinimumHealthyHostsPerZone` option.
@@ -943,8 +943,7 @@ public open class CfnDeploymentConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty,
     ) : CdkObject(cdkObject), MinimumHealthyHostsProperty {
       /**
        * The minimum healthy instance type:.
@@ -1086,8 +1085,7 @@ public open class CfnDeploymentConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty,
     ) : CdkObject(cdkObject), TimeBasedCanaryProperty {
       /**
        * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary`
@@ -1208,8 +1206,7 @@ public open class CfnDeploymentConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty,
     ) : CdkObject(cdkObject), TimeBasedLinearProperty {
       /**
        * The number of minutes between each incremental traffic shift of a `TimeBasedLinear`
@@ -1457,8 +1454,7 @@ public open class CfnDeploymentConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty,
     ) : CdkObject(cdkObject), TrafficRoutingConfigProperty {
       /**
        * A configuration that shifts traffic from one version of a Lambda function or ECS task set
@@ -1794,8 +1790,7 @@ public open class CfnDeploymentConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.ZonalConfigProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.ZonalConfigProperty,
     ) : CdkObject(cdkObject), ZonalConfigProperty {
       /**
        * The period of time, in seconds, that CodeDeploy must wait after completing a deployment to

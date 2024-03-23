@@ -442,7 +442,7 @@ public interface IGraphqlApi : IResource {
   public fun grantSubscription(grantee: IGrantable, vararg fields: String): Grant
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.IGraphqlApi,
+    cdkObject: software.amazon.awscdk.services.appsync.IGraphqlApi,
   ) : CdkObject(cdkObject), IGraphqlApi {
     /**
      * add a new DynamoDB data source to this API.

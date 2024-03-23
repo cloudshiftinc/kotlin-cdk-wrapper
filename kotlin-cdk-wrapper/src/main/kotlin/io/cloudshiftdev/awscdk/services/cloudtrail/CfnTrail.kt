@@ -79,8 +79,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html)
  */
-public open class CfnTrail internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail,
+public open class CfnTrail(
+  cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1348,7 +1348,7 @@ public open class CfnTrail internal constructor(
         CfnTrail(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrail): software.amazon.awscdk.services.cloudtrail.CfnTrail =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudtrail.CfnTrail
   }
 
   /**
@@ -1491,8 +1491,7 @@ public open class CfnTrail internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedEventSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedEventSelectorProperty,
     ) : CdkObject(cdkObject), AdvancedEventSelectorProperty {
       /**
        * Contains all selector statements in an advanced event selector.
@@ -3139,8 +3138,7 @@ public open class CfnTrail internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedFieldSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedFieldSelectorProperty,
     ) : CdkObject(cdkObject), AdvancedFieldSelectorProperty {
       /**
        * An operator that includes events that match the last few characters of the event record
@@ -3993,8 +3991,7 @@ public open class CfnTrail internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.DataResourceProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.DataResourceProperty,
     ) : CdkObject(cdkObject), DataResourceProperty {
       /**
        * The resource type in which you want to log data events.
@@ -4421,8 +4418,7 @@ public open class CfnTrail internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty,
     ) : CdkObject(cdkObject), EventSelectorProperty {
       /**
        * CloudTrail supports data event logging for Amazon S3 objects, AWS Lambda functions, and
@@ -4578,8 +4574,7 @@ public open class CfnTrail internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.InsightSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.InsightSelectorProperty,
     ) : CdkObject(cdkObject), InsightSelectorProperty {
       /**
        * The type of Insights events to log on a trail. `ApiCallRateInsight` and

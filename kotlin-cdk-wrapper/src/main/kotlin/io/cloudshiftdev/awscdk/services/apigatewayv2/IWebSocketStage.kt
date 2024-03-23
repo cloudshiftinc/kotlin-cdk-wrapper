@@ -33,7 +33,7 @@ public interface IWebSocketStage : IStage {
   public fun callbackUrl(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketStage,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketStage,
   ) : CdkObject(cdkObject), IWebSocketStage {
     /**
      * The API this stage is associated to.

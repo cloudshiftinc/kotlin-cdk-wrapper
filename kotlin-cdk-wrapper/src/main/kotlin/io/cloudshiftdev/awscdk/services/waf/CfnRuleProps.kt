@@ -157,7 +157,7 @@ public interface CfnRuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.waf.CfnRuleProps,
+    cdkObject: software.amazon.awscdk.services.waf.CfnRuleProps,
   ) : CdkObject(cdkObject), CfnRuleProps {
     /**
      * The name of the metrics for this `Rule` .

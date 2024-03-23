@@ -128,8 +128,7 @@ public interface CfnIPAMResourceDiscoveryAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociationProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociationProps,
   ) : CdkObject(cdkObject), CfnIPAMResourceDiscoveryAssociationProps {
     /**
      * The IPAM ID.

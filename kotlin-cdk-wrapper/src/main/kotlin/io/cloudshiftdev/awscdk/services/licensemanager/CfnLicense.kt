@@ -79,8 +79,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html)
  */
-public open class CfnLicense internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense,
+public open class CfnLicense(
+  cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -746,7 +746,8 @@ public open class CfnLicense internal constructor(
         CfnLicense = CfnLicense(cdkObject)
 
     internal fun unwrap(wrapped: CfnLicense):
-        software.amazon.awscdk.services.licensemanager.CfnLicense = wrapped.cdkObject
+        software.amazon.awscdk.services.licensemanager.CfnLicense = wrapped.cdkObject as
+        software.amazon.awscdk.services.licensemanager.CfnLicense
   }
 
   /**
@@ -835,8 +836,7 @@ public open class CfnLicense internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.BorrowConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.BorrowConfigurationProperty,
     ) : CdkObject(cdkObject), BorrowConfigurationProperty {
       /**
        * Indicates whether early check-ins are allowed.
@@ -1032,8 +1032,7 @@ public open class CfnLicense internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty,
     ) : CdkObject(cdkObject), ConsumptionConfigurationProperty {
       /**
        * Details about a borrow configuration.
@@ -1261,8 +1260,7 @@ public open class CfnLicense internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty,
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty,
     ) : CdkObject(cdkObject), EntitlementProperty {
       /**
        * Indicates whether check-ins are allowed.
@@ -1410,8 +1408,7 @@ public open class CfnLicense internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty,
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty,
     ) : CdkObject(cdkObject), IssuerDataProperty {
       /**
        * Issuer name.
@@ -1521,8 +1518,7 @@ public open class CfnLicense internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty,
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty,
     ) : CdkObject(cdkObject), MetadataProperty {
       /**
        * The key name.
@@ -1612,8 +1608,7 @@ public open class CfnLicense internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty,
     ) : CdkObject(cdkObject), ProvisionalConfigurationProperty {
       /**
        * Maximum time for the provisional configuration, in minutes.
@@ -1715,8 +1710,7 @@ public open class CfnLicense internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty,
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty,
     ) : CdkObject(cdkObject), ValidityDateFormatProperty {
       /**
        * Start of the time range.

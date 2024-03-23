@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-landingzone.html)
  */
-public open class CfnLandingZone internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.controltower.CfnLandingZone,
+public open class CfnLandingZone(
+  cdkObject: software.amazon.awscdk.services.controltower.CfnLandingZone,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -105,12 +105,12 @@ public open class CfnLandingZone internal constructor(
   }
 
   /**
-   * The landing zone `manifest.yaml` text file that specifies the landing zone configurations.
+   * The landing zone manifest JSON text file that specifies the landing zone configurations.
    */
   public open fun manifest(): Any = unwrap(this).getManifest()
 
   /**
-   * The landing zone `manifest.yaml` text file that specifies the landing zone configurations.
+   * The landing zone manifest JSON text file that specifies the landing zone configurations.
    */
   public open fun manifest(`value`: Any) {
     unwrap(this).setManifest(`value`)
@@ -151,10 +151,10 @@ public open class CfnLandingZone internal constructor(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The landing zone `manifest.yaml` text file that specifies the landing zone configurations.
+     * The landing zone manifest JSON text file that specifies the landing zone configurations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-landingzone.html#cfn-controltower-landingzone-manifest)
-     * @param manifest The landing zone `manifest.yaml` text file that specifies the landing zone
+     * @param manifest The landing zone manifest JSON text file that specifies the landing zone
      * configurations. 
      */
     public fun manifest(manifest: Any)
@@ -192,10 +192,10 @@ public open class CfnLandingZone internal constructor(
         software.amazon.awscdk.services.controltower.CfnLandingZone.Builder.create(scope, id)
 
     /**
-     * The landing zone `manifest.yaml` text file that specifies the landing zone configurations.
+     * The landing zone manifest JSON text file that specifies the landing zone configurations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-landingzone.html#cfn-controltower-landingzone-manifest)
-     * @param manifest The landing zone `manifest.yaml` text file that specifies the landing zone
+     * @param manifest The landing zone manifest JSON text file that specifies the landing zone
      * configurations. 
      */
     override fun manifest(manifest: Any) {
@@ -251,6 +251,7 @@ public open class CfnLandingZone internal constructor(
         CfnLandingZone = CfnLandingZone(cdkObject)
 
     internal fun unwrap(wrapped: CfnLandingZone):
-        software.amazon.awscdk.services.controltower.CfnLandingZone = wrapped.cdkObject
+        software.amazon.awscdk.services.controltower.CfnLandingZone = wrapped.cdkObject as
+        software.amazon.awscdk.services.controltower.CfnLandingZone
   }
 }

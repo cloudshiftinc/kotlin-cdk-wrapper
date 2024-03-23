@@ -114,7 +114,7 @@ public interface PublicKeyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.PublicKeyProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.PublicKeyProps,
   ) : CdkObject(cdkObject), PublicKeyProps {
     /**
      * A comment to describe the public key.

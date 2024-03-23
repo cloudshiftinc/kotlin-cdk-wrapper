@@ -111,8 +111,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html)
  */
-public open class CfnCanary internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary,
+public open class CfnCanary(
+  cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1307,7 +1307,7 @@ public open class CfnCanary internal constructor(
         CfnCanary(cdkObject)
 
     internal fun unwrap(wrapped: CfnCanary): software.amazon.awscdk.services.synthetics.CfnCanary =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.synthetics.CfnCanary
   }
 
   /**
@@ -1436,8 +1436,7 @@ public open class CfnCanary internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty,
+      cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty,
     ) : CdkObject(cdkObject), ArtifactConfigProperty {
       /**
        * A structure that contains the configuration of the encryption-at-rest settings for
@@ -1591,8 +1590,7 @@ public open class CfnCanary internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.synthetics.CfnCanary.BaseScreenshotProperty,
+      cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.BaseScreenshotProperty,
     ) : CdkObject(cdkObject), BaseScreenshotProperty {
       /**
        * Coordinates that define the part of a screen to ignore during screenshot comparisons.
@@ -1830,7 +1828,7 @@ public open class CfnCanary internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty,
+      cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty,
     ) : CdkObject(cdkObject), CodeProperty {
       /**
        * The entry point to use for the source code when running the canary.
@@ -2161,8 +2159,7 @@ public open class CfnCanary internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.synthetics.CfnCanary.RunConfigProperty,
+      cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.RunConfigProperty,
     ) : CdkObject(cdkObject), RunConfigProperty {
       /**
        * Specifies whether this canary is to use active AWS X-Ray tracing when it runs.
@@ -2333,8 +2330,7 @@ public open class CfnCanary internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty,
     ) : CdkObject(cdkObject), S3EncryptionProperty {
       /**
        * The encryption method to use for artifacts created by this canary.
@@ -2507,7 +2503,7 @@ public open class CfnCanary internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty,
     ) : CdkObject(cdkObject), ScheduleProperty {
       /**
        * How long, in seconds, for the canary to continue making regular runs according to the
@@ -2681,8 +2677,7 @@ public open class CfnCanary internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.synthetics.CfnCanary.VPCConfigProperty,
+      cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.VPCConfigProperty,
     ) : CdkObject(cdkObject), VPCConfigProperty {
       /**
        * The IDs of the security groups for this canary.
@@ -2861,8 +2856,7 @@ public open class CfnCanary internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty,
+      cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty,
     ) : CdkObject(cdkObject), VisualReferenceProperty {
       /**
        * Specifies which canary run to use the screenshots from as the baseline for future visual

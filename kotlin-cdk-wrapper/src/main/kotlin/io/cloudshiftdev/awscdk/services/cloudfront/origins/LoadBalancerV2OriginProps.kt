@@ -266,8 +266,7 @@ public interface LoadBalancerV2OriginProps : HttpOriginProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2OriginProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2OriginProps,
   ) : CdkObject(cdkObject), LoadBalancerV2OriginProps {
     /**
      * The number of times that CloudFront attempts to connect to the origin;

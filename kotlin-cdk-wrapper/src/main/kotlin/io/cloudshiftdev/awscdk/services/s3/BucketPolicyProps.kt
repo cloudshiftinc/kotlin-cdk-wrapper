@@ -76,7 +76,7 @@ public interface BucketPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.BucketPolicyProps,
+    cdkObject: software.amazon.awscdk.services.s3.BucketPolicyProps,
   ) : CdkObject(cdkObject), BucketPolicyProps {
     /**
      * The Amazon S3 bucket that the policy applies to.

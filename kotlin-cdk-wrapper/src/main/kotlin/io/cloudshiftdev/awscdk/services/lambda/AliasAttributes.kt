@@ -71,7 +71,7 @@ public interface AliasAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.AliasAttributes,
+    cdkObject: software.amazon.awscdk.services.lambda.AliasAttributes,
   ) : CdkObject(cdkObject), AliasAttributes {
     /**
      *

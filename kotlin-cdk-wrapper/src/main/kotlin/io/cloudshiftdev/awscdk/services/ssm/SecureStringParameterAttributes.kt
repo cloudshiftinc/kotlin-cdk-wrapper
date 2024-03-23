@@ -145,7 +145,7 @@ public interface SecureStringParameterAttributes : CommonStringParameterAttribut
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.SecureStringParameterAttributes,
+    cdkObject: software.amazon.awscdk.services.ssm.SecureStringParameterAttributes,
   ) : CdkObject(cdkObject), SecureStringParameterAttributes {
     /**
      * The encryption key that is used to encrypt this parameter.

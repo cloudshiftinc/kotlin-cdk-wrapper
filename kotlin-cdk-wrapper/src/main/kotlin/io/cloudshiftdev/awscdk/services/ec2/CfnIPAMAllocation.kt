@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamallocation.html)
  */
-public open class CfnIPAMAllocation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMAllocation,
+public open class CfnIPAMAllocation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMAllocation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -262,6 +262,7 @@ public open class CfnIPAMAllocation internal constructor(
         CfnIPAMAllocation = CfnIPAMAllocation(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAMAllocation):
-        software.amazon.awscdk.services.ec2.CfnIPAMAllocation = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnIPAMAllocation = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnIPAMAllocation
   }
 }

@@ -82,8 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-fargateprofile.html)
  */
-public open class CfnFargateProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfile,
+public open class CfnFargateProfile(
+  cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -482,7 +482,8 @@ public open class CfnFargateProfile internal constructor(
         CfnFargateProfile = CfnFargateProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnFargateProfile):
-        software.amazon.awscdk.services.eks.CfnFargateProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.eks.CfnFargateProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.eks.CfnFargateProfile
   }
 
   /**
@@ -557,7 +558,7 @@ public open class CfnFargateProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfile.LabelProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfile.LabelProperty,
     ) : CdkObject(cdkObject), LabelProperty {
       /**
        * Enter a key.
@@ -704,8 +705,7 @@ public open class CfnFargateProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnFargateProfile.SelectorProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfile.SelectorProperty,
     ) : CdkObject(cdkObject), SelectorProperty {
       /**
        * The Kubernetes labels that the selector should match.

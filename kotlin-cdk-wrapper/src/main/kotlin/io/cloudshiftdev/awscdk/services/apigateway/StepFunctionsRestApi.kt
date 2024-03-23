@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class StepFunctionsRestApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.StepFunctionsRestApi,
+public open class StepFunctionsRestApi(
+  cdkObject: software.amazon.awscdk.services.apigateway.StepFunctionsRestApi,
 ) : RestApi(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1240,6 +1240,7 @@ public open class StepFunctionsRestApi internal constructor(
         StepFunctionsRestApi = StepFunctionsRestApi(cdkObject)
 
     internal fun unwrap(wrapped: StepFunctionsRestApi):
-        software.amazon.awscdk.services.apigateway.StepFunctionsRestApi = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.StepFunctionsRestApi = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.StepFunctionsRestApi
   }
 }

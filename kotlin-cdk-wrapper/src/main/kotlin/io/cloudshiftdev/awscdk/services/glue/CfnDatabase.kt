@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html)
  */
-public open class CfnDatabase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnDatabase,
+public open class CfnDatabase(
+  cdkObject: software.amazon.awscdk.services.glue.CfnDatabase,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -250,7 +250,7 @@ public open class CfnDatabase internal constructor(
         CfnDatabase(cdkObject)
 
     internal fun unwrap(wrapped: CfnDatabase): software.amazon.awscdk.services.glue.CfnDatabase =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnDatabase
   }
 
   /**
@@ -306,8 +306,7 @@ public open class CfnDatabase internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty,
     ) : CdkObject(cdkObject), DataLakePrincipalProperty {
       /**
        * An identifier for the AWS Lake Formation principal.
@@ -429,8 +428,7 @@ public open class CfnDatabase internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty,
     ) : CdkObject(cdkObject), DatabaseIdentifierProperty {
       /**
        * The ID of the Data Catalog in which the database resides.
@@ -766,8 +764,7 @@ public open class CfnDatabase internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseInputProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DatabaseInputProperty,
     ) : CdkObject(cdkObject), DatabaseInputProperty {
       /**
        * Creates a set of default permissions on the table for principals.
@@ -915,8 +912,7 @@ public open class CfnDatabase internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDatabase.FederatedDatabaseProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.FederatedDatabaseProperty,
     ) : CdkObject(cdkObject), FederatedDatabaseProperty {
       /**
        * The name of the connection to the external metastore.
@@ -1063,8 +1059,7 @@ public open class CfnDatabase internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDatabase.PrincipalPrivilegesProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.PrincipalPrivilegesProperty,
     ) : CdkObject(cdkObject), PrincipalPrivilegesProperty {
       /**
        * The permissions that are granted to the principal.

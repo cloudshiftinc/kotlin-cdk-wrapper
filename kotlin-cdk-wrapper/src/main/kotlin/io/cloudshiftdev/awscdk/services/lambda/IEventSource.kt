@@ -17,7 +17,7 @@ public interface IEventSource {
   public fun bind(target: IFunction)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.IEventSource,
+    cdkObject: software.amazon.awscdk.services.lambda.IEventSource,
   ) : CdkObject(cdkObject), IEventSource {
     /**
      * Called by `lambda.addEventSource` to allow the event source to bind to this function.

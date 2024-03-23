@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class MetricFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.MetricFilter,
+public open class MetricFilter(
+  cdkObject: software.amazon.awscdk.services.logs.MetricFilter,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -302,6 +302,6 @@ public open class MetricFilter internal constructor(
         MetricFilter(cdkObject)
 
     internal fun unwrap(wrapped: MetricFilter): software.amazon.awscdk.services.logs.MetricFilter =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.logs.MetricFilter
   }
 }

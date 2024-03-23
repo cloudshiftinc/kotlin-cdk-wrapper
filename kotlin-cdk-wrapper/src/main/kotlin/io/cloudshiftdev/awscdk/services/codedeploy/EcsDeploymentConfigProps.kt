@@ -76,7 +76,7 @@ public interface EcsDeploymentConfigProps : BaseDeploymentConfigOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentConfigProps,
+    cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentConfigProps,
   ) : CdkObject(cdkObject), EcsDeploymentConfigProps {
     /**
      * The physical, human-readable name of the Deployment Configuration.

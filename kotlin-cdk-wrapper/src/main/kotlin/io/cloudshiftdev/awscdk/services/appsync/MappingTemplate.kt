@@ -28,8 +28,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public abstract class MappingTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.MappingTemplate,
+public abstract class MappingTemplate(
+  cdkObject: software.amazon.awscdk.services.appsync.MappingTemplate,
 ) : CdkObject(cdkObject) {
   /**
    * this is called to render the mapping template to a VTL string.
@@ -37,7 +37,7 @@ public abstract class MappingTemplate internal constructor(
   public open fun renderTemplate(): String = unwrap(this).renderTemplate()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.MappingTemplate,
+    cdkObject: software.amazon.awscdk.services.appsync.MappingTemplate,
   ) : MappingTemplate(cdkObject)
 
   public companion object {

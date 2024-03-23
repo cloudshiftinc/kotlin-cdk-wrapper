@@ -431,8 +431,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-datasource.html)
  */
-public open class CfnDataSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource,
+public open class CfnDataSource(
+  cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1065,7 +1065,8 @@ public open class CfnDataSource internal constructor(
         CfnDataSource = CfnDataSource(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataSource):
-        software.amazon.awscdk.services.kendra.CfnDataSource = wrapped.cdkObject
+        software.amazon.awscdk.services.kendra.CfnDataSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.kendra.CfnDataSource
   }
 
   /**
@@ -1123,8 +1124,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.AccessControlListConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.AccessControlListConfigurationProperty,
     ) : CdkObject(cdkObject), AccessControlListConfigurationProperty {
       /**
        * Path to the AWS S3 bucket that contains the access control list files.
@@ -1220,8 +1220,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.AclConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.AclConfigurationProperty,
     ) : CdkObject(cdkObject), AclConfigurationProperty {
       /**
        * A list of groups, separated by semi-colons, that filters a query response based on user
@@ -1452,8 +1451,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ColumnConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ColumnConfigurationProperty,
     ) : CdkObject(cdkObject), ColumnConfigurationProperty {
       /**
        * One to five columns that indicate when a document in the database has changed.
@@ -1686,8 +1684,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceAttachmentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceAttachmentConfigurationProperty,
     ) : CdkObject(cdkObject), ConfluenceAttachmentConfigurationProperty {
       /**
        * Maps attributes or field names of Confluence attachments to Amazon Kendra index field
@@ -1850,8 +1847,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceAttachmentToIndexFieldMappingProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceAttachmentToIndexFieldMappingProperty,
     ) : CdkObject(cdkObject), ConfluenceAttachmentToIndexFieldMappingProperty {
       /**
        * The name of the field in the data source.
@@ -2043,8 +2039,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogConfigurationProperty,
     ) : CdkObject(cdkObject), ConfluenceBlogConfigurationProperty {
       /**
        * Maps attributes or field names of Confluence blogs to Amazon Kendra index field names.
@@ -2195,8 +2190,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogToIndexFieldMappingProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogToIndexFieldMappingProperty,
     ) : CdkObject(cdkObject), ConfluenceBlogToIndexFieldMappingProperty {
       /**
        * The name of the field in the data source.
@@ -2783,8 +2777,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceConfigurationProperty,
     ) : CdkObject(cdkObject), ConfluenceConfigurationProperty {
       /**
        * Configuration information for indexing attachments to Confluence blogs and pages.
@@ -3040,8 +3033,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageConfigurationProperty,
     ) : CdkObject(cdkObject), ConfluencePageConfigurationProperty {
       /**
        * Maps attributes or field names of Confluence pages to Amazon Kendra index field names.
@@ -3192,8 +3184,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageToIndexFieldMappingProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageToIndexFieldMappingProperty,
     ) : CdkObject(cdkObject), ConfluencePageToIndexFieldMappingProperty {
       /**
        * The name of the field in the data source.
@@ -3559,8 +3550,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceConfigurationProperty,
     ) : CdkObject(cdkObject), ConfluenceSpaceConfigurationProperty {
       /**
        * `TRUE` to index archived spaces.
@@ -3752,8 +3742,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceToIndexFieldMappingProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceToIndexFieldMappingProperty,
     ) : CdkObject(cdkObject), ConfluenceSpaceToIndexFieldMappingProperty {
       /**
        * The name of the field in the data source.
@@ -3958,8 +3947,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ConnectionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConnectionConfigurationProperty,
     ) : CdkObject(cdkObject), ConnectionConfigurationProperty {
       /**
        * The name of the host for the database.
@@ -4383,8 +4371,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.CustomDocumentEnrichmentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.CustomDocumentEnrichmentConfigurationProperty,
     ) : CdkObject(cdkObject), CustomDocumentEnrichmentConfigurationProperty {
       /**
        * Configuration information to alter document attributes or metadata fields and content when
@@ -5488,8 +5475,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceConfigurationProperty,
     ) : CdkObject(cdkObject), DataSourceConfigurationProperty {
       /**
        * Provides the configuration information to connect to Confluence as your data source.
@@ -5717,8 +5703,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceToIndexFieldMappingProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceToIndexFieldMappingProperty,
     ) : CdkObject(cdkObject), DataSourceToIndexFieldMappingProperty {
       /**
        * The name of the field in the data source.
@@ -5881,8 +5866,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceVpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceVpcConfigurationProperty,
     ) : CdkObject(cdkObject), DataSourceVpcConfigurationProperty {
       /**
        * A list of identifiers of security groups within your Amazon VPC.
@@ -6272,8 +6256,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.DatabaseConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DatabaseConfigurationProperty,
     ) : CdkObject(cdkObject), DatabaseConfigurationProperty {
       /**
        * Information about the database column that provides information for user context filtering.
@@ -6518,8 +6501,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeConditionProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeConditionProperty,
     ) : CdkObject(cdkObject), DocumentAttributeConditionProperty {
       /**
        * The identifier of the document attribute used for the condition.
@@ -6776,8 +6758,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeTargetProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeTargetProperty,
     ) : CdkObject(cdkObject), DocumentAttributeTargetProperty {
       /**
        * The identifier of the target document attribute or metadata field.
@@ -6974,8 +6955,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeValueProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeValueProperty,
     ) : CdkObject(cdkObject), DocumentAttributeValueProperty {
       /**
        * A date expressed as an ISO 8601 string.
@@ -7096,8 +7076,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.DocumentsMetadataConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DocumentsMetadataConfigurationProperty,
     ) : CdkObject(cdkObject), DocumentsMetadataConfigurationProperty {
       /**
        * A prefix used to filter metadata configuration files in the AWS S3 bucket.
@@ -7516,8 +7495,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.GoogleDriveConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.GoogleDriveConfigurationProperty,
     ) : CdkObject(cdkObject), GoogleDriveConfigurationProperty {
       /**
        * A list of MIME types to exclude from the index. All documents matching the specified MIME
@@ -7804,8 +7782,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.HookConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.HookConfigurationProperty,
     ) : CdkObject(cdkObject), HookConfigurationProperty {
       /**
        * The condition used for when a Lambda function should be invoked.
@@ -8074,8 +8051,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.InlineCustomDocumentEnrichmentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.InlineCustomDocumentEnrichmentConfigurationProperty,
     ) : CdkObject(cdkObject), InlineCustomDocumentEnrichmentConfigurationProperty {
       /**
        * Configuration of the condition used for the target document attribute or metadata field
@@ -8501,8 +8477,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveConfigurationProperty,
     ) : CdkObject(cdkObject), OneDriveConfigurationProperty {
       /**
        * `TRUE` to disable local groups information.
@@ -8732,8 +8707,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveUsersProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveUsersProperty,
     ) : CdkObject(cdkObject), OneDriveUsersProperty {
       /**
        * A list of users whose documents should be indexed.
@@ -8894,8 +8868,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ProxyConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ProxyConfigurationProperty,
     ) : CdkObject(cdkObject), ProxyConfigurationProperty {
       /**
        * Your secret ARN, which you can create in [AWS Secrets
@@ -9029,8 +9002,8 @@ public open class CfnDataSource internal constructor(
      * takes precendence and the document is not indexed. Examples of glob patterns include:
      *
      * * `/myapp/config/ *` - All files inside config directory
-     * * `/ ** / *.png` - All .png files in all directories
-     * * `/ ** / *.{png,ico,md}` - All .png, .ico or .md files in all directories
+     * * `** / *.png` - All .png files in all directories
+     * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
      * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
      * * `** /!(*.module).ts` - All .ts files but not .module.ts
      * * **.png , *.jpg* excludes all PNG and JPEG image files in a directory (files with the
@@ -9058,8 +9031,8 @@ public open class CfnDataSource internal constructor(
      * takes precendence and the document is not indexed. Examples of glob patterns include:
      *
      * * `/myapp/config/ *` - All files inside config directory
-     * * `/ ** / *.png` - All .png files in all directories
-     * * `/ ** / *.{png,ico,md}` - All .png, .ico or .md files in all directories
+     * * `** / *.png` - All .png files in all directories
+     * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
      * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
      * * `** /!(*.module).ts` - All .ts files but not .module.ts
      * * **.png , *.jpg* includes all PNG and JPEG image files in a directory (files with the
@@ -9160,8 +9133,8 @@ public open class CfnDataSource internal constructor(
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
        * * `/myapp/config/ *` - All files inside config directory
-       * * `/ ** / *.png` - All .png files in all directories
-       * * `/ ** / *.{png,ico,md}` - All .png, .ico or .md files in all directories
+       * * `** / *.png` - All .png files in all directories
+       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
        * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
        * * `** /!(*.module).ts` - All .ts files but not .module.ts
        * * **.png , *.jpg* excludes all PNG and JPEG image files in a directory (files with the
@@ -9185,8 +9158,8 @@ public open class CfnDataSource internal constructor(
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
        * * `/myapp/config/ *` - All files inside config directory
-       * * `/ ** / *.png` - All .png files in all directories
-       * * `/ ** / *.{png,ico,md}` - All .png, .ico or .md files in all directories
+       * * `** / *.png` - All .png files in all directories
+       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
        * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
        * * `** /!(*.module).ts` - All .ts files but not .module.ts
        * * **.png , *.jpg* excludes all PNG and JPEG image files in a directory (files with the
@@ -9210,8 +9183,8 @@ public open class CfnDataSource internal constructor(
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
        * * `/myapp/config/ *` - All files inside config directory
-       * * `/ ** / *.png` - All .png files in all directories
-       * * `/ ** / *.{png,ico,md}` - All .png, .ico or .md files in all directories
+       * * `** / *.png` - All .png files in all directories
+       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
        * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
        * * `** /!(*.module).ts` - All .ts files but not .module.ts
        * * **.png , *.jpg* includes all PNG and JPEG image files in a directory (files with the
@@ -9235,8 +9208,8 @@ public open class CfnDataSource internal constructor(
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
        * * `/myapp/config/ *` - All files inside config directory
-       * * `/ ** / *.png` - All .png files in all directories
-       * * `/ ** / *.{png,ico,md}` - All .png, .ico or .md files in all directories
+       * * `** / *.png` - All .png files in all directories
+       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
        * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
        * * `** /!(*.module).ts` - All .ts files but not .module.ts
        * * **.png , *.jpg* includes all PNG and JPEG image files in a directory (files with the
@@ -9354,8 +9327,8 @@ public open class CfnDataSource internal constructor(
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
        * * `/myapp/config/ *` - All files inside config directory
-       * * `/ ** / *.png` - All .png files in all directories
-       * * `/ ** / *.{png,ico,md}` - All .png, .ico or .md files in all directories
+       * * `** / *.png` - All .png files in all directories
+       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
        * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
        * * `** /!(*.module).ts` - All .ts files but not .module.ts
        * * **.png , *.jpg* excludes all PNG and JPEG image files in a directory (files with the
@@ -9381,8 +9354,8 @@ public open class CfnDataSource internal constructor(
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
        * * `/myapp/config/ *` - All files inside config directory
-       * * `/ ** / *.png` - All .png files in all directories
-       * * `/ ** / *.{png,ico,md}` - All .png, .ico or .md files in all directories
+       * * `** / *.png` - All .png files in all directories
+       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
        * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
        * * `** /!(*.module).ts` - All .ts files but not .module.ts
        * * **.png , *.jpg* excludes all PNG and JPEG image files in a directory (files with the
@@ -9407,8 +9380,8 @@ public open class CfnDataSource internal constructor(
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
        * * `/myapp/config/ *` - All files inside config directory
-       * * `/ ** / *.png` - All .png files in all directories
-       * * `/ ** / *.{png,ico,md}` - All .png, .ico or .md files in all directories
+       * * `** / *.png` - All .png files in all directories
+       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
        * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
        * * `** /!(*.module).ts` - All .ts files but not .module.ts
        * * **.png , *.jpg* includes all PNG and JPEG image files in a directory (files with the
@@ -9434,8 +9407,8 @@ public open class CfnDataSource internal constructor(
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
        * * `/myapp/config/ *` - All files inside config directory
-       * * `/ ** / *.png` - All .png files in all directories
-       * * `/ ** / *.{png,ico,md}` - All .png, .ico or .md files in all directories
+       * * `** / *.png` - All .png files in all directories
+       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
        * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
        * * `** /!(*.module).ts` - All .ts files but not .module.ts
        * * **.png , *.jpg* includes all PNG and JPEG image files in a directory (files with the
@@ -9473,8 +9446,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.S3DataSourceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.S3DataSourceConfigurationProperty,
     ) : CdkObject(cdkObject), S3DataSourceConfigurationProperty {
       /**
        * Provides the path to the S3 bucket that contains the user context filtering files for the
@@ -9515,8 +9487,8 @@ public open class CfnDataSource internal constructor(
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
        * * `/myapp/config/ *` - All files inside config directory
-       * * `/ ** / *.png` - All .png files in all directories
-       * * `/ ** / *.{png,ico,md}` - All .png, .ico or .md files in all directories
+       * * `** / *.png` - All .png files in all directories
+       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
        * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
        * * `** /!(*.module).ts` - All .ts files but not .module.ts
        * * **.png , *.jpg* excludes all PNG and JPEG image files in a directory (files with the
@@ -9544,8 +9516,8 @@ public open class CfnDataSource internal constructor(
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
        * * `/myapp/config/ *` - All files inside config directory
-       * * `/ ** / *.png` - All .png files in all directories
-       * * `/ ** / *.{png,ico,md}` - All .png, .ico or .md files in all directories
+       * * `** / *.png` - All .png files in all directories
+       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
        * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
        * * `** /!(*.module).ts` - All .ts files but not .module.ts
        * * **.png , *.jpg* includes all PNG and JPEG image files in a directory (files with the
@@ -9664,7 +9636,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.S3PathProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.S3PathProperty,
     ) : CdkObject(cdkObject), S3PathProperty {
       /**
        * The name of the S3 bucket that contains the file.
@@ -9892,8 +9864,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceChatterFeedConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceChatterFeedConfigurationProperty,
     ) : CdkObject(cdkObject), SalesforceChatterFeedConfigurationProperty {
       /**
        * The name of the column in the Salesforce FeedItem table that contains the content to index.
@@ -10515,8 +10486,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceConfigurationProperty,
     ) : CdkObject(cdkObject), SalesforceConfigurationProperty {
       /**
        * Configuration information for Salesforce chatter feeds.
@@ -10818,8 +10788,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceCustomKnowledgeArticleTypeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceCustomKnowledgeArticleTypeConfigurationProperty,
     ) : CdkObject(cdkObject), SalesforceCustomKnowledgeArticleTypeConfigurationProperty {
       /**
        * The name of the field in the custom knowledge article that contains the document data to
@@ -11097,8 +11066,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceKnowledgeArticleConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceKnowledgeArticleConfigurationProperty,
     ) : CdkObject(cdkObject), SalesforceKnowledgeArticleConfigurationProperty {
       /**
        * Configuration information for custom Salesforce knowledge articles.
@@ -11308,8 +11276,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardKnowledgeArticleTypeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardKnowledgeArticleTypeConfigurationProperty,
     ) : CdkObject(cdkObject), SalesforceStandardKnowledgeArticleTypeConfigurationProperty {
       /**
        * The name of the field that contains the document data to index.
@@ -11469,8 +11436,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty,
     ) : CdkObject(cdkObject), SalesforceStandardObjectAttachmentConfigurationProperty {
       /**
        * The name of the field used for the document title.
@@ -11690,8 +11656,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectConfigurationProperty,
     ) : CdkObject(cdkObject), SalesforceStandardObjectConfigurationProperty {
       /**
        * The name of the field in the standard object table that contains the document contents.
@@ -12056,8 +12021,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowConfigurationProperty,
     ) : CdkObject(cdkObject), ServiceNowConfigurationProperty {
       /**
        * The type of authentication used to connect to the ServiceNow instance.
@@ -12480,8 +12444,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowKnowledgeArticleConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowKnowledgeArticleConfigurationProperty,
     ) : CdkObject(cdkObject), ServiceNowKnowledgeArticleConfigurationProperty {
       /**
        * `TRUE` to index attachments to knowledge articles.
@@ -12899,8 +12862,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowServiceCatalogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowServiceCatalogConfigurationProperty,
     ) : CdkObject(cdkObject), ServiceNowServiceCatalogConfigurationProperty {
       /**
        * `TRUE` to index attachments to service catalog items.
@@ -13548,8 +13510,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.SharePointConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SharePointConfigurationProperty,
     ) : CdkObject(cdkObject), SharePointConfigurationProperty {
       /**
        * `TRUE` to index document attachments.
@@ -13775,8 +13736,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.SqlConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SqlConfigurationProperty,
     ) : CdkObject(cdkObject), SqlConfigurationProperty {
       /**
        * Determines whether Amazon Kendra encloses SQL identifiers for tables and column names in
@@ -13870,8 +13830,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.TemplateConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.TemplateConfigurationProperty,
     ) : CdkObject(cdkObject), TemplateConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-templateconfiguration.html#cfn-kendra-datasource-templateconfiguration-template)
@@ -13994,8 +13953,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerAuthenticationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerAuthenticationConfigurationProperty,
     ) : CdkObject(cdkObject), WebCrawlerAuthenticationConfigurationProperty {
       /**
        * The list of configuration information that's required to connect to and crawl a website
@@ -14148,8 +14106,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerBasicAuthenticationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerBasicAuthenticationProperty,
     ) : CdkObject(cdkObject), WebCrawlerBasicAuthenticationProperty {
       /**
        * Your secret ARN, which you can create in [AWS Secrets
@@ -14847,8 +14804,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerConfigurationProperty,
     ) : CdkObject(cdkObject), WebCrawlerConfigurationProperty {
       /**
        * Configuration information required to connect to websites using authentication.
@@ -15115,8 +15071,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSeedUrlConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSeedUrlConfigurationProperty,
     ) : CdkObject(cdkObject), WebCrawlerSeedUrlConfigurationProperty {
       /**
        * The list of seed or starting point URLs of the websites you want to crawl.
@@ -15239,8 +15194,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSiteMapsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSiteMapsConfigurationProperty,
     ) : CdkObject(cdkObject), WebCrawlerSiteMapsConfigurationProperty {
       /**
        * The list of sitemap URLs of the websites you want to crawl.
@@ -15488,8 +15442,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerUrlsProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerUrlsProperty,
     ) : CdkObject(cdkObject), WebCrawlerUrlsProperty {
       /**
        * Configuration of the seed or starting point URLs of the websites you want to crawl.
@@ -15896,8 +15849,7 @@ public open class CfnDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnDataSource.WorkDocsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WorkDocsConfigurationProperty,
     ) : CdkObject(cdkObject), WorkDocsConfigurationProperty {
       /**
        * `TRUE` to include comments on documents in your index.

@@ -168,7 +168,7 @@ public interface LinuxParametersProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.LinuxParametersProps,
+    cdkObject: software.amazon.awscdk.services.batch.LinuxParametersProps,
   ) : CdkObject(cdkObject), LinuxParametersProps {
     /**
      * Specifies whether to run an init process inside the container that forwards signals and reaps

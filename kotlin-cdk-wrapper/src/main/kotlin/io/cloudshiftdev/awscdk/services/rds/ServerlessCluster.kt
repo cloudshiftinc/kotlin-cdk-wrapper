@@ -69,8 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class ServerlessCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.ServerlessCluster,
+public open class ServerlessCluster(
+  cdkObject: software.amazon.awscdk.services.rds.ServerlessCluster,
 ) : Resource(cdkObject), IServerlessCluster {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -658,6 +658,7 @@ public open class ServerlessCluster internal constructor(
         ServerlessCluster = ServerlessCluster(cdkObject)
 
     internal fun unwrap(wrapped: ServerlessCluster):
-        software.amazon.awscdk.services.rds.ServerlessCluster = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.ServerlessCluster = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.ServerlessCluster
   }
 }

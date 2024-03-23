@@ -322,7 +322,7 @@ public interface CfnRuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnRuleProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnRuleProps,
   ) : CdkObject(cdkObject), CfnRuleProps {
     /**
      * A list of actions to be run when the rule is triggered.

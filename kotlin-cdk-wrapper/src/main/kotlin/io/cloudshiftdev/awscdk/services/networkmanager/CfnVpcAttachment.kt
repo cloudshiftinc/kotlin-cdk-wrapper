@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html)
  */
-public open class CfnVpcAttachment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment,
+public open class CfnVpcAttachment(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -530,7 +530,8 @@ public open class CfnVpcAttachment internal constructor(
         CfnVpcAttachment = CfnVpcAttachment(cdkObject)
 
     internal fun unwrap(wrapped: CfnVpcAttachment):
-        software.amazon.awscdk.services.networkmanager.CfnVpcAttachment = wrapped.cdkObject
+        software.amazon.awscdk.services.networkmanager.CfnVpcAttachment = wrapped.cdkObject as
+        software.amazon.awscdk.services.networkmanager.CfnVpcAttachment
   }
 
   /**
@@ -645,8 +646,7 @@ public open class CfnVpcAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty,
     ) : CdkObject(cdkObject), ProposedSegmentChangeProperty {
       /**
        * The rule number in the policy document that applies to this change.
@@ -802,8 +802,7 @@ public open class CfnVpcAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty,
     ) : CdkObject(cdkObject), VpcOptionsProperty {
       /**
        * Indicates whether appliance mode is supported.

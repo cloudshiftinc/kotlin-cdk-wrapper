@@ -26,8 +26,8 @@ import software.amazon.awscdk.services.sqs.IQueue as AmazonAwscdkServicesSqsIQue
  * repository.onCommit("onCommit", OnCommitOptions.builder().target(new SqsQueue(queue)).build());
  * ```
  */
-public open class SqsQueue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.targets.SqsQueue,
+public open class SqsQueue(
+  cdkObject: software.amazon.awscdk.services.events.targets.SqsQueue,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue) :
       this(software.amazon.awscdk.services.events.targets.SqsQueue(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap))
@@ -242,6 +242,6 @@ public open class SqsQueue internal constructor(
         = SqsQueue(cdkObject)
 
     internal fun unwrap(wrapped: SqsQueue): software.amazon.awscdk.services.events.targets.SqsQueue
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.events.targets.SqsQueue
   }
 }

@@ -80,8 +80,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policy.html)
  */
-public open class CfnPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy,
+public open class CfnPolicy(
+  cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -289,7 +289,8 @@ public open class CfnPolicy internal constructor(
         CfnPolicy = CfnPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicy):
-        software.amazon.awscdk.services.verifiedpermissions.CfnPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.verifiedpermissions.CfnPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.verifiedpermissions.CfnPolicy
   }
 
   /**
@@ -374,8 +375,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.EntityIdentifierProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.EntityIdentifierProperty,
     ) : CdkObject(cdkObject), EntityIdentifierProperty {
       /**
        * The identifier of an entity.
@@ -609,8 +609,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.PolicyDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.PolicyDefinitionProperty,
     ) : CdkObject(cdkObject), PolicyDefinitionProperty {
       /**
        * A structure that describes a static policy.
@@ -730,8 +729,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.StaticPolicyDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.StaticPolicyDefinitionProperty,
     ) : CdkObject(cdkObject), StaticPolicyDefinitionProperty {
       /**
        * The description of the static policy.
@@ -959,8 +957,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty,
     ) : CdkObject(cdkObject), TemplateLinkedPolicyDefinitionProperty {
       /**
        * The unique identifier of the policy template used to create this policy.

@@ -150,8 +150,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
  */
-public open class CfnPipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline,
+public open class CfnPipeline(
+  cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1140,7 +1140,8 @@ public open class CfnPipeline internal constructor(
         CfnPipeline = CfnPipeline(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipeline):
-        software.amazon.awscdk.services.codepipeline.CfnPipeline = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.CfnPipeline = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.CfnPipeline
   }
 
   /**
@@ -1636,8 +1637,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionDeclarationProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionDeclarationProperty,
     ) : CdkObject(cdkObject), ActionDeclarationProperty {
       /**
        * Specifies the action type and the provider of the action.
@@ -1935,8 +1935,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty,
     ) : CdkObject(cdkObject), ActionTypeIdProperty {
       /**
        * A category defines what kind of action can be taken in the stage, and constrains the
@@ -2159,8 +2158,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty,
     ) : CdkObject(cdkObject), ArtifactStoreMapProperty {
       /**
        * Represents information about the S3 bucket where artifacts are stored for the pipeline.
@@ -2376,8 +2374,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty,
     ) : CdkObject(cdkObject), ArtifactStoreProperty {
       /**
        * The encryption key used to encrypt the data in the artifact store, such as an AWS Key
@@ -2503,8 +2500,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty,
     ) : CdkObject(cdkObject), BlockerDeclarationProperty {
       /**
        * Reserved for future use.
@@ -2644,8 +2640,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty,
     ) : CdkObject(cdkObject), EncryptionKeyProperty {
       /**
        * The ID used to identify the key.
@@ -2796,8 +2791,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty,
     ) : CdkObject(cdkObject), GitBranchFilterCriteriaProperty {
       /**
        * The list of patterns of Git branches that, when a commit is pushed, are to be excluded from
@@ -3032,8 +3026,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty,
     ) : CdkObject(cdkObject), GitConfigurationProperty {
       /**
        * The field where the repository event that will start the pipeline is specified as pull
@@ -3189,8 +3182,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty,
     ) : CdkObject(cdkObject), GitFilePathFilterCriteriaProperty {
       /**
        * The list of patterns of Git repository file paths that, when a commit is pushed, are to be
@@ -3411,8 +3403,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty,
     ) : CdkObject(cdkObject), GitPullRequestFilterProperty {
       /**
        * The field that specifies to filter on branches for the pull request trigger configuration.
@@ -3641,8 +3632,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPushFilterProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPushFilterProperty,
     ) : CdkObject(cdkObject), GitPushFilterProperty {
       /**
        * The field that specifies to filter on branches for the push trigger configuration.
@@ -3791,8 +3781,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty,
     ) : CdkObject(cdkObject), GitTagFilterCriteriaProperty {
       /**
        * The list of patterns of Git tags that, when pushed, are to be excluded from starting the
@@ -3910,8 +3899,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty,
     ) : CdkObject(cdkObject), InputArtifactProperty {
       /**
        * The name of the artifact to be worked on (for example, "My App").
@@ -4021,8 +4009,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty,
     ) : CdkObject(cdkObject), OutputArtifactProperty {
       /**
        * The name of the output of an artifact, such as "My App".
@@ -4205,8 +4192,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty,
     ) : CdkObject(cdkObject), PipelineTriggerDeclarationProperty {
       /**
        * Provides the filter criteria and the source stage for the repository event that starts the
@@ -4407,8 +4393,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty,
     ) : CdkObject(cdkObject), StageDeclarationProperty {
       /**
        * The actions included in a stage.
@@ -4534,8 +4519,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty,
     ) : CdkObject(cdkObject), StageTransitionProperty {
       /**
        * The reason given to the user that a stage is disabled, such as waiting for manual approval
@@ -4676,8 +4660,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.VariableDeclarationProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.VariableDeclarationProperty,
     ) : CdkObject(cdkObject), VariableDeclarationProperty {
       /**
        * The value of a pipeline-level variable.

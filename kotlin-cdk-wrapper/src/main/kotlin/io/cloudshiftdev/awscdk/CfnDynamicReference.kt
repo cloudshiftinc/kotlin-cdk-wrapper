@@ -19,8 +19,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
  */
-public open class CfnDynamicReference internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnDynamicReference,
+public open class CfnDynamicReference(
+  cdkObject: software.amazon.awscdk.CfnDynamicReference,
 ) : Intrinsic(cdkObject) {
   public constructor(service: CfnDynamicReferenceService, key: String) :
       this(software.amazon.awscdk.CfnDynamicReference(service.let(CfnDynamicReferenceService::unwrap),
@@ -32,6 +32,6 @@ public open class CfnDynamicReference internal constructor(
         CfnDynamicReference(cdkObject)
 
     internal fun unwrap(wrapped: CfnDynamicReference): software.amazon.awscdk.CfnDynamicReference =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.CfnDynamicReference
   }
 }

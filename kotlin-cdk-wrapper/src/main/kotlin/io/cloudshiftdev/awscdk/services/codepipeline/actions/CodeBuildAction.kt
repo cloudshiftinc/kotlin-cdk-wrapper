@@ -66,9 +66,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public open class CodeBuildAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.CodeBuildAction,
+public open class CodeBuildAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeBuildAction,
 ) : Action(cdkObject) {
   public constructor(props: CodeBuildActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.CodeBuildAction(props.let(CodeBuildActionProps::unwrap))
@@ -514,6 +513,7 @@ public open class CodeBuildAction internal constructor(
         CodeBuildAction = CodeBuildAction(cdkObject)
 
     internal fun unwrap(wrapped: CodeBuildAction):
-        software.amazon.awscdk.services.codepipeline.actions.CodeBuildAction = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.actions.CodeBuildAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.CodeBuildAction
   }
 }

@@ -89,8 +89,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html)
  */
-public open class CfnAlarm internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm,
+public open class CfnAlarm(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -531,9 +531,6 @@ public open class CfnAlarm internal constructor(
      *
      * The specified statistic value is used as the first operand.
      *
-     * You can specify the following values: `GreaterThanThreshold` ,
-     * `GreaterThanOrEqualToThreshold` , `LessThanThreshold` , or `LessThanOrEqualToThreshold` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-comparisonoperator)
      * @param comparisonOperator The arithmetic operation to use when comparing the specified
      * statistic and threshold. 
@@ -938,9 +935,6 @@ public open class CfnAlarm internal constructor(
      *
      * The specified statistic value is used as the first operand.
      *
-     * You can specify the following values: `GreaterThanThreshold` ,
-     * `GreaterThanOrEqualToThreshold` , `LessThanThreshold` , or `LessThanOrEqualToThreshold` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-comparisonoperator)
      * @param comparisonOperator The arithmetic operation to use when comparing the specified
      * statistic and threshold. 
@@ -1299,7 +1293,7 @@ public open class CfnAlarm internal constructor(
         CfnAlarm(cdkObject)
 
     internal fun unwrap(wrapped: CfnAlarm): software.amazon.awscdk.services.cloudwatch.CfnAlarm =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudwatch.CfnAlarm
   }
 
   /**
@@ -1381,7 +1375,7 @@ public open class CfnAlarm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty,
     ) : CdkObject(cdkObject), DimensionProperty {
       /**
        * The name of the dimension, from 1–255 characters in length.
@@ -1786,8 +1780,7 @@ public open class CfnAlarm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricDataQueryProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricDataQueryProperty,
     ) : CdkObject(cdkObject), MetricDataQueryProperty {
       /**
        * The ID of the account where the metrics are located, if this is a cross-account alarm.
@@ -2025,7 +2018,7 @@ public open class CfnAlarm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty,
     ) : CdkObject(cdkObject), MetricProperty {
       /**
        * The metric dimensions that you want to be used for the metric that the alarm will watch.
@@ -2285,8 +2278,7 @@ public open class CfnAlarm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricStatProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricStatProperty,
     ) : CdkObject(cdkObject), MetricStatProperty {
       /**
        * The metric to return, including the metric name, namespace, and dimensions.

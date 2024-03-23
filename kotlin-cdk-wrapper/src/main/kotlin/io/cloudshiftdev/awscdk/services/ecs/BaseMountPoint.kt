@@ -80,7 +80,7 @@ public interface BaseMountPoint {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.BaseMountPoint,
+    cdkObject: software.amazon.awscdk.services.ecs.BaseMountPoint,
   ) : CdkObject(cdkObject), BaseMountPoint {
     /**
      * The path on the container to mount the host volume at.

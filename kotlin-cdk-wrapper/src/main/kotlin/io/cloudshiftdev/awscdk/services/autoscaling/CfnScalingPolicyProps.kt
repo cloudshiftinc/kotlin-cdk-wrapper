@@ -775,7 +775,7 @@ public interface CfnScalingPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicyProps,
+    cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicyProps,
   ) : CdkObject(cdkObject), CfnScalingPolicyProps {
     /**
      * Specifies how the scaling adjustment is interpreted (for example, an absolute number or a

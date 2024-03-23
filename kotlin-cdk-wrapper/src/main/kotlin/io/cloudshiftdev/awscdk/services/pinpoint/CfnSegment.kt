@@ -155,8 +155,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html)
  */
-public open class CfnSegment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment,
+public open class CfnSegment(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -543,7 +543,7 @@ public open class CfnSegment internal constructor(
         CfnSegment(cdkObject)
 
     internal fun unwrap(wrapped: CfnSegment): software.amazon.awscdk.services.pinpoint.CfnSegment =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.pinpoint.CfnSegment
   }
 
   /**
@@ -623,8 +623,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.AttributeDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.AttributeDimensionProperty,
     ) : CdkObject(cdkObject), AttributeDimensionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-attributedimension.html#cfn-pinpoint-segment-attributedimension-attributetype)
@@ -738,7 +737,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty,
     ) : CdkObject(cdkObject), BehaviorProperty {
       /**
        * Specifies how recently segment members were active.
@@ -838,8 +837,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty,
     ) : CdkObject(cdkObject), CoordinatesProperty {
       /**
        * The latitude coordinate of the location.
@@ -1206,8 +1204,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.DemographicProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.DemographicProperty,
     ) : CdkObject(cdkObject), DemographicProperty {
       /**
        * The app version criteria for the segment.
@@ -1372,7 +1369,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty,
     ) : CdkObject(cdkObject), GPSPointProperty {
       /**
        * The GPS coordinates to measure distance from.
@@ -1691,7 +1688,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty,
     ) : CdkObject(cdkObject), GroupsProperty {
       /**
        * An array that defines the dimensions to include or exclude from the segment.
@@ -1888,7 +1885,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty,
     ) : CdkObject(cdkObject), LocationProperty {
       /**
        * The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
@@ -2014,7 +2011,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty,
     ) : CdkObject(cdkObject), RecencyProperty {
       /**
        * The duration to use when determining which users have been active or inactive with your
@@ -2363,8 +2360,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty,
     ) : CdkObject(cdkObject), SegmentDimensionsProperty {
       /**
        * One or more custom attributes to use as criteria for the segment.
@@ -2600,8 +2596,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty,
     ) : CdkObject(cdkObject), SegmentGroupsProperty {
       /**
        * Specifies the set of segment criteria to evaluate when handling segment groups for the
@@ -2740,8 +2735,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SetDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SetDimensionProperty,
     ) : CdkObject(cdkObject), SetDimensionProperty {
       /**
        * The type of segment dimension to use.
@@ -2863,8 +2857,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty,
     ) : CdkObject(cdkObject), SourceSegmentsProperty {
       /**
        * The unique identifier for the source segment.

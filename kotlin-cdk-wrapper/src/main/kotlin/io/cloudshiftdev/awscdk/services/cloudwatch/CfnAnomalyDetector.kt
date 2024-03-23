@@ -92,8 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html)
  */
-public open class CfnAnomalyDetector internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector,
+public open class CfnAnomalyDetector(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -635,7 +635,8 @@ public open class CfnAnomalyDetector internal constructor(
         CfnAnomalyDetector = CfnAnomalyDetector(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnomalyDetector):
-        software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector
   }
 
   /**
@@ -782,8 +783,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty,
     ) : CdkObject(cdkObject), ConfigurationProperty {
       /**
        * Specifies an array of time ranges to exclude from use when the anomaly detection model is
@@ -919,8 +919,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty,
     ) : CdkObject(cdkObject), DimensionProperty {
       /**
        * The name of the dimension.
@@ -1396,8 +1395,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricDataQueryProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricDataQueryProperty,
     ) : CdkObject(cdkObject), MetricDataQueryProperty {
       /**
        * The ID of the account where the metrics are located.
@@ -1669,8 +1667,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty,
     ) : CdkObject(cdkObject), MetricMathAnomalyDetectorProperty {
       /**
        * An array of metric data query structures that enables you to create an anomaly detector
@@ -1829,8 +1826,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty,
     ) : CdkObject(cdkObject), MetricProperty {
       /**
        * The dimensions for the metric.
@@ -2083,8 +2079,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricStatProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricStatProperty,
     ) : CdkObject(cdkObject), MetricStatProperty {
       /**
        * The metric to return, including the metric name, namespace, and dimensions.
@@ -2237,8 +2232,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.RangeProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.RangeProperty,
     ) : CdkObject(cdkObject), RangeProperty {
       /**
        * The end time of the range to exclude.
@@ -2420,8 +2414,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty,
     ) : CdkObject(cdkObject), SingleMetricAnomalyDetectorProperty {
       /**
        * The metric dimensions to create the anomaly detection model for.

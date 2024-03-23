@@ -47,9 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotcoredeviceadvisor-suitedefinition.html)
  */
-public open class CfnSuiteDefinition internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition,
+public open class CfnSuiteDefinition(
+  cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -295,6 +294,7 @@ public open class CfnSuiteDefinition internal constructor(
 
     internal fun unwrap(wrapped: CfnSuiteDefinition):
         software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition = wrapped.cdkObject
+        as software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition
   }
 
   /**
@@ -373,8 +373,7 @@ public open class CfnSuiteDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty,
+      cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty,
     ) : CdkObject(cdkObject), DeviceUnderTestProperty {
       /**
        * Lists device's certificate ARN.
@@ -615,8 +614,7 @@ public open class CfnSuiteDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty,
     ) : CdkObject(cdkObject), SuiteDefinitionConfigurationProperty {
       /**
        * Gets the device permission ARN.

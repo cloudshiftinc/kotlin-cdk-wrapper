@@ -103,8 +103,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html)
  */
-public open class CfnCrawler internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler,
+public open class CfnCrawler(
+  cdkObject: software.amazon.awscdk.services.glue.CfnCrawler,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -894,7 +894,7 @@ public open class CfnCrawler internal constructor(
         CfnCrawler(cdkObject)
 
     internal fun unwrap(wrapped: CfnCrawler): software.amazon.awscdk.services.glue.CfnCrawler =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnCrawler
   }
 
   /**
@@ -1052,7 +1052,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty,
     ) : CdkObject(cdkObject), CatalogTargetProperty {
       /**
        * The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the
@@ -1270,7 +1270,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty,
     ) : CdkObject(cdkObject), DeltaTargetProperty {
       /**
        * The name of the connection to use to connect to the Delta table target.
@@ -1372,8 +1372,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty,
     ) : CdkObject(cdkObject), DynamoDBTargetProperty {
       /**
        * The name of the DynamoDB table to crawl.
@@ -1544,7 +1543,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty,
     ) : CdkObject(cdkObject), IcebergTargetProperty {
       /**
        * The name of the connection to use to connect to the Iceberg target.
@@ -1709,7 +1708,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty,
     ) : CdkObject(cdkObject), JdbcTargetProperty {
       /**
        * The name of the connection to use to connect to the JDBC target.
@@ -1827,7 +1826,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty,
     ) : CdkObject(cdkObject), MongoDBTargetProperty {
       /**
        * The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
@@ -1944,7 +1943,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty,
     ) : CdkObject(cdkObject), RecrawlPolicyProperty {
       /**
        * Specifies whether to crawl the entire dataset again or to crawl only folders that were
@@ -2172,7 +2171,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.S3TargetProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.S3TargetProperty,
     ) : CdkObject(cdkObject), S3TargetProperty {
       /**
        * The name of a connection which allows a job or crawler to access data in Amazon S3 within
@@ -2307,7 +2306,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty,
     ) : CdkObject(cdkObject), ScheduleProperty {
       /**
        * A `cron` expression used to specify the schedule.
@@ -2464,8 +2463,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty,
     ) : CdkObject(cdkObject), SchemaChangePolicyProperty {
       /**
        * The deletion behavior when the crawler finds a deleted object.
@@ -2880,7 +2878,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty,
     ) : CdkObject(cdkObject), TargetsProperty {
       /**
        * Specifies AWS Glue Data Catalog targets.

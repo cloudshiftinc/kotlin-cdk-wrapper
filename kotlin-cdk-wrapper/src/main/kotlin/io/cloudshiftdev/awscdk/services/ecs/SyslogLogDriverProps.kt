@@ -346,7 +346,7 @@ public interface SyslogLogDriverProps : BaseLogDriverProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.SyslogLogDriverProps,
+    cdkObject: software.amazon.awscdk.services.ecs.SyslogLogDriverProps,
   ) : CdkObject(cdkObject), SyslogLogDriverProps {
     /**
      * The address of an external syslog server.

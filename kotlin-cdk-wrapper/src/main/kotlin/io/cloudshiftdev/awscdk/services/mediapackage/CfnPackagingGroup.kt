@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html)
  */
-public open class CfnPackagingGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingGroup,
+public open class CfnPackagingGroup(
+  cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -382,7 +382,8 @@ public open class CfnPackagingGroup internal constructor(
         CfnPackagingGroup = CfnPackagingGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnPackagingGroup):
-        software.amazon.awscdk.services.mediapackage.CfnPackagingGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.mediapackage.CfnPackagingGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediapackage.CfnPackagingGroup
   }
 
   /**
@@ -465,8 +466,7 @@ public open class CfnPackagingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.AuthorizationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.AuthorizationProperty,
     ) : CdkObject(cdkObject), AuthorizationProperty {
       /**
        * The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager that is used for CDN
@@ -567,8 +567,7 @@ public open class CfnPackagingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.LogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.LogConfigurationProperty,
     ) : CdkObject(cdkObject), LogConfigurationProperty {
       /**
        * Sets a custom Amazon CloudWatch log group name for egress logs.

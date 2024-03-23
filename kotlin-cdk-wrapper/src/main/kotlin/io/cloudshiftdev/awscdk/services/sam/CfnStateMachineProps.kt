@@ -461,7 +461,7 @@ public interface CfnStateMachineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sam.CfnStateMachineProps,
+    cdkObject: software.amazon.awscdk.services.sam.CfnStateMachineProps,
   ) : CdkObject(cdkObject), CfnStateMachineProps {
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definition)

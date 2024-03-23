@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-analysistemplate.html)
  */
-public open class CfnAnalysisTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate,
+public open class CfnAnalysisTemplate(
+  cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -522,7 +522,8 @@ public open class CfnAnalysisTemplate internal constructor(
         CfnAnalysisTemplate = CfnAnalysisTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnalysisTemplate):
-        software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate
   }
 
   /**
@@ -637,8 +638,7 @@ public open class CfnAnalysisTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty,
     ) : CdkObject(cdkObject), AnalysisParameterProperty {
       /**
        * Optional.
@@ -751,8 +751,7 @@ public open class CfnAnalysisTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty,
     ) : CdkObject(cdkObject), AnalysisSchemaProperty {
       /**
        * The tables referenced in the analysis schema.
@@ -834,8 +833,7 @@ public open class CfnAnalysisTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty,
     ) : CdkObject(cdkObject), AnalysisSourceProperty {
       /**
        * The query text.

@@ -197,7 +197,7 @@ public interface CfnCertificateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnCertificateProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnCertificateProps,
   ) : CdkObject(cdkObject), CfnCertificateProps {
     /**
      * The CA certificate used to sign the device certificate being registered, not available when

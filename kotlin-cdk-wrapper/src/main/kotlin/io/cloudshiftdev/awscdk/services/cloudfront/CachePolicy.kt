@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class CachePolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CachePolicy,
+public open class CachePolicy(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CachePolicy,
 ) : Resource(cdkObject), ICachePolicy {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudfront.CachePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -343,6 +343,7 @@ public open class CachePolicy internal constructor(
         CachePolicy = CachePolicy(cdkObject)
 
     internal fun unwrap(wrapped: CachePolicy):
-        software.amazon.awscdk.services.cloudfront.CachePolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CachePolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CachePolicy
   }
 }

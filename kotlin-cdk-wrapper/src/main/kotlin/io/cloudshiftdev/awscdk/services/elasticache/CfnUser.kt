@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html)
  */
-public open class CfnUser internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnUser,
+public open class CfnUser(
+  cdkObject: software.amazon.awscdk.services.elasticache.CfnUser,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -460,7 +460,7 @@ public open class CfnUser internal constructor(
         CfnUser(cdkObject)
 
     internal fun unwrap(wrapped: CfnUser): software.amazon.awscdk.services.elasticache.CfnUser =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.elasticache.CfnUser
   }
 
   /**
@@ -555,8 +555,7 @@ public open class CfnUser internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty,
     ) : CdkObject(cdkObject), AuthenticationModeProperty {
       /**
        * Specifies the passwords to use for authentication if `Type` is set to `password` .

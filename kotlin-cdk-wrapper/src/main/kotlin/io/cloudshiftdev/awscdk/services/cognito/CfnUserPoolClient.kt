@@ -82,8 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html)
  */
-public open class CfnUserPoolClient internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient,
+public open class CfnUserPoolClient(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1950,7 +1950,8 @@ public open class CfnUserPoolClient internal constructor(
         CfnUserPoolClient = CfnUserPoolClient(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPoolClient):
-        software.amazon.awscdk.services.cognito.CfnUserPoolClient = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.CfnUserPoolClient = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnUserPoolClient
   }
 
   /**
@@ -2121,8 +2122,7 @@ public open class CfnUserPoolClient internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolClient.AnalyticsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient.AnalyticsConfigurationProperty,
     ) : CdkObject(cdkObject), AnalyticsConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of an Amazon Pinpoint project.
@@ -2309,8 +2309,7 @@ public open class CfnUserPoolClient internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty,
     ) : CdkObject(cdkObject), TokenValidityUnitsProperty {
       /**
        * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in

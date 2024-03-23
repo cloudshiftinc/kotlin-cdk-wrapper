@@ -163,7 +163,7 @@ public interface CfnCustomMetricProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnCustomMetricProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnCustomMetricProps,
   ) : CdkObject(cdkObject), CfnCustomMetricProps {
     /**
      * The friendly name in the console for the custom metric.

@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html)
  */
-public open class CfnWorkflow internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.omics.CfnWorkflow,
+public open class CfnWorkflow(
+  cdkObject: software.amazon.awscdk.services.omics.CfnWorkflow,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.omics.CfnWorkflow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -436,7 +436,7 @@ public open class CfnWorkflow internal constructor(
         CfnWorkflow(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkflow): software.amazon.awscdk.services.omics.CfnWorkflow =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.omics.CfnWorkflow
   }
 
   /**
@@ -524,8 +524,7 @@ public open class CfnWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty,
+      cdkObject: software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty,
     ) : CdkObject(cdkObject), WorkflowParameterProperty {
       /**
        * The parameter's description.

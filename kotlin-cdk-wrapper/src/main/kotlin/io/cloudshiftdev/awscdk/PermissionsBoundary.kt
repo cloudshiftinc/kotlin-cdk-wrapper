@@ -37,8 +37,8 @@ import kotlin.String
  * new Stack(prodStage, "ProdStack2");
  * ```
  */
-public open class PermissionsBoundary internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.PermissionsBoundary,
+public open class PermissionsBoundary(
+  cdkObject: software.amazon.awscdk.PermissionsBoundary,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun fromArn(arn: String): PermissionsBoundary =
@@ -51,6 +51,6 @@ public open class PermissionsBoundary internal constructor(
         PermissionsBoundary(cdkObject)
 
     internal fun unwrap(wrapped: PermissionsBoundary): software.amazon.awscdk.PermissionsBoundary =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.PermissionsBoundary
   }
 }

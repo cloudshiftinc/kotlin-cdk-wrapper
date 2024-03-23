@@ -11,7 +11,7 @@ public interface IValidation {
   public fun validate(): List<String>
 
   private class Wrapper(
-    override val cdkObject: software.constructs.IValidation,
+    cdkObject: software.constructs.IValidation,
   ) : CdkObject(cdkObject), IValidation {
     override fun validate(): List<String> = unwrap(this).validate()
   }

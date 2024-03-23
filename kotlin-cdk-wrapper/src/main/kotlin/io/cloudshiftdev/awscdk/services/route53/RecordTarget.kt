@@ -21,8 +21,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class RecordTarget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.RecordTarget,
+public open class RecordTarget(
+  cdkObject: software.amazon.awscdk.services.route53.RecordTarget,
 ) : CdkObject(cdkObject) {
   /**
    * alias for targets such as CloudFront distribution to route traffic to.
@@ -49,6 +49,6 @@ public open class RecordTarget internal constructor(
         = RecordTarget(cdkObject)
 
     internal fun unwrap(wrapped: RecordTarget): software.amazon.awscdk.services.route53.RecordTarget
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.route53.RecordTarget
   }
 }

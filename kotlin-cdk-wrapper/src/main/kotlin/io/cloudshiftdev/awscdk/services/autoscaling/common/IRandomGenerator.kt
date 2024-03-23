@@ -23,7 +23,7 @@ public interface IRandomGenerator {
   public fun nextInt(min: Number, max: Number): Number
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.common.IRandomGenerator,
+    cdkObject: software.amazon.awscdk.services.autoscaling.common.IRandomGenerator,
   ) : CdkObject(cdkObject), IRandomGenerator {
     /**
      *

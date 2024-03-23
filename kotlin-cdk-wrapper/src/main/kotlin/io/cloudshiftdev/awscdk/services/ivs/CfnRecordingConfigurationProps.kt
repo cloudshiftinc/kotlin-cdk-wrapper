@@ -370,7 +370,7 @@ public interface CfnRecordingConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfigurationProps,
   ) : CdkObject(cdkObject), CfnRecordingConfigurationProps {
     /**
      * A destination configuration contains information about where recorded video will be stored.

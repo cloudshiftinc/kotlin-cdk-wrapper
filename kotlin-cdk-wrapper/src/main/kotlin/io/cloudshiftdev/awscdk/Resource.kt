@@ -28,8 +28,8 @@ import kotlin.Boolean
  * }
  * ```
  */
-public abstract class Resource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Resource,
+public abstract class Resource(
+  cdkObject: software.amazon.awscdk.Resource,
 ) : Construct(cdkObject), IResource {
   /**
    * Apply the given removal policy to this resource.
@@ -67,7 +67,7 @@ public abstract class Resource internal constructor(
   public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.Resource,
+    cdkObject: software.amazon.awscdk.Resource,
   ) : Resource(cdkObject)
 
   public companion object {

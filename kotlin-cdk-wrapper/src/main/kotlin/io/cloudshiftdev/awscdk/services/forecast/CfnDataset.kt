@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-dataset.html)
  */
-public open class CfnDataset internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.forecast.CfnDataset,
+public open class CfnDataset(
+  cdkObject: software.amazon.awscdk.services.forecast.CfnDataset,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -443,7 +443,7 @@ public open class CfnDataset internal constructor(
         CfnDataset(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataset): software.amazon.awscdk.services.forecast.CfnDataset =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.forecast.CfnDataset
   }
 
   /**
@@ -517,8 +517,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty,
+      cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty,
     ) : CdkObject(cdkObject), AttributesItemsProperty {
       /**
        * Name of the dataset field.
@@ -638,8 +637,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.forecast.CfnDataset.EncryptionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.EncryptionConfigProperty,
     ) : CdkObject(cdkObject), EncryptionConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the KMS key.
@@ -760,7 +758,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.SchemaProperty,
+      cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.SchemaProperty,
     ) : CdkObject(cdkObject), SchemaProperty {
       /**
        * An array of attributes specifying the name and type of each field in a dataset.
@@ -879,7 +877,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.TagsItemsProperty,
+      cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.TagsItemsProperty,
     ) : CdkObject(cdkObject), TagsItemsProperty {
       /**
        * The key name of the tag.

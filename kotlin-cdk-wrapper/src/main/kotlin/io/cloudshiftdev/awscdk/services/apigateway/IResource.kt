@@ -231,7 +231,7 @@ public interface IResource : io.cloudshiftdev.awscdk.IResource {
   public fun resourceId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IResource,
+    cdkObject: software.amazon.awscdk.services.apigateway.IResource,
   ) : CdkObject(cdkObject), IResource {
     /**
      * Adds an OPTIONS method to this resource which responds to Cross-Origin Resource Sharing

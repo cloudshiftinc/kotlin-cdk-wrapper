@@ -955,7 +955,7 @@ public interface CfnFileSystemProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystemProps,
+    cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystemProps,
   ) : CdkObject(cdkObject), CfnFileSystemProps {
     /**
      * The ID of the file system backup that you are using to create a file system.

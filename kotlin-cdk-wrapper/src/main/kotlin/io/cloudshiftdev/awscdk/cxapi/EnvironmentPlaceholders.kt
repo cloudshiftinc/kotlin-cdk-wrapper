@@ -23,8 +23,8 @@ import kotlin.jvm.JvmName
  * EnvironmentPlaceholders environmentPlaceholders = new EnvironmentPlaceholders();
  * ```
  */
-public open class EnvironmentPlaceholders internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.cxapi.EnvironmentPlaceholders,
+public open class EnvironmentPlaceholders(
+  cdkObject: software.amazon.awscdk.cxapi.EnvironmentPlaceholders,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.cxapi.EnvironmentPlaceholders()
   )
@@ -56,6 +56,7 @@ public open class EnvironmentPlaceholders internal constructor(
         EnvironmentPlaceholders = EnvironmentPlaceholders(cdkObject)
 
     internal fun unwrap(wrapped: EnvironmentPlaceholders):
-        software.amazon.awscdk.cxapi.EnvironmentPlaceholders = wrapped.cdkObject
+        software.amazon.awscdk.cxapi.EnvironmentPlaceholders = wrapped.cdkObject as
+        software.amazon.awscdk.cxapi.EnvironmentPlaceholders
   }
 }

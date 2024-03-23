@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)
  */
-public open class CfnCertificateAuthority internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority,
+public open class CfnCertificateAuthority(
+  cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -968,7 +968,8 @@ public open class CfnCertificateAuthority internal constructor(
         CfnCertificateAuthority = CfnCertificateAuthority(cdkObject)
 
     internal fun unwrap(wrapped: CfnCertificateAuthority):
-        software.amazon.awscdk.services.acmpca.CfnCertificateAuthority = wrapped.cdkObject
+        software.amazon.awscdk.services.acmpca.CfnCertificateAuthority = wrapped.cdkObject as
+        software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
   }
 
   /**
@@ -1138,8 +1139,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessDescriptionProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessDescriptionProperty,
     ) : CdkObject(cdkObject), AccessDescriptionProperty {
       /**
        * The location of `AccessDescription` information.
@@ -1261,8 +1261,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty,
     ) : CdkObject(cdkObject), AccessMethodProperty {
       /**
        * Specifies the `AccessMethod` .
@@ -1705,8 +1704,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty,
     ) : CdkObject(cdkObject), CrlConfigurationProperty {
       /**
        * Configures the default behavior of the CRL Distribution Point extension for certificates
@@ -1937,8 +1935,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty,
     ) : CdkObject(cdkObject), CrlDistributionPointExtensionConfigurationProperty {
       /**
        * Configures whether the CRL Distribution Point extension should be populated with the
@@ -2187,8 +2184,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty,
     ) : CdkObject(cdkObject), CsrExtensionsProperty {
       /**
        * Indicates the purpose of the certificate and of the key contained in the certificate.
@@ -2305,8 +2301,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty,
     ) : CdkObject(cdkObject), CustomAttributeProperty {
       /**
        * Specifies the object identifier (OID) of the attribute type of the relative distinguished
@@ -2418,8 +2413,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty,
     ) : CdkObject(cdkObject), EdiPartyNameProperty {
       /**
        * Specifies the name assigner.
@@ -2810,8 +2804,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty,
     ) : CdkObject(cdkObject), GeneralNameProperty {
       /**
        * Contains information about the certificate subject.
@@ -3239,8 +3232,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.KeyUsageProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.KeyUsageProperty,
     ) : CdkObject(cdkObject), KeyUsageProperty {
       /**
        * Key can be used to sign CRLs.
@@ -3463,8 +3455,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty,
     ) : CdkObject(cdkObject), OcspConfigurationProperty {
       /**
        * Flag enabling use of the Online Certificate Status Protocol (OCSP) for validating
@@ -3587,8 +3578,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty,
     ) : CdkObject(cdkObject), OtherNameProperty {
       /**
        * Specifies an OID.
@@ -3804,8 +3794,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.RevocationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.RevocationConfigurationProperty,
     ) : CdkObject(cdkObject), RevocationConfigurationProperty {
       /**
        * Configuration of the certificate revocation list (CRL), if any, maintained by your private
@@ -4263,8 +4252,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.SubjectProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.SubjectProperty,
     ) : CdkObject(cdkObject), SubjectProperty {
       /**
        * Fully qualified domain name (FQDN) associated with the certificate subject.

@@ -130,7 +130,7 @@ public interface CfnPublicKeyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps,
   ) : CdkObject(cdkObject), CfnPublicKeyProps {
     /**
      * Configuration information about a public key that you can use with [signed URLs and signed

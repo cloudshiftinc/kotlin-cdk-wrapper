@@ -52,9 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachinealias.html)
  */
-public open class CfnStateMachineAlias internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias,
+public open class CfnStateMachineAlias(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -687,7 +686,8 @@ public open class CfnStateMachineAlias internal constructor(
         CfnStateMachineAlias = CfnStateMachineAlias(cdkObject)
 
     internal fun unwrap(wrapped: CfnStateMachineAlias):
-        software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias
   }
 
   /**
@@ -921,8 +921,7 @@ public open class CfnStateMachineAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.DeploymentPreferenceProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.DeploymentPreferenceProperty,
     ) : CdkObject(cdkObject), DeploymentPreferenceProperty {
       /**
        * A list of Amazon CloudWatch alarms to be monitored during the deployment.
@@ -1095,8 +1094,7 @@ public open class CfnStateMachineAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty,
     ) : CdkObject(cdkObject), RoutingConfigurationVersionProperty {
       /**
        * The Amazon Resource Name (ARN) that identifies one or two state machine versions defined in

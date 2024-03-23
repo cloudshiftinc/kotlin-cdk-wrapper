@@ -94,8 +94,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html)
  */
-public open class CfnTagAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation,
+public open class CfnTagAssociation(
+  cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -349,7 +349,8 @@ public open class CfnTagAssociation internal constructor(
         CfnTagAssociation = CfnTagAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnTagAssociation):
-        software.amazon.awscdk.services.lakeformation.CfnTagAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.lakeformation.CfnTagAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.lakeformation.CfnTagAssociation
   }
 
   /**
@@ -434,8 +435,7 @@ public open class CfnTagAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty,
     ) : CdkObject(cdkObject), DatabaseResourceProperty {
       /**
        * The identifier for the Data Catalog .
@@ -641,8 +641,7 @@ public open class CfnTagAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty,
     ) : CdkObject(cdkObject), LFTagPairProperty {
       /**
        * The identifier for the Data Catalog .
@@ -953,8 +952,7 @@ public open class CfnTagAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.ResourceProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.ResourceProperty,
     ) : CdkObject(cdkObject), ResourceProperty {
       /**
        * The identifier for the Data Catalog.
@@ -1159,8 +1157,7 @@ public open class CfnTagAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty,
     ) : CdkObject(cdkObject), TableResourceProperty {
       /**
        * The identifier for the Data Catalog .
@@ -1372,8 +1369,7 @@ public open class CfnTagAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableWithColumnsResourceProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableWithColumnsResourceProperty,
     ) : CdkObject(cdkObject), TableWithColumnsResourceProperty {
       /**
        * A wildcard object representing every table under a database.

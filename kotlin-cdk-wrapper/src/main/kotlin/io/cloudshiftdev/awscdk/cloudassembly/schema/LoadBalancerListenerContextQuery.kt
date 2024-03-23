@@ -212,8 +212,7 @@ public interface LoadBalancerListenerContextQuery : LoadBalancerFilter {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.cloudassembly.schema.LoadBalancerListenerContextQuery,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.LoadBalancerListenerContextQuery,
   ) : CdkObject(cdkObject), LoadBalancerListenerContextQuery {
     /**
      * Query account.

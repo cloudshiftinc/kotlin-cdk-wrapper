@@ -78,7 +78,7 @@ public interface HttpApiAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpApiAttributes,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpApiAttributes,
   ) : CdkObject(cdkObject), HttpApiAttributes {
     /**
      * The endpoint URL of the HttpApi.

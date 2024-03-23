@@ -115,8 +115,7 @@ public interface ReplicaGlobalSecondaryIndexOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.dynamodb.ReplicaGlobalSecondaryIndexOptions,
+    cdkObject: software.amazon.awscdk.services.dynamodb.ReplicaGlobalSecondaryIndexOptions,
   ) : CdkObject(cdkObject), ReplicaGlobalSecondaryIndexOptions {
     /**
      * Whether CloudWatch contributor insights is enabled for a specific global secondary index on a

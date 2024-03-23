@@ -86,8 +86,7 @@ public interface HttpUrlIntegrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegrationProps,
+    cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegrationProps,
   ) : CdkObject(cdkObject), HttpUrlIntegrationProps {
     /**
      * The HTTP method that must be used to invoke the underlying HTTP proxy.

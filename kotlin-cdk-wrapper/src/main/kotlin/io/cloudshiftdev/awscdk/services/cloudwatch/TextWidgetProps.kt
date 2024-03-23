@@ -112,7 +112,7 @@ public interface TextWidgetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.TextWidgetProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.TextWidgetProps,
   ) : CdkObject(cdkObject), TextWidgetProps {
     /**
      * Background for the widget.

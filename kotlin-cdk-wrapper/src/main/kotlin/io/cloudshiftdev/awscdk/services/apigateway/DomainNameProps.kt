@@ -170,7 +170,7 @@ public interface DomainNameProps : DomainNameOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.DomainNameProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.DomainNameProps,
   ) : CdkObject(cdkObject), DomainNameProps {
     /**
      * The base path name that callers of the API must provide in the URL after the domain name

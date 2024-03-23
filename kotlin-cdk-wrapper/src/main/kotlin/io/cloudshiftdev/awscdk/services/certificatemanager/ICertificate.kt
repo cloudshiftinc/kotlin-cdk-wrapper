@@ -63,7 +63,7 @@ public interface ICertificate : IResource {
   public fun metricDaysToExpiry(props: MetricOptions.Builder.() -> Unit): Metric
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.certificatemanager.ICertificate,
+    cdkObject: software.amazon.awscdk.services.certificatemanager.ICertificate,
   ) : CdkObject(cdkObject), ICertificate {
     /**
      * Apply the given removal policy to this resource.

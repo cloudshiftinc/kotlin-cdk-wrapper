@@ -54,7 +54,7 @@ public interface EncodingOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.EncodingOptions,
+    cdkObject: software.amazon.awscdk.EncodingOptions,
   ) : CdkObject(cdkObject), EncodingOptions {
     /**
      * A hint for the Token's purpose when stringifying it.

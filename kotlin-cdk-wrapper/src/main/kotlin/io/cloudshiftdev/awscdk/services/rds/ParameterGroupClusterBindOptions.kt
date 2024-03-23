@@ -37,7 +37,7 @@ public interface ParameterGroupClusterBindOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.ParameterGroupClusterBindOptions,
+    cdkObject: software.amazon.awscdk.services.rds.ParameterGroupClusterBindOptions,
   ) : CdkObject(cdkObject), ParameterGroupClusterBindOptions
 
   public companion object {

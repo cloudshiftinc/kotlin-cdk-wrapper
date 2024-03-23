@@ -21,7 +21,7 @@ public interface IRoute : IResource {
   public fun routeId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IRoute,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IRoute,
   ) : CdkObject(cdkObject), IRoute {
     /**
      * Apply the given removal policy to this resource.

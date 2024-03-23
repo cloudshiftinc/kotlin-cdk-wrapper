@@ -77,9 +77,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-safetyrule.html)
  */
-public open class CfnSafetyRule internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule,
+public open class CfnSafetyRule(
+  cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -684,7 +683,8 @@ public open class CfnSafetyRule internal constructor(
         CfnSafetyRule = CfnSafetyRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnSafetyRule):
-        software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule = wrapped.cdkObject
+        software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule
   }
 
   /**
@@ -799,8 +799,7 @@ public open class CfnSafetyRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty,
     ) : CdkObject(cdkObject), AssertionRuleProperty {
       /**
        * The routing controls that are part of transactions that are evaluated to determine if a
@@ -1018,8 +1017,7 @@ public open class CfnSafetyRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.GatingRuleProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.GatingRuleProperty,
     ) : CdkObject(cdkObject), GatingRuleProperty {
       /**
        * An array of gating routing control Amazon Resource Names (ARNs).
@@ -1197,8 +1195,7 @@ public open class CfnSafetyRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty,
     ) : CdkObject(cdkObject), RuleConfigProperty {
       /**
        * Logical negation of the rule.

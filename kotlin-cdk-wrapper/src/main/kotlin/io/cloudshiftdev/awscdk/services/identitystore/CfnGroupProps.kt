@@ -104,7 +104,7 @@ public interface CfnGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupProps,
+    cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupProps,
   ) : CdkObject(cdkObject), CfnGroupProps {
     /**
      * A string containing the description of the group.

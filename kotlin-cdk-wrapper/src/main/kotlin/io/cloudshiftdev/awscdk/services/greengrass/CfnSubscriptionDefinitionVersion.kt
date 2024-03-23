@@ -55,9 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html)
  */
-public open class CfnSubscriptionDefinitionVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersion,
+public open class CfnSubscriptionDefinitionVersion(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -241,7 +240,8 @@ public open class CfnSubscriptionDefinitionVersion internal constructor(
 
     internal fun unwrap(wrapped: CfnSubscriptionDefinitionVersion):
         software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersion =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersion
   }
 
   /**
@@ -389,8 +389,7 @@ public open class CfnSubscriptionDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersion.SubscriptionProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersion.SubscriptionProperty,
     ) : CdkObject(cdkObject), SubscriptionProperty {
       /**
        * A descriptive or arbitrary ID for the subscription.

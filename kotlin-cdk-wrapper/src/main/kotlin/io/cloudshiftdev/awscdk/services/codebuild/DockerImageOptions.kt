@@ -63,7 +63,7 @@ public interface DockerImageOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.DockerImageOptions,
+    cdkObject: software.amazon.awscdk.services.codebuild.DockerImageOptions,
   ) : CdkObject(cdkObject), DockerImageOptions {
     /**
      * The credentials, stored in Secrets Manager, used for accessing the repository holding the

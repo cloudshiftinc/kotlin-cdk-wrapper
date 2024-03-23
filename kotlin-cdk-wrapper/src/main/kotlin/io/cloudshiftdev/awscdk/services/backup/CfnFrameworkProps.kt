@@ -194,7 +194,7 @@ public interface CfnFrameworkProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.backup.CfnFrameworkProps,
+    cdkObject: software.amazon.awscdk.services.backup.CfnFrameworkProps,
   ) : CdkObject(cdkObject), CfnFrameworkProps {
     /**
      * Contains detailed information about all of the controls of a framework.

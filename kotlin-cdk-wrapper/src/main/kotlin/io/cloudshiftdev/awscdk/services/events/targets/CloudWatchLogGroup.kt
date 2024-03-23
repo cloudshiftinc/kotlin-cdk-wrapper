@@ -35,9 +35,8 @@ import software.amazon.awscdk.services.logs.ILogGroup as AmazonAwscdkServicesLog
  * .build());
  * ```
  */
-public open class CloudWatchLogGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.events.targets.CloudWatchLogGroup,
+public open class CloudWatchLogGroup(
+  cdkObject: software.amazon.awscdk.services.events.targets.CloudWatchLogGroup,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(logGroup: CloudshiftdevAwscdkServicesLogsILogGroup) :
       this(software.amazon.awscdk.services.events.targets.CloudWatchLogGroup(logGroup.let(CloudshiftdevAwscdkServicesLogsILogGroup::unwrap))
@@ -270,6 +269,7 @@ public open class CloudWatchLogGroup internal constructor(
         CloudWatchLogGroup = CloudWatchLogGroup(cdkObject)
 
     internal fun unwrap(wrapped: CloudWatchLogGroup):
-        software.amazon.awscdk.services.events.targets.CloudWatchLogGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.events.targets.CloudWatchLogGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.targets.CloudWatchLogGroup
   }
 }

@@ -270,8 +270,7 @@ public interface KinesisEventSourceProps : StreamEventSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.lambda.eventsources.KinesisEventSourceProps,
+    cdkObject: software.amazon.awscdk.services.lambda.eventsources.KinesisEventSourceProps,
   ) : CdkObject(cdkObject), KinesisEventSourceProps {
     /**
      * The largest number of records that AWS Lambda will retrieve from your event source at the

@@ -190,9 +190,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html)
  */
-public open class CfnApplicationV2 internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2,
+public open class CfnApplicationV2(
+  cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -767,7 +766,8 @@ public open class CfnApplicationV2 internal constructor(
         CfnApplicationV2 = CfnApplicationV2(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationV2):
-        software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2 = wrapped.cdkObject
+        software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2 = wrapped.cdkObject as
+        software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
   }
 
   /**
@@ -881,8 +881,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty,
     ) : CdkObject(cdkObject), ApplicationCodeConfigurationProperty {
       /**
        * The location and type of the application code.
@@ -1468,8 +1467,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationConfigurationProperty,
     ) : CdkObject(cdkObject), ApplicationConfigurationProperty {
       /**
        * The code location and type parameters for a Managed Service for Apache Flink application.
@@ -1604,8 +1602,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty,
     ) : CdkObject(cdkObject), ApplicationMaintenanceConfigurationProperty {
       /**
        * Specifies the start time of the maintence window.
@@ -1721,8 +1718,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty,
     ) : CdkObject(cdkObject), ApplicationRestoreConfigurationProperty {
       /**
        * Specifies how the application should be restored.
@@ -1833,8 +1829,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty,
     ) : CdkObject(cdkObject), ApplicationSnapshotConfigurationProperty {
       /**
        * Describes whether snapshots are enabled for a Managed Service for Apache Flink application.
@@ -1954,8 +1949,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CSVMappingParametersProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CSVMappingParametersProperty,
     ) : CdkObject(cdkObject), CSVMappingParametersProperty {
       /**
        * The column delimiter.
@@ -2107,8 +2101,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty,
     ) : CdkObject(cdkObject), CatalogConfigurationProperty {
       /**
        * The configuration parameters for the default Amazon Glue database.
@@ -2391,8 +2384,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty,
     ) : CdkObject(cdkObject), CheckpointConfigurationProperty {
       /**
        * Describes the interval in milliseconds between checkpoint operations.
@@ -2618,8 +2610,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CodeContentProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CodeContentProperty,
     ) : CdkObject(cdkObject), CodeContentProperty {
       /**
        * Information about the Amazon S3 bucket that contains the application code.
@@ -2828,8 +2819,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CustomArtifactConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CustomArtifactConfigurationProperty,
     ) : CdkObject(cdkObject), CustomArtifactConfigurationProperty {
       /**
        * Set this to either `UDF` or `DEPENDENCY_JAR` .
@@ -2984,8 +2974,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty,
     ) : CdkObject(cdkObject), DeployAsApplicationConfigurationProperty {
       /**
        * The description of an Amazon S3 object that contains the Amazon Data Analytics application,
@@ -3098,8 +3087,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty,
     ) : CdkObject(cdkObject), EnvironmentPropertiesProperty {
       /**
        * Describes the execution property groups.
@@ -3387,8 +3375,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty,
     ) : CdkObject(cdkObject), FlinkApplicationConfigurationProperty {
       /**
        * Describes an application's checkpointing configuration.
@@ -3572,8 +3559,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty,
     ) : CdkObject(cdkObject), FlinkRunConfigurationProperty {
       /**
        * When restoring from a snapshot, specifies whether the runtime is allowed to skip a state
@@ -3672,8 +3658,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty,
     ) : CdkObject(cdkObject), GlueDataCatalogConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the database.
@@ -3778,8 +3763,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty,
     ) : CdkObject(cdkObject), InputLambdaProcessorProperty {
       /**
        * The ARN of the Amazon Lambda function that operates on records in the stream.
@@ -3869,8 +3853,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty,
     ) : CdkObject(cdkObject), InputParallelismProperty {
       /**
        * The number of in-application streams to create.
@@ -4009,8 +3992,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty,
     ) : CdkObject(cdkObject), InputProcessingConfigurationProperty {
       /**
        * The
@@ -4464,8 +4446,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProperty,
     ) : CdkObject(cdkObject), InputProperty {
       /**
        * Describes the number of in-application streams to create.
@@ -4712,8 +4693,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty,
     ) : CdkObject(cdkObject), InputSchemaProperty {
       /**
        * A list of `RecordColumn` objects.
@@ -4813,8 +4793,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty,
     ) : CdkObject(cdkObject), JSONMappingParametersProperty {
       /**
        * The path to the top-level parent that contains the records.
@@ -4900,8 +4879,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty,
     ) : CdkObject(cdkObject), KinesisFirehoseInputProperty {
       /**
        * The Amazon Resource Name (ARN) of the delivery stream.
@@ -4985,8 +4963,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty,
     ) : CdkObject(cdkObject), KinesisStreamsInputProperty {
       /**
        * The ARN of the input Kinesis data stream to read.
@@ -5168,8 +5145,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty,
     ) : CdkObject(cdkObject), MappingParametersProperty {
       /**
        * Provides additional mapping information when the record format uses delimiters (for
@@ -5302,8 +5278,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty,
     ) : CdkObject(cdkObject), MavenReferenceProperty {
       /**
        * The artifact ID of the Maven reference.
@@ -5461,8 +5436,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty,
     ) : CdkObject(cdkObject), MonitoringConfigurationProperty {
       /**
        * Describes whether to use the default CloudWatch logging configuration for an application.
@@ -5685,8 +5659,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty,
     ) : CdkObject(cdkObject), ParallelismConfigurationProperty {
       /**
        * Describes whether the Managed Service for Apache Flink service can increase the parallelism
@@ -5838,8 +5811,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty,
     ) : CdkObject(cdkObject), PropertyGroupProperty {
       /**
        * Describes the key of an application execution property key-value pair.
@@ -5978,8 +5950,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty,
     ) : CdkObject(cdkObject), RecordColumnProperty {
       /**
        * A reference to the data element in the streaming input or the reference data source.
@@ -6148,8 +6119,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty,
     ) : CdkObject(cdkObject), RecordFormatProperty {
       /**
        * When you configure application input at the time of creating or updating an application,
@@ -6340,8 +6310,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty,
     ) : CdkObject(cdkObject), RunConfigurationProperty {
       /**
        * Describes the restore behavior of a restarting application.
@@ -6453,8 +6422,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty,
     ) : CdkObject(cdkObject), S3ContentBaseLocationProperty {
       /**
        * The base path for the S3 bucket.
@@ -6586,8 +6554,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty,
     ) : CdkObject(cdkObject), S3ContentLocationProperty {
       /**
        * The Amazon Resource Name (ARN) for the S3 bucket containing the application code.
@@ -6760,8 +6727,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty,
     ) : CdkObject(cdkObject), SqlApplicationConfigurationProperty {
       /**
        * The array of [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html)
@@ -6905,8 +6871,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty,
     ) : CdkObject(cdkObject), VpcConfigurationProperty {
       /**
        * The array of
@@ -7223,8 +7188,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ZeppelinApplicationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ZeppelinApplicationConfigurationProperty,
     ) : CdkObject(cdkObject), ZeppelinApplicationConfigurationProperty {
       /**
        * The Amazon Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio
@@ -7341,8 +7305,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ZeppelinMonitoringConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ZeppelinMonitoringConfigurationProperty,
     ) : CdkObject(cdkObject), ZeppelinMonitoringConfigurationProperty {
       /**
        * The verbosity of the CloudWatch Logs for an application.

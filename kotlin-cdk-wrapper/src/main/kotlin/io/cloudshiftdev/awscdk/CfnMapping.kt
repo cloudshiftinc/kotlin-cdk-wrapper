@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * regionTable.findInMap(Aws.REGION, "regionName");
  * ```
  */
-public open class CfnMapping internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnMapping,
+public open class CfnMapping(
+  cdkObject: software.amazon.awscdk.CfnMapping,
 ) : CfnRefElement(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.CfnMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -163,5 +163,6 @@ public open class CfnMapping internal constructor(
         CfnMapping(cdkObject)
 
     internal fun unwrap(wrapped: CfnMapping): software.amazon.awscdk.CfnMapping = wrapped.cdkObject
+        as software.amazon.awscdk.CfnMapping
   }
 }

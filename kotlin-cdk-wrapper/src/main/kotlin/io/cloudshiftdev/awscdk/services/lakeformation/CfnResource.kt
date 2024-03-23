@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html)
  */
-public open class CfnResource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnResource,
+public open class CfnResource(
+  cdkObject: software.amazon.awscdk.services.lakeformation.CfnResource,
 ) : io.cloudshiftdev.awscdk.CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -364,6 +364,7 @@ public open class CfnResource internal constructor(
         CfnResource = CfnResource(cdkObject)
 
     internal fun unwrap(wrapped: CfnResource):
-        software.amazon.awscdk.services.lakeformation.CfnResource = wrapped.cdkObject
+        software.amazon.awscdk.services.lakeformation.CfnResource = wrapped.cdkObject as
+        software.amazon.awscdk.services.lakeformation.CfnResource
   }
 }

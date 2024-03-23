@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ContainerDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.ContainerDefinition,
+public open class ContainerDefinition(
+  cdkObject: software.amazon.awscdk.services.ecs.ContainerDefinition,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1556,6 +1556,7 @@ public open class ContainerDefinition internal constructor(
         ContainerDefinition = ContainerDefinition(cdkObject)
 
     internal fun unwrap(wrapped: ContainerDefinition):
-        software.amazon.awscdk.services.ecs.ContainerDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.ContainerDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.ContainerDefinition
   }
 }

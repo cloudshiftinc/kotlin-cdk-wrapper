@@ -34,9 +34,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class NetworkListenerAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction,
+public open class NetworkListenerAction(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction,
 ) : CdkObject(cdkObject), IListenerAction {
   /**
    * Called when the action is being used in a listener.
@@ -102,6 +101,7 @@ public open class NetworkListenerAction internal constructor(
 
     internal fun unwrap(wrapped: NetworkListenerAction):
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction
   }
 }

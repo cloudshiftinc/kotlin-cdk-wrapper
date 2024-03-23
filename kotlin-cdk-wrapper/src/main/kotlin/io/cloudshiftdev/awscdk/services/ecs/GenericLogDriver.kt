@@ -27,8 +27,8 @@ import kotlin.collections.Map
  * .build());
  * ```
  */
-public open class GenericLogDriver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.GenericLogDriver,
+public open class GenericLogDriver(
+  cdkObject: software.amazon.awscdk.services.ecs.GenericLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor(props: GenericLogDriverProps) :
       this(software.amazon.awscdk.services.ecs.GenericLogDriver(props.let(GenericLogDriverProps::unwrap))
@@ -151,6 +151,7 @@ public open class GenericLogDriver internal constructor(
         GenericLogDriver = GenericLogDriver(cdkObject)
 
     internal fun unwrap(wrapped: GenericLogDriver):
-        software.amazon.awscdk.services.ecs.GenericLogDriver = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.GenericLogDriver = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.GenericLogDriver
   }
 }

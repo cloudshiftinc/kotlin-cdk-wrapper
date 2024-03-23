@@ -20,7 +20,7 @@ public interface IWebSocketIntegration : IIntegration {
   public fun webSocketApi(): IWebSocketApi
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketIntegration,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketIntegration,
   ) : CdkObject(cdkObject), IWebSocketIntegration {
     /**
      * Apply the given removal policy to this resource.

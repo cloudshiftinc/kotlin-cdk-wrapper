@@ -100,8 +100,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html)
  */
-public open class CfnLayer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer,
+public open class CfnLayer(
+  cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1385,7 +1385,7 @@ public open class CfnLayer internal constructor(
         CfnLayer(cdkObject)
 
     internal fun unwrap(wrapped: CfnLayer): software.amazon.awscdk.services.opsworks.CfnLayer =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.opsworks.CfnLayer
   }
 
   /**
@@ -1584,8 +1584,7 @@ public open class CfnLayer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnLayer.AutoScalingThresholdsProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.AutoScalingThresholdsProperty,
     ) : CdkObject(cdkObject), AutoScalingThresholdsProperty {
       /**
        * The CPU utilization threshold, as a percent of the available CPU.
@@ -1752,8 +1751,7 @@ public open class CfnLayer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnLayer.LifecycleEventConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.LifecycleEventConfigurationProperty,
     ) : CdkObject(cdkObject), LifecycleEventConfigurationProperty {
       /**
        * The Shutdown event configuration.
@@ -1974,8 +1972,7 @@ public open class CfnLayer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty,
     ) : CdkObject(cdkObject), LoadBasedAutoScalingProperty {
       /**
        * An `AutoScalingThresholds` object that describes the downscaling configuration, which
@@ -2199,7 +2196,7 @@ public open class CfnLayer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty,
     ) : CdkObject(cdkObject), RecipesProperty {
       /**
        * An array of custom recipe names to be run following a `configure` event.
@@ -2358,8 +2355,7 @@ public open class CfnLayer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty,
     ) : CdkObject(cdkObject), ShutdownEventConfigurationProperty {
       /**
        * Whether to enable Elastic Load Balancing connection draining.
@@ -2645,8 +2641,7 @@ public open class CfnLayer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty,
     ) : CdkObject(cdkObject), VolumeConfigurationProperty {
       /**
        * Specifies whether an Amazon EBS volume is encrypted.

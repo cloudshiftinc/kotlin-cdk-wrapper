@@ -18,7 +18,7 @@ public interface IStringProducer {
   public fun produce(context: IResolveContext): String?
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IStringProducer,
+    cdkObject: software.amazon.awscdk.IStringProducer,
   ) : CdkObject(cdkObject), IStringProducer {
     /**
      * Produce the string value.

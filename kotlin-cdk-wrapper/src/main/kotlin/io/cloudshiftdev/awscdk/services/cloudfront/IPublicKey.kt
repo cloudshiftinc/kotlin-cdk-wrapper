@@ -21,7 +21,7 @@ public interface IPublicKey : IResource {
   public fun publicKeyId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.IPublicKey,
+    cdkObject: software.amazon.awscdk.services.cloudfront.IPublicKey,
   ) : CdkObject(cdkObject), IPublicKey {
     /**
      * Apply the given removal policy to this resource.

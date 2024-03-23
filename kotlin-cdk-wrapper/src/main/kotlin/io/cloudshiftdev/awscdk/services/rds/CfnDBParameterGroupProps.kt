@@ -312,7 +312,7 @@ public interface CfnDBParameterGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnDBParameterGroupProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnDBParameterGroupProps,
   ) : CdkObject(cdkObject), CfnDBParameterGroupProps {
     /**
      * The name of the DB parameter group.

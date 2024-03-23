@@ -36,7 +36,7 @@ public interface ILambdaDeploymentGroup : IResource {
   public fun deploymentGroupName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaDeploymentGroup,
+    cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaDeploymentGroup,
   ) : CdkObject(cdkObject), ILambdaDeploymentGroup {
     /**
      * The reference to the CodeDeploy Lambda Application that this Deployment Group belongs to.

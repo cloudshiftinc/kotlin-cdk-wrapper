@@ -56,7 +56,7 @@ public interface StopProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.actions.StopProps,
+    cdkObject: software.amazon.awscdk.services.ses.actions.StopProps,
   ) : CdkObject(cdkObject), StopProps {
     /**
      * The SNS topic to notify when the stop action is taken.

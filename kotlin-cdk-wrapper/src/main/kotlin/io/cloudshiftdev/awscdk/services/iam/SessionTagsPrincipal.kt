@@ -23,8 +23,8 @@ import kotlin.jvm.JvmName
  * SessionTagsPrincipal sessionTagsPrincipal = new SessionTagsPrincipal(principal);
  * ```
  */
-public open class SessionTagsPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.SessionTagsPrincipal,
+public open class SessionTagsPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.SessionTagsPrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(principal: IPrincipal) :
       this(software.amazon.awscdk.services.iam.SessionTagsPrincipal(principal.let(IPrincipal::unwrap))
@@ -122,6 +122,7 @@ public open class SessionTagsPrincipal internal constructor(
         SessionTagsPrincipal = SessionTagsPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: SessionTagsPrincipal):
-        software.amazon.awscdk.services.iam.SessionTagsPrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.SessionTagsPrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.SessionTagsPrincipal
   }
 }

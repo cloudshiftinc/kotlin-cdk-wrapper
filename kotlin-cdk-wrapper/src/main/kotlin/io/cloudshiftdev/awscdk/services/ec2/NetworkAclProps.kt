@@ -140,7 +140,7 @@ public interface NetworkAclProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.NetworkAclProps,
+    cdkObject: software.amazon.awscdk.services.ec2.NetworkAclProps,
   ) : CdkObject(cdkObject), NetworkAclProps {
     /**
      * The name of the NetworkAcl.

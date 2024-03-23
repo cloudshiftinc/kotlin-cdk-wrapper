@@ -58,9 +58,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class CloudFormationDeleteStackAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction,
+public open class CloudFormationDeleteStackAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction,
 ) : Action(cdkObject) {
   public constructor(props: CloudFormationDeleteStackActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction(props.let(CloudFormationDeleteStackActionProps::unwrap))
@@ -670,6 +669,7 @@ public open class CloudFormationDeleteStackAction internal constructor(
 
     internal fun unwrap(wrapped: CloudFormationDeleteStackAction):
         software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction
   }
 }

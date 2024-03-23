@@ -44,8 +44,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class PlacementStrategy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.PlacementStrategy,
+public open class PlacementStrategy(
+  cdkObject: software.amazon.awscdk.services.ecs.PlacementStrategy,
 ) : CdkObject(cdkObject) {
   /**
    * Return the placement JSON.
@@ -76,6 +76,7 @@ public open class PlacementStrategy internal constructor(
         PlacementStrategy = PlacementStrategy(cdkObject)
 
     internal fun unwrap(wrapped: PlacementStrategy):
-        software.amazon.awscdk.services.ecs.PlacementStrategy = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.PlacementStrategy = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.PlacementStrategy
   }
 }

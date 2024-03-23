@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html)
  */
-public open class CfnContainer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer,
+public open class CfnContainer(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -836,7 +836,8 @@ public open class CfnContainer internal constructor(
         CfnContainer = CfnContainer(cdkObject)
 
     internal fun unwrap(wrapped: CfnContainer):
-        software.amazon.awscdk.services.lightsail.CfnContainer = wrapped.cdkObject
+        software.amazon.awscdk.services.lightsail.CfnContainer = wrapped.cdkObject as
+        software.amazon.awscdk.services.lightsail.CfnContainer
   }
 
   /**
@@ -1073,8 +1074,7 @@ public open class CfnContainer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty,
     ) : CdkObject(cdkObject), ContainerProperty {
       /**
        * The launch command for the container.
@@ -1300,8 +1300,7 @@ public open class CfnContainer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty,
     ) : CdkObject(cdkObject), ContainerServiceDeploymentProperty {
       /**
        * An object that describes the configuration for the containers of the deployment.
@@ -1428,8 +1427,7 @@ public open class CfnContainer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty,
     ) : CdkObject(cdkObject), EcrImagePullerRoleProperty {
       /**
        * A boolean value that indicates whether the `ECRImagePullerRole` is active.
@@ -1544,8 +1542,7 @@ public open class CfnContainer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty,
     ) : CdkObject(cdkObject), EnvironmentVariableProperty {
       /**
        * The environment variable value.
@@ -1775,8 +1772,7 @@ public open class CfnContainer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty,
     ) : CdkObject(cdkObject), HealthCheckConfigProperty {
       /**
        * The number of consecutive health check successes required before moving the container to
@@ -1933,8 +1929,7 @@ public open class CfnContainer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty,
     ) : CdkObject(cdkObject), PortInfoProperty {
       /**
        * The open firewall ports of the container.
@@ -2080,8 +2075,7 @@ public open class CfnContainer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty,
     ) : CdkObject(cdkObject), PrivateRegistryAccessProperty {
       /**
        * An object that describes the activation status of the role that you can use to grant a
@@ -2199,8 +2193,7 @@ public open class CfnContainer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty,
     ) : CdkObject(cdkObject), PublicDomainNameProperty {
       /**
        * The name of the certificate for the public domains.
@@ -2374,8 +2367,7 @@ public open class CfnContainer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty,
     ) : CdkObject(cdkObject), PublicEndpointProperty {
       /**
        * The name of the container entry of the deployment that the endpoint configuration applies

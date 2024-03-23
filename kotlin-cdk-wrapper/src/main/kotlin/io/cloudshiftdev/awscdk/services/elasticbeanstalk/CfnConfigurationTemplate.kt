@@ -66,9 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html)
  */
-public open class CfnConfigurationTemplate internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate,
+public open class CfnConfigurationTemplate(
+  cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -622,7 +621,8 @@ public open class CfnConfigurationTemplate internal constructor(
 
     internal fun unwrap(wrapped: CfnConfigurationTemplate):
         software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate
   }
 
   /**
@@ -758,8 +758,7 @@ public open class CfnConfigurationTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.ConfigurationOptionSettingProperty,
+      cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.ConfigurationOptionSettingProperty,
     ) : CdkObject(cdkObject), ConfigurationOptionSettingProperty {
       /**
        * A unique namespace that identifies the option's associated AWS resource.
@@ -892,8 +891,7 @@ public open class CfnConfigurationTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty,
     ) : CdkObject(cdkObject), SourceConfigurationProperty {
       /**
        * The name of the application associated with the configuration.

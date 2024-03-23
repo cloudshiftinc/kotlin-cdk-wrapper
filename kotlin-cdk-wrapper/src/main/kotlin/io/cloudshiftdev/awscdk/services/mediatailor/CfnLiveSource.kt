@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-livesource.html)
  */
-public open class CfnLiveSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnLiveSource,
+public open class CfnLiveSource(
+  cdkObject: software.amazon.awscdk.services.mediatailor.CfnLiveSource,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -328,7 +328,8 @@ public open class CfnLiveSource internal constructor(
         CfnLiveSource = CfnLiveSource(cdkObject)
 
     internal fun unwrap(wrapped: CfnLiveSource):
-        software.amazon.awscdk.services.mediatailor.CfnLiveSource = wrapped.cdkObject
+        software.amazon.awscdk.services.mediatailor.CfnLiveSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediatailor.CfnLiveSource
   }
 
   /**
@@ -438,8 +439,7 @@ public open class CfnLiveSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnLiveSource.HttpPackageConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnLiveSource.HttpPackageConfigurationProperty,
     ) : CdkObject(cdkObject), HttpPackageConfigurationProperty {
       /**
        * The relative path to the URL for this VOD source.

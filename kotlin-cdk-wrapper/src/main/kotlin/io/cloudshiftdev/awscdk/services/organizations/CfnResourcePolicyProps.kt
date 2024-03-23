@@ -164,7 +164,7 @@ public interface CfnResourcePolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.organizations.CfnResourcePolicyProps,
+    cdkObject: software.amazon.awscdk.services.organizations.CfnResourcePolicyProps,
   ) : CdkObject(cdkObject), CfnResourcePolicyProps {
     /**
      * The policy text of the organization resource policy.

@@ -89,8 +89,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)
  */
-public open class CfnApp internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.amplify.CfnApp,
+public open class CfnApp(
+  cdkObject: software.amazon.awscdk.services.amplify.CfnApp,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -278,26 +278,26 @@ public open class CfnApp internal constructor(
   }
 
   /**
-   * The environment variables map for an Amplify app.
+   * The environment variables for the Amplify app.
    */
   public open fun environmentVariables(): Any? = unwrap(this).getEnvironmentVariables()
 
   /**
-   * The environment variables map for an Amplify app.
+   * The environment variables for the Amplify app.
    */
   public open fun environmentVariables(`value`: IResolvable) {
     unwrap(this).setEnvironmentVariables(`value`.let(IResolvable::unwrap))
   }
 
   /**
-   * The environment variables map for an Amplify app.
+   * The environment variables for the Amplify app.
    */
   public open fun environmentVariables(`value`: List<Any>) {
     unwrap(this).setEnvironmentVariables(`value`)
   }
 
   /**
-   * The environment variables map for an Amplify app.
+   * The environment variables for the Amplify app.
    */
   public open fun environmentVariables(vararg `value`: Any): Unit =
       environmentVariables(`value`.toList())
@@ -554,7 +554,7 @@ public open class CfnApp internal constructor(
     public fun enableBranchAutoDeletion(enableBranchAutoDeletion: IResolvable)
 
     /**
-     * The environment variables map for an Amplify app.
+     * The environment variables for the Amplify app.
      *
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment
@@ -562,12 +562,12 @@ public open class CfnApp internal constructor(
      * in the *Amplify Hosting User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-environmentvariables)
-     * @param environmentVariables The environment variables map for an Amplify app. 
+     * @param environmentVariables The environment variables for the Amplify app. 
      */
     public fun environmentVariables(environmentVariables: IResolvable)
 
     /**
-     * The environment variables map for an Amplify app.
+     * The environment variables for the Amplify app.
      *
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment
@@ -575,12 +575,12 @@ public open class CfnApp internal constructor(
      * in the *Amplify Hosting User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-environmentvariables)
-     * @param environmentVariables The environment variables map for an Amplify app. 
+     * @param environmentVariables The environment variables for the Amplify app. 
      */
     public fun environmentVariables(environmentVariables: List<Any>)
 
     /**
-     * The environment variables map for an Amplify app.
+     * The environment variables for the Amplify app.
      *
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment
@@ -588,7 +588,7 @@ public open class CfnApp internal constructor(
      * in the *Amplify Hosting User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-environmentvariables)
-     * @param environmentVariables The environment variables map for an Amplify app. 
+     * @param environmentVariables The environment variables for the Amplify app. 
      */
     public fun environmentVariables(vararg environmentVariables: Any)
 
@@ -857,7 +857,7 @@ public open class CfnApp internal constructor(
     }
 
     /**
-     * The environment variables map for an Amplify app.
+     * The environment variables for the Amplify app.
      *
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment
@@ -865,14 +865,14 @@ public open class CfnApp internal constructor(
      * in the *Amplify Hosting User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-environmentvariables)
-     * @param environmentVariables The environment variables map for an Amplify app. 
+     * @param environmentVariables The environment variables for the Amplify app. 
      */
     override fun environmentVariables(environmentVariables: IResolvable) {
       cdkBuilder.environmentVariables(environmentVariables.let(IResolvable::unwrap))
     }
 
     /**
-     * The environment variables map for an Amplify app.
+     * The environment variables for the Amplify app.
      *
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment
@@ -880,14 +880,14 @@ public open class CfnApp internal constructor(
      * in the *Amplify Hosting User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-environmentvariables)
-     * @param environmentVariables The environment variables map for an Amplify app. 
+     * @param environmentVariables The environment variables for the Amplify app. 
      */
     override fun environmentVariables(environmentVariables: List<Any>) {
       cdkBuilder.environmentVariables(environmentVariables)
     }
 
     /**
-     * The environment variables map for an Amplify app.
+     * The environment variables for the Amplify app.
      *
      * For a list of the environment variables that are accessible to Amplify by default, see
      * [Amplify Environment
@@ -895,7 +895,7 @@ public open class CfnApp internal constructor(
      * in the *Amplify Hosting User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-environmentvariables)
-     * @param environmentVariables The environment variables map for an Amplify app. 
+     * @param environmentVariables The environment variables for the Amplify app. 
      */
     override fun environmentVariables(vararg environmentVariables: Any): Unit =
         environmentVariables(environmentVariables.toList())
@@ -1009,7 +1009,7 @@ public open class CfnApp internal constructor(
         CfnApp(cdkObject)
 
     internal fun unwrap(wrapped: CfnApp): software.amazon.awscdk.services.amplify.CfnApp =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.amplify.CfnApp
   }
 
   /**
@@ -1117,7 +1117,7 @@ public open class CfnApp internal constructor(
     public fun enablePullRequestPreview(): Any? = unwrap(this).getEnablePullRequestPreview()
 
     /**
-     * Environment variables for the auto created branch.
+     * The environment variables for the autocreated branch.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-autobranchcreationconfig.html#cfn-amplify-app-autobranchcreationconfig-environmentvariables)
      */
@@ -1270,17 +1270,17 @@ public open class CfnApp internal constructor(
       public fun enablePullRequestPreview(enablePullRequestPreview: IResolvable)
 
       /**
-       * @param environmentVariables Environment variables for the auto created branch.
+       * @param environmentVariables The environment variables for the autocreated branch.
        */
       public fun environmentVariables(environmentVariables: IResolvable)
 
       /**
-       * @param environmentVariables Environment variables for the auto created branch.
+       * @param environmentVariables The environment variables for the autocreated branch.
        */
       public fun environmentVariables(environmentVariables: List<Any>)
 
       /**
-       * @param environmentVariables Environment variables for the auto created branch.
+       * @param environmentVariables The environment variables for the autocreated branch.
        */
       public fun environmentVariables(vararg environmentVariables: Any)
 
@@ -1452,21 +1452,21 @@ public open class CfnApp internal constructor(
       }
 
       /**
-       * @param environmentVariables Environment variables for the auto created branch.
+       * @param environmentVariables The environment variables for the autocreated branch.
        */
       override fun environmentVariables(environmentVariables: IResolvable) {
         cdkBuilder.environmentVariables(environmentVariables.let(IResolvable::unwrap))
       }
 
       /**
-       * @param environmentVariables Environment variables for the auto created branch.
+       * @param environmentVariables The environment variables for the autocreated branch.
        */
       override fun environmentVariables(environmentVariables: List<Any>) {
         cdkBuilder.environmentVariables(environmentVariables)
       }
 
       /**
-       * @param environmentVariables Environment variables for the auto created branch.
+       * @param environmentVariables The environment variables for the autocreated branch.
        */
       override fun environmentVariables(vararg environmentVariables: Any): Unit =
           environmentVariables(environmentVariables.toList())
@@ -1512,8 +1512,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplify.CfnApp.AutoBranchCreationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnApp.AutoBranchCreationConfigProperty,
     ) : CdkObject(cdkObject), AutoBranchCreationConfigProperty {
       /**
        * Automated branch creation glob patterns for the Amplify app.
@@ -1584,7 +1583,7 @@ public open class CfnApp internal constructor(
       override fun enablePullRequestPreview(): Any? = unwrap(this).getEnablePullRequestPreview()
 
       /**
-       * Environment variables for the auto created branch.
+       * The environment variables for the autocreated branch.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-autobranchcreationconfig.html#cfn-amplify-app-autobranchcreationconfig-environmentvariables)
        */
@@ -1751,8 +1750,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplify.CfnApp.BasicAuthConfigProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnApp.BasicAuthConfigProperty,
     ) : CdkObject(cdkObject), BasicAuthConfigProperty {
       /**
        * Enables basic authorization for the Amplify app's branches.
@@ -1928,7 +1926,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty,
     ) : CdkObject(cdkObject), CustomRuleProperty {
       /**
        * The condition for a URL rewrite or redirect rule, such as a country code.
@@ -2004,11 +2002,15 @@ public open class CfnApp internal constructor(
    */
   public interface EnvironmentVariableProperty {
     /**
+     * The environment variable name.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-name)
      */
     public fun name(): String
 
     /**
+     * The environment variable value.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-value)
      */
     public fun `value`(): String
@@ -2019,12 +2021,12 @@ public open class CfnApp internal constructor(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name the value to be set. 
+       * @param name The environment variable name. 
        */
       public fun name(name: String)
 
       /**
-       * @param value the value to be set. 
+       * @param value The environment variable value. 
        */
       public fun `value`(`value`: String)
     }
@@ -2035,14 +2037,14 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty.builder()
 
       /**
-       * @param name the value to be set. 
+       * @param name The environment variable name. 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
       /**
-       * @param value the value to be set. 
+       * @param value The environment variable value. 
        */
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
@@ -2053,15 +2055,18 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty,
     ) : CdkObject(cdkObject), EnvironmentVariableProperty {
       /**
+       * The environment variable name.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-name)
        */
       override fun name(): String = unwrap(this).getName()
 
       /**
+       * The environment variable value.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-value)
        */
       override fun `value`(): String = unwrap(this).getValue()

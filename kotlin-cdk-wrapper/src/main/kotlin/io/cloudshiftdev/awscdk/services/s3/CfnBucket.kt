@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html)
  */
-public open class CfnBucket internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket,
+public open class CfnBucket(
+  cdkObject: software.amazon.awscdk.services.s3.CfnBucket,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.s3.CfnBucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -2195,7 +2195,7 @@ public open class CfnBucket internal constructor(
         CfnBucket(cdkObject)
 
     internal fun unwrap(wrapped: CfnBucket): software.amazon.awscdk.services.s3.CfnBucket =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.s3.CfnBucket
   }
 
   /**
@@ -2260,8 +2260,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.AbortIncompleteMultipartUploadProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.AbortIncompleteMultipartUploadProperty,
     ) : CdkObject(cdkObject), AbortIncompleteMultipartUploadProperty {
       /**
        * Specifies the number of days after which Amazon S3 stops an incomplete multipart upload.
@@ -2348,8 +2347,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.AccelerateConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.AccelerateConfigurationProperty,
     ) : CdkObject(cdkObject), AccelerateConfigurationProperty {
       /**
        * Specifies the transfer acceleration status of the bucket.
@@ -2446,8 +2444,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.AccessControlTranslationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.AccessControlTranslationProperty,
     ) : CdkObject(cdkObject), AccessControlTranslationProperty {
       /**
        * Specifies the replica ownership.
@@ -2681,8 +2678,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.AnalyticsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.AnalyticsConfigurationProperty,
     ) : CdkObject(cdkObject), AnalyticsConfigurationProperty {
       /**
        * The ID that identifies the analytics configuration.
@@ -2830,7 +2826,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.BucketEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.BucketEncryptionProperty,
     ) : CdkObject(cdkObject), BucketEncryptionProperty {
       /**
        * Specifies the default server-side-encryption configuration.
@@ -2959,8 +2955,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.CorsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.CorsConfigurationProperty,
     ) : CdkObject(cdkObject), CorsConfigurationProperty {
       /**
        * A set of origins and methods (cross-origin access that you want to allow).
@@ -3227,7 +3222,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.CorsRuleProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.CorsRuleProperty,
     ) : CdkObject(cdkObject), CorsRuleProperty {
       /**
        * Headers that are specified in the `Access-Control-Request-Headers` header.
@@ -3407,7 +3402,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DataExportProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DataExportProperty,
     ) : CdkObject(cdkObject), DataExportProperty {
       /**
        * The place to store the data for an analysis.
@@ -3556,7 +3551,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DefaultRetentionProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DefaultRetentionProperty,
     ) : CdkObject(cdkObject), DefaultRetentionProperty {
       /**
        * The number of days that you want to specify for the default retention period.
@@ -3680,8 +3675,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.DeleteMarkerReplicationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DeleteMarkerReplicationProperty,
     ) : CdkObject(cdkObject), DeleteMarkerReplicationProperty {
       /**
        * Indicates whether to replicate delete markers.
@@ -3850,7 +3844,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DestinationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DestinationProperty,
     ) : CdkObject(cdkObject), DestinationProperty {
       /**
        * The account ID that owns the destination S3 bucket.
@@ -3980,8 +3974,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.EncryptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.EncryptionConfigurationProperty,
     ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
       /**
        * Specifies the ID (Key ARN or Alias ARN) of the customer managed AWS KMS key stored in AWS
@@ -4089,8 +4082,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.EventBridgeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.EventBridgeConfigurationProperty,
     ) : CdkObject(cdkObject), EventBridgeConfigurationProperty {
       /**
        * Enables delivery of events to Amazon EventBridge.
@@ -4214,7 +4206,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.FilterRuleProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.FilterRuleProperty,
     ) : CdkObject(cdkObject), FilterRuleProperty {
       /**
        * The object key name prefix or suffix identifying one or more objects to which the filtering
@@ -4503,8 +4495,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.IntelligentTieringConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.IntelligentTieringConfigurationProperty,
     ) : CdkObject(cdkObject), IntelligentTieringConfigurationProperty {
       /**
        * The ID used to identify the S3 Intelligent-Tiering configuration.
@@ -4830,8 +4821,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.InventoryConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.InventoryConfigurationProperty,
     ) : CdkObject(cdkObject), InventoryConfigurationProperty {
       /**
        * Contains information about where to publish the inventory results.
@@ -5069,8 +5059,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.LambdaConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.LambdaConfigurationProperty,
     ) : CdkObject(cdkObject), LambdaConfigurationProperty {
       /**
        * The Amazon S3 bucket event for which to invoke the AWS Lambda function.
@@ -5247,8 +5236,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.LifecycleConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.LifecycleConfigurationProperty,
     ) : CdkObject(cdkObject), LifecycleConfigurationProperty {
       /**
        * A lifecycle rule for individual objects in an Amazon S3 bucket.
@@ -5438,8 +5426,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.LoggingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.LoggingConfigurationProperty,
     ) : CdkObject(cdkObject), LoggingConfigurationProperty {
       /**
        * The name of the bucket where Amazon S3 should store server access log files.
@@ -5655,8 +5642,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.MetricsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetricsConfigurationProperty,
     ) : CdkObject(cdkObject), MetricsConfigurationProperty {
       /**
        * The access point that was used while performing operations on the object.
@@ -5820,7 +5806,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetricsProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetricsProperty,
     ) : CdkObject(cdkObject), MetricsProperty {
       /**
        * A container specifying the time threshold for emitting the
@@ -5967,8 +5953,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.NoncurrentVersionExpirationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.NoncurrentVersionExpirationProperty,
     ) : CdkObject(cdkObject), NoncurrentVersionExpirationProperty {
       /**
        * Specifies how many noncurrent versions Amazon S3 will retain.
@@ -6149,8 +6134,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.NoncurrentVersionTransitionProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.NoncurrentVersionTransitionProperty,
     ) : CdkObject(cdkObject), NoncurrentVersionTransitionProperty {
       /**
        * Specifies how many noncurrent versions Amazon S3 will retain.
@@ -6497,8 +6481,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.NotificationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.NotificationConfigurationProperty,
     ) : CdkObject(cdkObject), NotificationConfigurationProperty {
       /**
        * Enables delivery of events to Amazon EventBridge.
@@ -6639,8 +6622,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.NotificationFilterProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.NotificationFilterProperty,
     ) : CdkObject(cdkObject), NotificationFilterProperty {
       /**
        * A container for object key name prefix and suffix filtering rules.
@@ -6835,8 +6817,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.ObjectLockConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ObjectLockConfigurationProperty,
     ) : CdkObject(cdkObject), ObjectLockConfigurationProperty {
       /**
        * Indicates whether this bucket has an Object Lock configuration enabled.
@@ -7009,7 +6990,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ObjectLockRuleProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ObjectLockRuleProperty,
     ) : CdkObject(cdkObject), ObjectLockRuleProperty {
       /**
        * The default Object Lock retention mode and period that you want to apply to new objects
@@ -7127,8 +7108,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.OwnershipControlsProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.OwnershipControlsProperty,
     ) : CdkObject(cdkObject), OwnershipControlsProperty {
       /**
        * Specifies the container element for Object Ownership rules.
@@ -7216,8 +7196,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.OwnershipControlsRuleProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.OwnershipControlsRuleProperty,
     ) : CdkObject(cdkObject), OwnershipControlsRuleProperty {
       /**
        * Specifies an object ownership rule.
@@ -7305,8 +7284,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.PartitionedPrefixProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.PartitionedPrefixProperty,
     ) : CdkObject(cdkObject), PartitionedPrefixProperty {
       /**
        * Specifies the partition date source for the partitioned prefix.
@@ -7636,8 +7614,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.PublicAccessBlockConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.PublicAccessBlockConfigurationProperty,
     ) : CdkObject(cdkObject), PublicAccessBlockConfigurationProperty {
       /**
        * Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket
@@ -7900,8 +7877,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.QueueConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.QueueConfigurationProperty,
     ) : CdkObject(cdkObject), QueueConfigurationProperty {
       /**
        * The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.
@@ -8035,8 +8011,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.RedirectAllRequestsToProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RedirectAllRequestsToProperty,
     ) : CdkObject(cdkObject), RedirectAllRequestsToProperty {
       /**
        * Name of the host where requests are redirected.
@@ -8273,7 +8248,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RedirectRuleProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RedirectRuleProperty,
     ) : CdkObject(cdkObject), RedirectRuleProperty {
       /**
        * The host name to use in the redirect request.
@@ -8411,8 +8386,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.ReplicaModificationsProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicaModificationsProperty,
     ) : CdkObject(cdkObject), ReplicaModificationsProperty {
       /**
        * Specifies whether Amazon S3 replicates modifications on replicas.
@@ -8628,8 +8602,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.ReplicationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationConfigurationProperty,
     ) : CdkObject(cdkObject), ReplicationConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that
@@ -9084,8 +9057,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.ReplicationDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationDestinationProperty,
     ) : CdkObject(cdkObject), ReplicationDestinationProperty {
       /**
        * Specify this only in a cross-account scenario (where source and destination bucket owners
@@ -9290,8 +9262,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleAndOperatorProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleAndOperatorProperty,
     ) : CdkObject(cdkObject), ReplicationRuleAndOperatorProperty {
       /**
        * An object key name prefix that identifies the subset of objects to which the rule applies.
@@ -9555,8 +9526,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleFilterProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleFilterProperty,
     ) : CdkObject(cdkObject), ReplicationRuleFilterProperty {
       /**
        * A container for specifying rule filters.
@@ -10227,7 +10197,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleProperty,
     ) : CdkObject(cdkObject), ReplicationRuleProperty {
       /**
        * Specifies whether Amazon S3 replicates delete markers.
@@ -10472,7 +10442,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationTimeProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationTimeProperty,
     ) : CdkObject(cdkObject), ReplicationTimeProperty {
       /**
        * Specifies whether the replication time is enabled.
@@ -10566,8 +10536,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.ReplicationTimeValueProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationTimeValueProperty,
     ) : CdkObject(cdkObject), ReplicationTimeValueProperty {
       /**
        * Contains an integer specifying time in minutes.
@@ -10713,8 +10682,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.RoutingRuleConditionProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RoutingRuleConditionProperty,
     ) : CdkObject(cdkObject), RoutingRuleConditionProperty {
       /**
        * The HTTP error code when the redirect is applied.
@@ -10949,7 +10917,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RoutingRuleProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RoutingRuleProperty,
     ) : CdkObject(cdkObject), RoutingRuleProperty {
       /**
        * Container for redirect information.
@@ -11865,7 +11833,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RuleProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RuleProperty,
     ) : CdkObject(cdkObject), RuleProperty {
       /**
        * Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3 bucket.
@@ -12151,7 +12119,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.S3KeyFilterProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.S3KeyFilterProperty,
     ) : CdkObject(cdkObject), S3KeyFilterProperty {
       /**
        * A list of containers for the key-value pair that defines the criteria for the filter rule.
@@ -12332,8 +12300,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.ServerSideEncryptionByDefaultProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ServerSideEncryptionByDefaultProperty,
     ) : CdkObject(cdkObject), ServerSideEncryptionByDefaultProperty {
       /**
        * AWS Key Management Service (KMS) customer AWS KMS key ID to use for the default encryption.
@@ -12573,8 +12540,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.ServerSideEncryptionRuleProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ServerSideEncryptionRuleProperty,
     ) : CdkObject(cdkObject), ServerSideEncryptionRuleProperty {
       /**
        * Specifies whether Amazon S3 should use an S3 Bucket Key with server-side encryption using
@@ -12773,8 +12739,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.SourceSelectionCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.SourceSelectionCriteriaProperty,
     ) : CdkObject(cdkObject), SourceSelectionCriteriaProperty {
       /**
        * A filter that you can specify for selection for modifications on replicas.
@@ -12867,8 +12832,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.SseKmsEncryptedObjectsProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.SseKmsEncryptedObjectsProperty,
     ) : CdkObject(cdkObject), SseKmsEncryptedObjectsProperty {
       /**
        * Specifies whether Amazon S3 replicates objects created with server-side encryption using an
@@ -12994,8 +12958,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.StorageClassAnalysisProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.StorageClassAnalysisProperty,
     ) : CdkObject(cdkObject), StorageClassAnalysisProperty {
       /**
        * Specifies how data related to the storage class analysis for an Amazon S3 bucket should be
@@ -13095,7 +13058,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TagFilterProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TagFilterProperty,
     ) : CdkObject(cdkObject), TagFilterProperty {
       /**
        * The tag key.
@@ -13238,8 +13201,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.TargetObjectKeyFormatProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TargetObjectKeyFormatProperty,
     ) : CdkObject(cdkObject), TargetObjectKeyFormatProperty {
       /**
        * Partitioned S3 key for log objects.
@@ -13371,7 +13333,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TieringProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TieringProperty,
     ) : CdkObject(cdkObject), TieringProperty {
       /**
        * S3 Intelligent-Tiering access tier.
@@ -13569,8 +13531,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.TopicConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TopicConfigurationProperty,
     ) : CdkObject(cdkObject), TopicConfigurationProperty {
       /**
        * The Amazon S3 bucket event about which to send notifications.
@@ -13747,7 +13708,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TransitionProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TransitionProperty,
     ) : CdkObject(cdkObject), TransitionProperty {
       /**
        * The storage class to which you want the object to transition.
@@ -13852,8 +13813,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.VersioningConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.VersioningConfigurationProperty,
     ) : CdkObject(cdkObject), VersioningConfigurationProperty {
       /**
        * The versioning state of the bucket.
@@ -14087,8 +14047,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnBucket.WebsiteConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.WebsiteConfigurationProperty,
     ) : CdkObject(cdkObject), WebsiteConfigurationProperty {
       /**
        * The name of the error document for the website.

@@ -35,8 +35,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class FluentdLogDriver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.FluentdLogDriver,
+public open class FluentdLogDriver(
+  cdkObject: software.amazon.awscdk.services.ecs.FluentdLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.ecs.FluentdLogDriver()
   )
@@ -380,6 +380,7 @@ public open class FluentdLogDriver internal constructor(
         FluentdLogDriver = FluentdLogDriver(cdkObject)
 
     internal fun unwrap(wrapped: FluentdLogDriver):
-        software.amazon.awscdk.services.ecs.FluentdLogDriver = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.FluentdLogDriver = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.FluentdLogDriver
   }
 }

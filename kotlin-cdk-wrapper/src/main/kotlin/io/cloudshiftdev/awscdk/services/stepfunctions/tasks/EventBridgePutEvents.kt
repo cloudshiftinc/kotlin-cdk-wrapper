@@ -39,9 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EventBridgePutEvents internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEvents,
+public open class EventBridgePutEvents(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEvents,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -499,5 +498,6 @@ public open class EventBridgePutEvents internal constructor(
 
     internal fun unwrap(wrapped: EventBridgePutEvents):
         software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEvents = wrapped.cdkObject
+        as software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEvents
   }
 }

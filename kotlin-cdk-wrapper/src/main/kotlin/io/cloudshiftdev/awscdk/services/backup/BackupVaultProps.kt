@@ -271,7 +271,7 @@ public interface BackupVaultProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.backup.BackupVaultProps,
+    cdkObject: software.amazon.awscdk.services.backup.BackupVaultProps,
   ) : CdkObject(cdkObject), BackupVaultProps {
     /**
      * A resource-based policy that is used to manage access permissions on the backup vault.

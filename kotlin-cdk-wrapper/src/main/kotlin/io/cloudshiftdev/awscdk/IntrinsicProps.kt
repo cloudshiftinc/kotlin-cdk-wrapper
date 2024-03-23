@@ -77,7 +77,7 @@ public interface IntrinsicProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IntrinsicProps,
+    cdkObject: software.amazon.awscdk.IntrinsicProps,
   ) : CdkObject(cdkObject), IntrinsicProps {
     /**
      * Capture the stack trace of where this token is created.

@@ -148,7 +148,7 @@ public interface VpcLinkProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLinkProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLinkProps,
   ) : CdkObject(cdkObject), VpcLinkProps {
     /**
      * A list of security groups for the VPC link.

@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html)
  */
-public open class CfnImageBuilder internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder,
+public open class CfnImageBuilder(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -876,7 +876,8 @@ public open class CfnImageBuilder internal constructor(
         CfnImageBuilder = CfnImageBuilder(cdkObject)
 
     internal fun unwrap(wrapped: CfnImageBuilder):
-        software.amazon.awscdk.services.appstream.CfnImageBuilder = wrapped.cdkObject
+        software.amazon.awscdk.services.appstream.CfnImageBuilder = wrapped.cdkObject as
+        software.amazon.awscdk.services.appstream.CfnImageBuilder
   }
 
   /**
@@ -956,8 +957,7 @@ public open class CfnImageBuilder internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty,
     ) : CdkObject(cdkObject), AccessEndpointProperty {
       /**
        * The type of interface endpoint.
@@ -1072,8 +1072,7 @@ public open class CfnImageBuilder internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty,
     ) : CdkObject(cdkObject), DomainJoinInfoProperty {
       /**
        * The fully qualified name of the directory (for example, corp.example.com).
@@ -1214,8 +1213,7 @@ public open class CfnImageBuilder internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * The identifiers of the security groups for the image builder.

@@ -89,7 +89,7 @@ public interface GrpcTimeout {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GrpcTimeout,
+    cdkObject: software.amazon.awscdk.services.appmesh.GrpcTimeout,
   ) : CdkObject(cdkObject), GrpcTimeout {
     /**
      * Represents an idle timeout.

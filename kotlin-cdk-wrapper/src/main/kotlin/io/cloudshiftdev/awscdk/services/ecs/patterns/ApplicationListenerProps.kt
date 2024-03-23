@@ -164,7 +164,7 @@ public interface ApplicationListenerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationListenerProps,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationListenerProps,
   ) : CdkObject(cdkObject), ApplicationListenerProps {
     /**
      * Certificate Manager certificate to associate with the load balancer.

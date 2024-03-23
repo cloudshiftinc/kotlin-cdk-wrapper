@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class GatewayVpcEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpoint,
+public open class GatewayVpcEndpoint(
+  cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpoint,
 ) : VpcEndpoint(cdkObject), IGatewayVpcEndpoint {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -244,6 +244,7 @@ public open class GatewayVpcEndpoint internal constructor(
         GatewayVpcEndpoint = GatewayVpcEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: GatewayVpcEndpoint):
-        software.amazon.awscdk.services.ec2.GatewayVpcEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.GatewayVpcEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.GatewayVpcEndpoint
   }
 }

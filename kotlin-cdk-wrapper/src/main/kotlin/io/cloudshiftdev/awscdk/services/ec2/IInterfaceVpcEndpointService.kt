@@ -28,7 +28,7 @@ public interface IInterfaceVpcEndpointService {
   public fun privateDnsDefault(): Boolean? = unwrap(this).getPrivateDnsDefault()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IInterfaceVpcEndpointService,
+    cdkObject: software.amazon.awscdk.services.ec2.IInterfaceVpcEndpointService,
   ) : CdkObject(cdkObject), IInterfaceVpcEndpointService {
     /**
      * The name of the service.

@@ -258,7 +258,7 @@ public interface ServiceProps : DnsServiceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicediscovery.ServiceProps,
+    cdkObject: software.amazon.awscdk.services.servicediscovery.ServiceProps,
   ) : CdkObject(cdkObject), ServiceProps {
     /**
      * Structure containing failure threshold for a custom health checker.

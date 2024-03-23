@@ -20,13 +20,11 @@ import io.cloudshiftdev.constructs.Construct
  * * Don't expose all scaling methods (for example Dynamo tables don't support
  * Step Scaling, so the Dynamo subclass won't expose this method).
  */
-public abstract class BaseScalableAttribute internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.applicationautoscaling.BaseScalableAttribute,
+public abstract class BaseScalableAttribute(
+  cdkObject: software.amazon.awscdk.services.applicationautoscaling.BaseScalableAttribute,
 ) : Construct(cdkObject) {
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.applicationautoscaling.BaseScalableAttribute,
+    cdkObject: software.amazon.awscdk.services.applicationautoscaling.BaseScalableAttribute,
   ) : BaseScalableAttribute(cdkObject)
 
   public companion object {

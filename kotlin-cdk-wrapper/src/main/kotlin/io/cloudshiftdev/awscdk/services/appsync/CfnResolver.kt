@@ -84,8 +84,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html)
  */
-public open class CfnResolver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnResolver,
+public open class CfnResolver(
+  cdkObject: software.amazon.awscdk.services.appsync.CfnResolver,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -961,7 +961,7 @@ public open class CfnResolver internal constructor(
         CfnResolver(cdkObject)
 
     internal fun unwrap(wrapped: CfnResolver): software.amazon.awscdk.services.appsync.CfnResolver =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.CfnResolver
   }
 
   /**
@@ -1047,8 +1047,7 @@ public open class CfnResolver internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty,
     ) : CdkObject(cdkObject), AppSyncRuntimeProperty {
       /**
        * The `name` of the runtime to use.
@@ -1185,8 +1184,7 @@ public open class CfnResolver internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty,
     ) : CdkObject(cdkObject), CachingConfigProperty {
       /**
        * The caching keys for a resolver that has caching activated.
@@ -1283,8 +1281,7 @@ public open class CfnResolver internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty,
     ) : CdkObject(cdkObject), LambdaConflictHandlerConfigProperty {
       /**
        * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
@@ -1379,8 +1376,7 @@ public open class CfnResolver internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty,
     ) : CdkObject(cdkObject), PipelineConfigProperty {
       /**
        * A list of `Function` objects.
@@ -1569,8 +1565,7 @@ public open class CfnResolver internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnResolver.SyncConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.SyncConfigProperty,
     ) : CdkObject(cdkObject), SyncConfigProperty {
       /**
        * The Conflict Detection strategy to use.

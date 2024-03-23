@@ -130,7 +130,7 @@ public interface CfnIPAMScopeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMScopeProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMScopeProps,
   ) : CdkObject(cdkObject), CfnIPAMScopeProps {
     /**
      * The description of the scope.

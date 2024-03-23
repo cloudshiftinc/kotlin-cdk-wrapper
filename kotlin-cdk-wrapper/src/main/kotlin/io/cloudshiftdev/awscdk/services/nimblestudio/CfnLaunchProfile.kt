@@ -75,8 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html)
  */
-public open class CfnLaunchProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile,
+public open class CfnLaunchProfile(
+  cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -547,7 +547,8 @@ public open class CfnLaunchProfile internal constructor(
         CfnLaunchProfile = CfnLaunchProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchProfile):
-        software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile
   }
 
   /**
@@ -1029,8 +1030,7 @@ public open class CfnLaunchProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationProperty,
     ) : CdkObject(cdkObject), StreamConfigurationProperty {
       /**
        * Indicates if a streaming session created from this launch profile should be terminated
@@ -1254,8 +1254,7 @@ public open class CfnLaunchProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty,
     ) : CdkObject(cdkObject), StreamConfigurationSessionBackupProperty {
       /**
        * The maximum number of backups that each streaming session created from this launch profile
@@ -1420,8 +1419,7 @@ public open class CfnLaunchProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionStorageProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionStorageProperty,
     ) : CdkObject(cdkObject), StreamConfigurationSessionStorageProperty {
       /**
        * Allows artists to upload files to their workstations.
@@ -1534,8 +1532,7 @@ public open class CfnLaunchProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty,
     ) : CdkObject(cdkObject), StreamingSessionStorageRootProperty {
       /**
        * The folder path in Linux workstations where files are uploaded.
@@ -1686,8 +1683,7 @@ public open class CfnLaunchProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty,
     ) : CdkObject(cdkObject), VolumeConfigurationProperty {
       /**
        * The number of I/O operations per second for the root volume that is attached to streaming

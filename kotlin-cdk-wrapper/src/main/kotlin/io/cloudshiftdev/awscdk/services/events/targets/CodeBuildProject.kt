@@ -39,8 +39,8 @@ import software.amazon.awscdk.services.codebuild.IProject as AmazonAwscdkService
  * .build());
  * ```
  */
-public open class CodeBuildProject internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.targets.CodeBuildProject,
+public open class CodeBuildProject(
+  cdkObject: software.amazon.awscdk.services.events.targets.CodeBuildProject,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(project: CloudshiftdevAwscdkServicesCodebuildIProject) :
       this(software.amazon.awscdk.services.events.targets.CodeBuildProject(project.let(CloudshiftdevAwscdkServicesCodebuildIProject::unwrap))
@@ -247,6 +247,7 @@ public open class CodeBuildProject internal constructor(
         CodeBuildProject = CodeBuildProject(cdkObject)
 
     internal fun unwrap(wrapped: CodeBuildProject):
-        software.amazon.awscdk.services.events.targets.CodeBuildProject = wrapped.cdkObject
+        software.amazon.awscdk.services.events.targets.CodeBuildProject = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.targets.CodeBuildProject
   }
 }

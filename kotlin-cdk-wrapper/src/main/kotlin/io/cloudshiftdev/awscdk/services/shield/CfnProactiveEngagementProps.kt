@@ -227,7 +227,7 @@ public interface CfnProactiveEngagementProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.shield.CfnProactiveEngagementProps,
+    cdkObject: software.amazon.awscdk.services.shield.CfnProactiveEngagementProps,
   ) : CdkObject(cdkObject), CfnProactiveEngagementProps {
     /**
      * The list of email addresses and phone numbers that the Shield Response Team (SRT) can use to

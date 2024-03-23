@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html)
  */
-public open class CfnInferenceComponent internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent,
+public open class CfnInferenceComponent(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -545,7 +545,8 @@ public open class CfnInferenceComponent internal constructor(
         CfnInferenceComponent = CfnInferenceComponent(cdkObject)
 
     internal fun unwrap(wrapped: CfnInferenceComponent):
-        software.amazon.awscdk.services.sagemaker.CfnInferenceComponent = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnInferenceComponent = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnInferenceComponent
   }
 
   /**
@@ -656,8 +657,7 @@ public open class CfnInferenceComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty,
     ) : CdkObject(cdkObject), DeployedImageProperty {
       /**
        * The date and time when the image path for the model resolved to the `ResolvedImage`.
@@ -834,8 +834,7 @@ public open class CfnInferenceComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty,
     ) : CdkObject(cdkObject), InferenceComponentComputeResourceRequirementsProperty {
       /**
        * The maximum MB of memory to allocate to run a model that you assign to an inference
@@ -1071,8 +1070,7 @@ public open class CfnInferenceComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentContainerSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentContainerSpecificationProperty,
     ) : CdkObject(cdkObject), InferenceComponentContainerSpecificationProperty {
       /**
        * The Amazon S3 path where the model artifacts, which result from model training, are stored.
@@ -1232,8 +1230,7 @@ public open class CfnInferenceComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRuntimeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRuntimeConfigProperty,
     ) : CdkObject(cdkObject), InferenceComponentRuntimeConfigProperty {
       /**
        * The number of runtime copies of the model container to deploy with the inference component.
@@ -1521,8 +1518,7 @@ public open class CfnInferenceComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentSpecificationProperty,
     ) : CdkObject(cdkObject), InferenceComponentSpecificationProperty {
       /**
        * The compute resources allocated to run the model assigned to the inference component.
@@ -1675,8 +1671,7 @@ public open class CfnInferenceComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty,
     ) : CdkObject(cdkObject), InferenceComponentStartupParametersProperty {
       /**
        * The timeout value, in seconds, for your inference container to pass health check by Amazon

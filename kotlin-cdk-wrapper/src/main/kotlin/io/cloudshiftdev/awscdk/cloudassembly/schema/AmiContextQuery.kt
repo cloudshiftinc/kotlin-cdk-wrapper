@@ -145,7 +145,7 @@ public interface AmiContextQuery {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.AmiContextQuery,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.AmiContextQuery,
   ) : CdkObject(cdkObject), AmiContextQuery {
     /**
      * Account to query.

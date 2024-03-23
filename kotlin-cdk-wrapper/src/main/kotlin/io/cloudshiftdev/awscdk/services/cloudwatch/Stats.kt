@@ -27,11 +27,11 @@ import kotlin.String
  * .build());
  * ```
  */
-public abstract class Stats internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Stats,
+public abstract class Stats(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.Stats,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.Stats,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.Stats,
   ) : Stats(cdkObject)
 
   public companion object {

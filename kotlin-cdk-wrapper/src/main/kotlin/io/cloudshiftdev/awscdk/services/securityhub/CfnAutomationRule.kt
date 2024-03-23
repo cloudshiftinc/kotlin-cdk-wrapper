@@ -246,8 +246,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html)
  */
-public open class CfnAutomationRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule,
+public open class CfnAutomationRule(
+  cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.securityhub.CfnAutomationRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -845,7 +845,8 @@ public open class CfnAutomationRule internal constructor(
         CfnAutomationRule = CfnAutomationRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnAutomationRule):
-        software.amazon.awscdk.services.securityhub.CfnAutomationRule = wrapped.cdkObject
+        software.amazon.awscdk.services.securityhub.CfnAutomationRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.securityhub.CfnAutomationRule
   }
 
   /**
@@ -1000,8 +1001,7 @@ public open class CfnAutomationRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty,
     ) : CdkObject(cdkObject), AutomationRulesActionProperty {
       /**
        * Specifies that the automation rule action is an update to a finding field.
@@ -1410,8 +1410,7 @@ public open class CfnAutomationRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty,
     ) : CdkObject(cdkObject), AutomationRulesFindingFieldsUpdateProperty {
       /**
        * The rule action updates the `Confidence` field of a finding.
@@ -3909,8 +3908,7 @@ public open class CfnAutomationRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFiltersProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFiltersProperty,
     ) : CdkObject(cdkObject), AutomationRulesFindingFiltersProperty {
       /**
        * The AWS account ID in which a finding was generated.
@@ -4458,8 +4456,7 @@ public open class CfnAutomationRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateFilterProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateFilterProperty,
     ) : CdkObject(cdkObject), DateFilterProperty {
       /**
        * A date range for the date filter.
@@ -4584,8 +4581,7 @@ public open class CfnAutomationRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty,
     ) : CdkObject(cdkObject), DateRangeProperty {
       /**
        * A date range unit for the date filter.
@@ -4863,8 +4859,7 @@ public open class CfnAutomationRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty,
     ) : CdkObject(cdkObject), MapFilterProperty {
       /**
        * The condition to apply to the key value when filtering Security Hub findings with a map
@@ -5031,8 +5026,7 @@ public open class CfnAutomationRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.NoteUpdateProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.NoteUpdateProperty,
     ) : CdkObject(cdkObject), NoteUpdateProperty {
       /**
        * The updated note text.
@@ -5167,8 +5161,7 @@ public open class CfnAutomationRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.NumberFilterProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.NumberFilterProperty,
     ) : CdkObject(cdkObject), NumberFilterProperty {
       /**
        * The equal-to condition to be applied to a single field when querying for findings.
@@ -5292,8 +5285,7 @@ public open class CfnAutomationRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty,
     ) : CdkObject(cdkObject), RelatedFindingProperty {
       /**
        * The product-generated identifier for a related finding.
@@ -5471,8 +5463,7 @@ public open class CfnAutomationRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty,
     ) : CdkObject(cdkObject), SeverityUpdateProperty {
       /**
        * The severity value of the finding. The allowed values are the following.
@@ -5798,8 +5789,7 @@ public open class CfnAutomationRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.StringFilterProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.StringFilterProperty,
     ) : CdkObject(cdkObject), StringFilterProperty {
       /**
        * The condition to apply to a string value when filtering Security Hub findings.
@@ -6014,8 +6004,7 @@ public open class CfnAutomationRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty,
     ) : CdkObject(cdkObject), WorkflowUpdateProperty {
       /**
        * The status of the investigation into the finding.

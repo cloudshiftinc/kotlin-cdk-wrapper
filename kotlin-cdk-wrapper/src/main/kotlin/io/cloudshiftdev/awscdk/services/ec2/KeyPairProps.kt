@@ -204,7 +204,7 @@ public interface KeyPairProps : ResourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.KeyPairProps,
+    cdkObject: software.amazon.awscdk.services.ec2.KeyPairProps,
   ) : CdkObject(cdkObject), KeyPairProps {
     /**
      * The AWS account ID this resource belongs to.

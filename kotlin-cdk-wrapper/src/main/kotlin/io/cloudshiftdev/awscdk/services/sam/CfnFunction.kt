@@ -129,8 +129,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-function.html)
  */
-public open class CfnFunction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction,
+public open class CfnFunction(
+  cdkObject: software.amazon.awscdk.services.sam.CfnFunction,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sam.CfnFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1804,7 +1804,7 @@ public open class CfnFunction internal constructor(
         CfnFunction(cdkObject)
 
     internal fun unwrap(wrapped: CfnFunction): software.amazon.awscdk.services.sam.CfnFunction =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sam.CfnFunction
   }
 
   /**
@@ -1855,8 +1855,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.AlexaSkillEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.AlexaSkillEventProperty,
     ) : CdkObject(cdkObject), AlexaSkillEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-alexaskillevent.html#cfn-serverless-function-alexaskillevent-skillid)
@@ -2121,7 +2120,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.ApiEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.ApiEventProperty,
     ) : CdkObject(cdkObject), ApiEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-apievent.html#cfn-serverless-function-apievent-auth)
@@ -2336,7 +2335,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.AuthProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.AuthProperty,
     ) : CdkObject(cdkObject), AuthProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-auth.html#cfn-serverless-function-auth-apikeyrequired)
@@ -2745,8 +2744,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.AuthResourcePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.AuthResourcePolicyProperty,
     ) : CdkObject(cdkObject), AuthResourcePolicyProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-authresourcepolicy.html#cfn-serverless-function-authresourcepolicy-awsaccountblacklist)
@@ -2880,7 +2878,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.BucketSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.BucketSAMPTProperty,
     ) : CdkObject(cdkObject), BucketSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-bucketsampt.html#cfn-serverless-function-bucketsampt-bucketname)
@@ -2994,8 +2992,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.CloudWatchEventEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.CloudWatchEventEventProperty,
     ) : CdkObject(cdkObject), CloudWatchEventEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-cloudwatcheventevent.html#cfn-serverless-function-cloudwatcheventevent-input)
@@ -3098,8 +3095,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.CloudWatchLogsEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.CloudWatchLogsEventProperty,
     ) : CdkObject(cdkObject), CloudWatchLogsEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-cloudwatchlogsevent.html#cfn-serverless-function-cloudwatchlogsevent-filterpattern)
@@ -3196,7 +3192,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.CognitoEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.CognitoEventProperty,
     ) : CdkObject(cdkObject), CognitoEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-cognitoevent.html#cfn-serverless-function-cognitoevent-trigger)
@@ -3275,8 +3271,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.CollectionSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.CollectionSAMPTProperty,
     ) : CdkObject(cdkObject), CollectionSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-collectionsampt.html#cfn-serverless-function-collectionsampt-collectionid)
@@ -3435,8 +3430,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.CorsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.CorsConfigurationProperty,
     ) : CdkObject(cdkObject), CorsConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-corsconfiguration.html#cfn-serverless-function-corsconfiguration-allowcredentials)
@@ -3548,8 +3542,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.DeadLetterQueueProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.DeadLetterQueueProperty,
     ) : CdkObject(cdkObject), DeadLetterQueueProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-deadletterqueue.html#cfn-serverless-function-deadletterqueue-targetarn)
@@ -3754,8 +3747,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.DeploymentPreferenceProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.DeploymentPreferenceProperty,
     ) : CdkObject(cdkObject), DeploymentPreferenceProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-deploymentpreference.html#cfn-serverless-function-deploymentpreference-alarms)
@@ -3880,8 +3872,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.DestinationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.DestinationConfigProperty,
     ) : CdkObject(cdkObject), DestinationConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-destinationconfig.html#cfn-serverless-function-destinationconfig-onfailure)
@@ -3974,7 +3965,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.DestinationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.DestinationProperty,
     ) : CdkObject(cdkObject), DestinationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-destination.html#cfn-serverless-function-destination-destination)
@@ -4053,7 +4044,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.DomainSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.DomainSAMPTProperty,
     ) : CdkObject(cdkObject), DomainSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-domainsampt.html#cfn-serverless-function-domainsampt-domainname)
@@ -4349,7 +4340,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.DynamoDBEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.DynamoDBEventProperty,
     ) : CdkObject(cdkObject), DynamoDBEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-dynamodbevent.html#cfn-serverless-function-dynamodbevent-batchsize)
@@ -4451,7 +4442,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.EmptySAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.EmptySAMPTProperty,
     ) : CdkObject(cdkObject), EmptySAMPTProperty
 
     public companion object {
@@ -4519,8 +4510,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.EphemeralStorageProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.EphemeralStorageProperty,
     ) : CdkObject(cdkObject), EphemeralStorageProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-ephemeralstorage.html#cfn-serverless-function-ephemeralstorage-size)
@@ -4652,8 +4642,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.EventBridgeRuleEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.EventBridgeRuleEventProperty,
     ) : CdkObject(cdkObject), EventBridgeRuleEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-eventbridgeruleevent.html#cfn-serverless-function-eventbridgeruleevent-eventbusname)
@@ -4818,8 +4807,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.EventInvokeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.EventInvokeConfigProperty,
     ) : CdkObject(cdkObject), EventInvokeConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-eventinvokeconfig.html#cfn-serverless-function-eventinvokeconfig-destinationconfig)
@@ -4986,8 +4974,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.EventInvokeDestinationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.EventInvokeDestinationConfigProperty,
     ) : CdkObject(cdkObject), EventInvokeDestinationConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-eventinvokedestinationconfig.html#cfn-serverless-function-eventinvokedestinationconfig-onfailure)
@@ -5465,7 +5452,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.EventSourceProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.EventSourceProperty,
     ) : CdkObject(cdkObject), EventSourceProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-eventsource.html#cfn-serverless-function-eventsource-properties)
@@ -5562,8 +5549,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.FileSystemConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.FileSystemConfigProperty,
     ) : CdkObject(cdkObject), FileSystemConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-filesystemconfig.html#cfn-serverless-function-filesystemconfig-arn)
@@ -5656,8 +5642,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.FunctionEnvironmentProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.FunctionEnvironmentProperty,
     ) : CdkObject(cdkObject), FunctionEnvironmentProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-functionenvironment.html#cfn-serverless-function-functionenvironment-variables)
@@ -5731,7 +5716,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.FunctionSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.FunctionSAMPTProperty,
     ) : CdkObject(cdkObject), FunctionSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-functionsampt.html#cfn-serverless-function-functionsampt-functionname)
@@ -5881,8 +5866,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.FunctionUrlConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.FunctionUrlConfigProperty,
     ) : CdkObject(cdkObject), FunctionUrlConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-functionurlconfig.html#cfn-serverless-function-functionurlconfig-authtype)
@@ -5983,7 +5967,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.HooksProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.HooksProperty,
     ) : CdkObject(cdkObject), HooksProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-hooks.html#cfn-serverless-function-hooks-posttraffic)
@@ -6230,7 +6214,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.HttpApiEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.HttpApiEventProperty,
     ) : CdkObject(cdkObject), HttpApiEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-httpapievent.html#cfn-serverless-function-httpapievent-apiid)
@@ -6365,8 +6349,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.HttpApiFunctionAuthProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.HttpApiFunctionAuthProperty,
     ) : CdkObject(cdkObject), HttpApiFunctionAuthProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-httpapifunctionauth.html#cfn-serverless-function-httpapifunctionauth-authorizationscopes)
@@ -6465,8 +6448,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.IAMPolicyDocumentProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.IAMPolicyDocumentProperty,
     ) : CdkObject(cdkObject), IAMPolicyDocumentProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-iampolicydocument.html#cfn-serverless-function-iampolicydocument-statement)
@@ -6545,7 +6527,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.IdentitySAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.IdentitySAMPTProperty,
     ) : CdkObject(cdkObject), IdentitySAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-identitysampt.html#cfn-serverless-function-identitysampt-identityname)
@@ -6675,7 +6657,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.ImageConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.ImageConfigProperty,
     ) : CdkObject(cdkObject), ImageConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-imageconfig.html#cfn-serverless-function-imageconfig-command)
@@ -6778,7 +6760,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.IoTRuleEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.IoTRuleEventProperty,
     ) : CdkObject(cdkObject), IoTRuleEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-iotruleevent.html#cfn-serverless-function-iotruleevent-awsiotsqlversion)
@@ -6857,7 +6839,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.KeySAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.KeySAMPTProperty,
     ) : CdkObject(cdkObject), KeySAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-keysampt.html#cfn-serverless-function-keysampt-keyid)
@@ -7027,7 +7009,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.KinesisEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.KinesisEventProperty,
     ) : CdkObject(cdkObject), KinesisEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-kinesisevent.html#cfn-serverless-function-kinesisevent-batchsize)
@@ -7122,7 +7104,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.LogGroupSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.LogGroupSAMPTProperty,
     ) : CdkObject(cdkObject), LogGroupSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-loggroupsampt.html#cfn-serverless-function-loggroupsampt-loggroupname)
@@ -7196,8 +7178,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.ParameterNameSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.ParameterNameSAMPTProperty,
     ) : CdkObject(cdkObject), ParameterNameSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-parameternamesampt.html#cfn-serverless-function-parameternamesampt-parametername)
@@ -7274,8 +7255,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.ProvisionedConcurrencyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.ProvisionedConcurrencyConfigProperty,
     ) : CdkObject(cdkObject), ProvisionedConcurrencyConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-provisionedconcurrencyconfig.html#cfn-serverless-function-provisionedconcurrencyconfig-provisionedconcurrentexecutions)
@@ -7351,7 +7331,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.QueueSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.QueueSAMPTProperty,
     ) : CdkObject(cdkObject), QueueSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-queuesampt.html#cfn-serverless-function-queuesampt-queuename)
@@ -7515,7 +7495,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.RequestModelProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.RequestModelProperty,
     ) : CdkObject(cdkObject), RequestModelProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-requestmodel.html#cfn-serverless-function-requestmodel-model)
@@ -7646,8 +7626,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.RequestParameterProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.RequestParameterProperty,
     ) : CdkObject(cdkObject), RequestParameterProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-requestparameter.html#cfn-serverless-function-requestparameter-caching)
@@ -7822,7 +7801,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.RouteSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.RouteSettingsProperty,
     ) : CdkObject(cdkObject), RouteSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-routesettings.html#cfn-serverless-function-routesettings-datatraceenabled)
@@ -7987,7 +7966,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.S3EventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.S3EventProperty,
     ) : CdkObject(cdkObject), S3EventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-s3event.html#cfn-serverless-function-s3event-bucket)
@@ -8094,7 +8073,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.S3KeyFilterProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.S3KeyFilterProperty,
     ) : CdkObject(cdkObject), S3KeyFilterProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-s3keyfilter.html#cfn-serverless-function-s3keyfilter-rules)
@@ -8186,8 +8165,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.S3KeyFilterRuleProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.S3KeyFilterRuleProperty,
     ) : CdkObject(cdkObject), S3KeyFilterRuleProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-s3keyfilterrule.html#cfn-serverless-function-s3keyfilterrule-name)
@@ -8303,7 +8281,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-s3location.html#cfn-serverless-function-s3location-bucket)
@@ -8420,8 +8398,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.S3NotificationFilterProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.S3NotificationFilterProperty,
     ) : CdkObject(cdkObject), S3NotificationFilterProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-s3notificationfilter.html#cfn-serverless-function-s3notificationfilter-s3key)
@@ -10118,8 +10095,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.SAMPolicyTemplateProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.SAMPolicyTemplateProperty,
     ) : CdkObject(cdkObject), SAMPolicyTemplateProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-sampolicytemplate.html#cfn-serverless-function-sampolicytemplate-amidescribepolicy)
@@ -10365,7 +10341,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.SNSEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.SNSEventProperty,
     ) : CdkObject(cdkObject), SNSEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-snsevent.html#cfn-serverless-function-snsevent-topic)
@@ -10487,7 +10463,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.SQSEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.SQSEventProperty,
     ) : CdkObject(cdkObject), SQSEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-sqsevent.html#cfn-serverless-function-sqsevent-batchsize)
@@ -10655,7 +10631,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.ScheduleEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.ScheduleEventProperty,
     ) : CdkObject(cdkObject), ScheduleEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-scheduleevent.html#cfn-serverless-function-scheduleevent-description)
@@ -10749,8 +10725,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.SecretArnSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.SecretArnSAMPTProperty,
     ) : CdkObject(cdkObject), SecretArnSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-secretarnsampt.html#cfn-serverless-function-secretarnsampt-secretarn)
@@ -10824,8 +10799,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.StateMachineSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.StateMachineSAMPTProperty,
     ) : CdkObject(cdkObject), StateMachineSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-statemachinesampt.html#cfn-serverless-function-statemachinesampt-statemachinename)
@@ -10899,7 +10873,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.StreamSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.StreamSAMPTProperty,
     ) : CdkObject(cdkObject), StreamSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-streamsampt.html#cfn-serverless-function-streamsampt-streamname)
@@ -10973,7 +10947,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.TableSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.TableSAMPTProperty,
     ) : CdkObject(cdkObject), TableSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-tablesampt.html#cfn-serverless-function-tablesampt-tablename)
@@ -11064,8 +11038,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnFunction.TableStreamSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.TableStreamSAMPTProperty,
     ) : CdkObject(cdkObject), TableStreamSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-tablestreamsampt.html#cfn-serverless-function-tablestreamsampt-streamname)
@@ -11144,7 +11117,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.TopicSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.TopicSAMPTProperty,
     ) : CdkObject(cdkObject), TopicSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-topicsampt.html#cfn-serverless-function-topicsampt-topicname)
@@ -11256,7 +11229,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnFunction.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-vpcconfig.html#cfn-serverless-function-vpcconfig-securitygroupids)

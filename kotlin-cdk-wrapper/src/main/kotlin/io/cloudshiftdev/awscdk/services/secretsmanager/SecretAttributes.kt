@@ -114,7 +114,7 @@ public interface SecretAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.SecretAttributes,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.SecretAttributes,
   ) : CdkObject(cdkObject), SecretAttributes {
     /**
      * The encryption key that is used to encrypt the secret, unless the default SecretsManager key

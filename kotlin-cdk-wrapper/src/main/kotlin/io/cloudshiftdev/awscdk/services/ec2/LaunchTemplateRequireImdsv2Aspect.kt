@@ -26,9 +26,8 @@ import kotlin.Unit
  *
  * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-metadataoptions.html)
  */
-public open class LaunchTemplateRequireImdsv2Aspect internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect,
+public open class LaunchTemplateRequireImdsv2Aspect(
+  cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect,
 ) : CdkObject(cdkObject), IAspect {
   public constructor() :
       this(software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect()
@@ -99,6 +98,7 @@ public open class LaunchTemplateRequireImdsv2Aspect internal constructor(
         LaunchTemplateRequireImdsv2Aspect = LaunchTemplateRequireImdsv2Aspect(cdkObject)
 
     internal fun unwrap(wrapped: LaunchTemplateRequireImdsv2Aspect):
-        software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect
   }
 }

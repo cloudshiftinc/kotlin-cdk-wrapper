@@ -47,9 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html)
  */
-public open class CfnHostedConfigurationVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersion,
+public open class CfnHostedConfigurationVersion(
+  cdkObject: software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -350,5 +349,6 @@ public open class CfnHostedConfigurationVersion internal constructor(
 
     internal fun unwrap(wrapped: CfnHostedConfigurationVersion):
         software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersion = wrapped.cdkObject
+        as software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersion
   }
 }

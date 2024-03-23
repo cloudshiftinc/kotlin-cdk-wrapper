@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class WebSocketAuthorizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer,
+public open class WebSocketAuthorizer(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer,
 ) : Resource(cdkObject), IWebSocketAuthorizer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -215,6 +215,7 @@ public open class WebSocketAuthorizer internal constructor(
         WebSocketAuthorizer = WebSocketAuthorizer(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketAuthorizer):
-        software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer
   }
 }

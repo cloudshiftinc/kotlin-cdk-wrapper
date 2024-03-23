@@ -171,7 +171,7 @@ public interface KubernetesManifestOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.KubernetesManifestOptions,
+    cdkObject: software.amazon.awscdk.services.eks.KubernetesManifestOptions,
   ) : CdkObject(cdkObject), KubernetesManifestOptions {
     /**
      * Automatically detect `Ingress` resources in the manifest and annotate them so they are picked

@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html)
  */
-public open class CfnUserPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CfnUserPolicy,
+public open class CfnUserPolicy(
+  cdkObject: software.amazon.awscdk.services.iam.CfnUserPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -244,6 +244,6 @@ public open class CfnUserPolicy internal constructor(
         CfnUserPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPolicy): software.amazon.awscdk.services.iam.CfnUserPolicy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.CfnUserPolicy
   }
 }

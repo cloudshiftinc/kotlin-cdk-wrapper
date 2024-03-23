@@ -202,7 +202,7 @@ public interface AssetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.AssetOptions,
+    cdkObject: software.amazon.awscdk.AssetOptions,
   ) : CdkObject(cdkObject), AssetOptions {
     /**
      * Specify a custom hash for this asset.

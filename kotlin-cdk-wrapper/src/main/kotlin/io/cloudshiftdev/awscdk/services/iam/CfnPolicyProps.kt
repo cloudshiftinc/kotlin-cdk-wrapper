@@ -334,7 +334,7 @@ public interface CfnPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.CfnPolicyProps,
+    cdkObject: software.amazon.awscdk.services.iam.CfnPolicyProps,
   ) : CdkObject(cdkObject), CfnPolicyProps {
     /**
      * The name of the group to associate the policy with.

@@ -40,9 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-trafficdistributiongroup.html)
  */
-public open class CfnTrafficDistributionGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.connect.CfnTrafficDistributionGroup,
+public open class CfnTrafficDistributionGroup(
+  cdkObject: software.amazon.awscdk.services.connect.CfnTrafficDistributionGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -278,6 +277,7 @@ public open class CfnTrafficDistributionGroup internal constructor(
         CfnTrafficDistributionGroup = CfnTrafficDistributionGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficDistributionGroup):
-        software.amazon.awscdk.services.connect.CfnTrafficDistributionGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnTrafficDistributionGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnTrafficDistributionGroup
   }
 }

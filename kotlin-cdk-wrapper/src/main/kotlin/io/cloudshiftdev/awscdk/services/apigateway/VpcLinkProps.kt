@@ -123,7 +123,7 @@ public interface VpcLinkProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.VpcLinkProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.VpcLinkProps,
   ) : CdkObject(cdkObject), VpcLinkProps {
     /**
      * The description of the VPC link.

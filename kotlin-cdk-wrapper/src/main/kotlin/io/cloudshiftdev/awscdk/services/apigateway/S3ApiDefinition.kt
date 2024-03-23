@@ -20,8 +20,8 @@ import kotlin.String
  * S3ApiDefinition s3ApiDefinition = new S3ApiDefinition(bucket, "key", "objectVersion");
  * ```
  */
-public open class S3ApiDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.S3ApiDefinition,
+public open class S3ApiDefinition(
+  cdkObject: software.amazon.awscdk.services.apigateway.S3ApiDefinition,
 ) : ApiDefinition(cdkObject) {
   public constructor(bucket: IBucket, key: String) :
       this(software.amazon.awscdk.services.apigateway.S3ApiDefinition(bucket.let(IBucket::unwrap),
@@ -50,6 +50,7 @@ public open class S3ApiDefinition internal constructor(
         S3ApiDefinition = S3ApiDefinition(cdkObject)
 
     internal fun unwrap(wrapped: S3ApiDefinition):
-        software.amazon.awscdk.services.apigateway.S3ApiDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.S3ApiDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.S3ApiDefinition
   }
 }

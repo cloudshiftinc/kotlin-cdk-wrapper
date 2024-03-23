@@ -68,9 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html)
  */
-public open class CfnVerifiedAccessTrustProvider internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider,
+public open class CfnVerifiedAccessTrustProvider(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -614,7 +613,8 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
         CfnVerifiedAccessTrustProvider = CfnVerifiedAccessTrustProvider(cdkObject)
 
     internal fun unwrap(wrapped: CfnVerifiedAccessTrustProvider):
-        software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider
   }
 
   /**
@@ -693,8 +693,7 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty,
     ) : CdkObject(cdkObject), DeviceOptionsProperty {
       /**
        * The URL AWS Verified Access will use to verify the authenticity of the device tokens.
@@ -903,8 +902,7 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.OidcOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.OidcOptionsProperty,
     ) : CdkObject(cdkObject), OidcOptionsProperty {
       /**
        * The OIDC authorization endpoint.
@@ -1074,8 +1072,7 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.SseSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.SseSpecificationProperty,
     ) : CdkObject(cdkObject), SseSpecificationProperty {
       /**
        * Enable or disable the use of customer managed KMS keys for server side encryption.

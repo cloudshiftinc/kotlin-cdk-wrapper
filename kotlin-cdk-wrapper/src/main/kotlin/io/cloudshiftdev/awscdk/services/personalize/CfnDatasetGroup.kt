@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-datasetgroup.html)
  */
-public open class CfnDatasetGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.personalize.CfnDatasetGroup,
+public open class CfnDatasetGroup(
+  cdkObject: software.amazon.awscdk.services.personalize.CfnDatasetGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -245,6 +245,7 @@ public open class CfnDatasetGroup internal constructor(
         CfnDatasetGroup = CfnDatasetGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnDatasetGroup):
-        software.amazon.awscdk.services.personalize.CfnDatasetGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.personalize.CfnDatasetGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.personalize.CfnDatasetGroup
   }
 }

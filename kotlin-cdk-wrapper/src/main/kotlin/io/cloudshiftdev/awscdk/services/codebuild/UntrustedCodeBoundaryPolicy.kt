@@ -35,9 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * PermissionsBoundary.of(project).apply(new UntrustedCodeBoundaryPolicy(this, "Boundary"));
  * ```
  */
-public open class UntrustedCodeBoundaryPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy,
+public open class UntrustedCodeBoundaryPolicy(
+  cdkObject: software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy,
 ) : ManagedPolicy(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -153,6 +152,7 @@ public open class UntrustedCodeBoundaryPolicy internal constructor(
         UntrustedCodeBoundaryPolicy = UntrustedCodeBoundaryPolicy(cdkObject)
 
     internal fun unwrap(wrapped: UntrustedCodeBoundaryPolicy):
-        software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy
   }
 }

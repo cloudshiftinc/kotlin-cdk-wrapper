@@ -88,7 +88,7 @@ public interface CfnTrafficRoutingTimeBasedLinear {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear,
+    cdkObject: software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear,
   ) : CdkObject(cdkObject), CfnTrafficRoutingTimeBasedLinear {
     /**
      * The number of minutes between the first and second traffic shifts of a time-based linear

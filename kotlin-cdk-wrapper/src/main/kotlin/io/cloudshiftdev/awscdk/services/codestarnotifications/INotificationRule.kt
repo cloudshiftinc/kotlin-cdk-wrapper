@@ -31,7 +31,7 @@ public interface INotificationRule : IResource {
   public fun notificationRuleArn(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codestarnotifications.INotificationRule,
+    cdkObject: software.amazon.awscdk.services.codestarnotifications.INotificationRule,
   ) : CdkObject(cdkObject), INotificationRule {
     /**
      * Adds target to notification rule.

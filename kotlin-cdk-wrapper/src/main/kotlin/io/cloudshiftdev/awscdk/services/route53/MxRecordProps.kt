@@ -281,7 +281,7 @@ public interface MxRecordProps : RecordSetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.MxRecordProps,
+    cdkObject: software.amazon.awscdk.services.route53.MxRecordProps,
   ) : CdkObject(cdkObject), MxRecordProps {
     /**
      * A comment to add on the record.

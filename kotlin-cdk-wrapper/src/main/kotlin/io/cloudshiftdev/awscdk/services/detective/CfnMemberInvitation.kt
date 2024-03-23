@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html)
  */
-public open class CfnMemberInvitation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.detective.CfnMemberInvitation,
+public open class CfnMemberInvitation(
+  cdkObject: software.amazon.awscdk.services.detective.CfnMemberInvitation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -299,6 +299,7 @@ public open class CfnMemberInvitation internal constructor(
         CfnMemberInvitation = CfnMemberInvitation(cdkObject)
 
     internal fun unwrap(wrapped: CfnMemberInvitation):
-        software.amazon.awscdk.services.detective.CfnMemberInvitation = wrapped.cdkObject
+        software.amazon.awscdk.services.detective.CfnMemberInvitation = wrapped.cdkObject as
+        software.amazon.awscdk.services.detective.CfnMemberInvitation
   }
 }

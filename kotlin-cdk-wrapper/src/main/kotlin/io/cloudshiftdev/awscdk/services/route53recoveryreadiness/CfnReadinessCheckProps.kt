@@ -116,8 +116,7 @@ public interface CfnReadinessCheckProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheckProps,
+    cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheckProps,
   ) : CdkObject(cdkObject), CfnReadinessCheckProps {
     /**
      * The name of the readiness check to create.

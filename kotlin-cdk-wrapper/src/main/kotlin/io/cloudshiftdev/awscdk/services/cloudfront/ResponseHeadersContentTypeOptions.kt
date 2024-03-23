@@ -100,8 +100,7 @@ public interface ResponseHeadersContentTypeOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cloudfront.ResponseHeadersContentTypeOptions,
+    cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersContentTypeOptions,
   ) : CdkObject(cdkObject), ResponseHeadersContentTypeOptions {
     /**
      * A Boolean that determines whether CloudFront overrides the X-Content-Type-Options HTTP

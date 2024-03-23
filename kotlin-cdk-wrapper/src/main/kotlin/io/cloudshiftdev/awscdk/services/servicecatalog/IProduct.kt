@@ -43,7 +43,7 @@ public interface IProduct : IResource {
   public fun productId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicecatalog.IProduct,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.IProduct,
   ) : CdkObject(cdkObject), IProduct {
     /**
      * Apply the given removal policy to this resource.

@@ -132,7 +132,7 @@ public interface AddStageOpts {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.AddStageOpts,
+    cdkObject: software.amazon.awscdk.pipelines.AddStageOpts,
   ) : CdkObject(cdkObject), AddStageOpts {
     /**
      * Additional steps to run after all of the stacks in the stage.

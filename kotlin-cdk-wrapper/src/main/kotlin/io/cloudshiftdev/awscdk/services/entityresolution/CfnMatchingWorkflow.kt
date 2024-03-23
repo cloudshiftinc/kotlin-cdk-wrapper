@@ -86,9 +86,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html)
  */
-public open class CfnMatchingWorkflow internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow,
+public open class CfnMatchingWorkflow(
+  cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -593,7 +592,8 @@ public open class CfnMatchingWorkflow internal constructor(
         CfnMatchingWorkflow = CfnMatchingWorkflow(cdkObject)
 
     internal fun unwrap(wrapped: CfnMatchingWorkflow):
-        software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow = wrapped.cdkObject
+        software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow = wrapped.cdkObject as
+        software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow
   }
 
   /**
@@ -725,8 +725,7 @@ public open class CfnMatchingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty,
     ) : CdkObject(cdkObject), InputSourceProperty {
       /**
        * Normalizes the attributes defined in the schema in the input data.
@@ -833,8 +832,7 @@ public open class CfnMatchingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty,
     ) : CdkObject(cdkObject), IntermediateSourceConfigurationProperty {
       /**
        * The Amazon S3 location (bucket and prefix).
@@ -959,8 +957,7 @@ public open class CfnMatchingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty,
     ) : CdkObject(cdkObject), OutputAttributeProperty {
       /**
        * Enables the ability to hash the column values in the output.
@@ -1200,8 +1197,7 @@ public open class CfnMatchingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputSourceProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputSourceProperty,
     ) : CdkObject(cdkObject), OutputSourceProperty {
       /**
        * Normalizes the attributes defined in the schema in the input data.
@@ -1421,8 +1417,7 @@ public open class CfnMatchingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ProviderPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ProviderPropertiesProperty,
     ) : CdkObject(cdkObject), ProviderPropertiesProperty {
       /**
        * The Amazon S3 location that temporarily stores your data while it processes.
@@ -1645,8 +1640,7 @@ public open class CfnMatchingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ResolutionTechniquesProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ResolutionTechniquesProperty,
     ) : CdkObject(cdkObject), ResolutionTechniquesProperty {
       /**
        * The properties of the provider service.
@@ -1819,8 +1813,7 @@ public open class CfnMatchingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty,
     ) : CdkObject(cdkObject), RuleBasedPropertiesProperty {
       /**
        * The comparison type.
@@ -1959,8 +1952,7 @@ public open class CfnMatchingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleProperty,
     ) : CdkObject(cdkObject), RuleProperty {
       /**
        * A list of `MatchingKeys` .

@@ -107,7 +107,7 @@ public interface CfnSecurityGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticache.CfnSecurityGroupProps,
+    cdkObject: software.amazon.awscdk.services.elasticache.CfnSecurityGroupProps,
   ) : CdkObject(cdkObject), CfnSecurityGroupProps {
     /**
      * A description for the cache security group.

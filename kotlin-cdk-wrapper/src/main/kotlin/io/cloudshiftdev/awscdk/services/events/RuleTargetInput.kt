@@ -33,8 +33,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public abstract class RuleTargetInput internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.RuleTargetInput,
+public abstract class RuleTargetInput(
+  cdkObject: software.amazon.awscdk.services.events.RuleTargetInput,
 ) : CdkObject(cdkObject) {
   /**
    * Return the input properties for this input object.
@@ -45,7 +45,7 @@ public abstract class RuleTargetInput internal constructor(
       unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetInputProperties::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.RuleTargetInput,
+    cdkObject: software.amazon.awscdk.services.events.RuleTargetInput,
   ) : RuleTargetInput(cdkObject)
 
   public companion object {

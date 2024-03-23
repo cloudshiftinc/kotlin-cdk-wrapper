@@ -76,7 +76,7 @@ public interface ExportValueOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ExportValueOptions,
+    cdkObject: software.amazon.awscdk.ExportValueOptions,
   ) : CdkObject(cdkObject), ExportValueOptions {
     /**
      * The description of the outputs.

@@ -39,8 +39,8 @@ import kotlin.collections.List
  * }
  * ```
  */
-public open class Aspects internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Aspects,
+public open class Aspects(
+  cdkObject: software.amazon.awscdk.Aspects,
 ) : CdkObject(cdkObject) {
   /**
    * Adds an aspect to apply this scope before synthesis.
@@ -62,6 +62,7 @@ public open class Aspects internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Aspects): Aspects = Aspects(cdkObject)
 
-    internal fun unwrap(wrapped: Aspects): software.amazon.awscdk.Aspects = wrapped.cdkObject
+    internal fun unwrap(wrapped: Aspects): software.amazon.awscdk.Aspects = wrapped.cdkObject as
+        software.amazon.awscdk.Aspects
   }
 }

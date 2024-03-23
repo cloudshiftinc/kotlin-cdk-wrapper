@@ -131,7 +131,7 @@ public interface RotationMultiUserOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.docdb.RotationMultiUserOptions,
+    cdkObject: software.amazon.awscdk.services.docdb.RotationMultiUserOptions,
   ) : CdkObject(cdkObject), RotationMultiUserOptions {
     /**
      * Specifies the number of days after the previous rotation before Secrets Manager triggers the

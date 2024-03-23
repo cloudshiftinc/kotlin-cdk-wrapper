@@ -238,7 +238,7 @@ public interface CfnHookVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudformation.CfnHookVersionProps,
+    cdkObject: software.amazon.awscdk.services.cloudformation.CfnHookVersionProps,
   ) : CdkObject(cdkObject), CfnHookVersionProps {
     /**
      * The Amazon Resource Name (ARN) of the task execution role that grants the hook permission.

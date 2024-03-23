@@ -289,7 +289,7 @@ public interface LifecycleRule {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecr.LifecycleRule,
+    cdkObject: software.amazon.awscdk.services.ecr.LifecycleRule,
   ) : CdkObject(cdkObject), LifecycleRule {
     /**
      * Describes the purpose of the rule.

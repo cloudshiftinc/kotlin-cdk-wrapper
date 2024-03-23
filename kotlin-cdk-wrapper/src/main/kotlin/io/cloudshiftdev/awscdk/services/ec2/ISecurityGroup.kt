@@ -180,7 +180,7 @@ public interface ISecurityGroup : IResource, IPeer {
   public fun securityGroupId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ISecurityGroup,
+    cdkObject: software.amazon.awscdk.services.ec2.ISecurityGroup,
   ) : CdkObject(cdkObject), ISecurityGroup {
     /**
      * Add an egress rule for the current security group.

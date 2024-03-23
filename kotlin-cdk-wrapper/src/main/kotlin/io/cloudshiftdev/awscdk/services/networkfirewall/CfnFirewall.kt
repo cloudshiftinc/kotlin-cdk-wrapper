@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html)
  */
-public open class CfnFirewall internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewall,
+public open class CfnFirewall(
+  cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewall,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -667,7 +667,8 @@ public open class CfnFirewall internal constructor(
         CfnFirewall = CfnFirewall(cdkObject)
 
     internal fun unwrap(wrapped: CfnFirewall):
-        software.amazon.awscdk.services.networkfirewall.CfnFirewall = wrapped.cdkObject
+        software.amazon.awscdk.services.networkfirewall.CfnFirewall = wrapped.cdkObject as
+        software.amazon.awscdk.services.networkfirewall.CfnFirewall
   }
 
   /**
@@ -752,8 +753,7 @@ public open class CfnFirewall internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewall.SubnetMappingProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewall.SubnetMappingProperty,
     ) : CdkObject(cdkObject), SubnetMappingProperty {
       /**
        * The subnet's IP address type.

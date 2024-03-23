@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Project internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.Project,
+public open class Project(
+  cdkObject: software.amazon.awscdk.services.codebuild.Project,
 ) : Resource(cdkObject), IProject {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1774,6 +1774,6 @@ public open class Project internal constructor(
         Project(cdkObject)
 
     internal fun unwrap(wrapped: Project): software.amazon.awscdk.services.codebuild.Project =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.codebuild.Project
   }
 }

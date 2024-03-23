@@ -112,8 +112,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html)
  */
-public open class CfnOriginEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint,
+public open class CfnOriginEndpoint(
+  cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -684,7 +684,8 @@ public open class CfnOriginEndpoint internal constructor(
         CfnOriginEndpoint = CfnOriginEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnOriginEndpoint):
-        software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint
   }
 
   /**
@@ -799,8 +800,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty,
     ) : CdkObject(cdkObject), EncryptionContractConfigurationProperty {
       /**
        * A collection of audio encryption presets.
@@ -922,8 +922,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionMethodProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionMethodProperty,
     ) : CdkObject(cdkObject), EncryptionMethodProperty {
       /**
        * The encryption method to use.
@@ -1176,8 +1175,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty,
     ) : CdkObject(cdkObject), EncryptionProperty {
       /**
        * A 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with
@@ -1384,8 +1382,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty,
     ) : CdkObject(cdkObject), FilterConfigurationProperty {
       /**
        * Optionally specify the end time for all of your manifest egress requests.
@@ -1723,8 +1720,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.HlsManifestConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.HlsManifestConfigurationProperty,
     ) : CdkObject(cdkObject), HlsManifestConfigurationProperty {
       /**
        * The name of the child manifest associated with the HLS manifest configuration.
@@ -2113,8 +2109,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.LowLatencyHlsManifestConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.LowLatencyHlsManifestConfigurationProperty,
     ) : CdkObject(cdkObject), LowLatencyHlsManifestConfigurationProperty {
       /**
        * The name of the child manifest associated with the low-latency HLS (LL-HLS) manifest
@@ -2259,8 +2254,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty,
     ) : CdkObject(cdkObject), ScteHlsProperty {
       /**
        * The SCTE-35 HLS ad-marker configuration.
@@ -2351,8 +2345,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteProperty,
     ) : CdkObject(cdkObject), ScteProperty {
       /**
        * The filter associated with the SCTE-35 configuration.
@@ -2662,8 +2655,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty,
     ) : CdkObject(cdkObject), SegmentProperty {
       /**
        * Whether to use encryption for the segment.
@@ -2963,8 +2955,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty,
     ) : CdkObject(cdkObject), SpekeKeyProviderProperty {
       /**
        * The DRM solution provider you're using to protect your content during distribution.

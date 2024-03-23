@@ -266,7 +266,7 @@ public interface CfnDeploymentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CfnDeploymentProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CfnDeploymentProps,
   ) : CdkObject(cdkObject), CfnDeploymentProps {
     /**
      * The input configuration for a canary deployment.

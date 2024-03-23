@@ -77,8 +77,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html)
  */
-public open class CfnCustomActionType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType,
+public open class CfnCustomActionType(
+  cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -685,7 +685,8 @@ public open class CfnCustomActionType internal constructor(
         CfnCustomActionType = CfnCustomActionType(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomActionType):
-        software.amazon.awscdk.services.codepipeline.CfnCustomActionType = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.CfnCustomActionType = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.CfnCustomActionType
   }
 
   /**
@@ -762,8 +763,7 @@ public open class CfnCustomActionType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ArtifactDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ArtifactDetailsProperty,
     ) : CdkObject(cdkObject), ArtifactDetailsProperty {
       /**
        * The maximum number of artifacts allowed for the action type.
@@ -1094,8 +1094,7 @@ public open class CfnCustomActionType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ConfigurationPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ConfigurationPropertiesProperty,
     ) : CdkObject(cdkObject), ConfigurationPropertiesProperty {
       /**
        * The description of the action configuration property that is displayed to users.
@@ -1323,8 +1322,7 @@ public open class CfnCustomActionType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty,
     ) : CdkObject(cdkObject), SettingsProperty {
       /**
        * The URL returned to the CodePipeline console that provides a deep link to the resources of

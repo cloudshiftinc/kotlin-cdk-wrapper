@@ -70,9 +70,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class CloudFormationCreateReplaceChangeSetAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateReplaceChangeSetAction,
+public open class CloudFormationCreateReplaceChangeSetAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateReplaceChangeSetAction,
 ) : Action(cdkObject) {
   public constructor(props: CloudFormationCreateReplaceChangeSetActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateReplaceChangeSetAction(props.let(CloudFormationCreateReplaceChangeSetActionProps::unwrap))
@@ -716,6 +715,7 @@ public open class CloudFormationCreateReplaceChangeSetAction internal constructo
 
     internal fun unwrap(wrapped: CloudFormationCreateReplaceChangeSetAction):
         software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateReplaceChangeSetAction
-        = wrapped.cdkObject
+        = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateReplaceChangeSetAction
   }
 }

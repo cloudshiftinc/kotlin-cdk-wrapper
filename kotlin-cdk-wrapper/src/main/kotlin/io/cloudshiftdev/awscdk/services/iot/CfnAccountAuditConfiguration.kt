@@ -100,8 +100,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html)
  */
-public open class CfnAccountAuditConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration,
+public open class CfnAccountAuditConfiguration(
+  cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -505,7 +505,8 @@ public open class CfnAccountAuditConfiguration internal constructor(
         CfnAccountAuditConfiguration = CfnAccountAuditConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccountAuditConfiguration):
-        software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration
   }
 
   /**
@@ -575,8 +576,7 @@ public open class CfnAccountAuditConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty,
     ) : CdkObject(cdkObject), AuditCheckConfigurationProperty {
       /**
        * True if this audit check is enabled for this account.
@@ -1693,8 +1693,7 @@ public open class CfnAccountAuditConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationsProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationsProperty,
     ) : CdkObject(cdkObject), AuditCheckConfigurationsProperty {
       /**
        * Checks the permissiveness of an authenticated Amazon Cognito identity pool role.
@@ -1949,8 +1948,7 @@ public open class CfnAccountAuditConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty,
     ) : CdkObject(cdkObject), AuditNotificationTargetConfigurationsProperty {
       /**
        * The `Sns` notification target.
@@ -2088,8 +2086,7 @@ public open class CfnAccountAuditConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetProperty,
     ) : CdkObject(cdkObject), AuditNotificationTargetProperty {
       /**
        * True if notifications to the target are enabled.

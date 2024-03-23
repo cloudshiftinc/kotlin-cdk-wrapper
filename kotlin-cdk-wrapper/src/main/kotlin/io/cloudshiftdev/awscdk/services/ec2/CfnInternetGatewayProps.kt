@@ -73,7 +73,7 @@ public interface CfnInternetGatewayProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnInternetGatewayProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnInternetGatewayProps,
   ) : CdkObject(cdkObject), CfnInternetGatewayProps {
     /**
      * Any tags to assign to the internet gateway.

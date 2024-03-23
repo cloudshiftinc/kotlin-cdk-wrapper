@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-signalingchannel.html)
  */
-public open class CfnSignalingChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel,
+public open class CfnSignalingChannel(
+  cdkObject: software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -288,6 +288,7 @@ public open class CfnSignalingChannel internal constructor(
         CfnSignalingChannel = CfnSignalingChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnSignalingChannel):
-        software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel
   }
 }

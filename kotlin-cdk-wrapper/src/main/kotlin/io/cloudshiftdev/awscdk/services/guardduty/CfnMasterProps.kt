@@ -108,7 +108,7 @@ public interface CfnMasterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.guardduty.CfnMasterProps,
+    cdkObject: software.amazon.awscdk.services.guardduty.CfnMasterProps,
   ) : CdkObject(cdkObject), CfnMasterProps {
     /**
      * The unique ID of the detector of the GuardDuty member account.

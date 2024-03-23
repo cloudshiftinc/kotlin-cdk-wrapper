@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-model.html)
  */
-public open class CfnModel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnModel,
+public open class CfnModel(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnModel,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -258,6 +258,6 @@ public open class CfnModel internal constructor(
         CfnModel(cdkObject)
 
     internal fun unwrap(wrapped: CfnModel): software.amazon.awscdk.services.apigatewayv2.CfnModel =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigatewayv2.CfnModel
   }
 }

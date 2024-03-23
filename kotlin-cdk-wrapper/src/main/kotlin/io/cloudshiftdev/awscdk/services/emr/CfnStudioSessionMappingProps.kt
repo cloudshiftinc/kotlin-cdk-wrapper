@@ -154,7 +154,7 @@ public interface CfnStudioSessionMappingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.emr.CfnStudioSessionMappingProps,
+    cdkObject: software.amazon.awscdk.services.emr.CfnStudioSessionMappingProps,
   ) : CdkObject(cdkObject), CfnStudioSessionMappingProps {
     /**
      * The name of the user or group.

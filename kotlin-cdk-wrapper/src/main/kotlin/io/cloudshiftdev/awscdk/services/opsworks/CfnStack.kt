@@ -89,8 +89,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html)
  */
-public open class CfnStack internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.opsworks.CfnStack,
+public open class CfnStack(
+  cdkObject: software.amazon.awscdk.services.opsworks.CfnStack,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1901,7 +1901,7 @@ public open class CfnStack internal constructor(
         CfnStack(cdkObject)
 
     internal fun unwrap(wrapped: CfnStack): software.amazon.awscdk.services.opsworks.CfnStack =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.opsworks.CfnStack
   }
 
   /**
@@ -1987,8 +1987,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnStack.ChefConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.ChefConfigurationProperty,
     ) : CdkObject(cdkObject), ChefConfigurationProperty {
       /**
        * The Berkshelf version.
@@ -2094,7 +2093,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty,
     ) : CdkObject(cdkObject), ElasticIpProperty {
       /**
        * The IP address.
@@ -2221,8 +2220,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty,
     ) : CdkObject(cdkObject), RdsDbInstanceProperty {
       /**
        * AWS OpsWorks Stacks returns `*****FILTERED*****` instead of the actual value.
@@ -2490,7 +2488,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.SourceProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.SourceProperty,
     ) : CdkObject(cdkObject), SourceProperty {
       /**
        * When included in a request, the parameter depends on the repository type.
@@ -2665,8 +2663,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty,
     ) : CdkObject(cdkObject), StackConfigurationManagerProperty {
       /**
        * The name.

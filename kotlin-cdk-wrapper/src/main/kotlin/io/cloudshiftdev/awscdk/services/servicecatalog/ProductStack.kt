@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ProductStack internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.ProductStack,
+public open class ProductStack(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.ProductStack,
 ) : Stack(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.servicecatalog.ProductStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -173,6 +173,7 @@ public open class ProductStack internal constructor(
         ProductStack = ProductStack(cdkObject)
 
     internal fun unwrap(wrapped: ProductStack):
-        software.amazon.awscdk.services.servicecatalog.ProductStack = wrapped.cdkObject
+        software.amazon.awscdk.services.servicecatalog.ProductStack = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.ProductStack
   }
 }

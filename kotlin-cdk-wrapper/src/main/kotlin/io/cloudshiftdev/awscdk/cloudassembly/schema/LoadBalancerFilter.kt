@@ -112,7 +112,7 @@ public interface LoadBalancerFilter {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.LoadBalancerFilter,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.LoadBalancerFilter,
   ) : CdkObject(cdkObject), LoadBalancerFilter {
     /**
      * Find by load balancer's ARN.

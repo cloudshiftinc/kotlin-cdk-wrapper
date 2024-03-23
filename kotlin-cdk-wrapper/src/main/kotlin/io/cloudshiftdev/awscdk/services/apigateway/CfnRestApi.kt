@@ -77,8 +77,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)
  */
-public open class CfnRestApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi,
+public open class CfnRestApi(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnRestApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1024,7 +1024,7 @@ public open class CfnRestApi internal constructor(
         = CfnRestApi(cdkObject)
 
     internal fun unwrap(wrapped: CfnRestApi): software.amazon.awscdk.services.apigateway.CfnRestApi
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.apigateway.CfnRestApi
   }
 
   /**
@@ -1157,8 +1157,7 @@ public open class CfnRestApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty,
     ) : CdkObject(cdkObject), EndpointConfigurationProperty {
       /**
        * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
@@ -1324,8 +1323,7 @@ public open class CfnRestApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * The name of the S3 bucket where the OpenAPI file is stored.

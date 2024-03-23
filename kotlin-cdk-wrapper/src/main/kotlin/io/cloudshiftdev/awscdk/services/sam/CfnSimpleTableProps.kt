@@ -231,7 +231,7 @@ public interface CfnSimpleTableProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTableProps,
+    cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTableProps,
   ) : CdkObject(cdkObject), CfnSimpleTableProps {
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-simpletable.html#cfn-serverless-simpletable-primarykey)

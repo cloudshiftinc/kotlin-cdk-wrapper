@@ -146,7 +146,7 @@ public interface CfnModelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnModelProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnModelProps,
   ) : CdkObject(cdkObject), CfnModelProps {
     /**
      * The API identifier.

@@ -95,8 +95,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-index.html)
  */
-public open class CfnIndex internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kendra.CfnIndex,
+public open class CfnIndex(
+  cdkObject: software.amazon.awscdk.services.kendra.CfnIndex,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -841,7 +841,7 @@ public open class CfnIndex internal constructor(
         CfnIndex(cdkObject)
 
     internal fun unwrap(wrapped: CfnIndex): software.amazon.awscdk.services.kendra.CfnIndex =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.kendra.CfnIndex
   }
 
   /**
@@ -962,8 +962,7 @@ public open class CfnIndex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnIndex.CapacityUnitsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.CapacityUnitsConfigurationProperty,
     ) : CdkObject(cdkObject), CapacityUnitsConfigurationProperty {
       /**
        * The amount of extra query capacity for an index and
@@ -1204,8 +1203,7 @@ public open class CfnIndex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty,
     ) : CdkObject(cdkObject), DocumentMetadataConfigurationProperty {
       /**
        * The name of the index field.
@@ -1330,8 +1328,7 @@ public open class CfnIndex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty,
     ) : CdkObject(cdkObject), JsonTokenTypeConfigurationProperty {
       /**
        * The group attribute field.
@@ -1543,8 +1540,7 @@ public open class CfnIndex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty,
     ) : CdkObject(cdkObject), JwtTokenTypeConfigurationProperty {
       /**
        * The regular expression that identifies the claim.
@@ -1908,7 +1904,7 @@ public open class CfnIndex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.RelevanceProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.RelevanceProperty,
     ) : CdkObject(cdkObject), RelevanceProperty {
       /**
        * Specifies the time period that the boost applies to.
@@ -2192,7 +2188,7 @@ public open class CfnIndex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.SearchProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.SearchProperty,
     ) : CdkObject(cdkObject), SearchProperty {
       /**
        * Determines whether the field is returned in the query response.
@@ -2313,8 +2309,7 @@ public open class CfnIndex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty,
     ) : CdkObject(cdkObject), ServerSideEncryptionConfigurationProperty {
       /**
        * The identifier of the AWS KMS key .
@@ -2495,8 +2490,7 @@ public open class CfnIndex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty,
     ) : CdkObject(cdkObject), UserTokenConfigurationProperty {
       /**
        * Information about the JSON token type configuration.
@@ -2607,8 +2601,7 @@ public open class CfnIndex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnIndex.ValueImportanceItemProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.ValueImportanceItemProperty,
     ) : CdkObject(cdkObject), ValueImportanceItemProperty {
       /**
        * The document metadata value used for the search boost.

@@ -76,7 +76,7 @@ public interface Attribute {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.Attribute,
+    cdkObject: software.amazon.awscdk.services.dynamodb.Attribute,
   ) : CdkObject(cdkObject), Attribute {
     /**
      * The name of an attribute.

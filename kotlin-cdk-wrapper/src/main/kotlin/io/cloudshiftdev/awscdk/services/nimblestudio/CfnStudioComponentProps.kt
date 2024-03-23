@@ -432,7 +432,7 @@ public interface CfnStudioComponentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponentProps,
+    cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponentProps,
   ) : CdkObject(cdkObject), CfnStudioComponentProps {
     /**
      * The configuration of the studio component, based on component type.

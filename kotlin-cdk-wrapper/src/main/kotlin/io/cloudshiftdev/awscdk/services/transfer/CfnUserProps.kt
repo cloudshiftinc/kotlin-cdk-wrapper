@@ -631,7 +631,7 @@ public interface CfnUserProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.transfer.CfnUserProps,
+    cdkObject: software.amazon.awscdk.services.transfer.CfnUserProps,
   ) : CdkObject(cdkObject), CfnUserProps {
     /**
      * The landing directory (folder) for a user when they log in to the server using the client.

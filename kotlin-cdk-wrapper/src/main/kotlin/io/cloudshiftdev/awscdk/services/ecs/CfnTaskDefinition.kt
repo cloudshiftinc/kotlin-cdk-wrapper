@@ -249,8 +249,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html)
  */
-public open class CfnTaskDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition,
+public open class CfnTaskDefinition(
+  cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.CfnTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1852,7 +1852,8 @@ public open class CfnTaskDefinition internal constructor(
         CfnTaskDefinition = CfnTaskDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnTaskDefinition):
-        software.amazon.awscdk.services.ecs.CfnTaskDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.CfnTaskDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.CfnTaskDefinition
   }
 
   /**
@@ -1967,8 +1968,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.AuthorizationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.AuthorizationConfigProperty,
     ) : CdkObject(cdkObject), AuthorizationConfigProperty {
       /**
        * The Amazon EFS access point ID to use.
@@ -6593,8 +6593,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDefinitionProperty,
     ) : CdkObject(cdkObject), ContainerDefinitionProperty {
       /**
        * The command that's passed to the container.
@@ -7710,8 +7709,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty,
     ) : CdkObject(cdkObject), ContainerDependencyProperty {
       /**
        * The dependency condition of the container. The following are the available conditions and
@@ -7871,7 +7869,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty,
     ) : CdkObject(cdkObject), DeviceProperty {
       /**
        * The path inside the container at which to expose the host device.
@@ -8231,8 +8229,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty,
     ) : CdkObject(cdkObject), DockerVolumeConfigurationProperty {
       /**
        * If this value is `true` , the Docker volume is created if it doesn't already exist.
@@ -8567,8 +8564,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty,
     ) : CdkObject(cdkObject), EFSVolumeConfigurationProperty {
       /**
        * The authorization configuration details for the Amazon EFS file system.
@@ -8657,10 +8653,13 @@ public open class CfnTaskDefinition internal constructor(
    * If there are environment variables specified using the `environment` parameter in a container
    * definition, they take precedence over the variables contained within an environment file. If
    * multiple environment files are specified that contain the same variable, they're processed from
-   * the top down. We recommend that you use unique variable names. For more information, see
-   * [Specifying environment
-   * variables](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/taskdef-envfiles.html) in
-   * the *Amazon Elastic Container Service Developer Guide* .
+   * the top down. We recommend that you use unique variable names. For more information, see [Use a
+   * file to pass environment variables to a
+   * container](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/use-environment-file.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Environment variable files are objects in Amazon S3 and all Amazon S3 security considerations
+   * apply.
    *
    * You must use the following platforms for the Fargate launch type:
    *
@@ -8691,7 +8690,7 @@ public open class CfnTaskDefinition internal constructor(
     /**
      * The file type to use.
      *
-     * The only supported value is `s3` .
+     * Environment files are objects in Amazon S3. The only supported value is `s3` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-environmentfile.html#cfn-ecs-taskdefinition-environmentfile-type)
      */
@@ -8712,7 +8711,7 @@ public open class CfnTaskDefinition internal constructor(
     public interface Builder {
       /**
        * @param type The file type to use.
-       * The only supported value is `s3` .
+       * Environment files are objects in Amazon S3. The only supported value is `s3` .
        */
       public fun type(type: String)
 
@@ -8730,7 +8729,7 @@ public open class CfnTaskDefinition internal constructor(
 
       /**
        * @param type The file type to use.
-       * The only supported value is `s3` .
+       * Environment files are objects in Amazon S3. The only supported value is `s3` .
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -8750,13 +8749,12 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty,
     ) : CdkObject(cdkObject), EnvironmentFileProperty {
       /**
        * The file type to use.
        *
-       * The only supported value is `s3` .
+       * Environment files are objects in Amazon S3. The only supported value is `s3` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-environmentfile.html#cfn-ecs-taskdefinition-environmentfile-type)
        */
@@ -8858,8 +8856,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty,
     ) : CdkObject(cdkObject), EphemeralStorageProperty {
       /**
        * The total amount, in GiB, of ephemeral storage to set for the task.
@@ -9027,8 +9024,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty,
     ) : CdkObject(cdkObject), FirelensConfigurationProperty {
       /**
        * The options to use when configuring the log router.
@@ -9372,8 +9368,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty,
     ) : CdkObject(cdkObject), HealthCheckProperty {
       /**
        * A string array representing the command that the container runs to determine if it is
@@ -9538,8 +9533,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty,
     ) : CdkObject(cdkObject), HostEntryProperty {
       /**
        * The hostname to use in the `/etc/hosts` entry.
@@ -9655,8 +9649,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty,
     ) : CdkObject(cdkObject), HostVolumePropertiesProperty {
       /**
        * When the `host` parameter is used, specify a `sourcePath` to declare the path on the host
@@ -9782,8 +9775,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty,
     ) : CdkObject(cdkObject), InferenceAcceleratorProperty {
       /**
        * The Elastic Inference accelerator device name.
@@ -10104,8 +10096,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty,
     ) : CdkObject(cdkObject), KernelCapabilitiesProperty {
       /**
        * The Linux capabilities for the container that have been added to the default configuration
@@ -10258,8 +10249,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty,
     ) : CdkObject(cdkObject), KeyValuePairProperty {
       /**
        * The name of the key-value pair.
@@ -10871,8 +10861,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty,
     ) : CdkObject(cdkObject), LinuxParametersProperty {
       /**
        * The Linux capabilities for the container that are added to or dropped from the default
@@ -11261,8 +11250,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.LogConfigurationProperty,
     ) : CdkObject(cdkObject), LogConfigurationProperty {
       /**
        * The log driver to use for the container.
@@ -11456,8 +11444,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty,
     ) : CdkObject(cdkObject), MountPointProperty {
       /**
        * The path on the container to mount the host volume at.
@@ -11985,8 +11972,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.PortMappingProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.PortMappingProperty,
     ) : CdkObject(cdkObject), PortMappingProperty {
       /**
        * The application protocol that's used for the port mapping.
@@ -12411,8 +12397,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty,
     ) : CdkObject(cdkObject), ProxyConfigurationProperty {
       /**
        * The name of the container that will serve as the App Mesh proxy.
@@ -12548,8 +12533,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty,
     ) : CdkObject(cdkObject), RepositoryCredentialsProperty {
       /**
        * The Amazon Resource Name (ARN) of the secret containing the private repository credentials.
@@ -12694,8 +12678,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ResourceRequirementProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ResourceRequirementProperty,
     ) : CdkObject(cdkObject), ResourceRequirementProperty {
       /**
        * The type of resource to assign to a container.
@@ -12828,8 +12811,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty,
     ) : CdkObject(cdkObject), RuntimePlatformProperty {
       /**
        * The CPU architecture.
@@ -12998,7 +12980,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty,
     ) : CdkObject(cdkObject), SecretProperty {
       /**
        * The name of the secret.
@@ -13180,8 +13162,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty,
     ) : CdkObject(cdkObject), SystemControlProperty {
       /**
        * The namespaced kernel parameter to set a `value` for.
@@ -13322,8 +13303,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty,
     ) : CdkObject(cdkObject), TaskDefinitionPlacementConstraintProperty {
       /**
        * A cluster query language expression to apply to the constraint.
@@ -13495,7 +13475,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty,
     ) : CdkObject(cdkObject), TmpfsProperty {
       /**
        * The absolute file path where the tmpfs volume is to be mounted.
@@ -13642,7 +13622,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty,
     ) : CdkObject(cdkObject), UlimitProperty {
       /**
        * The hard limit for the `ulimit` type.
@@ -13781,8 +13761,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty,
     ) : CdkObject(cdkObject), VolumeFromProperty {
       /**
        * If this value is `true` , the container has read-only access to the volume.
@@ -14252,7 +14231,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeProperty,
     ) : CdkObject(cdkObject), VolumeProperty {
       /**
        * Indicates whether the volume should be configured at launch time.

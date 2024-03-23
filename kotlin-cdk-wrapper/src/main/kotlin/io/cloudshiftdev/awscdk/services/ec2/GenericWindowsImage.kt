@@ -27,8 +27,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public open class GenericWindowsImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.GenericWindowsImage,
+public open class GenericWindowsImage(
+  cdkObject: software.amazon.awscdk.services.ec2.GenericWindowsImage,
 ) : CdkObject(cdkObject), IMachineImage {
   public constructor(amiMap: Map<String, String>) :
       this(software.amazon.awscdk.services.ec2.GenericWindowsImage(amiMap)
@@ -98,6 +98,7 @@ public open class GenericWindowsImage internal constructor(
         GenericWindowsImage = GenericWindowsImage(cdkObject)
 
     internal fun unwrap(wrapped: GenericWindowsImage):
-        software.amazon.awscdk.services.ec2.GenericWindowsImage = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.GenericWindowsImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.GenericWindowsImage
   }
 }

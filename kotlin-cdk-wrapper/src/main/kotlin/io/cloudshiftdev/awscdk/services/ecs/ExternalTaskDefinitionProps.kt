@@ -189,7 +189,7 @@ public interface ExternalTaskDefinitionProps : CommonTaskDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ExternalTaskDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.ecs.ExternalTaskDefinitionProps,
   ) : CdkObject(cdkObject), ExternalTaskDefinitionProps {
     /**
      * The name of the IAM task execution role that grants the ECS agent permission to call AWS APIs

@@ -526,7 +526,7 @@ public interface CfnIndexProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kendra.CfnIndexProps,
+    cdkObject: software.amazon.awscdk.services.kendra.CfnIndexProps,
   ) : CdkObject(cdkObject), CfnIndexProps {
     /**
      * Specifies additional capacity units configured for your Enterprise Edition index.

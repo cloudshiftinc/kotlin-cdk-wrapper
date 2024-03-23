@@ -150,8 +150,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)
  */
-public open class CfnTable internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable,
+public open class CfnTable(
+  cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1930,7 +1930,7 @@ public open class CfnTable internal constructor(
         CfnTable(cdkObject)
 
     internal fun unwrap(wrapped: CfnTable): software.amazon.awscdk.services.dynamodb.CfnTable =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.dynamodb.CfnTable
   }
 
   /**
@@ -2016,8 +2016,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.AttributeDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.AttributeDefinitionProperty,
     ) : CdkObject(cdkObject), AttributeDefinitionProperty {
       /**
        * A name for the attribute.
@@ -2128,8 +2127,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.ContributorInsightsSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ContributorInsightsSpecificationProperty,
     ) : CdkObject(cdkObject), ContributorInsightsSpecificationProperty {
       /**
        * Indicates whether CloudWatch Contributor Insights are to be enabled (true) or disabled
@@ -2262,7 +2260,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.CsvProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.CsvProperty,
     ) : CdkObject(cdkObject), CsvProperty {
       /**
        * The delimiter used for separating items in the CSV file being imported.
@@ -2682,8 +2680,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.GlobalSecondaryIndexProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.GlobalSecondaryIndexProperty,
     ) : CdkObject(cdkObject), GlobalSecondaryIndexProperty {
       /**
        * The settings used to enable or disable CloudWatch Contributor Insights for the specified
@@ -2950,8 +2947,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.ImportSourceSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ImportSourceSpecificationProperty,
     ) : CdkObject(cdkObject), ImportSourceSpecificationProperty {
       /**
        * Type of compression to be used on the input coming from the imported table.
@@ -3095,8 +3091,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.InputFormatOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.InputFormatOptionsProperty,
     ) : CdkObject(cdkObject), InputFormatOptionsProperty {
       /**
        * The options for imported source files in CSV format.
@@ -3245,7 +3240,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.KeySchemaProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.KeySchemaProperty,
     ) : CdkObject(cdkObject), KeySchemaProperty {
       /**
        * The name of a key attribute.
@@ -3377,8 +3372,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.KinesisStreamSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.KinesisStreamSpecificationProperty,
     ) : CdkObject(cdkObject), KinesisStreamSpecificationProperty {
       /**
        * The precision for the time and date that the stream was created.
@@ -3658,8 +3652,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.LocalSecondaryIndexProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.LocalSecondaryIndexProperty,
     ) : CdkObject(cdkObject), LocalSecondaryIndexProperty {
       /**
        * The name of the local secondary index.
@@ -3789,8 +3782,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.PointInTimeRecoverySpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.PointInTimeRecoverySpecificationProperty,
     ) : CdkObject(cdkObject), PointInTimeRecoverySpecificationProperty {
       /**
        * Indicates whether point in time recovery is enabled (true) or disabled (false) on the
@@ -3945,7 +3937,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ProjectionProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ProjectionProperty,
     ) : CdkObject(cdkObject), ProjectionProperty {
       /**
        * Represents the non-key attribute names which will be projected into the index.
@@ -4110,8 +4102,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.ProvisionedThroughputProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ProvisionedThroughputProperty,
     ) : CdkObject(cdkObject), ProvisionedThroughputProperty {
       /**
        * The maximum number of strongly consistent reads consumed per second before DynamoDB returns
@@ -4257,8 +4248,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.S3BucketSourceProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.S3BucketSourceProperty,
     ) : CdkObject(cdkObject), S3BucketSourceProperty {
       /**
        * The S3 bucket that is being imported from.
@@ -4445,8 +4435,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.SSESpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.SSESpecificationProperty,
     ) : CdkObject(cdkObject), SSESpecificationProperty {
       /**
        * The AWS KMS key that should be used for the AWS KMS encryption.
@@ -4584,8 +4573,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.StreamSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.StreamSpecificationProperty,
     ) : CdkObject(cdkObject), StreamSpecificationProperty {
       /**
        * When an item in the table is modified, `StreamViewType` determines what information is
@@ -4735,8 +4723,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnTable.TimeToLiveSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.TimeToLiveSpecificationProperty,
     ) : CdkObject(cdkObject), TimeToLiveSpecificationProperty {
       /**
        * The name of the TTL attribute used to store the expiration time for items in the table.

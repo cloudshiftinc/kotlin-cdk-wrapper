@@ -250,7 +250,7 @@ public interface CfnUrlProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.CfnUrlProps,
+    cdkObject: software.amazon.awscdk.services.lambda.CfnUrlProps,
   ) : CdkObject(cdkObject), CfnUrlProps {
     /**
      * The type of authentication that your function URL uses.

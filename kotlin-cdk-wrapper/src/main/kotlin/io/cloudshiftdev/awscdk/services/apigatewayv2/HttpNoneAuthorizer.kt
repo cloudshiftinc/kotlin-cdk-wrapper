@@ -46,8 +46,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class HttpNoneAuthorizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpNoneAuthorizer,
+public open class HttpNoneAuthorizer(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpNoneAuthorizer,
 ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
   public constructor() : this(software.amazon.awscdk.services.apigatewayv2.HttpNoneAuthorizer()
   )
@@ -75,6 +75,7 @@ public open class HttpNoneAuthorizer internal constructor(
         HttpNoneAuthorizer = HttpNoneAuthorizer(cdkObject)
 
     internal fun unwrap(wrapped: HttpNoneAuthorizer):
-        software.amazon.awscdk.services.apigatewayv2.HttpNoneAuthorizer = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.HttpNoneAuthorizer = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.HttpNoneAuthorizer
   }
 }

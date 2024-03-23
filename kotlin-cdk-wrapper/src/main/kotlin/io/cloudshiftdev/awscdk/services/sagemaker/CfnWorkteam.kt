@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-workteam.html)
  */
-public open class CfnWorkteam internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam,
+public open class CfnWorkteam(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sagemaker.CfnWorkteam(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -496,7 +496,7 @@ public open class CfnWorkteam internal constructor(
         = CfnWorkteam(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkteam): software.amazon.awscdk.services.sagemaker.CfnWorkteam
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnWorkteam
   }
 
   /**
@@ -604,8 +604,7 @@ public open class CfnWorkteam internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.CognitoMemberDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.CognitoMemberDefinitionProperty,
     ) : CdkObject(cdkObject), CognitoMemberDefinitionProperty {
       /**
        * An identifier for an application client.
@@ -824,8 +823,7 @@ public open class CfnWorkteam internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.MemberDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.MemberDefinitionProperty,
     ) : CdkObject(cdkObject), MemberDefinitionProperty {
       /**
        * The Amazon Cognito user group that is part of the work team.
@@ -922,8 +920,7 @@ public open class CfnWorkteam internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty,
     ) : CdkObject(cdkObject), NotificationConfigurationProperty {
       /**
        * The ARN for the Amazon SNS topic to which notifications should be published.
@@ -1020,8 +1017,7 @@ public open class CfnWorkteam internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty,
     ) : CdkObject(cdkObject), OidcMemberDefinitionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-oidcmemberdefinition.html#cfn-sagemaker-workteam-oidcmemberdefinition-oidcgroups)

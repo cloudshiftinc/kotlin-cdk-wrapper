@@ -167,7 +167,7 @@ public interface ExtensionAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.ExtensionAttributes,
+    cdkObject: software.amazon.awscdk.services.appconfig.ExtensionAttributes,
   ) : CdkObject(cdkObject), ExtensionAttributes {
     /**
      * The actions of the extension.

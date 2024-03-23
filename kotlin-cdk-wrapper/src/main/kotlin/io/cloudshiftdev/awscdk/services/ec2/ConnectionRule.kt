@@ -154,7 +154,7 @@ public interface ConnectionRule {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ConnectionRule,
+    cdkObject: software.amazon.awscdk.services.ec2.ConnectionRule,
   ) : CdkObject(cdkObject), ConnectionRule {
     /**
      * Description of this connection.

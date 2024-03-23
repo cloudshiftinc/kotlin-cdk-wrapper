@@ -268,7 +268,7 @@ public interface CfnVPNConnectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnectionProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnectionProps,
   ) : CdkObject(cdkObject), CfnVPNConnectionProps {
     /**
      * The ID of the customer gateway at your end of the VPN connection.

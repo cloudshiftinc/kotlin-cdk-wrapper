@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspoint.html)
  */
-public open class CfnMultiRegionAccessPoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint,
+public open class CfnMultiRegionAccessPoint(
+  cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -367,7 +367,8 @@ public open class CfnMultiRegionAccessPoint internal constructor(
         CfnMultiRegionAccessPoint = CfnMultiRegionAccessPoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnMultiRegionAccessPoint):
-        software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint = wrapped.cdkObject
+        software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint
   }
 
   /**
@@ -671,8 +672,7 @@ public open class CfnMultiRegionAccessPoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty,
     ) : CdkObject(cdkObject), PublicAccessBlockConfigurationProperty {
       /**
        * Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket
@@ -827,8 +827,7 @@ public open class CfnMultiRegionAccessPoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.RegionProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.RegionProperty,
     ) : CdkObject(cdkObject), RegionProperty {
       /**
        * The name of the associated bucket for the Region.

@@ -285,8 +285,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcaconnectorad-template.html)
  */
-public open class CfnTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate,
+public open class CfnTemplate(
+  cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -640,7 +640,8 @@ public open class CfnTemplate internal constructor(
         CfnTemplate = CfnTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnTemplate):
-        software.amazon.awscdk.services.pcaconnectorad.CfnTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.pcaconnectorad.CfnTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.pcaconnectorad.CfnTemplate
   }
 
   /**
@@ -755,8 +756,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty,
     ) : CdkObject(cdkObject), ApplicationPoliciesProperty {
       /**
        * Marks the application policy extension as critical.
@@ -865,8 +865,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty,
     ) : CdkObject(cdkObject), ApplicationPolicyProperty {
       /**
        * The object identifier (OID) of an application policy.
@@ -1105,8 +1104,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty,
     ) : CdkObject(cdkObject), CertificateValidityProperty {
       /**
        * Renewal period is the period of time before certificate expiration when a new certificate
@@ -1378,8 +1376,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property,
     ) : CdkObject(cdkObject), EnrollmentFlagsV2Property {
       /**
        * Allow renewal using the same key.
@@ -1669,8 +1666,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property,
     ) : CdkObject(cdkObject), EnrollmentFlagsV3Property {
       /**
        * Allow renewal using the same key.
@@ -1960,8 +1956,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property,
     ) : CdkObject(cdkObject), EnrollmentFlagsV4Property {
       /**
        * Allow renewal using the same key.
@@ -2183,8 +2178,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property,
     ) : CdkObject(cdkObject), ExtensionsV2Property {
       /**
        * Application policies specify what the certificate is used for and its purpose.
@@ -2380,8 +2374,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV3Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV3Property,
     ) : CdkObject(cdkObject), ExtensionsV3Property {
       /**
        * Application policies specify what the certificate is used for and its purpose.
@@ -2577,8 +2570,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property,
     ) : CdkObject(cdkObject), ExtensionsV4Property {
       /**
        * Application policies specify what the certificate is used for and its purpose.
@@ -2725,8 +2717,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property,
     ) : CdkObject(cdkObject), GeneralFlagsV2Property {
       /**
        * Allows certificate issuance using autoenrollment.
@@ -2876,8 +2867,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property,
     ) : CdkObject(cdkObject), GeneralFlagsV3Property {
       /**
        * Allows certificate issuance using autoenrollment.
@@ -3027,8 +3017,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property,
     ) : CdkObject(cdkObject), GeneralFlagsV4Property {
       /**
        * Allows certificate issuance using autoenrollment.
@@ -3284,8 +3273,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageFlagsProperty,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageFlagsProperty,
     ) : CdkObject(cdkObject), KeyUsageFlagsProperty {
       /**
        * DataEncipherment is asserted when the subject public key is used for directly enciphering
@@ -3472,8 +3460,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty,
     ) : CdkObject(cdkObject), KeyUsageProperty {
       /**
        * Sets the key usage extension to critical.
@@ -3640,8 +3627,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty,
     ) : CdkObject(cdkObject), KeyUsagePropertyFlagsProperty {
       /**
        * Allows key for encryption and decryption.
@@ -3808,8 +3794,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty,
     ) : CdkObject(cdkObject), KeyUsagePropertyProperty {
       /**
        * You can specify key usage for encryption, key agreement, and signature.
@@ -3963,8 +3948,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property,
     ) : CdkObject(cdkObject), PrivateKeyAttributesV2Property {
       /**
        * Defines the cryptographic providers used to generate the private key.
@@ -4212,8 +4196,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property,
     ) : CdkObject(cdkObject), PrivateKeyAttributesV3Property {
       /**
        * Defines the algorithm used to generate the private key.
@@ -4477,8 +4460,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property,
     ) : CdkObject(cdkObject), PrivateKeyAttributesV4Property {
       /**
        * Defines the algorithm used to generate the private key.
@@ -4663,8 +4645,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property,
     ) : CdkObject(cdkObject), PrivateKeyFlagsV2Property {
       /**
        * Defines the minimum client compatibility.
@@ -4875,8 +4856,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property,
     ) : CdkObject(cdkObject), PrivateKeyFlagsV3Property {
       /**
        * Defines the minimum client compatibility.
@@ -5175,8 +5155,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property,
     ) : CdkObject(cdkObject), PrivateKeyFlagsV4Property {
       /**
        * Defines the minimum client compatibility.
@@ -5614,8 +5593,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property,
     ) : CdkObject(cdkObject), SubjectNameFlagsV2Property {
       /**
        * Include the common name in the subject name.
@@ -6075,8 +6053,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property,
     ) : CdkObject(cdkObject), SubjectNameFlagsV3Property {
       /**
        * Include the common name in the subject name.
@@ -6536,8 +6513,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property,
     ) : CdkObject(cdkObject), SubjectNameFlagsV4Property {
       /**
        * Include the common name in the subject name.
@@ -7103,8 +7079,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty,
     ) : CdkObject(cdkObject), TemplateDefinitionProperty {
       /**
        * Template configuration to define the information included in certificates.
@@ -7680,8 +7655,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV2Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV2Property,
     ) : CdkObject(cdkObject), TemplateV2Property {
       /**
        * Certificate validity describes the validity and renewal periods of a certificate.
@@ -8328,8 +8302,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV3Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV3Property,
     ) : CdkObject(cdkObject), TemplateV3Property {
       /**
        * Certificate validity describes the validity and renewal periods of a certificate.
@@ -9003,8 +8976,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV4Property,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV4Property,
     ) : CdkObject(cdkObject), TemplateV4Property {
       /**
        * Certificate validity describes the validity and renewal periods of a certificate.
@@ -9185,8 +9157,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ValidityPeriodProperty,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ValidityPeriodProperty,
     ) : CdkObject(cdkObject), ValidityPeriodProperty {
       /**
        * The numeric value for the validity period.

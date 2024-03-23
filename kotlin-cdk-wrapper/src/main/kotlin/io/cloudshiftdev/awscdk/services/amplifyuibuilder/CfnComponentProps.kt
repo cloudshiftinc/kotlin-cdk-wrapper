@@ -454,7 +454,7 @@ public interface CfnComponentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponentProps,
+    cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponentProps,
   ) : CdkObject(cdkObject), CfnComponentProps {
     /**
      * The unique ID of the Amplify app associated with the component.

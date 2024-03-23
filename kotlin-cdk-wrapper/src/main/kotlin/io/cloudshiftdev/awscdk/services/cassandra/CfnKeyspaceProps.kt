@@ -239,7 +239,7 @@ public interface CfnKeyspaceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cassandra.CfnKeyspaceProps,
+    cdkObject: software.amazon.awscdk.services.cassandra.CfnKeyspaceProps,
   ) : CdkObject(cdkObject), CfnKeyspaceProps {
     /**
      * The name of the keyspace to be created.

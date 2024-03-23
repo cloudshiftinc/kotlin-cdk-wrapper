@@ -317,8 +317,7 @@ public interface CodeBuildStartBuildProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildProps,
   ) : CdkObject(cdkObject), CodeBuildStartBuildProps {
     /**
      * An optional description for this state.

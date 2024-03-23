@@ -40,8 +40,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class StageDeployment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.StageDeployment,
+public open class StageDeployment(
+  cdkObject: software.amazon.awscdk.pipelines.StageDeployment,
 ) : CdkObject(cdkObject) {
   /**
    * Add an additional step to run after all of the stacks in this stage.
@@ -110,6 +110,6 @@ public open class StageDeployment internal constructor(
         = StageDeployment(cdkObject)
 
     internal fun unwrap(wrapped: StageDeployment): software.amazon.awscdk.pipelines.StageDeployment
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.pipelines.StageDeployment
   }
 }

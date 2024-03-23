@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html)
  */
-public open class CfnFlowTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate,
+public open class CfnFlowTemplate(
+  cdkObject: software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -204,7 +204,8 @@ public open class CfnFlowTemplate internal constructor(
         CfnFlowTemplate = CfnFlowTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlowTemplate):
-        software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate
   }
 
   /**
@@ -275,8 +276,7 @@ public open class CfnFlowTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate.DefinitionDocumentProperty,
+      cdkObject: software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate.DefinitionDocumentProperty,
     ) : CdkObject(cdkObject), DefinitionDocumentProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotthingsgraph-flowtemplate-definitiondocument.html#cfn-iotthingsgraph-flowtemplate-definitiondocument-language)

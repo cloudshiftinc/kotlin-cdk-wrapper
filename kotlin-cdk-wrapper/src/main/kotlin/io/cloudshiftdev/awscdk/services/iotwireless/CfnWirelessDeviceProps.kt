@@ -114,7 +114,7 @@ public interface CfnWirelessDeviceProps {
   public fun name(): String? = unwrap(this).getName()
 
   /**
-   * FPort values for the GNSS, stream, and ClockSync functions of the positioning information.
+   * FPort values for the GNSS, Stream, and ClockSync functions of the positioning information.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-positioning)
    */
@@ -192,7 +192,7 @@ public interface CfnWirelessDeviceProps {
     public fun name(name: String)
 
     /**
-     * @param positioning FPort values for the GNSS, stream, and ClockSync functions of the
+     * @param positioning FPort values for the GNSS, Stream, and ClockSync functions of the
      * positioning information.
      */
     public fun positioning(positioning: String)
@@ -282,7 +282,7 @@ public interface CfnWirelessDeviceProps {
     }
 
     /**
-     * @param positioning FPort values for the GNSS, stream, and ClockSync functions of the
+     * @param positioning FPort values for the GNSS, Stream, and ClockSync functions of the
      * positioning information.
      */
     override fun positioning(positioning: String) {
@@ -322,7 +322,7 @@ public interface CfnWirelessDeviceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceProps,
+    cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceProps,
   ) : CdkObject(cdkObject), CfnWirelessDeviceProps {
     /**
      * The description of the new resource.
@@ -367,7 +367,7 @@ public interface CfnWirelessDeviceProps {
     override fun name(): String? = unwrap(this).getName()
 
     /**
-     * FPort values for the GNSS, stream, and ClockSync functions of the positioning information.
+     * FPort values for the GNSS, Stream, and ClockSync functions of the positioning information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-positioning)
      */

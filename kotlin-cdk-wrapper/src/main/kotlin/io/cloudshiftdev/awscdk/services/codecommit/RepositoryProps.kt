@@ -138,7 +138,7 @@ public interface RepositoryProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codecommit.RepositoryProps,
+    cdkObject: software.amazon.awscdk.services.codecommit.RepositoryProps,
   ) : CdkObject(cdkObject), RepositoryProps {
     /**
      * The contents with which to initialize the repository after it has been created.

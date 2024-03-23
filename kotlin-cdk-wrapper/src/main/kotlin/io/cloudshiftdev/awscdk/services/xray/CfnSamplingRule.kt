@@ -113,8 +113,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html)
  */
-public open class CfnSamplingRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule,
+public open class CfnSamplingRule(
+  cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.xray.CfnSamplingRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -547,7 +547,8 @@ public open class CfnSamplingRule internal constructor(
         CfnSamplingRule = CfnSamplingRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnSamplingRule):
-        software.amazon.awscdk.services.xray.CfnSamplingRule = wrapped.cdkObject
+        software.amazon.awscdk.services.xray.CfnSamplingRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.xray.CfnSamplingRule
   }
 
   /**
@@ -922,8 +923,7 @@ public open class CfnSamplingRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleProperty,
+      cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleProperty,
     ) : CdkObject(cdkObject), SamplingRuleProperty {
       /**
        * Matches attributes derived from the request.
@@ -1186,8 +1186,7 @@ public open class CfnSamplingRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty,
+      cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty,
     ) : CdkObject(cdkObject), SamplingRuleRecordProperty {
       /**
        * When the rule was created, in Unix time seconds.
@@ -1533,8 +1532,7 @@ public open class CfnSamplingRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty,
+      cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty,
     ) : CdkObject(cdkObject), SamplingRuleUpdateProperty {
       /**
        * Matches attributes derived from the request.

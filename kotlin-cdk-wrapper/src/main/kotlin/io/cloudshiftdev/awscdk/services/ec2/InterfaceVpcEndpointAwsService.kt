@@ -37,9 +37,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class InterfaceVpcEndpointAwsService internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService,
+public open class InterfaceVpcEndpointAwsService(
+  cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService,
 ) : CdkObject(cdkObject), IInterfaceVpcEndpointService {
   public constructor(name: String) :
       this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService(name)
@@ -110,6 +109,12 @@ public open class InterfaceVpcEndpointAwsService internal constructor(
 
     public val APP_SYNC: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.APP_SYNC)
+
+    public val APPCONFIG: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.APPCONFIG)
+
+    public val APPCONFIGDATA: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.APPCONFIGDATA)
 
     public val APPLICATION_AUTOSCALING: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.APPLICATION_AUTOSCALING)
@@ -704,6 +709,7 @@ public open class InterfaceVpcEndpointAwsService internal constructor(
         InterfaceVpcEndpointAwsService = InterfaceVpcEndpointAwsService(cdkObject)
 
     internal fun unwrap(wrapped: InterfaceVpcEndpointAwsService):
-        software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService
   }
 }

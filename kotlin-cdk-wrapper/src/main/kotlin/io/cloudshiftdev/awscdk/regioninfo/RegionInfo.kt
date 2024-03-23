@@ -21,8 +21,8 @@ import kotlin.collections.Map
  * region.servicePrincipal("logs.amazonaws.com");
  * ```
  */
-public open class RegionInfo internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.regioninfo.RegionInfo,
+public open class RegionInfo(
+  cdkObject: software.amazon.awscdk.regioninfo.RegionInfo,
 ) : CdkObject(cdkObject) {
   /**
    * The ARN of the ADOT Lambda layer, for the given layer type, version and architecture.
@@ -190,6 +190,6 @@ public open class RegionInfo internal constructor(
         RegionInfo(cdkObject)
 
     internal fun unwrap(wrapped: RegionInfo): software.amazon.awscdk.regioninfo.RegionInfo =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.regioninfo.RegionInfo
   }
 }

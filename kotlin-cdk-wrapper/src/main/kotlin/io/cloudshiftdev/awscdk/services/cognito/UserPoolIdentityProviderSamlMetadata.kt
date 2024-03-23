@@ -18,9 +18,8 @@ import kotlin.String
  * UserPoolIdentityProviderSamlMetadata.file("fileContent");
  * ```
  */
-public open class UserPoolIdentityProviderSamlMetadata internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cognito.UserPoolIdentityProviderSamlMetadata,
+public open class UserPoolIdentityProviderSamlMetadata(
+  cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderSamlMetadata,
 ) : CdkObject(cdkObject) {
   /**
    * A URL hosting SAML metadata, or the content of a file containing SAML metadata.
@@ -46,6 +45,7 @@ public open class UserPoolIdentityProviderSamlMetadata internal constructor(
 
     internal fun unwrap(wrapped: UserPoolIdentityProviderSamlMetadata):
         software.amazon.awscdk.services.cognito.UserPoolIdentityProviderSamlMetadata =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.UserPoolIdentityProviderSamlMetadata
   }
 }

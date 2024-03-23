@@ -32,9 +32,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class Classification internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.Classification,
+public open class Classification(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.Classification,
 ) : CdkObject(cdkObject) {
   public constructor(classificationStatement: String) :
       this(software.amazon.awscdk.services.stepfunctions.tasks.Classification(classificationStatement)
@@ -69,6 +68,7 @@ public open class Classification internal constructor(
         Classification = Classification(cdkObject)
 
     internal fun unwrap(wrapped: Classification):
-        software.amazon.awscdk.services.stepfunctions.tasks.Classification = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.Classification = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.Classification
   }
 }

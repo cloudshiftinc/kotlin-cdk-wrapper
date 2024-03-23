@@ -21,7 +21,7 @@ public interface IUserPoolIdentityProvider : IResource {
   public fun providerName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.IUserPoolIdentityProvider,
+    cdkObject: software.amazon.awscdk.services.cognito.IUserPoolIdentityProvider,
   ) : CdkObject(cdkObject), IUserPoolIdentityProvider {
     /**
      * Apply the given removal policy to this resource.

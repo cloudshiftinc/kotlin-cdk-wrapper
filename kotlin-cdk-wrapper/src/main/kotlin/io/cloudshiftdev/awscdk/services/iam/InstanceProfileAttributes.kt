@@ -80,7 +80,7 @@ public interface InstanceProfileAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.InstanceProfileAttributes,
+    cdkObject: software.amazon.awscdk.services.iam.InstanceProfileAttributes,
   ) : CdkObject(cdkObject), InstanceProfileAttributes {
     /**
      * The ARN of the InstanceProfile.

@@ -807,7 +807,7 @@ public interface EksContainerDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.EksContainerDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.batch.EksContainerDefinitionProps,
   ) : CdkObject(cdkObject), EksContainerDefinitionProps {
     /**
      * An array of arguments to the entrypoint.

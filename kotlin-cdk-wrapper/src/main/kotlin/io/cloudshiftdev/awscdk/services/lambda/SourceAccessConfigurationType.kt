@@ -21,9 +21,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/lambda/latest/dg/API_SourceAccessConfiguration.html#SSS-Type-SourceAccessConfiguration-Type)
  */
-public open class SourceAccessConfigurationType internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.SourceAccessConfigurationType,
+public open class SourceAccessConfigurationType(
+  cdkObject: software.amazon.awscdk.services.lambda.SourceAccessConfigurationType,
 ) : CdkObject(cdkObject) {
   /**
    * The key to use in `SourceAccessConfigurationProperty.Type` property in CloudFormation.
@@ -62,6 +61,7 @@ public open class SourceAccessConfigurationType internal constructor(
         SourceAccessConfigurationType = SourceAccessConfigurationType(cdkObject)
 
     internal fun unwrap(wrapped: SourceAccessConfigurationType):
-        software.amazon.awscdk.services.lambda.SourceAccessConfigurationType = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.SourceAccessConfigurationType = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.SourceAccessConfigurationType
   }
 }

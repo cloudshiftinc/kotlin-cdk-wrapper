@@ -648,7 +648,7 @@ public interface IRepository : IResource, INotificationRuleSource {
   public fun repositoryName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codecommit.IRepository,
+    cdkObject: software.amazon.awscdk.services.codecommit.IRepository,
   ) : CdkObject(cdkObject), IRepository {
     /**
      * Apply the given removal policy to this resource.

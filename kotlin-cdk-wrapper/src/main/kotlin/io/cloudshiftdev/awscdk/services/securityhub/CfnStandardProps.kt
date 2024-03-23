@@ -128,7 +128,7 @@ public interface CfnStandardProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.securityhub.CfnStandardProps,
+    cdkObject: software.amazon.awscdk.services.securityhub.CfnStandardProps,
   ) : CdkObject(cdkObject), CfnStandardProps {
     /**
      * Specifies which controls are to be disabled in a standard.

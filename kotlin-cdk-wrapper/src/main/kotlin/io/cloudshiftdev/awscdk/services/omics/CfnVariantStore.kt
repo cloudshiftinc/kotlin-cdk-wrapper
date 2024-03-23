@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-variantstore.html)
  */
-public open class CfnVariantStore internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore,
+public open class CfnVariantStore(
+  cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -407,7 +407,8 @@ public open class CfnVariantStore internal constructor(
         CfnVariantStore = CfnVariantStore(cdkObject)
 
     internal fun unwrap(wrapped: CfnVariantStore):
-        software.amazon.awscdk.services.omics.CfnVariantStore = wrapped.cdkObject
+        software.amazon.awscdk.services.omics.CfnVariantStore = wrapped.cdkObject as
+        software.amazon.awscdk.services.omics.CfnVariantStore
   }
 
   /**
@@ -463,8 +464,7 @@ public open class CfnVariantStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty,
+      cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty,
     ) : CdkObject(cdkObject), ReferenceItemProperty {
       /**
        * The reference's ARN.
@@ -565,8 +565,7 @@ public open class CfnVariantStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnVariantStore.SseConfigProperty,
+      cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore.SseConfigProperty,
     ) : CdkObject(cdkObject), SseConfigProperty {
       /**
        * An encryption key ARN.

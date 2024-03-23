@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-package.html)
  */
-public open class CfnPackage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.panorama.CfnPackage,
+public open class CfnPackage(
+  cdkObject: software.amazon.awscdk.services.panorama.CfnPackage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -325,7 +325,7 @@ public open class CfnPackage internal constructor(
         CfnPackage(cdkObject)
 
     internal fun unwrap(wrapped: CfnPackage): software.amazon.awscdk.services.panorama.CfnPackage =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.panorama.CfnPackage
   }
 
   /**
@@ -461,8 +461,7 @@ public open class CfnPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.panorama.CfnPackage.StorageLocationProperty,
+      cdkObject: software.amazon.awscdk.services.panorama.CfnPackage.StorageLocationProperty,
     ) : CdkObject(cdkObject), StorageLocationProperty {
       /**
        * The location's binary prefix.

@@ -21,7 +21,7 @@ public interface IReceiptRule : IResource {
   public fun receiptRuleName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.IReceiptRule,
+    cdkObject: software.amazon.awscdk.services.ses.IReceiptRule,
   ) : CdkObject(cdkObject), IReceiptRule {
     /**
      * Apply the given removal policy to this resource.

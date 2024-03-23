@@ -100,8 +100,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-space.html)
  */
-public open class CfnSpace internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace,
+public open class CfnSpace(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -598,7 +598,7 @@ public open class CfnSpace internal constructor(
         CfnSpace(cdkObject)
 
     internal fun unwrap(wrapped: CfnSpace): software.amazon.awscdk.services.sagemaker.CfnSpace =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnSpace
   }
 
   /**
@@ -654,8 +654,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.CodeRepositoryProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.CodeRepositoryProperty,
     ) : CdkObject(cdkObject), CodeRepositoryProperty {
       /**
        * The URL of the Git repository.
@@ -768,8 +767,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.CustomFileSystemProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.CustomFileSystemProperty,
     ) : CdkObject(cdkObject), CustomFileSystemProperty {
       /**
        * A custom file system in Amazon EFS.
@@ -897,8 +895,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.CustomImageProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.CustomImageProperty,
     ) : CdkObject(cdkObject), CustomImageProperty {
       /**
        * The name of the AppImageConfig.
@@ -997,8 +994,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.EFSFileSystemProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.EFSFileSystemProperty,
     ) : CdkObject(cdkObject), EFSFileSystemProperty {
       /**
        * The ID of your Amazon EFS file system.
@@ -1079,8 +1075,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.EbsStorageSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.EbsStorageSettingsProperty,
     ) : CdkObject(cdkObject), EbsStorageSettingsProperty {
       /**
        * The size of an EBS storage volume for a private space.
@@ -1210,8 +1205,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.JupyterServerAppSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.JupyterServerAppSettingsProperty,
     ) : CdkObject(cdkObject), JupyterServerAppSettingsProperty {
       /**
        * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
@@ -1420,8 +1414,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.KernelGatewayAppSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.KernelGatewayAppSettingsProperty,
     ) : CdkObject(cdkObject), KernelGatewayAppSettingsProperty {
       /**
        * A list of custom SageMaker images that are configured to run as a KernelGateway app.
@@ -1516,8 +1509,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.OwnershipSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.OwnershipSettingsProperty,
     ) : CdkObject(cdkObject), OwnershipSettingsProperty {
       /**
        * The user profile who is the owner of the private space.
@@ -1655,8 +1647,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.ResourceSpecProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.ResourceSpecProperty,
     ) : CdkObject(cdkObject), ResourceSpecProperty {
       /**
        * The instance type that the image version runs on.
@@ -1799,8 +1790,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceCodeEditorAppSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceCodeEditorAppSettingsProperty,
     ) : CdkObject(cdkObject), SpaceCodeEditorAppSettingsProperty {
       /**
        * Specifies the ARNs of a SageMaker image and SageMaker image version, and the instance type
@@ -1976,8 +1966,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceJupyterLabAppSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceJupyterLabAppSettingsProperty,
     ) : CdkObject(cdkObject), SpaceJupyterLabAppSettingsProperty {
       /**
        * A list of Git repositories that SageMaker automatically displays to users for cloning in
@@ -2418,8 +2407,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSettingsProperty,
     ) : CdkObject(cdkObject), SpaceSettingsProperty {
       /**
        * The type of app created within the space.
@@ -2545,8 +2533,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSharingSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSharingSettingsProperty,
     ) : CdkObject(cdkObject), SpaceSharingSettingsProperty {
       /**
        * Specifies the sharing type of the space.
@@ -2659,8 +2646,7 @@ public open class CfnSpace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceStorageSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceStorageSettingsProperty,
     ) : CdkObject(cdkObject), SpaceStorageSettingsProperty {
       /**
        * A collection of EBS storage settings for a private space.

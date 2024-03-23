@@ -31,7 +31,7 @@ public interface IRuleTarget {
   public fun bind(rule: IRule, id: String): RuleTargetConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.IRuleTarget,
+    cdkObject: software.amazon.awscdk.services.events.IRuleTarget,
   ) : CdkObject(cdkObject), IRuleTarget {
     /**
      * Returns the rule target specification.

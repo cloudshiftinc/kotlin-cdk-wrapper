@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html)
  */
-public open class CfnStateMachine internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine,
+public open class CfnStateMachine(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -851,7 +851,8 @@ public open class CfnStateMachine internal constructor(
         CfnStateMachine = CfnStateMachine(cdkObject)
 
     internal fun unwrap(wrapped: CfnStateMachine):
-        software.amazon.awscdk.services.stepfunctions.CfnStateMachine = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.CfnStateMachine = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.CfnStateMachine
   }
 
   /**
@@ -921,8 +922,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty,
     ) : CdkObject(cdkObject), CloudWatchLogsLogGroupProperty {
       /**
        * The ARN of the the CloudWatch log group to which you want your logs emitted to.
@@ -1064,8 +1064,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty,
     ) : CdkObject(cdkObject), LogDestinationProperty {
       /**
        * An object describing a CloudWatch log group.
@@ -1260,8 +1259,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LoggingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LoggingConfigurationProperty,
     ) : CdkObject(cdkObject), LoggingConfigurationProperty {
       /**
        * An array of objects that describes where your execution history events will be logged.
@@ -1407,8 +1405,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * The name of the S3 bucket where the state machine definition JSON or YAML file is stored.
@@ -1523,8 +1520,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TagsEntryProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TagsEntryProperty,
     ) : CdkObject(cdkObject), TagsEntryProperty {
       /**
        * The `key` for a key-value pair in a tag entry.
@@ -1628,8 +1624,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TracingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TracingConfigurationProperty,
     ) : CdkObject(cdkObject), TracingConfigurationProperty {
       /**
        * When set to `true` , X-Ray tracing is enabled.

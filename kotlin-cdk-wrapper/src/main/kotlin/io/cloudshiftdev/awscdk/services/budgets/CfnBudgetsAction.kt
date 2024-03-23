@@ -70,8 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html)
  */
-public open class CfnBudgetsAction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction,
+public open class CfnBudgetsAction(
+  cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -545,7 +545,8 @@ public open class CfnBudgetsAction internal constructor(
         CfnBudgetsAction = CfnBudgetsAction(cdkObject)
 
     internal fun unwrap(wrapped: CfnBudgetsAction):
-        software.amazon.awscdk.services.budgets.CfnBudgetsAction = wrapped.cdkObject
+        software.amazon.awscdk.services.budgets.CfnBudgetsAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.budgets.CfnBudgetsAction
   }
 
   /**
@@ -621,8 +622,7 @@ public open class CfnBudgetsAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.ActionThresholdProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.ActionThresholdProperty,
     ) : CdkObject(cdkObject), ActionThresholdProperty {
       /**
        * The type of threshold for a notification.
@@ -862,8 +862,7 @@ public open class CfnBudgetsAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.DefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.DefinitionProperty,
     ) : CdkObject(cdkObject), DefinitionProperty {
       /**
        * The AWS Identity and Access Management ( IAM ) action definition details.
@@ -1068,8 +1067,7 @@ public open class CfnBudgetsAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.IamActionDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.IamActionDefinitionProperty,
     ) : CdkObject(cdkObject), IamActionDefinitionProperty {
       /**
        * A list of groups to be attached.
@@ -1208,8 +1206,7 @@ public open class CfnBudgetsAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.ScpActionDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.ScpActionDefinitionProperty,
     ) : CdkObject(cdkObject), ScpActionDefinitionProperty {
       /**
        * The policy ID attached.
@@ -1348,8 +1345,7 @@ public open class CfnBudgetsAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty,
     ) : CdkObject(cdkObject), SsmActionDefinitionProperty {
       /**
        * The EC2 and RDS instance IDs.
@@ -1478,8 +1474,7 @@ public open class CfnBudgetsAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty,
     ) : CdkObject(cdkObject), SubscriberProperty {
       /**
        * The address that AWS sends budget notifications to, either an SNS topic or an email.

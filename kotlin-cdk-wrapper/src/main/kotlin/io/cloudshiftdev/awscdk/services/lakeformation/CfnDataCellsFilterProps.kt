@@ -320,7 +320,7 @@ public interface CfnDataCellsFilterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilterProps,
+    cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilterProps,
   ) : CdkObject(cdkObject), CfnDataCellsFilterProps {
     /**
      * An array of UTF-8 strings.

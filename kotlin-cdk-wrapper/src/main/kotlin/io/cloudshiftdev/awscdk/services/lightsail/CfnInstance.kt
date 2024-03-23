@@ -96,8 +96,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-instance.html)
  */
-public open class CfnInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance,
+public open class CfnInstance(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1083,7 +1083,7 @@ public open class CfnInstance internal constructor(
         = CfnInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstance): software.amazon.awscdk.services.lightsail.CfnInstance
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.lightsail.CfnInstance
   }
 
   /**
@@ -1231,7 +1231,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AddOnProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AddOnProperty,
     ) : CdkObject(cdkObject), AddOnProperty {
       /**
        * The add-on type (for example, `AutoSnapshot` ).
@@ -1353,8 +1353,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty,
     ) : CdkObject(cdkObject), AutoSnapshotAddOnProperty {
       /**
        * The daily time when an automatic snapshot will be created.
@@ -1595,7 +1594,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty,
     ) : CdkObject(cdkObject), DiskProperty {
       /**
        * The resources to which the disk is attached.
@@ -1833,8 +1832,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty,
     ) : CdkObject(cdkObject), HardwareProperty {
       /**
        * The number of vCPUs the instance has.
@@ -1963,8 +1961,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnInstance.LocationProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.LocationProperty,
     ) : CdkObject(cdkObject), LocationProperty {
       /**
        * The Availability Zone for the instance.
@@ -2056,8 +2053,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnInstance.MonthlyTransferProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.MonthlyTransferProperty,
     ) : CdkObject(cdkObject), MonthlyTransferProperty {
       /**
        * The amount of allocated monthly data transfer (in GB) for an instance.
@@ -2229,8 +2225,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty,
     ) : CdkObject(cdkObject), NetworkingProperty {
       /**
        * The monthly amount of data transfer, in GB, allocated for the instance.
@@ -2741,7 +2736,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.PortProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.PortProperty,
     ) : CdkObject(cdkObject), PortProperty {
       /**
        * The access direction ( `inbound` or `outbound` ).
@@ -2969,7 +2964,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.StateProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.StateProperty,
     ) : CdkObject(cdkObject), StateProperty {
       /**
        * The status code of the instance.

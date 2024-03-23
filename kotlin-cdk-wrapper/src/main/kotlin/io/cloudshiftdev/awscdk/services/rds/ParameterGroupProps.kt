@@ -173,7 +173,7 @@ public interface ParameterGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.ParameterGroupProps,
+    cdkObject: software.amazon.awscdk.services.rds.ParameterGroupProps,
   ) : CdkObject(cdkObject), ParameterGroupProps {
     /**
      * Description for this parameter group.

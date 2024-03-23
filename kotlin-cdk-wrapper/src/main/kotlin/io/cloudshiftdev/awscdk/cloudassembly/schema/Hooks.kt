@@ -161,7 +161,7 @@ public interface Hooks {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.Hooks,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.Hooks,
   ) : CdkObject(cdkObject), Hooks {
     /**
      * Commands to run prior after deploying the cdk stacks in the integration test.

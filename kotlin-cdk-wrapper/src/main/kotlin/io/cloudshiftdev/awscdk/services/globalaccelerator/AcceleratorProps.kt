@@ -206,7 +206,7 @@ public interface AcceleratorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.globalaccelerator.AcceleratorProps,
+    cdkObject: software.amazon.awscdk.services.globalaccelerator.AcceleratorProps,
   ) : CdkObject(cdkObject), AcceleratorProps {
     /**
      * The name of the accelerator.

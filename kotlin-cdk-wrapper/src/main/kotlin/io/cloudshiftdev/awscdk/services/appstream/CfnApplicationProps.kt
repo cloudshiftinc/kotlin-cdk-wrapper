@@ -388,7 +388,7 @@ public interface CfnApplicationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appstream.CfnApplicationProps,
+    cdkObject: software.amazon.awscdk.services.appstream.CfnApplicationProps,
   ) : CdkObject(cdkObject), CfnApplicationProps {
     /**
      * The app block ARN with which the application should be associated.

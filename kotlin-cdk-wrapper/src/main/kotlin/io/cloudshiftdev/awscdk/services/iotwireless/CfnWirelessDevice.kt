@@ -78,8 +78,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html)
  */
-public open class CfnWirelessDevice internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice,
+public open class CfnWirelessDevice(
+  cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -199,12 +199,12 @@ public open class CfnWirelessDevice internal constructor(
   }
 
   /**
-   * FPort values for the GNSS, stream, and ClockSync functions of the positioning information.
+   * FPort values for the GNSS, Stream, and ClockSync functions of the positioning information.
    */
   public open fun positioning(): String? = unwrap(this).getPositioning()
 
   /**
-   * FPort values for the GNSS, stream, and ClockSync functions of the positioning information.
+   * FPort values for the GNSS, Stream, and ClockSync functions of the positioning information.
    */
   public open fun positioning(`value`: String) {
     unwrap(this).setPositioning(`value`)
@@ -332,10 +332,10 @@ public open class CfnWirelessDevice internal constructor(
     public fun name(name: String)
 
     /**
-     * FPort values for the GNSS, stream, and ClockSync functions of the positioning information.
+     * FPort values for the GNSS, Stream, and ClockSync functions of the positioning information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-positioning)
-     * @param positioning FPort values for the GNSS, stream, and ClockSync functions of the
+     * @param positioning FPort values for the GNSS, Stream, and ClockSync functions of the
      * positioning information. 
      */
     public fun positioning(positioning: String)
@@ -467,10 +467,10 @@ public open class CfnWirelessDevice internal constructor(
     }
 
     /**
-     * FPort values for the GNSS, stream, and ClockSync functions of the positioning information.
+     * FPort values for the GNSS, Stream, and ClockSync functions of the positioning information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-positioning)
-     * @param positioning FPort values for the GNSS, stream, and ClockSync functions of the
+     * @param positioning FPort values for the GNSS, Stream, and ClockSync functions of the
      * positioning information. 
      */
     override fun positioning(positioning: String) {
@@ -540,7 +540,8 @@ public open class CfnWirelessDevice internal constructor(
         CfnWirelessDevice = CfnWirelessDevice(cdkObject)
 
     internal fun unwrap(wrapped: CfnWirelessDevice):
-        software.amazon.awscdk.services.iotwireless.CfnWirelessDevice = wrapped.cdkObject
+        software.amazon.awscdk.services.iotwireless.CfnWirelessDevice = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
   }
 
   /**
@@ -646,8 +647,7 @@ public open class CfnWirelessDevice internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty,
     ) : CdkObject(cdkObject), AbpV10xProperty {
       /**
        * The DevAddr value.
@@ -787,8 +787,7 @@ public open class CfnWirelessDevice internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property,
     ) : CdkObject(cdkObject), AbpV11Property {
       /**
        * The DevAddr value.
@@ -1126,8 +1125,7 @@ public open class CfnWirelessDevice internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty,
     ) : CdkObject(cdkObject), LoRaWANDeviceProperty {
       /**
        * ABP device object for LoRaWAN specification v1.0.x.
@@ -1272,8 +1270,7 @@ public open class CfnWirelessDevice internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty,
     ) : CdkObject(cdkObject), OtaaV10xProperty {
       /**
        * The AppEUI value.
@@ -1429,8 +1426,7 @@ public open class CfnWirelessDevice internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property,
     ) : CdkObject(cdkObject), OtaaV11Property {
       /**
        * The AppKey is a secret key, which you should handle in a similar way as you would an
@@ -1556,8 +1552,7 @@ public open class CfnWirelessDevice internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty,
     ) : CdkObject(cdkObject), SessionKeysAbpV10xProperty {
       /**
        * The AppSKey value.
@@ -1758,8 +1753,7 @@ public open class CfnWirelessDevice internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property,
     ) : CdkObject(cdkObject), SessionKeysAbpV11Property {
       /**
        * The AppSKey is a secret key, which you should handle in a similar way as you would an

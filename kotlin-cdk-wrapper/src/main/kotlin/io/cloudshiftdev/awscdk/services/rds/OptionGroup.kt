@@ -84,8 +84,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class OptionGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.OptionGroup,
+public open class OptionGroup(
+  cdkObject: software.amazon.awscdk.services.rds.OptionGroup,
 ) : Resource(cdkObject), IOptionGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -241,6 +241,6 @@ public open class OptionGroup internal constructor(
         OptionGroup(cdkObject)
 
     internal fun unwrap(wrapped: OptionGroup): software.amazon.awscdk.services.rds.OptionGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.rds.OptionGroup
   }
 }

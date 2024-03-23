@@ -87,8 +87,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html)
  */
-public open class CfnPipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline,
+public open class CfnPipeline(
+  cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -634,7 +634,8 @@ public open class CfnPipeline internal constructor(
         CfnPipeline = CfnPipeline(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipeline):
-        software.amazon.awscdk.services.datapipeline.CfnPipeline = wrapped.cdkObject
+        software.amazon.awscdk.services.datapipeline.CfnPipeline = wrapped.cdkObject as
+        software.amazon.awscdk.services.datapipeline.CfnPipeline
   }
 
   /**
@@ -799,8 +800,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty,
+      cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty,
     ) : CdkObject(cdkObject), FieldProperty {
       /**
        * Specifies the name of a field for a particular object.
@@ -939,8 +939,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty,
+      cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty,
     ) : CdkObject(cdkObject), ParameterAttributeProperty {
       /**
        * The field identifier.
@@ -1073,8 +1072,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty,
+      cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty,
     ) : CdkObject(cdkObject), ParameterObjectProperty {
       /**
        * The attributes of the parameter object.
@@ -1182,8 +1180,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty,
+      cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty,
     ) : CdkObject(cdkObject), ParameterValueProperty {
       /**
        * The ID of the parameter value.
@@ -1342,8 +1339,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty,
+      cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty,
     ) : CdkObject(cdkObject), PipelineObjectProperty {
       /**
        * Key-value pairs that define the properties of the object.
@@ -1463,8 +1459,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty,
+      cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty,
     ) : CdkObject(cdkObject), PipelineTagProperty {
       /**
        * The key name of a tag.

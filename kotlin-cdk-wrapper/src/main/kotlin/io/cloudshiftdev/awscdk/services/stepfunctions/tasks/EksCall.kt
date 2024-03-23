@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-eks.html)
  */
-public open class EksCall internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EksCall,
+public open class EksCall(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EksCall,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -533,6 +533,7 @@ public open class EksCall internal constructor(
         EksCall = EksCall(cdkObject)
 
     internal fun unwrap(wrapped: EksCall):
-        software.amazon.awscdk.services.stepfunctions.tasks.EksCall = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.EksCall = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.EksCall
   }
 }

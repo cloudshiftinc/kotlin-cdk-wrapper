@@ -280,7 +280,7 @@ public interface CfnLocationFSxWindowsProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxWindowsProps,
+    cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxWindowsProps,
   ) : CdkObject(cdkObject), CfnLocationFSxWindowsProps {
     /**
      * Specifies the name of the Microsoft Active Directory domain that the FSx for Windows File

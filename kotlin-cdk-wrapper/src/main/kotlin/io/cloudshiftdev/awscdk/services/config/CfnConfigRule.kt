@@ -112,8 +112,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html)
  */
-public open class CfnConfigRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.CfnConfigRule,
+public open class CfnConfigRule(
+  cdkObject: software.amazon.awscdk.services.config.CfnConfigRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -795,7 +795,8 @@ public open class CfnConfigRule internal constructor(
         CfnConfigRule = CfnConfigRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigRule):
-        software.amazon.awscdk.services.config.CfnConfigRule = wrapped.cdkObject
+        software.amazon.awscdk.services.config.CfnConfigRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnConfigRule
   }
 
   /**
@@ -888,8 +889,7 @@ public open class CfnConfigRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty,
     ) : CdkObject(cdkObject), ComplianceProperty {
       /**
        * Indicates whether an AWS resource or AWS Config rule is compliant.
@@ -1062,8 +1062,7 @@ public open class CfnConfigRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty,
     ) : CdkObject(cdkObject), CustomPolicyDetailsProperty {
       /**
        * The boolean expression for enabling debug logging for your AWS Config Custom Policy rule.
@@ -1173,8 +1172,7 @@ public open class CfnConfigRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty,
     ) : CdkObject(cdkObject), EvaluationModeConfigurationProperty {
       /**
        * The mode of an evaluation.
@@ -1368,7 +1366,7 @@ public open class CfnConfigRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.ScopeProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.ScopeProperty,
     ) : CdkObject(cdkObject), ScopeProperty {
       /**
        * The ID of the only AWS resource that you want to trigger an evaluation for the rule.
@@ -1611,8 +1609,7 @@ public open class CfnConfigRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty,
     ) : CdkObject(cdkObject), SourceDetailProperty {
       /**
        * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your
@@ -1984,7 +1981,7 @@ public open class CfnConfigRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.SourceProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.SourceProperty,
     ) : CdkObject(cdkObject), SourceProperty {
       /**
        * Provides the runtime system, policy definition, and whether debug logging is enabled.

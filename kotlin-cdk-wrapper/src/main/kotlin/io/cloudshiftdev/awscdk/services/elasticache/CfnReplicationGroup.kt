@@ -121,8 +121,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)
  */
-public open class CfnReplicationGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup,
+public open class CfnReplicationGroup(
+  cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -2685,7 +2685,8 @@ public open class CfnReplicationGroup internal constructor(
         CfnReplicationGroup = CfnReplicationGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationGroup):
-        software.amazon.awscdk.services.elasticache.CfnReplicationGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticache.CfnReplicationGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticache.CfnReplicationGroup
   }
 
   /**
@@ -2746,8 +2747,7 @@ public open class CfnReplicationGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty,
     ) : CdkObject(cdkObject), CloudWatchLogsDestinationDetailsProperty {
       /**
        * The name of the CloudWatch Logs log group.
@@ -2955,8 +2955,7 @@ public open class CfnReplicationGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty,
     ) : CdkObject(cdkObject), DestinationDetailsProperty {
       /**
        * The configuration details of the CloudWatch Logs destination.
@@ -3055,8 +3054,7 @@ public open class CfnReplicationGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.KinesisFirehoseDestinationDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.KinesisFirehoseDestinationDetailsProperty,
     ) : CdkObject(cdkObject), KinesisFirehoseDestinationDetailsProperty {
       /**
        * The name of the Kinesis Data Firehose delivery stream.
@@ -3252,8 +3250,7 @@ public open class CfnReplicationGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.LogDeliveryConfigurationRequestProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.LogDeliveryConfigurationRequestProperty,
     ) : CdkObject(cdkObject), LogDeliveryConfigurationRequestProperty {
       /**
        * Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose
@@ -3518,8 +3515,7 @@ public open class CfnReplicationGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.NodeGroupConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.NodeGroupConfigurationProperty,
     ) : CdkObject(cdkObject), NodeGroupConfigurationProperty {
       /**
        * Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node

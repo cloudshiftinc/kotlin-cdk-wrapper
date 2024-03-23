@@ -17,7 +17,7 @@ public interface ITopicSubscription {
   public fun bind(topic: ITopic): TopicSubscriptionConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sns.ITopicSubscription,
+    cdkObject: software.amazon.awscdk.services.sns.ITopicSubscription,
   ) : CdkObject(cdkObject), ITopicSubscription {
     /**
      * Returns a configuration used to subscribe to an SNS topic.

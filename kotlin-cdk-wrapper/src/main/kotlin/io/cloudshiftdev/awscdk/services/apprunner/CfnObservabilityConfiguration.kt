@@ -65,9 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-observabilityconfiguration.html)
  */
-public open class CfnObservabilityConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration,
+public open class CfnObservabilityConfiguration(
+  cdkObject: software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -400,6 +399,7 @@ public open class CfnObservabilityConfiguration internal constructor(
 
     internal fun unwrap(wrapped: CfnObservabilityConfiguration):
         software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration = wrapped.cdkObject
+        as software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration
   }
 
   /**
@@ -457,8 +457,7 @@ public open class CfnObservabilityConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration.TraceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration.TraceConfigurationProperty,
     ) : CdkObject(cdkObject), TraceConfigurationProperty {
       /**
        * The implementation provider chosen for tracing App Runner services.

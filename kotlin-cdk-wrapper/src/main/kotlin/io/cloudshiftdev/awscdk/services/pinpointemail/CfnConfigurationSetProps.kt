@@ -337,7 +337,7 @@ public interface CfnConfigurationSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetProps,
+    cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetProps,
   ) : CdkObject(cdkObject), CfnConfigurationSetProps {
     /**
      * An object that defines the dedicated IP pool that is used to send emails that you send using

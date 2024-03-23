@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * plan.addApiKey(key);
  * ```
  */
-public open class Method internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.Method,
+public open class Method(
+  cdkObject: software.amazon.awscdk.services.apigateway.Method,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -589,6 +589,6 @@ public open class Method internal constructor(
         Method(cdkObject)
 
     internal fun unwrap(wrapped: Method): software.amazon.awscdk.services.apigateway.Method =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigateway.Method
   }
 }

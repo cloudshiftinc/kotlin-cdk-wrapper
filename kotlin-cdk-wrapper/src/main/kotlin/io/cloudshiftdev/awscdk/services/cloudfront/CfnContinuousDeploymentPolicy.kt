@@ -79,9 +79,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-continuousdeploymentpolicy.html)
  */
-public open class CfnContinuousDeploymentPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy,
+public open class CfnContinuousDeploymentPolicy(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -255,6 +254,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
 
     internal fun unwrap(wrapped: CfnContinuousDeploymentPolicy):
         software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy = wrapped.cdkObject
+        as software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy
   }
 
   /**
@@ -615,8 +615,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty,
     ) : CdkObject(cdkObject), ContinuousDeploymentPolicyConfigProperty {
       /**
        * A Boolean that indicates whether this continuous deployment policy is enabled (in effect).
@@ -785,8 +784,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty,
     ) : CdkObject(cdkObject), SessionStickinessConfigProperty {
       /**
        * The amount of time after which you want sessions to cease if no requests are received.
@@ -906,8 +904,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty,
     ) : CdkObject(cdkObject), SingleHeaderConfigProperty {
       /**
        * The request header name that you want CloudFront to send to your staging distribution.
@@ -1013,8 +1010,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderPolicyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderPolicyConfigProperty,
     ) : CdkObject(cdkObject), SingleHeaderPolicyConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig-header)
@@ -1186,8 +1182,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightConfigProperty,
     ) : CdkObject(cdkObject), SingleWeightConfigProperty {
       /**
        * Session stickiness provides the ability to define multiple requests from a single viewer as
@@ -1331,8 +1326,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty,
     ) : CdkObject(cdkObject), SingleWeightPolicyConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-sessionstickinessconfig)
@@ -1538,8 +1532,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty,
     ) : CdkObject(cdkObject), TrafficConfigProperty {
       /**
        * Determines which HTTP requests are sent to the staging distribution.

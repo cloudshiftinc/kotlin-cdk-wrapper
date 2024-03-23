@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class NsRecord internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.NsRecord,
+public open class NsRecord(
+  cdkObject: software.amazon.awscdk.services.route53.NsRecord,
 ) : RecordSet(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -398,6 +398,6 @@ public open class NsRecord internal constructor(
         NsRecord(cdkObject)
 
     internal fun unwrap(wrapped: NsRecord): software.amazon.awscdk.services.route53.NsRecord =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.route53.NsRecord
   }
 }

@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html)
  */
-public open class CfnDocument internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnDocument,
+public open class CfnDocument(
+  cdkObject: software.amazon.awscdk.services.ssm.CfnDocument,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -676,7 +676,7 @@ public open class CfnDocument internal constructor(
         CfnDocument(cdkObject)
 
     internal fun unwrap(wrapped: CfnDocument): software.amazon.awscdk.services.ssm.CfnDocument =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ssm.CfnDocument
   }
 
   /**
@@ -894,8 +894,7 @@ public open class CfnDocument internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnDocument.AttachmentsSourceProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnDocument.AttachmentsSourceProperty,
     ) : CdkObject(cdkObject), AttachmentsSourceProperty {
       /**
        * The key of a key-value pair that identifies the location of an attachment to a document.
@@ -1035,8 +1034,7 @@ public open class CfnDocument internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnDocument.DocumentRequiresProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnDocument.DocumentRequiresProperty,
     ) : CdkObject(cdkObject), DocumentRequiresProperty {
       /**
        * The name of the required SSM document.

@@ -30,9 +30,8 @@ import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesL
  * .build();
  * ```
  */
-public open class LambdaDestination internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.logs.destinations.LambdaDestination,
+public open class LambdaDestination(
+  cdkObject: software.amazon.awscdk.services.logs.destinations.LambdaDestination,
 ) : CdkObject(cdkObject), ILogSubscriptionDestination {
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.services.logs.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
@@ -115,6 +114,7 @@ public open class LambdaDestination internal constructor(
         LambdaDestination = LambdaDestination(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDestination):
-        software.amazon.awscdk.services.logs.destinations.LambdaDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.logs.destinations.LambdaDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.logs.destinations.LambdaDestination
   }
 }

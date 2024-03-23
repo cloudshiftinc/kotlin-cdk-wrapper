@@ -158,7 +158,7 @@ public interface CfnRequestValidatorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CfnRequestValidatorProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CfnRequestValidatorProps,
   ) : CdkObject(cdkObject), CfnRequestValidatorProps {
     /**
      * The name of this RequestValidator.

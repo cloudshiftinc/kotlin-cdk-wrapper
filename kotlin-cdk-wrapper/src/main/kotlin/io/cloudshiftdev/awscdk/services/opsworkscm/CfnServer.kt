@@ -73,8 +73,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html)
  */
-public open class CfnServer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.opsworkscm.CfnServer,
+public open class CfnServer(
+  cdkObject: software.amazon.awscdk.services.opsworkscm.CfnServer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1393,7 +1393,7 @@ public open class CfnServer internal constructor(
         CfnServer(cdkObject)
 
     internal fun unwrap(wrapped: CfnServer): software.amazon.awscdk.services.opsworkscm.CfnServer =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.opsworkscm.CfnServer
   }
 
   /**
@@ -1572,8 +1572,7 @@ public open class CfnServer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworkscm.CfnServer.EngineAttributeProperty,
+      cdkObject: software.amazon.awscdk.services.opsworkscm.CfnServer.EngineAttributeProperty,
     ) : CdkObject(cdkObject), EngineAttributeProperty {
       /**
        * The name of the engine attribute.

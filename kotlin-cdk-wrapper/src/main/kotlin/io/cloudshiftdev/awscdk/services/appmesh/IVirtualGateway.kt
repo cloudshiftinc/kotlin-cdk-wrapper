@@ -61,7 +61,7 @@ public interface IVirtualGateway : IResource {
   public fun virtualGatewayName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.IVirtualGateway,
+    cdkObject: software.amazon.awscdk.services.appmesh.IVirtualGateway,
   ) : CdkObject(cdkObject), IVirtualGateway {
     /**
      * Utility method to add a new GatewayRoute to the VirtualGateway.

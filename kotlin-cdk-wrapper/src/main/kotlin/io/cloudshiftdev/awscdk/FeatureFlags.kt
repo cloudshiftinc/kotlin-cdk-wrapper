@@ -25,8 +25,8 @@ import kotlin.String
  * FeatureFlags featureFlags = FeatureFlags.of(this);
  * ```
  */
-public open class FeatureFlags internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.FeatureFlags,
+public open class FeatureFlags(
+  cdkObject: software.amazon.awscdk.FeatureFlags,
 ) : CdkObject(cdkObject) {
   /**
    * Check whether a feature flag is enabled.
@@ -47,6 +47,6 @@ public open class FeatureFlags internal constructor(
         FeatureFlags(cdkObject)
 
     internal fun unwrap(wrapped: FeatureFlags): software.amazon.awscdk.FeatureFlags =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.FeatureFlags
   }
 }

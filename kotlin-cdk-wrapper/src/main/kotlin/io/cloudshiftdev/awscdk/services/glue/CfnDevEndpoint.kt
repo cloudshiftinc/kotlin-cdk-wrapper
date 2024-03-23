@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html)
  */
-public open class CfnDevEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnDevEndpoint,
+public open class CfnDevEndpoint(
+  cdkObject: software.amazon.awscdk.services.glue.CfnDevEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -796,6 +796,7 @@ public open class CfnDevEndpoint internal constructor(
         CfnDevEndpoint = CfnDevEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnDevEndpoint):
-        software.amazon.awscdk.services.glue.CfnDevEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.glue.CfnDevEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.glue.CfnDevEndpoint
   }
 }

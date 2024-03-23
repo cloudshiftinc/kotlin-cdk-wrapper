@@ -464,8 +464,7 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelProps,
   ) : CdkObject(cdkObject), BedrockInvokeModelProps {
     /**
      * The desired MIME type of the inference body in the response.

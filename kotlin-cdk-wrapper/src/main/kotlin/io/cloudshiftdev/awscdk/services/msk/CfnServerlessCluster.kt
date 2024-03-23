@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html)
  */
-public open class CfnServerlessCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster,
+public open class CfnServerlessCluster(
+  cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -331,7 +331,8 @@ public open class CfnServerlessCluster internal constructor(
         CfnServerlessCluster = CfnServerlessCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnServerlessCluster):
-        software.amazon.awscdk.services.msk.CfnServerlessCluster = wrapped.cdkObject
+        software.amazon.awscdk.services.msk.CfnServerlessCluster = wrapped.cdkObject as
+        software.amazon.awscdk.services.msk.CfnServerlessCluster
   }
 
   /**
@@ -441,8 +442,7 @@ public open class CfnServerlessCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.ClientAuthenticationProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.ClientAuthenticationProperty,
     ) : CdkObject(cdkObject), ClientAuthenticationProperty {
       /**
        * Details for client authentication using SASL.
@@ -538,7 +538,7 @@ public open class CfnServerlessCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty,
     ) : CdkObject(cdkObject), IamProperty {
       /**
        * SASL/IAM authentication is enabled or not.
@@ -649,7 +649,7 @@ public open class CfnServerlessCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty,
     ) : CdkObject(cdkObject), SaslProperty {
       /**
        * Details for ClientAuthentication using IAM.
@@ -764,8 +764,7 @@ public open class CfnServerlessCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html#cfn-msk-serverlesscluster-vpcconfig-securitygroups)

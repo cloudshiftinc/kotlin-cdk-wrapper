@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-identityprovider.html)
  */
-public open class CfnIdentityProvider internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider,
+public open class CfnIdentityProvider(
+  cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -394,6 +393,7 @@ public open class CfnIdentityProvider internal constructor(
         CfnIdentityProvider = CfnIdentityProvider(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentityProvider):
-        software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider
   }
 }

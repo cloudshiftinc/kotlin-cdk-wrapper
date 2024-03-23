@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * volume.grantAttachVolume(role, List.of(instance));
  * ```
  */
-public open class Volume internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.Volume,
+public open class Volume(
+  cdkObject: software.amazon.awscdk.services.ec2.Volume,
 ) : Resource(cdkObject), IVolume {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -624,6 +624,6 @@ public open class Volume internal constructor(
         Volume(cdkObject)
 
     internal fun unwrap(wrapped: Volume): software.amazon.awscdk.services.ec2.Volume =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.Volume
   }
 }

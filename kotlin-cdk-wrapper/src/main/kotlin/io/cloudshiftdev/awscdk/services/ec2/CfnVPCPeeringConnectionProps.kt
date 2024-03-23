@@ -198,7 +198,7 @@ public interface CfnVPCPeeringConnectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCPeeringConnectionProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVPCPeeringConnectionProps,
   ) : CdkObject(cdkObject), CfnVPCPeeringConnectionProps {
     /**
      * The AWS account ID of the owner of the accepter VPC.

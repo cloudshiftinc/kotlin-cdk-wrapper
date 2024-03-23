@@ -312,8 +312,7 @@ public interface DnsValidatedCertificateProps : CertificateProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificateProps,
+    cdkObject: software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificateProps,
   ) : CdkObject(cdkObject), DnsValidatedCertificateProps {
     /**
      * The Certificate name.

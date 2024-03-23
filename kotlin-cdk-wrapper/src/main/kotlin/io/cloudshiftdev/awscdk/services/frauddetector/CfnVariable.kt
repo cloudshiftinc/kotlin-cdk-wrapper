@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-variable.html)
  */
-public open class CfnVariable internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnVariable,
+public open class CfnVariable(
+  cdkObject: software.amazon.awscdk.services.frauddetector.CfnVariable,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -421,6 +421,7 @@ public open class CfnVariable internal constructor(
         CfnVariable = CfnVariable(cdkObject)
 
     internal fun unwrap(wrapped: CfnVariable):
-        software.amazon.awscdk.services.frauddetector.CfnVariable = wrapped.cdkObject
+        software.amazon.awscdk.services.frauddetector.CfnVariable = wrapped.cdkObject as
+        software.amazon.awscdk.services.frauddetector.CfnVariable
   }
 }

@@ -431,7 +431,7 @@ public interface CfnIdentityPoolProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolProps,
+    cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolProps,
   ) : CdkObject(cdkObject), CfnIdentityPoolProps {
     /**
      * Enables the Basic (Classic) authentication flow.

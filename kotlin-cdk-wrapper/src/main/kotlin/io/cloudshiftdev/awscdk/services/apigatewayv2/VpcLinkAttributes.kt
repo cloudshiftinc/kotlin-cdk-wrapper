@@ -74,7 +74,7 @@ public interface VpcLinkAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes,
   ) : CdkObject(cdkObject), VpcLinkAttributes {
     /**
      * The VPC to which this VPC link is associated with.

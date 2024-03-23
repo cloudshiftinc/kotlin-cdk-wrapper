@@ -56,7 +56,7 @@ public interface ShuffleConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig,
   ) : CdkObject(cdkObject), ShuffleConfig {
     /**
      * Determines the shuffling order.

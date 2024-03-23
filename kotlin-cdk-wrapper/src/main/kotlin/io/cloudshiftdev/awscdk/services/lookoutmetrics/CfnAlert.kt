@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html)
  */
-public open class CfnAlert internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert,
+public open class CfnAlert(
+  cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -321,7 +321,7 @@ public open class CfnAlert internal constructor(
         = CfnAlert(cdkObject)
 
     internal fun unwrap(wrapped: CfnAlert): software.amazon.awscdk.services.lookoutmetrics.CfnAlert
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.lookoutmetrics.CfnAlert
   }
 
   /**
@@ -458,8 +458,7 @@ public open class CfnAlert internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * A configuration for an AWS Lambda channel.
@@ -568,8 +567,7 @@ public open class CfnAlert internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAlert.LambdaConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.LambdaConfigurationProperty,
     ) : CdkObject(cdkObject), LambdaConfigurationProperty {
       /**
        * The ARN of the Lambda function.
@@ -678,8 +676,7 @@ public open class CfnAlert internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty,
     ) : CdkObject(cdkObject), SNSConfigurationProperty {
       /**
        * The ARN of the IAM role that has access to the target SNS topic.

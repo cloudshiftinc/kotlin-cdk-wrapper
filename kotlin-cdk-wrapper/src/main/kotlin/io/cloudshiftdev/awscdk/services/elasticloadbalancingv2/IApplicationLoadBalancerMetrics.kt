@@ -784,8 +784,7 @@ public interface IApplicationLoadBalancerMetrics {
   public fun targetTlsNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit): Metric
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancerMetrics,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancerMetrics,
   ) : CdkObject(cdkObject), IApplicationLoadBalancerMetrics {
     /**
      * The total number of concurrent TCP connections active from clients to the load balancer and

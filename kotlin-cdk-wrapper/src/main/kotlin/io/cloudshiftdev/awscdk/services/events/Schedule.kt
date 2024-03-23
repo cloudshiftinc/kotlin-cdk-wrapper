@@ -37,8 +37,8 @@ import kotlin.jvm.JvmName
  *
  * [Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/scheduled-events.html)
  */
-public abstract class Schedule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.Schedule,
+public abstract class Schedule(
+  cdkObject: software.amazon.awscdk.services.events.Schedule,
 ) : CdkObject(cdkObject) {
   /**
    * Retrieve the expression for this schedule.
@@ -46,7 +46,7 @@ public abstract class Schedule internal constructor(
   public open fun expressionString(): String = unwrap(this).getExpressionString()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.Schedule,
+    cdkObject: software.amazon.awscdk.services.events.Schedule,
   ) : Schedule(cdkObject)
 
   public companion object {

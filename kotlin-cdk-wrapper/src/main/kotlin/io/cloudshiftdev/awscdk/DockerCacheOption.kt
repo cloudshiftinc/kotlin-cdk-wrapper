@@ -102,7 +102,7 @@ public interface DockerCacheOption {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.DockerCacheOption,
+    cdkObject: software.amazon.awscdk.DockerCacheOption,
   ) : CdkObject(cdkObject), DockerCacheOption {
     /**
      * Any parameters to pass into the docker cache backend configuration.

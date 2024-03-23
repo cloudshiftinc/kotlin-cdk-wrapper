@@ -24,8 +24,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class AlarmRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmRule,
+public open class AlarmRule(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmRule,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.cloudwatch.AlarmRule()
   )
@@ -54,6 +54,6 @@ public open class AlarmRule internal constructor(
         AlarmRule(cdkObject)
 
     internal fun unwrap(wrapped: AlarmRule): software.amazon.awscdk.services.cloudwatch.AlarmRule =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudwatch.AlarmRule
   }
 }

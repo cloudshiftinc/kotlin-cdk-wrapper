@@ -73,9 +73,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html)
  */
-public open class CfnDistributionConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration,
+public open class CfnDistributionConfiguration(
+  cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -343,7 +342,8 @@ public open class CfnDistributionConfiguration internal constructor(
 
     internal fun unwrap(wrapped: CfnDistributionConfiguration):
         software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration
   }
 
   /**
@@ -574,8 +574,7 @@ public open class CfnDistributionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty,
     ) : CdkObject(cdkObject), AmiDistributionConfigurationProperty {
       /**
        * The tags to apply to AMIs distributed to this Region.
@@ -788,8 +787,7 @@ public open class CfnDistributionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty,
     ) : CdkObject(cdkObject), ContainerDistributionConfigurationProperty {
       /**
        * Tags that are attached to the container distribution configuration.
@@ -1120,8 +1118,7 @@ public open class CfnDistributionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.DistributionProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.DistributionProperty,
     ) : CdkObject(cdkObject), DistributionProperty {
       /**
        * The specific AMI settings, such as launch permissions and AMI tags.
@@ -1446,8 +1443,7 @@ public open class CfnDistributionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty,
     ) : CdkObject(cdkObject), FastLaunchConfigurationProperty {
       /**
        * The owner account ID for the fast-launch enabled Windows AMI.
@@ -1613,8 +1609,7 @@ public open class CfnDistributionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty,
     ) : CdkObject(cdkObject), FastLaunchLaunchTemplateSpecificationProperty {
       /**
        * The ID of the launch template to use for faster launching for a Windows AMI.
@@ -1716,8 +1711,7 @@ public open class CfnDistributionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty,
     ) : CdkObject(cdkObject), FastLaunchSnapshotConfigurationProperty {
       /**
        * The number of pre-provisioned snapshots to keep on hand for a fast-launch enabled Windows
@@ -1954,8 +1948,7 @@ public open class CfnDistributionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchPermissionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchPermissionConfigurationProperty,
     ) : CdkObject(cdkObject), LaunchPermissionConfigurationProperty {
       /**
        * The ARN for an AWS Organization that you want to share your AMI with.
@@ -2128,8 +2121,7 @@ public open class CfnDistributionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchTemplateConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchTemplateConfigurationProperty,
     ) : CdkObject(cdkObject), LaunchTemplateConfigurationProperty {
       /**
        * The account ID that this configuration applies to.
@@ -2254,8 +2246,7 @@ public open class CfnDistributionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.TargetContainerRepositoryProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.TargetContainerRepositoryProperty,
     ) : CdkObject(cdkObject), TargetContainerRepositoryProperty {
       /**
        * The name of the container repository where the output container image is stored.

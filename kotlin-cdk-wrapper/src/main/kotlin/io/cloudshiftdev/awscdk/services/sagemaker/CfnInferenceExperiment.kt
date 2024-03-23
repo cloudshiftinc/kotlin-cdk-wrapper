@@ -92,8 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferenceexperiment.html)
  */
-public open class CfnInferenceExperiment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment,
+public open class CfnInferenceExperiment(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -112,12 +112,12 @@ public open class CfnInferenceExperiment internal constructor(
   )
 
   /**
-   * The Amazon Resource Name (ARN) of the inference experiment.
+   * The ARN for your inference experiment.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   * The timestamp at which you created the inference experiment.
+   * The timestamp at which the inference experiment was created.
    */
   public open fun attrCreationTime(): String = unwrap(this).getAttrCreationTime()
 
@@ -151,7 +151,20 @@ public open class CfnInferenceExperiment internal constructor(
   public open fun attrLastModifiedTime(): String = unwrap(this).getAttrLastModifiedTime()
 
   /**
-   * The status of the inference experiment.
+   * The status of the inference experiment. The following are the possible statuses for an
+   * inference experiment:.
+   *
+   * * `Creating` - Amazon SageMaker is creating your experiment.
+   * * `Created` - Amazon SageMaker has finished the creation of your experiment and will begin the
+   * experiment at the scheduled time.
+   * * `Updating` - When you make changes to your experiment, your experiment shows as updating.
+   * * `Starting` - Amazon SageMaker is beginning your experiment.
+   * * `Running` - Your experiment is in progress.
+   * * `Stopping` - Amazon SageMaker is stopping your experiment.
+   * * `Completed` - Your experiment has completed.
+   * * `Cancelled` - When you conclude your experiment early using the
+   * [StopInferenceExperiment](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html)
+   * API, or if any operation fails with an unexpected error, it shows as cancelled.
    */
   public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
@@ -958,7 +971,8 @@ public open class CfnInferenceExperiment internal constructor(
         CfnInferenceExperiment = CfnInferenceExperiment(cdkObject)
 
     internal fun unwrap(wrapped: CfnInferenceExperiment):
-        software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
   }
 
   /**
@@ -1071,8 +1085,7 @@ public open class CfnInferenceExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty,
     ) : CdkObject(cdkObject), CaptureContentTypeHeaderProperty {
       /**
        * The list of all content type headers that Amazon SageMaker will treat as CSV and capture
@@ -1258,8 +1271,7 @@ public open class CfnInferenceExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.DataStorageConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.DataStorageConfigProperty,
     ) : CdkObject(cdkObject), DataStorageConfigProperty {
       /**
        * Configuration specifying how to treat different headers.
@@ -1410,8 +1422,7 @@ public open class CfnInferenceExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty,
     ) : CdkObject(cdkObject), EndpointMetadataProperty {
       /**
        * The name of the endpoint configuration.
@@ -1534,8 +1545,7 @@ public open class CfnInferenceExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty,
     ) : CdkObject(cdkObject), InferenceExperimentScheduleProperty {
       /**
        * The timestamp at which the inference experiment ended or will end.
@@ -1691,8 +1701,7 @@ public open class CfnInferenceExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelInfrastructureConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelInfrastructureConfigProperty,
     ) : CdkObject(cdkObject), ModelInfrastructureConfigProperty {
       /**
        * The inference option to which to deploy your model. Possible values are the following:.
@@ -1865,8 +1874,7 @@ public open class CfnInferenceExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelVariantConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelVariantConfigProperty,
     ) : CdkObject(cdkObject), ModelVariantConfigProperty {
       /**
        * The configuration for the infrastructure that the model will be deployed to.
@@ -1983,8 +1991,7 @@ public open class CfnInferenceExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty,
     ) : CdkObject(cdkObject), RealTimeInferenceConfigProperty {
       /**
        * The number of instances of the type specified by `InstanceType` .
@@ -2126,8 +2133,7 @@ public open class CfnInferenceExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty,
     ) : CdkObject(cdkObject), ShadowModeConfigProperty {
       /**
        * List of shadow variant configurations.
@@ -2240,8 +2246,7 @@ public open class CfnInferenceExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty,
     ) : CdkObject(cdkObject), ShadowModelVariantConfigProperty {
       /**
        * The percentage of inference requests that Amazon SageMaker replicates from the production

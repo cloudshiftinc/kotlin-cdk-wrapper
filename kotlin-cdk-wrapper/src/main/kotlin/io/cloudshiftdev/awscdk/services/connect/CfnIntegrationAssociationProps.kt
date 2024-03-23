@@ -125,7 +125,7 @@ public interface CfnIntegrationAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnIntegrationAssociationProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnIntegrationAssociationProps,
   ) : CdkObject(cdkObject), CfnIntegrationAssociationProps {
     /**
      * The Amazon Resource Name (ARN) of the instance.

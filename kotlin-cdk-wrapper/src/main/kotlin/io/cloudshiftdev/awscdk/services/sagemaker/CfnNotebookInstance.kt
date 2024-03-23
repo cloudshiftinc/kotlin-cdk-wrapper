@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html)
  */
-public open class CfnNotebookInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstance,
+public open class CfnNotebookInstance(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1037,7 +1037,8 @@ public open class CfnNotebookInstance internal constructor(
         CfnNotebookInstance = CfnNotebookInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnNotebookInstance):
-        software.amazon.awscdk.services.sagemaker.CfnNotebookInstance = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnNotebookInstance = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnNotebookInstance
   }
 
   /**
@@ -1109,8 +1110,7 @@ public open class CfnNotebookInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty,
     ) : CdkObject(cdkObject), InstanceMetadataServiceConfigurationProperty {
       /**
        * Indicates the minimum IMDS version that the notebook instance supports.

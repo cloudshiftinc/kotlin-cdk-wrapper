@@ -41,9 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption.html)
  */
-public open class CfnApplicationCloudWatchLoggingOption internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption,
+public open class CfnApplicationCloudWatchLoggingOption(
+  cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -249,7 +248,8 @@ public open class CfnApplicationCloudWatchLoggingOption internal constructor(
 
     internal fun unwrap(wrapped: CfnApplicationCloudWatchLoggingOption):
         software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption
   }
 
   /**
@@ -308,8 +308,7 @@ public open class CfnApplicationCloudWatchLoggingOption internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty,
     ) : CdkObject(cdkObject), CloudWatchLoggingOptionProperty {
       /**
        * The ARN of the CloudWatch log to receive application messages.

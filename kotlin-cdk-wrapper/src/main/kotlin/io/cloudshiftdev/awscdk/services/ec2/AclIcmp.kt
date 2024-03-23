@@ -92,7 +92,7 @@ public interface AclIcmp {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.AclIcmp,
+    cdkObject: software.amazon.awscdk.services.ec2.AclIcmp,
   ) : CdkObject(cdkObject), AclIcmp {
     /**
      * The Internet Control Message Protocol (ICMP) code.

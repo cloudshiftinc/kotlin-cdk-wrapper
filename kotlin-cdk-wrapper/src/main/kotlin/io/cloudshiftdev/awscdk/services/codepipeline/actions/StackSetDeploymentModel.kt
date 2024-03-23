@@ -41,13 +41,11 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class StackSetDeploymentModel internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel,
+public abstract class StackSetDeploymentModel(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel,
   ) : StackSetDeploymentModel(cdkObject)
 
   public companion object {

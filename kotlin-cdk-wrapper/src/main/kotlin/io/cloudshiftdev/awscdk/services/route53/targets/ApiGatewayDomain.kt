@@ -28,8 +28,8 @@ import io.cloudshiftdev.awscdk.services.route53.IRecordSet
  * .build();
  * ```
  */
-public open class ApiGatewayDomain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.targets.ApiGatewayDomain,
+public open class ApiGatewayDomain(
+  cdkObject: software.amazon.awscdk.services.route53.targets.ApiGatewayDomain,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(domainName: IDomainName) :
       this(software.amazon.awscdk.services.route53.targets.ApiGatewayDomain(domainName.let(IDomainName::unwrap))
@@ -59,6 +59,7 @@ public open class ApiGatewayDomain internal constructor(
         ApiGatewayDomain = ApiGatewayDomain(cdkObject)
 
     internal fun unwrap(wrapped: ApiGatewayDomain):
-        software.amazon.awscdk.services.route53.targets.ApiGatewayDomain = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.targets.ApiGatewayDomain = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.targets.ApiGatewayDomain
   }
 }

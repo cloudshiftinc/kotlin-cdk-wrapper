@@ -168,8 +168,7 @@ public interface BaseStreamEventSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.lambda.eventsources.BaseStreamEventSourceProps,
+    cdkObject: software.amazon.awscdk.services.lambda.eventsources.BaseStreamEventSourceProps,
   ) : CdkObject(cdkObject), BaseStreamEventSourceProps {
     /**
      * The largest number of records that AWS Lambda will retrieve from your event source at the

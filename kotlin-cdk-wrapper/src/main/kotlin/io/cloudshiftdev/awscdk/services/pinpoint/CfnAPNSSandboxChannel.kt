@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnssandboxchannel.html)
  */
-public open class CfnAPNSSandboxChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnAPNSSandboxChannel,
+public open class CfnAPNSSandboxChannel(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnAPNSSandboxChannel,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -457,6 +457,7 @@ public open class CfnAPNSSandboxChannel internal constructor(
         CfnAPNSSandboxChannel = CfnAPNSSandboxChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnAPNSSandboxChannel):
-        software.amazon.awscdk.services.pinpoint.CfnAPNSSandboxChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnAPNSSandboxChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnAPNSSandboxChannel
   }
 }

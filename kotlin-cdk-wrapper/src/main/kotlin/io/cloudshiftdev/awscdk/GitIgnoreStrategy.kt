@@ -19,8 +19,8 @@ import kotlin.collections.List
  * List.of("patterns"));
  * ```
  */
-public open class GitIgnoreStrategy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.GitIgnoreStrategy,
+public open class GitIgnoreStrategy(
+  cdkObject: software.amazon.awscdk.GitIgnoreStrategy,
 ) : IgnoreStrategy(cdkObject) {
   public constructor(absoluteRootPath: String, patterns: List<String>) :
       this(software.amazon.awscdk.GitIgnoreStrategy(absoluteRootPath, patterns)
@@ -49,6 +49,6 @@ public open class GitIgnoreStrategy internal constructor(
         GitIgnoreStrategy(cdkObject)
 
     internal fun unwrap(wrapped: GitIgnoreStrategy): software.amazon.awscdk.GitIgnoreStrategy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.GitIgnoreStrategy
   }
 }

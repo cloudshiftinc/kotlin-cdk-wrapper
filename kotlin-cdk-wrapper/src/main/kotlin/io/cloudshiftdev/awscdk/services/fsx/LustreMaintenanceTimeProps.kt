@@ -91,7 +91,7 @@ public interface LustreMaintenanceTimeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.fsx.LustreMaintenanceTimeProps,
+    cdkObject: software.amazon.awscdk.services.fsx.LustreMaintenanceTimeProps,
   ) : CdkObject(cdkObject), LustreMaintenanceTimeProps {
     /**
      * The day of the week for maintenance to be performed.

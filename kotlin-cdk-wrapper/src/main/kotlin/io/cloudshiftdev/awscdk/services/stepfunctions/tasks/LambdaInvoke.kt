@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-lambda.html)
  */
-public open class LambdaInvoke internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke,
+public open class LambdaInvoke(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -618,6 +618,7 @@ public open class LambdaInvoke internal constructor(
         LambdaInvoke = LambdaInvoke(cdkObject)
 
     internal fun unwrap(wrapped: LambdaInvoke):
-        software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke
   }
 }

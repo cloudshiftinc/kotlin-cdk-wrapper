@@ -22,8 +22,8 @@ import kotlin.collections.List
  * SubnetFilter subnetFilter = SubnetFilter.availabilityZones(List.of("availabilityZones"));
  * ```
  */
-public abstract class SubnetFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.SubnetFilter,
+public abstract class SubnetFilter(
+  cdkObject: software.amazon.awscdk.services.ec2.SubnetFilter,
 ) : CdkObject(cdkObject) {
   /**
    * Executes the subnet filtering logic, returning a filtered set of subnets.
@@ -42,7 +42,7 @@ public abstract class SubnetFilter internal constructor(
       selectSubnets(subnets.toList())
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.SubnetFilter,
+    cdkObject: software.amazon.awscdk.services.ec2.SubnetFilter,
   ) : SubnetFilter(cdkObject)
 
   public companion object {

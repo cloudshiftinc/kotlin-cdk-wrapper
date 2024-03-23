@@ -22,7 +22,7 @@ public interface IFileSystemLocation {
   public fun bind(scope: Construct, project: IProject): FileSystemConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.IFileSystemLocation,
+    cdkObject: software.amazon.awscdk.services.codebuild.IFileSystemLocation,
   ) : CdkObject(cdkObject), IFileSystemLocation {
     /**
      * Called by the project when a file system is added so it can perform binding operations on

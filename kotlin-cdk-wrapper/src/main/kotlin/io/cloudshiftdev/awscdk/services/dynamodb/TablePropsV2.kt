@@ -438,7 +438,7 @@ public interface TablePropsV2 : TableOptionsV2 {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.TablePropsV2,
+    cdkObject: software.amazon.awscdk.services.dynamodb.TablePropsV2,
   ) : CdkObject(cdkObject), TablePropsV2 {
     /**
      * The billing mode and capacity settings to apply to the table.

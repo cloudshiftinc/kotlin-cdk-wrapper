@@ -36,9 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class DeployTimeSubstitutedFile internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFile,
+public open class DeployTimeSubstitutedFile(
+  cdkObject: software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFile,
 ) : BucketDeployment(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -202,5 +201,6 @@ public open class DeployTimeSubstitutedFile internal constructor(
 
     internal fun unwrap(wrapped: DeployTimeSubstitutedFile):
         software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFile = wrapped.cdkObject
+        as software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFile
   }
 }

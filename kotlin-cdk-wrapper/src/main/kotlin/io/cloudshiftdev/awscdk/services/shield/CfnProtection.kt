@@ -92,8 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-shield-protection.html)
  */
-public open class CfnProtection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.shield.CfnProtection,
+public open class CfnProtection(
+  cdkObject: software.amazon.awscdk.services.shield.CfnProtection,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -553,7 +553,8 @@ public open class CfnProtection internal constructor(
         CfnProtection = CfnProtection(cdkObject)
 
     internal fun unwrap(wrapped: CfnProtection):
-        software.amazon.awscdk.services.shield.CfnProtection = wrapped.cdkObject
+        software.amazon.awscdk.services.shield.CfnProtection = wrapped.cdkObject as
+        software.amazon.awscdk.services.shield.CfnProtection
   }
 
   /**
@@ -674,7 +675,7 @@ public open class CfnProtection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * Specifies that Shield Advanced should configure its AWS WAF rules with the AWS WAF `Block`
@@ -876,8 +877,7 @@ public open class CfnProtection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty,
     ) : CdkObject(cdkObject), ApplicationLayerAutomaticResponseConfigurationProperty {
       /**
        * Specifies the action setting that Shield Advanced should use in the AWS WAF rules that it

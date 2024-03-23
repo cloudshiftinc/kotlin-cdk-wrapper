@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Stack internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Stack,
+public open class Stack(
+  cdkObject: software.amazon.awscdk.Stack,
 ) : CloudshiftdevConstructsConstruct(cdkObject), ITaggable {
   public constructor() : this(software.amazon.awscdk.Stack()
   )
@@ -1347,6 +1347,7 @@ public open class Stack internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Stack): Stack = Stack(cdkObject)
 
-    internal fun unwrap(wrapped: Stack): software.amazon.awscdk.Stack = wrapped.cdkObject
+    internal fun unwrap(wrapped: Stack): software.amazon.awscdk.Stack = wrapped.cdkObject as
+        software.amazon.awscdk.Stack
   }
 }

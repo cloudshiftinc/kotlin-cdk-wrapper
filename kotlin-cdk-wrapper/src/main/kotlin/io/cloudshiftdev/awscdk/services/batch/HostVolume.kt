@@ -30,8 +30,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class HostVolume internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.HostVolume,
+public open class HostVolume(
+  cdkObject: software.amazon.awscdk.services.batch.HostVolume,
 ) : EcsVolume(cdkObject) {
   public constructor(options: HostVolumeOptions) :
       this(software.amazon.awscdk.services.batch.HostVolume(options.let(HostVolumeOptions::unwrap))
@@ -146,6 +146,6 @@ public open class HostVolume internal constructor(
         HostVolume(cdkObject)
 
     internal fun unwrap(wrapped: HostVolume): software.amazon.awscdk.services.batch.HostVolume =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.batch.HostVolume
   }
 }

@@ -142,7 +142,7 @@ public interface RequestCountScalingProps : BaseTargetTrackingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.RequestCountScalingProps,
+    cdkObject: software.amazon.awscdk.services.ecs.RequestCountScalingProps,
   ) : CdkObject(cdkObject), RequestCountScalingProps {
     /**
      * Indicates whether scale in by the target tracking policy is disabled.

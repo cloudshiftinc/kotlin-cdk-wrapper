@@ -338,7 +338,7 @@ public interface AwsSdkCall {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.customresources.AwsSdkCall,
+    cdkObject: software.amazon.awscdk.customresources.AwsSdkCall,
   ) : CdkObject(cdkObject), AwsSdkCall {
     /**
      * The service action to call.

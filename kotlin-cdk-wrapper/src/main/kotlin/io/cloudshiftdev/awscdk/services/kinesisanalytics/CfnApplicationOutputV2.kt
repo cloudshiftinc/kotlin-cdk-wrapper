@@ -68,9 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html)
  */
-public open class CfnApplicationOutputV2 internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2,
+public open class CfnApplicationOutputV2(
+  cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -299,6 +298,7 @@ public open class CfnApplicationOutputV2 internal constructor(
 
     internal fun unwrap(wrapped: CfnApplicationOutputV2):
         software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2 = wrapped.cdkObject
+        as software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2
   }
 
   /**
@@ -356,8 +356,7 @@ public open class CfnApplicationOutputV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.DestinationSchemaProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.DestinationSchemaProperty,
     ) : CdkObject(cdkObject), DestinationSchemaProperty {
       /**
        * Specifies the format of the records on the output stream.
@@ -443,8 +442,7 @@ public open class CfnApplicationOutputV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty,
     ) : CdkObject(cdkObject), KinesisFirehoseOutputProperty {
       /**
        * The ARN of the destination delivery stream to write to.
@@ -530,8 +528,7 @@ public open class CfnApplicationOutputV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty,
     ) : CdkObject(cdkObject), KinesisStreamsOutputProperty {
       /**
        * The ARN of the destination Kinesis data stream to write to.
@@ -635,8 +632,7 @@ public open class CfnApplicationOutputV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty,
     ) : CdkObject(cdkObject), LambdaOutputProperty {
       /**
        * The Amazon Resource Name (ARN) of the destination Lambda function to write to.
@@ -943,8 +939,7 @@ public open class CfnApplicationOutputV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.OutputProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.OutputProperty,
     ) : CdkObject(cdkObject), OutputProperty {
       /**
        * Describes the data format when records are written to the destination.

@@ -45,8 +45,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class FileSystem internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.FileSystem,
+public open class FileSystem(
+  cdkObject: software.amazon.awscdk.services.lambda.FileSystem,
 ) : CdkObject(cdkObject) {
   /**
    * the FileSystem configurations for the Lambda function.
@@ -62,6 +62,6 @@ public open class FileSystem internal constructor(
         FileSystem(cdkObject)
 
     internal fun unwrap(wrapped: FileSystem): software.amazon.awscdk.services.lambda.FileSystem =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lambda.FileSystem
   }
 }

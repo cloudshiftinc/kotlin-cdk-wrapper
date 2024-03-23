@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class SubnetGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.SubnetGroup,
+public open class SubnetGroup(
+  cdkObject: software.amazon.awscdk.services.rds.SubnetGroup,
 ) : Resource(cdkObject), ISubnetGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -225,6 +225,6 @@ public open class SubnetGroup internal constructor(
         SubnetGroup(cdkObject)
 
     internal fun unwrap(wrapped: SubnetGroup): software.amazon.awscdk.services.rds.SubnetGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.rds.SubnetGroup
   }
 }

@@ -29,8 +29,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class ContainerImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.ContainerImage,
+public abstract class ContainerImage(
+  cdkObject: software.amazon.awscdk.services.ecs.ContainerImage,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the image is used by a ContainerDefinition.
@@ -43,7 +43,7 @@ public abstract class ContainerImage internal constructor(
       containerDefinition.let(ContainerDefinition::unwrap)).let(ContainerImageConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ContainerImage,
+    cdkObject: software.amazon.awscdk.services.ecs.ContainerImage,
   ) : ContainerImage(cdkObject)
 
   public companion object {

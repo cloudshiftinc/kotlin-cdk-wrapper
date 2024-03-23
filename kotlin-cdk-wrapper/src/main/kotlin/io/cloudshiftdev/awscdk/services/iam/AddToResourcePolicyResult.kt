@@ -79,7 +79,7 @@ public interface AddToResourcePolicyResult {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.AddToResourcePolicyResult,
+    cdkObject: software.amazon.awscdk.services.iam.AddToResourcePolicyResult,
   ) : CdkObject(cdkObject), AddToResourcePolicyResult {
     /**
      * Dependable which allows depending on the policy change being applied.

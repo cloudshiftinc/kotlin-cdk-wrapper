@@ -391,7 +391,7 @@ public interface CfnWorkgroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroupProps,
+    cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroupProps,
   ) : CdkObject(cdkObject), CfnWorkgroupProps {
     /**
      * The base compute capacity of the workgroup in Redshift Processing Units (RPUs).

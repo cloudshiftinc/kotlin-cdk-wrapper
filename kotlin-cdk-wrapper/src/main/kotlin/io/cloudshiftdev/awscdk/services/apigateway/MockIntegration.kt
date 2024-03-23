@@ -82,8 +82,8 @@ import kotlin.collections.Map
  * .build());
  * ```
  */
-public open class MockIntegration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.MockIntegration,
+public open class MockIntegration(
+  cdkObject: software.amazon.awscdk.services.apigateway.MockIntegration,
 ) : Integration(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.apigateway.MockIntegration()
   )
@@ -486,6 +486,7 @@ public open class MockIntegration internal constructor(
         MockIntegration = MockIntegration(cdkObject)
 
     internal fun unwrap(wrapped: MockIntegration):
-        software.amazon.awscdk.services.apigateway.MockIntegration = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.MockIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.MockIntegration
   }
 }

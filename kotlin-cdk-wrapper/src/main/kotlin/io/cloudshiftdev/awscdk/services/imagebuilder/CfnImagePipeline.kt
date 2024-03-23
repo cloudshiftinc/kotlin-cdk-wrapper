@@ -80,8 +80,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html)
  */
-public open class CfnImagePipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline,
+public open class CfnImagePipeline(
+  cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -898,7 +898,8 @@ public open class CfnImagePipeline internal constructor(
         CfnImagePipeline = CfnImagePipeline(cdkObject)
 
     internal fun unwrap(wrapped: CfnImagePipeline):
-        software.amazon.awscdk.services.imagebuilder.CfnImagePipeline = wrapped.cdkObject
+        software.amazon.awscdk.services.imagebuilder.CfnImagePipeline = wrapped.cdkObject as
+        software.amazon.awscdk.services.imagebuilder.CfnImagePipeline
   }
 
   /**
@@ -1013,8 +1014,7 @@ public open class CfnImagePipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty,
     ) : CdkObject(cdkObject), EcrConfigurationProperty {
       /**
        * Tags for Image Builder to apply to the output container image that &amp;INS;
@@ -1183,8 +1183,7 @@ public open class CfnImagePipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty,
     ) : CdkObject(cdkObject), ImageScanningConfigurationProperty {
       /**
        * Contains Amazon ECR settings for vulnerability scans.
@@ -1327,8 +1326,7 @@ public open class CfnImagePipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty,
     ) : CdkObject(cdkObject), ImageTestsConfigurationProperty {
       /**
        * Defines if tests should be executed when building this image.
@@ -1483,8 +1481,7 @@ public open class CfnImagePipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty,
     ) : CdkObject(cdkObject), ScheduleProperty {
       /**
        * The condition configures when the pipeline should trigger a new image build.
@@ -1696,8 +1693,7 @@ public open class CfnImagePipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowConfigurationProperty,
     ) : CdkObject(cdkObject), WorkflowConfigurationProperty {
       /**
        * The action to take if the workflow fails.
@@ -1836,8 +1832,7 @@ public open class CfnImagePipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty,
     ) : CdkObject(cdkObject), WorkflowParameterProperty {
       /**
        * The name of the workflow parameter to set.

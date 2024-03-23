@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-bytematchset.html)
  */
-public open class CfnByteMatchSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.waf.CfnByteMatchSet,
+public open class CfnByteMatchSet(
+  cdkObject: software.amazon.awscdk.services.waf.CfnByteMatchSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -268,7 +268,8 @@ public open class CfnByteMatchSet internal constructor(
         CfnByteMatchSet = CfnByteMatchSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnByteMatchSet):
-        software.amazon.awscdk.services.waf.CfnByteMatchSet = wrapped.cdkObject
+        software.amazon.awscdk.services.waf.CfnByteMatchSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.waf.CfnByteMatchSet
   }
 
   /**
@@ -857,8 +858,7 @@ public open class CfnByteMatchSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.CfnByteMatchSet.ByteMatchTupleProperty,
+      cdkObject: software.amazon.awscdk.services.waf.CfnByteMatchSet.ByteMatchTupleProperty,
     ) : CdkObject(cdkObject), ByteMatchTupleProperty {
       /**
        * The part of a web request that you want to inspect, such as a specified header or a query
@@ -1231,8 +1231,7 @@ public open class CfnByteMatchSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.CfnByteMatchSet.FieldToMatchProperty,
+      cdkObject: software.amazon.awscdk.services.waf.CfnByteMatchSet.FieldToMatchProperty,
     ) : CdkObject(cdkObject), FieldToMatchProperty {
       /**
        * When the value of `Type` is `HEADER` , enter the name of the header that you want AWS WAF

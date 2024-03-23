@@ -219,7 +219,7 @@ public interface CfnMemberProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMemberProps,
+    cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMemberProps,
   ) : CdkObject(cdkObject), CfnMemberProps {
     /**
      * The unique identifier of the invitation to join the network sent to the account that creates

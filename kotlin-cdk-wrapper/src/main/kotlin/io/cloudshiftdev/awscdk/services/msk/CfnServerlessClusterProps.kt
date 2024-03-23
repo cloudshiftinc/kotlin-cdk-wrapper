@@ -186,7 +186,7 @@ public interface CfnServerlessClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.msk.CfnServerlessClusterProps,
+    cdkObject: software.amazon.awscdk.services.msk.CfnServerlessClusterProps,
   ) : CdkObject(cdkObject), CfnServerlessClusterProps {
     /**
      * Includes all client authentication information.

@@ -300,8 +300,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html)
  */
-public open class CfnVirtualNode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode,
+public open class CfnVirtualNode(
+  cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -672,7 +672,8 @@ public open class CfnVirtualNode internal constructor(
         CfnVirtualNode = CfnVirtualNode(cdkObject)
 
     internal fun unwrap(wrapped: CfnVirtualNode):
-        software.amazon.awscdk.services.appmesh.CfnVirtualNode = wrapped.cdkObject
+        software.amazon.awscdk.services.appmesh.CfnVirtualNode = wrapped.cdkObject as
+        software.amazon.awscdk.services.appmesh.CfnVirtualNode
   }
 
   /**
@@ -764,8 +765,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.AccessLogProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.AccessLogProperty,
     ) : CdkObject(cdkObject), AccessLogProperty {
       /**
        * The file object to send virtual node access logs to.
@@ -880,8 +880,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.AwsCloudMapInstanceAttributeProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.AwsCloudMapInstanceAttributeProperty,
     ) : CdkObject(cdkObject), AwsCloudMapInstanceAttributeProperty {
       /**
        * The name of an AWS Cloud Map service instance attribute key.
@@ -1089,8 +1088,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty,
     ) : CdkObject(cdkObject), AwsCloudMapServiceDiscoveryProperty {
       /**
        * A string map that contains attributes with values that you can use to filter instances by
@@ -1260,8 +1258,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendDefaultsProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendDefaultsProperty,
     ) : CdkObject(cdkObject), BackendDefaultsProperty {
       /**
        * A reference to an object that represents a client policy.
@@ -1407,8 +1404,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendProperty,
     ) : CdkObject(cdkObject), BackendProperty {
       /**
        * Specifies a virtual service to use as a backend.
@@ -1554,8 +1550,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyProperty,
     ) : CdkObject(cdkObject), ClientPolicyProperty {
       /**
        * A reference to an object that represents a Transport Layer Security (TLS) client policy.
@@ -1817,8 +1812,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyTlsProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyTlsProperty,
     ) : CdkObject(cdkObject), ClientPolicyTlsProperty {
       /**
        * A reference to an object that represents a client's TLS certificate.
@@ -2031,8 +2025,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientTlsCertificateProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientTlsCertificateProperty,
     ) : CdkObject(cdkObject), ClientTlsCertificateProperty {
       /**
        * An object that represents a local file certificate.
@@ -2174,8 +2167,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.DnsServiceDiscoveryProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.DnsServiceDiscoveryProperty,
     ) : CdkObject(cdkObject), DnsServiceDiscoveryProperty {
       /**
        * Specifies the DNS service discovery hostname for the virtual node.
@@ -2292,8 +2284,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.DurationProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.DurationProperty,
     ) : CdkObject(cdkObject), DurationProperty {
       /**
        * A unit of time.
@@ -2469,8 +2460,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.FileAccessLogProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.FileAccessLogProperty,
     ) : CdkObject(cdkObject), FileAccessLogProperty {
       /**
        * The specified format for the logs.
@@ -2693,8 +2683,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.GrpcTimeoutProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.GrpcTimeoutProperty,
     ) : CdkObject(cdkObject), GrpcTimeoutProperty {
       /**
        * An object that represents an idle timeout.
@@ -2939,8 +2928,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.HealthCheckProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.HealthCheckProperty,
     ) : CdkObject(cdkObject), HealthCheckProperty {
       /**
        * The number of consecutive successful health checks that must occur before declaring
@@ -3198,8 +3186,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.HttpTimeoutProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.HttpTimeoutProperty,
     ) : CdkObject(cdkObject), HttpTimeoutProperty {
       /**
        * An object that represents an idle timeout.
@@ -3315,8 +3302,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.JsonFormatRefProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.JsonFormatRefProperty,
     ) : CdkObject(cdkObject), JsonFormatRefProperty {
       /**
        * The specified key for the JSON.
@@ -3781,8 +3767,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerProperty,
     ) : CdkObject(cdkObject), ListenerProperty {
       /**
        * The connection pool information for the listener.
@@ -4099,8 +4084,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTimeoutProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTimeoutProperty,
     ) : CdkObject(cdkObject), ListenerTimeoutProperty {
       /**
        * An object that represents types of timeouts.
@@ -4217,8 +4201,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsAcmCertificateProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsAcmCertificateProperty,
     ) : CdkObject(cdkObject), ListenerTlsAcmCertificateProperty {
       /**
        * The Amazon Resource Name (ARN) for the certificate.
@@ -4441,8 +4424,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsCertificateProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsCertificateProperty,
     ) : CdkObject(cdkObject), ListenerTlsCertificateProperty {
       /**
        * A reference to an object that represents an AWS Certificate Manager certificate.
@@ -4567,8 +4549,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsFileCertificateProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsFileCertificateProperty,
     ) : CdkObject(cdkObject), ListenerTlsFileCertificateProperty {
       /**
        * The certificate chain for the certificate.
@@ -4802,8 +4783,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsProperty,
     ) : CdkObject(cdkObject), ListenerTlsProperty {
       /**
        * A reference to an object that represents a listener's Transport Layer Security (TLS)
@@ -4915,8 +4895,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsSdsCertificateProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsSdsCertificateProperty,
     ) : CdkObject(cdkObject), ListenerTlsSdsCertificateProperty {
       /**
        * A reference to an object that represents the name of the secret requested from the Secret
@@ -5105,8 +5084,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextProperty,
     ) : CdkObject(cdkObject), ListenerTlsValidationContextProperty {
       /**
        * A reference to an object that represents the SANs for a listener's Transport Layer Security
@@ -5291,8 +5269,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextTrustProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextTrustProperty,
     ) : CdkObject(cdkObject), ListenerTlsValidationContextTrustProperty {
       /**
        * An object that represents a Transport Layer Security (TLS) validation context trust for a
@@ -5428,8 +5405,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingFormatProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingFormatProperty,
     ) : CdkObject(cdkObject), LoggingFormatProperty {
       /**
        * The logging format for JSON.
@@ -5555,8 +5531,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingProperty,
     ) : CdkObject(cdkObject), LoggingProperty {
       /**
        * The access log configuration for a virtual node.
@@ -5763,8 +5738,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.OutlierDetectionProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.OutlierDetectionProperty,
     ) : CdkObject(cdkObject), OutlierDetectionProperty {
       /**
        * The base amount of time for which a host is ejected.
@@ -5892,8 +5866,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.PortMappingProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.PortMappingProperty,
     ) : CdkObject(cdkObject), PortMappingProperty {
       /**
        * The port used for the port mapping.
@@ -6071,8 +6044,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.ServiceDiscoveryProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ServiceDiscoveryProperty,
     ) : CdkObject(cdkObject), ServiceDiscoveryProperty {
       /**
        * Specifies any AWS Cloud Map information for the virtual node.
@@ -6173,8 +6145,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNameMatchersProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNameMatchersProperty,
     ) : CdkObject(cdkObject), SubjectAlternativeNameMatchersProperty {
       /**
        * The values sent must match the specified values exactly.
@@ -6287,8 +6258,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNamesProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNamesProperty,
     ) : CdkObject(cdkObject), SubjectAlternativeNamesProperty {
       /**
        * An object that represents the criteria for determining a SANs match.
@@ -6413,8 +6383,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.TcpTimeoutProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.TcpTimeoutProperty,
     ) : CdkObject(cdkObject), TcpTimeoutProperty {
       /**
        * An object that represents an idle timeout.
@@ -6512,8 +6481,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextAcmTrustProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextAcmTrustProperty,
     ) : CdkObject(cdkObject), TlsValidationContextAcmTrustProperty {
       /**
        * One or more ACM Amazon Resource Name (ARN)s.
@@ -6602,8 +6570,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextFileTrustProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextFileTrustProperty,
     ) : CdkObject(cdkObject), TlsValidationContextFileTrustProperty {
       /**
        * The certificate trust chain for a certificate stored on the file system of the virtual node
@@ -6838,8 +6805,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextProperty,
     ) : CdkObject(cdkObject), TlsValidationContextProperty {
       /**
        * A reference to an object that represents the SANs for a Transport Layer Security (TLS)
@@ -6945,8 +6911,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextSdsTrustProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextSdsTrustProperty,
     ) : CdkObject(cdkObject), TlsValidationContextSdsTrustProperty {
       /**
        * A reference to an object that represents the name of the secret for a Transport Layer
@@ -7179,8 +7144,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextTrustProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextTrustProperty,
     ) : CdkObject(cdkObject), TlsValidationContextTrustProperty {
       /**
        * A reference to an object that represents a Transport Layer Security (TLS) validation
@@ -7464,8 +7428,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeConnectionPoolProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeConnectionPoolProperty,
     ) : CdkObject(cdkObject), VirtualNodeConnectionPoolProperty {
       /**
        * An object that represents a type of connection pool.
@@ -7573,8 +7536,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeGrpcConnectionPoolProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeGrpcConnectionPoolProperty,
     ) : CdkObject(cdkObject), VirtualNodeGrpcConnectionPoolProperty {
       /**
        * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream
@@ -7662,8 +7624,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty,
     ) : CdkObject(cdkObject), VirtualNodeHttp2ConnectionPoolProperty {
       /**
        * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream
@@ -7774,8 +7735,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeHttpConnectionPoolProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeHttpConnectionPoolProperty,
     ) : CdkObject(cdkObject), VirtualNodeHttpConnectionPoolProperty {
       /**
        * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts
@@ -8358,8 +8318,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeSpecProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeSpecProperty,
     ) : CdkObject(cdkObject), VirtualNodeSpecProperty {
       /**
        * A reference to an object that represents the defaults for backends.
@@ -8485,8 +8444,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeTcpConnectionPoolProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeTcpConnectionPoolProperty,
     ) : CdkObject(cdkObject), VirtualNodeTcpConnectionPoolProperty {
       /**
        * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts
@@ -8678,8 +8636,7 @@ public open class CfnVirtualNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualServiceBackendProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualServiceBackendProperty,
     ) : CdkObject(cdkObject), VirtualServiceBackendProperty {
       /**
        * A reference to an object that represents the client policy for a backend.

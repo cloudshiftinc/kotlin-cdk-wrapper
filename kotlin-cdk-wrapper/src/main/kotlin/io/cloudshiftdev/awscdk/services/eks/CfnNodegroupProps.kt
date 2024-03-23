@@ -965,7 +965,7 @@ public interface CfnNodegroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroupProps,
+    cdkObject: software.amazon.awscdk.services.eks.CfnNodegroupProps,
   ) : CdkObject(cdkObject), CfnNodegroupProps {
     /**
      * The AMI type for your node group.

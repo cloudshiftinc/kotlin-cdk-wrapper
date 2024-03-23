@@ -151,7 +151,7 @@ public interface CfnUserGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticache.CfnUserGroupProps,
+    cdkObject: software.amazon.awscdk.services.elasticache.CfnUserGroupProps,
   ) : CdkObject(cdkObject), CfnUserGroupProps {
     /**
      * The current supported value is redis.

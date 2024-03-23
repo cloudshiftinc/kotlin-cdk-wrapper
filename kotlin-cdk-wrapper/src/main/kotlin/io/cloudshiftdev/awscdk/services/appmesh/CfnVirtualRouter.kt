@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html)
  */
-public open class CfnVirtualRouter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter,
+public open class CfnVirtualRouter(
+  cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -433,7 +433,8 @@ public open class CfnVirtualRouter internal constructor(
         CfnVirtualRouter = CfnVirtualRouter(cdkObject)
 
     internal fun unwrap(wrapped: CfnVirtualRouter):
-        software.amazon.awscdk.services.appmesh.CfnVirtualRouter = wrapped.cdkObject
+        software.amazon.awscdk.services.appmesh.CfnVirtualRouter = wrapped.cdkObject as
+        software.amazon.awscdk.services.appmesh.CfnVirtualRouter
   }
 
   /**
@@ -513,8 +514,7 @@ public open class CfnVirtualRouter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty,
     ) : CdkObject(cdkObject), PortMappingProperty {
       /**
        * The port used for the port mapping.
@@ -636,8 +636,7 @@ public open class CfnVirtualRouter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty,
     ) : CdkObject(cdkObject), VirtualRouterListenerProperty {
       /**
        * The port mapping information for the listener.
@@ -752,8 +751,7 @@ public open class CfnVirtualRouter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty,
     ) : CdkObject(cdkObject), VirtualRouterSpecProperty {
       /**
        * The listeners that the virtual router is expected to receive inbound traffic from.

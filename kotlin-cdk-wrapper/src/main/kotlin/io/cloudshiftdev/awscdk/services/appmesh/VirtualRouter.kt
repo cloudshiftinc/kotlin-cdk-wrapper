@@ -21,8 +21,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class VirtualRouter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouter,
+public open class VirtualRouter(
+  cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouter,
 ) : Resource(cdkObject), IVirtualRouter {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -204,6 +204,7 @@ public open class VirtualRouter internal constructor(
         VirtualRouter = VirtualRouter(cdkObject)
 
     internal fun unwrap(wrapped: VirtualRouter):
-        software.amazon.awscdk.services.appmesh.VirtualRouter = wrapped.cdkObject
+        software.amazon.awscdk.services.appmesh.VirtualRouter = wrapped.cdkObject as
+        software.amazon.awscdk.services.appmesh.VirtualRouter
   }
 }

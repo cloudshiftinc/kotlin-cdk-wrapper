@@ -19,8 +19,8 @@ import kotlin.String
  * HttpRouteKey httpRouteKey = HttpRouteKey.with("path", HttpMethod.ANY);
  * ```
  */
-public open class HttpRouteKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteKey,
+public open class HttpRouteKey(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteKey,
 ) : CdkObject(cdkObject) {
   /**
    * The key to the RouteKey as recognized by APIGateway.
@@ -54,6 +54,7 @@ public open class HttpRouteKey internal constructor(
         HttpRouteKey = HttpRouteKey(cdkObject)
 
     internal fun unwrap(wrapped: HttpRouteKey):
-        software.amazon.awscdk.services.apigatewayv2.HttpRouteKey = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.HttpRouteKey = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.HttpRouteKey
   }
 }

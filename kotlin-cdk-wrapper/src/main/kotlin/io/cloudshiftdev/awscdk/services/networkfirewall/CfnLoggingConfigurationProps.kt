@@ -163,8 +163,7 @@ public interface CfnLoggingConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.networkfirewall.CfnLoggingConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfigurationProps,
   ) : CdkObject(cdkObject), CfnLoggingConfigurationProps {
     /**
      * The Amazon Resource Name (ARN) of the `Firewall` that the logging configuration is associated

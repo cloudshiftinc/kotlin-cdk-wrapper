@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-refreshschedule.html)
  */
-public open class CfnRefreshSchedule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule,
+public open class CfnRefreshSchedule(
+  cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.quicksight.CfnRefreshSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -264,7 +264,8 @@ public open class CfnRefreshSchedule internal constructor(
         CfnRefreshSchedule = CfnRefreshSchedule(cdkObject)
 
     internal fun unwrap(wrapped: CfnRefreshSchedule):
-        software.amazon.awscdk.services.quicksight.CfnRefreshSchedule = wrapped.cdkObject
+        software.amazon.awscdk.services.quicksight.CfnRefreshSchedule = wrapped.cdkObject as
+        software.amazon.awscdk.services.quicksight.CfnRefreshSchedule
   }
 
   /**
@@ -349,8 +350,7 @@ public open class CfnRefreshSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshOnDayProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshOnDayProperty,
     ) : CdkObject(cdkObject), RefreshOnDayProperty {
       /**
        * The day of the month that you want your dataset to refresh.
@@ -566,8 +566,7 @@ public open class CfnRefreshSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshScheduleMapProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshScheduleMapProperty,
     ) : CdkObject(cdkObject), RefreshScheduleMapProperty {
       /**
        * The type of refresh that a dataset undergoes. Valid values are as follows:.
@@ -816,8 +815,7 @@ public open class CfnRefreshSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty,
     ) : CdkObject(cdkObject), ScheduleFrequencyProperty {
       /**
        * The interval between scheduled refreshes. Valid values are as follows:.

@@ -351,7 +351,7 @@ public interface ITable : IResource {
   public fun tableStreamArn(): String? = unwrap(this).getTableStreamArn()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.ITable,
+    cdkObject: software.amazon.awscdk.services.dynamodb.ITable,
   ) : CdkObject(cdkObject), ITable {
     /**
      * Apply the given removal policy to this resource.

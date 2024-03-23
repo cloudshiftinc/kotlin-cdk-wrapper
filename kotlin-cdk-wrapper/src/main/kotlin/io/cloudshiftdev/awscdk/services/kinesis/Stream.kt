@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Stream internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kinesis.Stream,
+public open class Stream(
+  cdkObject: software.amazon.awscdk.services.kinesis.Stream,
 ) : Resource(cdkObject), IStream {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.kinesis.Stream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1206,6 +1206,6 @@ public open class Stream internal constructor(
         Stream(cdkObject)
 
     internal fun unwrap(wrapped: Stream): software.amazon.awscdk.services.kinesis.Stream =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.kinesis.Stream
   }
 }

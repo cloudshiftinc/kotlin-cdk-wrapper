@@ -139,7 +139,7 @@ public interface ReceiptRuleSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.ReceiptRuleSetProps,
+    cdkObject: software.amazon.awscdk.services.ses.ReceiptRuleSetProps,
   ) : CdkObject(cdkObject), ReceiptRuleSetProps {
     /**
      * Whether to add a first rule to stop processing messages that have at least one spam

@@ -83,8 +83,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html)
  */
-public open class CfnAssessment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment,
+public open class CfnAssessment(
+  cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.auditmanager.CfnAssessment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -775,7 +775,8 @@ public open class CfnAssessment internal constructor(
         CfnAssessment = CfnAssessment(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssessment):
-        software.amazon.awscdk.services.auditmanager.CfnAssessment = wrapped.cdkObject
+        software.amazon.awscdk.services.auditmanager.CfnAssessment = wrapped.cdkObject as
+        software.amazon.awscdk.services.auditmanager.CfnAssessment
   }
 
   /**
@@ -872,8 +873,7 @@ public open class CfnAssessment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty,
+      cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty,
     ) : CdkObject(cdkObject), AWSAccountProperty {
       /**
        * The email address that's associated with the AWS account .
@@ -969,8 +969,7 @@ public open class CfnAssessment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty,
+      cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty,
     ) : CdkObject(cdkObject), AWSServiceProperty {
       /**
        * The name of the AWS service .
@@ -1074,8 +1073,7 @@ public open class CfnAssessment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty,
     ) : CdkObject(cdkObject), AssessmentReportsDestinationProperty {
       /**
        * The destination bucket where Audit Manager stores assessment reports.
@@ -1405,8 +1403,7 @@ public open class CfnAssessment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty,
+      cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty,
     ) : CdkObject(cdkObject), DelegationProperty {
       /**
        * The identifier for the assessment that's associated with the delegation.
@@ -1611,8 +1608,7 @@ public open class CfnAssessment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty,
+      cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty,
     ) : CdkObject(cdkObject), RoleProperty {
       /**
        * The Amazon Resource Name (ARN) of the IAM role.
@@ -1777,8 +1773,7 @@ public open class CfnAssessment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty,
+      cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty,
     ) : CdkObject(cdkObject), ScopeProperty {
       /**
        * The AWS accounts that are included in the scope of the assessment.

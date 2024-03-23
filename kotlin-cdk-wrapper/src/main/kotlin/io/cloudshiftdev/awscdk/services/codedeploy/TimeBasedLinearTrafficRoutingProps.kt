@@ -68,8 +68,7 @@ public interface TimeBasedLinearTrafficRoutingProps : BaseTrafficShiftingConfigP
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRoutingProps,
+    cdkObject: software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRoutingProps,
   ) : CdkObject(cdkObject), TimeBasedLinearTrafficRoutingProps {
     /**
      * The amount of time between traffic shifts.

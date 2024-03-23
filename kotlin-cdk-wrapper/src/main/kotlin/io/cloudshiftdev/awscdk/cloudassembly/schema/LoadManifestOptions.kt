@@ -121,7 +121,7 @@ public interface LoadManifestOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.LoadManifestOptions,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.LoadManifestOptions,
   ) : CdkObject(cdkObject), LoadManifestOptions {
     /**
      * Skip enum checks.

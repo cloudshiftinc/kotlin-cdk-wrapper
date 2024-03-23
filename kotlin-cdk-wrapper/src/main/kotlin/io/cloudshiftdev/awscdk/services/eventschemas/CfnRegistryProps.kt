@@ -114,7 +114,7 @@ public interface CfnRegistryProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistryProps,
+    cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistryProps,
   ) : CdkObject(cdkObject), CfnRegistryProps {
     /**
      * A description of the registry to be created.

@@ -49,9 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html)
  */
-public open class CfnOrganizationConformancePack internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.config.CfnOrganizationConformancePack,
+public open class CfnOrganizationConformancePack(
+  cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConformancePack,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -433,7 +432,8 @@ public open class CfnOrganizationConformancePack internal constructor(
         CfnOrganizationConformancePack = CfnOrganizationConformancePack(cdkObject)
 
     internal fun unwrap(wrapped: CfnOrganizationConformancePack):
-        software.amazon.awscdk.services.config.CfnOrganizationConformancePack = wrapped.cdkObject
+        software.amazon.awscdk.services.config.CfnOrganizationConformancePack = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnOrganizationConformancePack
   }
 
   /**
@@ -515,8 +515,7 @@ public open class CfnOrganizationConformancePack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnOrganizationConformancePack.ConformancePackInputParameterProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConformancePack.ConformancePackInputParameterProperty,
     ) : CdkObject(cdkObject), ConformancePackInputParameterProperty {
       /**
        * One part of a key-value pair.

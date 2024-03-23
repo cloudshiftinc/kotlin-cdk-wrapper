@@ -70,7 +70,7 @@ public interface RedirectTarget {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.RedirectTarget,
+    cdkObject: software.amazon.awscdk.services.s3.RedirectTarget,
   ) : CdkObject(cdkObject), RedirectTarget {
     /**
      * Name of the host where requests are redirected.

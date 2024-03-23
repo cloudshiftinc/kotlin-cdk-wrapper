@@ -16,7 +16,7 @@ public interface IOriginRequestPolicy {
   public fun originRequestPolicyId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.IOriginRequestPolicy,
+    cdkObject: software.amazon.awscdk.services.cloudfront.IOriginRequestPolicy,
   ) : CdkObject(cdkObject), IOriginRequestPolicy {
     /**
      * The ID of the origin request policy.

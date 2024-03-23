@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html)
  */
-public open class CfnChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudtrail.CfnChannel,
+public open class CfnChannel(
+  cdkObject: software.amazon.awscdk.services.cloudtrail.CfnChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudtrail.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -333,7 +333,7 @@ public open class CfnChannel internal constructor(
         = CfnChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnChannel): software.amazon.awscdk.services.cloudtrail.CfnChannel
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.cloudtrail.CfnChannel
   }
 
   /**
@@ -422,8 +422,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnChannel.DestinationProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnChannel.DestinationProperty,
     ) : CdkObject(cdkObject), DestinationProperty {
       /**
        * For channels used for a CloudTrail Lake integration, the location is the ARN of an event

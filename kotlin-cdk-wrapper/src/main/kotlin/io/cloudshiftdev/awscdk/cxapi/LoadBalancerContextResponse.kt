@@ -157,7 +157,7 @@ public interface LoadBalancerContextResponse {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cxapi.LoadBalancerContextResponse,
+    cdkObject: software.amazon.awscdk.cxapi.LoadBalancerContextResponse,
   ) : CdkObject(cdkObject), LoadBalancerContextResponse {
     /**
      * Type of IP address.

@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html)
  */
-public open class Route internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.Route,
+public open class Route(
+  cdkObject: software.amazon.awscdk.services.appmesh.Route,
 ) : Resource(cdkObject), IRoute {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -190,6 +190,6 @@ public open class Route internal constructor(
         Route(cdkObject)
 
     internal fun unwrap(wrapped: Route): software.amazon.awscdk.services.appmesh.Route =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appmesh.Route
   }
 }

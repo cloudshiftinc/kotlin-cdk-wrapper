@@ -76,8 +76,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-permissions.html)
  */
-public open class CfnPermissions internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissions,
+public open class CfnPermissions(
+  cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissions,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -420,7 +420,8 @@ public open class CfnPermissions internal constructor(
         CfnPermissions = CfnPermissions(cdkObject)
 
     internal fun unwrap(wrapped: CfnPermissions):
-        software.amazon.awscdk.services.lakeformation.CfnPermissions = wrapped.cdkObject
+        software.amazon.awscdk.services.lakeformation.CfnPermissions = wrapped.cdkObject as
+        software.amazon.awscdk.services.lakeformation.CfnPermissions
   }
 
   /**
@@ -495,8 +496,7 @@ public open class CfnPermissions internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPermissions.ColumnWildcardProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissions.ColumnWildcardProperty,
     ) : CdkObject(cdkObject), ColumnWildcardProperty {
       /**
        * Excludes column names.
@@ -582,8 +582,7 @@ public open class CfnPermissions internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPermissions.DataLakePrincipalProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissions.DataLakePrincipalProperty,
     ) : CdkObject(cdkObject), DataLakePrincipalProperty {
       /**
        * An identifier for the Lake Formation principal.
@@ -693,8 +692,7 @@ public open class CfnPermissions internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPermissions.DataLocationResourceProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissions.DataLocationResourceProperty,
     ) : CdkObject(cdkObject), DataLocationResourceProperty {
       /**
        * The identifier for the Data Catalog .
@@ -813,8 +811,7 @@ public open class CfnPermissions internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPermissions.DatabaseResourceProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissions.DatabaseResourceProperty,
     ) : CdkObject(cdkObject), DatabaseResourceProperty {
       /**
        * The identifier for the Data Catalog .
@@ -1129,8 +1126,7 @@ public open class CfnPermissions internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPermissions.ResourceProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissions.ResourceProperty,
     ) : CdkObject(cdkObject), ResourceProperty {
       /**
        * A structure for a data location object where permissions are granted or revoked.
@@ -1354,8 +1350,7 @@ public open class CfnPermissions internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPermissions.TableResourceProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissions.TableResourceProperty,
     ) : CdkObject(cdkObject), TableResourceProperty {
       /**
        * The identifier for the Data Catalog .
@@ -1443,8 +1438,7 @@ public open class CfnPermissions internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPermissions.TableWildcardProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissions.TableWildcardProperty,
     ) : CdkObject(cdkObject), TableWildcardProperty
 
     public companion object {
@@ -1675,8 +1669,7 @@ public open class CfnPermissions internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPermissions.TableWithColumnsResourceProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissions.TableWithColumnsResourceProperty,
     ) : CdkObject(cdkObject), TableWithColumnsResourceProperty {
       /**
        * The identifier for the Data Catalog .

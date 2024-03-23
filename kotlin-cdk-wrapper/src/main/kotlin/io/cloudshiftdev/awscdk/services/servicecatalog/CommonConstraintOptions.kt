@@ -85,7 +85,7 @@ public interface CommonConstraintOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicecatalog.CommonConstraintOptions,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CommonConstraintOptions,
   ) : CdkObject(cdkObject), CommonConstraintOptions {
     /**
      * The description of the constraint.

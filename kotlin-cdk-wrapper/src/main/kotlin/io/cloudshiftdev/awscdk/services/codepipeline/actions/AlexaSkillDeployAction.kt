@@ -32,9 +32,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class AlexaSkillDeployAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployAction,
+public open class AlexaSkillDeployAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployAction,
 ) : Action(cdkObject) {
   public constructor(props: AlexaSkillDeployActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployAction(props.let(AlexaSkillDeployActionProps::unwrap))
@@ -242,6 +241,7 @@ public open class AlexaSkillDeployAction internal constructor(
 
     internal fun unwrap(wrapped: AlexaSkillDeployAction):
         software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployAction =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployAction
   }
 }

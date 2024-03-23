@@ -135,7 +135,7 @@ public interface CfnGraphProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.detective.CfnGraphProps,
+    cdkObject: software.amazon.awscdk.services.detective.CfnGraphProps,
   ) : CdkObject(cdkObject), CfnGraphProps {
     /**
      * Indicates whether to automatically enable new organization accounts as member accounts in the

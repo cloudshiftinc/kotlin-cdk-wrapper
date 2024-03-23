@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-geomatchset.html)
  */
-public open class CfnGeoMatchSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet,
+public open class CfnGeoMatchSet(
+  cdkObject: software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -244,7 +244,8 @@ public open class CfnGeoMatchSet internal constructor(
         CfnGeoMatchSet = CfnGeoMatchSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnGeoMatchSet):
-        software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet = wrapped.cdkObject
+        software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet
   }
 
   /**
@@ -337,8 +338,7 @@ public open class CfnGeoMatchSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet.GeoMatchConstraintProperty,
+      cdkObject: software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet.GeoMatchConstraintProperty,
     ) : CdkObject(cdkObject), GeoMatchConstraintProperty {
       /**
        * The type of geographical area you want AWS WAF to search for.

@@ -176,7 +176,7 @@ public interface CfnUserProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appstream.CfnUserProps,
+    cdkObject: software.amazon.awscdk.services.appstream.CfnUserProps,
   ) : CdkObject(cdkObject), CfnUserProps {
     /**
      * The authentication type for the user.

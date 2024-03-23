@@ -16,7 +16,7 @@ public interface IRouteTable {
   public fun routeTableId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IRouteTable,
+    cdkObject: software.amazon.awscdk.services.ec2.IRouteTable,
   ) : CdkObject(cdkObject), IRouteTable {
     /**
      * Route table ID.

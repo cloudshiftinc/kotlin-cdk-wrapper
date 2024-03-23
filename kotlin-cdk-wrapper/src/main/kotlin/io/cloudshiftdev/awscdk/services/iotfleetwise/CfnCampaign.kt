@@ -93,8 +93,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html)
  */
-public open class CfnCampaign internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign,
+public open class CfnCampaign(
+  cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1131,7 +1131,8 @@ public open class CfnCampaign internal constructor(
         CfnCampaign = CfnCampaign(cdkObject)
 
     internal fun unwrap(wrapped: CfnCampaign):
-        software.amazon.awscdk.services.iotfleetwise.CfnCampaign = wrapped.cdkObject
+        software.amazon.awscdk.services.iotfleetwise.CfnCampaign = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotfleetwise.CfnCampaign
   }
 
   /**
@@ -1295,8 +1296,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.CollectionSchemeProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.CollectionSchemeProperty,
     ) : CdkObject(cdkObject), CollectionSchemeProperty {
       /**
        * (Optional) Information about a collection scheme that uses a simple logical expression to
@@ -1480,8 +1480,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedCollectionSchemeProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedCollectionSchemeProperty,
     ) : CdkObject(cdkObject), ConditionBasedCollectionSchemeProperty {
       /**
        * (Optional) Specifies the version of the conditional expression language.
@@ -1694,8 +1693,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty,
     ) : CdkObject(cdkObject), DataDestinationConfigProperty {
       /**
        * (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
@@ -1902,8 +1900,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.S3ConfigProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.S3ConfigProperty,
     ) : CdkObject(cdkObject), S3ConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon S3 bucket.
@@ -2077,8 +2074,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty,
     ) : CdkObject(cdkObject), SignalInformationProperty {
       /**
        * (Optional) The maximum number of samples to collect.
@@ -2189,8 +2185,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty,
     ) : CdkObject(cdkObject), TimeBasedCollectionSchemeProperty {
       /**
        * The time period (in milliseconds) to decide how often to collect data.
@@ -2304,8 +2299,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty,
     ) : CdkObject(cdkObject), TimestreamConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the task execution role that grants AWS IoT FleetWise

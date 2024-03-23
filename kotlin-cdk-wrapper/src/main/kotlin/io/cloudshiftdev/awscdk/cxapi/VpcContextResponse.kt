@@ -547,7 +547,7 @@ public interface VpcContextResponse {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cxapi.VpcContextResponse,
+    cdkObject: software.amazon.awscdk.cxapi.VpcContextResponse,
   ) : CdkObject(cdkObject), VpcContextResponse {
     /**
      * AZs.

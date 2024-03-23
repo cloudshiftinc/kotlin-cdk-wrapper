@@ -79,7 +79,7 @@ public interface EksMachineImage {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.EksMachineImage,
+    cdkObject: software.amazon.awscdk.services.batch.EksMachineImage,
   ) : CdkObject(cdkObject), EksMachineImage {
     /**
      * The machine image to use.

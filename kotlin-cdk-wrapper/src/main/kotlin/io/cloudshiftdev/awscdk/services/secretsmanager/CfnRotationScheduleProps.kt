@@ -392,7 +392,7 @@ public interface CfnRotationScheduleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationScheduleProps,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationScheduleProps,
   ) : CdkObject(cdkObject), CfnRotationScheduleProps {
     /**
      * Creates a new Lambda rotation function based on one of the [Secrets Manager rotation function

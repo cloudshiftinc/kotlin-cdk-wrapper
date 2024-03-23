@@ -24,9 +24,8 @@ import io.cloudshiftdev.awscdk.services.route53.IRecordSet
  * .build();
  * ```
  */
-public open class UserPoolDomainTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget,
+public open class UserPoolDomainTarget(
+  cdkObject: software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(domain: UserPoolDomain) :
       this(software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget(domain.let(UserPoolDomain::unwrap))
@@ -57,6 +56,7 @@ public open class UserPoolDomainTarget internal constructor(
         UserPoolDomainTarget = UserPoolDomainTarget(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolDomainTarget):
-        software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget
   }
 }

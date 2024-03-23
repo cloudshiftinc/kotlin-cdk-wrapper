@@ -938,8 +938,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateServiceProps,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateServiceProps,
   ) : CdkObject(cdkObject), ApplicationLoadBalancedFargateServiceProps {
     /**
      * Determines whether the service will be assigned a public IP address.

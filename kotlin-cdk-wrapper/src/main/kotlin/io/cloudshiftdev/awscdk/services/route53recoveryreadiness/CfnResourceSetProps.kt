@@ -210,8 +210,7 @@ public interface CfnResourceSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSetProps,
+    cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSetProps,
   ) : CdkObject(cdkObject), CfnResourceSetProps {
     /**
      * The name of the resource set to create.

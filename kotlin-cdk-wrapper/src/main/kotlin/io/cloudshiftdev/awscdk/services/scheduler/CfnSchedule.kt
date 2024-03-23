@@ -134,8 +134,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-scheduler-schedule.html)
  */
-public open class CfnSchedule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule,
+public open class CfnSchedule(
+  cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -728,7 +728,7 @@ public open class CfnSchedule internal constructor(
         = CfnSchedule(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchedule): software.amazon.awscdk.services.scheduler.CfnSchedule
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.scheduler.CfnSchedule
   }
 
   /**
@@ -877,8 +877,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.AwsVpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.AwsVpcConfigurationProperty,
     ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
       /**
        * Specifies whether the task's elastic network interface receives a public IP address.
@@ -1047,8 +1046,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty,
     ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
       /**
        * The base value designates how many tasks, at a minimum, to run on the specified capacity
@@ -1163,8 +1161,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty,
     ) : CdkObject(cdkObject), DeadLetterConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the SQS queue specified as the destination for the
@@ -1762,8 +1759,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.EcsParametersProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.EcsParametersProperty,
     ) : CdkObject(cdkObject), EcsParametersProperty {
       /**
        * The capacity provider strategy to use for the task.
@@ -1994,8 +1990,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty,
     ) : CdkObject(cdkObject), EventBridgeParametersProperty {
       /**
        * A free-form string, with a maximum of 128 characters, used to decide what fields to expect
@@ -2127,8 +2122,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty,
     ) : CdkObject(cdkObject), FlexibleTimeWindowProperty {
       /**
        * The maximum time window during which a schedule can be invoked.
@@ -2236,8 +2230,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty,
     ) : CdkObject(cdkObject), KinesisParametersProperty {
       /**
        * Specifies the shard to which EventBridge Scheduler sends the event.
@@ -2373,8 +2366,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.NetworkConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.NetworkConfigurationProperty,
     ) : CdkObject(cdkObject), NetworkConfigurationProperty {
       /**
        * Specifies the Amazon VPC subnets and security groups for the task, and whether a public IP
@@ -2502,8 +2494,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty,
     ) : CdkObject(cdkObject), PlacementConstraintProperty {
       /**
        * A cluster query language expression to apply to the constraint.
@@ -2654,8 +2645,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty,
     ) : CdkObject(cdkObject), PlacementStrategyProperty {
       /**
        * The field to apply the placement strategy against.
@@ -2788,8 +2778,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty,
     ) : CdkObject(cdkObject), RetryPolicyProperty {
       /**
        * The maximum amount of time, in seconds, to continue to make retry attempts.
@@ -2903,8 +2892,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParameterProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParameterProperty,
     ) : CdkObject(cdkObject), SageMakerPipelineParameterProperty {
       /**
        * Name of parameter to start execution of a SageMaker Model Building Pipeline.
@@ -3030,8 +3018,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty,
     ) : CdkObject(cdkObject), SageMakerPipelineParametersProperty {
       /**
        * List of parameter names and values to use when executing the SageMaker Model Building
@@ -3120,8 +3107,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty,
     ) : CdkObject(cdkObject), SqsParametersProperty {
       /**
        * The FIFO message group ID to use as the target.
@@ -3785,7 +3771,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.TargetProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.TargetProperty,
     ) : CdkObject(cdkObject), TargetProperty {
       /**
        * The Amazon Resource Name (ARN) of the target.

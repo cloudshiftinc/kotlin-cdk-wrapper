@@ -291,7 +291,7 @@ public interface CfnInAppTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplateProps,
+    cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplateProps,
   ) : CdkObject(cdkObject), CfnInAppTemplateProps {
     /**
      * An object that contains information about the content of an in-app message, including its

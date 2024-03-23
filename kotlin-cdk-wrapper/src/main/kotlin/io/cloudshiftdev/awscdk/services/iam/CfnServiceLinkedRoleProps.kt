@@ -143,7 +143,7 @@ public interface CfnServiceLinkedRoleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.CfnServiceLinkedRoleProps,
+    cdkObject: software.amazon.awscdk.services.iam.CfnServiceLinkedRoleProps,
   ) : CdkObject(cdkObject), CfnServiceLinkedRoleProps {
     /**
      * The service principal for the AWS service to which this role is attached.

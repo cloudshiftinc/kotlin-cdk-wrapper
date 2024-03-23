@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)
  */
-public open class LustreFileSystem internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fsx.LustreFileSystem,
+public open class LustreFileSystem(
+  cdkObject: software.amazon.awscdk.services.fsx.LustreFileSystem,
 ) : FileSystemBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -305,6 +305,7 @@ public open class LustreFileSystem internal constructor(
         LustreFileSystem = LustreFileSystem(cdkObject)
 
     internal fun unwrap(wrapped: LustreFileSystem):
-        software.amazon.awscdk.services.fsx.LustreFileSystem = wrapped.cdkObject
+        software.amazon.awscdk.services.fsx.LustreFileSystem = wrapped.cdkObject as
+        software.amazon.awscdk.services.fsx.LustreFileSystem
   }
 }

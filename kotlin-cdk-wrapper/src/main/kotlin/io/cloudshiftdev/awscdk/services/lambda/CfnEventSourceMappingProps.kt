@@ -171,7 +171,7 @@ public interface CfnEventSourceMappingProps {
   public fun filterCriteria(): Any? = unwrap(this).getFilterCriteria()
 
   /**
-   * The name of the Lambda function.
+   * The name or ARN of the Lambda function.
    *
    * **Name formats** - *Function name* – `MyFunction` .
    *
@@ -487,7 +487,7 @@ public interface CfnEventSourceMappingProps {
         fun filterCriteria(filterCriteria: CfnEventSourceMapping.FilterCriteriaProperty.Builder.() -> Unit)
 
     /**
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      * **Name formats** - *Function name* – `MyFunction` .
      *
      * * *Function ARN* – `arn:aws:lambda:us-west-2:123456789012:function:MyFunction` .
@@ -879,7 +879,7 @@ public interface CfnEventSourceMappingProps {
         Unit = filterCriteria(CfnEventSourceMapping.FilterCriteriaProperty(filterCriteria))
 
     /**
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      * **Name formats** - *Function name* – `MyFunction` .
      *
      * * *Function ARN* – `arn:aws:lambda:us-west-2:123456789012:function:MyFunction` .
@@ -1125,7 +1125,7 @@ public interface CfnEventSourceMappingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMappingProps,
+    cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMappingProps,
   ) : CdkObject(cdkObject), CfnEventSourceMappingProps {
     /**
      * Specific configuration settings for an Amazon Managed Streaming for Apache Kafka (Amazon MSK)
@@ -1219,7 +1219,7 @@ public interface CfnEventSourceMappingProps {
     override fun filterCriteria(): Any? = unwrap(this).getFilterCriteria()
 
     /**
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      *
      * **Name formats** - *Function name* – `MyFunction` .
      *

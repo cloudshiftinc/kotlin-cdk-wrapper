@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html)
  */
-public open class CfnDomainConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration,
+public open class CfnDomainConfiguration(
+  cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iot.CfnDomainConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -761,7 +761,8 @@ public open class CfnDomainConfiguration internal constructor(
         CfnDomainConfiguration = CfnDomainConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainConfiguration):
-        software.amazon.awscdk.services.iot.CfnDomainConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnDomainConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnDomainConfiguration
   }
 
   /**
@@ -857,8 +858,7 @@ public open class CfnDomainConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.AuthorizerConfigProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.AuthorizerConfigProperty,
     ) : CdkObject(cdkObject), AuthorizerConfigProperty {
       /**
        * A Boolean that specifies whether the domain configuration's authorization service can be
@@ -986,8 +986,7 @@ public open class CfnDomainConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty,
     ) : CdkObject(cdkObject), ServerCertificateConfigProperty {
       /**
        * A Boolean value that indicates whether Online Certificate Status Protocol (OCSP) server
@@ -1118,8 +1117,7 @@ public open class CfnDomainConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateSummaryProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateSummaryProperty,
     ) : CdkObject(cdkObject), ServerCertificateSummaryProperty {
       /**
        * The ARN of the server certificate.
@@ -1225,8 +1223,7 @@ public open class CfnDomainConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty,
     ) : CdkObject(cdkObject), TlsConfigProperty {
       /**
        * The security policy for a domain configuration.

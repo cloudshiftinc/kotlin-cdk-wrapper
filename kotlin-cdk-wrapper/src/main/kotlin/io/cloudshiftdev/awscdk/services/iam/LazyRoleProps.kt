@@ -281,7 +281,7 @@ public interface LazyRoleProps : RoleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.LazyRoleProps,
+    cdkObject: software.amazon.awscdk.services.iam.LazyRoleProps,
   ) : CdkObject(cdkObject), LazyRoleProps {
     /**
      * The IAM principal (i.e. `new ServicePrincipal('sns.amazonaws.com')`) which can assume this

@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrantsinstance.html)
  */
-public open class CfnAccessGrantsInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsInstance,
+public open class CfnAccessGrantsInstance(
+  cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.s3.CfnAccessGrantsInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -245,6 +245,7 @@ public open class CfnAccessGrantsInstance internal constructor(
         CfnAccessGrantsInstance = CfnAccessGrantsInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessGrantsInstance):
-        software.amazon.awscdk.services.s3.CfnAccessGrantsInstance = wrapped.cdkObject
+        software.amazon.awscdk.services.s3.CfnAccessGrantsInstance = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3.CfnAccessGrantsInstance
   }
 }

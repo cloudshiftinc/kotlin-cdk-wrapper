@@ -168,8 +168,7 @@ public interface BaseLoadBalancerProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancerProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancerProps,
   ) : CdkObject(cdkObject), BaseLoadBalancerProps {
     /**
      * Indicates whether deletion protection is enabled.

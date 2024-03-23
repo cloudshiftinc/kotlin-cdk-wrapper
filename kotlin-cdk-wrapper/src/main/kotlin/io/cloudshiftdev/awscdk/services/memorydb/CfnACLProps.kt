@@ -140,7 +140,7 @@ public interface CfnACLProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.memorydb.CfnACLProps,
+    cdkObject: software.amazon.awscdk.services.memorydb.CfnACLProps,
   ) : CdkObject(cdkObject), CfnACLProps {
     /**
      * The name of the Access Control List.

@@ -262,7 +262,7 @@ public interface HttpRouteIntegrationConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationConfig,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationConfig,
   ) : CdkObject(cdkObject), HttpRouteIntegrationConfig {
     /**
      * The ID of the VPC link for a private integration.

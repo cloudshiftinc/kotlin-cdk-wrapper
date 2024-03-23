@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html)
  */
-public open class CfnHost internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnHost,
+public open class CfnHost(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnHost,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -401,6 +401,6 @@ public open class CfnHost internal constructor(
         CfnHost(cdkObject)
 
     internal fun unwrap(wrapped: CfnHost): software.amazon.awscdk.services.ec2.CfnHost =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnHost
   }
 }

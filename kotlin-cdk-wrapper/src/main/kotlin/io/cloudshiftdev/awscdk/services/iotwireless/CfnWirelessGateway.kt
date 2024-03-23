@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html)
  */
-public open class CfnWirelessGateway internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessGateway,
+public open class CfnWirelessGateway(
+  cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessGateway,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -429,7 +429,8 @@ public open class CfnWirelessGateway internal constructor(
         CfnWirelessGateway = CfnWirelessGateway(cdkObject)
 
     internal fun unwrap(wrapped: CfnWirelessGateway):
-        software.amazon.awscdk.services.iotwireless.CfnWirelessGateway = wrapped.cdkObject
+        software.amazon.awscdk.services.iotwireless.CfnWirelessGateway = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotwireless.CfnWirelessGateway
   }
 
   /**
@@ -506,8 +507,7 @@ public open class CfnWirelessGateway internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessGateway.LoRaWANGatewayProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessGateway.LoRaWANGatewayProperty,
     ) : CdkObject(cdkObject), LoRaWANGatewayProperty {
       /**
        * The gateway's EUI value.

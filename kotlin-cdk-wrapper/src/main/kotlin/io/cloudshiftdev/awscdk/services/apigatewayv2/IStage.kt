@@ -64,7 +64,7 @@ public interface IStage : IResource {
   public fun url(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IStage,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IStage,
   ) : CdkObject(cdkObject), IStage {
     /**
      * Apply the given removal policy to this resource.

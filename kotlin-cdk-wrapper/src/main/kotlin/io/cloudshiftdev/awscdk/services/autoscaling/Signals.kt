@@ -37,8 +37,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class Signals internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.Signals,
+public abstract class Signals(
+  cdkObject: software.amazon.awscdk.services.autoscaling.Signals,
 ) : CdkObject(cdkObject) {
   /**
    * Render the ASG's CreationPolicy.
@@ -59,7 +59,7 @@ public abstract class Signals internal constructor(
       CfnCreationPolicy = renderCreationPolicy(RenderSignalsOptions(renderOptions))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.Signals,
+    cdkObject: software.amazon.awscdk.services.autoscaling.Signals,
   ) : Signals(cdkObject)
 
   public companion object {

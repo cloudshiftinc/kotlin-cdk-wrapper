@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-staticip.html)
  */
-public open class CfnStaticIp internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnStaticIp,
+public open class CfnStaticIp(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnStaticIp,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -169,6 +169,6 @@ public open class CfnStaticIp internal constructor(
         = CfnStaticIp(cdkObject)
 
     internal fun unwrap(wrapped: CfnStaticIp): software.amazon.awscdk.services.lightsail.CfnStaticIp
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.lightsail.CfnStaticIp
   }
 }

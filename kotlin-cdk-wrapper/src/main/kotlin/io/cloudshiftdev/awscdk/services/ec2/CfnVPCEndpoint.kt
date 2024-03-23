@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html)
  */
-public open class CfnVPCEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpoint,
+public open class CfnVPCEndpoint(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -607,6 +607,6 @@ public open class CfnVPCEndpoint internal constructor(
         = CfnVPCEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCEndpoint): software.amazon.awscdk.services.ec2.CfnVPCEndpoint
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnVPCEndpoint
   }
 }

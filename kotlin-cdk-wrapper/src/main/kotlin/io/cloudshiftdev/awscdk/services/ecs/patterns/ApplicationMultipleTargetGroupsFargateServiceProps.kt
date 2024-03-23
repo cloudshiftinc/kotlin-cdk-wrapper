@@ -549,8 +549,7 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateServiceProps,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateServiceProps,
   ) : CdkObject(cdkObject), ApplicationMultipleTargetGroupsFargateServiceProps {
     /**
      * Determines whether the service will be assigned a public IP address.

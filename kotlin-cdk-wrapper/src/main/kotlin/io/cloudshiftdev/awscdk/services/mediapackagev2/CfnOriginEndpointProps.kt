@@ -409,7 +409,7 @@ public interface CfnOriginEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointProps,
+    cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointProps,
   ) : CdkObject(cdkObject), CfnOriginEndpointProps {
     /**
      * The name of the channel group associated with the origin endpoint configuration.

@@ -186,7 +186,7 @@ public interface CfnVPCEConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnVPCEConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.devicefarm.CfnVPCEConfigurationProps,
   ) : CdkObject(cdkObject), CfnVPCEConfigurationProps {
     /**
      * The DNS name that Device Farm will use to map to the private service you want to access.

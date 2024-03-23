@@ -66,8 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html)
  */
-public open class CfnFunction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction,
+public open class CfnFunction(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -463,7 +463,8 @@ public open class CfnFunction internal constructor(
         CfnFunction = CfnFunction(cdkObject)
 
     internal fun unwrap(wrapped: CfnFunction):
-        software.amazon.awscdk.services.cloudfront.CfnFunction = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnFunction = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnFunction
   }
 
   /**
@@ -585,8 +586,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionConfigProperty,
     ) : CdkObject(cdkObject), FunctionConfigProperty {
       /**
        * A comment to describe the function.
@@ -685,8 +685,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty,
     ) : CdkObject(cdkObject), FunctionMetadataProperty {
       /**
        * The Amazon Resource Name (ARN) of the function.
@@ -771,8 +770,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnFunction.KeyValueStoreAssociationProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction.KeyValueStoreAssociationProperty,
     ) : CdkObject(cdkObject), KeyValueStoreAssociationProperty {
       /**
        * The Amazon Resource Name (ARN) of the key value store association.

@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class PlacementGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.PlacementGroup,
+public open class PlacementGroup(
+  cdkObject: software.amazon.awscdk.services.ec2.PlacementGroup,
 ) : Resource(cdkObject), IPlacementGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.PlacementGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -241,6 +241,6 @@ public open class PlacementGroup internal constructor(
         = PlacementGroup(cdkObject)
 
     internal fun unwrap(wrapped: PlacementGroup): software.amazon.awscdk.services.ec2.PlacementGroup
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.ec2.PlacementGroup
   }
 }

@@ -172,6 +172,9 @@ public interface CfnListenerProps {
    * [HTTPS and TLS listeners] The security policy that defines which protocols and ciphers are
    * supported.
    *
+   * Updating the security policy can result in interruptions if the load balancer is handling a
+   * high volume of traffic.
+   *
    * For more information, see [Security
    * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies)
    * in the *Application Load Balancers Guide* and [Security
@@ -297,6 +300,9 @@ public interface CfnListenerProps {
     /**
      * @param sslPolicy [HTTPS and TLS listeners] The security policy that defines which protocols
      * and ciphers are supported.
+     * Updating the security policy can result in interruptions if the load balancer is handling a
+     * high volume of traffic.
+     *
      * For more information, see [Security
      * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies)
      * in the *Application Load Balancers Guide* and [Security
@@ -444,6 +450,9 @@ public interface CfnListenerProps {
     /**
      * @param sslPolicy [HTTPS and TLS listeners] The security policy that defines which protocols
      * and ciphers are supported.
+     * Updating the security policy can result in interruptions if the load balancer is handling a
+     * high volume of traffic.
+     *
      * For more information, see [Security
      * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies)
      * in the *Application Load Balancers Guide* and [Security
@@ -459,7 +468,7 @@ public interface CfnListenerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerProps,
   ) : CdkObject(cdkObject), CfnListenerProps {
     /**
      * [TLS listener] The name of the Application-Layer Protocol Negotiation (ALPN) policy.
@@ -530,6 +539,9 @@ public interface CfnListenerProps {
     /**
      * [HTTPS and TLS listeners] The security policy that defines which protocols and ciphers are
      * supported.
+     *
+     * Updating the security policy can result in interruptions if the load balancer is handling a
+     * high volume of traffic.
      *
      * For more information, see [Security
      * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies)

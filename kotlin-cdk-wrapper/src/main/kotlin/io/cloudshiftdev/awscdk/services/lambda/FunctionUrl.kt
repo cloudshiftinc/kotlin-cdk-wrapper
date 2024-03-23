@@ -28,8 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class FunctionUrl internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.FunctionUrl,
+public open class FunctionUrl(
+  cdkObject: software.amazon.awscdk.services.lambda.FunctionUrl,
 ) : Resource(cdkObject), IFunctionUrl {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -198,6 +198,6 @@ public open class FunctionUrl internal constructor(
         FunctionUrl(cdkObject)
 
     internal fun unwrap(wrapped: FunctionUrl): software.amazon.awscdk.services.lambda.FunctionUrl =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lambda.FunctionUrl
   }
 }

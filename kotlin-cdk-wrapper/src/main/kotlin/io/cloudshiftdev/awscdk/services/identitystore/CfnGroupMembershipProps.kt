@@ -147,7 +147,7 @@ public interface CfnGroupMembershipProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembershipProps,
+    cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembershipProps,
   ) : CdkObject(cdkObject), CfnGroupMembershipProps {
     /**
      * The unique identifier for a group in the identity store.

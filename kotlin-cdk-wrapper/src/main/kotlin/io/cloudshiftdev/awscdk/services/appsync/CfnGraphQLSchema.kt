@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlschema.html)
  */
-public open class CfnGraphQLSchema internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLSchema,
+public open class CfnGraphQLSchema(
+  cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLSchema,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -218,6 +218,7 @@ public open class CfnGraphQLSchema internal constructor(
         CfnGraphQLSchema = CfnGraphQLSchema(cdkObject)
 
     internal fun unwrap(wrapped: CfnGraphQLSchema):
-        software.amazon.awscdk.services.appsync.CfnGraphQLSchema = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.CfnGraphQLSchema = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.CfnGraphQLSchema
   }
 }

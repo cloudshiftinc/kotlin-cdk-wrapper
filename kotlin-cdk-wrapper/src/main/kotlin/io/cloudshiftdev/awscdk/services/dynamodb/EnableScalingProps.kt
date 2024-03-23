@@ -75,7 +75,7 @@ public interface EnableScalingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.EnableScalingProps,
+    cdkObject: software.amazon.awscdk.services.dynamodb.EnableScalingProps,
   ) : CdkObject(cdkObject), EnableScalingProps {
     /**
      * Maximum capacity to scale to.

@@ -128,9 +128,6 @@ public interface CfnAlarmProps {
    *
    * The specified statistic value is used as the first operand.
    *
-   * You can specify the following values: `GreaterThanThreshold` , `GreaterThanOrEqualToThreshold`
-   * , `LessThanThreshold` , or `LessThanOrEqualToThreshold` .
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-comparisonoperator)
    */
   public fun comparisonOperator(): String
@@ -392,9 +389,6 @@ public interface CfnAlarmProps {
      * @param comparisonOperator The arithmetic operation to use when comparing the specified
      * statistic and threshold. 
      * The specified statistic value is used as the first operand.
-     *
-     * You can specify the following values: `GreaterThanThreshold` ,
-     * `GreaterThanOrEqualToThreshold` , `LessThanThreshold` , or `LessThanOrEqualToThreshold` .
      */
     public fun comparisonOperator(comparisonOperator: String)
 
@@ -671,9 +665,6 @@ public interface CfnAlarmProps {
      * @param comparisonOperator The arithmetic operation to use when comparing the specified
      * statistic and threshold. 
      * The specified statistic value is used as the first operand.
-     *
-     * You can specify the following values: `GreaterThanThreshold` ,
-     * `GreaterThanOrEqualToThreshold` , `LessThanThreshold` , or `LessThanOrEqualToThreshold` .
      */
     override fun comparisonOperator(comparisonOperator: String) {
       cdkBuilder.comparisonOperator(comparisonOperator)
@@ -923,7 +914,7 @@ public interface CfnAlarmProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarmProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarmProps,
   ) : CdkObject(cdkObject), CfnAlarmProps {
     /**
      * Indicates whether actions should be executed during any changes to the alarm state.
@@ -976,9 +967,6 @@ public interface CfnAlarmProps {
      * The arithmetic operation to use when comparing the specified statistic and threshold.
      *
      * The specified statistic value is used as the first operand.
-     *
-     * You can specify the following values: `GreaterThanThreshold` ,
-     * `GreaterThanOrEqualToThreshold` , `LessThanThreshold` , or `LessThanOrEqualToThreshold` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-comparisonoperator)
      */

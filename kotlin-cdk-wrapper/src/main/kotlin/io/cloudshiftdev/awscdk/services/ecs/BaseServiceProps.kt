@@ -507,7 +507,7 @@ public interface BaseServiceProps : BaseServiceOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.BaseServiceProps,
+    cdkObject: software.amazon.awscdk.services.ecs.BaseServiceProps,
   ) : CdkObject(cdkObject), BaseServiceProps {
     /**
      * A list of Capacity Provider strategies used to place a service.

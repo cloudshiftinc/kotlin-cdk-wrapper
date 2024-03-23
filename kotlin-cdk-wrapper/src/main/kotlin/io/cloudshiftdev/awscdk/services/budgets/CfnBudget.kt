@@ -92,8 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html)
  */
-public open class CfnBudget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget,
+public open class CfnBudget(
+  cdkObject: software.amazon.awscdk.services.budgets.CfnBudget,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -345,7 +345,7 @@ public open class CfnBudget internal constructor(
         CfnBudget(cdkObject)
 
     internal fun unwrap(wrapped: CfnBudget): software.amazon.awscdk.services.budgets.CfnBudget =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.budgets.CfnBudget
   }
 
   /**
@@ -461,8 +461,7 @@ public open class CfnBudget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty,
     ) : CdkObject(cdkObject), AutoAdjustDataProperty {
       /**
        * The string that defines whether your budget auto-adjusts based on historical or forecasted
@@ -1125,7 +1124,7 @@ public open class CfnBudget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.BudgetDataProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.BudgetDataProperty,
     ) : CdkObject(cdkObject), BudgetDataProperty {
       /**
        * Determine the budget amount for an auto-adjusting budget.
@@ -1737,7 +1736,7 @@ public open class CfnBudget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.CostTypesProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.CostTypesProperty,
     ) : CdkObject(cdkObject), CostTypesProperty {
       /**
        * Specifies whether a budget includes credits.
@@ -1933,8 +1932,7 @@ public open class CfnBudget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty,
     ) : CdkObject(cdkObject), HistoricalOptionsProperty {
       /**
        * The number of budget periods included in the moving-average calculation that determines
@@ -2123,8 +2121,7 @@ public open class CfnBudget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty,
     ) : CdkObject(cdkObject), NotificationProperty {
       /**
        * The comparison that's used for this notification.
@@ -2320,8 +2317,7 @@ public open class CfnBudget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty,
     ) : CdkObject(cdkObject), NotificationWithSubscribersProperty {
       /**
        * The notification that's associated with a budget.
@@ -2445,7 +2441,7 @@ public open class CfnBudget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty,
     ) : CdkObject(cdkObject), SpendProperty {
       /**
        * The cost or usage amount that's associated with a budget forecast, actual spend, or budget
@@ -2566,7 +2562,7 @@ public open class CfnBudget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty,
     ) : CdkObject(cdkObject), SubscriberProperty {
       /**
        * The address that AWS sends budget notifications to, either an SNS topic or an email.
@@ -2737,7 +2733,7 @@ public open class CfnBudget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty,
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty,
     ) : CdkObject(cdkObject), TimePeriodProperty {
       /**
        * The end date for a budget.

@@ -243,7 +243,7 @@ public interface CfnDBClusterParameterGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnDBClusterParameterGroupProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnDBClusterParameterGroupProps,
   ) : CdkObject(cdkObject), CfnDBClusterParameterGroupProps {
     /**
      * The name of the DB cluster parameter group.

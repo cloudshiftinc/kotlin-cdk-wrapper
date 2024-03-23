@@ -170,7 +170,7 @@ public interface CfnProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.transfer.CfnProfileProps,
+    cdkObject: software.amazon.awscdk.services.transfer.CfnProfileProps,
   ) : CdkObject(cdkObject), CfnProfileProps {
     /**
      * The `As2Id` is the *AS2-name* , as defined in the [RFC

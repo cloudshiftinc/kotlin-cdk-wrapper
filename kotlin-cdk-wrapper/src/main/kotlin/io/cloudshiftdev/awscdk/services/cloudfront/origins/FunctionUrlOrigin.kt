@@ -28,9 +28,8 @@ import software.amazon.awscdk.services.lambda.IFunctionUrl as AmazonAwscdkServic
  * .build();
  * ```
  */
-public open class FunctionUrlOrigin internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin,
+public open class FunctionUrlOrigin(
+  cdkObject: software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin,
 ) : OriginBase(cdkObject) {
   public constructor(lambdaFunctionUrl: CloudshiftdevAwscdkServicesLambdaIFunctionUrl) :
       this(software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin(lambdaFunctionUrl.let(CloudshiftdevAwscdkServicesLambdaIFunctionUrl::unwrap))
@@ -329,6 +328,7 @@ public open class FunctionUrlOrigin internal constructor(
         FunctionUrlOrigin = FunctionUrlOrigin(cdkObject)
 
     internal fun unwrap(wrapped: FunctionUrlOrigin):
-        software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin
   }
 }

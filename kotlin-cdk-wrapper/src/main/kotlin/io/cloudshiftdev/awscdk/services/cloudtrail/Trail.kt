@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Trail internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudtrail.Trail,
+public open class Trail(
+  cdkObject: software.amazon.awscdk.services.cloudtrail.Trail,
 ) : Resource(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudtrail.Trail(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -891,6 +891,6 @@ public open class Trail internal constructor(
         Trail(cdkObject)
 
     internal fun unwrap(wrapped: Trail): software.amazon.awscdk.services.cloudtrail.Trail =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudtrail.Trail
   }
 }

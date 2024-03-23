@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html)
  */
-public open class CfnProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnProfile,
+public open class CfnProfile(
+  cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -509,6 +509,7 @@ public open class CfnProfile internal constructor(
         CfnProfile = CfnProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnProfile):
-        software.amazon.awscdk.services.rolesanywhere.CfnProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.rolesanywhere.CfnProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.rolesanywhere.CfnProfile
   }
 }

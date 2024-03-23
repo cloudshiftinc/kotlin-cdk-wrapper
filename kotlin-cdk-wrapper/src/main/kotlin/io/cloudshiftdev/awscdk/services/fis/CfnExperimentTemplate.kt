@@ -98,8 +98,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html)
  */
-public open class CfnExperimentTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate,
+public open class CfnExperimentTemplate(
+  cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -621,7 +621,8 @@ public open class CfnExperimentTemplate internal constructor(
         CfnExperimentTemplate = CfnExperimentTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnExperimentTemplate):
-        software.amazon.awscdk.services.fis.CfnExperimentTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.fis.CfnExperimentTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.fis.CfnExperimentTemplate
   }
 
   /**
@@ -681,8 +682,7 @@ public open class CfnExperimentTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty,
     ) : CdkObject(cdkObject), CloudWatchLogsConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log group.
@@ -891,8 +891,7 @@ public open class CfnExperimentTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty,
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty,
     ) : CdkObject(cdkObject), ExperimentTemplateActionProperty {
       /**
        * The ID of the action.
@@ -1025,8 +1024,7 @@ public open class CfnExperimentTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty,
     ) : CdkObject(cdkObject), ExperimentTemplateExperimentOptionsProperty {
       /**
        * The account targeting setting for an experiment template.
@@ -1167,8 +1165,7 @@ public open class CfnExperimentTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty,
     ) : CdkObject(cdkObject), ExperimentTemplateLogConfigurationProperty {
       /**
        * The configuration for experiment logging to CloudWatch Logs .
@@ -1292,8 +1289,7 @@ public open class CfnExperimentTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty,
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty,
     ) : CdkObject(cdkObject), ExperimentTemplateStopConditionProperty {
       /**
        * The source for the stop condition.
@@ -1418,8 +1414,7 @@ public open class CfnExperimentTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty,
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty,
     ) : CdkObject(cdkObject), ExperimentTemplateTargetFilterProperty {
       /**
        * The attribute path for the filter.
@@ -1680,8 +1675,7 @@ public open class CfnExperimentTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetProperty,
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetProperty,
     ) : CdkObject(cdkObject), ExperimentTemplateTargetProperty {
       /**
        * The filters to apply to identify target resources using specific attributes.
@@ -1819,8 +1813,7 @@ public open class CfnExperimentTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.S3ConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.S3ConfigurationProperty,
     ) : CdkObject(cdkObject), S3ConfigurationProperty {
       /**
        * The name of the destination bucket.

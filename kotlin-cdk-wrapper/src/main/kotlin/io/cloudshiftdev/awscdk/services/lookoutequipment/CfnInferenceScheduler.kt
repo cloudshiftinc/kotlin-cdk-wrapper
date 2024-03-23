@@ -66,9 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html)
  */
-public open class CfnInferenceScheduler internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler,
+public open class CfnInferenceScheduler(
+  cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -505,6 +504,7 @@ public open class CfnInferenceScheduler internal constructor(
 
     internal fun unwrap(wrapped: CfnInferenceScheduler):
         software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler = wrapped.cdkObject
+        as software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler
   }
 
   /**
@@ -689,8 +689,7 @@ public open class CfnInferenceScheduler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataInputConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataInputConfigurationProperty,
     ) : CdkObject(cdkObject), DataInputConfigurationProperty {
       /**
        * Specifies configuration information for the input data for the inference, including
@@ -852,8 +851,7 @@ public open class CfnInferenceScheduler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty,
     ) : CdkObject(cdkObject), DataOutputConfigurationProperty {
       /**
        * The ID number for the AWS KMS key used to encrypt the inference output.
@@ -970,8 +968,7 @@ public open class CfnInferenceScheduler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty,
     ) : CdkObject(cdkObject), InputNameConfigurationProperty {
       /**
        * Indicates the delimiter character used between items in the data.
@@ -1080,8 +1077,7 @@ public open class CfnInferenceScheduler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty,
     ) : CdkObject(cdkObject), S3InputConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3inputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3inputconfiguration-bucket)
@@ -1185,8 +1181,7 @@ public open class CfnInferenceScheduler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3OutputConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3OutputConfigurationProperty,
     ) : CdkObject(cdkObject), S3OutputConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3outputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3outputconfiguration-bucket)

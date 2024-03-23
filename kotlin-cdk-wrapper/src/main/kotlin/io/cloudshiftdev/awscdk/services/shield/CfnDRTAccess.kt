@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-shield-drtaccess.html)
  */
-public open class CfnDRTAccess internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.shield.CfnDRTAccess,
+public open class CfnDRTAccess(
+  cdkObject: software.amazon.awscdk.services.shield.CfnDRTAccess,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -186,9 +186,6 @@ public open class CfnDRTAccess internal constructor(
      * * You must be subscribed to the [Business Support
      * plan](https://docs.aws.amazon.com/premiumsupport/business-support/) or the [Enterprise Support
      * plan](https://docs.aws.amazon.com/premiumsupport/enterprise-support/) .
-     * * You must have the `iam:PassRole` permission. For more information, see [Granting a user
-     * permissions to pass a role to an AWS
-     * service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html) .
      * * The `AWSShieldDRTAccessPolicy` managed policy must be attached to the role that you specify
      * in the request. You can access this policy in the IAM console at
      * [AWSShieldDRTAccessPolicy](https://docs.aws.amazon.com/iam/home?#/policies/arn:aws:iam::aws:policy/service-role/AWSShieldDRTAccessPolicy)
@@ -278,9 +275,6 @@ public open class CfnDRTAccess internal constructor(
      * * You must be subscribed to the [Business Support
      * plan](https://docs.aws.amazon.com/premiumsupport/business-support/) or the [Enterprise Support
      * plan](https://docs.aws.amazon.com/premiumsupport/enterprise-support/) .
-     * * You must have the `iam:PassRole` permission. For more information, see [Granting a user
-     * permissions to pass a role to an AWS
-     * service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html) .
      * * The `AWSShieldDRTAccessPolicy` managed policy must be attached to the role that you specify
      * in the request. You can access this policy in the IAM console at
      * [AWSShieldDRTAccessPolicy](https://docs.aws.amazon.com/iam/home?#/policies/arn:aws:iam::aws:policy/service-role/AWSShieldDRTAccessPolicy)
@@ -325,6 +319,6 @@ public open class CfnDRTAccess internal constructor(
         = CfnDRTAccess(cdkObject)
 
     internal fun unwrap(wrapped: CfnDRTAccess): software.amazon.awscdk.services.shield.CfnDRTAccess
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.shield.CfnDRTAccess
   }
 }

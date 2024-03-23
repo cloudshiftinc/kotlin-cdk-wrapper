@@ -40,9 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevirtualinterfacegroupassociation.html)
  */
-public open class CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation,
+public open class CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -257,6 +256,7 @@ public open class CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation inte
 
     internal fun unwrap(wrapped: CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation):
         software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation
-        = wrapped.cdkObject
+        = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation
   }
 }

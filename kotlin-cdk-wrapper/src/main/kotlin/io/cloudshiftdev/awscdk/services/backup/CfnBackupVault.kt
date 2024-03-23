@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html)
  */
-public open class CfnBackupVault internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault,
+public open class CfnBackupVault(
+  cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -490,7 +490,8 @@ public open class CfnBackupVault internal constructor(
         CfnBackupVault = CfnBackupVault(cdkObject)
 
     internal fun unwrap(wrapped: CfnBackupVault):
-        software.amazon.awscdk.services.backup.CfnBackupVault = wrapped.cdkObject
+        software.amazon.awscdk.services.backup.CfnBackupVault = wrapped.cdkObject as
+        software.amazon.awscdk.services.backup.CfnBackupVault
   }
 
   /**
@@ -712,8 +713,7 @@ public open class CfnBackupVault internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupVault.LockConfigurationTypeProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault.LockConfigurationTypeProperty,
     ) : CdkObject(cdkObject), LockConfigurationTypeProperty {
       /**
        * The AWS Backup Vault Lock configuration that specifies the number of days before the lock
@@ -910,8 +910,7 @@ public open class CfnBackupVault internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty,
     ) : CdkObject(cdkObject), NotificationObjectTypeProperty {
       /**
        * An array of events that indicate the status of jobs to back up resources to the backup

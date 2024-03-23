@@ -41,8 +41,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public open class LookupMachineImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.LookupMachineImage,
+public open class LookupMachineImage(
+  cdkObject: software.amazon.awscdk.services.ec2.LookupMachineImage,
 ) : CdkObject(cdkObject), IMachineImage {
   public constructor(props: LookupMachineImageProps) :
       this(software.amazon.awscdk.services.ec2.LookupMachineImage(props.let(LookupMachineImageProps::unwrap))
@@ -199,6 +199,7 @@ public open class LookupMachineImage internal constructor(
         LookupMachineImage = LookupMachineImage(cdkObject)
 
     internal fun unwrap(wrapped: LookupMachineImage):
-        software.amazon.awscdk.services.ec2.LookupMachineImage = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.LookupMachineImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.LookupMachineImage
   }
 }

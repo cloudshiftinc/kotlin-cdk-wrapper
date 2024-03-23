@@ -34,9 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchroleconstraint.html)
  */
-public open class CfnLaunchRoleConstraint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraint,
+public open class CfnLaunchRoleConstraint(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -312,5 +311,6 @@ public open class CfnLaunchRoleConstraint internal constructor(
 
     internal fun unwrap(wrapped: CfnLaunchRoleConstraint):
         software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraint = wrapped.cdkObject
+        as software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraint
   }
 }

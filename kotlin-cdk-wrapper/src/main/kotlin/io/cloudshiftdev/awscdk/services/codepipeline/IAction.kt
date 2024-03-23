@@ -104,7 +104,7 @@ public interface IAction {
   ): Rule
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.IAction,
+    cdkObject: software.amazon.awscdk.services.codepipeline.IAction,
   ) : CdkObject(cdkObject), IAction {
     /**
      * The simple properties of the Action, like its Owner, name, etc.

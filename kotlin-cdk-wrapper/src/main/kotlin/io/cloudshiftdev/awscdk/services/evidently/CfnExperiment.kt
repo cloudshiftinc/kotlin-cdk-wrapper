@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-experiment.html)
  */
-public open class CfnExperiment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment,
+public open class CfnExperiment(
+  cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -944,7 +944,8 @@ public open class CfnExperiment internal constructor(
         CfnExperiment = CfnExperiment(cdkObject)
 
     internal fun unwrap(wrapped: CfnExperiment):
-        software.amazon.awscdk.services.evidently.CfnExperiment = wrapped.cdkObject
+        software.amazon.awscdk.services.evidently.CfnExperiment = wrapped.cdkObject as
+        software.amazon.awscdk.services.evidently.CfnExperiment
   }
 
   /**
@@ -1126,8 +1127,7 @@ public open class CfnExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnExperiment.MetricGoalObjectProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.MetricGoalObjectProperty,
     ) : CdkObject(cdkObject), MetricGoalObjectProperty {
       /**
        * `INCREASE` means that a variation with a higher number for this metric is performing
@@ -1330,8 +1330,7 @@ public open class CfnExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty,
     ) : CdkObject(cdkObject), OnlineAbConfigObjectProperty {
       /**
        * The name of the variation that is to be the default variation that the other variations are
@@ -1506,8 +1505,7 @@ public open class CfnExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnExperiment.RunningStatusObjectProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.RunningStatusObjectProperty,
     ) : CdkObject(cdkObject), RunningStatusObjectProperty {
       /**
        * If you are using AWS CloudFormation to start the experiment, use this field to specify when
@@ -1684,8 +1682,7 @@ public open class CfnExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentObjectProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentObjectProperty,
     ) : CdkObject(cdkObject), TreatmentObjectProperty {
       /**
        * The description of the treatment.
@@ -1818,8 +1815,7 @@ public open class CfnExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty,
     ) : CdkObject(cdkObject), TreatmentToWeightProperty {
       /**
        * The portion of experiment traffic to allocate to this treatment.

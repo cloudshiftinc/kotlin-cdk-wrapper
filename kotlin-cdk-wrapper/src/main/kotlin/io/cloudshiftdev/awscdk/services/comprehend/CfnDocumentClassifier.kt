@@ -87,8 +87,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-documentclassifier.html)
  */
-public open class CfnDocumentClassifier internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier,
+public open class CfnDocumentClassifier(
+  cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -859,7 +859,8 @@ public open class CfnDocumentClassifier internal constructor(
         CfnDocumentClassifier = CfnDocumentClassifier(cdkObject)
 
     internal fun unwrap(wrapped: CfnDocumentClassifier):
-        software.amazon.awscdk.services.comprehend.CfnDocumentClassifier = wrapped.cdkObject
+        software.amazon.awscdk.services.comprehend.CfnDocumentClassifier = wrapped.cdkObject as
+        software.amazon.awscdk.services.comprehend.CfnDocumentClassifier
   }
 
   /**
@@ -1044,8 +1045,7 @@ public open class CfnDocumentClassifier internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty,
     ) : CdkObject(cdkObject), AugmentedManifestsListItemProperty {
       /**
        * The JSON attribute that contains the annotations for your training documents.
@@ -1193,8 +1193,7 @@ public open class CfnDocumentClassifier internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierDocumentsProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierDocumentsProperty,
     ) : CdkObject(cdkObject), DocumentClassifierDocumentsProperty {
       /**
        * The S3 URI location of the training documents specified in the S3Uri CSV file.
@@ -1650,8 +1649,7 @@ public open class CfnDocumentClassifier internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierInputDataConfigProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierInputDataConfigProperty,
     ) : CdkObject(cdkObject), DocumentClassifierInputDataConfigProperty {
       /**
        * A list of augmented manifest files that provide training data for your custom model.
@@ -1891,8 +1889,7 @@ public open class CfnDocumentClassifier internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierOutputDataConfigProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierOutputDataConfigProperty,
     ) : CdkObject(cdkObject), DocumentClassifierOutputDataConfigProperty {
       /**
        * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the
@@ -2138,8 +2135,7 @@ public open class CfnDocumentClassifier internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty,
     ) : CdkObject(cdkObject), DocumentReaderConfigProperty {
       /**
        * This field defines the Amazon Textract API operation that Amazon Comprehend uses to extract
@@ -2351,8 +2347,7 @@ public open class CfnDocumentClassifier internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * The ID number for a security group on an instance of your private VPC.

@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendraranking-executionplan.html)
  */
-public open class CfnExecutionPlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kendraranking.CfnExecutionPlan,
+public open class CfnExecutionPlan(
+  cdkObject: software.amazon.awscdk.services.kendraranking.CfnExecutionPlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -384,7 +384,8 @@ public open class CfnExecutionPlan internal constructor(
         CfnExecutionPlan = CfnExecutionPlan(cdkObject)
 
     internal fun unwrap(wrapped: CfnExecutionPlan):
-        software.amazon.awscdk.services.kendraranking.CfnExecutionPlan = wrapped.cdkObject
+        software.amazon.awscdk.services.kendraranking.CfnExecutionPlan = wrapped.cdkObject as
+        software.amazon.awscdk.services.kendraranking.CfnExecutionPlan
   }
 
   /**
@@ -452,8 +453,7 @@ public open class CfnExecutionPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendraranking.CfnExecutionPlan.CapacityUnitsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kendraranking.CfnExecutionPlan.CapacityUnitsConfigurationProperty,
     ) : CdkObject(cdkObject), CapacityUnitsConfigurationProperty {
       /**
        * The amount of extra capacity for your rescore execution plan.

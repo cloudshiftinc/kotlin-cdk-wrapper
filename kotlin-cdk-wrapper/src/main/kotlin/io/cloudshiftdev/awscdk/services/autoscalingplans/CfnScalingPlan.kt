@@ -109,8 +109,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html)
  */
-public open class CfnScalingPlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan,
+public open class CfnScalingPlan(
+  cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -366,7 +366,8 @@ public open class CfnScalingPlan internal constructor(
         CfnScalingPlan = CfnScalingPlan(cdkObject)
 
     internal fun unwrap(wrapped: CfnScalingPlan):
-        software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan
   }
 
   /**
@@ -554,8 +555,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty,
     ) : CdkObject(cdkObject), ApplicationSourceProperty {
       /**
        * The Amazon Resource Name (ARN) of a CloudFormation stack.
@@ -813,8 +813,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedLoadMetricSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedLoadMetricSpecificationProperty,
     ) : CdkObject(cdkObject), CustomizedLoadMetricSpecificationProperty {
       /**
        * The dimensions of the metric.
@@ -1097,8 +1096,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedScalingMetricSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedScalingMetricSpecificationProperty,
     ) : CdkObject(cdkObject), CustomizedScalingMetricSpecificationProperty {
       /**
        * The dimensions of the metric.
@@ -1246,8 +1244,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty,
     ) : CdkObject(cdkObject), MetricDimensionProperty {
       /**
        * The name of the dimension.
@@ -1431,8 +1428,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty,
     ) : CdkObject(cdkObject), PredefinedLoadMetricSpecificationProperty {
       /**
        * The metric type.
@@ -1644,8 +1640,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedScalingMetricSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedScalingMetricSpecificationProperty,
     ) : CdkObject(cdkObject), PredefinedScalingMetricSpecificationProperty {
       /**
        * The metric type.
@@ -2484,8 +2479,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ScalingInstructionProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ScalingInstructionProperty,
     ) : CdkObject(cdkObject), ScalingInstructionProperty {
       /**
        * The customized load metric to use for predictive scaling.
@@ -2789,8 +2783,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty,
     ) : CdkObject(cdkObject), TagFilterProperty {
       /**
        * The tag key.
@@ -3173,8 +3166,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty,
     ) : CdkObject(cdkObject), TargetTrackingConfigurationProperty {
       /**
        * A customized metric.

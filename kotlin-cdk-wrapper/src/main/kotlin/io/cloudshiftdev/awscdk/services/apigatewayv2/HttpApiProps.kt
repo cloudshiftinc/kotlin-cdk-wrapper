@@ -299,7 +299,7 @@ public interface HttpApiProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpApiProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpApiProps,
   ) : CdkObject(cdkObject), HttpApiProps {
     /**
      * Name for the HTTP API resource.

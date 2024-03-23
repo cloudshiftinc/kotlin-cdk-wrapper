@@ -26,9 +26,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public abstract class HttpGatewayRoutePathMatch internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatch,
+public abstract class HttpGatewayRoutePathMatch(
+  cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatch,
 ) : CdkObject(cdkObject) {
   /**
    * Returns the gateway route path match configuration.
@@ -39,7 +38,7 @@ public abstract class HttpGatewayRoutePathMatch internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(HttpGatewayRoutePathMatchConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatch,
+    cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatch,
   ) : HttpGatewayRoutePathMatch(cdkObject)
 
   public companion object {

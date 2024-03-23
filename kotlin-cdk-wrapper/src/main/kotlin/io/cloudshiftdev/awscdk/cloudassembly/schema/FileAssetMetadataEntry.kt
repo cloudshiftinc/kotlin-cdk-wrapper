@@ -159,7 +159,7 @@ public interface FileAssetMetadataEntry {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.FileAssetMetadataEntry,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.FileAssetMetadataEntry,
   ) : CdkObject(cdkObject), FileAssetMetadataEntry {
     /**
      * The name of the parameter where the hash of the bundled asset should be passed in.

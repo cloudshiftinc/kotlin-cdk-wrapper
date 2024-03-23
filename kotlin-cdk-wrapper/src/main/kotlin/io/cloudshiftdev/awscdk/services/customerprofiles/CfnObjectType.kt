@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html)
  */
-public open class CfnObjectType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType,
+public open class CfnObjectType(
+  cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -661,7 +661,8 @@ public open class CfnObjectType internal constructor(
         CfnObjectType = CfnObjectType(cdkObject)
 
     internal fun unwrap(wrapped: CfnObjectType):
-        software.amazon.awscdk.services.customerprofiles.CfnObjectType = wrapped.cdkObject
+        software.amazon.awscdk.services.customerprofiles.CfnObjectType = wrapped.cdkObject as
+        software.amazon.awscdk.services.customerprofiles.CfnObjectType
   }
 
   /**
@@ -768,8 +769,7 @@ public open class CfnObjectType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty,
     ) : CdkObject(cdkObject), FieldMapProperty {
       /**
        * Name of the field.
@@ -903,8 +903,7 @@ public open class CfnObjectType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty,
     ) : CdkObject(cdkObject), KeyMapProperty {
       /**
        * Name of the key.
@@ -1048,8 +1047,7 @@ public open class CfnObjectType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty,
     ) : CdkObject(cdkObject), ObjectTypeFieldProperty {
       /**
        * The content type of the field.
@@ -1232,8 +1230,7 @@ public open class CfnObjectType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeKeyProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeKeyProperty,
     ) : CdkObject(cdkObject), ObjectTypeKeyProperty {
       /**
        * The reference for the key name of the fields map.

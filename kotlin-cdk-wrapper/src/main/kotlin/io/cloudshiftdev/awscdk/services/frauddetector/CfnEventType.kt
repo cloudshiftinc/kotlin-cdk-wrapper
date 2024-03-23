@@ -88,8 +88,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html)
  */
-public open class CfnEventType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType,
+public open class CfnEventType(
+  cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -531,7 +531,8 @@ public open class CfnEventType internal constructor(
         CfnEventType = CfnEventType(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventType):
-        software.amazon.awscdk.services.frauddetector.CfnEventType = wrapped.cdkObject
+        software.amazon.awscdk.services.frauddetector.CfnEventType = wrapped.cdkObject as
+        software.amazon.awscdk.services.frauddetector.CfnEventType
   }
 
   /**
@@ -807,8 +808,7 @@ public open class CfnEventType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnEventType.EntityTypeProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType.EntityTypeProperty,
     ) : CdkObject(cdkObject), EntityTypeProperty {
       /**
        * The entity type ARN.
@@ -1275,8 +1275,7 @@ public open class CfnEventType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnEventType.EventVariableProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType.EventVariableProperty,
     ) : CdkObject(cdkObject), EventVariableProperty {
       /**
        * The event variable ARN.
@@ -1670,8 +1669,7 @@ public open class CfnEventType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnEventType.LabelProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType.LabelProperty,
     ) : CdkObject(cdkObject), LabelProperty {
       /**
        * The label ARN.

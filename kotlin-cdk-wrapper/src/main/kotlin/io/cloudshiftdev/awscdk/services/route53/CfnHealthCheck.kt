@@ -97,8 +97,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html)
  */
-public open class CfnHealthCheck internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck,
+public open class CfnHealthCheck(
+  cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -367,7 +367,8 @@ public open class CfnHealthCheck internal constructor(
         CfnHealthCheck = CfnHealthCheck(cdkObject)
 
     internal fun unwrap(wrapped: CfnHealthCheck):
-        software.amazon.awscdk.services.route53.CfnHealthCheck = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.CfnHealthCheck = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.CfnHealthCheck
   }
 
   /**
@@ -489,8 +490,7 @@ public open class CfnHealthCheck internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnHealthCheck.AlarmIdentifierProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.AlarmIdentifierProperty,
     ) : CdkObject(cdkObject), AlarmIdentifierProperty {
       /**
        * The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to
@@ -1757,8 +1757,7 @@ public open class CfnHealthCheck internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty,
     ) : CdkObject(cdkObject), HealthCheckConfigProperty {
       /**
        * A complex type that identifies the CloudWatch alarm that you want Amazon Route 53 health
@@ -2237,8 +2236,7 @@ public open class CfnHealthCheck internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty,
     ) : CdkObject(cdkObject), HealthCheckTagProperty {
       /**
        * The value of `Key` depends on the operation that you want to perform:.

@@ -179,7 +179,7 @@ public interface CustomAttributeConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.CustomAttributeConfig,
+    cdkObject: software.amazon.awscdk.services.cognito.CustomAttributeConfig,
   ) : CdkObject(cdkObject), CustomAttributeConfig {
     /**
      * The data type of the custom attribute.

@@ -187,7 +187,7 @@ public interface CfnReceiptRuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRuleProps,
+    cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRuleProps,
   ) : CdkObject(cdkObject), CfnReceiptRuleProps {
     /**
      * The name of an existing rule after which the new rule is placed.

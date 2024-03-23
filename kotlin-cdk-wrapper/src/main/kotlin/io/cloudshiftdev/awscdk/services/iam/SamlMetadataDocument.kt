@@ -20,8 +20,8 @@ import kotlin.String
  * "SAML:iss", "issuer")));
  * ```
  */
-public abstract class SamlMetadataDocument internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.SamlMetadataDocument,
+public abstract class SamlMetadataDocument(
+  cdkObject: software.amazon.awscdk.services.iam.SamlMetadataDocument,
 ) : CdkObject(cdkObject) {
   /**
    * The XML content of the metadata document.
@@ -29,7 +29,7 @@ public abstract class SamlMetadataDocument internal constructor(
   public open fun xml(): String = unwrap(this).getXml()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.SamlMetadataDocument,
+    cdkObject: software.amazon.awscdk.services.iam.SamlMetadataDocument,
   ) : SamlMetadataDocument(cdkObject)
 
   public companion object {

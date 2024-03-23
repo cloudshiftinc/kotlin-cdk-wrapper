@@ -78,8 +78,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html)
  */
-public open class CfnImageRecipe internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe,
+public open class CfnImageRecipe(
+  cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -652,7 +652,8 @@ public open class CfnImageRecipe internal constructor(
         CfnImageRecipe = CfnImageRecipe(cdkObject)
 
     internal fun unwrap(wrapped: CfnImageRecipe):
-        software.amazon.awscdk.services.imagebuilder.CfnImageRecipe = wrapped.cdkObject
+        software.amazon.awscdk.services.imagebuilder.CfnImageRecipe = wrapped.cdkObject as
+        software.amazon.awscdk.services.imagebuilder.CfnImageRecipe
   }
 
   /**
@@ -823,8 +824,7 @@ public open class CfnImageRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.AdditionalInstanceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.AdditionalInstanceConfigurationProperty,
     ) : CdkObject(cdkObject), AdditionalInstanceConfigurationProperty {
       /**
        * Contains settings for the Systems Manager agent on your build instance.
@@ -984,8 +984,7 @@ public open class CfnImageRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentConfigurationProperty,
     ) : CdkObject(cdkObject), ComponentConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the component.
@@ -1105,8 +1104,7 @@ public open class CfnImageRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty,
     ) : CdkObject(cdkObject), ComponentParameterProperty {
       /**
        * The name of the component parameter to set.
@@ -1363,8 +1361,7 @@ public open class CfnImageRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty,
     ) : CdkObject(cdkObject), EbsInstanceBlockDeviceSpecificationProperty {
       /**
        * Configures delete on termination of the associated device.
@@ -1603,8 +1600,7 @@ public open class CfnImageRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty,
     ) : CdkObject(cdkObject), InstanceBlockDeviceMappingProperty {
       /**
        * The device to which these mappings apply.
@@ -1744,8 +1740,7 @@ public open class CfnImageRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty,
     ) : CdkObject(cdkObject), SystemsManagerAgentProperty {
       /**
        * Controls whether the Systems Manager agent is removed from your final build image, prior to

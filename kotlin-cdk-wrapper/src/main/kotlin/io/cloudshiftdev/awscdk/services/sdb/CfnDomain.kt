@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sdb-domain.html)
  */
-public open class CfnDomain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sdb.CfnDomain,
+public open class CfnDomain(
+  cdkObject: software.amazon.awscdk.services.sdb.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sdb.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -135,6 +135,6 @@ public open class CfnDomain internal constructor(
         CfnDomain(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomain): software.amazon.awscdk.services.sdb.CfnDomain =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sdb.CfnDomain
   }
 }

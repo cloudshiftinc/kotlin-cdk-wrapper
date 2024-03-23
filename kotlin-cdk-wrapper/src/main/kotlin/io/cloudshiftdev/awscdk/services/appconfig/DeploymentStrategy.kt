@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html)
  */
-public open class DeploymentStrategy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategy,
+public open class DeploymentStrategy(
+  cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategy,
 ) : Resource(cdkObject), IDeploymentStrategy {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -201,6 +201,7 @@ public open class DeploymentStrategy internal constructor(
         DeploymentStrategy = DeploymentStrategy(cdkObject)
 
     internal fun unwrap(wrapped: DeploymentStrategy):
-        software.amazon.awscdk.services.appconfig.DeploymentStrategy = wrapped.cdkObject
+        software.amazon.awscdk.services.appconfig.DeploymentStrategy = wrapped.cdkObject as
+        software.amazon.awscdk.services.appconfig.DeploymentStrategy
   }
 }

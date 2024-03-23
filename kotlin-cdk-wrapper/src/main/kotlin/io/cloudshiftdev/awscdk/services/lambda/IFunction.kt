@@ -377,7 +377,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
   public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.IFunction,
+    cdkObject: software.amazon.awscdk.services.lambda.IFunction,
   ) : CdkObject(cdkObject), IFunction {
     /**
      * Adds an event source to this function.

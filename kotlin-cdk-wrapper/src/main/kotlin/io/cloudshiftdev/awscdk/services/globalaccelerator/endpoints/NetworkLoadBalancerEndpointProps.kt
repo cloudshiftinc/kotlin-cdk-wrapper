@@ -66,8 +66,7 @@ public interface NetworkLoadBalancerEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpointProps,
+    cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpointProps,
   ) : CdkObject(cdkObject), NetworkLoadBalancerEndpointProps {
     /**
      * Endpoint weight across all endpoints in the group.

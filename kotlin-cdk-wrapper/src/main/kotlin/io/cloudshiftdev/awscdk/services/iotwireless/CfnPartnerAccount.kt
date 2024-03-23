@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html)
  */
-public open class CfnPartnerAccount internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount,
+public open class CfnPartnerAccount(
+  cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iotwireless.CfnPartnerAccount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -569,7 +569,8 @@ public open class CfnPartnerAccount internal constructor(
         CfnPartnerAccount = CfnPartnerAccount(cdkObject)
 
     internal fun unwrap(wrapped: CfnPartnerAccount):
-        software.amazon.awscdk.services.iotwireless.CfnPartnerAccount = wrapped.cdkObject
+        software.amazon.awscdk.services.iotwireless.CfnPartnerAccount = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotwireless.CfnPartnerAccount
   }
 
   /**
@@ -642,8 +643,7 @@ public open class CfnPartnerAccount internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty,
     ) : CdkObject(cdkObject), SidewalkAccountInfoProperty {
       /**
        * The Sidewalk application server private key.
@@ -772,8 +772,7 @@ public open class CfnPartnerAccount internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty,
     ) : CdkObject(cdkObject), SidewalkAccountInfoWithFingerprintProperty {
       /**
        * The Sidewalk Amazon ID.
@@ -871,8 +870,7 @@ public open class CfnPartnerAccount internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty,
     ) : CdkObject(cdkObject), SidewalkUpdateAccountProperty {
       /**
        * The new Sidewalk application server private key.

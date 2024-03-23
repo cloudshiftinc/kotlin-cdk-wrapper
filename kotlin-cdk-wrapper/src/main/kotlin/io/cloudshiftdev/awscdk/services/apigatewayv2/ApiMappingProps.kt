@@ -124,7 +124,7 @@ public interface ApiMappingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMappingProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMappingProps,
   ) : CdkObject(cdkObject), ApiMappingProps {
     /**
      * The Api to which this mapping is applied.

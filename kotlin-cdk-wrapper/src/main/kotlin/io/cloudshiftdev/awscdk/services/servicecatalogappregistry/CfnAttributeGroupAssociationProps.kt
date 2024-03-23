@@ -85,8 +85,7 @@ public interface CfnAttributeGroupAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupAssociationProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupAssociationProps,
   ) : CdkObject(cdkObject), CfnAttributeGroupAssociationProps {
     /**
      * The name or ID of the application.

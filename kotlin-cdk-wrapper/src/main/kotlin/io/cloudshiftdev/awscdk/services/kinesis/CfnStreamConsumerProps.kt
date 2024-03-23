@@ -81,7 +81,7 @@ public interface CfnStreamConsumerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kinesis.CfnStreamConsumerProps,
+    cdkObject: software.amazon.awscdk.services.kinesis.CfnStreamConsumerProps,
   ) : CdkObject(cdkObject), CfnStreamConsumerProps {
     /**
      * The name of the consumer is something you choose when you register the consumer.

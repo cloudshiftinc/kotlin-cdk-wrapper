@@ -59,7 +59,7 @@ public interface CfnAccountProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CfnAccountProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CfnAccountProps,
   ) : CdkObject(cdkObject), CfnAccountProps {
     /**
      * The ARN of an Amazon CloudWatch role for the current Account.

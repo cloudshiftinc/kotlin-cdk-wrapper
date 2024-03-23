@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilter.html)
  */
-public open class CfnTrafficMirrorFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilter,
+public open class CfnTrafficMirrorFilter(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilter,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -266,6 +266,7 @@ public open class CfnTrafficMirrorFilter internal constructor(
         CfnTrafficMirrorFilter = CfnTrafficMirrorFilter(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficMirrorFilter):
-        software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilter = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilter = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilter
   }
 }

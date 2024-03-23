@@ -113,7 +113,7 @@ public interface ClientVpnRouteProps : ClientVpnRouteOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnRouteProps,
+    cdkObject: software.amazon.awscdk.services.ec2.ClientVpnRouteProps,
   ) : CdkObject(cdkObject), ClientVpnRouteProps {
     /**
      * The IPv4 address range, in CIDR notation, of the route destination.

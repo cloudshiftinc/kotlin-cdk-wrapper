@@ -24,9 +24,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class StateTransitionMetric internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.StateTransitionMetric,
+public open class StateTransitionMetric(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.StateTransitionMetric,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.stepfunctions.StateTransitionMetric()
   )
@@ -93,6 +92,7 @@ public open class StateTransitionMetric internal constructor(
         StateTransitionMetric = StateTransitionMetric(cdkObject)
 
     internal fun unwrap(wrapped: StateTransitionMetric):
-        software.amazon.awscdk.services.stepfunctions.StateTransitionMetric = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.StateTransitionMetric = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.StateTransitionMetric
   }
 }

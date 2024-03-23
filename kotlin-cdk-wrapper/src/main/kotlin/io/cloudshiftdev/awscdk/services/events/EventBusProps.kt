@@ -89,7 +89,7 @@ public interface EventBusProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.EventBusProps,
+    cdkObject: software.amazon.awscdk.services.events.EventBusProps,
   ) : CdkObject(cdkObject), EventBusProps {
     /**
      * The name of the event bus you are creating Note: If 'eventSourceName' is passed in, you

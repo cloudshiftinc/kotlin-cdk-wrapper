@@ -76,7 +76,7 @@ public interface VdmAttributesProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.VdmAttributesProps,
+    cdkObject: software.amazon.awscdk.services.ses.VdmAttributesProps,
   ) : CdkObject(cdkObject), VdmAttributesProps {
     /**
      * Whether engagement metrics are enabled for your account.

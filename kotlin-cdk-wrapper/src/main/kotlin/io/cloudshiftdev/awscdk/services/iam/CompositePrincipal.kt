@@ -31,8 +31,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class CompositePrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CompositePrincipal,
+public open class CompositePrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.CompositePrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(principals: IPrincipal) :
       this(software.amazon.awscdk.services.iam.CompositePrincipal(principals.let(IPrincipal::unwrap))
@@ -101,6 +101,7 @@ public open class CompositePrincipal internal constructor(
         CompositePrincipal = CompositePrincipal(cdkObject)
 
     internal fun unwrap(wrapped: CompositePrincipal):
-        software.amazon.awscdk.services.iam.CompositePrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.CompositePrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.CompositePrincipal
   }
 }

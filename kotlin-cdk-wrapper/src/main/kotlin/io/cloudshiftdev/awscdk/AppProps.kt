@@ -326,7 +326,7 @@ public interface AppProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.AppProps,
+    cdkObject: software.amazon.awscdk.AppProps,
   ) : CdkObject(cdkObject), AppProps {
     /**
      * Include runtime versioning information in the Stacks of this app.

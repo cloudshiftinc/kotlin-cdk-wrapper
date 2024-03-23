@@ -84,8 +84,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html)
  */
-public open class CfnReceiptRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule,
+public open class CfnReceiptRule(
+  cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -312,7 +312,7 @@ public open class CfnReceiptRule internal constructor(
         = CfnReceiptRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnReceiptRule): software.amazon.awscdk.services.ses.CfnReceiptRule
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.ses.CfnReceiptRule
   }
 
   /**
@@ -748,7 +748,7 @@ public open class CfnReceiptRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * Adds a header to the received email.
@@ -909,8 +909,7 @@ public open class CfnReceiptRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnReceiptRule.AddHeaderActionProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.AddHeaderActionProperty,
     ) : CdkObject(cdkObject), AddHeaderActionProperty {
       /**
        * The name of the header to add to the incoming message.
@@ -1122,8 +1121,7 @@ public open class CfnReceiptRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnReceiptRule.BounceActionProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.BounceActionProperty,
     ) : CdkObject(cdkObject), BounceActionProperty {
       /**
        * Human-readable text to include in the bounce message.
@@ -1359,8 +1357,7 @@ public open class CfnReceiptRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnReceiptRule.LambdaActionProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.LambdaActionProperty,
     ) : CdkObject(cdkObject), LambdaActionProperty {
       /**
        * The Amazon Resource Name (ARN) of the AWS Lambda function.
@@ -1746,7 +1743,7 @@ public open class CfnReceiptRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.RuleProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.RuleProperty,
     ) : CdkObject(cdkObject), RuleProperty {
       /**
        * An ordered list of actions to perform on messages that match at least one of the recipient
@@ -2070,7 +2067,7 @@ public open class CfnReceiptRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.S3ActionProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.S3ActionProperty,
     ) : CdkObject(cdkObject), S3ActionProperty {
       /**
        * The name of the Amazon S3 bucket for incoming email.
@@ -2282,7 +2279,7 @@ public open class CfnReceiptRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.SNSActionProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.SNSActionProperty,
     ) : CdkObject(cdkObject), SNSActionProperty {
       /**
        * The encoding to use for the email within the Amazon SNS notification.
@@ -2431,7 +2428,7 @@ public open class CfnReceiptRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.StopActionProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.StopActionProperty,
     ) : CdkObject(cdkObject), StopActionProperty {
       /**
        * The scope of the StopAction.
@@ -2609,8 +2606,7 @@ public open class CfnReceiptRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnReceiptRule.WorkmailActionProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.WorkmailActionProperty,
     ) : CdkObject(cdkObject), WorkmailActionProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon WorkMail organization. Amazon WorkMail ARNs

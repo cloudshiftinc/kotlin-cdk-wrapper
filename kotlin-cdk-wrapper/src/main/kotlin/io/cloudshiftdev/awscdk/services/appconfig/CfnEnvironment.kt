@@ -66,8 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html)
  */
-public open class CfnEnvironment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.CfnEnvironment,
+public open class CfnEnvironment(
+  cdkObject: software.amazon.awscdk.services.appconfig.CfnEnvironment,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -368,7 +368,8 @@ public open class CfnEnvironment internal constructor(
         CfnEnvironment = CfnEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironment):
-        software.amazon.awscdk.services.appconfig.CfnEnvironment = wrapped.cdkObject
+        software.amazon.awscdk.services.appconfig.CfnEnvironment = wrapped.cdkObject as
+        software.amazon.awscdk.services.appconfig.CfnEnvironment
   }
 
   /**
@@ -447,8 +448,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorProperty,
+      cdkObject: software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorProperty,
     ) : CdkObject(cdkObject), MonitorProperty {
       /**
        * Amazon Resource Name (ARN) of the Amazon CloudWatch alarm.
@@ -550,8 +550,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorsProperty,
+      cdkObject: software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorsProperty,
     ) : CdkObject(cdkObject), MonitorsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-environment-monitors.html#cfn-appconfig-environment-monitors-alarmarn)

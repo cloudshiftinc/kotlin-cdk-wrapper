@@ -331,7 +331,7 @@ public interface CfnAnomalySubscriptionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscriptionProps,
+    cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscriptionProps,
   ) : CdkObject(cdkObject), CfnAnomalySubscriptionProps {
     /**
      * The frequency that anomaly notifications are sent.

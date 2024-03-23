@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-testgridproject.html)
  */
-public open class CfnTestGridProject internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnTestGridProject,
+public open class CfnTestGridProject(
+  cdkObject: software.amazon.awscdk.services.devicefarm.CfnTestGridProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -338,7 +338,8 @@ public open class CfnTestGridProject internal constructor(
         CfnTestGridProject = CfnTestGridProject(cdkObject)
 
     internal fun unwrap(wrapped: CfnTestGridProject):
-        software.amazon.awscdk.services.devicefarm.CfnTestGridProject = wrapped.cdkObject
+        software.amazon.awscdk.services.devicefarm.CfnTestGridProject = wrapped.cdkObject as
+        software.amazon.awscdk.services.devicefarm.CfnTestGridProject
   }
 
   /**
@@ -506,8 +507,7 @@ public open class CfnTestGridProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.devicefarm.CfnTestGridProject.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.devicefarm.CfnTestGridProject.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * A list of VPC security group IDs.

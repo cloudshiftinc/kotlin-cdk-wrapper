@@ -96,7 +96,7 @@ public interface SubscriptionFilterProps : SubscriptionFilterOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.SubscriptionFilterProps,
+    cdkObject: software.amazon.awscdk.services.logs.SubscriptionFilterProps,
   ) : CdkObject(cdkObject), SubscriptionFilterProps {
     /**
      * The destination to send the filtered events to.

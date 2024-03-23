@@ -386,8 +386,7 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroupProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroupProps,
   ) : CdkObject(cdkObject), ApplicationTargetGroupProps {
     /**
      * The amount of time for Elastic Load Balancing to wait before deregistering a target.

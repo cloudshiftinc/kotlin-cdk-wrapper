@@ -507,7 +507,7 @@ public interface CfnApplicationV2Props {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2Props,
+    cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2Props,
   ) : CdkObject(cdkObject), CfnApplicationV2Props {
     /**
      * Use this parameter to configure the application.

@@ -86,8 +86,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html)
  */
-public open class CfnMethod internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod,
+public open class CfnMethod(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -853,7 +853,7 @@ public open class CfnMethod internal constructor(
         CfnMethod(cdkObject)
 
     internal fun unwrap(wrapped: CfnMethod): software.amazon.awscdk.services.apigateway.CfnMethod =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigateway.CfnMethod
   }
 
   /**
@@ -1470,8 +1470,7 @@ public open class CfnMethod internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationProperty,
     ) : CdkObject(cdkObject), IntegrationProperty {
       /**
        * A list of request parameters whose values API Gateway caches.
@@ -1925,8 +1924,7 @@ public open class CfnMethod internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationResponseProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationResponseProperty,
     ) : CdkObject(cdkObject), IntegrationResponseProperty {
       /**
        * Specifies how to handle response payload content type conversions.
@@ -2198,8 +2196,7 @@ public open class CfnMethod internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty,
     ) : CdkObject(cdkObject), MethodResponseProperty {
       /**
        * Specifies the Model resources used for the response's content-type.

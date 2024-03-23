@@ -30,8 +30,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-task-state.html#task-state-fields)
  */
-public abstract class TaskRole internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.TaskRole,
+public abstract class TaskRole(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.TaskRole,
 ) : CdkObject(cdkObject) {
   /**
    * Retrieves the resource for use in IAM Policies for this TaskRole.
@@ -44,7 +44,7 @@ public abstract class TaskRole internal constructor(
   public open fun roleArn(): String = unwrap(this).getRoleArn()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.TaskRole,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.TaskRole,
   ) : TaskRole(cdkObject)
 
   public companion object {

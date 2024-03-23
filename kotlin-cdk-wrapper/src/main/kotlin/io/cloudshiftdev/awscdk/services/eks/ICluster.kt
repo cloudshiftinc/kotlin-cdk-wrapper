@@ -335,7 +335,7 @@ public interface ICluster : IResource, IConnectable {
   public fun vpc(): IVpc
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.ICluster,
+    cdkObject: software.amazon.awscdk.services.eks.ICluster,
   ) : CdkObject(cdkObject), ICluster {
     /**
      * Defines a CDK8s chart in this cluster.

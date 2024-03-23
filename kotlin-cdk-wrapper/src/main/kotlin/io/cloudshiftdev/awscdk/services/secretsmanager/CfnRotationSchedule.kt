@@ -76,9 +76,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)
  */
-public open class CfnRotationSchedule internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule,
+public open class CfnRotationSchedule(
+  cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -592,7 +591,8 @@ public open class CfnRotationSchedule internal constructor(
         CfnRotationSchedule = CfnRotationSchedule(cdkObject)
 
     internal fun unwrap(wrapped: CfnRotationSchedule):
-        software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule = wrapped.cdkObject
+        software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule = wrapped.cdkObject as
+        software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule
   }
 
   /**
@@ -1235,8 +1235,7 @@ public open class CfnRotationSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.HostedRotationLambdaProperty,
+      cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.HostedRotationLambdaProperty,
     ) : CdkObject(cdkObject), HostedRotationLambdaProperty {
       /**
        * A string of the characters that you don't want in the password.
@@ -1671,8 +1670,7 @@ public open class CfnRotationSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.RotationRulesProperty,
+      cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.RotationRulesProperty,
     ) : CdkObject(cdkObject), RotationRulesProperty {
       /**
        * The number of days between automatic scheduled rotations of the secret.

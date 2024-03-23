@@ -33,9 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfacepermission.html)
  */
-public open class CfnNetworkInterfacePermission internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermission,
+public open class CfnNetworkInterfacePermission(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermission,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -192,6 +191,7 @@ public open class CfnNetworkInterfacePermission internal constructor(
         CfnNetworkInterfacePermission = CfnNetworkInterfacePermission(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInterfacePermission):
-        software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermission = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermission = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermission
   }
 }

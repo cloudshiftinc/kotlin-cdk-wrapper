@@ -122,8 +122,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)
  */
-public open class CfnBroker internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker,
+public open class CfnBroker(
+  cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1551,7 +1551,7 @@ public open class CfnBroker internal constructor(
         CfnBroker(cdkObject)
 
     internal fun unwrap(wrapped: CfnBroker): software.amazon.awscdk.services.amazonmq.CfnBroker =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.amazonmq.CfnBroker
   }
 
   /**
@@ -1630,8 +1630,7 @@ public open class CfnBroker internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty,
+      cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty,
     ) : CdkObject(cdkObject), ConfigurationIdProperty {
       /**
        * The unique ID that Amazon MQ generates for the configuration.
@@ -1769,8 +1768,7 @@ public open class CfnBroker internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty,
     ) : CdkObject(cdkObject), EncryptionOptionsProperty {
       /**
        * The customer master key (CMK) to use for the A AWS KMS (KMS).
@@ -2218,8 +2216,7 @@ public open class CfnBroker internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amazonmq.CfnBroker.LdapServerMetadataProperty,
+      cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.LdapServerMetadataProperty,
     ) : CdkObject(cdkObject), LdapServerMetadataProperty {
       /**
        * Specifies the location of the LDAP server such as AWS Directory Service for Microsoft
@@ -2466,7 +2463,7 @@ public open class CfnBroker internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty,
+      cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty,
     ) : CdkObject(cdkObject), LogListProperty {
       /**
        * Enables audit logging.
@@ -2599,8 +2596,7 @@ public open class CfnBroker internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty,
+      cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty,
     ) : CdkObject(cdkObject), MaintenanceWindowProperty {
       /**
        * The day of the week.
@@ -2714,7 +2710,7 @@ public open class CfnBroker internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.TagsEntryProperty,
+      cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.TagsEntryProperty,
     ) : CdkObject(cdkObject), TagsEntryProperty {
       /**
        * The key in a key-value pair.
@@ -2983,7 +2979,7 @@ public open class CfnBroker internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.UserProperty,
+      cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.UserProperty,
     ) : CdkObject(cdkObject), UserProperty {
       /**
        * Enables access to the ActiveMQ web console for the ActiveMQ user.

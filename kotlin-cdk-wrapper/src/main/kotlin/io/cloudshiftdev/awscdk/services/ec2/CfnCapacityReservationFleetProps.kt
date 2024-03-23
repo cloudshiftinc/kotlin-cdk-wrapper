@@ -459,7 +459,7 @@ public interface CfnCapacityReservationFleetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleetProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleetProps,
   ) : CdkObject(cdkObject), CfnCapacityReservationFleetProps {
     /**
      * The strategy used by the Capacity Reservation Fleet to determine which of the specified

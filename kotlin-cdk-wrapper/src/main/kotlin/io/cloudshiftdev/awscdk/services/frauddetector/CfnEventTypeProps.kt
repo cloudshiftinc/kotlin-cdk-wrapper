@@ -301,7 +301,7 @@ public interface CfnEventTypeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventTypeProps,
+    cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventTypeProps,
   ) : CdkObject(cdkObject), CfnEventTypeProps {
     /**
      * The event type description.

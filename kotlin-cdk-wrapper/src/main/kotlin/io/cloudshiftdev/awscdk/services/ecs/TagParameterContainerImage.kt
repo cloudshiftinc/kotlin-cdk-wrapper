@@ -183,8 +183,8 @@ import kotlin.String
  *
  * [Documentation]( #tagParameterName)
  */
-public open class TagParameterContainerImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.TagParameterContainerImage,
+public open class TagParameterContainerImage(
+  cdkObject: software.amazon.awscdk.services.ecs.TagParameterContainerImage,
 ) : ContainerImage(cdkObject) {
   public constructor(repository: IRepository) :
       this(software.amazon.awscdk.services.ecs.TagParameterContainerImage(repository.let(IRepository::unwrap))
@@ -217,6 +217,7 @@ public open class TagParameterContainerImage internal constructor(
         TagParameterContainerImage = TagParameterContainerImage(cdkObject)
 
     internal fun unwrap(wrapped: TagParameterContainerImage):
-        software.amazon.awscdk.services.ecs.TagParameterContainerImage = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.TagParameterContainerImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.TagParameterContainerImage
   }
 }

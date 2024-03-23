@@ -93,8 +93,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html)
  */
-public open class CfnDeployment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment,
+public open class CfnDeployment(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -442,7 +442,8 @@ public open class CfnDeployment internal constructor(
         CfnDeployment = CfnDeployment(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeployment):
-        software.amazon.awscdk.services.apigateway.CfnDeployment = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CfnDeployment = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnDeployment
   }
 
   /**
@@ -539,8 +540,7 @@ public open class CfnDeployment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty,
     ) : CdkObject(cdkObject), AccessLogSettingProperty {
       /**
        * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose
@@ -724,8 +724,7 @@ public open class CfnDeployment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty,
     ) : CdkObject(cdkObject), CanarySettingProperty {
       /**
        * The percent (0-100) of traffic diverted to a canary deployment.
@@ -917,8 +916,7 @@ public open class CfnDeployment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty,
     ) : CdkObject(cdkObject), DeploymentCanarySettingsProperty {
       /**
        * The percentage (0.0-100.0) of traffic routed to the canary deployment.
@@ -1309,8 +1307,7 @@ public open class CfnDeployment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty,
     ) : CdkObject(cdkObject), MethodSettingProperty {
       /**
        * Specifies whether the cached responses are encrypted.
@@ -2149,8 +2146,7 @@ public open class CfnDeployment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.StageDescriptionProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.StageDescriptionProperty,
     ) : CdkObject(cdkObject), StageDescriptionProperty {
       /**
        * Specifies settings for logging access in this stage.

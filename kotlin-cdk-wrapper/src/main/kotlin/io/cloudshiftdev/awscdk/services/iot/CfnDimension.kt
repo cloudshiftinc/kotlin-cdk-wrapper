@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-dimension.html)
  */
-public open class CfnDimension internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnDimension,
+public open class CfnDimension(
+  cdkObject: software.amazon.awscdk.services.iot.CfnDimension,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -296,6 +296,6 @@ public open class CfnDimension internal constructor(
         CfnDimension(cdkObject)
 
     internal fun unwrap(wrapped: CfnDimension): software.amazon.awscdk.services.iot.CfnDimension =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iot.CfnDimension
   }
 }

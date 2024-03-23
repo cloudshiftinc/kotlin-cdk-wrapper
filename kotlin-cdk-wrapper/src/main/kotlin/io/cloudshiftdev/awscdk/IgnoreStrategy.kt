@@ -24,8 +24,8 @@ import kotlin.collections.List
  * .build(), "absoluteRootPath");
  * ```
  */
-public abstract class IgnoreStrategy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.IgnoreStrategy,
+public abstract class IgnoreStrategy(
+  cdkObject: software.amazon.awscdk.IgnoreStrategy,
 ) : CdkObject(cdkObject) {
   /**
    * Adds another pattern.
@@ -46,7 +46,7 @@ public abstract class IgnoreStrategy internal constructor(
       unwrap(this).ignores(absoluteFilePath)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IgnoreStrategy,
+    cdkObject: software.amazon.awscdk.IgnoreStrategy,
   ) : IgnoreStrategy(cdkObject)
 
   public companion object {

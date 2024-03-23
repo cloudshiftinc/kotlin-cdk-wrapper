@@ -27,9 +27,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class HttpRouteIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegration,
+public abstract class HttpRouteIntegration(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegration,
 ) : CdkObject(cdkObject) {
   /**
    * Bind this integration to the route.
@@ -50,7 +49,7 @@ public abstract class HttpRouteIntegration internal constructor(
       HttpRouteIntegrationConfig = bind(HttpRouteIntegrationBindOptions(options))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegration,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegration,
   ) : HttpRouteIntegration(cdkObject)
 
   public companion object {

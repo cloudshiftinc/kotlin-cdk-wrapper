@@ -16,9 +16,8 @@ import io.cloudshiftdev.constructs.Construct
  * TrafficRouting allAtOnceTrafficRouting = AllAtOnceTrafficRouting.allAtOnce();
  * ```
  */
-public open class AllAtOnceTrafficRouting internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codedeploy.AllAtOnceTrafficRouting,
+public open class AllAtOnceTrafficRouting(
+  cdkObject: software.amazon.awscdk.services.codedeploy.AllAtOnceTrafficRouting,
 ) : TrafficRouting(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.codedeploy.AllAtOnceTrafficRouting()
   )
@@ -37,6 +36,7 @@ public open class AllAtOnceTrafficRouting internal constructor(
         AllAtOnceTrafficRouting = AllAtOnceTrafficRouting(cdkObject)
 
     internal fun unwrap(wrapped: AllAtOnceTrafficRouting):
-        software.amazon.awscdk.services.codedeploy.AllAtOnceTrafficRouting = wrapped.cdkObject
+        software.amazon.awscdk.services.codedeploy.AllAtOnceTrafficRouting = wrapped.cdkObject as
+        software.amazon.awscdk.services.codedeploy.AllAtOnceTrafficRouting
   }
 }

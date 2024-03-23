@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html)
  */
-public open class CfnCapacityProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnCapacityProvider,
+public open class CfnCapacityProvider(
+  cdkObject: software.amazon.awscdk.services.ecs.CfnCapacityProvider,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -357,7 +357,8 @@ public open class CfnCapacityProvider internal constructor(
         CfnCapacityProvider = CfnCapacityProvider(cdkObject)
 
     internal fun unwrap(wrapped: CfnCapacityProvider):
-        software.amazon.awscdk.services.ecs.CfnCapacityProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.CfnCapacityProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.CfnCapacityProvider
   }
 
   /**
@@ -583,8 +584,7 @@ public open class CfnCapacityProvider internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCapacityProvider.AutoScalingGroupProviderProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCapacityProvider.AutoScalingGroupProviderProperty,
     ) : CdkObject(cdkObject), AutoScalingGroupProviderProperty {
       /**
        * The Amazon Resource Name (ARN) that identifies the Auto Scaling group, or the Auto Scaling
@@ -854,8 +854,7 @@ public open class CfnCapacityProvider internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCapacityProvider.ManagedScalingProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCapacityProvider.ManagedScalingProperty,
     ) : CdkObject(cdkObject), ManagedScalingProperty {
       /**
        * The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute

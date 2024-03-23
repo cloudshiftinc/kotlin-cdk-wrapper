@@ -86,8 +86,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-lifecyclepolicy.html)
  */
-public open class CfnLifecyclePolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy,
+public open class CfnLifecyclePolicy(
+  cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -506,7 +506,8 @@ public open class CfnLifecyclePolicy internal constructor(
         CfnLifecyclePolicy = CfnLifecyclePolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnLifecyclePolicy):
-        software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy
   }
 
   /**
@@ -614,8 +615,7 @@ public open class CfnLifecyclePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * Specifies the resources that the lifecycle policy applies to.
@@ -875,8 +875,7 @@ public open class CfnLifecyclePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.AmiExclusionRulesProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.AmiExclusionRulesProperty,
     ) : CdkObject(cdkObject), AmiExclusionRulesProperty {
       /**
        * Configures whether public AMIs are excluded from the lifecycle action.
@@ -1069,8 +1068,7 @@ public open class CfnLifecyclePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ExclusionRulesProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ExclusionRulesProperty,
     ) : CdkObject(cdkObject), ExclusionRulesProperty {
       /**
        * Lists configuration values that apply to AMIs that Image Builder should exclude from the
@@ -1257,8 +1255,7 @@ public open class CfnLifecyclePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty,
     ) : CdkObject(cdkObject), FilterProperty {
       /**
        * For age-based filters, this is the number of resources to keep on hand after the lifecycle
@@ -1460,8 +1457,7 @@ public open class CfnLifecyclePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty,
     ) : CdkObject(cdkObject), IncludeResourcesProperty {
       /**
        * Specifies whether the lifecycle action should apply to distributed AMIs.
@@ -1590,8 +1586,7 @@ public open class CfnLifecyclePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty,
     ) : CdkObject(cdkObject), LastLaunchedProperty {
       /**
        * Defines the unit of time that the lifecycle policy uses to calculate elapsed time since the
@@ -1841,8 +1836,7 @@ public open class CfnLifecyclePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty,
     ) : CdkObject(cdkObject), PolicyDetailProperty {
       /**
        * Configuration details for the policy action.
@@ -1962,8 +1956,7 @@ public open class CfnLifecyclePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty,
     ) : CdkObject(cdkObject), RecipeSelectionProperty {
       /**
        * The name of an Image Builder recipe that the lifecycle policy uses for resource selection.
@@ -2122,8 +2115,7 @@ public open class CfnLifecyclePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty,
     ) : CdkObject(cdkObject), ResourceSelectionProperty {
       /**
        * A list of recipes that are used as selection criteria for the output images that the

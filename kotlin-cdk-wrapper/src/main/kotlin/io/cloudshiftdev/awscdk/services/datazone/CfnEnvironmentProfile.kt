@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentprofile.html)
  */
-public open class CfnEnvironmentProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProfile,
+public open class CfnEnvironmentProfile(
+  cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProfile,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -434,7 +434,8 @@ public open class CfnEnvironmentProfile internal constructor(
         CfnEnvironmentProfile = CfnEnvironmentProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironmentProfile):
-        software.amazon.awscdk.services.datazone.CfnEnvironmentProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.datazone.CfnEnvironmentProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.datazone.CfnEnvironmentProfile
   }
 
   /**
@@ -512,8 +513,7 @@ public open class CfnEnvironmentProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnEnvironmentProfile.EnvironmentParameterProperty,
+      cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProfile.EnvironmentParameterProperty,
     ) : CdkObject(cdkObject), EnvironmentParameterProperty {
       /**
        * The name specified in the environment parameter.

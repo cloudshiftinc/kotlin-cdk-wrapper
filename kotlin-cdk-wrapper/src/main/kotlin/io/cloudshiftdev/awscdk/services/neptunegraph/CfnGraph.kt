@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptunegraph-graph.html)
  */
-public open class CfnGraph internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.neptunegraph.CfnGraph,
+public open class CfnGraph(
+  cdkObject: software.amazon.awscdk.services.neptunegraph.CfnGraph,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -615,7 +615,7 @@ public open class CfnGraph internal constructor(
         CfnGraph(cdkObject)
 
     internal fun unwrap(wrapped: CfnGraph): software.amazon.awscdk.services.neptunegraph.CfnGraph =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.neptunegraph.CfnGraph
   }
 
   /**
@@ -674,8 +674,7 @@ public open class CfnGraph internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.neptunegraph.CfnGraph.VectorSearchConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.neptunegraph.CfnGraph.VectorSearchConfigurationProperty,
     ) : CdkObject(cdkObject), VectorSearchConfigurationProperty {
       /**
        * The number of dimensions.

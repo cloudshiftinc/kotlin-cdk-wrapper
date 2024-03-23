@@ -24,8 +24,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class AlarmWidget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmWidget,
+public open class AlarmWidget(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: AlarmWidgetProps) :
       this(software.amazon.awscdk.services.cloudwatch.AlarmWidget(props.let(AlarmWidgetProps::unwrap))
@@ -203,6 +203,7 @@ public open class AlarmWidget internal constructor(
         AlarmWidget = AlarmWidget(cdkObject)
 
     internal fun unwrap(wrapped: AlarmWidget):
-        software.amazon.awscdk.services.cloudwatch.AlarmWidget = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.AlarmWidget = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.AlarmWidget
   }
 }

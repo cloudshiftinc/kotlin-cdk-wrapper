@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html)
  */
-public open class CfnDBClusterParameterGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CfnDBClusterParameterGroup,
+public open class CfnDBClusterParameterGroup(
+  cdkObject: software.amazon.awscdk.services.rds.CfnDBClusterParameterGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -360,6 +360,7 @@ public open class CfnDBClusterParameterGroup internal constructor(
         CfnDBClusterParameterGroup = CfnDBClusterParameterGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBClusterParameterGroup):
-        software.amazon.awscdk.services.rds.CfnDBClusterParameterGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.CfnDBClusterParameterGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.CfnDBClusterParameterGroup
   }
 }

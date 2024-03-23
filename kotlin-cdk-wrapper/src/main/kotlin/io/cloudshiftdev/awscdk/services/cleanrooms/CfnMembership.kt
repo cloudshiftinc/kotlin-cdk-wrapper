@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html)
  */
-public open class CfnMembership internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership,
+public open class CfnMembership(
+  cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -490,7 +490,8 @@ public open class CfnMembership internal constructor(
         CfnMembership = CfnMembership(cdkObject)
 
     internal fun unwrap(wrapped: CfnMembership):
-        software.amazon.awscdk.services.cleanrooms.CfnMembership = wrapped.cdkObject
+        software.amazon.awscdk.services.cleanrooms.CfnMembership = wrapped.cdkObject as
+        software.amazon.awscdk.services.cleanrooms.CfnMembership
   }
 
   /**
@@ -585,8 +586,7 @@ public open class CfnMembership internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipPaymentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipPaymentConfigurationProperty,
     ) : CdkObject(cdkObject), MembershipPaymentConfigurationProperty {
       /**
        * The payment responsibilities accepted by the collaboration member for query compute costs.
@@ -703,8 +703,7 @@ public open class CfnMembership internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty,
     ) : CdkObject(cdkObject), MembershipProtectedQueryOutputConfigurationProperty {
       /**
        * Required configuration for a protected query with an `S3` output type.
@@ -852,8 +851,7 @@ public open class CfnMembership internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryResultConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryResultConfigurationProperty,
     ) : CdkObject(cdkObject), MembershipProtectedQueryResultConfigurationProperty {
       /**
        * Configuration for protected query results.
@@ -1007,8 +1005,7 @@ public open class CfnMembership internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty,
     ) : CdkObject(cdkObject), MembershipQueryComputePaymentConfigProperty {
       /**
        * Indicates whether the collaboration member has accepted to pay for query compute costs (
@@ -1143,8 +1140,7 @@ public open class CfnMembership internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty,
     ) : CdkObject(cdkObject), ProtectedQueryS3OutputConfigurationProperty {
       /**
        * The S3 bucket to unload the protected query results.

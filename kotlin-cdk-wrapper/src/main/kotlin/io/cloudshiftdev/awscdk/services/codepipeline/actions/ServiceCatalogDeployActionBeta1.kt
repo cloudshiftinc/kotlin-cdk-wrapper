@@ -28,9 +28,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class ServiceCatalogDeployActionBeta1 internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1,
+public open class ServiceCatalogDeployActionBeta1(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1,
 ) : Action(cdkObject) {
   public constructor(props: ServiceCatalogDeployActionBeta1Props) :
       this(software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1(props.let(ServiceCatalogDeployActionBeta1Props::unwrap))
@@ -250,6 +249,7 @@ public open class ServiceCatalogDeployActionBeta1 internal constructor(
 
     internal fun unwrap(wrapped: ServiceCatalogDeployActionBeta1):
         software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1 =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1
   }
 }

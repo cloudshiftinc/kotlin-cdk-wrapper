@@ -101,8 +101,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html)
  */
-public open class CfnDecoderManifest internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest,
+public open class CfnDecoderManifest(
+  cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -533,7 +533,8 @@ public open class CfnDecoderManifest internal constructor(
         CfnDecoderManifest = CfnDecoderManifest(cdkObject)
 
     internal fun unwrap(wrapped: CfnDecoderManifest):
-        software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest = wrapped.cdkObject
+        software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest
   }
 
   /**
@@ -633,8 +634,7 @@ public open class CfnDecoderManifest internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanInterfaceProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanInterfaceProperty,
     ) : CdkObject(cdkObject), CanInterfaceProperty {
       /**
        * The unique name of the interface.
@@ -826,8 +826,7 @@ public open class CfnDecoderManifest internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty,
     ) : CdkObject(cdkObject), CanNetworkInterfaceProperty {
       /**
        * Information about a network interface specified by the Controller Area Network (CAN)
@@ -1046,8 +1045,7 @@ public open class CfnDecoderManifest internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty,
     ) : CdkObject(cdkObject), CanSignalDecoderProperty {
       /**
        * Information about a single controller area network (CAN) signal and the messages it
@@ -1301,8 +1299,7 @@ public open class CfnDecoderManifest internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty,
     ) : CdkObject(cdkObject), CanSignalProperty {
       /**
        * A multiplier used to decode the CAN message.
@@ -1557,8 +1554,7 @@ public open class CfnDecoderManifest internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty,
     ) : CdkObject(cdkObject), NetworkInterfacesItemsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-caninterface)
@@ -1778,8 +1774,7 @@ public open class CfnDecoderManifest internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty,
     ) : CdkObject(cdkObject), ObdInterfaceProperty {
       /**
        * (Optional) The maximum number message requests per diagnostic trouble code per second.
@@ -1998,8 +1993,7 @@ public open class CfnDecoderManifest internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdNetworkInterfaceProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdNetworkInterfaceProperty,
     ) : CdkObject(cdkObject), ObdNetworkInterfaceProperty {
       /**
        * The ID of the network interface.
@@ -2199,8 +2193,7 @@ public open class CfnDecoderManifest internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalDecoderProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalDecoderProperty,
     ) : CdkObject(cdkObject), ObdSignalDecoderProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignaldecoder.html#cfn-iotfleetwise-decodermanifest-obdsignaldecoder-fullyqualifiedname)
@@ -2464,8 +2457,7 @@ public open class CfnDecoderManifest internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty,
     ) : CdkObject(cdkObject), ObdSignalProperty {
       /**
        * (Optional) The number of bits to mask in a message.
@@ -2751,8 +2743,7 @@ public open class CfnDecoderManifest internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.SignalDecodersItemsProperty,
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.SignalDecodersItemsProperty,
     ) : CdkObject(cdkObject), SignalDecodersItemsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-signaldecodersitems.html#cfn-iotfleetwise-decodermanifest-signaldecodersitems-cansignal)

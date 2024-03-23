@@ -124,7 +124,7 @@ public interface WarmPoolProps : WarmPoolOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.WarmPoolProps,
+    cdkObject: software.amazon.awscdk.services.autoscaling.WarmPoolProps,
   ) : CdkObject(cdkObject), WarmPoolProps {
     /**
      * The Auto Scaling group to add the warm pool to.

@@ -80,7 +80,7 @@ public interface NonIpInstanceBaseProps : BaseInstanceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicediscovery.NonIpInstanceBaseProps,
+    cdkObject: software.amazon.awscdk.services.servicediscovery.NonIpInstanceBaseProps,
   ) : CdkObject(cdkObject), NonIpInstanceBaseProps {
     /**
      * Custom attributes of the instance.

@@ -142,7 +142,7 @@ public interface CfnClusterSubnetGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSubnetGroupProps,
+    cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSubnetGroupProps,
   ) : CdkObject(cdkObject), CfnClusterSubnetGroupProps {
     /**
      * A description for the subnet group.

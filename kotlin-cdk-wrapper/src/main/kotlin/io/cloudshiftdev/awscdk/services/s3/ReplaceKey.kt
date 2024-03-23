@@ -23,8 +23,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class ReplaceKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.ReplaceKey,
+public open class ReplaceKey(
+  cdkObject: software.amazon.awscdk.services.s3.ReplaceKey,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -47,6 +47,6 @@ public open class ReplaceKey internal constructor(
         ReplaceKey(cdkObject)
 
     internal fun unwrap(wrapped: ReplaceKey): software.amazon.awscdk.services.s3.ReplaceKey =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.s3.ReplaceKey
   }
 }

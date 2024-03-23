@@ -324,8 +324,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html)
  */
-public open class CfnEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint,
+public open class CfnEndpoint(
+  cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -2977,7 +2977,7 @@ public open class CfnEndpoint internal constructor(
         CfnEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpoint): software.amazon.awscdk.services.dms.CfnEndpoint =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.dms.CfnEndpoint
   }
 
   /**
@@ -3211,7 +3211,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty,
     ) : CdkObject(cdkObject), DocDbSettingsProperty {
       /**
        * Indicates the number of documents to preview to determine the document organization.
@@ -3359,8 +3359,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.DynamoDbSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DynamoDbSettingsProperty,
     ) : CdkObject(cdkObject), DynamoDbSettingsProperty {
       /**
        * The Amazon Resource Name (ARN) used by the service to access the IAM role.
@@ -3538,8 +3537,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty,
     ) : CdkObject(cdkObject), ElasticsearchSettingsProperty {
       /**
        * The endpoint for the OpenSearch cluster.
@@ -4055,8 +4053,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty,
     ) : CdkObject(cdkObject), GcpMySQLSettingsProperty {
       /**
        * Specifies a script to run immediately after AWS DMS connects to the endpoint.
@@ -4550,8 +4547,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty,
     ) : CdkObject(cdkObject), IbmDb2SettingsProperty {
       /**
        * For ongoing replication (CDC), use CurrentLSN to specify a log sequence number (LSN) where
@@ -5326,7 +5322,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KafkaSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KafkaSettingsProperty,
     ) : CdkObject(cdkObject), KafkaSettingsProperty {
       /**
        * A comma-separated list of one or more broker locations in your Kafka cluster that host your
@@ -5975,8 +5971,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty,
     ) : CdkObject(cdkObject), KinesisSettingsProperty {
       /**
        * Shows detailed control information for table definition, column definition, and table and
@@ -6742,8 +6737,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty,
     ) : CdkObject(cdkObject), MicrosoftSqlServerSettingsProperty {
       /**
        * The maximum size of the packets (in bytes) used to transfer data using BCP.
@@ -7338,8 +7332,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty,
     ) : CdkObject(cdkObject), MongoDbSettingsProperty {
       /**
        * The authentication mechanism you use to access the MongoDB source endpoint.
@@ -7869,7 +7862,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty,
     ) : CdkObject(cdkObject), MySqlSettingsProperty {
       /**
        * Specifies a script to run immediately after AWS DMS connects to the endpoint.
@@ -8263,8 +8256,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty,
     ) : CdkObject(cdkObject), NeptuneSettingsProperty {
       /**
        * The number of milliseconds for AWS DMS to wait to retry a bulk-load of migrated graph data
@@ -10029,8 +10021,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.OracleSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.OracleSettingsProperty,
     ) : CdkObject(cdkObject), OracleSettingsProperty {
       /**
        * Set this attribute to `false` in order to use the Binary Reader to capture change data for
@@ -11117,8 +11108,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty,
     ) : CdkObject(cdkObject), PostgreSqlSettingsProperty {
       /**
        * For use with change data capture (CDC) only, this attribute has AWS DMS bypass foreign keys
@@ -11538,7 +11528,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty,
     ) : CdkObject(cdkObject), RedisSettingsProperty {
       /**
        * The password provided with the `auth-role` and `auth-token` options of the `AuthType`
@@ -12659,8 +12649,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty,
     ) : CdkObject(cdkObject), RedshiftSettingsProperty {
       /**
        * A value that indicates to allow any date format, including invalid formats such as 00/00/00
@@ -15179,7 +15168,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.S3SettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.S3SettingsProperty,
     ) : CdkObject(cdkObject), S3SettingsProperty {
       /**
        * An optional parameter that, when set to `true` or `y` , you can use to add column name
@@ -15956,8 +15945,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.SybaseSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.SybaseSettingsProperty,
     ) : CdkObject(cdkObject), SybaseSettingsProperty {
       /**
        * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted

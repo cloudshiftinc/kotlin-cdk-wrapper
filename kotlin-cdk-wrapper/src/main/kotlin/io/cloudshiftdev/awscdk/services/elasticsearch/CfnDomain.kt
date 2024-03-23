@@ -125,8 +125,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)
  */
-public open class CfnDomain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain,
+public open class CfnDomain(
+  cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.elasticsearch.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1586,7 +1586,7 @@ public open class CfnDomain internal constructor(
         = CfnDomain(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomain): software.amazon.awscdk.services.elasticsearch.CfnDomain
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.elasticsearch.CfnDomain
   }
 
   /**
@@ -1787,8 +1787,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty,
     ) : CdkObject(cdkObject), AdvancedSecurityOptionsInputProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-anonymousauthenabled)
@@ -2016,8 +2015,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty,
     ) : CdkObject(cdkObject), CognitoOptionsProperty {
       /**
        * Whether to enable or disable Amazon Cognito authentication for OpenSearch Dashboards.
@@ -2165,8 +2163,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty,
     ) : CdkObject(cdkObject), ColdStorageOptionsProperty {
       /**
        * Whether to enable or disable cold storage on the domain.
@@ -2399,8 +2396,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty,
     ) : CdkObject(cdkObject), DomainEndpointOptionsProperty {
       /**
        * The fully qualified URL for your custom endpoint.
@@ -2642,8 +2638,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty,
     ) : CdkObject(cdkObject), EBSOptionsProperty {
       /**
        * Specifies whether Amazon EBS volumes are attached to data nodes in the OpenSearch Service
@@ -3199,8 +3194,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ElasticsearchClusterConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ElasticsearchClusterConfigProperty,
     ) : CdkObject(cdkObject), ElasticsearchClusterConfigProperty {
       /**
        * Specifies cold storage options for the domain.
@@ -3437,8 +3431,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty,
     ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
       /**
        * Specify `true` to enable encryption at rest.
@@ -3589,8 +3582,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty,
     ) : CdkObject(cdkObject), LogPublishingOptionProperty {
       /**
        * Specifies the CloudWatch log group to publish to.
@@ -3748,8 +3740,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.MasterUserOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.MasterUserOptionsProperty,
     ) : CdkObject(cdkObject), MasterUserOptionsProperty {
       /**
        * ARN for the master user.
@@ -3875,8 +3866,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.NodeToNodeEncryptionOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.NodeToNodeEncryptionOptionsProperty,
     ) : CdkObject(cdkObject), NodeToNodeEncryptionOptionsProperty {
       /**
        * Specifies whether node-to-node encryption is enabled, as a Boolean.
@@ -3981,8 +3971,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.SnapshotOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.SnapshotOptionsProperty,
     ) : CdkObject(cdkObject), SnapshotOptionsProperty {
       /**
        * The hour in UTC during which the service takes an automated daily snapshot of the indices
@@ -4178,8 +4167,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.VPCOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.VPCOptionsProperty,
     ) : CdkObject(cdkObject), VPCOptionsProperty {
       /**
        * The list of security group IDs that are associated with the VPC endpoints for the domain.
@@ -4299,8 +4287,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty,
     ) : CdkObject(cdkObject), ZoneAwarenessConfigProperty {
       /**
        * If you enabled multiple Availability Zones (AZs), the number of AZs that you want the

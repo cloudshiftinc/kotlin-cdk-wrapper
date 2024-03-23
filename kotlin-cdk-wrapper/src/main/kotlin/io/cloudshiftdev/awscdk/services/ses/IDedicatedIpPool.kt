@@ -21,7 +21,7 @@ public interface IDedicatedIpPool : IResource {
   public fun dedicatedIpPoolName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.IDedicatedIpPool,
+    cdkObject: software.amazon.awscdk.services.ses.IDedicatedIpPool,
   ) : CdkObject(cdkObject), IDedicatedIpPool {
     /**
      * Apply the given removal policy to this resource.

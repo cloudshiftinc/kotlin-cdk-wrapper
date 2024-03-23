@@ -1404,7 +1404,7 @@ public interface CfnBucketProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.CfnBucketProps,
+    cdkObject: software.amazon.awscdk.services.s3.CfnBucketProps,
   ) : CdkObject(cdkObject), CfnBucketProps {
     /**
      * Configures the transfer acceleration state for an Amazon S3 bucket.

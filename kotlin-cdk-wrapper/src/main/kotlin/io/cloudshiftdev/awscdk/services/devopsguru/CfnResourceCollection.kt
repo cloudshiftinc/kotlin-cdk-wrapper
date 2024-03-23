@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-resourcecollection.html)
  */
-public open class CfnResourceCollection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection,
+public open class CfnResourceCollection(
+  cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -219,7 +219,8 @@ public open class CfnResourceCollection internal constructor(
         CfnResourceCollection = CfnResourceCollection(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceCollection):
-        software.amazon.awscdk.services.devopsguru.CfnResourceCollection = wrapped.cdkObject
+        software.amazon.awscdk.services.devopsguru.CfnResourceCollection = wrapped.cdkObject as
+        software.amazon.awscdk.services.devopsguru.CfnResourceCollection
   }
 
   /**
@@ -292,8 +293,7 @@ public open class CfnResourceCollection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty,
+      cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty,
     ) : CdkObject(cdkObject), CloudFormationCollectionFilterProperty {
       /**
        * An array of CloudFormation stack names.
@@ -613,8 +613,7 @@ public open class CfnResourceCollection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.ResourceCollectionFilterProperty,
+      cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.ResourceCollectionFilterProperty,
     ) : CdkObject(cdkObject), ResourceCollectionFilterProperty {
       /**
        * Information about AWS CloudFormation stacks.
@@ -861,8 +860,7 @@ public open class CfnResourceCollection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.TagCollectionProperty,
+      cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.TagCollectionProperty,
     ) : CdkObject(cdkObject), TagCollectionProperty {
       /**
        * An AWS tag *key* that is used to identify the AWS resources that DevOps Guru analyzes.

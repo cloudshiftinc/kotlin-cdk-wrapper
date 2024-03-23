@@ -42,9 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html)
  */
-public open class CfnPolicyStore internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore,
+public open class CfnPolicyStore(
+  cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -424,7 +423,8 @@ public open class CfnPolicyStore internal constructor(
         CfnPolicyStore = CfnPolicyStore(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicyStore):
-        software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore = wrapped.cdkObject
+        software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore = wrapped.cdkObject as
+        software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore
   }
 
   /**
@@ -499,8 +499,7 @@ public open class CfnPolicyStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty,
     ) : CdkObject(cdkObject), SchemaDefinitionProperty {
       /**
        * A JSON string representation of the schema supported by applications that use this policy
@@ -631,8 +630,7 @@ public open class CfnPolicyStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty,
     ) : CdkObject(cdkObject), ValidationSettingsProperty {
       /**
        * The validation mode currently configured for this policy store. The valid values are:.

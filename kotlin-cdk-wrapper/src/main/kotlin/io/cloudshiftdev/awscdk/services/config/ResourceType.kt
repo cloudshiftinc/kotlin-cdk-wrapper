@@ -27,8 +27,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
  */
-public open class ResourceType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.ResourceType,
+public open class ResourceType(
+  cdkObject: software.amazon.awscdk.services.config.ResourceType,
 ) : CdkObject(cdkObject) {
   /**
    * Valid value of resource type.
@@ -730,6 +730,6 @@ public open class ResourceType internal constructor(
         = ResourceType(cdkObject)
 
     internal fun unwrap(wrapped: ResourceType): software.amazon.awscdk.services.config.ResourceType
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.config.ResourceType
   }
 }

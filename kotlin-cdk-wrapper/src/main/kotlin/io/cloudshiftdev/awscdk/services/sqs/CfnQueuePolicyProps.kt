@@ -132,7 +132,7 @@ public interface CfnQueuePolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sqs.CfnQueuePolicyProps,
+    cdkObject: software.amazon.awscdk.services.sqs.CfnQueuePolicyProps,
   ) : CdkObject(cdkObject), CfnQueuePolicyProps {
     /**
      * A policy document that contains the permissions for the specified Amazon SQS queues.

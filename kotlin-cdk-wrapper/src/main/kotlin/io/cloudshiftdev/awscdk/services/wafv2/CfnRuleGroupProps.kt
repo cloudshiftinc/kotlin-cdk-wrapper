@@ -93,6 +93,9 @@ import kotlin.jvm.JvmName
  * .matchScope("matchScope")
  * .oversizeHandling("oversizeHandling")
  * .build())
+ * .ja3Fingerprint(JA3FingerprintProperty.builder()
+ * .fallbackBehavior("fallbackBehavior")
+ * .build())
  * .jsonBody(JsonBodyProperty.builder()
  * .matchPattern(JsonMatchPatternProperty.builder()
  * .all(all)
@@ -187,6 +190,7 @@ import kotlin.jvm.JvmName
  * .build()))
  * .build())
  * .build()))
+ * .evaluationWindowSec(123)
  * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
  * .fallbackBehavior("fallbackBehavior")
  * .headerName("headerName")
@@ -216,6 +220,9 @@ import kotlin.jvm.JvmName
  * .build())
  * .matchScope("matchScope")
  * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .ja3Fingerprint(JA3FingerprintProperty.builder()
+ * .fallbackBehavior("fallbackBehavior")
  * .build())
  * .jsonBody(JsonBodyProperty.builder()
  * .matchPattern(JsonMatchPatternProperty.builder()
@@ -264,6 +271,9 @@ import kotlin.jvm.JvmName
  * .matchScope("matchScope")
  * .oversizeHandling("oversizeHandling")
  * .build())
+ * .ja3Fingerprint(JA3FingerprintProperty.builder()
+ * .fallbackBehavior("fallbackBehavior")
+ * .build())
  * .jsonBody(JsonBodyProperty.builder()
  * .matchPattern(JsonMatchPatternProperty.builder()
  * .all(all)
@@ -309,6 +319,9 @@ import kotlin.jvm.JvmName
  * .build())
  * .matchScope("matchScope")
  * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .ja3Fingerprint(JA3FingerprintProperty.builder()
+ * .fallbackBehavior("fallbackBehavior")
  * .build())
  * .jsonBody(JsonBodyProperty.builder()
  * .matchPattern(JsonMatchPatternProperty.builder()
@@ -356,6 +369,9 @@ import kotlin.jvm.JvmName
  * .matchScope("matchScope")
  * .oversizeHandling("oversizeHandling")
  * .build())
+ * .ja3Fingerprint(JA3FingerprintProperty.builder()
+ * .fallbackBehavior("fallbackBehavior")
+ * .build())
  * .jsonBody(JsonBodyProperty.builder()
  * .matchPattern(JsonMatchPatternProperty.builder()
  * .all(all)
@@ -402,6 +418,9 @@ import kotlin.jvm.JvmName
  * .build())
  * .matchScope("matchScope")
  * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .ja3Fingerprint(JA3FingerprintProperty.builder()
+ * .fallbackBehavior("fallbackBehavior")
  * .build())
  * .jsonBody(JsonBodyProperty.builder()
  * .matchPattern(JsonMatchPatternProperty.builder()
@@ -1002,7 +1021,7 @@ public interface CfnRuleGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroupProps,
+    cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroupProps,
   ) : CdkObject(cdkObject), CfnRuleGroupProps {
     /**
      * The labels that one or more rules in this rule group add to matching web requests.

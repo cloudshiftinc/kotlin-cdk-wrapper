@@ -206,8 +206,7 @@ public interface UserPoolIdentityProviderFacebookProps : UserPoolIdentityProvide
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cognito.UserPoolIdentityProviderFacebookProps,
+    cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderFacebookProps,
   ) : CdkObject(cdkObject), UserPoolIdentityProviderFacebookProps {
     /**
      * The Facebook API version to use.

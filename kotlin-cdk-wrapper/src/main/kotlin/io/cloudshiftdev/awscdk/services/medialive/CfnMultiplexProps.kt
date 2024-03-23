@@ -230,7 +230,7 @@ public interface CfnMultiplexProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexProps,
+    cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexProps,
   ) : CdkObject(cdkObject), CfnMultiplexProps {
     /**
      * A list of availability zones for the multiplex.

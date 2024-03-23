@@ -40,9 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class BedrockInvokeModel internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModel,
+public open class BedrockInvokeModel(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModel,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -652,5 +651,6 @@ public open class BedrockInvokeModel internal constructor(
 
     internal fun unwrap(wrapped: BedrockInvokeModel):
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModel = wrapped.cdkObject
+        as software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModel
   }
 }

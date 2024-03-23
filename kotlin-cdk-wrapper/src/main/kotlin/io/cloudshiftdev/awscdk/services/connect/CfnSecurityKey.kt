@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securitykey.html)
  */
-public open class CfnSecurityKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnSecurityKey,
+public open class CfnSecurityKey(
+  cdkObject: software.amazon.awscdk.services.connect.CfnSecurityKey,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -183,6 +183,7 @@ public open class CfnSecurityKey internal constructor(
         CfnSecurityKey = CfnSecurityKey(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityKey):
-        software.amazon.awscdk.services.connect.CfnSecurityKey = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnSecurityKey = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnSecurityKey
   }
 }

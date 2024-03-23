@@ -17,8 +17,8 @@ import kotlin.String
  * InlineCode inlineCode = new InlineCode("code");
  * ```
  */
-public open class InlineCode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.synthetics.InlineCode,
+public open class InlineCode(
+  cdkObject: software.amazon.awscdk.services.synthetics.InlineCode,
 ) : Code(cdkObject) {
   public constructor(code: String) :
       this(software.amazon.awscdk.services.synthetics.InlineCode(code)
@@ -44,6 +44,6 @@ public open class InlineCode internal constructor(
         = InlineCode(cdkObject)
 
     internal fun unwrap(wrapped: InlineCode): software.amazon.awscdk.services.synthetics.InlineCode
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.synthetics.InlineCode
   }
 }

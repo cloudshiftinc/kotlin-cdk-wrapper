@@ -242,8 +242,7 @@ public interface ApplyCloudFormationInitOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.autoscaling.ApplyCloudFormationInitOptions,
+    cdkObject: software.amazon.awscdk.services.autoscaling.ApplyCloudFormationInitOptions,
   ) : CdkObject(cdkObject), ApplyCloudFormationInitOptions {
     /**
      * ConfigSet to activate.

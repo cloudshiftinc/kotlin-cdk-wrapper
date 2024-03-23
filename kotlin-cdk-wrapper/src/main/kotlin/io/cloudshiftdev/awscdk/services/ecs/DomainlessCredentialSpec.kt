@@ -25,8 +25,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class DomainlessCredentialSpec internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.DomainlessCredentialSpec,
+public open class DomainlessCredentialSpec(
+  cdkObject: software.amazon.awscdk.services.ecs.DomainlessCredentialSpec,
 ) : CredentialSpec(cdkObject) {
   public constructor(fileLocation: String) :
       this(software.amazon.awscdk.services.ecs.DomainlessCredentialSpec(fileLocation)
@@ -44,6 +44,7 @@ public open class DomainlessCredentialSpec internal constructor(
         DomainlessCredentialSpec = DomainlessCredentialSpec(cdkObject)
 
     internal fun unwrap(wrapped: DomainlessCredentialSpec):
-        software.amazon.awscdk.services.ecs.DomainlessCredentialSpec = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.DomainlessCredentialSpec = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.DomainlessCredentialSpec
   }
 }

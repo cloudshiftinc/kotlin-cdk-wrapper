@@ -164,7 +164,7 @@ public interface StringListParameterProps : ParameterOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.StringListParameterProps,
+    cdkObject: software.amazon.awscdk.services.ssm.StringListParameterProps,
   ) : CdkObject(cdkObject), StringListParameterProps {
     /**
      * A regular expression used to validate the parameter value.

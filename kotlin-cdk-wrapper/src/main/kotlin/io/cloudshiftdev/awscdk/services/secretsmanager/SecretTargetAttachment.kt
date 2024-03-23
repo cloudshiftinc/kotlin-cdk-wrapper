@@ -35,9 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class SecretTargetAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment,
+public open class SecretTargetAttachment(
+  cdkObject: software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment,
 ) : Resource(cdkObject), ISecretTargetAttachment, ISecret {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -274,6 +273,7 @@ public open class SecretTargetAttachment internal constructor(
         SecretTargetAttachment = SecretTargetAttachment(cdkObject)
 
     internal fun unwrap(wrapped: SecretTargetAttachment):
-        software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment = wrapped.cdkObject
+        software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment = wrapped.cdkObject as
+        software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment
   }
 }

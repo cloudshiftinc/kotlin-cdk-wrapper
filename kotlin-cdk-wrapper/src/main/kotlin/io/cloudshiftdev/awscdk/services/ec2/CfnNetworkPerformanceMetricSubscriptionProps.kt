@@ -130,8 +130,7 @@ public interface CfnNetworkPerformanceMetricSubscriptionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscriptionProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscriptionProps,
   ) : CdkObject(cdkObject), CfnNetworkPerformanceMetricSubscriptionProps {
     /**
      * The Region or Availability Zone that's the target for the subscription.

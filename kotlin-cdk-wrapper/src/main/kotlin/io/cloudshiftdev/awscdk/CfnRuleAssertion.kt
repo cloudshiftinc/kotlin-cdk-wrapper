@@ -73,7 +73,7 @@ public interface CfnRuleAssertion {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnRuleAssertion,
+    cdkObject: software.amazon.awscdk.CfnRuleAssertion,
   ) : CdkObject(cdkObject), CfnRuleAssertion {
     /**
      * The assertion description.

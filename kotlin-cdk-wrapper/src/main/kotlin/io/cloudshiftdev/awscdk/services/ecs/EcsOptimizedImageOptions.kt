@@ -97,7 +97,7 @@ public interface EcsOptimizedImageOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.EcsOptimizedImageOptions,
+    cdkObject: software.amazon.awscdk.services.ecs.EcsOptimizedImageOptions,
   ) : CdkObject(cdkObject), EcsOptimizedImageOptions {
     /**
      * Whether the AMI ID is cached to be stable between deployments.

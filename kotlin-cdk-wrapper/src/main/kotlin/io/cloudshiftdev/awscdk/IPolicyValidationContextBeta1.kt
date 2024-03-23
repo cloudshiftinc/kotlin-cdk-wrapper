@@ -17,7 +17,7 @@ public interface IPolicyValidationContextBeta1 {
   public fun templatePaths(): List<String>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IPolicyValidationContextBeta1,
+    cdkObject: software.amazon.awscdk.IPolicyValidationContextBeta1,
   ) : CdkObject(cdkObject), IPolicyValidationContextBeta1 {
     /**
      * The absolute path of all templates to be processed.

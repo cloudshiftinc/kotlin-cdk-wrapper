@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-profilepermission.html)
  */
-public open class CfnProfilePermission internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.signer.CfnProfilePermission,
+public open class CfnProfilePermission(
+  cdkObject: software.amazon.awscdk.services.signer.CfnProfilePermission,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -249,6 +249,7 @@ public open class CfnProfilePermission internal constructor(
         CfnProfilePermission = CfnProfilePermission(cdkObject)
 
     internal fun unwrap(wrapped: CfnProfilePermission):
-        software.amazon.awscdk.services.signer.CfnProfilePermission = wrapped.cdkObject
+        software.amazon.awscdk.services.signer.CfnProfilePermission = wrapped.cdkObject as
+        software.amazon.awscdk.services.signer.CfnProfilePermission
   }
 }

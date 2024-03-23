@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html)
  */
-public open class CfnBridgeOutput internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput,
+public open class CfnBridgeOutput(
+  cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -251,7 +251,8 @@ public open class CfnBridgeOutput internal constructor(
         CfnBridgeOutput = CfnBridgeOutput(cdkObject)
 
     internal fun unwrap(wrapped: CfnBridgeOutput):
-        software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput = wrapped.cdkObject
+        software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput
   }
 
   /**
@@ -390,8 +391,7 @@ public open class CfnBridgeOutput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput.BridgeNetworkOutputProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput.BridgeNetworkOutputProperty,
     ) : CdkObject(cdkObject), BridgeNetworkOutputProperty {
       /**
        * The network output IP Address.

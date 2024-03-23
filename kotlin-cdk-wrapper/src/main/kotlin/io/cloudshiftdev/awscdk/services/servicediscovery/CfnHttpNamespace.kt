@@ -45,9 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-httpnamespace.html)
  */
-public open class CfnHttpNamespace internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicediscovery.CfnHttpNamespace,
+public open class CfnHttpNamespace(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.CfnHttpNamespace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -253,6 +252,7 @@ public open class CfnHttpNamespace internal constructor(
         CfnHttpNamespace = CfnHttpNamespace(cdkObject)
 
     internal fun unwrap(wrapped: CfnHttpNamespace):
-        software.amazon.awscdk.services.servicediscovery.CfnHttpNamespace = wrapped.cdkObject
+        software.amazon.awscdk.services.servicediscovery.CfnHttpNamespace = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicediscovery.CfnHttpNamespace
   }
 }

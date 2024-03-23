@@ -67,8 +67,7 @@ public interface INetworkLoadBalancer : ILoadBalancerV2, IVpcEndpointServiceLoad
   public fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer,
   ) : CdkObject(cdkObject), INetworkLoadBalancer {
     /**
      * Add a listener to this load balancer.

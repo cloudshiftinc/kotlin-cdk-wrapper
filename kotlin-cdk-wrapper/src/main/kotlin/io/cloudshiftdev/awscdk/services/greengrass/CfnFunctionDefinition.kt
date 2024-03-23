@@ -101,8 +101,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html)
  */
-public open class CfnFunctionDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition,
+public open class CfnFunctionDefinition(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -436,7 +436,8 @@ public open class CfnFunctionDefinition internal constructor(
         CfnFunctionDefinition = CfnFunctionDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnFunctionDefinition):
-        software.amazon.awscdk.services.greengrass.CfnFunctionDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrass.CfnFunctionDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnFunctionDefinition
   }
 
   /**
@@ -539,8 +540,7 @@ public open class CfnFunctionDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.DefaultConfigProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.DefaultConfigProperty,
     ) : CdkObject(cdkObject), DefaultConfigProperty {
       /**
        * Configuration settings for the Lambda execution environment on the AWS IoT Greengrass core.
@@ -813,8 +813,7 @@ public open class CfnFunctionDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.EnvironmentProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.EnvironmentProperty,
     ) : CdkObject(cdkObject), EnvironmentProperty {
       /**
        * Indicates whether the function is allowed to access the `/sys` directory on the core
@@ -1180,8 +1179,7 @@ public open class CfnFunctionDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.ExecutionProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.ExecutionProperty,
     ) : CdkObject(cdkObject), ExecutionProperty {
       /**
        * The containerization that the Lambda function runs in.
@@ -1525,8 +1523,7 @@ public open class CfnFunctionDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionConfigurationProperty,
     ) : CdkObject(cdkObject), FunctionConfigurationProperty {
       /**
        * The expected encoding type of the input payload for the function.
@@ -1794,8 +1791,7 @@ public open class CfnFunctionDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionDefinitionVersionProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionDefinitionVersionProperty,
     ) : CdkObject(cdkObject), FunctionDefinitionVersionProperty {
       /**
        * The default configuration that applies to all Lambda functions in the group.
@@ -2007,8 +2003,7 @@ public open class CfnFunctionDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionProperty,
     ) : CdkObject(cdkObject), FunctionProperty {
       /**
        * The Amazon Resource Name (ARN) of the alias (recommended) or version of the referenced
@@ -2153,8 +2148,7 @@ public open class CfnFunctionDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.ResourceAccessPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.ResourceAccessPolicyProperty,
     ) : CdkObject(cdkObject), ResourceAccessPolicyProperty {
       /**
        * The read-only or read-write access that the Lambda function has to the resource.
@@ -2291,8 +2285,7 @@ public open class CfnFunctionDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.RunAsProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.RunAsProperty,
     ) : CdkObject(cdkObject), RunAsProperty {
       /**
        * The group ID whose permissions are used to run the Lambda function.

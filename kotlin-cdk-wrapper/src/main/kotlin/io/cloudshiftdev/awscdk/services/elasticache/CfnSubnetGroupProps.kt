@@ -168,7 +168,7 @@ public interface CfnSubnetGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticache.CfnSubnetGroupProps,
+    cdkObject: software.amazon.awscdk.services.elasticache.CfnSubnetGroupProps,
   ) : CdkObject(cdkObject), CfnSubnetGroupProps {
     /**
      * The name for the cache subnet group. This value is stored as a lowercase string.

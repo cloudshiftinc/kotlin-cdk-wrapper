@@ -151,7 +151,7 @@ public interface WebSocketStageProps : StageOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStageProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStageProps,
   ) : CdkObject(cdkObject), WebSocketStageProps {
     /**
      * Whether updates to an API automatically trigger a new deployment.

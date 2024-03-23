@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html)
  */
-public open class CfnMacro internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudformation.CfnMacro,
+public open class CfnMacro(
+  cdkObject: software.amazon.awscdk.services.cloudformation.CfnMacro,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -274,6 +274,6 @@ public open class CfnMacro internal constructor(
         = CfnMacro(cdkObject)
 
     internal fun unwrap(wrapped: CfnMacro): software.amazon.awscdk.services.cloudformation.CfnMacro
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.cloudformation.CfnMacro
   }
 }

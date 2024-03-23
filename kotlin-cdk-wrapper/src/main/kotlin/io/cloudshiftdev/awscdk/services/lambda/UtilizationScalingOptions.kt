@@ -132,7 +132,7 @@ public interface UtilizationScalingOptions : BaseTargetTrackingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.UtilizationScalingOptions,
+    cdkObject: software.amazon.awscdk.services.lambda.UtilizationScalingOptions,
   ) : CdkObject(cdkObject), UtilizationScalingOptions {
     /**
      * Indicates whether scale in by the target tracking policy is disabled.

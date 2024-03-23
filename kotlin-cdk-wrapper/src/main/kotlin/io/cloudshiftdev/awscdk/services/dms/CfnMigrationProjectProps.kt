@@ -445,7 +445,7 @@ public interface CfnMigrationProjectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProjectProps,
+    cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProjectProps,
   ) : CdkObject(cdkObject), CfnMigrationProjectProps {
     /**
      * A user-friendly description of the migration project.

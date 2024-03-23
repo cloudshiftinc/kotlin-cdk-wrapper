@@ -137,7 +137,7 @@ public interface CfnSyncJobProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnSyncJobProps,
+    cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnSyncJobProps,
   ) : CdkObject(cdkObject), CfnSyncJobProps {
     /**
      * The SyncJob IAM role.

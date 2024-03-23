@@ -134,7 +134,7 @@ public interface AutoRollbackConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.AutoRollbackConfig,
+    cdkObject: software.amazon.awscdk.services.codedeploy.AutoRollbackConfig,
   ) : CdkObject(cdkObject), AutoRollbackConfig {
     /**
      * Whether to automatically roll back a deployment during which one of the configured CloudWatch

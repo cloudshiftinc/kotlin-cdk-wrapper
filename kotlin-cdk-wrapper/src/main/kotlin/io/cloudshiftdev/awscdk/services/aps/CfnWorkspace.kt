@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html)
  */
-public open class CfnWorkspace internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.aps.CfnWorkspace,
+public open class CfnWorkspace(
+  cdkObject: software.amazon.awscdk.services.aps.CfnWorkspace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.aps.CfnWorkspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -423,7 +423,7 @@ public open class CfnWorkspace internal constructor(
         CfnWorkspace(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkspace): software.amazon.awscdk.services.aps.CfnWorkspace =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.aps.CfnWorkspace
   }
 
   /**
@@ -486,8 +486,7 @@ public open class CfnWorkspace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.aps.CfnWorkspace.LoggingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.aps.CfnWorkspace.LoggingConfigurationProperty,
     ) : CdkObject(cdkObject), LoggingConfigurationProperty {
       /**
        * The ARN of the CloudWatch log group to which the vended log data will be published.

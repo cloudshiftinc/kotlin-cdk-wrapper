@@ -351,7 +351,7 @@ public interface CfnMultiplexprogramProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogramProps,
+    cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogramProps,
   ) : CdkObject(cdkObject), CfnMultiplexprogramProps {
     /**
      * The unique ID of the channel.

@@ -37,9 +37,8 @@ import software.amazon.awscdk.services.servicediscovery.IService as AmazonAwscdk
  * .build();
  * ```
  */
-public open class HttpServiceDiscoveryIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.aws_apigatewayv2_integrations.HttpServiceDiscoveryIntegration,
+public open class HttpServiceDiscoveryIntegration(
+  cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpServiceDiscoveryIntegration,
 ) : HttpRouteIntegration(cdkObject) {
   public constructor(id: String, service: CloudshiftdevAwscdkServicesServicediscoveryIService) :
       this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpServiceDiscoveryIntegration(id,
@@ -207,6 +206,7 @@ public open class HttpServiceDiscoveryIntegration internal constructor(
 
     internal fun unwrap(wrapped: HttpServiceDiscoveryIntegration):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpServiceDiscoveryIntegration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.aws_apigatewayv2_integrations.HttpServiceDiscoveryIntegration
   }
 }

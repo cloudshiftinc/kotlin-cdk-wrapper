@@ -336,7 +336,7 @@ public interface SlackChannelConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.chatbot.SlackChannelConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.chatbot.SlackChannelConfigurationProps,
   ) : CdkObject(cdkObject), SlackChannelConfigurationProps {
     /**
      * A list of IAM managed policies that are applied as channel guardrails.

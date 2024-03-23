@@ -109,7 +109,7 @@ public interface SynthesisMessage {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cxapi.SynthesisMessage,
+    cdkObject: software.amazon.awscdk.cxapi.SynthesisMessage,
   ) : CdkObject(cdkObject), SynthesisMessage {
     /**
      *

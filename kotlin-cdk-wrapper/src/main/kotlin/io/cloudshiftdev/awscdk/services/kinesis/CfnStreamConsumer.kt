@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html)
  */
-public open class CfnStreamConsumer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kinesis.CfnStreamConsumer,
+public open class CfnStreamConsumer(
+  cdkObject: software.amazon.awscdk.services.kinesis.CfnStreamConsumer,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -206,6 +206,7 @@ public open class CfnStreamConsumer internal constructor(
         CfnStreamConsumer = CfnStreamConsumer(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamConsumer):
-        software.amazon.awscdk.services.kinesis.CfnStreamConsumer = wrapped.cdkObject
+        software.amazon.awscdk.services.kinesis.CfnStreamConsumer = wrapped.cdkObject as
+        software.amazon.awscdk.services.kinesis.CfnStreamConsumer
   }
 }

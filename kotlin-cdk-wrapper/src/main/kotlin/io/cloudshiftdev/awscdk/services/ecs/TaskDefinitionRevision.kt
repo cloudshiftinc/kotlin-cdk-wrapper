@@ -29,8 +29,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class TaskDefinitionRevision internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.TaskDefinitionRevision,
+public open class TaskDefinitionRevision(
+  cdkObject: software.amazon.awscdk.services.ecs.TaskDefinitionRevision,
 ) : CdkObject(cdkObject) {
   /**
    * The string representation of this revision.
@@ -48,6 +48,7 @@ public open class TaskDefinitionRevision internal constructor(
         TaskDefinitionRevision = TaskDefinitionRevision(cdkObject)
 
     internal fun unwrap(wrapped: TaskDefinitionRevision):
-        software.amazon.awscdk.services.ecs.TaskDefinitionRevision = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.TaskDefinitionRevision = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.TaskDefinitionRevision
   }
 }

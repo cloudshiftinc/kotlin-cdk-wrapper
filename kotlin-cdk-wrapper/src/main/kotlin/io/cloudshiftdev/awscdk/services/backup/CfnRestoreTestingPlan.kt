@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html)
  */
-public open class CfnRestoreTestingPlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingPlan,
+public open class CfnRestoreTestingPlan(
+  cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingPlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -442,7 +442,8 @@ public open class CfnRestoreTestingPlan internal constructor(
         CfnRestoreTestingPlan = CfnRestoreTestingPlan(cdkObject)
 
     internal fun unwrap(wrapped: CfnRestoreTestingPlan):
-        software.amazon.awscdk.services.backup.CfnRestoreTestingPlan = wrapped.cdkObject
+        software.amazon.awscdk.services.backup.CfnRestoreTestingPlan = wrapped.cdkObject as
+        software.amazon.awscdk.services.backup.CfnRestoreTestingPlan
   }
 
   /**
@@ -635,8 +636,7 @@ public open class CfnRestoreTestingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnRestoreTestingPlan.RestoreTestingRecoveryPointSelectionProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingPlan.RestoreTestingRecoveryPointSelectionProperty,
     ) : CdkObject(cdkObject), RestoreTestingRecoveryPointSelectionProperty {
       /**
        * Acceptable values include "LATEST_WITHIN_WINDOW" or "RANDOM_WITHIN_WINDOW".

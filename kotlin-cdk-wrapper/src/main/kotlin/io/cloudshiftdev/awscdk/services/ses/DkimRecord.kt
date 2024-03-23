@@ -72,7 +72,7 @@ public interface DkimRecord {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.DkimRecord,
+    cdkObject: software.amazon.awscdk.services.ses.DkimRecord,
   ) : CdkObject(cdkObject), DkimRecord {
     /**
      * The name of the record.

@@ -155,7 +155,7 @@ public interface CfnBackupSelectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelectionProps,
+    cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelectionProps,
   ) : CdkObject(cdkObject), CfnBackupSelectionProps {
     /**
      * Uniquely identifies a backup plan.

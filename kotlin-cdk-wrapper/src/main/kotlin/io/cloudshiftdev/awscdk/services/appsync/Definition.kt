@@ -35,8 +35,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class Definition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.Definition,
+public abstract class Definition(
+  cdkObject: software.amazon.awscdk.services.appsync.Definition,
 ) : CdkObject(cdkObject) {
   /**
    * Schema, when AppSync API is created from schema file.
@@ -50,7 +50,7 @@ public abstract class Definition internal constructor(
       unwrap(this).getSourceApiOptions()?.let(SourceApiOptions::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.Definition,
+    cdkObject: software.amazon.awscdk.services.appsync.Definition,
   ) : Definition(cdkObject)
 
   public companion object {

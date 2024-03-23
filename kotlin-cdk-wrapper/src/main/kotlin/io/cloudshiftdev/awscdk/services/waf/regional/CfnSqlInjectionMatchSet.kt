@@ -59,9 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html)
  */
-public open class CfnSqlInjectionMatchSet internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet,
+public open class CfnSqlInjectionMatchSet(
+  cdkObject: software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -254,7 +253,8 @@ public open class CfnSqlInjectionMatchSet internal constructor(
         CfnSqlInjectionMatchSet = CfnSqlInjectionMatchSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnSqlInjectionMatchSet):
-        software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet = wrapped.cdkObject
+        software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet
   }
 
   /**
@@ -424,8 +424,7 @@ public open class CfnSqlInjectionMatchSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet.FieldToMatchProperty,
+      cdkObject: software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet.FieldToMatchProperty,
     ) : CdkObject(cdkObject), FieldToMatchProperty {
       /**
        * When the value of `Type` is `HEADER` , enter the name of the header that you want AWS WAF
@@ -786,8 +785,7 @@ public open class CfnSqlInjectionMatchSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet.SqlInjectionMatchTupleProperty,
+      cdkObject: software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet.SqlInjectionMatchTupleProperty,
     ) : CdkObject(cdkObject), SqlInjectionMatchTupleProperty {
       /**
        * The part of a web request that you want AWS WAF to inspect, such as a specific header or a

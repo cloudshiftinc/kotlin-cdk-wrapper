@@ -208,8 +208,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
  */
-public open class CfnProject internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.CfnProject,
+public open class CfnProject(
+  cdkObject: software.amazon.awscdk.services.codebuild.CfnProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -2054,7 +2054,7 @@ public open class CfnProject internal constructor(
         CfnProject(cdkObject)
 
     internal fun unwrap(wrapped: CfnProject): software.amazon.awscdk.services.codebuild.CfnProject =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.codebuild.CfnProject
   }
 
   /**
@@ -2543,8 +2543,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.ArtifactsProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ArtifactsProperty,
     ) : CdkObject(cdkObject), ArtifactsProperty {
       /**
        * An identifier for this artifact definition.
@@ -2816,8 +2815,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty,
     ) : CdkObject(cdkObject), BatchRestrictionsProperty {
       /**
        * An array of strings that specify the compute types that are allowed for the batch build.
@@ -2997,8 +2995,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.BuildStatusConfigProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.BuildStatusConfigProperty,
     ) : CdkObject(cdkObject), BuildStatusConfigProperty {
       /**
        * Specifies the context of the build status CodeBuild sends to the source provider.
@@ -3182,8 +3179,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty,
     ) : CdkObject(cdkObject), CloudWatchLogsConfigProperty {
       /**
        * The group name of the logs in CloudWatch Logs.
@@ -3888,8 +3884,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentProperty,
     ) : CdkObject(cdkObject), EnvironmentProperty {
       /**
        * The ARN of the Amazon S3 bucket, path prefix, and object key that contains the PEM-encoded
@@ -4225,8 +4220,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentVariableProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentVariableProperty,
     ) : CdkObject(cdkObject), EnvironmentVariableProperty {
       /**
        * The name or key of the environment variable.
@@ -4363,8 +4357,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty,
     ) : CdkObject(cdkObject), GitSubmodulesConfigProperty {
       /**
        * Set to true to fetch Git submodules for your AWS CodeBuild build project.
@@ -4547,8 +4540,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.LogsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.LogsConfigProperty,
     ) : CdkObject(cdkObject), LogsConfigProperty {
       /**
        * Information about CloudWatch Logs for a build project.
@@ -4801,8 +4793,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty,
     ) : CdkObject(cdkObject), ProjectBuildBatchConfigProperty {
       /**
        * Specifies how build status reports are sent to the source provider for the batch build.
@@ -5139,8 +5130,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty,
     ) : CdkObject(cdkObject), ProjectCacheProperty {
       /**
        * Information about the cache location:.
@@ -5424,8 +5414,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectFileSystemLocationProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectFileSystemLocationProperty,
     ) : CdkObject(cdkObject), ProjectFileSystemLocationProperty {
       /**
        * The name used to access a file system created by Amazon EFS.
@@ -5561,8 +5550,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty,
     ) : CdkObject(cdkObject), ProjectFleetProperty {
       /**
        * Specifies the compute fleet ARN for the build project.
@@ -5720,8 +5708,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectSourceVersionProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectSourceVersionProperty,
     ) : CdkObject(cdkObject), ProjectSourceVersionProperty {
       /**
        * An identifier for a source in the build project.
@@ -5944,8 +5931,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty,
     ) : CdkObject(cdkObject), ProjectTriggersProperty {
       /**
        * Specifies the type of build this webhook will trigger. Allowed values are:.
@@ -6095,8 +6081,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty,
     ) : CdkObject(cdkObject), RegistryCredentialProperty {
       /**
        * The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager .
@@ -6270,8 +6255,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty,
     ) : CdkObject(cdkObject), S3LogsConfigProperty {
       /**
        * Set to true if you do not want your S3 build log output encrypted.
@@ -6418,8 +6402,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty,
     ) : CdkObject(cdkObject), SourceAuthProperty {
       /**
        * The resource value that applies to the specified authorization type.
@@ -7070,7 +7053,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.SourceProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.SourceProperty,
     ) : CdkObject(cdkObject), SourceProperty {
       /**
        * Information about the authorization settings for AWS CodeBuild to access the source code to
@@ -7365,8 +7348,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * A list of one or more security groups IDs in your Amazon VPC.
@@ -7472,8 +7454,9 @@ public open class CfnProject internal constructor(
      * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF` ,
      * `FILE_PATH` , and `COMMIT_MESSAGE` .
      *
-     * * **EVENT** - A webhook event triggers a build when the provided `pattern` matches one of
-     * five event types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` ,
+     * * EVENT
+     * * A webhook event triggers a build when the provided `pattern` matches one of six event
+     * types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` , `PULL_REQUEST_CLOSED` ,
      * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
      * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` filters
      * all push, pull request created, and pull request updated events.
@@ -7482,31 +7465,36 @@ public open class CfnProject internal constructor(
      * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
      *
      *
-     * * **ACTOR_ACCOUNT_ID** - A webhook event triggers a build when a GitHub, GitHub Enterprise,
-     * or Bitbucket account ID matches the regular expression `pattern` .
-     * * **HEAD_REF** - A webhook event triggers a build when the head reference matches the regular
-     * expression `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name` .
+     * * ACTOR_ACCOUNT_ID
+     * * A webhook event triggers a build when a GitHub, GitHub Enterprise, or Bitbucket account ID
+     * matches the regular expression `pattern` .
+     * * HEAD_REF
+     * * A webhook event triggers a build when the head reference matches the regular expression
+     * `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name` .
      *
      * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
      * Bitbucket push, and Bitbucket pull request events.
      *
-     * * **BASE_REF** - A webhook event triggers a build when the base reference matches the regular
-     * expression `pattern` . For example, `refs/heads/branch-name` .
+     * * BASE_REF
+     * * A webhook event triggers a build when the base reference matches the regular expression
+     * `pattern` . For example, `refs/heads/branch-name` .
      *
      *
      * Works with pull request events only.
      *
      *
-     * * **FILE_PATH** - A webhook triggers a build when the path of a changed file matches the
-     * regular expression `pattern` .
+     * * FILE_PATH
+     * * A webhook triggers a build when the path of a changed file matches the regular expression
+     * `pattern` .
      *
      *
      * Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub
      * Enterprise push events, but does not work with GitHub Enterprise pull request events.
      *
      *
-     * * **COMMIT_MESSAGE** - A webhook triggers a build when the head commit message matches the
-     * regular expression `pattern` .
+     * * COMMIT_MESSAGE
+     * * A webhook triggers a build when the head commit message matches the regular expression
+     * `pattern` .
      *
      *
      * Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub
@@ -7556,8 +7544,9 @@ public open class CfnProject internal constructor(
        * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
        * , `FILE_PATH` , and `COMMIT_MESSAGE` .
        *
-       * * **EVENT** - A webhook event triggers a build when the provided `pattern` matches one of
-       * five event types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` ,
+       * * EVENT
+       * * A webhook event triggers a build when the provided `pattern` matches one of six event
+       * types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` , `PULL_REQUEST_CLOSED` ,
        * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
        * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED`
        * filters all push, pull request created, and pull request updated events.
@@ -7566,32 +7555,36 @@ public open class CfnProject internal constructor(
        * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
        *
        *
-       * * **ACTOR_ACCOUNT_ID** - A webhook event triggers a build when a GitHub, GitHub Enterprise,
-       * or Bitbucket account ID matches the regular expression `pattern` .
-       * * **HEAD_REF** - A webhook event triggers a build when the head reference matches the
-       * regular expression `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name`
-       * .
+       * * ACTOR_ACCOUNT_ID
+       * * A webhook event triggers a build when a GitHub, GitHub Enterprise, or Bitbucket account
+       * ID matches the regular expression `pattern` .
+       * * HEAD_REF
+       * * A webhook event triggers a build when the head reference matches the regular expression
+       * `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name` .
        *
        * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
        * Bitbucket push, and Bitbucket pull request events.
        *
-       * * **BASE_REF** - A webhook event triggers a build when the base reference matches the
-       * regular expression `pattern` . For example, `refs/heads/branch-name` .
+       * * BASE_REF
+       * * A webhook event triggers a build when the base reference matches the regular expression
+       * `pattern` . For example, `refs/heads/branch-name` .
        *
        *
        * Works with pull request events only.
        *
        *
-       * * **FILE_PATH** - A webhook triggers a build when the path of a changed file matches the
-       * regular expression `pattern` .
+       * * FILE_PATH
+       * * A webhook triggers a build when the path of a changed file matches the regular expression
+       * `pattern` .
        *
        *
        * Works with GitHub and Bitbucket events push and pull requests events. Also works with
        * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
        *
        *
-       * * **COMMIT_MESSAGE** - A webhook triggers a build when the head commit message matches the
-       * regular expression `pattern` .
+       * * COMMIT_MESSAGE
+       * * A webhook triggers a build when the head commit message matches the regular expression
+       * `pattern` .
        *
        *
        * Works with GitHub and Bitbucket events push and pull requests events. Also works with
@@ -7645,8 +7638,9 @@ public open class CfnProject internal constructor(
        * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
        * , `FILE_PATH` , and `COMMIT_MESSAGE` .
        *
-       * * **EVENT** - A webhook event triggers a build when the provided `pattern` matches one of
-       * five event types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` ,
+       * * EVENT
+       * * A webhook event triggers a build when the provided `pattern` matches one of six event
+       * types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` , `PULL_REQUEST_CLOSED` ,
        * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
        * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED`
        * filters all push, pull request created, and pull request updated events.
@@ -7655,32 +7649,36 @@ public open class CfnProject internal constructor(
        * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
        *
        *
-       * * **ACTOR_ACCOUNT_ID** - A webhook event triggers a build when a GitHub, GitHub Enterprise,
-       * or Bitbucket account ID matches the regular expression `pattern` .
-       * * **HEAD_REF** - A webhook event triggers a build when the head reference matches the
-       * regular expression `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name`
-       * .
+       * * ACTOR_ACCOUNT_ID
+       * * A webhook event triggers a build when a GitHub, GitHub Enterprise, or Bitbucket account
+       * ID matches the regular expression `pattern` .
+       * * HEAD_REF
+       * * A webhook event triggers a build when the head reference matches the regular expression
+       * `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name` .
        *
        * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
        * Bitbucket push, and Bitbucket pull request events.
        *
-       * * **BASE_REF** - A webhook event triggers a build when the base reference matches the
-       * regular expression `pattern` . For example, `refs/heads/branch-name` .
+       * * BASE_REF
+       * * A webhook event triggers a build when the base reference matches the regular expression
+       * `pattern` . For example, `refs/heads/branch-name` .
        *
        *
        * Works with pull request events only.
        *
        *
-       * * **FILE_PATH** - A webhook triggers a build when the path of a changed file matches the
-       * regular expression `pattern` .
+       * * FILE_PATH
+       * * A webhook triggers a build when the path of a changed file matches the regular expression
+       * `pattern` .
        *
        *
        * Works with GitHub and Bitbucket events push and pull requests events. Also works with
        * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
        *
        *
-       * * **COMMIT_MESSAGE** - A webhook triggers a build when the head commit message matches the
-       * regular expression `pattern` .
+       * * COMMIT_MESSAGE
+       * * A webhook triggers a build when the head commit message matches the regular expression
+       * `pattern` .
        *
        *
        * Works with GitHub and Bitbucket events push and pull requests events. Also works with
@@ -7695,8 +7693,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty,
     ) : CdkObject(cdkObject), WebhookFilterProperty {
       /**
        * Used to indicate that the `pattern` determines which webhook events do not trigger a build.
@@ -7730,8 +7727,9 @@ public open class CfnProject internal constructor(
        * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
        * , `FILE_PATH` , and `COMMIT_MESSAGE` .
        *
-       * * **EVENT** - A webhook event triggers a build when the provided `pattern` matches one of
-       * five event types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` ,
+       * * EVENT
+       * * A webhook event triggers a build when the provided `pattern` matches one of six event
+       * types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` , `PULL_REQUEST_CLOSED` ,
        * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
        * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED`
        * filters all push, pull request created, and pull request updated events.
@@ -7740,32 +7738,36 @@ public open class CfnProject internal constructor(
        * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
        *
        *
-       * * **ACTOR_ACCOUNT_ID** - A webhook event triggers a build when a GitHub, GitHub Enterprise,
-       * or Bitbucket account ID matches the regular expression `pattern` .
-       * * **HEAD_REF** - A webhook event triggers a build when the head reference matches the
-       * regular expression `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name`
-       * .
+       * * ACTOR_ACCOUNT_ID
+       * * A webhook event triggers a build when a GitHub, GitHub Enterprise, or Bitbucket account
+       * ID matches the regular expression `pattern` .
+       * * HEAD_REF
+       * * A webhook event triggers a build when the head reference matches the regular expression
+       * `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name` .
        *
        * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
        * Bitbucket push, and Bitbucket pull request events.
        *
-       * * **BASE_REF** - A webhook event triggers a build when the base reference matches the
-       * regular expression `pattern` . For example, `refs/heads/branch-name` .
+       * * BASE_REF
+       * * A webhook event triggers a build when the base reference matches the regular expression
+       * `pattern` . For example, `refs/heads/branch-name` .
        *
        *
        * Works with pull request events only.
        *
        *
-       * * **FILE_PATH** - A webhook triggers a build when the path of a changed file matches the
-       * regular expression `pattern` .
+       * * FILE_PATH
+       * * A webhook triggers a build when the path of a changed file matches the regular expression
+       * `pattern` .
        *
        *
        * Works with GitHub and Bitbucket events push and pull requests events. Also works with
        * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
        *
        *
-       * * **COMMIT_MESSAGE** - A webhook triggers a build when the head commit message matches the
-       * regular expression `pattern` .
+       * * COMMIT_MESSAGE
+       * * A webhook triggers a build when the head commit message matches the regular expression
+       * `pattern` .
        *
        *
        * Works with GitHub and Bitbucket events push and pull requests events. Also works with

@@ -53,7 +53,7 @@ public interface IInstanceEngine : IEngine {
   public fun supportsReadReplicaBackups(): Boolean? = unwrap(this).getSupportsReadReplicaBackups()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.IInstanceEngine,
+    cdkObject: software.amazon.awscdk.services.rds.IInstanceEngine,
   ) : CdkObject(cdkObject), IInstanceEngine {
     /**
      * Method called when the engine is used to create a new instance.

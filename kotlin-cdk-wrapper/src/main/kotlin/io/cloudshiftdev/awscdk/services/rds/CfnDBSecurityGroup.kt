@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsecuritygroup.html)
  */
-public open class CfnDBSecurityGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CfnDBSecurityGroup,
+public open class CfnDBSecurityGroup(
+  cdkObject: software.amazon.awscdk.services.rds.CfnDBSecurityGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -338,7 +338,8 @@ public open class CfnDBSecurityGroup internal constructor(
         CfnDBSecurityGroup = CfnDBSecurityGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBSecurityGroup):
-        software.amazon.awscdk.services.rds.CfnDBSecurityGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.CfnDBSecurityGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.CfnDBSecurityGroup
   }
 
   /**
@@ -498,8 +499,7 @@ public open class CfnDBSecurityGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBSecurityGroup.IngressProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBSecurityGroup.IngressProperty,
     ) : CdkObject(cdkObject), IngressProperty {
       /**
        * The IP range to authorize.

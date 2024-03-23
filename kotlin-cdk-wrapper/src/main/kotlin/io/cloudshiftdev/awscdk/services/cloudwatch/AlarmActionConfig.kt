@@ -55,7 +55,7 @@ public interface AlarmActionConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmActionConfig,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmActionConfig,
   ) : CdkObject(cdkObject), AlarmActionConfig {
     /**
      * Return the ARN that should be used for a CloudWatch Alarm action.

@@ -148,8 +148,7 @@ public interface CfnClusterSecurityGroupIngressProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngressProps,
+    cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngressProps,
   ) : CdkObject(cdkObject), CfnClusterSecurityGroupIngressProps {
     /**
      * The IP range to be added the Amazon Redshift security group.

@@ -426,7 +426,7 @@ public interface CfnGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroupProps,
+    cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroupProps,
   ) : CdkObject(cdkObject), CfnGroupProps {
     /**
      * The service configuration currently associated with the resource group and in effect for the

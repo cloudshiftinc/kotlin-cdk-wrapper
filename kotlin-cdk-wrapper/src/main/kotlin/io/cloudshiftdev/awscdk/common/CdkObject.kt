@@ -5,7 +5,7 @@ package io.cloudshiftdev.awscdk.common
 import kotlin.Any
 
 public abstract class CdkObject(
-  internal open val cdkObject: Any,
+  internal val cdkObject: Any,
 ) {
   init {
      CdkObjectWrappers.register(this)}

@@ -136,7 +136,7 @@ public interface AddEventSelectorOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudtrail.AddEventSelectorOptions,
+    cdkObject: software.amazon.awscdk.services.cloudtrail.AddEventSelectorOptions,
   ) : CdkObject(cdkObject), AddEventSelectorOptions {
     /**
      * An optional list of service event sources from which you do not want management events to be

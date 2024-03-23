@@ -280,7 +280,7 @@ public interface CfnDirectoryConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfigProps,
+    cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfigProps,
   ) : CdkObject(cdkObject), CfnDirectoryConfigProps {
     /**
      * The certificate-based authentication properties used to authenticate SAML 2.0 Identity

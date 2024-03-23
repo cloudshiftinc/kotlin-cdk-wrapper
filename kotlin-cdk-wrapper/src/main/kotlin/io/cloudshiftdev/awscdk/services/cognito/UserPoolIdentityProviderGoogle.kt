@@ -32,9 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class UserPoolIdentityProviderGoogle internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle,
+public open class UserPoolIdentityProviderGoogle(
+  cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle,
 ) : Resource(cdkObject), IUserPoolIdentityProvider {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -279,5 +278,6 @@ public open class UserPoolIdentityProviderGoogle internal constructor(
 
     internal fun unwrap(wrapped: UserPoolIdentityProviderGoogle):
         software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle = wrapped.cdkObject
+        as software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle
   }
 }

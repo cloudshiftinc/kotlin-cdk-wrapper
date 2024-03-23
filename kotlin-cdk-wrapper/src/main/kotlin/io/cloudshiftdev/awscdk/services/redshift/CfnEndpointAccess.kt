@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html)
  */
-public open class CfnEndpointAccess internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess,
+public open class CfnEndpointAccess(
+  cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -336,7 +336,8 @@ public open class CfnEndpointAccess internal constructor(
         CfnEndpointAccess = CfnEndpointAccess(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpointAccess):
-        software.amazon.awscdk.services.redshift.CfnEndpointAccess = wrapped.cdkObject
+        software.amazon.awscdk.services.redshift.CfnEndpointAccess = wrapped.cdkObject as
+        software.amazon.awscdk.services.redshift.CfnEndpointAccess
   }
 
   /**
@@ -453,8 +454,7 @@ public open class CfnEndpointAccess internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty,
+      cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty,
     ) : CdkObject(cdkObject), NetworkInterfaceProperty {
       /**
        * The Availability Zone.
@@ -634,8 +634,7 @@ public open class CfnEndpointAccess internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcEndpointProperty,
     ) : CdkObject(cdkObject), VpcEndpointProperty {
       /**
        * One or more network interfaces of the endpoint.
@@ -753,8 +752,7 @@ public open class CfnEndpointAccess internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty,
+      cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty,
     ) : CdkObject(cdkObject), VpcSecurityGroupProperty {
       /**
        * The status of the endpoint.

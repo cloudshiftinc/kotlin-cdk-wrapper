@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-applicationinstance.html)
  */
-public open class CfnApplicationInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstance,
+public open class CfnApplicationInstance(
+  cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -539,7 +539,8 @@ public open class CfnApplicationInstance internal constructor(
         CfnApplicationInstance = CfnApplicationInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationInstance):
-        software.amazon.awscdk.services.panorama.CfnApplicationInstance = wrapped.cdkObject
+        software.amazon.awscdk.services.panorama.CfnApplicationInstance = wrapped.cdkObject as
+        software.amazon.awscdk.services.panorama.CfnApplicationInstance
   }
 
   /**
@@ -600,8 +601,7 @@ public open class CfnApplicationInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestOverridesPayloadProperty,
+      cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestOverridesPayloadProperty,
     ) : CdkObject(cdkObject), ManifestOverridesPayloadProperty {
       /**
        * The overrides document.
@@ -687,8 +687,7 @@ public open class CfnApplicationInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestPayloadProperty,
+      cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestPayloadProperty,
     ) : CdkObject(cdkObject), ManifestPayloadProperty {
       /**
        * The application manifest.

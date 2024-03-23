@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html)
  */
-public open class CfnStreamingImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStreamingImage,
+public open class CfnStreamingImage(
+  cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStreamingImage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -312,7 +312,8 @@ public open class CfnStreamingImage internal constructor(
         CfnStreamingImage = CfnStreamingImage(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamingImage):
-        software.amazon.awscdk.services.nimblestudio.CfnStreamingImage = wrapped.cdkObject
+        software.amazon.awscdk.services.nimblestudio.CfnStreamingImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.nimblestudio.CfnStreamingImage
   }
 
   /**
@@ -391,8 +392,7 @@ public open class CfnStreamingImage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStreamingImage.StreamingImageEncryptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStreamingImage.StreamingImageEncryptionConfigurationProperty,
     ) : CdkObject(cdkObject), StreamingImageEncryptionConfigurationProperty {
       /**
        * The ARN for a KMS key that is used to encrypt studio data.

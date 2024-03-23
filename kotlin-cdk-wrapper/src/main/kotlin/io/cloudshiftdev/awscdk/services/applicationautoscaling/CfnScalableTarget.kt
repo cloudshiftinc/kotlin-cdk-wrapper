@@ -72,9 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html)
  */
-public open class CfnScalableTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget,
+public open class CfnScalableTarget(
+  cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -272,7 +271,7 @@ public open class CfnScalableTarget internal constructor(
      * This string consists of the resource type and unique identifier.
      *
      * * ECS service - The resource type is `service` and the unique identifier is the cluster name
-     * and service name. Example: `service/default/sample-webapp` .
+     * and service name. Example: `service/my-cluster/my-service` .
      * * Spot Fleet - The resource type is `spot-fleet-request` and the unique identifier is the
      * Spot Fleet request ID. Example: `spot-fleet-request/sfr-73fbd2ce-aa30-494c-8788-1cee4EXAMPLE` .
      * * EMR cluster - The resource type is `instancegroup` and the unique identifier is the cluster
@@ -543,7 +542,7 @@ public open class CfnScalableTarget internal constructor(
      * This string consists of the resource type and unique identifier.
      *
      * * ECS service - The resource type is `service` and the unique identifier is the cluster name
-     * and service name. Example: `service/default/sample-webapp` .
+     * and service name. Example: `service/my-cluster/my-service` .
      * * Spot Fleet - The resource type is `spot-fleet-request` and the unique identifier is the
      * Spot Fleet request ID. Example: `spot-fleet-request/sfr-73fbd2ce-aa30-494c-8788-1cee4EXAMPLE` .
      * * EMR cluster - The resource type is `instancegroup` and the unique identifier is the cluster
@@ -813,6 +812,7 @@ public open class CfnScalableTarget internal constructor(
 
     internal fun unwrap(wrapped: CfnScalableTarget):
         software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget = wrapped.cdkObject
+        as software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget
   }
 
   /**
@@ -893,8 +893,7 @@ public open class CfnScalableTarget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty,
+      cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty,
     ) : CdkObject(cdkObject), ScalableTargetActionProperty {
       /**
        * The maximum capacity.
@@ -1230,8 +1229,7 @@ public open class CfnScalableTarget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScheduledActionProperty,
+      cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScheduledActionProperty,
     ) : CdkObject(cdkObject), ScheduledActionProperty {
       /**
        * The date and time that the action is scheduled to end, in UTC.
@@ -1497,8 +1495,7 @@ public open class CfnScalableTarget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.SuspendedStateProperty,
+      cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.SuspendedStateProperty,
     ) : CdkObject(cdkObject), SuspendedStateProperty {
       /**
        * Whether scale in by a target tracking scaling policy or a step scaling policy is suspended.

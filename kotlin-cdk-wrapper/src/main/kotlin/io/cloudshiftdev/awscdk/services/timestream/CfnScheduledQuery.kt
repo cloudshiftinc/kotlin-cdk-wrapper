@@ -102,8 +102,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-scheduledquery.html)
  */
-public open class CfnScheduledQuery internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery,
+public open class CfnScheduledQuery(
+  cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -861,7 +861,8 @@ public open class CfnScheduledQuery internal constructor(
         CfnScheduledQuery = CfnScheduledQuery(cdkObject)
 
     internal fun unwrap(wrapped: CfnScheduledQuery):
-        software.amazon.awscdk.services.timestream.CfnScheduledQuery = wrapped.cdkObject
+        software.amazon.awscdk.services.timestream.CfnScheduledQuery = wrapped.cdkObject as
+        software.amazon.awscdk.services.timestream.CfnScheduledQuery
   }
 
   /**
@@ -939,8 +940,7 @@ public open class CfnScheduledQuery internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.DimensionMappingProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.DimensionMappingProperty,
     ) : CdkObject(cdkObject), DimensionMappingProperty {
       /**
        * Type for the dimension: VARCHAR.
@@ -1062,8 +1062,7 @@ public open class CfnScheduledQuery internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty,
     ) : CdkObject(cdkObject), ErrorReportConfigurationProperty {
       /**
        * The S3 configuration for the error reports.
@@ -1282,8 +1281,7 @@ public open class CfnScheduledQuery internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty,
     ) : CdkObject(cdkObject), MixedMeasureMappingProperty {
       /**
        * Refers to the value of measure_name in a result row.
@@ -1453,8 +1451,7 @@ public open class CfnScheduledQuery internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty,
     ) : CdkObject(cdkObject), MultiMeasureAttributeMappingProperty {
       /**
        * Type of the attribute to be read from the source column.
@@ -1630,8 +1627,7 @@ public open class CfnScheduledQuery internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty,
     ) : CdkObject(cdkObject), MultiMeasureMappingsProperty {
       /**
        * Required.
@@ -1760,8 +1756,7 @@ public open class CfnScheduledQuery internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty,
     ) : CdkObject(cdkObject), NotificationConfigurationProperty {
       /**
        * Details on SNS configuration.
@@ -1893,8 +1888,7 @@ public open class CfnScheduledQuery internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty,
     ) : CdkObject(cdkObject), S3ConfigurationProperty {
       /**
        * Name of the S3 bucket under which error reports will be created.
@@ -2001,8 +1995,7 @@ public open class CfnScheduledQuery internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty,
     ) : CdkObject(cdkObject), ScheduleConfigurationProperty {
       /**
        * An expression that denotes when to trigger the scheduled query run.
@@ -2088,8 +2081,7 @@ public open class CfnScheduledQuery internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty,
     ) : CdkObject(cdkObject), SnsConfigurationProperty {
       /**
        * SNS topic ARN that the scheduled query status notifications will be sent to.
@@ -2240,8 +2232,7 @@ public open class CfnScheduledQuery internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.TargetConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.TargetConfigurationProperty,
     ) : CdkObject(cdkObject), TargetConfigurationProperty {
       /**
        * Configuration needed to write data into the Timestream database and table.
@@ -2571,8 +2562,7 @@ public open class CfnScheduledQuery internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.TimestreamConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.TimestreamConfigurationProperty,
     ) : CdkObject(cdkObject), TimestreamConfigurationProperty {
       /**
        * Name of Timestream database to which the query result will be written.

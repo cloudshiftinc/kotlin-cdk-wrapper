@@ -23,8 +23,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class RestApiBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.RestApiBase,
+public abstract class RestApiBase(
+  cdkObject: software.amazon.awscdk.services.apigateway.RestApiBase,
 ) : Resource(cdkObject), IRestApi {
   /**
    * Add an ApiKey to the deploymentStage.
@@ -512,7 +512,7 @@ public abstract class RestApiBase internal constructor(
   public open fun urlForPath(path: String): String = unwrap(this).urlForPath(path)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.RestApiBase,
+    cdkObject: software.amazon.awscdk.services.apigateway.RestApiBase,
   ) : RestApiBase(cdkObject)
 
   public companion object {

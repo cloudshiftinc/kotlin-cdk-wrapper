@@ -186,7 +186,7 @@ public interface CfnTestGridProjectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnTestGridProjectProps,
+    cdkObject: software.amazon.awscdk.services.devicefarm.CfnTestGridProjectProps,
   ) : CdkObject(cdkObject), CfnTestGridProjectProps {
     /**
      * A human-readable description for the project.

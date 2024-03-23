@@ -27,8 +27,8 @@ import software.amazon.awscdk.services.sns.ITopic as AmazonAwscdkServicesSnsITop
  * repository.onCommit("onCommit", OnCommitOptions.builder().target(new SnsTopic(topic)).build());
  * ```
  */
-public open class SnsTopic internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.targets.SnsTopic,
+public open class SnsTopic(
+  cdkObject: software.amazon.awscdk.services.events.targets.SnsTopic,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic) :
       this(software.amazon.awscdk.services.events.targets.SnsTopic(topic.let(CloudshiftdevAwscdkServicesSnsITopic::unwrap))
@@ -215,6 +215,6 @@ public open class SnsTopic internal constructor(
         = SnsTopic(cdkObject)
 
     internal fun unwrap(wrapped: SnsTopic): software.amazon.awscdk.services.events.targets.SnsTopic
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.events.targets.SnsTopic
   }
 }

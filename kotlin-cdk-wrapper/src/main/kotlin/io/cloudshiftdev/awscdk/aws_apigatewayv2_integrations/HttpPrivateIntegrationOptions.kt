@@ -135,8 +135,7 @@ public interface HttpPrivateIntegrationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.aws_apigatewayv2_integrations.HttpPrivateIntegrationOptions,
+    cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpPrivateIntegrationOptions,
   ) : CdkObject(cdkObject), HttpPrivateIntegrationOptions {
     /**
      * The HTTP method that must be used to invoke the underlying HTTP proxy.

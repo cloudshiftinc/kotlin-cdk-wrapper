@@ -108,7 +108,7 @@ public interface AddHeaderProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.actions.AddHeaderProps,
+    cdkObject: software.amazon.awscdk.services.ses.actions.AddHeaderProps,
   ) : CdkObject(cdkObject), AddHeaderProps {
     /**
      * The name of the header to add.

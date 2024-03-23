@@ -8,8 +8,8 @@ import kotlin.String
 /**
  * Lambda function handler.
  */
-public open class Handler internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.Handler,
+public open class Handler(
+  cdkObject: software.amazon.awscdk.services.lambda.Handler,
 ) : CdkObject(cdkObject) {
   public companion object {
     public val FROM_IMAGE: String = software.amazon.awscdk.services.lambda.Handler.FROM_IMAGE
@@ -18,6 +18,6 @@ public open class Handler internal constructor(
         Handler(cdkObject)
 
     internal fun unwrap(wrapped: Handler): software.amazon.awscdk.services.lambda.Handler =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lambda.Handler
   }
 }

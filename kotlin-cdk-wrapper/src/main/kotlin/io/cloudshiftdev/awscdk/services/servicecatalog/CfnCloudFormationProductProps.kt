@@ -495,8 +495,7 @@ public interface CfnCloudFormationProductProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProductProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProductProps,
   ) : CdkObject(cdkObject), CfnCloudFormationProductProps {
     /**
      * The language code.

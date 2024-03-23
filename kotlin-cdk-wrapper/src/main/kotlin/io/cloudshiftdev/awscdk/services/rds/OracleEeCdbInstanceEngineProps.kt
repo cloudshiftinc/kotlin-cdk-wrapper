@@ -59,7 +59,7 @@ public interface OracleEeCdbInstanceEngineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.OracleEeCdbInstanceEngineProps,
+    cdkObject: software.amazon.awscdk.services.rds.OracleEeCdbInstanceEngineProps,
   ) : CdkObject(cdkObject), OracleEeCdbInstanceEngineProps {
     /**
      * The exact version of the engine to use.

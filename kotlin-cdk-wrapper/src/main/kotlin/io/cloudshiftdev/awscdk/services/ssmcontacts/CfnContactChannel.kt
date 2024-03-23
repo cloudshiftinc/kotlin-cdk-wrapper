@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contactchannel.html)
  */
-public open class CfnContactChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContactChannel,
+public open class CfnContactChannel(
+  cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContactChannel,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -309,6 +309,7 @@ public open class CfnContactChannel internal constructor(
         CfnContactChannel = CfnContactChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnContactChannel):
-        software.amazon.awscdk.services.ssmcontacts.CfnContactChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.ssmcontacts.CfnContactChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssmcontacts.CfnContactChannel
   }
 }

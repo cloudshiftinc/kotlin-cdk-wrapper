@@ -26,7 +26,7 @@ public interface ILogSubscriptionDestination {
   public fun bind(scope: Construct, sourceLogGroup: ILogGroup): LogSubscriptionDestinationConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.ILogSubscriptionDestination,
+    cdkObject: software.amazon.awscdk.services.logs.ILogSubscriptionDestination,
   ) : CdkObject(cdkObject), ILogSubscriptionDestination {
     /**
      * Return the properties required to send subscription events to this destination.

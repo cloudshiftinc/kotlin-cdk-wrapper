@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class BucketPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.BucketPolicy,
+public open class BucketPolicy(
+  cdkObject: software.amazon.awscdk.services.s3.BucketPolicy,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -150,6 +150,6 @@ public open class BucketPolicy internal constructor(
         BucketPolicy(cdkObject)
 
     internal fun unwrap(wrapped: BucketPolicy): software.amazon.awscdk.services.s3.BucketPolicy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.s3.BucketPolicy
   }
 }

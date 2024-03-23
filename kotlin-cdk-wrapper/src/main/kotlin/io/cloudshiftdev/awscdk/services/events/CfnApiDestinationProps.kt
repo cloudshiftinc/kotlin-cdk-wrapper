@@ -168,7 +168,7 @@ public interface CfnApiDestinationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.CfnApiDestinationProps,
+    cdkObject: software.amazon.awscdk.services.events.CfnApiDestinationProps,
   ) : CdkObject(cdkObject), CfnApiDestinationProps {
     /**
      * The ARN of the connection to use for the API destination.

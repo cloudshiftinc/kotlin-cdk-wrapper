@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html)
  */
-public open class CfnFlywheel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel,
+public open class CfnFlywheel(
+  cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -545,7 +545,8 @@ public open class CfnFlywheel internal constructor(
         CfnFlywheel = CfnFlywheel(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlywheel):
-        software.amazon.awscdk.services.comprehend.CfnFlywheel = wrapped.cdkObject
+        software.amazon.awscdk.services.comprehend.CfnFlywheel = wrapped.cdkObject as
+        software.amazon.awscdk.services.comprehend.CfnFlywheel
   }
 
   /**
@@ -736,8 +737,7 @@ public open class CfnFlywheel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty,
     ) : CdkObject(cdkObject), DataSecurityConfigProperty {
       /**
        * ID for the AWS KMS key that Amazon Comprehend uses to encrypt the data in the data lake.
@@ -884,8 +884,7 @@ public open class CfnFlywheel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty,
     ) : CdkObject(cdkObject), DocumentClassificationConfigProperty {
       /**
        * One or more labels to associate with the custom classifier.
@@ -1000,8 +999,7 @@ public open class CfnFlywheel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty,
     ) : CdkObject(cdkObject), EntityRecognitionConfigProperty {
       /**
        * Up to 25 entity types that the model is trained to recognize.
@@ -1097,8 +1095,7 @@ public open class CfnFlywheel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty,
     ) : CdkObject(cdkObject), EntityTypesListItemProperty {
       /**
        * An entity type within a labeled training dataset that Amazon Comprehend uses to train a
@@ -1300,8 +1297,7 @@ public open class CfnFlywheel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty,
     ) : CdkObject(cdkObject), TaskConfigProperty {
       /**
        * Configuration required for a document classification model.
@@ -1492,8 +1488,7 @@ public open class CfnFlywheel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * The ID number for a security group on an instance of your private VPC.

@@ -266,7 +266,7 @@ public interface CfnVpcAttachmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachmentProps,
+    cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachmentProps,
   ) : CdkObject(cdkObject), CfnVpcAttachmentProps {
     /**
      * The core network ID.

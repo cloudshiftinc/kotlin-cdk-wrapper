@@ -104,7 +104,7 @@ public interface ClientVpnAuthorizationRuleOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleOptions,
   ) : CdkObject(cdkObject), ClientVpnAuthorizationRuleOptions {
     /**
      * The IPv4 address range, in CIDR notation, of the network for which access is being

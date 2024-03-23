@@ -27,7 +27,7 @@ public interface IApiKey : IResource {
   public fun keyId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IApiKey,
+    cdkObject: software.amazon.awscdk.services.apigateway.IApiKey,
   ) : CdkObject(cdkObject), IApiKey {
     /**
      * Apply the given removal policy to this resource.

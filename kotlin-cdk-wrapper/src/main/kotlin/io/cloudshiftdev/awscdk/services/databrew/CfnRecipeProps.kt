@@ -172,7 +172,7 @@ public interface CfnRecipeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.databrew.CfnRecipeProps,
+    cdkObject: software.amazon.awscdk.services.databrew.CfnRecipeProps,
   ) : CdkObject(cdkObject), CfnRecipeProps {
     /**
      * The description of the recipe.

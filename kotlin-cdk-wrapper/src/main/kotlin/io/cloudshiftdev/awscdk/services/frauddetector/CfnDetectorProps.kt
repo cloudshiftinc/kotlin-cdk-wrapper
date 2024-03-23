@@ -439,7 +439,7 @@ public interface CfnDetectorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetectorProps,
+    cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetectorProps,
   ) : CdkObject(cdkObject), CfnDetectorProps {
     /**
      * The models to associate with this detector.

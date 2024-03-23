@@ -21,7 +21,7 @@ public interface IScalableTarget : IResource {
   public fun scalableTargetId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.applicationautoscaling.IScalableTarget,
+    cdkObject: software.amazon.awscdk.services.applicationautoscaling.IScalableTarget,
   ) : CdkObject(cdkObject), IScalableTarget {
     /**
      * Apply the given removal policy to this resource.

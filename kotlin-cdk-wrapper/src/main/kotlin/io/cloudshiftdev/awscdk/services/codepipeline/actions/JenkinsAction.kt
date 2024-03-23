@@ -26,9 +26,8 @@ import kotlin.collections.List
  *
  * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-four-stage-pipeline.html)
  */
-public open class JenkinsAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.JenkinsAction,
+public open class JenkinsAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.JenkinsAction,
 ) : Action(cdkObject) {
   public constructor(props: JenkinsActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.JenkinsAction(props.let(JenkinsActionProps::unwrap))
@@ -251,6 +250,7 @@ public open class JenkinsAction internal constructor(
         JenkinsAction = JenkinsAction(cdkObject)
 
     internal fun unwrap(wrapped: JenkinsAction):
-        software.amazon.awscdk.services.codepipeline.actions.JenkinsAction = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.actions.JenkinsAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.JenkinsAction
   }
 }

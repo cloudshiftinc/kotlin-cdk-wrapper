@@ -394,7 +394,7 @@ public interface CfnImageProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageProps,
+    cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageProps,
   ) : CdkObject(cdkObject), CfnImageProps {
     /**
      * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured

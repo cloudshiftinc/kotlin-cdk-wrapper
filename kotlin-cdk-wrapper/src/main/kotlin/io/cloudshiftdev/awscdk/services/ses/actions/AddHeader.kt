@@ -43,8 +43,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class AddHeader internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.actions.AddHeader,
+public open class AddHeader(
+  cdkObject: software.amazon.awscdk.services.ses.actions.AddHeader,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
   public constructor(props: AddHeaderProps) :
       this(software.amazon.awscdk.services.ses.actions.AddHeader(props.let(AddHeaderProps::unwrap))
@@ -130,6 +130,6 @@ public open class AddHeader internal constructor(
         AddHeader(cdkObject)
 
     internal fun unwrap(wrapped: AddHeader): software.amazon.awscdk.services.ses.actions.AddHeader =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ses.actions.AddHeader
   }
 }

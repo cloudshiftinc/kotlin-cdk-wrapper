@@ -29,8 +29,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class Code internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.synthetics.Code,
+public abstract class Code(
+  cdkObject: software.amazon.awscdk.services.synthetics.Code,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the canary is initialized to allow this object to bind to the stack, add resources
@@ -49,7 +49,7 @@ public abstract class Code internal constructor(
       family.let(RuntimeFamily::unwrap)).let(CodeConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.synthetics.Code,
+    cdkObject: software.amazon.awscdk.services.synthetics.Code,
   ) : Code(cdkObject)
 
   public companion object {

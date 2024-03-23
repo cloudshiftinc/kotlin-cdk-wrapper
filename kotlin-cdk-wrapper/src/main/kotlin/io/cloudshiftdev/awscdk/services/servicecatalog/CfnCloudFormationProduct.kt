@@ -72,9 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html)
  */
-public open class CfnCloudFormationProduct internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct,
+public open class CfnCloudFormationProduct(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -794,6 +793,7 @@ public open class CfnCloudFormationProduct internal constructor(
 
     internal fun unwrap(wrapped: CfnCloudFormationProduct):
         software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct = wrapped.cdkObject
+        as software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct
   }
 
   /**
@@ -919,8 +919,7 @@ public open class CfnCloudFormationProduct internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty,
+      cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty,
     ) : CdkObject(cdkObject), CodeStarParametersProperty {
       /**
        * The absolute path wehre the artifact resides within the repo and branch, formatted as
@@ -1059,8 +1058,7 @@ public open class CfnCloudFormationProduct internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty,
+      cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty,
     ) : CdkObject(cdkObject), ConnectionParametersProperty {
       /**
        * Provides `ConnectionType` details.
@@ -1296,8 +1294,7 @@ public open class CfnCloudFormationProduct internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty,
     ) : CdkObject(cdkObject), ProvisioningArtifactPropertiesProperty {
       /**
        * The description of the provisioning artifact, including how it differs from the previous
@@ -1489,8 +1486,7 @@ public open class CfnCloudFormationProduct internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.SourceConnectionProperty,
+      cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.SourceConnectionProperty,
     ) : CdkObject(cdkObject), SourceConnectionProperty {
       /**
        * The connection details based on the connection `Type` .

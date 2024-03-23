@@ -469,8 +469,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html)
  */
-public open class CfnTopicRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule,
+public open class CfnTopicRule(
+  cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -743,7 +743,7 @@ public open class CfnTopicRule internal constructor(
         CfnTopicRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnTopicRule): software.amazon.awscdk.services.iot.CfnTopicRule =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iot.CfnTopicRule
   }
 
   /**
@@ -2077,7 +2077,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * Change the state of a CloudWatch alarm.
@@ -2347,8 +2347,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.AssetPropertyTimestampProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.AssetPropertyTimestampProperty,
     ) : CdkObject(cdkObject), AssetPropertyTimestampProperty {
       /**
        * Optional.
@@ -2551,8 +2550,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.AssetPropertyValueProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.AssetPropertyValueProperty,
     ) : CdkObject(cdkObject), AssetPropertyValueProperty {
       /**
        * Optional.
@@ -2732,8 +2730,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.AssetPropertyVariantProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.AssetPropertyVariantProperty,
     ) : CdkObject(cdkObject), AssetPropertyVariantProperty {
       /**
        * Optional.
@@ -2910,8 +2907,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.CloudwatchAlarmActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.CloudwatchAlarmActionProperty,
     ) : CdkObject(cdkObject), CloudwatchAlarmActionProperty {
       /**
        * The CloudWatch alarm name.
@@ -3073,8 +3069,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.CloudwatchLogsActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.CloudwatchLogsActionProperty,
     ) : CdkObject(cdkObject), CloudwatchLogsActionProperty {
       /**
        * Indicates whether batches of log records will be extracted and uploaded into CloudWatch.
@@ -3283,8 +3278,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.CloudwatchMetricActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.CloudwatchMetricActionProperty,
     ) : CdkObject(cdkObject), CloudwatchMetricActionProperty {
       /**
        * The CloudWatch metric name.
@@ -3596,8 +3590,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.DynamoDBActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.DynamoDBActionProperty,
     ) : CdkObject(cdkObject), DynamoDBActionProperty {
       /**
        * The hash key name.
@@ -3833,8 +3826,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.DynamoDBv2ActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.DynamoDBv2ActionProperty,
     ) : CdkObject(cdkObject), DynamoDBv2ActionProperty {
       /**
        * Specifies the DynamoDB table to which the message data will be written. For example:.
@@ -4016,8 +4008,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.ElasticsearchActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.ElasticsearchActionProperty,
     ) : CdkObject(cdkObject), ElasticsearchActionProperty {
       /**
        * The endpoint of your OpenSearch domain.
@@ -4235,8 +4226,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.FirehoseActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.FirehoseActionProperty,
     ) : CdkObject(cdkObject), FirehoseActionProperty {
       /**
        * Whether to deliver the Kinesis Data Firehose stream as a batch by using
@@ -4370,8 +4360,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.HttpActionHeaderProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.HttpActionHeaderProperty,
     ) : CdkObject(cdkObject), HttpActionHeaderProperty {
       /**
        * The HTTP header key.
@@ -4602,7 +4591,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.HttpActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.HttpActionProperty,
     ) : CdkObject(cdkObject), HttpActionProperty {
       /**
        * The authentication method to use when sending data to an HTTPS endpoint.
@@ -4758,8 +4747,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.HttpAuthorizationProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.HttpAuthorizationProperty,
     ) : CdkObject(cdkObject), HttpAuthorizationProperty {
       /**
        * Use Sig V4 authorization.
@@ -4922,8 +4910,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.IotAnalyticsActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.IotAnalyticsActionProperty,
     ) : CdkObject(cdkObject), IotAnalyticsActionProperty {
       /**
        * Whether to process the action as a batch. The default value is `false` .
@@ -5154,8 +5141,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.IotEventsActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.IotEventsActionProperty,
     ) : CdkObject(cdkObject), IotEventsActionProperty {
       /**
        * Whether to process the event actions as a batch. The default value is `false` .
@@ -5347,8 +5333,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.IotSiteWiseActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.IotSiteWiseActionProperty,
     ) : CdkObject(cdkObject), IotSiteWiseActionProperty {
       /**
        * A list of asset property value entries.
@@ -5463,8 +5448,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.KafkaActionHeaderProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.KafkaActionHeaderProperty,
     ) : CdkObject(cdkObject), KafkaActionHeaderProperty {
       /**
        * The key of the Kafka header.
@@ -5691,7 +5675,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.KafkaActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.KafkaActionProperty,
     ) : CdkObject(cdkObject), KafkaActionProperty {
       /**
        * Properties of the Apache Kafka producer client.
@@ -5847,8 +5831,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.KinesisActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.KinesisActionProperty,
     ) : CdkObject(cdkObject), KinesisActionProperty {
       /**
        * The partition key.
@@ -5942,7 +5925,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.LambdaActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.LambdaActionProperty,
     ) : CdkObject(cdkObject), LambdaActionProperty {
       /**
        * The ARN of the Lambda function.
@@ -6173,8 +6156,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.LocationActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.LocationActionProperty,
     ) : CdkObject(cdkObject), LocationActionProperty {
       /**
        * The unique ID of the device providing the location data.
@@ -6373,8 +6355,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.OpenSearchActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.OpenSearchActionProperty,
     ) : CdkObject(cdkObject), OpenSearchActionProperty {
       /**
        * The endpoint of your OpenSearch domain.
@@ -6638,8 +6619,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.PutAssetPropertyValueEntryProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.PutAssetPropertyValueEntryProperty,
     ) : CdkObject(cdkObject), PutAssetPropertyValueEntryProperty {
       /**
        * The ID of the AWS IoT SiteWise asset.
@@ -6762,7 +6742,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.PutItemInputProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.PutItemInputProperty,
     ) : CdkObject(cdkObject), PutItemInputProperty {
       /**
        * The table where the message data will be written.
@@ -7127,8 +7107,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.RepublishActionHeadersProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.RepublishActionHeadersProperty,
     ) : CdkObject(cdkObject), RepublishActionHeadersProperty {
       /**
        * A UTF-8 encoded string that describes the content of the publishing message.
@@ -7412,8 +7391,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.RepublishActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.RepublishActionProperty,
     ) : CdkObject(cdkObject), RepublishActionProperty {
       /**
        * MQTT Version 5.0 headers information. For more information, see
@@ -7595,7 +7573,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.S3ActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.S3ActionProperty,
     ) : CdkObject(cdkObject), S3ActionProperty {
       /**
        * The Amazon S3 bucket.
@@ -7743,8 +7721,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.SigV4AuthorizationProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.SigV4AuthorizationProperty,
     ) : CdkObject(cdkObject), SigV4AuthorizationProperty {
       /**
        * The ARN of the signing role.
@@ -7895,7 +7872,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.SnsActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.SnsActionProperty,
     ) : CdkObject(cdkObject), SnsActionProperty {
       /**
        * (Optional) The message format of the message to publish.
@@ -8047,7 +8024,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.SqsActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.SqsActionProperty,
     ) : CdkObject(cdkObject), SqsActionProperty {
       /**
        * The URL of the Amazon SQS queue.
@@ -8197,8 +8174,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.StepFunctionsActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.StepFunctionsActionProperty,
     ) : CdkObject(cdkObject), StepFunctionsActionProperty {
       /**
        * (Optional) A name will be given to the state machine execution consisting of this prefix
@@ -8321,7 +8297,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.TimestampProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.TimestampProperty,
     ) : CdkObject(cdkObject), TimestampProperty {
       /**
        * The precision of the timestamp value that results from the expression described in `value`
@@ -8563,8 +8539,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.TimestreamActionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.TimestreamActionProperty,
     ) : CdkObject(cdkObject), TimestreamActionProperty {
       /**
        * The name of an Amazon Timestream database that has the table to write records into.
@@ -8700,8 +8675,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.TimestreamDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.TimestreamDimensionProperty,
     ) : CdkObject(cdkObject), TimestreamDimensionProperty {
       /**
        * The metadata dimension name.
@@ -8815,8 +8789,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.TimestreamTimestampProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.TimestreamTimestampProperty,
     ) : CdkObject(cdkObject), TimestreamTimestampProperty {
       /**
        * The precision of the timestamp value that results from the expression described in `value`
@@ -9494,8 +9467,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRule.TopicRulePayloadProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.TopicRulePayloadProperty,
     ) : CdkObject(cdkObject), TopicRulePayloadProperty {
       /**
        * The actions associated with the rule.
@@ -9636,7 +9608,7 @@ public open class CfnTopicRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.UserPropertyProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.UserPropertyProperty,
     ) : CdkObject(cdkObject), UserPropertyProperty {
       /**
        * A key to be specified in `UserProperty` .

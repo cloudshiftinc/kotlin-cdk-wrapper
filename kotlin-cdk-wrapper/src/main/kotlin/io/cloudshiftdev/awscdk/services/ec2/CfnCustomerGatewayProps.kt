@@ -166,7 +166,7 @@ public interface CfnCustomerGatewayProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnCustomerGatewayProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnCustomerGatewayProps,
   ) : CdkObject(cdkObject), CfnCustomerGatewayProps {
     /**
      * For devices that support BGP, the customer gateway's BGP ASN.

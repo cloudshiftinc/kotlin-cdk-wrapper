@@ -226,7 +226,7 @@ public interface CfnThreatIntelSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.guardduty.CfnThreatIntelSetProps,
+    cdkObject: software.amazon.awscdk.services.guardduty.CfnThreatIntelSetProps,
   ) : CdkObject(cdkObject), CfnThreatIntelSetProps {
     /**
      * A Boolean value that indicates whether GuardDuty is to start using the uploaded

@@ -49,8 +49,8 @@ import kotlin.collections.List
  * }
  * ```
  */
-public abstract class Step internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.Step,
+public abstract class Step(
+  cdkObject: software.amazon.awscdk.pipelines.Step,
 ) : CdkObject(cdkObject), IFileSetProducer {
   /**
    * Add a dependency on another step.
@@ -100,7 +100,7 @@ public abstract class Step internal constructor(
       unwrap(this).getPrimaryOutput()?.let(FileSet::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.Step,
+    cdkObject: software.amazon.awscdk.pipelines.Step,
   ) : Step(cdkObject)
 
   public companion object {

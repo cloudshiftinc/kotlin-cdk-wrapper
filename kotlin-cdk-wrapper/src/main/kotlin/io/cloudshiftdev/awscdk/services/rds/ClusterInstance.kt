@@ -32,8 +32,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class ClusterInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.ClusterInstance,
+public open class ClusterInstance(
+  cdkObject: software.amazon.awscdk.services.rds.ClusterInstance,
 ) : CdkObject(cdkObject), IClusterInstance {
   /**
    * Add the ClusterInstance to the cluster.
@@ -94,6 +94,7 @@ public open class ClusterInstance internal constructor(
         ClusterInstance = ClusterInstance(cdkObject)
 
     internal fun unwrap(wrapped: ClusterInstance):
-        software.amazon.awscdk.services.rds.ClusterInstance = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.ClusterInstance = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.ClusterInstance
   }
 }

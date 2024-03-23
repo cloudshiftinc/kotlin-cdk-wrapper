@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector.html)
  */
-public open class CfnDetector internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector,
+public open class CfnDetector(
+  cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -476,7 +476,7 @@ public open class CfnDetector internal constructor(
         = CfnDetector(cdkObject)
 
     internal fun unwrap(wrapped: CfnDetector): software.amazon.awscdk.services.guardduty.CfnDetector
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.guardduty.CfnDetector
   }
 
   /**
@@ -674,8 +674,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNDataSourceConfigurationsProperty,
+      cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNDataSourceConfigurationsProperty,
     ) : CdkObject(cdkObject), CFNDataSourceConfigurationsProperty {
       /**
        * Describes which Kubernetes data sources are enabled for a detector.
@@ -793,8 +792,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty,
     ) : CdkObject(cdkObject), CFNFeatureAdditionalConfigurationProperty {
       /**
        * Name of the additional configuration.
@@ -958,8 +956,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureConfigurationProperty,
     ) : CdkObject(cdkObject), CFNFeatureConfigurationProperty {
       /**
        * Information about the additional configuration of a feature in your account.
@@ -1072,8 +1069,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty,
     ) : CdkObject(cdkObject), CFNKubernetesAuditLogsConfigurationProperty {
       /**
        * Describes whether Kubernetes audit logs are enabled as a data source for the detector.
@@ -1194,8 +1190,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesConfigurationProperty,
     ) : CdkObject(cdkObject), CFNKubernetesConfigurationProperty {
       /**
        * Describes whether Kubernetes audit logs are enabled as a data source for the detector.
@@ -1319,8 +1314,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNMalwareProtectionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNMalwareProtectionConfigurationProperty,
     ) : CdkObject(cdkObject), CFNMalwareProtectionConfigurationProperty {
       /**
        * Describes the configuration of Malware Protection for EC2 instances with findings.
@@ -1418,8 +1412,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty,
     ) : CdkObject(cdkObject), CFNS3LogsConfigurationProperty {
       /**
        * The status of S3 data event logs as a data source.
@@ -1516,8 +1509,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty,
     ) : CdkObject(cdkObject), CFNScanEc2InstanceWithFindingsConfigurationProperty {
       /**
        * Describes the configuration for scanning EBS volumes as data source.
@@ -1618,7 +1610,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty,
+      cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty,
     ) : CdkObject(cdkObject), TagItemProperty {
       /**
        * The tag value.

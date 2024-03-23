@@ -104,7 +104,7 @@ public interface TriggerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.TriggerProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.TriggerProps,
   ) : CdkObject(cdkObject), TriggerProps {
     /**
      * Provides the filter criteria and the source stage for the repository event that starts the

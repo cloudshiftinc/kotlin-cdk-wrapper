@@ -188,8 +188,7 @@ public interface ApplicationLoadBalancerProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps,
   ) : CdkObject(cdkObject), ApplicationLoadBalancerProps {
     /**
      * The domain name for the service, e.g. "api.example.com.".

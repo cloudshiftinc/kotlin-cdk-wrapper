@@ -34,8 +34,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class GroupMetric internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.GroupMetric,
+public open class GroupMetric(
+  cdkObject: software.amazon.awscdk.services.autoscaling.GroupMetric,
 ) : CdkObject(cdkObject) {
   public constructor(name: String) :
       this(software.amazon.awscdk.services.autoscaling.GroupMetric(name)
@@ -75,6 +75,7 @@ public open class GroupMetric internal constructor(
         GroupMetric = GroupMetric(cdkObject)
 
     internal fun unwrap(wrapped: GroupMetric):
-        software.amazon.awscdk.services.autoscaling.GroupMetric = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.GroupMetric = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.GroupMetric
   }
 }

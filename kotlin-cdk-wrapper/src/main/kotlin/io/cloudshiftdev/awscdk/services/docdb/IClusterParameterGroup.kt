@@ -21,7 +21,7 @@ public interface IClusterParameterGroup : IResource {
   public fun parameterGroupName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.docdb.IClusterParameterGroup,
+    cdkObject: software.amazon.awscdk.services.docdb.IClusterParameterGroup,
   ) : CdkObject(cdkObject), IClusterParameterGroup {
     /**
      * Apply the given removal policy to this resource.

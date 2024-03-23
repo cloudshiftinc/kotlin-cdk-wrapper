@@ -41,8 +41,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class SplunkLogDriver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.SplunkLogDriver,
+public open class SplunkLogDriver(
+  cdkObject: software.amazon.awscdk.services.ecs.SplunkLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor(props: SplunkLogDriverProps) :
       this(software.amazon.awscdk.services.ecs.SplunkLogDriver(props.let(SplunkLogDriverProps::unwrap))
@@ -515,6 +515,7 @@ public open class SplunkLogDriver internal constructor(
         SplunkLogDriver = SplunkLogDriver(cdkObject)
 
     internal fun unwrap(wrapped: SplunkLogDriver):
-        software.amazon.awscdk.services.ecs.SplunkLogDriver = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.SplunkLogDriver = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.SplunkLogDriver
   }
 }

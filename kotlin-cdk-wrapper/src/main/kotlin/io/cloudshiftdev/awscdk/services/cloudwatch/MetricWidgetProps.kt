@@ -119,7 +119,7 @@ public interface MetricWidgetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.MetricWidgetProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.MetricWidgetProps,
   ) : CdkObject(cdkObject), MetricWidgetProps {
     /**
      * Height of the widget.

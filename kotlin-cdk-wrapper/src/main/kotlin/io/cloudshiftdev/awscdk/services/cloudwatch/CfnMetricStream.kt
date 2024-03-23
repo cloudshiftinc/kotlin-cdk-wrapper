@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html)
  */
-public open class CfnMetricStream internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream,
+public open class CfnMetricStream(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -905,7 +905,8 @@ public open class CfnMetricStream internal constructor(
         CfnMetricStream = CfnMetricStream(cdkObject)
 
     internal fun unwrap(wrapped: CfnMetricStream):
-        software.amazon.awscdk.services.cloudwatch.CfnMetricStream = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.CfnMetricStream = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.CfnMetricStream
   }
 
   /**
@@ -1036,8 +1037,7 @@ public open class CfnMetricStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty,
     ) : CdkObject(cdkObject), MetricStreamFilterProperty {
       /**
        * The names of the metrics to either include or exclude from the metric stream.
@@ -1207,8 +1207,7 @@ public open class CfnMetricStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty,
     ) : CdkObject(cdkObject), MetricStreamStatisticsConfigurationProperty {
       /**
        * The additional statistics to stream for the metrics listed in `IncludeMetrics` .
@@ -1320,8 +1319,7 @@ public open class CfnMetricStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty,
     ) : CdkObject(cdkObject), MetricStreamStatisticsMetricProperty {
       /**
        * The name of the metric.

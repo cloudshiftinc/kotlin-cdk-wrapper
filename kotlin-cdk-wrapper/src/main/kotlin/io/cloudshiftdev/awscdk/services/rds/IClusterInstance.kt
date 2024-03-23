@@ -42,7 +42,7 @@ public interface IClusterInstance {
   ): IAuroraClusterInstance
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.IClusterInstance,
+    cdkObject: software.amazon.awscdk.services.rds.IClusterInstance,
   ) : CdkObject(cdkObject), IClusterInstance {
     /**
      * Create the database instance within the provided cluster.

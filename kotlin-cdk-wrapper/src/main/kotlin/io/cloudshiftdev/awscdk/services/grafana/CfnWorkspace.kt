@@ -82,8 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html)
  */
-public open class CfnWorkspace internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace,
+public open class CfnWorkspace(
+  cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1282,7 +1282,7 @@ public open class CfnWorkspace internal constructor(
         = CfnWorkspace(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkspace): software.amazon.awscdk.services.grafana.CfnWorkspace
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.grafana.CfnWorkspace
   }
 
   /**
@@ -1452,8 +1452,7 @@ public open class CfnWorkspace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.grafana.CfnWorkspace.AssertionAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.AssertionAttributesProperty,
     ) : CdkObject(cdkObject), AssertionAttributesProperty {
       /**
        * The name of the attribute within the SAML assertion to use as the email names for SAML
@@ -1598,8 +1597,7 @@ public open class CfnWorkspace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.grafana.CfnWorkspace.IdpMetadataProperty,
+      cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.IdpMetadataProperty,
     ) : CdkObject(cdkObject), IdpMetadataProperty {
       /**
        * The URL of the location containing the IdP metadata.
@@ -1875,8 +1873,7 @@ public open class CfnWorkspace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty,
+      cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty,
     ) : CdkObject(cdkObject), NetworkAccessControlProperty {
       /**
        * An array of prefix list IDs.
@@ -2043,8 +2040,7 @@ public open class CfnWorkspace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty,
+      cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty,
     ) : CdkObject(cdkObject), RoleValuesProperty {
       /**
        * A list of groups from the SAML assertion attribute to grant the Grafana `Admin` role to.
@@ -2361,8 +2357,7 @@ public open class CfnWorkspace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.grafana.CfnWorkspace.SamlConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.SamlConfigurationProperty,
     ) : CdkObject(cdkObject), SamlConfigurationProperty {
       /**
        * Lists which organizations defined in the SAML assertion are allowed to use the Amazon
@@ -2589,8 +2584,7 @@ public open class CfnWorkspace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.grafana.CfnWorkspace.VpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.VpcConfigurationProperty,
     ) : CdkObject(cdkObject), VpcConfigurationProperty {
       /**
        * The list of Amazon EC2 security group IDs attached to the Amazon VPC for your Grafana

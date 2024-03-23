@@ -82,8 +82,7 @@ public interface CfnClientVpnTargetNetworkAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociationProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociationProps,
   ) : CdkObject(cdkObject), CfnClientVpnTargetNetworkAssociationProps {
     /**
      * The ID of the Client VPN endpoint.

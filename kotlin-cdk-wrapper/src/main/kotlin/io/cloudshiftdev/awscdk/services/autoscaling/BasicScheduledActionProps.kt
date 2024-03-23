@@ -234,7 +234,7 @@ public interface BasicScheduledActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.BasicScheduledActionProps,
+    cdkObject: software.amazon.awscdk.services.autoscaling.BasicScheduledActionProps,
   ) : CdkObject(cdkObject), BasicScheduledActionProps {
     /**
      * The new desired capacity.

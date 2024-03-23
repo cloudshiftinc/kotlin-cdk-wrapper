@@ -73,8 +73,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html)
  */
-public open class CfnChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel,
+public open class CfnChannel(
+  cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -671,7 +671,7 @@ public open class CfnChannel internal constructor(
         = CfnChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnChannel): software.amazon.awscdk.services.mediatailor.CfnChannel
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.mediatailor.CfnChannel
   }
 
   /**
@@ -815,8 +815,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.DashPlaylistSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.DashPlaylistSettingsProperty,
     ) : CdkObject(cdkObject), DashPlaylistSettingsProperty {
       /**
        * The total duration (in seconds) of each manifest.
@@ -977,8 +976,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty,
     ) : CdkObject(cdkObject), HlsPlaylistSettingsProperty {
       /**
        * Determines the type of SCTE 35 tags to use in ad markup.
@@ -1083,8 +1081,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty,
     ) : CdkObject(cdkObject), LogConfigurationForChannelProperty {
       /**
        * The log types.
@@ -1299,8 +1296,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.RequestOutputItemProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.RequestOutputItemProperty,
     ) : CdkObject(cdkObject), RequestOutputItemProperty {
       /**
        * DASH manifest configuration parameters.
@@ -1429,8 +1425,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty,
     ) : CdkObject(cdkObject), SlateSourceProperty {
       /**
        * The name of the source location where the slate VOD source is stored.
@@ -1529,8 +1524,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty,
     ) : CdkObject(cdkObject), TimeShiftConfigurationProperty {
       /**
        * The maximum time delay for time-shifted viewing.

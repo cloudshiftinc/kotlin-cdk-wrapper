@@ -307,7 +307,7 @@ public interface CfnDistributionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistributionProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistributionProps,
   ) : CdkObject(cdkObject), CfnDistributionProps {
     /**
      * The distribution's configuration.

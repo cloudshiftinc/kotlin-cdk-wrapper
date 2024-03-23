@@ -72,8 +72,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class AssetManifestArtifact internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.cxapi.AssetManifestArtifact,
+public open class AssetManifestArtifact(
+  cdkObject: software.amazon.awscdk.cxapi.AssetManifestArtifact,
 ) : CloudArtifact(cdkObject) {
   public constructor(
     assembly: CloudAssembly,
@@ -438,6 +438,7 @@ public open class AssetManifestArtifact internal constructor(
         AssetManifestArtifact = AssetManifestArtifact(cdkObject)
 
     internal fun unwrap(wrapped: AssetManifestArtifact):
-        software.amazon.awscdk.cxapi.AssetManifestArtifact = wrapped.cdkObject
+        software.amazon.awscdk.cxapi.AssetManifestArtifact = wrapped.cdkObject as
+        software.amazon.awscdk.cxapi.AssetManifestArtifact
   }
 }

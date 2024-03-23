@@ -58,7 +58,7 @@ public interface RuntimeInfo {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo,
   ) : CdkObject(cdkObject), RuntimeInfo {
     /**
      * The list of libraries loaded in the application, associated with their versions.

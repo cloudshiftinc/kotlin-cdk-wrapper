@@ -80,7 +80,7 @@ public interface CfnFleetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.robomaker.CfnFleetProps,
+    cdkObject: software.amazon.awscdk.services.robomaker.CfnFleetProps,
   ) : CdkObject(cdkObject), CfnFleetProps {
     /**
      * The name of the fleet.

@@ -138,7 +138,7 @@ public interface RepositoryNotifyOnOptions : NotificationRuleOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codecommit.RepositoryNotifyOnOptions,
+    cdkObject: software.amazon.awscdk.services.codecommit.RepositoryNotifyOnOptions,
   ) : CdkObject(cdkObject), RepositoryNotifyOnOptions {
     /**
      * The level of detail to include in the notifications for this resource.

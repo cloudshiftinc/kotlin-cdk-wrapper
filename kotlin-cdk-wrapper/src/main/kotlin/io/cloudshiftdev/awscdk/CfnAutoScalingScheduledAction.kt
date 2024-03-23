@@ -70,7 +70,7 @@ public interface CfnAutoScalingScheduledAction {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnAutoScalingScheduledAction,
+    cdkObject: software.amazon.awscdk.CfnAutoScalingScheduledAction,
   ) : CdkObject(cdkObject), CfnAutoScalingScheduledAction {
     /**
      *

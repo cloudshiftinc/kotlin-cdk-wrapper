@@ -16,8 +16,8 @@ import kotlin.String
  * fn.grantInvoke(org);
  * ```
  */
-public open class OrganizationPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.OrganizationPrincipal,
+public open class OrganizationPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.OrganizationPrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(organizationId: String) :
       this(software.amazon.awscdk.services.iam.OrganizationPrincipal(organizationId)
@@ -44,6 +44,7 @@ public open class OrganizationPrincipal internal constructor(
         OrganizationPrincipal = OrganizationPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: OrganizationPrincipal):
-        software.amazon.awscdk.services.iam.OrganizationPrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.OrganizationPrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.OrganizationPrincipal
   }
 }

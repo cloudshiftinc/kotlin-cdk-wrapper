@@ -21,8 +21,8 @@ import kotlin.collections.List
  * Fact.register(new MyFact());
  * ```
  */
-public open class Fact internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.regioninfo.Fact,
+public open class Fact(
+  cdkObject: software.amazon.awscdk.regioninfo.Fact,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun definedFacts(): List<List<String>> =
@@ -61,5 +61,6 @@ public open class Fact internal constructor(
     internal fun wrap(cdkObject: software.amazon.awscdk.regioninfo.Fact): Fact = Fact(cdkObject)
 
     internal fun unwrap(wrapped: Fact): software.amazon.awscdk.regioninfo.Fact = wrapped.cdkObject
+        as software.amazon.awscdk.regioninfo.Fact
   }
 }

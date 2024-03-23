@@ -331,8 +331,7 @@ public interface ResponseSecurityHeadersBehavior {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cloudfront.ResponseSecurityHeadersBehavior,
+    cdkObject: software.amazon.awscdk.services.cloudfront.ResponseSecurityHeadersBehavior,
   ) : CdkObject(cdkObject), ResponseSecurityHeadersBehavior {
     /**
      * The policy directives and their values that CloudFront includes as values for the

@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-environment.html)
  */
-public open class CfnEnvironment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment,
+public open class CfnEnvironment(
+  cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -815,7 +815,8 @@ public open class CfnEnvironment internal constructor(
         CfnEnvironment = CfnEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironment):
-        software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment
   }
 
   /**
@@ -949,8 +950,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty,
+      cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty,
     ) : CdkObject(cdkObject), OptionSettingProperty {
       /**
        * A unique namespace that identifies the option's associated AWS resource.
@@ -1148,8 +1148,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty,
+      cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty,
     ) : CdkObject(cdkObject), TierProperty {
       /**
        * The name of this environment tier.

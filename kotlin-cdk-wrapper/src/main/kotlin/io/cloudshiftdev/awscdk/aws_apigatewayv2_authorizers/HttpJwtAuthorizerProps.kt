@@ -128,8 +128,7 @@ public interface HttpJwtAuthorizerProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpJwtAuthorizerProps,
+    cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpJwtAuthorizerProps,
   ) : CdkObject(cdkObject), HttpJwtAuthorizerProps {
     /**
      * The name of the authorizer.

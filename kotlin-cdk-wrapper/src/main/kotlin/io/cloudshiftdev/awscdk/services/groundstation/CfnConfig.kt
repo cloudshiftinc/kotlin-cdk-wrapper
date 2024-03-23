@@ -110,8 +110,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html)
  */
-public open class CfnConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig,
+public open class CfnConfig(
+  cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -377,7 +377,7 @@ public open class CfnConfig internal constructor(
         = CfnConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfig): software.amazon.awscdk.services.groundstation.CfnConfig
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.groundstation.CfnConfig
   }
 
   /**
@@ -476,8 +476,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkConfigProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkConfigProperty,
     ) : CdkObject(cdkObject), AntennaDownlinkConfigProperty {
       /**
        * Defines the spectrum configuration.
@@ -701,8 +700,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkDemodDecodeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkDemodDecodeConfigProperty,
     ) : CdkObject(cdkObject), AntennaDownlinkDemodDecodeConfigProperty {
       /**
        * Defines how the RF signal will be decoded.
@@ -929,8 +927,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.AntennaUplinkConfigProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.AntennaUplinkConfigProperty,
     ) : CdkObject(cdkObject), AntennaUplinkConfigProperty {
       /**
        * Defines the spectrum configuration.
@@ -1522,8 +1519,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.ConfigDataProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.ConfigDataProperty,
     ) : CdkObject(cdkObject), ConfigDataProperty {
       /**
        * Provides information for an antenna downlink config object.
@@ -1695,8 +1691,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.DataflowEndpointConfigProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.DataflowEndpointConfigProperty,
     ) : CdkObject(cdkObject), DataflowEndpointConfigProperty {
       /**
        * The name of the dataflow endpoint to use during contacts.
@@ -1784,8 +1779,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.DecodeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.DecodeConfigProperty,
     ) : CdkObject(cdkObject), DecodeConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-decodeconfig.html#cfn-groundstation-config-decodeconfig-unvalidatedjson)
@@ -1863,8 +1857,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.DemodulationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.DemodulationConfigProperty,
     ) : CdkObject(cdkObject), DemodulationConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-demodulationconfig.html#cfn-groundstation-config-demodulationconfig-unvalidatedjson)
@@ -1966,7 +1959,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.EirpProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.EirpProperty,
     ) : CdkObject(cdkObject), EirpProperty {
       /**
        * The units of the EIRP.
@@ -2089,8 +2082,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyBandwidthProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyBandwidthProperty,
     ) : CdkObject(cdkObject), FrequencyBandwidthProperty {
       /**
        * The units of the bandwidth.
@@ -2209,8 +2201,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyProperty,
     ) : CdkObject(cdkObject), FrequencyProperty {
       /**
        * The units of the frequency.
@@ -2365,8 +2356,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.S3RecordingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.S3RecordingConfigProperty,
     ) : CdkObject(cdkObject), S3RecordingConfigProperty {
       /**
        * S3 Bucket where the data is written.
@@ -2621,8 +2611,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.SpectrumConfigProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.SpectrumConfigProperty,
     ) : CdkObject(cdkObject), SpectrumConfigProperty {
       /**
        * The bandwidth of the spectrum. AWS Ground Station currently has the following bandwidth
@@ -2742,8 +2731,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.TrackingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.TrackingConfigProperty,
     ) : CdkObject(cdkObject), TrackingConfigProperty {
       /**
        * Specifies whether or not to use autotrack.
@@ -2864,8 +2852,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.UplinkEchoConfigProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.UplinkEchoConfigProperty,
     ) : CdkObject(cdkObject), UplinkEchoConfigProperty {
       /**
        * Defines the ARN of the uplink config to echo back to a dataflow endpoint.
@@ -3024,8 +3011,7 @@ public open class CfnConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnConfig.UplinkSpectrumConfigProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.UplinkSpectrumConfigProperty,
     ) : CdkObject(cdkObject), UplinkSpectrumConfigProperty {
       /**
        * The center frequency of the spectrum.

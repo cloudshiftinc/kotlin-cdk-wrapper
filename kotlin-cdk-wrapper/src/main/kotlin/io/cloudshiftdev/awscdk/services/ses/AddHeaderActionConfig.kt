@@ -73,7 +73,7 @@ public interface AddHeaderActionConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.AddHeaderActionConfig,
+    cdkObject: software.amazon.awscdk.services.ses.AddHeaderActionConfig,
   ) : CdkObject(cdkObject), AddHeaderActionConfig {
     /**
      * The name of the header that you want to add to the incoming message.

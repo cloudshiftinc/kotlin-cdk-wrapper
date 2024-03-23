@@ -234,7 +234,7 @@ public interface CfnApplicationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.systemsmanagersap.CfnApplicationProps,
+    cdkObject: software.amazon.awscdk.services.systemsmanagersap.CfnApplicationProps,
   ) : CdkObject(cdkObject), CfnApplicationProps {
     /**
      * The ID of the application.

@@ -43,8 +43,8 @@ import kotlin.collections.Map
  * fredCapture.asString();
  * ```
  */
-public open class Capture internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.assertions.Capture,
+public open class Capture(
+  cdkObject: software.amazon.awscdk.assertions.Capture,
 ) : Matcher(cdkObject) {
   public constructor() : this(software.amazon.awscdk.assertions.Capture()
   )
@@ -117,6 +117,6 @@ public open class Capture internal constructor(
         Capture(cdkObject)
 
     internal fun unwrap(wrapped: Capture): software.amazon.awscdk.assertions.Capture =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.assertions.Capture
   }
 }

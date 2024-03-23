@@ -211,7 +211,7 @@ public interface CfnMultiRegionAccessPointProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointProps,
+    cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointProps,
   ) : CdkObject(cdkObject), CfnMultiRegionAccessPointProps {
     /**
      * The name of the Multi-Region Access Point.

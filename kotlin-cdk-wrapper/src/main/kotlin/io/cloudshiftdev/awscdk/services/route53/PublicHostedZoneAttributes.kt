@@ -65,7 +65,7 @@ public interface PublicHostedZoneAttributes : HostedZoneAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.PublicHostedZoneAttributes,
+    cdkObject: software.amazon.awscdk.services.route53.PublicHostedZoneAttributes,
   ) : CdkObject(cdkObject), PublicHostedZoneAttributes {
     /**
      * Identifier of the hosted zone.

@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html)
  */
-public open class CfnConnectPeer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer,
+public open class CfnConnectPeer(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -492,7 +492,8 @@ public open class CfnConnectPeer internal constructor(
         CfnConnectPeer = CfnConnectPeer(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnectPeer):
-        software.amazon.awscdk.services.networkmanager.CfnConnectPeer = wrapped.cdkObject
+        software.amazon.awscdk.services.networkmanager.CfnConnectPeer = wrapped.cdkObject as
+        software.amazon.awscdk.services.networkmanager.CfnConnectPeer
   }
 
   /**
@@ -548,8 +549,7 @@ public open class CfnConnectPeer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnConnectPeer.BgpOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.BgpOptionsProperty,
     ) : CdkObject(cdkObject), BgpOptionsProperty {
       /**
        * The Peer ASN of the BGP.
@@ -692,8 +692,7 @@ public open class CfnConnectPeer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerBgpConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerBgpConfigurationProperty,
     ) : CdkObject(cdkObject), ConnectPeerBgpConfigurationProperty {
       /**
        * The address of a core network.
@@ -917,8 +916,7 @@ public open class CfnConnectPeer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerConfigurationProperty,
     ) : CdkObject(cdkObject), ConnectPeerConfigurationProperty {
       /**
        * The Connect peer BGP configurations.

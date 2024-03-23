@@ -352,7 +352,7 @@ public interface StageProps : StageOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.StageProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.StageProps,
   ) : CdkObject(cdkObject), StageProps {
     /**
      * The CloudWatch Logs log group or Firehose delivery stream where to write access logs.

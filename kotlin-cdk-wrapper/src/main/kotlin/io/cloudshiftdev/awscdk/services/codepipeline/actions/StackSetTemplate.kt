@@ -40,12 +40,11 @@ import io.cloudshiftdev.awscdk.services.codepipeline.ArtifactPath
  * .build());
  * ```
  */
-public abstract class StackSetTemplate internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.StackSetTemplate,
+public abstract class StackSetTemplate(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetTemplate,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetTemplate,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetTemplate,
   ) : StackSetTemplate(cdkObject)
 
   public companion object {

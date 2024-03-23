@@ -83,8 +83,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html)
  */
-public open class CfnInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance,
+public open class CfnInstance(
+  cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1295,7 +1295,7 @@ public open class CfnInstance internal constructor(
         = CfnInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstance): software.amazon.awscdk.services.opsworks.CfnInstance
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.opsworks.CfnInstance
   }
 
   /**
@@ -1474,8 +1474,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty,
     ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
       /**
        * The device name that is exposed to the instance, such as `/dev/sdh` .
@@ -1721,8 +1720,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty,
     ) : CdkObject(cdkObject), EbsBlockDeviceProperty {
       /**
        * Whether the volume is deleted on instance termination.
@@ -2059,8 +2057,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnInstance.TimeBasedAutoScalingProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.TimeBasedAutoScalingProperty,
     ) : CdkObject(cdkObject), TimeBasedAutoScalingProperty {
       /**
        * The schedule for Friday.

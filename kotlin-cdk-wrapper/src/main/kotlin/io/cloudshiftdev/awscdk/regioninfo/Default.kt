@@ -8,8 +8,8 @@ import kotlin.String
 /**
  * Provides default values for certain regional information points.
  */
-public open class Default internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.regioninfo.Default,
+public open class Default(
+  cdkObject: software.amazon.awscdk.regioninfo.Default,
 ) : CdkObject(cdkObject) {
   public companion object {
     public val VPC_ENDPOINT_SERVICE_NAME_PREFIX: String =
@@ -26,6 +26,6 @@ public open class Default internal constructor(
         Default(cdkObject)
 
     internal fun unwrap(wrapped: Default): software.amazon.awscdk.regioninfo.Default =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.regioninfo.Default
   }
 }

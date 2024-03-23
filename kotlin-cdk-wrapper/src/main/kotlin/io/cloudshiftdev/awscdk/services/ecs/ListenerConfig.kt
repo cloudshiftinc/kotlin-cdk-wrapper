@@ -37,8 +37,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class ListenerConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.ListenerConfig,
+public abstract class ListenerConfig(
+  cdkObject: software.amazon.awscdk.services.ecs.ListenerConfig,
 ) : CdkObject(cdkObject) {
   /**
    * Create and attach a target group to listener.
@@ -57,7 +57,7 @@ public abstract class ListenerConfig internal constructor(
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ListenerConfig,
+    cdkObject: software.amazon.awscdk.services.ecs.ListenerConfig,
   ) : ListenerConfig(cdkObject)
 
   public companion object {

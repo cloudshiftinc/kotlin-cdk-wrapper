@@ -136,7 +136,7 @@ public interface HttpStageProps : HttpStageOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpStageProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpStageProps,
   ) : CdkObject(cdkObject), HttpStageProps {
     /**
      * Whether updates to an API automatically trigger a new deployment.

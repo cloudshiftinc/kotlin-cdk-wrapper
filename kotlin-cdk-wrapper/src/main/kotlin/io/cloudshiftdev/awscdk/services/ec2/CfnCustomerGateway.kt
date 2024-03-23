@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html)
  */
-public open class CfnCustomerGateway internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnCustomerGateway,
+public open class CfnCustomerGateway(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnCustomerGateway,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -296,6 +296,7 @@ public open class CfnCustomerGateway internal constructor(
         CfnCustomerGateway = CfnCustomerGateway(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomerGateway):
-        software.amazon.awscdk.services.ec2.CfnCustomerGateway = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnCustomerGateway = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnCustomerGateway
   }
 }

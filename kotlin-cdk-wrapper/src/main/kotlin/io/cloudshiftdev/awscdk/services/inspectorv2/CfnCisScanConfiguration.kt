@@ -70,9 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-cisscanconfiguration.html)
  */
-public open class CfnCisScanConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration,
+public open class CfnCisScanConfiguration(
+  cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -410,7 +409,8 @@ public open class CfnCisScanConfiguration internal constructor(
         CfnCisScanConfiguration = CfnCisScanConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnCisScanConfiguration):
-        software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration
   }
 
   /**
@@ -511,8 +511,7 @@ public open class CfnCisScanConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty,
     ) : CdkObject(cdkObject), CisTargetsProperty {
       /**
        * The CIS target account ids.
@@ -631,8 +630,7 @@ public open class CfnCisScanConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty,
     ) : CdkObject(cdkObject), DailyScheduleProperty {
       /**
        * The schedule start time.
@@ -764,8 +762,7 @@ public open class CfnCisScanConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.MonthlyScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.MonthlyScheduleProperty,
     ) : CdkObject(cdkObject), MonthlyScheduleProperty {
       /**
        * The monthly schedule's day.
@@ -1015,8 +1012,7 @@ public open class CfnCisScanConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.ScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.ScheduleProperty,
     ) : CdkObject(cdkObject), ScheduleProperty {
       /**
        * A daily schedule.
@@ -1138,8 +1134,7 @@ public open class CfnCisScanConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty,
     ) : CdkObject(cdkObject), TimeProperty {
       /**
        * The time of day in 24-hour format (00:00).
@@ -1287,8 +1282,7 @@ public open class CfnCisScanConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.WeeklyScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.WeeklyScheduleProperty,
     ) : CdkObject(cdkObject), WeeklyScheduleProperty {
       /**
        * The weekly schedule's days.

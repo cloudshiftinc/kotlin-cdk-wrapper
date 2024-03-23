@@ -37,7 +37,7 @@ public interface MetadataOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.constructs.MetadataOptions,
+    cdkObject: software.constructs.MetadataOptions,
   ) : CdkObject(cdkObject), MetadataOptions {
     override fun stackTrace(): Boolean? = unwrap(this).getStackTrace()
 

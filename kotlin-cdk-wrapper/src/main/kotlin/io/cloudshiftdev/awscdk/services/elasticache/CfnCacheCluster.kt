@@ -78,8 +78,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html)
  */
-public open class CfnCacheCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster,
+public open class CfnCacheCluster(
+  cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1694,7 +1694,8 @@ public open class CfnCacheCluster internal constructor(
         CfnCacheCluster = CfnCacheCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCacheCluster):
-        software.amazon.awscdk.services.elasticache.CfnCacheCluster = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticache.CfnCacheCluster = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticache.CfnCacheCluster
   }
 
   /**
@@ -1755,8 +1756,7 @@ public open class CfnCacheCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty,
     ) : CdkObject(cdkObject), CloudWatchLogsDestinationDetailsProperty {
       /**
        * The name of the CloudWatch Logs log group.
@@ -1964,8 +1964,7 @@ public open class CfnCacheCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.DestinationDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster.DestinationDetailsProperty,
     ) : CdkObject(cdkObject), DestinationDetailsProperty {
       /**
        * The configuration details of the CloudWatch Logs destination.
@@ -2064,8 +2063,7 @@ public open class CfnCacheCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty,
     ) : CdkObject(cdkObject), KinesisFirehoseDestinationDetailsProperty {
       /**
        * The name of the Kinesis Data Firehose delivery stream.
@@ -2261,8 +2259,7 @@ public open class CfnCacheCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty,
     ) : CdkObject(cdkObject), LogDeliveryConfigurationRequestProperty {
       /**
        * Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose

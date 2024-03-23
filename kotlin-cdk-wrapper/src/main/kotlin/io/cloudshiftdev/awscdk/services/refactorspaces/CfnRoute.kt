@@ -134,8 +134,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-route.html)
  */
-public open class CfnRoute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRoute,
+public open class CfnRoute(
+  cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRoute,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -555,7 +555,7 @@ public open class CfnRoute internal constructor(
         = CfnRoute(cdkObject)
 
     internal fun unwrap(wrapped: CfnRoute): software.amazon.awscdk.services.refactorspaces.CfnRoute
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.refactorspaces.CfnRoute
   }
 
   /**
@@ -614,8 +614,7 @@ public open class CfnRoute internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty,
+      cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty,
     ) : CdkObject(cdkObject), DefaultRouteInputProperty {
       /**
        * If set to `ACTIVE` , traffic is forwarded to this route’s service after the route is
@@ -851,8 +850,7 @@ public open class CfnRoute internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.refactorspaces.CfnRoute.UriPathRouteInputProperty,
+      cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRoute.UriPathRouteInputProperty,
     ) : CdkObject(cdkObject), UriPathRouteInputProperty {
       /**
        * If set to `ACTIVE` , traffic is forwarded to this route’s service after the route is

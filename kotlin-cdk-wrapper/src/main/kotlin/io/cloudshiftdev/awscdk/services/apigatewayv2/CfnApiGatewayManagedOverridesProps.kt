@@ -249,8 +249,7 @@ public interface CfnApiGatewayManagedOverridesProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverridesProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverridesProps,
   ) : CdkObject(cdkObject), CfnApiGatewayManagedOverridesProps {
     /**
      * The ID of the API for which to override the configuration of API Gateway-managed resources.

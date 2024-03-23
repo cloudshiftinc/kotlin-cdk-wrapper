@@ -69,8 +69,7 @@ public interface CfnDefaultViewAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociationProps,
+    cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociationProps,
   ) : CdkObject(cdkObject), CfnDefaultViewAssociationProps {
     /**
      * The ARN of the view to set as the default for the AWS Region and AWS account in which you

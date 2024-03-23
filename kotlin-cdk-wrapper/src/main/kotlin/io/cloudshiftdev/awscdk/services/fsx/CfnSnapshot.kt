@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-snapshot.html)
  */
-public open class CfnSnapshot internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fsx.CfnSnapshot,
+public open class CfnSnapshot(
+  cdkObject: software.amazon.awscdk.services.fsx.CfnSnapshot,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -228,6 +228,6 @@ public open class CfnSnapshot internal constructor(
         CfnSnapshot(cdkObject)
 
     internal fun unwrap(wrapped: CfnSnapshot): software.amazon.awscdk.services.fsx.CfnSnapshot =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.fsx.CfnSnapshot
   }
 }

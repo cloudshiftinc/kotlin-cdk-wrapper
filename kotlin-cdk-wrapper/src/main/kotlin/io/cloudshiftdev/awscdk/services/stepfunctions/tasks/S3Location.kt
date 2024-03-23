@@ -45,8 +45,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class S3Location internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3Location,
+public abstract class S3Location(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3Location,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the S3Location is bound to a StepFunctions task.
@@ -70,7 +70,7 @@ public abstract class S3Location internal constructor(
       S3LocationConfig = bind(task, S3LocationBindOptions(opts))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3Location,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3Location,
   ) : S3Location(cdkObject)
 
   public companion object {

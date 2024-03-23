@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html)
  */
-public open class CfnTable internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.timestream.CfnTable,
+public open class CfnTable(
+  cdkObject: software.amazon.awscdk.services.timestream.CfnTable,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -546,7 +546,7 @@ public open class CfnTable internal constructor(
         CfnTable(cdkObject)
 
     internal fun unwrap(wrapped: CfnTable): software.amazon.awscdk.services.timestream.CfnTable =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.timestream.CfnTable
   }
 
   /**
@@ -645,8 +645,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty,
     ) : CdkObject(cdkObject), MagneticStoreRejectedDataLocationProperty {
       /**
        * Configuration of an S3 location to write error reports for records rejected,
@@ -813,8 +812,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreWritePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreWritePropertiesProperty,
     ) : CdkObject(cdkObject), MagneticStoreWritePropertiesProperty {
       /**
        * A flag to enable magnetic store writes.
@@ -962,8 +960,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty,
     ) : CdkObject(cdkObject), PartitionKeyProperty {
       /**
        * The level of enforcement for the specification of a dimension key in ingested records.
@@ -1090,8 +1087,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty,
     ) : CdkObject(cdkObject), RetentionPropertiesProperty {
       /**
        * The duration for which data must be stored in the magnetic store.
@@ -1248,8 +1244,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnTable.S3ConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnTable.S3ConfigurationProperty,
     ) : CdkObject(cdkObject), S3ConfigurationProperty {
       /**
        * The bucket name of the customer S3 bucket.
@@ -1408,7 +1403,7 @@ public open class CfnTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.timestream.CfnTable.SchemaProperty,
+      cdkObject: software.amazon.awscdk.services.timestream.CfnTable.SchemaProperty,
     ) : CdkObject(cdkObject), SchemaProperty {
       /**
        * A non-empty list of partition keys defining the attributes used to partition the table

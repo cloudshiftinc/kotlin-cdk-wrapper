@@ -265,7 +265,7 @@ public interface NsRecordProps : RecordSetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.NsRecordProps,
+    cdkObject: software.amazon.awscdk.services.route53.NsRecordProps,
   ) : CdkObject(cdkObject), NsRecordProps {
     /**
      * A comment to add on the record.

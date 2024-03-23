@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-service.html)
  */
-public open class CfnService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService,
+public open class CfnService(
+  cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -541,7 +541,8 @@ public open class CfnService internal constructor(
         CfnService = CfnService(cdkObject)
 
     internal fun unwrap(wrapped: CfnService):
-        software.amazon.awscdk.services.refactorspaces.CfnService = wrapped.cdkObject
+        software.amazon.awscdk.services.refactorspaces.CfnService = wrapped.cdkObject as
+        software.amazon.awscdk.services.refactorspaces.CfnService
   }
 
   /**
@@ -598,8 +599,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty,
+      cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty,
     ) : CdkObject(cdkObject), LambdaEndpointInputProperty {
       /**
        * The Amazon Resource Name (ARN) of the Lambda function or alias.
@@ -728,8 +728,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty,
+      cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty,
     ) : CdkObject(cdkObject), UrlEndpointInputProperty {
       /**
        * The health check URL of the URL endpoint type.

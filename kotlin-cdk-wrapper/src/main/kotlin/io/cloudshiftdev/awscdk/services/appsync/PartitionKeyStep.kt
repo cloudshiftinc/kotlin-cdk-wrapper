@@ -17,8 +17,8 @@ import kotlin.String
  * PartitionKeyStep partitionKeyStep = new PartitionKeyStep("key");
  * ```
  */
-public open class PartitionKeyStep internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.PartitionKeyStep,
+public open class PartitionKeyStep(
+  cdkObject: software.amazon.awscdk.services.appsync.PartitionKeyStep,
 ) : CdkObject(cdkObject) {
   public constructor(key: String) :
       this(software.amazon.awscdk.services.appsync.PartitionKeyStep(key)
@@ -42,6 +42,7 @@ public open class PartitionKeyStep internal constructor(
         PartitionKeyStep = PartitionKeyStep(cdkObject)
 
     internal fun unwrap(wrapped: PartitionKeyStep):
-        software.amazon.awscdk.services.appsync.PartitionKeyStep = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.PartitionKeyStep = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.PartitionKeyStep
   }
 }

@@ -162,8 +162,7 @@ public interface ApplicationLoadBalancerRedirectConfig {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerRedirectConfig,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerRedirectConfig,
   ) : CdkObject(cdkObject), ApplicationLoadBalancerRedirectConfig {
     /**
      * Allow anyone to connect to this listener.

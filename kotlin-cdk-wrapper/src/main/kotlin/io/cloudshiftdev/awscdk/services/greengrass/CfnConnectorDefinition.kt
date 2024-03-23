@@ -67,9 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html)
  */
-public open class CfnConnectorDefinition internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.greengrass.CfnConnectorDefinition,
+public open class CfnConnectorDefinition(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -404,7 +403,8 @@ public open class CfnConnectorDefinition internal constructor(
         CfnConnectorDefinition = CfnConnectorDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnectorDefinition):
-        software.amazon.awscdk.services.greengrass.CfnConnectorDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrass.CfnConnectorDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnConnectorDefinition
   }
 
   /**
@@ -517,8 +517,7 @@ public open class CfnConnectorDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty,
     ) : CdkObject(cdkObject), ConnectorDefinitionVersionProperty {
       /**
        * The connectors in this version.
@@ -676,8 +675,7 @@ public open class CfnConnectorDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorProperty,
     ) : CdkObject(cdkObject), ConnectorProperty {
       /**
        * The Amazon Resource Name (ARN) of the connector.

@@ -76,7 +76,7 @@ public interface ProcessorFeatures {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.ProcessorFeatures,
+    cdkObject: software.amazon.awscdk.services.rds.ProcessorFeatures,
   ) : CdkObject(cdkObject), ProcessorFeatures {
     /**
      * The number of CPU core.

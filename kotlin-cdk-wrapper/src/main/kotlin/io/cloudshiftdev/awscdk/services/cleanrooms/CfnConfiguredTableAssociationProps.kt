@@ -211,8 +211,7 @@ public interface CfnConfiguredTableAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableAssociationProps,
+    cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableAssociationProps,
   ) : CdkObject(cdkObject), CfnConfiguredTableAssociationProps {
     /**
      * A unique identifier for the configured table to be associated to.

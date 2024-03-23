@@ -273,7 +273,7 @@ public interface CfnSecurityProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnSecurityProfileProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnSecurityProfileProps,
   ) : CdkObject(cdkObject), CfnSecurityProfileProps {
     /**
      * The list of tags that a security profile uses to restrict access to resources in Amazon

@@ -17,9 +17,8 @@ import kotlin.String
  * fn.getArchitecture());
  * ```
  */
-public open class AdotLambdaLayerJavaSdkVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaSdkVersion,
+public open class AdotLambdaLayerJavaSdkVersion(
+  cdkObject: software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaSdkVersion,
 ) : CdkObject(cdkObject) {
   /**
    * The ARN of the Lambda layer.
@@ -54,6 +53,7 @@ public open class AdotLambdaLayerJavaSdkVersion internal constructor(
         AdotLambdaLayerJavaSdkVersion = AdotLambdaLayerJavaSdkVersion(cdkObject)
 
     internal fun unwrap(wrapped: AdotLambdaLayerJavaSdkVersion):
-        software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaSdkVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaSdkVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaSdkVersion
   }
 }

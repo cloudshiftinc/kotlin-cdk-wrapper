@@ -665,7 +665,7 @@ public interface CodeBuildStepProps : ShellStepProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.CodeBuildStepProps,
+    cdkObject: software.amazon.awscdk.pipelines.CodeBuildStepProps,
   ) : CdkObject(cdkObject), CodeBuildStepProps {
     /**
      * Custom execution role to be used for the Code Build Action.

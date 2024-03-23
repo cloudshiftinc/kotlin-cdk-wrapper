@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class DockerImageFunction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.DockerImageFunction,
+public open class DockerImageFunction(
+  cdkObject: software.amazon.awscdk.services.lambda.DockerImageFunction,
 ) : Function(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1519,6 +1519,7 @@ public open class DockerImageFunction internal constructor(
         DockerImageFunction = DockerImageFunction(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageFunction):
-        software.amazon.awscdk.services.lambda.DockerImageFunction = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.DockerImageFunction = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.DockerImageFunction
   }
 }

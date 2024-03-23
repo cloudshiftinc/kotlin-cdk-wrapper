@@ -316,7 +316,7 @@ public interface BucketAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.BucketAttributes,
+    cdkObject: software.amazon.awscdk.services.s3.BucketAttributes,
   ) : CdkObject(cdkObject), BucketAttributes {
     /**
      * The account this existing bucket belongs to.

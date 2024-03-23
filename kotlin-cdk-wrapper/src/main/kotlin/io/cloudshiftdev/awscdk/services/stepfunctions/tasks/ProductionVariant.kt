@@ -170,7 +170,7 @@ public interface ProductionVariant {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ProductionVariant,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ProductionVariant,
   ) : CdkObject(cdkObject), ProductionVariant {
     /**
      * The size of the Elastic Inference (EI) instance to use for the production variant.

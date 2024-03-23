@@ -138,7 +138,7 @@ public interface PipelineNotifyOnOptions : NotificationRuleOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.PipelineNotifyOnOptions,
+    cdkObject: software.amazon.awscdk.services.codepipeline.PipelineNotifyOnOptions,
   ) : CdkObject(cdkObject), PipelineNotifyOnOptions {
     /**
      * The level of detail to include in the notifications for this resource.

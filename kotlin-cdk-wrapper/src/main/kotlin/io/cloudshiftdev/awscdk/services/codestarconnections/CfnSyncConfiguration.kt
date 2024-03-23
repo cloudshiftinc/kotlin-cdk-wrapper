@@ -34,9 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-syncconfiguration.html)
  */
-public open class CfnSyncConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codestarconnections.CfnSyncConfiguration,
+public open class CfnSyncConfiguration(
+  cdkObject: software.amazon.awscdk.services.codestarconnections.CfnSyncConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -310,5 +309,6 @@ public open class CfnSyncConfiguration internal constructor(
 
     internal fun unwrap(wrapped: CfnSyncConfiguration):
         software.amazon.awscdk.services.codestarconnections.CfnSyncConfiguration = wrapped.cdkObject
+        as software.amazon.awscdk.services.codestarconnections.CfnSyncConfiguration
   }
 }

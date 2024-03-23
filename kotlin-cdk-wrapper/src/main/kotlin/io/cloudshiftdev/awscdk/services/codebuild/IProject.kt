@@ -598,7 +598,7 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
   public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.IProject,
+    cdkObject: software.amazon.awscdk.services.codebuild.IProject,
   ) : CdkObject(cdkObject), IProject {
     /**
      * @param policyStatement 

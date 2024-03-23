@@ -28,8 +28,8 @@ import kotlin.jvm.JvmName
  * DefinitionBody fileDefinitionBody = FileDefinitionBody.fromChainable(chainable);
  * ```
  */
-public open class FileDefinitionBody internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.FileDefinitionBody,
+public open class FileDefinitionBody(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.FileDefinitionBody,
 ) : DefinitionBody(cdkObject) {
   public constructor(path: String) :
       this(software.amazon.awscdk.services.stepfunctions.FileDefinitionBody(path)
@@ -435,6 +435,7 @@ public open class FileDefinitionBody internal constructor(
         FileDefinitionBody = FileDefinitionBody(cdkObject)
 
     internal fun unwrap(wrapped: FileDefinitionBody):
-        software.amazon.awscdk.services.stepfunctions.FileDefinitionBody = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.FileDefinitionBody = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.FileDefinitionBody
   }
 }

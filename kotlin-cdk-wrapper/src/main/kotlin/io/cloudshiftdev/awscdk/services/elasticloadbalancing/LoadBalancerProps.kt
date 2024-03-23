@@ -324,7 +324,7 @@ public interface LoadBalancerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerProps,
   ) : CdkObject(cdkObject), LoadBalancerProps {
     /**
      * Enable Loadbalancer access logs Can be used to avoid manual work as aws console Required S3

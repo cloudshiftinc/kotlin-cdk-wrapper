@@ -167,9 +167,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html)
  */
-public open class CfnPackagingConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration,
+public open class CfnPackagingConfiguration(
+  cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -696,6 +695,7 @@ public open class CfnPackagingConfiguration internal constructor(
 
     internal fun unwrap(wrapped: CfnPackagingConfiguration):
         software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration = wrapped.cdkObject
+        as software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
   }
 
   /**
@@ -788,8 +788,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafEncryptionProperty,
     ) : CdkObject(cdkObject), CmafEncryptionProperty {
       /**
        * Parameters for the SPEKE key provider.
@@ -1052,8 +1051,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafPackageProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafPackageProperty,
     ) : CdkObject(cdkObject), CmafPackageProperty {
       /**
        * Parameters for encrypting content.
@@ -1199,8 +1197,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashEncryptionProperty,
     ) : CdkObject(cdkObject), DashEncryptionProperty {
       /**
        * Parameters for the SPEKE key provider.
@@ -1463,8 +1460,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashManifestProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashManifestProperty,
     ) : CdkObject(cdkObject), DashManifestProperty {
       /**
        * Determines the position of some tags in the Media Presentation Description (MPD).
@@ -1938,8 +1934,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashPackageProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashPackageProperty,
     ) : CdkObject(cdkObject), DashPackageProperty {
       /**
        * A list of DASH manifest configurations that are available from this endpoint.
@@ -2226,8 +2221,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.EncryptionContractConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.EncryptionContractConfigurationProperty,
     ) : CdkObject(cdkObject), EncryptionContractConfigurationProperty {
       /**
        * A collection of audio encryption presets.
@@ -2440,8 +2434,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsEncryptionProperty,
     ) : CdkObject(cdkObject), HlsEncryptionProperty {
       /**
        * A 128-bit, 16-byte hex value represented by a 32-character string, used with the key for
@@ -2774,8 +2767,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsManifestProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsManifestProperty,
     ) : CdkObject(cdkObject), HlsManifestProperty {
       /**
        * This setting controls ad markers in the packaged content.
@@ -3122,8 +3114,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsPackageProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsPackageProperty,
     ) : CdkObject(cdkObject), HlsPackageProperty {
       /**
        * Parameters for encrypting content.
@@ -3274,8 +3265,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssEncryptionProperty,
     ) : CdkObject(cdkObject), MssEncryptionProperty {
       /**
        * Parameters for the SPEKE key provider.
@@ -3417,8 +3407,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssManifestProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssManifestProperty,
     ) : CdkObject(cdkObject), MssManifestProperty {
       /**
        * A short string that's appended to the end of the endpoint URL to create a unique path to
@@ -3627,8 +3616,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssPackageProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssPackageProperty,
     ) : CdkObject(cdkObject), MssPackageProperty {
       /**
        * Parameters for encrypting content.
@@ -3876,8 +3864,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.SpekeKeyProviderProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.SpekeKeyProviderProperty,
     ) : CdkObject(cdkObject), SpekeKeyProviderProperty {
       /**
        * Use `encryptionContractConfiguration` to configure one or more content encryption keys for
@@ -4048,8 +4035,7 @@ public open class CfnPackagingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.StreamSelectionProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.StreamSelectionProperty,
     ) : CdkObject(cdkObject), StreamSelectionProperty {
       /**
        * The upper limit of the bitrates that this endpoint serves.

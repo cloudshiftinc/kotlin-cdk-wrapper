@@ -153,7 +153,7 @@ public interface CfnApplicationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotfleethub.CfnApplicationProps,
+    cdkObject: software.amazon.awscdk.services.iotfleethub.CfnApplicationProps,
   ) : CdkObject(cdkObject), CfnApplicationProps {
     /**
      * An optional description of the web application.

@@ -36,8 +36,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class Connections internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.Connections,
+public open class Connections(
+  cdkObject: software.amazon.awscdk.services.ec2.Connections,
 ) : CdkObject(cdkObject), IConnectable {
   public constructor() : this(software.amazon.awscdk.services.ec2.Connections()
   )
@@ -478,6 +478,6 @@ public open class Connections internal constructor(
         Connections(cdkObject)
 
     internal fun unwrap(wrapped: Connections): software.amazon.awscdk.services.ec2.Connections =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.Connections
   }
 }

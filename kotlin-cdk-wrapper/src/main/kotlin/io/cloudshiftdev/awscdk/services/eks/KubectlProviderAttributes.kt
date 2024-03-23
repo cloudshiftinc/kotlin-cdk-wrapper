@@ -105,7 +105,7 @@ public interface KubectlProviderAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.KubectlProviderAttributes,
+    cdkObject: software.amazon.awscdk.services.eks.KubectlProviderAttributes,
   ) : CdkObject(cdkObject), KubectlProviderAttributes {
     /**
      * The custom resource provider's service token.

@@ -942,7 +942,7 @@ public interface CfnTableProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cassandra.CfnTableProps,
+    cdkObject: software.amazon.awscdk.services.cassandra.CfnTableProps,
   ) : CdkObject(cdkObject), CfnTableProps {
     /**
      * The optional auto scaling capacity settings for a table in provisioned capacity mode.

@@ -375,7 +375,7 @@ public interface CfnGraphProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.neptunegraph.CfnGraphProps,
+    cdkObject: software.amazon.awscdk.services.neptunegraph.CfnGraphProps,
   ) : CdkObject(cdkObject), CfnGraphProps {
     /**
      * A value that indicates whether the graph has deletion protection enabled.

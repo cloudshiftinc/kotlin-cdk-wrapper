@@ -104,7 +104,7 @@ public interface CfnDatastoreProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.healthimaging.CfnDatastoreProps,
+    cdkObject: software.amazon.awscdk.services.healthimaging.CfnDatastoreProps,
   ) : CdkObject(cdkObject), CfnDatastoreProps {
     /**
      * The data store name.

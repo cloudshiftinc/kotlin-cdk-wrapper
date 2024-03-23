@@ -64,8 +64,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class AssetCode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.AssetCode,
+public open class AssetCode(
+  cdkObject: software.amazon.awscdk.services.appsync.AssetCode,
 ) : Code(cdkObject) {
   public constructor(path: String) : this(software.amazon.awscdk.services.appsync.AssetCode(path)
   )
@@ -434,6 +434,6 @@ public open class AssetCode internal constructor(
         AssetCode(cdkObject)
 
     internal fun unwrap(wrapped: AssetCode): software.amazon.awscdk.services.appsync.AssetCode =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.AssetCode
   }
 }

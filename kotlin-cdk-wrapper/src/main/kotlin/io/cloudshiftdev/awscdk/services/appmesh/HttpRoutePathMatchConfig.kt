@@ -103,7 +103,7 @@ public interface HttpRoutePathMatchConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.HttpRoutePathMatchConfig,
+    cdkObject: software.amazon.awscdk.services.appmesh.HttpRoutePathMatchConfig,
   ) : CdkObject(cdkObject), HttpRoutePathMatchConfig {
     /**
      * Route configuration for matching on the prefix of the URL path of the request.

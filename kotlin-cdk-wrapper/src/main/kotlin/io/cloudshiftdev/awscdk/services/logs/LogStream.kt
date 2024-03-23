@@ -29,8 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class LogStream internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.LogStream,
+public open class LogStream(
+  cdkObject: software.amazon.awscdk.services.logs.LogStream,
 ) : Resource(cdkObject), ILogStream {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -165,6 +165,6 @@ public open class LogStream internal constructor(
         LogStream(cdkObject)
 
     internal fun unwrap(wrapped: LogStream): software.amazon.awscdk.services.logs.LogStream =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.logs.LogStream
   }
 }

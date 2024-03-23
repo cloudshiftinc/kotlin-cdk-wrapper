@@ -23,7 +23,7 @@ public interface ITaskDefinitionExtension {
   public fun extend(taskDefinition: TaskDefinition)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ITaskDefinitionExtension,
+    cdkObject: software.amazon.awscdk.services.ecs.ITaskDefinitionExtension,
   ) : CdkObject(cdkObject), ITaskDefinitionExtension {
     /**
      * Apply the extension to the given TaskDefinition.

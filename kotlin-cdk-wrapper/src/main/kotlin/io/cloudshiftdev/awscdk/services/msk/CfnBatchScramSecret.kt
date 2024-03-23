@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html)
  */
-public open class CfnBatchScramSecret internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.msk.CfnBatchScramSecret,
+public open class CfnBatchScramSecret(
+  cdkObject: software.amazon.awscdk.services.msk.CfnBatchScramSecret,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -162,6 +162,7 @@ public open class CfnBatchScramSecret internal constructor(
         CfnBatchScramSecret = CfnBatchScramSecret(cdkObject)
 
     internal fun unwrap(wrapped: CfnBatchScramSecret):
-        software.amazon.awscdk.services.msk.CfnBatchScramSecret = wrapped.cdkObject
+        software.amazon.awscdk.services.msk.CfnBatchScramSecret = wrapped.cdkObject as
+        software.amazon.awscdk.services.msk.CfnBatchScramSecret
   }
 }

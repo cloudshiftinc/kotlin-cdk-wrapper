@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-subscriptiontarget.html)
  */
-public open class CfnSubscriptionTarget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datazone.CfnSubscriptionTarget,
+public open class CfnSubscriptionTarget(
+  cdkObject: software.amazon.awscdk.services.datazone.CfnSubscriptionTarget,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -524,7 +524,8 @@ public open class CfnSubscriptionTarget internal constructor(
         CfnSubscriptionTarget = CfnSubscriptionTarget(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubscriptionTarget):
-        software.amazon.awscdk.services.datazone.CfnSubscriptionTarget = wrapped.cdkObject
+        software.amazon.awscdk.services.datazone.CfnSubscriptionTarget = wrapped.cdkObject as
+        software.amazon.awscdk.services.datazone.CfnSubscriptionTarget
   }
 
   /**
@@ -602,8 +603,7 @@ public open class CfnSubscriptionTarget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnSubscriptionTarget.SubscriptionTargetFormProperty,
+      cdkObject: software.amazon.awscdk.services.datazone.CfnSubscriptionTarget.SubscriptionTargetFormProperty,
     ) : CdkObject(cdkObject), SubscriptionTargetFormProperty {
       /**
        * The content of the subscription target configuration.

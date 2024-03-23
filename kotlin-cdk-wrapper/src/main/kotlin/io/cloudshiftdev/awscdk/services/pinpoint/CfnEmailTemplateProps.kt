@@ -230,7 +230,7 @@ public interface CfnEmailTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailTemplateProps,
+    cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailTemplateProps,
   ) : CdkObject(cdkObject), CfnEmailTemplateProps {
     /**
      * A JSON object that specifies the default values to use for message variables in the message

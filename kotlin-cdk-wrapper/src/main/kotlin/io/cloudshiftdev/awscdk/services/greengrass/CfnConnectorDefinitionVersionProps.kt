@@ -134,8 +134,7 @@ public interface CfnConnectorDefinitionVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersionProps,
+    cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersionProps,
   ) : CdkObject(cdkObject), CfnConnectorDefinitionVersionProps {
     /**
      * The ID of the connector definition associated with this version.

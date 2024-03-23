@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html)
  */
-public open class CfnServiceAction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceAction,
+public open class CfnServiceAction(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceAction,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -317,7 +317,8 @@ public open class CfnServiceAction internal constructor(
         CfnServiceAction = CfnServiceAction(cdkObject)
 
     internal fun unwrap(wrapped: CfnServiceAction):
-        software.amazon.awscdk.services.servicecatalog.CfnServiceAction = wrapped.cdkObject
+        software.amazon.awscdk.services.servicecatalog.CfnServiceAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.CfnServiceAction
   }
 
   /**
@@ -397,8 +398,7 @@ public open class CfnServiceAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicecatalog.CfnServiceAction.DefinitionParameterProperty,
+      cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceAction.DefinitionParameterProperty,
     ) : CdkObject(cdkObject), DefinitionParameterProperty {
       /**
        * The parameter key.

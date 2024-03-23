@@ -24,9 +24,8 @@ import kotlin.collections.Map
  * myTopic.addSubscription(new SmsSubscription("+15551231234"));
  * ```
  */
-public open class SmsSubscription internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.sns.subscriptions.SmsSubscription,
+public open class SmsSubscription(
+  cdkObject: software.amazon.awscdk.services.sns.subscriptions.SmsSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
   public constructor(phoneNumber: String) :
       this(software.amazon.awscdk.services.sns.subscriptions.SmsSubscription(phoneNumber)
@@ -148,6 +147,7 @@ public open class SmsSubscription internal constructor(
         SmsSubscription = SmsSubscription(cdkObject)
 
     internal fun unwrap(wrapped: SmsSubscription):
-        software.amazon.awscdk.services.sns.subscriptions.SmsSubscription = wrapped.cdkObject
+        software.amazon.awscdk.services.sns.subscriptions.SmsSubscription = wrapped.cdkObject as
+        software.amazon.awscdk.services.sns.subscriptions.SmsSubscription
   }
 }

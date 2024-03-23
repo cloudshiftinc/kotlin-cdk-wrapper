@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointauthorization.html)
  */
-public open class CfnEndpointAuthorization internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.redshift.CfnEndpointAuthorization,
+public open class CfnEndpointAuthorization(
+  cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAuthorization,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -325,6 +324,7 @@ public open class CfnEndpointAuthorization internal constructor(
         CfnEndpointAuthorization = CfnEndpointAuthorization(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpointAuthorization):
-        software.amazon.awscdk.services.redshift.CfnEndpointAuthorization = wrapped.cdkObject
+        software.amazon.awscdk.services.redshift.CfnEndpointAuthorization = wrapped.cdkObject as
+        software.amazon.awscdk.services.redshift.CfnEndpointAuthorization
   }
 }

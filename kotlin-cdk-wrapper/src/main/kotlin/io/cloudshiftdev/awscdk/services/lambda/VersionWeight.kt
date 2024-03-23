@@ -73,7 +73,7 @@ public interface VersionWeight {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.VersionWeight,
+    cdkObject: software.amazon.awscdk.services.lambda.VersionWeight,
   ) : CdkObject(cdkObject), VersionWeight {
     /**
      * The version to route traffic to.

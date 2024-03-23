@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class SourcedConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.SourcedConfiguration,
+public open class SourcedConfiguration(
+  cdkObject: software.amazon.awscdk.services.appconfig.SourcedConfiguration,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IConfiguration, IExtensible {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -742,6 +742,7 @@ public open class SourcedConfiguration internal constructor(
         SourcedConfiguration = SourcedConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: SourcedConfiguration):
-        software.amazon.awscdk.services.appconfig.SourcedConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.appconfig.SourcedConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.appconfig.SourcedConfiguration
   }
 }

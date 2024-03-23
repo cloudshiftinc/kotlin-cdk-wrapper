@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html)
  */
-public open class CfnCoreDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition,
+public open class CfnCoreDefinition(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -395,7 +395,8 @@ public open class CfnCoreDefinition internal constructor(
         CfnCoreDefinition = CfnCoreDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnCoreDefinition):
-        software.amazon.awscdk.services.greengrass.CfnCoreDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrass.CfnCoreDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnCoreDefinition
   }
 
   /**
@@ -503,8 +504,7 @@ public open class CfnCoreDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty,
     ) : CdkObject(cdkObject), CoreDefinitionVersionProperty {
       /**
        * The Greengrass core in this version.
@@ -695,8 +695,7 @@ public open class CfnCoreDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreProperty,
     ) : CdkObject(cdkObject), CoreProperty {
       /**
        * The Amazon Resource Name (ARN) of the device certificate for the core.

@@ -268,7 +268,7 @@ public interface CfnGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.greengrass.CfnGroupProps,
+    cdkObject: software.amazon.awscdk.services.greengrass.CfnGroupProps,
   ) : CdkObject(cdkObject), CfnGroupProps {
     /**
      * The group version to include when the group is created.

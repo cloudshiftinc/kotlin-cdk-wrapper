@@ -116,7 +116,7 @@ public interface ActionArtifactBounds {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.ActionArtifactBounds,
+    cdkObject: software.amazon.awscdk.services.codepipeline.ActionArtifactBounds,
   ) : CdkObject(cdkObject), ActionArtifactBounds {
     /**
      *

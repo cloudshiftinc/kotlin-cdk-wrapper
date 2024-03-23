@@ -45,9 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html)
  */
-public open class CfnUserPoolResourceServer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer,
+public open class CfnUserPoolResourceServer(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -298,7 +297,8 @@ public open class CfnUserPoolResourceServer internal constructor(
         CfnUserPoolResourceServer = CfnUserPoolResourceServer(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPoolResourceServer):
-        software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer
   }
 
   /**
@@ -376,8 +376,7 @@ public open class CfnUserPoolResourceServer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer.ResourceServerScopeTypeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer.ResourceServerScopeTypeProperty,
     ) : CdkObject(cdkObject), ResourceServerScopeTypeProperty {
       /**
        * A description of the scope.

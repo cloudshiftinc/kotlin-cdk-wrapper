@@ -1032,7 +1032,7 @@ public interface CfnDBClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.neptune.CfnDBClusterProps,
+    cdkObject: software.amazon.awscdk.services.neptune.CfnDBClusterProps,
   ) : CdkObject(cdkObject), CfnDBClusterProps {
     /**
      * Provides a list of the Amazon Identity and Access Management (IAM) roles that are associated

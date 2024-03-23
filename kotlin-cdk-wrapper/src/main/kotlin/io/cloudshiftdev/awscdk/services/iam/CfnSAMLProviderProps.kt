@@ -186,7 +186,7 @@ public interface CfnSAMLProviderProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.CfnSAMLProviderProps,
+    cdkObject: software.amazon.awscdk.services.iam.CfnSAMLProviderProps,
   ) : CdkObject(cdkObject), CfnSAMLProviderProps {
     /**
      * The name of the provider to create.

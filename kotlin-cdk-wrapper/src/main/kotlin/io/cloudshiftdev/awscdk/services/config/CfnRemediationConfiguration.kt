@@ -53,9 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html)
  */
-public open class CfnRemediationConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.config.CfnRemediationConfiguration,
+public open class CfnRemediationConfiguration(
+  cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -582,7 +581,8 @@ public open class CfnRemediationConfiguration internal constructor(
         CfnRemediationConfiguration = CfnRemediationConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnRemediationConfiguration):
-        software.amazon.awscdk.services.config.CfnRemediationConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.config.CfnRemediationConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnRemediationConfiguration
   }
 
   /**
@@ -669,8 +669,7 @@ public open class CfnRemediationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ExecutionControlsProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.ExecutionControlsProperty,
     ) : CdkObject(cdkObject), ExecutionControlsProperty {
       /**
        * A SsmControls object.
@@ -834,8 +833,7 @@ public open class CfnRemediationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty,
     ) : CdkObject(cdkObject), RemediationParameterValueProperty {
       /**
        * The value is dynamic and changes at run-time.
@@ -921,8 +919,7 @@ public open class CfnRemediationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty,
     ) : CdkObject(cdkObject), ResourceValueProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html#cfn-config-remediationconfiguration-resourcevalue-value)
@@ -1045,8 +1042,7 @@ public open class CfnRemediationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty,
     ) : CdkObject(cdkObject), SsmControlsProperty {
       /**
        * The maximum percentage of remediation actions allowed to run in parallel on the
@@ -1179,8 +1175,7 @@ public open class CfnRemediationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty,
     ) : CdkObject(cdkObject), StaticValueProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-staticvalue.html#cfn-config-remediationconfiguration-staticvalue-value)

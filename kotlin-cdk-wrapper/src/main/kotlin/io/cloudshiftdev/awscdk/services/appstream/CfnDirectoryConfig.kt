@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html)
  */
-public open class CfnDirectoryConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig,
+public open class CfnDirectoryConfig(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -462,7 +462,8 @@ public open class CfnDirectoryConfig internal constructor(
         CfnDirectoryConfig = CfnDirectoryConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnDirectoryConfig):
-        software.amazon.awscdk.services.appstream.CfnDirectoryConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.appstream.CfnDirectoryConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.appstream.CfnDirectoryConfig
   }
 
   /**
@@ -560,8 +561,7 @@ public open class CfnDirectoryConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty,
     ) : CdkObject(cdkObject), CertificateBasedAuthPropertiesProperty {
       /**
        * The ARN of the AWS Certificate Manager Private CA resource.
@@ -690,8 +690,7 @@ public open class CfnDirectoryConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty,
     ) : CdkObject(cdkObject), ServiceAccountCredentialsProperty {
       /**
        * The user name of the account.

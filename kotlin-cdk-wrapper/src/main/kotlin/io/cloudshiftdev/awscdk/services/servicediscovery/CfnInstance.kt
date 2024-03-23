@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html)
  */
-public open class CfnInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicediscovery.CfnInstance,
+public open class CfnInstance(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.CfnInstance,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -323,6 +323,7 @@ public open class CfnInstance internal constructor(
         CfnInstance = CfnInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstance):
-        software.amazon.awscdk.services.servicediscovery.CfnInstance = wrapped.cdkObject
+        software.amazon.awscdk.services.servicediscovery.CfnInstance = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicediscovery.CfnInstance
   }
 }

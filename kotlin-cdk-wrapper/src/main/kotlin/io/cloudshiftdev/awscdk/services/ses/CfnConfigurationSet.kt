@@ -80,8 +80,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html)
  */
-public open class CfnConfigurationSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet,
+public open class CfnConfigurationSet(
+  cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnConfigurationSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -749,7 +749,8 @@ public open class CfnConfigurationSet internal constructor(
         CfnConfigurationSet = CfnConfigurationSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationSet):
-        software.amazon.awscdk.services.ses.CfnConfigurationSet = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.CfnConfigurationSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.CfnConfigurationSet
   }
 
   /**
@@ -814,8 +815,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty,
     ) : CdkObject(cdkObject), DashboardOptionsProperty {
       /**
        * Specifies the status of your VDM engagement metrics collection. Can be one of the
@@ -942,8 +942,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DeliveryOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DeliveryOptionsProperty,
     ) : CdkObject(cdkObject), DeliveryOptionsProperty {
       /**
        * The name of the dedicated IP pool to associate with the configuration set.
@@ -1047,8 +1046,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.GuardianOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.GuardianOptionsProperty,
     ) : CdkObject(cdkObject), GuardianOptionsProperty {
       /**
        * Specifies the status of your VDM optimized shared delivery. Can be one of the following:.
@@ -1161,8 +1159,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty,
     ) : CdkObject(cdkObject), ReputationOptionsProperty {
       /**
        * Describes whether or not Amazon SES publishes reputation metrics for the configuration set,
@@ -1266,8 +1263,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty,
     ) : CdkObject(cdkObject), SendingOptionsProperty {
       /**
        * If `true` , email sending is enabled for the configuration set.
@@ -1399,8 +1395,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty,
     ) : CdkObject(cdkObject), SuppressionOptionsProperty {
       /**
        * A list that contains the reasons that email addresses are automatically added to the
@@ -1499,8 +1494,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty,
     ) : CdkObject(cdkObject), TrackingOptionsProperty {
       /**
        * The custom subdomain that is used to redirect email recipients to the Amazon SES event
@@ -1659,8 +1653,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty,
     ) : CdkObject(cdkObject), VdmOptionsProperty {
       /**
        * Settings for your VDM configuration as applicable to the Dashboard.

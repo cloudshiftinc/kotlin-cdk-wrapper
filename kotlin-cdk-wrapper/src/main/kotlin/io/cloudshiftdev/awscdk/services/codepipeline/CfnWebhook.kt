@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html)
  */
-public open class CfnWebhook internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook,
+public open class CfnWebhook(
+  cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -604,7 +604,8 @@ public open class CfnWebhook internal constructor(
         CfnWebhook = CfnWebhook(cdkObject)
 
     internal fun unwrap(wrapped: CfnWebhook):
-        software.amazon.awscdk.services.codepipeline.CfnWebhook = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.CfnWebhook = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.CfnWebhook
   }
 
   /**
@@ -695,8 +696,7 @@ public open class CfnWebhook internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty,
     ) : CdkObject(cdkObject), WebhookAuthConfigurationProperty {
       /**
        * The property used to configure acceptance of webhooks in an IP address range.
@@ -851,8 +851,7 @@ public open class CfnWebhook internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookFilterRuleProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookFilterRuleProperty,
     ) : CdkObject(cdkObject), WebhookFilterRuleProperty {
       /**
        * A JsonPath expression that is applied to the body/payload of the webhook.

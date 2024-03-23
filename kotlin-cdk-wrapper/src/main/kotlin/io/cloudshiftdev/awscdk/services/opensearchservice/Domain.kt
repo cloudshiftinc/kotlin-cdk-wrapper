@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Domain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.opensearchservice.Domain,
+public open class Domain(
+  cdkObject: software.amazon.awscdk.services.opensearchservice.Domain,
 ) : Resource(cdkObject), IDomain, IConnectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -825,6 +825,18 @@ public open class Domain internal constructor(
     public fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptions.Builder.() -> Unit)
 
     /**
+     * Whether to enable or disable cold storage on the domain.
+     *
+     * You must enable UltraWarm storage to enable cold storage.
+     *
+     * Default: - undefined
+     *
+     * [Documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cold-storage.html)
+     * @param coldStorageEnabled Whether to enable or disable cold storage on the domain. 
+     */
+    public fun coldStorageEnabled(coldStorageEnabled: Boolean)
+
+    /**
      * To configure a custom domain configure these options.
      *
      * If you specify a Route53 hosted zone it will create a CNAME record and use DNS validation for
@@ -1325,6 +1337,20 @@ public open class Domain internal constructor(
         Unit = cognitoDashboardsAuth(CognitoOptions(cognitoDashboardsAuth))
 
     /**
+     * Whether to enable or disable cold storage on the domain.
+     *
+     * You must enable UltraWarm storage to enable cold storage.
+     *
+     * Default: - undefined
+     *
+     * [Documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cold-storage.html)
+     * @param coldStorageEnabled Whether to enable or disable cold storage on the domain. 
+     */
+    override fun coldStorageEnabled(coldStorageEnabled: Boolean) {
+      cdkBuilder.coldStorageEnabled(coldStorageEnabled)
+    }
+
+    /**
      * To configure a custom domain configure these options.
      *
      * If you specify a Route53 hosted zone it will create a CNAME record and use DNS validation for
@@ -1810,6 +1836,6 @@ public open class Domain internal constructor(
         Domain(cdkObject)
 
     internal fun unwrap(wrapped: Domain): software.amazon.awscdk.services.opensearchservice.Domain =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.opensearchservice.Domain
   }
 }

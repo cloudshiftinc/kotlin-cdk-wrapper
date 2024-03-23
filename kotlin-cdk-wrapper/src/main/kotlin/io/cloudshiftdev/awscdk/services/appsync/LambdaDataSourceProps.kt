@@ -117,7 +117,7 @@ public interface LambdaDataSourceProps : BackedDataSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.LambdaDataSourceProps,
+    cdkObject: software.amazon.awscdk.services.appsync.LambdaDataSourceProps,
   ) : CdkObject(cdkObject), LambdaDataSourceProps {
     /**
      * The API to attach this data source to.

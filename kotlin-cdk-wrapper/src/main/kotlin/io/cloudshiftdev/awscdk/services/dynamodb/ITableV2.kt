@@ -29,7 +29,7 @@ public interface ITableV2 : ITable {
   public fun tableId(): String? = unwrap(this).getTableId()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.ITableV2,
+    cdkObject: software.amazon.awscdk.services.dynamodb.ITableV2,
   ) : CdkObject(cdkObject), ITableV2 {
     /**
      * Apply the given removal policy to this resource.

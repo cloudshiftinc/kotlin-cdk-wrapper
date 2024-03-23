@@ -22,8 +22,8 @@ import kotlin.collections.List
  * ScopedAws scopedAws = new ScopedAws(this);
  * ```
  */
-public open class ScopedAws internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.ScopedAws,
+public open class ScopedAws(
+  cdkObject: software.amazon.awscdk.ScopedAws,
 ) : CdkObject(cdkObject) {
   public constructor(scope: Construct) :
       this(software.amazon.awscdk.ScopedAws(scope.let(Construct::unwrap))
@@ -67,6 +67,7 @@ public open class ScopedAws internal constructor(
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.ScopedAws): ScopedAws = ScopedAws(cdkObject)
 
-    internal fun unwrap(wrapped: ScopedAws): software.amazon.awscdk.ScopedAws = wrapped.cdkObject
+    internal fun unwrap(wrapped: ScopedAws): software.amazon.awscdk.ScopedAws = wrapped.cdkObject as
+        software.amazon.awscdk.ScopedAws
   }
 }

@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html)
  */
-public open class CfnDomain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.amplify.CfnDomain,
+public open class CfnDomain(
+  cdkObject: software.amazon.awscdk.services.amplify.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -743,7 +743,7 @@ public open class CfnDomain internal constructor(
         CfnDomain(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomain): software.amazon.awscdk.services.amplify.CfnDomain =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.amplify.CfnDomain
   }
 
   /**
@@ -878,7 +878,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateProperty,
     ) : CdkObject(cdkObject), CertificateProperty {
       /**
        * The Amazon resource name (ARN) for a custom certificate that you have already added to AWS
@@ -1040,8 +1040,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty,
     ) : CdkObject(cdkObject), CertificateSettingsProperty {
       /**
        * The certificate type.
@@ -1171,8 +1170,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty,
     ) : CdkObject(cdkObject), SubDomainSettingProperty {
       /**
        * The branch name setting for the subdomain.

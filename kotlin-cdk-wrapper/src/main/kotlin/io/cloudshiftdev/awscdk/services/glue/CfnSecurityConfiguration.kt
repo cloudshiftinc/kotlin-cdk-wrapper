@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-securityconfiguration.html)
  */
-public open class CfnSecurityConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration,
+public open class CfnSecurityConfiguration(
+  cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -243,7 +243,8 @@ public open class CfnSecurityConfiguration internal constructor(
         CfnSecurityConfiguration = CfnSecurityConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityConfiguration):
-        software.amazon.awscdk.services.glue.CfnSecurityConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.glue.CfnSecurityConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.glue.CfnSecurityConfiguration
   }
 
   /**
@@ -323,8 +324,7 @@ public open class CfnSecurityConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty,
     ) : CdkObject(cdkObject), CloudWatchEncryptionProperty {
       /**
        * The encryption mode to use for CloudWatch data.
@@ -550,8 +550,7 @@ public open class CfnSecurityConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.EncryptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.EncryptionConfigurationProperty,
     ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
       /**
        * The encryption configuration for Amazon CloudWatch.
@@ -670,8 +669,7 @@ public open class CfnSecurityConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty,
     ) : CdkObject(cdkObject), JobBookmarksEncryptionProperty {
       /**
        * The encryption mode to use for job bookmarks data.
@@ -783,8 +781,7 @@ public open class CfnSecurityConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty,
     ) : CdkObject(cdkObject), S3EncryptionProperty {
       /**
        * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.

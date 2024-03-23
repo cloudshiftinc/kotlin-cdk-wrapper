@@ -169,8 +169,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
  */
-public open class CfnDeploymentGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup,
+public open class CfnDeploymentGroup(
+  cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -2070,7 +2070,8 @@ public open class CfnDeploymentGroup internal constructor(
         CfnDeploymentGroup = CfnDeploymentGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeploymentGroup):
-        software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
   }
 
   /**
@@ -2264,8 +2265,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty,
     ) : CdkObject(cdkObject), AlarmConfigurationProperty {
       /**
        * A list of alarms configured for the deployment or deployment group.
@@ -2381,8 +2381,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty,
     ) : CdkObject(cdkObject), AlarmProperty {
       /**
        * The name of the alarm.
@@ -2533,8 +2532,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty,
     ) : CdkObject(cdkObject), AutoRollbackConfigurationProperty {
       /**
        * Indicates whether a defined automatic rollback configuration is currently enabled.
@@ -2793,8 +2791,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty,
     ) : CdkObject(cdkObject), BlueGreenDeploymentConfigurationProperty {
       /**
        * Information about the action to take when newly provisioned instances are ready to receive
@@ -2955,8 +2952,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty,
     ) : CdkObject(cdkObject), BlueInstanceTerminationOptionProperty {
       /**
        * The action to take on instances in the original environment after a successful blue/green
@@ -3270,8 +3266,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty,
     ) : CdkObject(cdkObject), DeploymentProperty {
       /**
        * A comment about the deployment.
@@ -3445,8 +3440,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty,
     ) : CdkObject(cdkObject), DeploymentReadyOptionProperty {
       /**
        * Information about when to reroute traffic from an original environment to a replacement
@@ -3581,8 +3575,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentStyleProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentStyleProperty,
     ) : CdkObject(cdkObject), DeploymentStyleProperty {
       /**
        * Indicates whether to route deployment traffic behind a load balancer.
@@ -3731,8 +3724,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty,
     ) : CdkObject(cdkObject), EC2TagFilterProperty {
       /**
        * The tag filter key.
@@ -3886,8 +3878,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty,
     ) : CdkObject(cdkObject), EC2TagSetListObjectProperty {
       /**
        * A list that contains other lists of Amazon EC2 instance tag groups.
@@ -4044,8 +4035,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty,
     ) : CdkObject(cdkObject), EC2TagSetProperty {
       /**
        * The Amazon EC2 tags that are already applied to Amazon EC2 instances that you want to
@@ -4152,8 +4142,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty,
     ) : CdkObject(cdkObject), ECSServiceProperty {
       /**
        * The name of the cluster that the Amazon ECS service is associated with.
@@ -4273,8 +4262,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty,
     ) : CdkObject(cdkObject), ELBInfoProperty {
       /**
        * For blue/green deployments, the name of the load balancer that is used to route traffic
@@ -4397,8 +4385,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty,
     ) : CdkObject(cdkObject), GitHubLocationProperty {
       /**
        * The SHA1 commit ID of the GitHub commit that represents the bundled artifacts for the
@@ -4503,8 +4490,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty,
     ) : CdkObject(cdkObject), GreenFleetProvisioningOptionProperty {
       /**
        * The method used to add instances to a replacement environment.
@@ -4834,8 +4820,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.LoadBalancerInfoProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.LoadBalancerInfoProperty,
     ) : CdkObject(cdkObject), LoadBalancerInfoProperty {
       /**
        * An array that contains information about the load balancers to use for load balancing in a
@@ -4986,8 +4971,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty,
     ) : CdkObject(cdkObject), OnPremisesTagSetListObjectProperty {
       /**
        * Information about groups of on-premises instance tags.
@@ -5147,8 +5131,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetProperty,
     ) : CdkObject(cdkObject), OnPremisesTagSetProperty {
       /**
        * A list that contains other lists of on-premises instance tag groups.
@@ -5365,8 +5348,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty,
     ) : CdkObject(cdkObject), RevisionLocationProperty {
       /**
        * Information about the location of application artifacts stored in GitHub.
@@ -5587,8 +5569,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * The name of the Amazon S3 bucket where the application revision is stored.
@@ -5772,8 +5753,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty,
     ) : CdkObject(cdkObject), TagFilterProperty {
       /**
        * The on-premises instance tag filter key.
@@ -5929,8 +5909,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty,
     ) : CdkObject(cdkObject), TargetGroupInfoProperty {
       /**
        * For blue/green deployments, the name of the target group that instances in the original
@@ -6189,8 +6168,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupPairInfoProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupPairInfoProperty,
     ) : CdkObject(cdkObject), TargetGroupPairInfoProperty {
       /**
        * The path used by a load balancer to route production traffic when an Amazon ECS deployment
@@ -6318,8 +6296,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty,
     ) : CdkObject(cdkObject), TrafficRouteProperty {
       /**
        * The Amazon Resource Name (ARN) of one listener.
@@ -6458,8 +6435,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty,
     ) : CdkObject(cdkObject), TriggerConfigProperty {
       /**
        * The event type or types that trigger notifications.

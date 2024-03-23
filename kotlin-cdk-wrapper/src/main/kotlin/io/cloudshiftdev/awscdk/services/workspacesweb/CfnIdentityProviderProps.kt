@@ -298,7 +298,7 @@ public interface CfnIdentityProviderProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIdentityProviderProps,
+    cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIdentityProviderProps,
   ) : CdkObject(cdkObject), CfnIdentityProviderProps {
     /**
      * The identity provider details. The following list describes the provider detail keys for each

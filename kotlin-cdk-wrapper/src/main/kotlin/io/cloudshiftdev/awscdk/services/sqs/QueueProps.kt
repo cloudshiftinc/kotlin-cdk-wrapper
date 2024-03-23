@@ -568,7 +568,7 @@ public interface QueueProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sqs.QueueProps,
+    cdkObject: software.amazon.awscdk.services.sqs.QueueProps,
   ) : CdkObject(cdkObject), QueueProps {
     /**
      * Specifies whether to enable content-based deduplication.

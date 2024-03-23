@@ -91,8 +91,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html)
  */
-public open class CfnPartition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition,
+public open class CfnPartition(
+  cdkObject: software.amazon.awscdk.services.glue.CfnPartition,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -341,7 +341,7 @@ public open class CfnPartition internal constructor(
         CfnPartition(cdkObject)
 
     internal fun unwrap(wrapped: CfnPartition): software.amazon.awscdk.services.glue.CfnPartition =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnPartition
   }
 
   /**
@@ -437,7 +437,7 @@ public open class CfnPartition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty,
     ) : CdkObject(cdkObject), ColumnProperty {
       /**
        * A free-form text comment.
@@ -554,7 +554,7 @@ public open class CfnPartition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.OrderProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.OrderProperty,
     ) : CdkObject(cdkObject), OrderProperty {
       /**
        * The name of the column.
@@ -796,8 +796,7 @@ public open class CfnPartition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty,
     ) : CdkObject(cdkObject), PartitionInputProperty {
       /**
        * These key-value pairs define partition parameters.
@@ -952,7 +951,7 @@ public open class CfnPartition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty,
     ) : CdkObject(cdkObject), SchemaIdProperty {
       /**
        * The name of the schema registry that contains the schema.
@@ -1140,8 +1139,7 @@ public open class CfnPartition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty,
     ) : CdkObject(cdkObject), SchemaReferenceProperty {
       /**
        * A structure that contains schema identity fields.
@@ -1286,7 +1284,7 @@ public open class CfnPartition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty,
     ) : CdkObject(cdkObject), SerdeInfoProperty {
       /**
        * Name of the SerDe.
@@ -1456,7 +1454,7 @@ public open class CfnPartition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty,
     ) : CdkObject(cdkObject), SkewedInfoProperty {
       /**
        * A list of names of columns that contain skewed values.
@@ -2018,8 +2016,7 @@ public open class CfnPartition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty,
     ) : CdkObject(cdkObject), StorageDescriptorProperty {
       /**
        * A list of reducer grouping columns, clustering columns, and bucketing columns in the table.

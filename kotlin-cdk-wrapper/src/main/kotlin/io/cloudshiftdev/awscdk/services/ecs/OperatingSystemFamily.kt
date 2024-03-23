@@ -28,8 +28,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class OperatingSystemFamily internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.OperatingSystemFamily,
+public open class OperatingSystemFamily(
+  cdkObject: software.amazon.awscdk.services.ecs.OperatingSystemFamily,
 ) : CdkObject(cdkObject) {
   /**
    * Returns true if the operating system family is Windows.
@@ -68,6 +68,7 @@ public open class OperatingSystemFamily internal constructor(
         OperatingSystemFamily = OperatingSystemFamily(cdkObject)
 
     internal fun unwrap(wrapped: OperatingSystemFamily):
-        software.amazon.awscdk.services.ecs.OperatingSystemFamily = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.OperatingSystemFamily = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.OperatingSystemFamily
   }
 }

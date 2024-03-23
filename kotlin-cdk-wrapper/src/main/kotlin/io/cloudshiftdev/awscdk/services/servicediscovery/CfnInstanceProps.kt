@@ -306,7 +306,7 @@ public interface CfnInstanceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicediscovery.CfnInstanceProps,
+    cdkObject: software.amazon.awscdk.services.servicediscovery.CfnInstanceProps,
   ) : CdkObject(cdkObject), CfnInstanceProps {
     /**
      * A string map that contains the following information for the service that you specify in

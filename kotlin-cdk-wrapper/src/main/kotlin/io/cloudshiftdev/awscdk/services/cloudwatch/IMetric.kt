@@ -40,7 +40,7 @@ public interface IMetric {
   public fun warningsV2(): Map<String, String> = unwrap(this).getWarningsV2() ?: emptyMap()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.IMetric,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.IMetric,
   ) : CdkObject(cdkObject), IMetric {
     /**
      * Inspect the details of the metric object.

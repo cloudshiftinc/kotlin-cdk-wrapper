@@ -55,9 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-extensionassociation.html)
  */
-public open class CfnExtensionAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.appconfig.CfnExtensionAssociation,
+public open class CfnExtensionAssociation(
+  cdkObject: software.amazon.awscdk.services.appconfig.CfnExtensionAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appconfig.CfnExtensionAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -376,6 +375,7 @@ public open class CfnExtensionAssociation internal constructor(
         CfnExtensionAssociation = CfnExtensionAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnExtensionAssociation):
-        software.amazon.awscdk.services.appconfig.CfnExtensionAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.appconfig.CfnExtensionAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.appconfig.CfnExtensionAssociation
   }
 }

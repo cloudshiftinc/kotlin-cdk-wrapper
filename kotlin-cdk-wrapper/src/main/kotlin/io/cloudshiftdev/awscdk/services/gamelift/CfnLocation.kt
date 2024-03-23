@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-location.html)
  */
-public open class CfnLocation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnLocation,
+public open class CfnLocation(
+  cdkObject: software.amazon.awscdk.services.gamelift.CfnLocation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -212,6 +212,6 @@ public open class CfnLocation internal constructor(
         = CfnLocation(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocation): software.amazon.awscdk.services.gamelift.CfnLocation
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.gamelift.CfnLocation
   }
 }

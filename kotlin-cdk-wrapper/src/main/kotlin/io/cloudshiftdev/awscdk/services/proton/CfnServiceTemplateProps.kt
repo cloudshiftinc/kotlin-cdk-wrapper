@@ -187,7 +187,7 @@ public interface CfnServiceTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.proton.CfnServiceTemplateProps,
+    cdkObject: software.amazon.awscdk.services.proton.CfnServiceTemplateProps,
   ) : CdkObject(cdkObject), CfnServiceTemplateProps {
     /**
      * A description of the service template.

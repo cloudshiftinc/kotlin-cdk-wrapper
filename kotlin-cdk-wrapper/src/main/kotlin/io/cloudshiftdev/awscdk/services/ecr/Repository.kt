@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Repository internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.Repository,
+public open class Repository(
+  cdkObject: software.amazon.awscdk.services.ecr.Repository,
 ) : RepositoryBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecr.Repository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -472,6 +472,6 @@ public open class Repository internal constructor(
         Repository(cdkObject)
 
     internal fun unwrap(wrapped: Repository): software.amazon.awscdk.services.ecr.Repository =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecr.Repository
   }
 }

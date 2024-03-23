@@ -101,7 +101,7 @@ public interface SourceConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.deployment.SourceConfig,
+    cdkObject: software.amazon.awscdk.services.s3.deployment.SourceConfig,
   ) : CdkObject(cdkObject), SourceConfig {
     /**
      * The source bucket to deploy from.

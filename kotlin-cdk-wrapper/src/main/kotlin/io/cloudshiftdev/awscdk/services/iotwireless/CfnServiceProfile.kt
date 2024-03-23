@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html)
  */
-public open class CfnServiceProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnServiceProfile,
+public open class CfnServiceProfile(
+  cdkObject: software.amazon.awscdk.services.iotwireless.CfnServiceProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iotwireless.CfnServiceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -411,7 +411,8 @@ public open class CfnServiceProfile internal constructor(
         CfnServiceProfile = CfnServiceProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnServiceProfile):
-        software.amazon.awscdk.services.iotwireless.CfnServiceProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.iotwireless.CfnServiceProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotwireless.CfnServiceProfile
   }
 
   /**
@@ -1035,8 +1036,7 @@ public open class CfnServiceProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnServiceProfile.LoRaWANServiceProfileProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnServiceProfile.LoRaWANServiceProfileProperty,
     ) : CdkObject(cdkObject), LoRaWANServiceProfileProperty {
       /**
        * The AddGWMetaData value.

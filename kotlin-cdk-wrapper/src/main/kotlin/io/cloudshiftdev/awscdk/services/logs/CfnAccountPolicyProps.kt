@@ -362,7 +362,7 @@ public interface CfnAccountPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.CfnAccountPolicyProps,
+    cdkObject: software.amazon.awscdk.services.logs.CfnAccountPolicyProps,
   ) : CdkObject(cdkObject), CfnAccountPolicyProps {
     /**
      * Specify the policy, in JSON.

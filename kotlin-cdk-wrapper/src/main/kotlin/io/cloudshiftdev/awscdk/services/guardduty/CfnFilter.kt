@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html)
  */
-public open class CfnFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter,
+public open class CfnFilter(
+  cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -483,7 +483,7 @@ public open class CfnFilter internal constructor(
         CfnFilter(cdkObject)
 
     internal fun unwrap(wrapped: CfnFilter): software.amazon.awscdk.services.guardduty.CfnFilter =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.guardduty.CfnFilter
   }
 
   /**
@@ -839,7 +839,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter.ConditionProperty,
+      cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter.ConditionProperty,
     ) : CdkObject(cdkObject), ConditionProperty {
       /**
        * Represents the equal condition to apply to a single field when querying for findings.
@@ -1393,8 +1393,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnFilter.FindingCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter.FindingCriteriaProperty,
     ) : CdkObject(cdkObject), FindingCriteriaProperty {
       /**
        * Represents a map of finding properties that match specified conditions and values when

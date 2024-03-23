@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * INotificationRule rule = project.notifyOnBuildSucceeded("NotifyOnBuildSucceeded", target);
  * ```
  */
-public open class SlackChannelConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.chatbot.SlackChannelConfiguration,
+public open class SlackChannelConfiguration(
+  cdkObject: software.amazon.awscdk.services.chatbot.SlackChannelConfiguration,
 ) : Resource(cdkObject), ISlackChannelConfiguration {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -513,6 +512,7 @@ public open class SlackChannelConfiguration internal constructor(
         SlackChannelConfiguration = SlackChannelConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: SlackChannelConfiguration):
-        software.amazon.awscdk.services.chatbot.SlackChannelConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.chatbot.SlackChannelConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.chatbot.SlackChannelConfiguration
   }
 }

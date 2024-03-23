@@ -52,7 +52,7 @@ public interface SizeConversionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.SizeConversionOptions,
+    cdkObject: software.amazon.awscdk.SizeConversionOptions,
   ) : CdkObject(cdkObject), SizeConversionOptions {
     /**
      * How conversions should behave when it encounters a non-integer result.

@@ -630,7 +630,7 @@ public interface CfnClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.CfnClusterProps,
+    cdkObject: software.amazon.awscdk.services.ecs.CfnClusterProps,
   ) : CdkObject(cdkObject), CfnClusterProps {
     /**
      * The short name of one or more capacity providers to associate with the cluster.

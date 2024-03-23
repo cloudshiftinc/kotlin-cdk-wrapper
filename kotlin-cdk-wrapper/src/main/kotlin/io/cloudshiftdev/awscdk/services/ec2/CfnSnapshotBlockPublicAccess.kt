@@ -15,7 +15,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Specifies the state of the *block public access for snapshots* setting for the Region.
  *
  * For more information, see [Block public access for
- * snapshots](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html) .
+ * snapshots](https://docs.aws.amazon.com/ebs/latest/userguide/block-public-access-snapshots.html) .
  *
  * Example:
  *
@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-snapshotblockpublicaccess.html)
  */
-public open class CfnSnapshotBlockPublicAccess internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccess,
+public open class CfnSnapshotBlockPublicAccess(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccess,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -164,6 +164,7 @@ public open class CfnSnapshotBlockPublicAccess internal constructor(
         CfnSnapshotBlockPublicAccess = CfnSnapshotBlockPublicAccess(cdkObject)
 
     internal fun unwrap(wrapped: CfnSnapshotBlockPublicAccess):
-        software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccess = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccess = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccess
   }
 }

@@ -17,8 +17,8 @@ import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
  * ArtifactMap artifactMap = new ArtifactMap();
  * ```
  */
-public open class ArtifactMap internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.ArtifactMap,
+public open class ArtifactMap(
+  cdkObject: software.amazon.awscdk.pipelines.ArtifactMap,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.pipelines.ArtifactMap()
   )
@@ -36,6 +36,6 @@ public open class ArtifactMap internal constructor(
         ArtifactMap(cdkObject)
 
     internal fun unwrap(wrapped: ArtifactMap): software.amazon.awscdk.pipelines.ArtifactMap =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.pipelines.ArtifactMap
   }
 }

@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ZoneDelegationRecord internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.ZoneDelegationRecord,
+public open class ZoneDelegationRecord(
+  cdkObject: software.amazon.awscdk.services.route53.ZoneDelegationRecord,
 ) : RecordSet(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -413,6 +413,7 @@ public open class ZoneDelegationRecord internal constructor(
         ZoneDelegationRecord = ZoneDelegationRecord(cdkObject)
 
     internal fun unwrap(wrapped: ZoneDelegationRecord):
-        software.amazon.awscdk.services.route53.ZoneDelegationRecord = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.ZoneDelegationRecord = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.ZoneDelegationRecord
   }
 }

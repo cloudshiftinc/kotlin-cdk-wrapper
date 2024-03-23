@@ -47,9 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html)
  */
-public open class CfnClusterParameterGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.redshift.CfnClusterParameterGroup,
+public open class CfnClusterParameterGroup(
+  cdkObject: software.amazon.awscdk.services.redshift.CfnClusterParameterGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -404,7 +403,8 @@ public open class CfnClusterParameterGroup internal constructor(
         CfnClusterParameterGroup = CfnClusterParameterGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnClusterParameterGroup):
-        software.amazon.awscdk.services.redshift.CfnClusterParameterGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.redshift.CfnClusterParameterGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.redshift.CfnClusterParameterGroup
   }
 
   /**
@@ -488,8 +488,7 @@ public open class CfnClusterParameterGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnClusterParameterGroup.ParameterProperty,
+      cdkObject: software.amazon.awscdk.services.redshift.CfnClusterParameterGroup.ParameterProperty,
     ) : CdkObject(cdkObject), ParameterProperty {
       /**
        * The name of the parameter.

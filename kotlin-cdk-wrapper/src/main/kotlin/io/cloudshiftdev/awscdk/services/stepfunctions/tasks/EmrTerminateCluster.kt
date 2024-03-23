@@ -28,9 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EmrTerminateCluster internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EmrTerminateCluster,
+public open class EmrTerminateCluster(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrTerminateCluster,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -453,5 +452,6 @@ public open class EmrTerminateCluster internal constructor(
 
     internal fun unwrap(wrapped: EmrTerminateCluster):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrTerminateCluster = wrapped.cdkObject
+        as software.amazon.awscdk.services.stepfunctions.tasks.EmrTerminateCluster
   }
 }

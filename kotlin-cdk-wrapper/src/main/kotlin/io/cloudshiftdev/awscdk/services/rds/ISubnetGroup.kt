@@ -21,7 +21,7 @@ public interface ISubnetGroup : IResource {
   public fun subnetGroupName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.ISubnetGroup,
+    cdkObject: software.amazon.awscdk.services.rds.ISubnetGroup,
   ) : CdkObject(cdkObject), ISubnetGroup {
     /**
      * Apply the given removal policy to this resource.

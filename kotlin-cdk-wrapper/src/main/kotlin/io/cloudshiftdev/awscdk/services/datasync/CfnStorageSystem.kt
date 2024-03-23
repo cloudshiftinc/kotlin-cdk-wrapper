@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-storagesystem.html)
  */
-public open class CfnStorageSystem internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem,
+public open class CfnStorageSystem(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -592,7 +592,8 @@ public open class CfnStorageSystem internal constructor(
         CfnStorageSystem = CfnStorageSystem(cdkObject)
 
     internal fun unwrap(wrapped: CfnStorageSystem):
-        software.amazon.awscdk.services.datasync.CfnStorageSystem = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnStorageSystem = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnStorageSystem
   }
 
   /**
@@ -673,8 +674,7 @@ public open class CfnStorageSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty,
     ) : CdkObject(cdkObject), ServerConfigurationProperty {
       /**
        * The domain name or IP address of your storage system's management interface.
@@ -789,8 +789,7 @@ public open class CfnStorageSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerCredentialsProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerCredentialsProperty,
     ) : CdkObject(cdkObject), ServerCredentialsProperty {
       /**
        * Specifies the password for your storage system's management interface.

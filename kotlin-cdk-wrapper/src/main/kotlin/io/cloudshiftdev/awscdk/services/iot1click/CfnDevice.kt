@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-device.html)
  */
-public open class CfnDevice internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot1click.CfnDevice,
+public open class CfnDevice(
+  cdkObject: software.amazon.awscdk.services.iot1click.CfnDevice,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -202,6 +202,6 @@ public open class CfnDevice internal constructor(
         CfnDevice(cdkObject)
 
     internal fun unwrap(wrapped: CfnDevice): software.amazon.awscdk.services.iot1click.CfnDevice =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iot1click.CfnDevice
   }
 }

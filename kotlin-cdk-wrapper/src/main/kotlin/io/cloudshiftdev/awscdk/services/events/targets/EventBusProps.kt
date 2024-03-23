@@ -105,7 +105,7 @@ public interface EventBusProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.targets.EventBusProps,
+    cdkObject: software.amazon.awscdk.services.events.targets.EventBusProps,
   ) : CdkObject(cdkObject), EventBusProps {
     /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a

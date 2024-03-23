@@ -144,7 +144,7 @@ public interface EcsTarget {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.EcsTarget,
+    cdkObject: software.amazon.awscdk.services.ecs.EcsTarget,
   ) : CdkObject(cdkObject), EcsTarget {
     /**
      * The name of the container.

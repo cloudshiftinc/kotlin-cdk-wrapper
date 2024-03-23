@@ -24,8 +24,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class EngineVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.opensearchservice.EngineVersion,
+public open class EngineVersion(
+  cdkObject: software.amazon.awscdk.services.opensearchservice.EngineVersion,
 ) : CdkObject(cdkObject) {
   /**
    * engine version identifier.
@@ -130,6 +130,7 @@ public open class EngineVersion internal constructor(
         EngineVersion = EngineVersion(cdkObject)
 
     internal fun unwrap(wrapped: EngineVersion):
-        software.amazon.awscdk.services.opensearchservice.EngineVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.opensearchservice.EngineVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.opensearchservice.EngineVersion
   }
 }

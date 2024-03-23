@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-hub.html)
  */
-public open class CfnHub internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.securityhub.CfnHub,
+public open class CfnHub(
+  cdkObject: software.amazon.awscdk.services.securityhub.CfnHub,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.securityhub.CfnHub(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -399,6 +399,6 @@ public open class CfnHub internal constructor(
         CfnHub(cdkObject)
 
     internal fun unwrap(wrapped: CfnHub): software.amazon.awscdk.services.securityhub.CfnHub =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.securityhub.CfnHub
   }
 }

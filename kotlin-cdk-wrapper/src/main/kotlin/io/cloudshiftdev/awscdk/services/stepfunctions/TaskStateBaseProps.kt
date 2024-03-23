@@ -400,7 +400,7 @@ public interface TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.TaskStateBaseProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.TaskStateBaseProps,
   ) : CdkObject(cdkObject), TaskStateBaseProps {
     /**
      * An optional description for this state.

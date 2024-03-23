@@ -56,9 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html)
  */
-public open class CfnNotificationChannel internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.devopsguru.CfnNotificationChannel,
+public open class CfnNotificationChannel(
+  cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -225,7 +224,8 @@ public open class CfnNotificationChannel internal constructor(
         CfnNotificationChannel = CfnNotificationChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnNotificationChannel):
-        software.amazon.awscdk.services.devopsguru.CfnNotificationChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.devopsguru.CfnNotificationChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.devopsguru.CfnNotificationChannel
   }
 
   /**
@@ -470,8 +470,7 @@ public open class CfnNotificationChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationChannelConfigProperty,
+      cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationChannelConfigProperty,
     ) : CdkObject(cdkObject), NotificationChannelConfigProperty {
       /**
        * The filter configurations for the Amazon SNS notification topic you use with DevOps Guru.
@@ -654,8 +653,7 @@ public open class CfnNotificationChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty,
+      cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty,
     ) : CdkObject(cdkObject), NotificationFilterConfigProperty {
       /**
        * The events that you want to receive notifications for.
@@ -765,8 +763,7 @@ public open class CfnNotificationChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.SnsChannelConfigProperty,
+      cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.SnsChannelConfigProperty,
     ) : CdkObject(cdkObject), SnsChannelConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of an Amazon Simple Notification Service topic.

@@ -446,7 +446,7 @@ public interface CfnAssessmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessmentProps,
+    cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessmentProps,
   ) : CdkObject(cdkObject), CfnAssessmentProps {
     /**
      * The destination that evidence reports are stored in for the assessment.

@@ -17,8 +17,8 @@ import io.cloudshiftdev.awscdk.services.iam.IGrantable
  *
  * [Documentation](https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry_auth.html)
  */
-public open class AuthorizationToken internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.AuthorizationToken,
+public open class AuthorizationToken(
+  cdkObject: software.amazon.awscdk.services.ecr.AuthorizationToken,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun grantRead(grantee: IGrantable) {
@@ -29,6 +29,7 @@ public open class AuthorizationToken internal constructor(
         AuthorizationToken = AuthorizationToken(cdkObject)
 
     internal fun unwrap(wrapped: AuthorizationToken):
-        software.amazon.awscdk.services.ecr.AuthorizationToken = wrapped.cdkObject
+        software.amazon.awscdk.services.ecr.AuthorizationToken = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecr.AuthorizationToken
   }
 }

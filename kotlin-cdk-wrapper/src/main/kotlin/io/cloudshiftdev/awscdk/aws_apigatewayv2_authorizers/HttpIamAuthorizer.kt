@@ -29,9 +29,8 @@ import kotlin.jvm.JvmName
  * routes[0].grantInvoke(principal);
  * ```
  */
-public open class HttpIamAuthorizer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer,
+public open class HttpIamAuthorizer(
+  cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer,
 ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
   public constructor() :
       this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer()
@@ -61,6 +60,7 @@ public open class HttpIamAuthorizer internal constructor(
         HttpIamAuthorizer = HttpIamAuthorizer(cdkObject)
 
     internal fun unwrap(wrapped: HttpIamAuthorizer):
-        software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer = wrapped.cdkObject
+        software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer = wrapped.cdkObject as
+        software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer
   }
 }

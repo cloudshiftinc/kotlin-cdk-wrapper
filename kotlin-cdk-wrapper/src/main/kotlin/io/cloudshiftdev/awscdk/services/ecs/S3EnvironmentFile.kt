@@ -20,8 +20,8 @@ import kotlin.String
  * S3EnvironmentFile s3EnvironmentFile = new S3EnvironmentFile(bucket, "key", "objectVersion");
  * ```
  */
-public open class S3EnvironmentFile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.S3EnvironmentFile,
+public open class S3EnvironmentFile(
+  cdkObject: software.amazon.awscdk.services.ecs.S3EnvironmentFile,
 ) : EnvironmentFile(cdkObject) {
   public constructor(bucket: IBucket, key: String) :
       this(software.amazon.awscdk.services.ecs.S3EnvironmentFile(bucket.let(IBucket::unwrap), key)
@@ -48,6 +48,7 @@ public open class S3EnvironmentFile internal constructor(
         S3EnvironmentFile = S3EnvironmentFile(cdkObject)
 
     internal fun unwrap(wrapped: S3EnvironmentFile):
-        software.amazon.awscdk.services.ecs.S3EnvironmentFile = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.S3EnvironmentFile = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.S3EnvironmentFile
   }
 }

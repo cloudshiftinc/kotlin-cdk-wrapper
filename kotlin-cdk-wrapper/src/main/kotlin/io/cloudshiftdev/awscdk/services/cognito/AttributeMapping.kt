@@ -405,7 +405,7 @@ public interface AttributeMapping {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.AttributeMapping,
+    cdkObject: software.amazon.awscdk.services.cognito.AttributeMapping,
   ) : CdkObject(cdkObject), AttributeMapping {
     /**
      * The user's postal address is a required attribute.

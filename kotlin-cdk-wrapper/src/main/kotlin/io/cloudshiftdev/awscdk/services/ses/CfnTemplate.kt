@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html)
  */
-public open class CfnTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnTemplate,
+public open class CfnTemplate(
+  cdkObject: software.amazon.awscdk.services.ses.CfnTemplate,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -212,7 +212,7 @@ public open class CfnTemplate internal constructor(
         CfnTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnTemplate): software.amazon.awscdk.services.ses.CfnTemplate =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ses.CfnTemplate
   }
 
   /**
@@ -331,7 +331,7 @@ public open class CfnTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty,
     ) : CdkObject(cdkObject), TemplateProperty {
       /**
        * The HTML body of the email.

@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-accelerator.html)
  */
-public open class CfnAccelerator internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnAccelerator,
+public open class CfnAccelerator(
+  cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnAccelerator,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -502,6 +502,7 @@ public open class CfnAccelerator internal constructor(
         CfnAccelerator = CfnAccelerator(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccelerator):
-        software.amazon.awscdk.services.globalaccelerator.CfnAccelerator = wrapped.cdkObject
+        software.amazon.awscdk.services.globalaccelerator.CfnAccelerator = wrapped.cdkObject as
+        software.amazon.awscdk.services.globalaccelerator.CfnAccelerator
   }
 }

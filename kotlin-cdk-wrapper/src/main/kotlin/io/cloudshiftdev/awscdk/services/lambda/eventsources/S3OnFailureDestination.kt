@@ -34,9 +34,8 @@ import io.cloudshiftdev.awscdk.services.s3.IBucket
  * .build());
  * ```
  */
-public open class S3OnFailureDestination internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.eventsources.S3OnFailureDestination,
+public open class S3OnFailureDestination(
+  cdkObject: software.amazon.awscdk.services.lambda.eventsources.S3OnFailureDestination,
 ) : CdkObject(cdkObject), IEventSourceDlq {
   public constructor(bucket: IBucket) :
       this(software.amazon.awscdk.services.lambda.eventsources.S3OnFailureDestination(bucket.let(IBucket::unwrap))
@@ -59,6 +58,7 @@ public open class S3OnFailureDestination internal constructor(
 
     internal fun unwrap(wrapped: S3OnFailureDestination):
         software.amazon.awscdk.services.lambda.eventsources.S3OnFailureDestination =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.eventsources.S3OnFailureDestination
   }
 }

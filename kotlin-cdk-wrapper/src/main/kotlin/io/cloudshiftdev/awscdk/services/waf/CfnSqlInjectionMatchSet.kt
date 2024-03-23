@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sqlinjectionmatchset.html)
  */
-public open class CfnSqlInjectionMatchSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet,
+public open class CfnSqlInjectionMatchSet(
+  cdkObject: software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -250,7 +250,8 @@ public open class CfnSqlInjectionMatchSet internal constructor(
         CfnSqlInjectionMatchSet = CfnSqlInjectionMatchSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnSqlInjectionMatchSet):
-        software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet = wrapped.cdkObject
+        software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet
   }
 
   /**
@@ -422,8 +423,7 @@ public open class CfnSqlInjectionMatchSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.FieldToMatchProperty,
+      cdkObject: software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.FieldToMatchProperty,
     ) : CdkObject(cdkObject), FieldToMatchProperty {
       /**
        * When the value of `Type` is `HEADER` , enter the name of the header that you want AWS WAF
@@ -785,8 +785,7 @@ public open class CfnSqlInjectionMatchSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.SqlInjectionMatchTupleProperty,
+      cdkObject: software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.SqlInjectionMatchTupleProperty,
     ) : CdkObject(cdkObject), SqlInjectionMatchTupleProperty {
       /**
        * The part of a web request that you want to inspect, such as a specified header or a query

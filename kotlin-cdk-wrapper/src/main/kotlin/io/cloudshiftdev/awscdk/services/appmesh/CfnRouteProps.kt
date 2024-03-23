@@ -445,7 +445,7 @@ public interface CfnRouteProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.CfnRouteProps,
+    cdkObject: software.amazon.awscdk.services.appmesh.CfnRouteProps,
   ) : CdkObject(cdkObject), CfnRouteProps {
     /**
      * The name of the service mesh to create the route in.

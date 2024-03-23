@@ -93,8 +93,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html)
  */
-public open class CfnStudioComponent internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent,
+public open class CfnStudioComponent(
+  cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -730,7 +730,8 @@ public open class CfnStudioComponent internal constructor(
         CfnStudioComponent = CfnStudioComponent(cdkObject)
 
     internal fun unwrap(wrapped: CfnStudioComponent):
-        software.amazon.awscdk.services.nimblestudio.CfnStudioComponent = wrapped.cdkObject
+        software.amazon.awscdk.services.nimblestudio.CfnStudioComponent = wrapped.cdkObject as
+        software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
   }
 
   /**
@@ -808,8 +809,7 @@ public open class CfnStudioComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty,
     ) : CdkObject(cdkObject), ActiveDirectoryComputerAttributeProperty {
       /**
        * The name for the LDAP attribute.
@@ -979,8 +979,7 @@ public open class CfnStudioComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty,
     ) : CdkObject(cdkObject), ActiveDirectoryConfigurationProperty {
       /**
        * A collection of custom attributes for an Active Directory computer.
@@ -1104,8 +1103,7 @@ public open class CfnStudioComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty,
     ) : CdkObject(cdkObject), ComputeFarmConfigurationProperty {
       /**
        * The name of an Active Directory user that is used on ComputeFarm worker instances.
@@ -1197,8 +1195,7 @@ public open class CfnStudioComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty,
     ) : CdkObject(cdkObject), LicenseServiceConfigurationProperty {
       /**
        * The endpoint of the license service that is accessed by the studio component resource.
@@ -1302,8 +1299,7 @@ public open class CfnStudioComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty,
     ) : CdkObject(cdkObject), ScriptParameterKeyValueProperty {
       /**
        * A script parameter key.
@@ -1479,8 +1475,7 @@ public open class CfnStudioComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.SharedFileSystemConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.SharedFileSystemConfigurationProperty,
     ) : CdkObject(cdkObject), SharedFileSystemConfigurationProperty {
       /**
        * The endpoint of the shared file system that is accessed by the studio component resource.
@@ -1823,8 +1818,7 @@ public open class CfnStudioComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentConfigurationProperty,
     ) : CdkObject(cdkObject), StudioComponentConfigurationProperty {
       /**
        * The configuration for a AWS Directory Service for Microsoft Active Directory studio
@@ -2001,8 +1995,7 @@ public open class CfnStudioComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty,
     ) : CdkObject(cdkObject), StudioComponentInitializationScriptProperty {
       /**
        * The version number of the protocol that is used by the launch profile.

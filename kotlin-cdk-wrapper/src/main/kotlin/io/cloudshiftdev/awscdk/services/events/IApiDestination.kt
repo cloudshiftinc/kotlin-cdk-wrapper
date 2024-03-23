@@ -26,7 +26,7 @@ public interface IApiDestination : IResource {
   public fun apiDestinationName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.IApiDestination,
+    cdkObject: software.amazon.awscdk.services.events.IApiDestination,
   ) : CdkObject(cdkObject), IApiDestination {
     /**
      * The ARN of the Api Destination created.

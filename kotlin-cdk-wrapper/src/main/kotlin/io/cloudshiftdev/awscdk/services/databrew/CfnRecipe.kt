@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html)
  */
-public open class CfnRecipe internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe,
+public open class CfnRecipe(
+  cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -314,7 +314,7 @@ public open class CfnRecipe internal constructor(
         CfnRecipe(cdkObject)
 
     internal fun unwrap(wrapped: CfnRecipe): software.amazon.awscdk.services.databrew.CfnRecipe =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.databrew.CfnRecipe
   }
 
   /**
@@ -404,7 +404,7 @@ public open class CfnRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * The name of a valid DataBrew transformation to be performed on the data.
@@ -549,8 +549,7 @@ public open class CfnRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnRecipe.ConditionExpressionProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.ConditionExpressionProperty,
     ) : CdkObject(cdkObject), ConditionExpressionProperty {
       /**
        * A specific condition to apply to a recipe action.
@@ -754,8 +753,7 @@ public open class CfnRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnRecipe.DataCatalogInputDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.DataCatalogInputDefinitionProperty,
     ) : CdkObject(cdkObject), DataCatalogInputDefinitionProperty {
       /**
        * The unique identifier of the AWS account that holds the Data Catalog that stores the data.
@@ -952,7 +950,7 @@ public open class CfnRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.InputProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.InputProperty,
     ) : CdkObject(cdkObject), InputProperty {
       /**
        * The AWS Glue Data Catalog parameters for the data.
@@ -3228,8 +3226,7 @@ public open class CfnRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnRecipe.RecipeParametersProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.RecipeParametersProperty,
     ) : CdkObject(cdkObject), RecipeParametersProperty {
       /**
        * The name of an aggregation function to apply.
@@ -4149,7 +4146,7 @@ public open class CfnRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.RecipeStepProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.RecipeStepProperty,
     ) : CdkObject(cdkObject), RecipeStepProperty {
       /**
        * The particular action to be performed in the recipe step.
@@ -4263,7 +4260,7 @@ public open class CfnRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * The Amazon S3 bucket name.
@@ -4442,8 +4439,7 @@ public open class CfnRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty,
     ) : CdkObject(cdkObject), SecondaryInputProperty {
       /**
        * The AWS Glue Data Catalog parameters for the data.

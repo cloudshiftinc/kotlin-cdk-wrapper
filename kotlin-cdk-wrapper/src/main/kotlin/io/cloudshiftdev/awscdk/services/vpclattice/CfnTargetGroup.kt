@@ -78,8 +78,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html)
  */
-public open class CfnTargetGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup,
+public open class CfnTargetGroup(
+  cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -457,7 +457,8 @@ public open class CfnTargetGroup internal constructor(
         CfnTargetGroup = CfnTargetGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnTargetGroup):
-        software.amazon.awscdk.services.vpclattice.CfnTargetGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.vpclattice.CfnTargetGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.vpclattice.CfnTargetGroup
   }
 
   /**
@@ -785,8 +786,7 @@ public open class CfnTargetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.HealthCheckConfigProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.HealthCheckConfigProperty,
     ) : CdkObject(cdkObject), HealthCheckConfigProperty {
       /**
        * Indicates whether health checking is enabled.
@@ -954,8 +954,7 @@ public open class CfnTargetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.MatcherProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.MatcherProperty,
     ) : CdkObject(cdkObject), MatcherProperty {
       /**
        * The HTTP code to use when checking for a successful response from a target.
@@ -1246,8 +1245,7 @@ public open class CfnTargetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetGroupConfigProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetGroupConfigProperty,
     ) : CdkObject(cdkObject), TargetGroupConfigProperty {
       /**
        * The health check configuration.
@@ -1427,8 +1425,7 @@ public open class CfnTargetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty,
     ) : CdkObject(cdkObject), TargetProperty {
       /**
        * The ID of the target.

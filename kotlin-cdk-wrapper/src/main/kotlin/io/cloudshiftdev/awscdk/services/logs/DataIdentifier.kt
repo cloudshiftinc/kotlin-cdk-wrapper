@@ -39,8 +39,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class DataIdentifier internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.DataIdentifier,
+public open class DataIdentifier(
+  cdkObject: software.amazon.awscdk.services.logs.DataIdentifier,
 ) : CdkObject(cdkObject) {
   public constructor(name: String) : this(software.amazon.awscdk.services.logs.DataIdentifier(name)
   )
@@ -349,6 +349,7 @@ public open class DataIdentifier internal constructor(
         DataIdentifier = DataIdentifier(cdkObject)
 
     internal fun unwrap(wrapped: DataIdentifier):
-        software.amazon.awscdk.services.logs.DataIdentifier = wrapped.cdkObject
+        software.amazon.awscdk.services.logs.DataIdentifier = wrapped.cdkObject as
+        software.amazon.awscdk.services.logs.DataIdentifier
   }
 }

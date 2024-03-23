@@ -26,8 +26,8 @@ import kotlin.jvm.JvmName
  * ExtensibleBase extensibleBase = new ExtensibleBase(this, "resourceArn", "resourceName");
  * ```
  */
-public open class ExtensibleBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.ExtensibleBase,
+public open class ExtensibleBase(
+  cdkObject: software.amazon.awscdk.services.appconfig.ExtensibleBase,
 ) : CdkObject(cdkObject), IExtensible {
   public constructor(scope: Construct, resourceArn: String) :
       this(software.amazon.awscdk.services.appconfig.ExtensibleBase(scope.let(Construct::unwrap),
@@ -361,6 +361,7 @@ public open class ExtensibleBase internal constructor(
         ExtensibleBase = ExtensibleBase(cdkObject)
 
     internal fun unwrap(wrapped: ExtensibleBase):
-        software.amazon.awscdk.services.appconfig.ExtensibleBase = wrapped.cdkObject
+        software.amazon.awscdk.services.appconfig.ExtensibleBase = wrapped.cdkObject as
+        software.amazon.awscdk.services.appconfig.ExtensibleBase
   }
 }

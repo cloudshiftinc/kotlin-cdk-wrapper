@@ -32,9 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkperformancemetricsubscription.html)
  */
-public open class CfnNetworkPerformanceMetricSubscription internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscription,
+public open class CfnNetworkPerformanceMetricSubscription(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscription,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -228,6 +227,7 @@ public open class CfnNetworkPerformanceMetricSubscription internal constructor(
 
     internal fun unwrap(wrapped: CfnNetworkPerformanceMetricSubscription):
         software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscription =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscription
   }
 }

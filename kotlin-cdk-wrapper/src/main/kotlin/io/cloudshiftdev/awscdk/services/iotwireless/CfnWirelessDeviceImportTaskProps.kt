@@ -162,8 +162,7 @@ public interface CfnWirelessDeviceImportTaskProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTaskProps,
+    cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTaskProps,
   ) : CdkObject(cdkObject), CfnWirelessDeviceImportTaskProps {
     /**
      * The name of the destination that describes the IoT rule to route messages from the Sidewalk

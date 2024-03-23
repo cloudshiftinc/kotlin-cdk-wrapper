@@ -116,7 +116,7 @@ public interface FingerprintOptions : CopyOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.FingerprintOptions,
+    cdkObject: software.amazon.awscdk.FingerprintOptions,
   ) : CdkObject(cdkObject), FingerprintOptions {
     /**
      * File paths matching the patterns will be excluded.

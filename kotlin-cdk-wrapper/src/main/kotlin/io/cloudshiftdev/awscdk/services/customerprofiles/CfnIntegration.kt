@@ -118,8 +118,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html)
  */
-public open class CfnIntegration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration,
+public open class CfnIntegration(
+  cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -504,7 +504,8 @@ public open class CfnIntegration internal constructor(
         CfnIntegration = CfnIntegration(cdkObject)
 
     internal fun unwrap(wrapped: CfnIntegration):
-        software.amazon.awscdk.services.customerprofiles.CfnIntegration = wrapped.cdkObject
+        software.amazon.awscdk.services.customerprofiles.CfnIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.customerprofiles.CfnIntegration
   }
 
   /**
@@ -641,8 +642,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ConnectorOperatorProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ConnectorOperatorProperty,
     ) : CdkObject(cdkObject), ConnectorOperatorProperty {
       /**
        * The operation to be performed on the provided Marketo source fields.
@@ -1011,8 +1011,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.FlowDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.FlowDefinitionProperty,
     ) : CdkObject(cdkObject), FlowDefinitionProperty {
       /**
        * A description of the flow you want to create.
@@ -1137,8 +1136,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.IncrementalPullConfigProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.IncrementalPullConfigProperty,
     ) : CdkObject(cdkObject), IncrementalPullConfigProperty {
       /**
        * A field that specifies the date time or timestamp field as the criteria to use when
@@ -1222,8 +1220,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty,
     ) : CdkObject(cdkObject), MarketoSourcePropertiesProperty {
       /**
        * The object specified in the Marketo flow source.
@@ -1326,8 +1323,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty,
     ) : CdkObject(cdkObject), ObjectTypeMappingProperty {
       /**
        * The key.
@@ -1439,8 +1435,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.S3SourcePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.S3SourcePropertiesProperty,
     ) : CdkObject(cdkObject), S3SourcePropertiesProperty {
       /**
        * The Amazon S3 bucket name where the source files are stored.
@@ -1604,8 +1599,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty,
     ) : CdkObject(cdkObject), SalesforceSourcePropertiesProperty {
       /**
        * The flag that enables dynamic fetching of new (recently added) fields in the Salesforce
@@ -1841,8 +1835,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ScheduledTriggerPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ScheduledTriggerPropertiesProperty,
     ) : CdkObject(cdkObject), ScheduledTriggerPropertiesProperty {
       /**
        * Specifies whether a scheduled flow has an incremental data transfer or a complete data
@@ -1973,8 +1966,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ServiceNowSourcePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ServiceNowSourcePropertiesProperty,
     ) : CdkObject(cdkObject), ServiceNowSourcePropertiesProperty {
       /**
        * The object specified in the ServiceNow flow source.
@@ -2302,8 +2294,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceConnectorPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceConnectorPropertiesProperty,
     ) : CdkObject(cdkObject), SourceConnectorPropertiesProperty {
       /**
        * The properties that are applied when Marketo is being used as a source.
@@ -2590,8 +2581,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty,
     ) : CdkObject(cdkObject), SourceFlowConfigProperty {
       /**
        * The name of the Amazon AppFlow connector profile.
@@ -2721,8 +2711,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskPropertiesMapProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskPropertiesMapProperty,
     ) : CdkObject(cdkObject), TaskPropertiesMapProperty {
       /**
        * The task property key.
@@ -2975,8 +2964,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty,
     ) : CdkObject(cdkObject), TaskProperty {
       /**
        * The operation to be performed on the provided source fields.
@@ -3166,8 +3154,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty,
     ) : CdkObject(cdkObject), TriggerConfigProperty {
       /**
        * Specifies the configuration details of a schedule-triggered flow that you define.
@@ -3304,8 +3291,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty,
     ) : CdkObject(cdkObject), TriggerPropertiesProperty {
       /**
        * Specifies the configuration details of a schedule-triggered flow that you define.
@@ -3388,8 +3374,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty,
     ) : CdkObject(cdkObject), ZendeskSourcePropertiesProperty {
       /**
        * The object specified in the Zendesk flow source.

@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-environment.html)
  */
-public open class CfnEnvironment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment,
+public open class CfnEnvironment(
+  cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -731,7 +731,7 @@ public open class CfnEnvironment internal constructor(
         = CfnEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironment): software.amazon.awscdk.services.m2.CfnEnvironment
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.m2.CfnEnvironment
   }
 
   /**
@@ -809,8 +809,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty,
     ) : CdkObject(cdkObject), EfsStorageConfigurationProperty {
       /**
        * The file system identifier.
@@ -920,8 +919,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.m2.CfnEnvironment.FsxStorageConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.FsxStorageConfigurationProperty,
     ) : CdkObject(cdkObject), FsxStorageConfigurationProperty {
       /**
        * The file system identifier.
@@ -1014,8 +1012,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty,
+      cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty,
     ) : CdkObject(cdkObject), HighAvailabilityConfigProperty {
       /**
        * The number of instances in a high availability configuration.
@@ -1179,8 +1176,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.m2.CfnEnvironment.StorageConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.StorageConfigurationProperty,
     ) : CdkObject(cdkObject), StorageConfigurationProperty {
       /**
        * Defines the storage configuration for an Amazon EFS file system.

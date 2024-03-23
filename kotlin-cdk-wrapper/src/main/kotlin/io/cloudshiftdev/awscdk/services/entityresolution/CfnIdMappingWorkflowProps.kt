@@ -325,8 +325,7 @@ public interface CfnIdMappingWorkflowProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflowProps,
+    cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflowProps,
   ) : CdkObject(cdkObject), CfnIdMappingWorkflowProps {
     /**
      * A description of the workflow.

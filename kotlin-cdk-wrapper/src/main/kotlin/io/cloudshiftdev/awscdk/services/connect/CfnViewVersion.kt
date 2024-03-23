@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-viewversion.html)
  */
-public open class CfnViewVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnViewVersion,
+public open class CfnViewVersion(
+  cdkObject: software.amazon.awscdk.services.connect.CfnViewVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -200,6 +200,7 @@ public open class CfnViewVersion internal constructor(
         CfnViewVersion = CfnViewVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnViewVersion):
-        software.amazon.awscdk.services.connect.CfnViewVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnViewVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnViewVersion
   }
 }

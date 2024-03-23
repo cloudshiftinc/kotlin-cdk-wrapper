@@ -860,7 +860,7 @@ public interface CommonProjectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.CommonProjectProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.CommonProjectProps,
   ) : CdkObject(cdkObject), CommonProjectProps {
     /**
      * Whether to allow the CodeBuild to send all network traffic.

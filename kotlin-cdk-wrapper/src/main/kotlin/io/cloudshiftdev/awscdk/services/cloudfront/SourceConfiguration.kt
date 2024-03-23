@@ -430,7 +430,7 @@ public interface SourceConfiguration {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.SourceConfiguration,
+    cdkObject: software.amazon.awscdk.services.cloudfront.SourceConfiguration,
   ) : CdkObject(cdkObject), SourceConfiguration {
     /**
      * The behaviors associated with this source.

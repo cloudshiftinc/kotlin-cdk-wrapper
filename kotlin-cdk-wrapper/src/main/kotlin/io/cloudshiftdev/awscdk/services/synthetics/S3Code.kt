@@ -20,8 +20,8 @@ import kotlin.String
  * S3Code s3Code = new S3Code(bucket, "key", "objectVersion");
  * ```
  */
-public open class S3Code internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.synthetics.S3Code,
+public open class S3Code(
+  cdkObject: software.amazon.awscdk.services.synthetics.S3Code,
 ) : Code(cdkObject) {
   public constructor(bucket: IBucket, key: String) :
       this(software.amazon.awscdk.services.synthetics.S3Code(bucket.let(IBucket::unwrap), key)
@@ -55,6 +55,6 @@ public open class S3Code internal constructor(
         S3Code(cdkObject)
 
     internal fun unwrap(wrapped: S3Code): software.amazon.awscdk.services.synthetics.S3Code =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.synthetics.S3Code
   }
 }

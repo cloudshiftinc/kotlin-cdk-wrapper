@@ -161,7 +161,7 @@ public interface Monitoring {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.Monitoring,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.Monitoring,
   ) : CdkObject(cdkObject), Monitoring {
     /**
      * Amazon S3 Bucket for monitoring log publishing.

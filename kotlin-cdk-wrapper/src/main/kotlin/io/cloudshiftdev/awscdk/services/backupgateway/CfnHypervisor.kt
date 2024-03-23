@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backupgateway-hypervisor.html)
  */
-public open class CfnHypervisor internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backupgateway.CfnHypervisor,
+public open class CfnHypervisor(
+  cdkObject: software.amazon.awscdk.services.backupgateway.CfnHypervisor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.backupgateway.CfnHypervisor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -366,6 +366,7 @@ public open class CfnHypervisor internal constructor(
         CfnHypervisor = CfnHypervisor(cdkObject)
 
     internal fun unwrap(wrapped: CfnHypervisor):
-        software.amazon.awscdk.services.backupgateway.CfnHypervisor = wrapped.cdkObject
+        software.amazon.awscdk.services.backupgateway.CfnHypervisor = wrapped.cdkObject as
+        software.amazon.awscdk.services.backupgateway.CfnHypervisor
   }
 }

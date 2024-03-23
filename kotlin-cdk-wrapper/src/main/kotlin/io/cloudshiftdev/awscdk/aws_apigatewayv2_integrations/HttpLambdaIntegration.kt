@@ -32,9 +32,8 @@ import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesL
  * .build());
  * ```
  */
-public open class HttpLambdaIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration,
+public open class HttpLambdaIntegration(
+  cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration,
 ) : HttpRouteIntegration(cdkObject) {
   public constructor(id: String, handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration(id,
@@ -157,6 +156,7 @@ public open class HttpLambdaIntegration internal constructor(
 
     internal fun unwrap(wrapped: HttpLambdaIntegration):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration
   }
 }

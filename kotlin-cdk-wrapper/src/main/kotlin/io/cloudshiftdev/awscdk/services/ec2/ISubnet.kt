@@ -50,7 +50,7 @@ public interface ISubnet : IResource {
   public fun subnetId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ISubnet,
+    cdkObject: software.amazon.awscdk.services.ec2.ISubnet,
   ) : CdkObject(cdkObject), ISubnet {
     /**
      * Apply the given removal policy to this resource.

@@ -88,9 +88,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ManagedEc2EksComputeEnvironment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironment,
+public open class ManagedEc2EksComputeEnvironment(
+  cdkObject: software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironment,
 ) : Resource(cdkObject), IManagedComputeEnvironment, IComputeEnvironment {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1177,6 +1176,7 @@ public open class ManagedEc2EksComputeEnvironment internal constructor(
         ManagedEc2EksComputeEnvironment = ManagedEc2EksComputeEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: ManagedEc2EksComputeEnvironment):
-        software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironment = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironment = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironment
   }
 }

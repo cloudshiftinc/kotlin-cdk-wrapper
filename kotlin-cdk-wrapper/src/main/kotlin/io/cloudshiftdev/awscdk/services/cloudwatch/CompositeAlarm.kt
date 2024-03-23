@@ -28,8 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class CompositeAlarm internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CompositeAlarm,
+public open class CompositeAlarm(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.CompositeAlarm,
 ) : AlarmBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -262,6 +262,7 @@ public open class CompositeAlarm internal constructor(
         CompositeAlarm = CompositeAlarm(cdkObject)
 
     internal fun unwrap(wrapped: CompositeAlarm):
-        software.amazon.awscdk.services.cloudwatch.CompositeAlarm = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.CompositeAlarm = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.CompositeAlarm
   }
 }

@@ -253,7 +253,7 @@ public interface CfnEventInvokeConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfigProps,
+    cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfigProps,
   ) : CdkObject(cdkObject), CfnEventInvokeConfigProps {
     /**
      * A destination for events after they have been sent to a function for processing.

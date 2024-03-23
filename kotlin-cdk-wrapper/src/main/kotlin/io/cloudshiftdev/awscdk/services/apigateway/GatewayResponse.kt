@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class GatewayResponse internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.GatewayResponse,
+public open class GatewayResponse(
+  cdkObject: software.amazon.awscdk.services.apigateway.GatewayResponse,
 ) : Resource(cdkObject), IGatewayResponse {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -177,6 +177,7 @@ public open class GatewayResponse internal constructor(
         GatewayResponse = GatewayResponse(cdkObject)
 
     internal fun unwrap(wrapped: GatewayResponse):
-        software.amazon.awscdk.services.apigateway.GatewayResponse = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.GatewayResponse = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.GatewayResponse
   }
 }

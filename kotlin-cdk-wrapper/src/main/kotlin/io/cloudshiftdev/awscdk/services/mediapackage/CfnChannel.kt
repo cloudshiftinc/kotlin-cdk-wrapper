@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html)
  */
-public open class CfnChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel,
+public open class CfnChannel(
+  cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -501,7 +501,8 @@ public open class CfnChannel internal constructor(
         CfnChannel = CfnChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnChannel):
-        software.amazon.awscdk.services.mediapackage.CfnChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.mediapackage.CfnChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediapackage.CfnChannel
   }
 
   /**
@@ -584,8 +585,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty,
     ) : CdkObject(cdkObject), HlsIngestProperty {
       /**
        * The input URL where the source stream should be sent.
@@ -726,8 +726,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty,
     ) : CdkObject(cdkObject), IngestEndpointProperty {
       /**
        * The endpoint identifier.
@@ -829,8 +828,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnChannel.LogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.LogConfigurationProperty,
     ) : CdkObject(cdkObject), LogConfigurationProperty {
       /**
        * Sets a custom Amazon CloudWatch log group name.

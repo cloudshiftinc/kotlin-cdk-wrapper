@@ -42,9 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachineversion.html)
  */
-public open class CfnStateMachineVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersion,
+public open class CfnStateMachineVersion(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -223,6 +222,7 @@ public open class CfnStateMachineVersion internal constructor(
         CfnStateMachineVersion = CfnStateMachineVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnStateMachineVersion):
-        software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersion
   }
 }

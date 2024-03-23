@@ -260,7 +260,7 @@ public interface SubnetSelection {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.SubnetSelection,
+    cdkObject: software.amazon.awscdk.services.ec2.SubnetSelection,
   ) : CdkObject(cdkObject), SubnetSelection {
     /**
      * Select subnets only in the given AZs.

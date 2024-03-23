@@ -136,7 +136,7 @@ public interface ProxyTargetConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.ProxyTargetConfig,
+    cdkObject: software.amazon.awscdk.services.rds.ProxyTargetConfig,
   ) : CdkObject(cdkObject), ProxyTargetConfig {
     /**
      * The database clusters to which this proxy connects.

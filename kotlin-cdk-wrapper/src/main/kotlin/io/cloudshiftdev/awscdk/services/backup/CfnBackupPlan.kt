@@ -83,8 +83,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html)
  */
-public open class CfnBackupPlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan,
+public open class CfnBackupPlan(
+  cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -303,7 +303,8 @@ public open class CfnBackupPlan internal constructor(
         CfnBackupPlan = CfnBackupPlan(cdkObject)
 
     internal fun unwrap(wrapped: CfnBackupPlan):
-        software.amazon.awscdk.services.backup.CfnBackupPlan = wrapped.cdkObject
+        software.amazon.awscdk.services.backup.CfnBackupPlan = wrapped.cdkObject as
+        software.amazon.awscdk.services.backup.CfnBackupPlan
   }
 
   /**
@@ -431,8 +432,7 @@ public open class CfnBackupPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupPlan.AdvancedBackupSettingResourceTypeProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.AdvancedBackupSettingResourceTypeProperty,
     ) : CdkObject(cdkObject), AdvancedBackupSettingResourceTypeProperty {
       /**
        * The backup option for the resource.
@@ -663,8 +663,7 @@ public open class CfnBackupPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupPlan.BackupPlanResourceTypeProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.BackupPlanResourceTypeProperty,
     ) : CdkObject(cdkObject), BackupPlanResourceTypeProperty {
       /**
        * A list of backup options for each resource type.
@@ -1094,8 +1093,7 @@ public open class CfnBackupPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupPlan.BackupRuleResourceTypeProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.BackupRuleResourceTypeProperty,
     ) : CdkObject(cdkObject), BackupRuleResourceTypeProperty {
       /**
        * A value in minutes after a backup job is successfully started before it must be completed
@@ -1365,8 +1363,7 @@ public open class CfnBackupPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty,
     ) : CdkObject(cdkObject), CopyActionResourceTypeProperty {
       /**
        * An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the
@@ -1529,8 +1526,7 @@ public open class CfnBackupPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupPlan.LifecycleResourceTypeProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.LifecycleResourceTypeProperty,
     ) : CdkObject(cdkObject), LifecycleResourceTypeProperty {
       /**
        * Specifies the number of days after creation that a recovery point is deleted.

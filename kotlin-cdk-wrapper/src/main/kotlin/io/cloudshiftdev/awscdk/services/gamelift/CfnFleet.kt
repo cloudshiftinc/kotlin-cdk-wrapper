@@ -111,8 +111,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html)
  */
-public open class CfnFleet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet,
+public open class CfnFleet(
+  cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1947,7 +1947,7 @@ public open class CfnFleet internal constructor(
         CfnFleet(cdkObject)
 
     internal fun unwrap(wrapped: CfnFleet): software.amazon.awscdk.services.gamelift.CfnFleet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.gamelift.CfnFleet
   }
 
   /**
@@ -2017,8 +2017,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.AnywhereConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.AnywhereConfigurationProperty,
     ) : CdkObject(cdkObject), AnywhereConfigurationProperty {
       /**
        * The cost to run your fleet per hour.
@@ -2124,8 +2123,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty,
     ) : CdkObject(cdkObject), CertificateConfigurationProperty {
       /**
        * Indicates whether a TLS/SSL certificate is generated for a fleet.
@@ -2309,8 +2307,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.IpPermissionProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.IpPermissionProperty,
     ) : CdkObject(cdkObject), IpPermissionProperty {
       /**
        * A starting value for a range of allowed port numbers.
@@ -2497,8 +2494,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty,
     ) : CdkObject(cdkObject), LocationCapacityProperty {
       /**
        * The number of Amazon EC2 instances you want to maintain in the specified fleet location.
@@ -2724,8 +2720,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.LocationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.LocationConfigurationProperty,
     ) : CdkObject(cdkObject), LocationConfigurationProperty {
       /**
        * An AWS Region code, such as `us-west-2` .
@@ -2875,8 +2870,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty,
     ) : CdkObject(cdkObject), ResourceCreationLimitPolicyProperty {
       /**
        * A policy that puts limits on the number of game sessions that a player can create within a
@@ -3085,8 +3079,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.RuntimeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.RuntimeConfigurationProperty,
     ) : CdkObject(cdkObject), RuntimeConfigurationProperty {
       /**
        * The maximum amount of time (in seconds) allowed to launch a new game session and have it
@@ -3611,8 +3604,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.ScalingPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ScalingPolicyProperty,
     ) : CdkObject(cdkObject), ScalingPolicyProperty {
       /**
        * Comparison operator to use when measuring a metric against the threshold value.
@@ -3914,8 +3906,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty,
     ) : CdkObject(cdkObject), ServerProcessProperty {
       /**
        * The number of server processes using this configuration that run concurrently on each
@@ -4046,8 +4037,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty,
     ) : CdkObject(cdkObject), TargetConfigurationProperty {
       /**
        * Desired value to use with a target-based scaling policy.

@@ -43,8 +43,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class CliCredentialsStackSynthesizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CliCredentialsStackSynthesizer,
+public open class CliCredentialsStackSynthesizer(
+  cdkObject: software.amazon.awscdk.CliCredentialsStackSynthesizer,
 ) : StackSynthesizer(cdkObject), IReusableStackSynthesizer, IBoundStackSynthesizer {
   public constructor() : this(software.amazon.awscdk.CliCredentialsStackSynthesizer()
   )
@@ -321,6 +321,7 @@ public open class CliCredentialsStackSynthesizer internal constructor(
         CliCredentialsStackSynthesizer = CliCredentialsStackSynthesizer(cdkObject)
 
     internal fun unwrap(wrapped: CliCredentialsStackSynthesizer):
-        software.amazon.awscdk.CliCredentialsStackSynthesizer = wrapped.cdkObject
+        software.amazon.awscdk.CliCredentialsStackSynthesizer = wrapped.cdkObject as
+        software.amazon.awscdk.CliCredentialsStackSynthesizer
   }
 }

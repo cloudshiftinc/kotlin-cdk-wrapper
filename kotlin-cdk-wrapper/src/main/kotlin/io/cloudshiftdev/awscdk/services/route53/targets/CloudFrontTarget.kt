@@ -26,8 +26,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class CloudFrontTarget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.targets.CloudFrontTarget,
+public open class CloudFrontTarget(
+  cdkObject: software.amazon.awscdk.services.route53.targets.CloudFrontTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(distribution: IDistribution) :
       this(software.amazon.awscdk.services.route53.targets.CloudFrontTarget(distribution.let(IDistribution::unwrap))
@@ -63,6 +63,7 @@ public open class CloudFrontTarget internal constructor(
         CloudFrontTarget = CloudFrontTarget(cdkObject)
 
     internal fun unwrap(wrapped: CloudFrontTarget):
-        software.amazon.awscdk.services.route53.targets.CloudFrontTarget = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.targets.CloudFrontTarget = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.targets.CloudFrontTarget
   }
 }

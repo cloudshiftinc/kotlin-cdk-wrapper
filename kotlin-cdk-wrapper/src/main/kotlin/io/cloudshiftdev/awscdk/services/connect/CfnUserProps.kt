@@ -390,7 +390,7 @@ public interface CfnUserProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnUserProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnUserProps,
   ) : CdkObject(cdkObject), CfnUserProps {
     /**
      * The identifier of the user account in the directory used for identity management.

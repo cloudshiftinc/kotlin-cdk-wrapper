@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html)
  */
-public open class CfnAuthorizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnAuthorizer,
+public open class CfnAuthorizer(
+  cdkObject: software.amazon.awscdk.services.iot.CfnAuthorizer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -537,6 +537,6 @@ public open class CfnAuthorizer internal constructor(
         CfnAuthorizer(cdkObject)
 
     internal fun unwrap(wrapped: CfnAuthorizer): software.amazon.awscdk.services.iot.CfnAuthorizer =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iot.CfnAuthorizer
   }
 }

@@ -16,8 +16,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class BlockPublicAccess internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.BlockPublicAccess,
+public open class BlockPublicAccess(
+  cdkObject: software.amazon.awscdk.services.s3.BlockPublicAccess,
 ) : CdkObject(cdkObject) {
   public constructor(options: BlockPublicAccessOptions) :
       this(software.amazon.awscdk.services.s3.BlockPublicAccess(options.let(BlockPublicAccessOptions::unwrap))
@@ -176,6 +176,7 @@ public open class BlockPublicAccess internal constructor(
         BlockPublicAccess = BlockPublicAccess(cdkObject)
 
     internal fun unwrap(wrapped: BlockPublicAccess):
-        software.amazon.awscdk.services.s3.BlockPublicAccess = wrapped.cdkObject
+        software.amazon.awscdk.services.s3.BlockPublicAccess = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3.BlockPublicAccess
   }
 }

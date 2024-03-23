@@ -31,9 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcaconnectorad-serviceprincipalname.html)
  */
-public open class CfnServicePrincipalName internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalName,
+public open class CfnServicePrincipalName(
+  cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalName,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -189,5 +188,6 @@ public open class CfnServicePrincipalName internal constructor(
 
     internal fun unwrap(wrapped: CfnServicePrincipalName):
         software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalName = wrapped.cdkObject
+        as software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalName
   }
 }

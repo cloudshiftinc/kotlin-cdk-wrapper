@@ -140,7 +140,7 @@ public interface CfnEventStreamProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStreamProps,
+    cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStreamProps,
   ) : CdkObject(cdkObject), CfnEventStreamProps {
     /**
      * The unique name of the domain.

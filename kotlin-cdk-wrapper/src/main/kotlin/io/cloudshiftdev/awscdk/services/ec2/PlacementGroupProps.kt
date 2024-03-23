@@ -162,7 +162,7 @@ public interface PlacementGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.PlacementGroupProps,
+    cdkObject: software.amazon.awscdk.services.ec2.PlacementGroupProps,
   ) : CdkObject(cdkObject), PlacementGroupProps {
     /**
      * The number of partitions.

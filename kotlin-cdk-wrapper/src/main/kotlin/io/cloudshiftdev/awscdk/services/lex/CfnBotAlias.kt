@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-botalias.html)
  */
-public open class CfnBotAlias internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias,
+public open class CfnBotAlias(
+  cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -632,7 +632,7 @@ public open class CfnBotAlias internal constructor(
         CfnBotAlias(cdkObject)
 
     internal fun unwrap(wrapped: CfnBotAlias): software.amazon.awscdk.services.lex.CfnBotAlias =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lex.CfnBotAlias
   }
 
   /**
@@ -720,8 +720,7 @@ public open class CfnBotAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty,
     ) : CdkObject(cdkObject), AudioLogDestinationProperty {
       /**
        * The S3 bucket location where audio logs are stored.
@@ -875,8 +874,7 @@ public open class CfnBotAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogSettingProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogSettingProperty,
     ) : CdkObject(cdkObject), AudioLogSettingProperty {
       /**
        * The location of audio log files collected when conversation logging is enabled for a bot.
@@ -1026,8 +1024,7 @@ public open class CfnBotAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty,
     ) : CdkObject(cdkObject), BotAliasLocaleSettingsItemProperty {
       /**
        * Specifies settings that are unique to a locale.
@@ -1198,8 +1195,7 @@ public open class CfnBotAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsProperty,
     ) : CdkObject(cdkObject), BotAliasLocaleSettingsProperty {
       /**
        * Specifies the Lambda function that should be used in the locale.
@@ -1317,8 +1313,7 @@ public open class CfnBotAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty,
     ) : CdkObject(cdkObject), CloudWatchLogGroupLogDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of the log group where text and metadata logs are delivered.
@@ -1445,8 +1440,7 @@ public open class CfnBotAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.CodeHookSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.CodeHookSpecificationProperty,
     ) : CdkObject(cdkObject), CodeHookSpecificationProperty {
       /**
        * Specifies a Lambda function that verifies requests to a bot or fulfills the user's request
@@ -1614,8 +1608,7 @@ public open class CfnBotAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty,
     ) : CdkObject(cdkObject), ConversationLogSettingsProperty {
       /**
        * The Amazon S3 settings for logging audio to an S3 bucket.
@@ -1726,8 +1719,7 @@ public open class CfnBotAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.LambdaCodeHookProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.LambdaCodeHookProperty,
     ) : CdkObject(cdkObject), LambdaCodeHookProperty {
       /**
        * The version of the request-response that you want Amazon Lex to use to invoke your Lambda
@@ -1863,8 +1855,7 @@ public open class CfnBotAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.S3BucketLogDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.S3BucketLogDestinationProperty,
     ) : CdkObject(cdkObject), S3BucketLogDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of an AWS Key Management Service (KMS) key for encrypting
@@ -1979,8 +1970,7 @@ public open class CfnBotAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty,
     ) : CdkObject(cdkObject), SentimentAnalysisSettingsProperty {
       /**
        * Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment of user utterances.
@@ -2098,8 +2088,7 @@ public open class CfnBotAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.TextLogDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.TextLogDestinationProperty,
     ) : CdkObject(cdkObject), TextLogDestinationProperty {
       /**
        * Defines the Amazon CloudWatch Logs log group where text and metadata logs are delivered.
@@ -2249,8 +2238,7 @@ public open class CfnBotAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.TextLogSettingProperty,
+      cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.TextLogSettingProperty,
     ) : CdkObject(cdkObject), TextLogSettingProperty {
       /**
        * Defines the Amazon CloudWatch Logs destination log group for conversation text logs.

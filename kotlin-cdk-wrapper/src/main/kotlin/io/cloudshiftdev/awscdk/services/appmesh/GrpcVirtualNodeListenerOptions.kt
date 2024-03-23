@@ -248,7 +248,7 @@ public interface GrpcVirtualNodeListenerOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GrpcVirtualNodeListenerOptions,
+    cdkObject: software.amazon.awscdk.services.appmesh.GrpcVirtualNodeListenerOptions,
   ) : CdkObject(cdkObject), GrpcVirtualNodeListenerOptions {
     /**
      * Connection pool for http listeners.

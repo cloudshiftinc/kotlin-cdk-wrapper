@@ -668,7 +668,7 @@ public interface LambdaRestApiProps : RestApiProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.LambdaRestApiProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.LambdaRestApiProps,
   ) : CdkObject(cdkObject), LambdaRestApiProps {
     /**
      * The source of the API key for metering requests according to a usage plan.

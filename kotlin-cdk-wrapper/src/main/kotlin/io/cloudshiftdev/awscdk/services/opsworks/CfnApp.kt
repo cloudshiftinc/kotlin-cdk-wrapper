@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html)
  */
-public open class CfnApp internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.opsworks.CfnApp,
+public open class CfnApp(
+  cdkObject: software.amazon.awscdk.services.opsworks.CfnApp,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -893,7 +893,7 @@ public open class CfnApp internal constructor(
         CfnApp(cdkObject)
 
     internal fun unwrap(wrapped: CfnApp): software.amazon.awscdk.services.opsworks.CfnApp =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.opsworks.CfnApp
   }
 
   /**
@@ -989,7 +989,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty,
     ) : CdkObject(cdkObject), DataSourceProperty {
       /**
        * The data source's ARN.
@@ -1164,8 +1164,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnApp.EnvironmentVariableProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.EnvironmentVariableProperty,
     ) : CdkObject(cdkObject), EnvironmentVariableProperty {
       /**
        * (Required) The environment variable's name, which can consist of up to 64 characters and
@@ -1418,7 +1417,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SourceProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SourceProperty,
     ) : CdkObject(cdkObject), SourceProperty {
       /**
        * When included in a request, the parameter depends on the repository type.
@@ -1598,8 +1597,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty,
     ) : CdkObject(cdkObject), SslConfigurationProperty {
       /**
        * The contents of the certificate's domain.crt file.

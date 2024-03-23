@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-routingcontrol.html)
  */
-public open class CfnRoutingControl internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControl,
+public open class CfnRoutingControl(
+  cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControl,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -216,5 +215,6 @@ public open class CfnRoutingControl internal constructor(
 
     internal fun unwrap(wrapped: CfnRoutingControl):
         software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControl = wrapped.cdkObject
+        as software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControl
   }
 }

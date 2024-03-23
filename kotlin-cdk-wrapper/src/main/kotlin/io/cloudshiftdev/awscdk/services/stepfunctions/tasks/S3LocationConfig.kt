@@ -56,7 +56,7 @@ public interface S3LocationConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig,
   ) : CdkObject(cdkObject), S3LocationConfig {
     /**
      * Uniquely identifies the resource in Amazon S3.

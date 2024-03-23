@@ -63,8 +63,7 @@ public interface ContainerDefinitionConfig {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionConfig,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionConfig,
   ) : CdkObject(cdkObject), ContainerDefinitionConfig {
     /**
      * Additional parameters to pass to the base task.

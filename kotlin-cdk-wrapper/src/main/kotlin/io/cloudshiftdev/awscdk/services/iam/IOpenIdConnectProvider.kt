@@ -26,7 +26,7 @@ public interface IOpenIdConnectProvider : IResource {
   public fun openIdConnectProviderIssuer(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.IOpenIdConnectProvider,
+    cdkObject: software.amazon.awscdk.services.iam.IOpenIdConnectProvider,
   ) : CdkObject(cdkObject), IOpenIdConnectProvider {
     /**
      * Apply the given removal policy to this resource.

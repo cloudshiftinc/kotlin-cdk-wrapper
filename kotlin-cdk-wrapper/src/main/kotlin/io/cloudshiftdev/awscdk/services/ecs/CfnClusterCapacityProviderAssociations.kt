@@ -43,9 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-clustercapacityproviderassociations.html)
  */
-public open class CfnClusterCapacityProviderAssociations internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations,
+public open class CfnClusterCapacityProviderAssociations(
+  cdkObject: software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -279,7 +278,8 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
 
     internal fun unwrap(wrapped: CfnClusterCapacityProviderAssociations):
         software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations
   }
 
   /**
@@ -335,15 +335,15 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
      * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
      * providers are specified within a capacity provider strategy, at least one of the capacity
      * providers must have a weight value greater than zero and any capacity providers with a weight of
-     * `0` will not be used to place tasks. If you specify multiple capacity providers in a strategy
-     * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
-     * provider strategy will fail.
+     * `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy that
+     * all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity provider
+     * strategy will fail.
      *
      * An example scenario for using weights is defining a strategy that contains two capacity
      * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
      * split evenly across the two capacity providers. Using that same logic, if you specify a weight
      * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every one
-     * task that is run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+     * task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-clustercapacityproviderassociations-capacityproviderstrategy.html#cfn-ecs-clustercapacityproviderassociations-capacityproviderstrategy-weight)
      */
@@ -376,15 +376,15 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
        * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
        * providers are specified within a capacity provider strategy, at least one of the capacity
        * providers must have a weight value greater than zero and any capacity providers with a weight
-       * of `0` will not be used to place tasks. If you specify multiple capacity providers in a
-       * strategy that all have a weight of `0` , any `RunTask` or `CreateService` actions using the
-       * capacity provider strategy will fail.
+       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
+       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
+       * provider strategy will fail.
        *
        * An example scenario for using weights is defining a strategy that contains two capacity
        * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
        * split evenly across the two capacity providers. Using that same logic, if you specify a weight
        * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
-       * one task that is run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
        */
       public fun weight(weight: Number)
     }
@@ -421,15 +421,15 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
        * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
        * providers are specified within a capacity provider strategy, at least one of the capacity
        * providers must have a weight value greater than zero and any capacity providers with a weight
-       * of `0` will not be used to place tasks. If you specify multiple capacity providers in a
-       * strategy that all have a weight of `0` , any `RunTask` or `CreateService` actions using the
-       * capacity provider strategy will fail.
+       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
+       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
+       * provider strategy will fail.
        *
        * An example scenario for using weights is defining a strategy that contains two capacity
        * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
        * split evenly across the two capacity providers. Using that same logic, if you specify a weight
        * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
-       * one task that is run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
        */
       override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
@@ -441,8 +441,7 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations.CapacityProviderStrategyProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations.CapacityProviderStrategyProperty,
     ) : CdkObject(cdkObject), CapacityProviderStrategyProperty {
       /**
        * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
@@ -472,15 +471,15 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
        * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
        * providers are specified within a capacity provider strategy, at least one of the capacity
        * providers must have a weight value greater than zero and any capacity providers with a weight
-       * of `0` will not be used to place tasks. If you specify multiple capacity providers in a
-       * strategy that all have a weight of `0` , any `RunTask` or `CreateService` actions using the
-       * capacity provider strategy will fail.
+       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
+       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
+       * provider strategy will fail.
        *
        * An example scenario for using weights is defining a strategy that contains two capacity
        * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
        * split evenly across the two capacity providers. Using that same logic, if you specify a weight
        * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
-       * one task that is run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-clustercapacityproviderassociations-capacityproviderstrategy.html#cfn-ecs-clustercapacityproviderassociations-capacityproviderstrategy-weight)
        */

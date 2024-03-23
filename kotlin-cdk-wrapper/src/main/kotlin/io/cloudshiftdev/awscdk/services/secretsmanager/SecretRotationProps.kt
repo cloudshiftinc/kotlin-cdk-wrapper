@@ -342,7 +342,7 @@ public interface SecretRotationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.SecretRotationProps,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.SecretRotationProps,
   ) : CdkObject(cdkObject), SecretRotationProps {
     /**
      * The serverless application for the rotation.

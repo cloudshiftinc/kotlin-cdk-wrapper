@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html)
  */
-public open class CfnPreset internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediaconvert.CfnPreset,
+public open class CfnPreset(
+  cdkObject: software.amazon.awscdk.services.mediaconvert.CfnPreset,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -305,6 +305,6 @@ public open class CfnPreset internal constructor(
         = CfnPreset(cdkObject)
 
     internal fun unwrap(wrapped: CfnPreset): software.amazon.awscdk.services.mediaconvert.CfnPreset
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.mediaconvert.CfnPreset
   }
 }

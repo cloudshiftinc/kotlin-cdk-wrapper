@@ -72,7 +72,7 @@ public interface IPolicyValidationPluginBeta1 {
   public fun version(): String? = unwrap(this).getVersion()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IPolicyValidationPluginBeta1,
+    cdkObject: software.amazon.awscdk.IPolicyValidationPluginBeta1,
   ) : CdkObject(cdkObject), IPolicyValidationPluginBeta1 {
     /**
      * The name of the plugin that will be displayed in the validation report.

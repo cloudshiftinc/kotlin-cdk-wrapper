@@ -72,8 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html)
  */
-public open class CfnUsagePlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan,
+public open class CfnUsagePlan(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnUsagePlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -520,7 +520,8 @@ public open class CfnUsagePlan internal constructor(
         CfnUsagePlan = CfnUsagePlan(cdkObject)
 
     internal fun unwrap(wrapped: CfnUsagePlan):
-        software.amazon.awscdk.services.apigateway.CfnUsagePlan = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CfnUsagePlan = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnUsagePlan
   }
 
   /**
@@ -635,8 +636,7 @@ public open class CfnUsagePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty,
     ) : CdkObject(cdkObject), ApiStageProperty {
       /**
        * API Id of the associated API stage in a usage plan.
@@ -787,8 +787,7 @@ public open class CfnUsagePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty,
     ) : CdkObject(cdkObject), QuotaSettingsProperty {
       /**
        * The target maximum number of requests that can be made in a given time period.
@@ -912,8 +911,7 @@ public open class CfnUsagePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty,
     ) : CdkObject(cdkObject), ThrottleSettingsProperty {
       /**
        * The API target request burst rate limit.

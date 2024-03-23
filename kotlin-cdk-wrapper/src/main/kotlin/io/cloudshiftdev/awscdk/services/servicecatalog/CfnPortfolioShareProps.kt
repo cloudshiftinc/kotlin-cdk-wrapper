@@ -151,7 +151,7 @@ public interface CfnPortfolioShareProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicecatalog.CfnPortfolioShareProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CfnPortfolioShareProps,
   ) : CdkObject(cdkObject), CfnPortfolioShareProps {
     /**
      * The language code.

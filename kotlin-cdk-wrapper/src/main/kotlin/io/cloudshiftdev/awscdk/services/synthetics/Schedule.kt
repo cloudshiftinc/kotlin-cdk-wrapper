@@ -26,8 +26,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class Schedule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.synthetics.Schedule,
+public open class Schedule(
+  cdkObject: software.amazon.awscdk.services.synthetics.Schedule,
 ) : CdkObject(cdkObject) {
   /**
    * The Schedule expression.
@@ -55,6 +55,6 @@ public open class Schedule internal constructor(
         Schedule(cdkObject)
 
     internal fun unwrap(wrapped: Schedule): software.amazon.awscdk.services.synthetics.Schedule =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.synthetics.Schedule
   }
 }

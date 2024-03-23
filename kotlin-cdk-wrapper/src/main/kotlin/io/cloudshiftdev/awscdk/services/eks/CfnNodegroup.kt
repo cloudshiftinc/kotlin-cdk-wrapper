@@ -93,8 +93,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)
  */
-public open class CfnNodegroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup,
+public open class CfnNodegroup(
+  cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1437,7 +1437,7 @@ public open class CfnNodegroup internal constructor(
         CfnNodegroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnNodegroup): software.amazon.awscdk.services.eks.CfnNodegroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.eks.CfnNodegroup
   }
 
   /**
@@ -1574,8 +1574,7 @@ public open class CfnNodegroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnNodegroup.LaunchTemplateSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.LaunchTemplateSpecificationProperty,
     ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
       /**
        * The ID of the launch template.
@@ -1763,7 +1762,7 @@ public open class CfnNodegroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty,
     ) : CdkObject(cdkObject), RemoteAccessProperty {
       /**
        * The Amazon EC2 SSH key name that provides access for SSH communication with the nodes in
@@ -1977,8 +1976,7 @@ public open class CfnNodegroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnNodegroup.ScalingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.ScalingConfigProperty,
     ) : CdkObject(cdkObject), ScalingConfigProperty {
       /**
        * The current number of nodes that the managed node group should maintain.
@@ -2139,7 +2137,7 @@ public open class CfnNodegroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty,
     ) : CdkObject(cdkObject), TaintProperty {
       /**
        * The effect of the taint.
@@ -2268,7 +2266,7 @@ public open class CfnNodegroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty,
     ) : CdkObject(cdkObject), UpdateConfigProperty {
       /**
        * The maximum number of nodes unavailable at once during a version update.

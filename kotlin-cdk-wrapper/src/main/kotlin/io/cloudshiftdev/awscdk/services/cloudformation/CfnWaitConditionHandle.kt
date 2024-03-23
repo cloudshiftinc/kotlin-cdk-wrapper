@@ -50,9 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-waitconditionhandle.html)
  */
-public open class CfnWaitConditionHandle internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudformation.CfnWaitConditionHandle,
+public open class CfnWaitConditionHandle(
+  cdkObject: software.amazon.awscdk.services.cloudformation.CfnWaitConditionHandle,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudformation.CfnWaitConditionHandle(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -126,6 +125,7 @@ public open class CfnWaitConditionHandle internal constructor(
         CfnWaitConditionHandle = CfnWaitConditionHandle(cdkObject)
 
     internal fun unwrap(wrapped: CfnWaitConditionHandle):
-        software.amazon.awscdk.services.cloudformation.CfnWaitConditionHandle = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudformation.CfnWaitConditionHandle = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudformation.CfnWaitConditionHandle
   }
 }

@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-eventstream.html)
  */
-public open class CfnEventStream internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStream,
+public open class CfnEventStream(
+  cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStream,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -286,7 +286,8 @@ public open class CfnEventStream internal constructor(
         CfnEventStream = CfnEventStream(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventStream):
-        software.amazon.awscdk.services.customerprofiles.CfnEventStream = wrapped.cdkObject
+        software.amazon.awscdk.services.customerprofiles.CfnEventStream = wrapped.cdkObject as
+        software.amazon.awscdk.services.customerprofiles.CfnEventStream
   }
 
   /**
@@ -367,8 +368,7 @@ public open class CfnEventStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnEventStream.DestinationDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStream.DestinationDetailsProperty,
     ) : CdkObject(cdkObject), DestinationDetailsProperty {
       /**
        * The status of enabling the Kinesis stream as a destination for export.

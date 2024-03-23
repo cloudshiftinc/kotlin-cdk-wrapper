@@ -20,8 +20,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class AllowListReceiptFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.AllowListReceiptFilter,
+public open class AllowListReceiptFilter(
+  cdkObject: software.amazon.awscdk.services.ses.AllowListReceiptFilter,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -100,6 +100,7 @@ public open class AllowListReceiptFilter internal constructor(
         AllowListReceiptFilter = AllowListReceiptFilter(cdkObject)
 
     internal fun unwrap(wrapped: AllowListReceiptFilter):
-        software.amazon.awscdk.services.ses.AllowListReceiptFilter = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.AllowListReceiptFilter = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.AllowListReceiptFilter
   }
 }

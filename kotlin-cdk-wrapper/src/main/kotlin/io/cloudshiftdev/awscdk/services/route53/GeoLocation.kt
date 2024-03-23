@@ -42,8 +42,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class GeoLocation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.GeoLocation,
+public open class GeoLocation(
+  cdkObject: software.amazon.awscdk.services.route53.GeoLocation,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -82,6 +82,6 @@ public open class GeoLocation internal constructor(
         GeoLocation(cdkObject)
 
     internal fun unwrap(wrapped: GeoLocation): software.amazon.awscdk.services.route53.GeoLocation =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.route53.GeoLocation
   }
 }

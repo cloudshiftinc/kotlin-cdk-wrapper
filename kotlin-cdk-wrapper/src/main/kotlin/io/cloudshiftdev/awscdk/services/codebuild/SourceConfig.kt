@@ -158,7 +158,7 @@ public interface SourceConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.SourceConfig,
+    cdkObject: software.amazon.awscdk.services.codebuild.SourceConfig,
   ) : CdkObject(cdkObject), SourceConfig {
     /**
      *

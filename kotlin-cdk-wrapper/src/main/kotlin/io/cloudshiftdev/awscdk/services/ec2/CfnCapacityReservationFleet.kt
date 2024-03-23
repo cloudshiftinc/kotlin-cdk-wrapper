@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html)
  */
-public open class CfnCapacityReservationFleet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet,
+public open class CfnCapacityReservationFleet(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -689,7 +689,8 @@ public open class CfnCapacityReservationFleet internal constructor(
         CfnCapacityReservationFleet = CfnCapacityReservationFleet(cdkObject)
 
     internal fun unwrap(wrapped: CfnCapacityReservationFleet):
-        software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet
   }
 
   /**
@@ -964,8 +965,7 @@ public open class CfnCapacityReservationFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.InstanceTypeSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.InstanceTypeSpecificationProperty,
     ) : CdkObject(cdkObject), InstanceTypeSpecificationProperty {
       /**
        * The Availability Zone in which the Capacity Reservation Fleet reserves the capacity.
@@ -1166,8 +1166,7 @@ public open class CfnCapacityReservationFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty,
     ) : CdkObject(cdkObject), TagSpecificationProperty {
       /**
        * The type of resource to tag on creation. Specify `capacity-reservation-fleet` .

@@ -29,9 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html)
  */
-public open class CfnResolverDNSSECConfig internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfig,
+public open class CfnResolverDNSSECConfig(
+  cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -159,5 +158,6 @@ public open class CfnResolverDNSSECConfig internal constructor(
 
     internal fun unwrap(wrapped: CfnResolverDNSSECConfig):
         software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfig = wrapped.cdkObject
+        as software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfig
   }
 }

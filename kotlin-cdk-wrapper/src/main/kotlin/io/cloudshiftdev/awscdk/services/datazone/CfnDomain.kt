@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-domain.html)
  */
-public open class CfnDomain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datazone.CfnDomain,
+public open class CfnDomain(
+  cdkObject: software.amazon.awscdk.services.datazone.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -421,7 +421,7 @@ public open class CfnDomain internal constructor(
         CfnDomain(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomain): software.amazon.awscdk.services.datazone.CfnDomain =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.datazone.CfnDomain
   }
 
   /**
@@ -496,8 +496,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty,
+      cdkObject: software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty,
     ) : CdkObject(cdkObject), SingleSignOnProperty {
       /**
        * The type of single sign-on in Amazon DataZone.

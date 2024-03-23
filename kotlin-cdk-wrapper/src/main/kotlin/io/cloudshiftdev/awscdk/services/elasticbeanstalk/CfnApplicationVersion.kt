@@ -50,9 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-applicationversion.html)
  */
-public open class CfnApplicationVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion,
+public open class CfnApplicationVersion(
+  cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -306,6 +305,7 @@ public open class CfnApplicationVersion internal constructor(
 
     internal fun unwrap(wrapped: CfnApplicationVersion):
         software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion = wrapped.cdkObject
+        as software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion
   }
 
   /**
@@ -389,8 +389,7 @@ public open class CfnApplicationVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion.SourceBundleProperty,
+      cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion.SourceBundleProperty,
     ) : CdkObject(cdkObject), SourceBundleProperty {
       /**
        * The Amazon S3 bucket where the data is located.

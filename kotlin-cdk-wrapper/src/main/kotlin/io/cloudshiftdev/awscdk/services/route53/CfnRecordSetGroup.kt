@@ -78,8 +78,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html)
  */
-public open class CfnRecordSetGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup,
+public open class CfnRecordSetGroup(
+  cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53.CfnRecordSetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -353,7 +353,8 @@ public open class CfnRecordSetGroup internal constructor(
         CfnRecordSetGroup = CfnRecordSetGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnRecordSetGroup):
-        software.amazon.awscdk.services.route53.CfnRecordSetGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.CfnRecordSetGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.CfnRecordSetGroup
   }
 
   /**
@@ -1309,8 +1310,7 @@ public open class CfnRecordSetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.AliasTargetProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.AliasTargetProperty,
     ) : CdkObject(cdkObject), AliasTargetProperty {
       /**
        * *Alias records only:* The value that you specify depends on where you want to route
@@ -1679,8 +1679,7 @@ public open class CfnRecordSetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty,
     ) : CdkObject(cdkObject), CidrRoutingConfigProperty {
       /**
        * The CIDR collection ID.
@@ -1794,8 +1793,7 @@ public open class CfnRecordSetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty,
     ) : CdkObject(cdkObject), CoordinatesProperty {
       /**
        * Specifies a coordinate of the north–south position of a geographic point on the surface of
@@ -1987,8 +1985,7 @@ public open class CfnRecordSetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty,
     ) : CdkObject(cdkObject), GeoLocationProperty {
       /**
        * For geolocation resource record sets, a two-letter abbreviation that identifies a
@@ -2261,8 +2258,7 @@ public open class CfnRecordSetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty,
     ) : CdkObject(cdkObject), GeoProximityLocationProperty {
       /**
        * The AWS Region the resource you are directing DNS traffic to, is in.
@@ -4121,8 +4117,7 @@ public open class CfnRecordSetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.RecordSetProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.RecordSetProperty,
     ) : CdkObject(cdkObject), RecordSetProperty {
       /**
        * *Alias resource record sets only:* Information about the AWS resource, such as a CloudFront

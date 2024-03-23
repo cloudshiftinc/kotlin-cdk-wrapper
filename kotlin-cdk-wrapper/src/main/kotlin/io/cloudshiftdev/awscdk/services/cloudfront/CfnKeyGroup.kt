@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html)
  */
-public open class CfnKeyGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyGroup,
+public open class CfnKeyGroup(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -197,7 +197,8 @@ public open class CfnKeyGroup internal constructor(
         CfnKeyGroup = CfnKeyGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnKeyGroup):
-        software.amazon.awscdk.services.cloudfront.CfnKeyGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnKeyGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnKeyGroup
   }
 
   /**
@@ -312,8 +313,7 @@ public open class CfnKeyGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnKeyGroup.KeyGroupConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyGroup.KeyGroupConfigProperty,
     ) : CdkObject(cdkObject), KeyGroupConfigProperty {
       /**
        * A comment to describe the key group.

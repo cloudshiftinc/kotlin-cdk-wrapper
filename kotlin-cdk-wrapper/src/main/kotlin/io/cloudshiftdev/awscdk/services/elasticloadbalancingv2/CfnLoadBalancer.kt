@@ -56,9 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html)
  */
-public open class CfnLoadBalancer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer,
+public open class CfnLoadBalancer(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -885,6 +884,7 @@ public open class CfnLoadBalancer internal constructor(
 
     internal fun unwrap(wrapped: CfnLoadBalancer):
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer = wrapped.cdkObject
+        as software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer
   }
 
   /**
@@ -1203,8 +1203,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.LoadBalancerAttributeProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.LoadBalancerAttributeProperty,
     ) : CdkObject(cdkObject), LoadBalancerAttributeProperty {
       /**
        * The name of the attribute.
@@ -1441,8 +1440,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty,
     ) : CdkObject(cdkObject), SubnetMappingProperty {
       /**
        * [Network Load Balancers] The allocation ID of the Elastic IP address for an internet-facing

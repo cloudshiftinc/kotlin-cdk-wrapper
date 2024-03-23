@@ -20,8 +20,8 @@ import io.cloudshiftdev.constructs.Construct
  * new SsmAction(OpsItemSeverity.CRITICAL, OpsItemCategory.PERFORMANCE));
  * ```
  */
-public open class SsmAction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SsmAction,
+public open class SsmAction(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SsmAction,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(severity: OpsItemSeverity) :
       this(software.amazon.awscdk.services.cloudwatch.actions.SsmAction(severity.let(OpsItemSeverity::unwrap))
@@ -47,6 +47,7 @@ public open class SsmAction internal constructor(
         SsmAction = SsmAction(cdkObject)
 
     internal fun unwrap(wrapped: SsmAction):
-        software.amazon.awscdk.services.cloudwatch.actions.SsmAction = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.actions.SsmAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.actions.SsmAction
   }
 }

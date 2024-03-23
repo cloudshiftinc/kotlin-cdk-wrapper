@@ -89,7 +89,7 @@ public interface CrossRegionSupport {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.CrossRegionSupport,
+    cdkObject: software.amazon.awscdk.services.codepipeline.CrossRegionSupport,
   ) : CdkObject(cdkObject), CrossRegionSupport {
     /**
      * The replication Bucket used by CodePipeline to operate in this region.

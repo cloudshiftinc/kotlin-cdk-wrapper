@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html)
  */
-public open class CfnFramework internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backup.CfnFramework,
+public open class CfnFramework(
+  cdkObject: software.amazon.awscdk.services.backup.CfnFramework,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -373,7 +373,7 @@ public open class CfnFramework internal constructor(
         = CfnFramework(cdkObject)
 
     internal fun unwrap(wrapped: CfnFramework): software.amazon.awscdk.services.backup.CfnFramework
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.backup.CfnFramework
   }
 
   /**
@@ -455,8 +455,7 @@ public open class CfnFramework internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty,
     ) : CdkObject(cdkObject), ControlInputParameterProperty {
       /**
        * The name of a parameter, for example, `BackupPlanFrequency` .
@@ -670,8 +669,7 @@ public open class CfnFramework internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty,
     ) : CdkObject(cdkObject), ControlScopeProperty {
       /**
        * The ID of the only AWS resource that you want your control scope to contain.
@@ -866,8 +864,7 @@ public open class CfnFramework internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty,
     ) : CdkObject(cdkObject), FrameworkControlProperty {
       /**
        * A list of `ParameterName` and `ParameterValue` pairs.

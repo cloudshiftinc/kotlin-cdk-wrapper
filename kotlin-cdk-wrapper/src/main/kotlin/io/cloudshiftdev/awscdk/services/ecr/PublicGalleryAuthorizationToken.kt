@@ -17,9 +17,8 @@ import io.cloudshiftdev.awscdk.services.iam.IGrantable
  *
  * [Documentation](https://docs.aws.amazon.com/AmazonECR/latest/public/public-registries.html#public-registry-auth)
  */
-public open class PublicGalleryAuthorizationToken internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecr.PublicGalleryAuthorizationToken,
+public open class PublicGalleryAuthorizationToken(
+  cdkObject: software.amazon.awscdk.services.ecr.PublicGalleryAuthorizationToken,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun grantRead(grantee: IGrantable) {
@@ -31,6 +30,7 @@ public open class PublicGalleryAuthorizationToken internal constructor(
         PublicGalleryAuthorizationToken = PublicGalleryAuthorizationToken(cdkObject)
 
     internal fun unwrap(wrapped: PublicGalleryAuthorizationToken):
-        software.amazon.awscdk.services.ecr.PublicGalleryAuthorizationToken = wrapped.cdkObject
+        software.amazon.awscdk.services.ecr.PublicGalleryAuthorizationToken = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecr.PublicGalleryAuthorizationToken
   }
 }

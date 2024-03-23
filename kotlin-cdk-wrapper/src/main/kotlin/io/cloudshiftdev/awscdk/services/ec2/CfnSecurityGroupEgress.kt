@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroupegress.html)
  */
-public open class CfnSecurityGroupEgress internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroupEgress,
+public open class CfnSecurityGroupEgress(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroupEgress,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -490,6 +490,7 @@ public open class CfnSecurityGroupEgress internal constructor(
         CfnSecurityGroupEgress = CfnSecurityGroupEgress(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityGroupEgress):
-        software.amazon.awscdk.services.ec2.CfnSecurityGroupEgress = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnSecurityGroupEgress = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnSecurityGroupEgress
   }
 }

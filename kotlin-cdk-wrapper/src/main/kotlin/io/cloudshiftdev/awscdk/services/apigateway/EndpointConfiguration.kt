@@ -100,7 +100,7 @@ public interface EndpointConfiguration {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.EndpointConfiguration,
+    cdkObject: software.amazon.awscdk.services.apigateway.EndpointConfiguration,
   ) : CdkObject(cdkObject), EndpointConfiguration {
     /**
      * A list of endpoint types of an API or its custom domain name.

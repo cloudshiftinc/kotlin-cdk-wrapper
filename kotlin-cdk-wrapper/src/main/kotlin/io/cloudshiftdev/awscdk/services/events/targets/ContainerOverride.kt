@@ -179,7 +179,7 @@ public interface ContainerOverride {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.targets.ContainerOverride,
+    cdkObject: software.amazon.awscdk.services.events.targets.ContainerOverride,
   ) : CdkObject(cdkObject), ContainerOverride {
     /**
      * Command to run inside the container.

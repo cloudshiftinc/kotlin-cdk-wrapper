@@ -54,8 +54,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public abstract class TlsCertificate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.TlsCertificate,
+public abstract class TlsCertificate(
+  cdkObject: software.amazon.awscdk.services.appmesh.TlsCertificate,
 ) : CdkObject(cdkObject) {
   /**
    * Returns TLS certificate based provider.
@@ -66,7 +66,7 @@ public abstract class TlsCertificate internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(TlsCertificateConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.TlsCertificate,
+    cdkObject: software.amazon.awscdk.services.appmesh.TlsCertificate,
   ) : TlsCertificate(cdkObject)
 
   public companion object {

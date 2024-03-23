@@ -187,7 +187,7 @@ public interface ServerlessScalingOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.ServerlessScalingOptions,
+    cdkObject: software.amazon.awscdk.services.rds.ServerlessScalingOptions,
   ) : CdkObject(cdkObject), ServerlessScalingOptions {
     /**
      * The time before an Aurora Serverless database cluster is paused.

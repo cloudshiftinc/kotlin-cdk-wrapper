@@ -16,8 +16,8 @@ import kotlin.collections.List
 /**
  * The base class for ScheduledEc2Task and ScheduledFargateTask tasks.
  */
-public abstract class ScheduledTaskBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledTaskBase,
+public abstract class ScheduledTaskBase(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledTaskBase,
 ) : Construct(cdkObject) {
   /**
    * The name of the cluster that hosts the service.
@@ -66,7 +66,7 @@ public abstract class ScheduledTaskBase internal constructor(
   public open fun tags(): List<Tag> = unwrap(this).getTags()?.map(Tag::wrap) ?: emptyList()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledTaskBase,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledTaskBase,
   ) : ScheduledTaskBase(cdkObject)
 
   public companion object {

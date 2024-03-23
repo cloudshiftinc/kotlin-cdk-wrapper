@@ -16,7 +16,7 @@ public interface ICachePolicy {
   public fun cachePolicyId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.ICachePolicy,
+    cdkObject: software.amazon.awscdk.services.cloudfront.ICachePolicy,
   ) : CdkObject(cdkObject), ICachePolicy {
     /**
      * The ID of the cache policy.

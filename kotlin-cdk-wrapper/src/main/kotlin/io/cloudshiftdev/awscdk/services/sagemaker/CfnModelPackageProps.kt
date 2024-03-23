@@ -1212,7 +1212,7 @@ public interface CfnModelPackageProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackageProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackageProps,
   ) : CdkObject(cdkObject), CfnModelPackageProps {
     /**
      * An array of additional Inference Specification objects.

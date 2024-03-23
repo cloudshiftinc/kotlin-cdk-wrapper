@@ -19,9 +19,8 @@ import io.cloudshiftdev.awscdk.services.globalaccelerator.IAccelerator
  * .build();
  * ```
  */
-public open class GlobalAcceleratorTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget,
+public open class GlobalAcceleratorTarget(
+  cdkObject: software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget,
 ) : GlobalAcceleratorDomainTarget(cdkObject) {
   public constructor(accelerator: IAccelerator) :
       this(software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget(accelerator.let(IAccelerator::unwrap))
@@ -34,5 +33,6 @@ public open class GlobalAcceleratorTarget internal constructor(
 
     internal fun unwrap(wrapped: GlobalAcceleratorTarget):
         software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget = wrapped.cdkObject
+        as software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget
   }
 }

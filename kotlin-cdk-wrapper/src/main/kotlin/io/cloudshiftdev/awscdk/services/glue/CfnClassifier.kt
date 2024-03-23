@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html)
  */
-public open class CfnClassifier internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnClassifier,
+public open class CfnClassifier(
+  cdkObject: software.amazon.awscdk.services.glue.CfnClassifier,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.glue.CfnClassifier(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -475,7 +475,7 @@ public open class CfnClassifier internal constructor(
         = CfnClassifier(cdkObject)
 
     internal fun unwrap(wrapped: CfnClassifier): software.amazon.awscdk.services.glue.CfnClassifier
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnClassifier
   }
 
   /**
@@ -783,8 +783,7 @@ public open class CfnClassifier internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnClassifier.CsvClassifierProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.CsvClassifierProperty,
     ) : CdkObject(cdkObject), CsvClassifierProperty {
       /**
        * Enables the processing of files that contain only one column.
@@ -1010,8 +1009,7 @@ public open class CfnClassifier internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty,
     ) : CdkObject(cdkObject), GrokClassifierProperty {
       /**
        * An identifier of the data format that the classifier matches, such as Twitter, JSON,
@@ -1150,8 +1148,7 @@ public open class CfnClassifier internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty,
     ) : CdkObject(cdkObject), JsonClassifierProperty {
       /**
        * A `JsonPath` string defining the JSON data for the classifier to classify.
@@ -1299,8 +1296,7 @@ public open class CfnClassifier internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnClassifier.XMLClassifierProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.XMLClassifierProperty,
     ) : CdkObject(cdkObject), XMLClassifierProperty {
       /**
        * An identifier of the data format that the classifier matches.

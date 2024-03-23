@@ -70,8 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html)
  */
-public open class CfnUserSettings internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings,
+public open class CfnUserSettings(
+  cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -621,7 +621,8 @@ public open class CfnUserSettings internal constructor(
         CfnUserSettings = CfnUserSettings(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserSettings):
-        software.amazon.awscdk.services.workspacesweb.CfnUserSettings = wrapped.cdkObject
+        software.amazon.awscdk.services.workspacesweb.CfnUserSettings = wrapped.cdkObject as
+        software.amazon.awscdk.services.workspacesweb.CfnUserSettings
   }
 
   /**
@@ -719,8 +720,7 @@ public open class CfnUserSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty,
     ) : CdkObject(cdkObject), CookieSpecificationProperty {
       /**
        * The domain of the cookie.
@@ -906,8 +906,7 @@ public open class CfnUserSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty,
     ) : CdkObject(cdkObject), CookieSynchronizationConfigurationProperty {
       /**
        * The list of cookie specifications that are allowed to be synchronized to the remote

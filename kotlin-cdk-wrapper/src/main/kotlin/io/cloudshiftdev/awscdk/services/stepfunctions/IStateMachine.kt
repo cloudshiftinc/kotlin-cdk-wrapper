@@ -310,7 +310,7 @@ public interface IStateMachine : IResource, IGrantable {
   public fun stateMachineArn(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.IStateMachine,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.IStateMachine,
   ) : CdkObject(cdkObject), IStateMachine {
     /**
      * Apply the given removal policy to this resource.

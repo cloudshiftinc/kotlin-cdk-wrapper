@@ -119,7 +119,7 @@ public interface CfnEntityTypeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnEntityTypeProps,
+    cdkObject: software.amazon.awscdk.services.frauddetector.CfnEntityTypeProps,
   ) : CdkObject(cdkObject), CfnEntityTypeProps {
     /**
      * The entity type description.

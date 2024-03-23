@@ -317,7 +317,7 @@ public interface HealthCheck {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck,
   ) : CdkObject(cdkObject), HealthCheck {
     /**
      * Indicates whether health checks are enabled.

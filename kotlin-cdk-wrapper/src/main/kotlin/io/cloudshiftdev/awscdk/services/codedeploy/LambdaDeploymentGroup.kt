@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class LambdaDeploymentGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup,
+public open class LambdaDeploymentGroup(
+  cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup,
 ) : Resource(cdkObject), ILambdaDeploymentGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -467,6 +467,7 @@ public open class LambdaDeploymentGroup internal constructor(
         LambdaDeploymentGroup = LambdaDeploymentGroup(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDeploymentGroup):
-        software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup
   }
 }

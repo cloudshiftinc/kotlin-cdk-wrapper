@@ -280,7 +280,7 @@ public interface CfnReplicatorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.msk.CfnReplicatorProps,
+    cdkObject: software.amazon.awscdk.services.msk.CfnReplicatorProps,
   ) : CdkObject(cdkObject), CfnReplicatorProps {
     /**
      * The current version of the MSK replicator.

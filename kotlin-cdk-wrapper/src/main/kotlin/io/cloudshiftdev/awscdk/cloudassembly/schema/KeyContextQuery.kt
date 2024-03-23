@@ -112,7 +112,7 @@ public interface KeyContextQuery {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.KeyContextQuery,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.KeyContextQuery,
   ) : CdkObject(cdkObject), KeyContextQuery {
     /**
      * Query account.

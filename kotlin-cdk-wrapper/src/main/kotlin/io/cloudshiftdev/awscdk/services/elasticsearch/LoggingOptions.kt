@@ -281,7 +281,7 @@ public interface LoggingOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticsearch.LoggingOptions,
+    cdkObject: software.amazon.awscdk.services.elasticsearch.LoggingOptions,
   ) : CdkObject(cdkObject), LoggingOptions {
     /**
      * (deprecated) Specify if Elasticsearch application logging should be set up.

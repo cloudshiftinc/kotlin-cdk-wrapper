@@ -20,8 +20,8 @@ import kotlin.collections.List
  * .build());
  * ```
  */
-public abstract class EventDestination internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.EventDestination,
+public abstract class EventDestination(
+  cdkObject: software.amazon.awscdk.services.ses.EventDestination,
 ) : CdkObject(cdkObject) {
   /**
    * A list of CloudWatch dimensions upon which to categorize your emails.
@@ -39,7 +39,7 @@ public abstract class EventDestination internal constructor(
   public open fun topic(): ITopic? = unwrap(this).getTopic()?.let(ITopic::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.EventDestination,
+    cdkObject: software.amazon.awscdk.services.ses.EventDestination,
   ) : EventDestination(cdkObject)
 
   public companion object {

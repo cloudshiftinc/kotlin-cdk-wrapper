@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html)
  */
-public open class CfnUserPoolGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolGroup,
+public open class CfnUserPoolGroup(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -279,6 +279,7 @@ public open class CfnUserPoolGroup internal constructor(
         CfnUserPoolGroup = CfnUserPoolGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPoolGroup):
-        software.amazon.awscdk.services.cognito.CfnUserPoolGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.CfnUserPoolGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnUserPoolGroup
   }
 }

@@ -300,7 +300,7 @@ public interface ResponseHeadersCorsBehavior {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersCorsBehavior,
+    cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersCorsBehavior,
   ) : CdkObject(cdkObject), ResponseHeadersCorsBehavior {
     /**
      * A Boolean that CloudFront uses as the value for the Access-Control-Allow-Credentials HTTP

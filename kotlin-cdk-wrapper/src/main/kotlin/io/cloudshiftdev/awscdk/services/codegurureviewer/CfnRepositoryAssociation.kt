@@ -62,9 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codegurureviewer-repositoryassociation.html)
  */
-public open class CfnRepositoryAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociation,
+public open class CfnRepositoryAssociation(
+  cdkObject: software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -430,6 +429,7 @@ public open class CfnRepositoryAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnRepositoryAssociation):
         software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociation
   }
 }

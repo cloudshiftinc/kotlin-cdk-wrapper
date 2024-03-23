@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html)
  */
-public open class CfnVPCCidrBlock internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCCidrBlock,
+public open class CfnVPCCidrBlock(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVPCCidrBlock,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -100,7 +100,7 @@ public open class CfnVPCCidrBlock internal constructor(
   }
 
   /**
-   *
+   * The Id of the VPC associated CIDR Block.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -490,6 +490,7 @@ public open class CfnVPCCidrBlock internal constructor(
         CfnVPCCidrBlock = CfnVPCCidrBlock(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCCidrBlock):
-        software.amazon.awscdk.services.ec2.CfnVPCCidrBlock = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVPCCidrBlock = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVPCCidrBlock
   }
 }

@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-vdmattributes.html)
  */
-public open class CfnVdmAttributes internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributes,
+public open class CfnVdmAttributes(
+  cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributes,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnVdmAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -292,7 +292,8 @@ public open class CfnVdmAttributes internal constructor(
         CfnVdmAttributes = CfnVdmAttributes(cdkObject)
 
     internal fun unwrap(wrapped: CfnVdmAttributes):
-        software.amazon.awscdk.services.ses.CfnVdmAttributes = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.CfnVdmAttributes = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.CfnVdmAttributes
   }
 
   /**
@@ -357,8 +358,7 @@ public open class CfnVdmAttributes internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnVdmAttributes.DashboardAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributes.DashboardAttributesProperty,
     ) : CdkObject(cdkObject), DashboardAttributesProperty {
       /**
        * Specifies the status of your VDM engagement metrics collection. Can be one of the
@@ -452,8 +452,7 @@ public open class CfnVdmAttributes internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnVdmAttributes.GuardianAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributes.GuardianAttributesProperty,
     ) : CdkObject(cdkObject), GuardianAttributesProperty {
       /**
        * Specifies the status of your VDM optimized shared delivery. Can be one of the following:.

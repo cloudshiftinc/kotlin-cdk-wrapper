@@ -73,8 +73,7 @@ public interface BitBucketSourceCredentialsProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codebuild.BitBucketSourceCredentialsProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.BitBucketSourceCredentialsProps,
   ) : CdkObject(cdkObject), BitBucketSourceCredentialsProps {
     /**
      * Your BitBucket application password.

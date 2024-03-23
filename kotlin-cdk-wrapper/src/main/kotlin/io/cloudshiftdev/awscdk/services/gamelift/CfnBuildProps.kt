@@ -274,7 +274,7 @@ public interface CfnBuildProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.gamelift.CfnBuildProps,
+    cdkObject: software.amazon.awscdk.services.gamelift.CfnBuildProps,
   ) : CdkObject(cdkObject), CfnBuildProps {
     /**
      * A descriptive label that is associated with a build.

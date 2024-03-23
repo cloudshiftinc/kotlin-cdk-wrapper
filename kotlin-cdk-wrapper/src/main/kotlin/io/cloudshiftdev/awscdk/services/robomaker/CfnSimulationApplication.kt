@@ -62,9 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplication.html)
  */
-public open class CfnSimulationApplication internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.robomaker.CfnSimulationApplication,
+public open class CfnSimulationApplication(
+  cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -602,7 +601,8 @@ public open class CfnSimulationApplication internal constructor(
         CfnSimulationApplication = CfnSimulationApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnSimulationApplication):
-        software.amazon.awscdk.services.robomaker.CfnSimulationApplication = wrapped.cdkObject
+        software.amazon.awscdk.services.robomaker.CfnSimulationApplication = wrapped.cdkObject as
+        software.amazon.awscdk.services.robomaker.CfnSimulationApplication
   }
 
   /**
@@ -679,8 +679,7 @@ public open class CfnSimulationApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty,
+      cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty,
     ) : CdkObject(cdkObject), RenderingEngineProperty {
       /**
        * The name of the rendering engine.
@@ -798,8 +797,7 @@ public open class CfnSimulationApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty,
+      cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty,
     ) : CdkObject(cdkObject), RobotSoftwareSuiteProperty {
       /**
        * The name of the robot software suite.
@@ -922,8 +920,7 @@ public open class CfnSimulationApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SimulationSoftwareSuiteProperty,
+      cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SimulationSoftwareSuiteProperty,
     ) : CdkObject(cdkObject), SimulationSoftwareSuiteProperty {
       /**
        * The name of the simulation software suite.
@@ -1056,8 +1053,7 @@ public open class CfnSimulationApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SourceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SourceConfigProperty,
     ) : CdkObject(cdkObject), SourceConfigProperty {
       /**
        * The target processor architecture for the application.

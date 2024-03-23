@@ -188,7 +188,7 @@ public interface CfnHealthCheckProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheckProps,
+    cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheckProps,
   ) : CdkObject(cdkObject), CfnHealthCheckProps {
     /**
      * A complex type that contains detailed information about one health check.

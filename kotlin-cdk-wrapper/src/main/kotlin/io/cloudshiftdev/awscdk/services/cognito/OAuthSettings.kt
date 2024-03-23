@@ -188,7 +188,7 @@ public interface OAuthSettings {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.OAuthSettings,
+    cdkObject: software.amazon.awscdk.services.cognito.OAuthSettings,
   ) : CdkObject(cdkObject), OAuthSettings {
     /**
      * List of allowed redirect URLs for the identity providers.

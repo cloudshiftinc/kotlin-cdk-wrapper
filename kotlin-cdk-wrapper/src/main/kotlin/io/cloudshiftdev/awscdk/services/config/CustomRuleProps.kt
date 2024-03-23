@@ -164,7 +164,7 @@ public interface CustomRuleProps : RuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.config.CustomRuleProps,
+    cdkObject: software.amazon.awscdk.services.config.CustomRuleProps,
   ) : CdkObject(cdkObject), CustomRuleProps {
     /**
      * A name for the AWS Config rule.

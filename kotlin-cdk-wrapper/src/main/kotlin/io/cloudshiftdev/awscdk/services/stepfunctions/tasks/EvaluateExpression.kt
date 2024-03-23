@@ -50,9 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EvaluateExpression internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EvaluateExpression,
+public open class EvaluateExpression(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EvaluateExpression,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -498,5 +497,6 @@ public open class EvaluateExpression internal constructor(
 
     internal fun unwrap(wrapped: EvaluateExpression):
         software.amazon.awscdk.services.stepfunctions.tasks.EvaluateExpression = wrapped.cdkObject
+        as software.amazon.awscdk.services.stepfunctions.tasks.EvaluateExpression
   }
 }

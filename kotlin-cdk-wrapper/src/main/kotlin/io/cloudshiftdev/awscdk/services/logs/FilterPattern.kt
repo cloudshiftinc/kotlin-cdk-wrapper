@@ -22,8 +22,8 @@ import kotlin.collections.List
  * FilterPattern.numberValue("$.latency", "&gt;", 1000)));
  * ```
  */
-public open class FilterPattern internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.FilterPattern,
+public open class FilterPattern(
+  cdkObject: software.amazon.awscdk.services.logs.FilterPattern,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.logs.FilterPattern()
   )
@@ -87,6 +87,6 @@ public open class FilterPattern internal constructor(
         = FilterPattern(cdkObject)
 
     internal fun unwrap(wrapped: FilterPattern): software.amazon.awscdk.services.logs.FilterPattern
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.logs.FilterPattern
   }
 }

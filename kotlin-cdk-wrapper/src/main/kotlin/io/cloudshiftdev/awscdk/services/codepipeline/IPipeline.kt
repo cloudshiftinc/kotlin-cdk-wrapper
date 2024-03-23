@@ -310,7 +310,7 @@ public interface IPipeline : IResource, INotificationRuleSource {
   public fun pipelineName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.IPipeline,
+    cdkObject: software.amazon.awscdk.services.codepipeline.IPipeline,
   ) : CdkObject(cdkObject), IPipeline {
     /**
      * Apply the given removal policy to this resource.

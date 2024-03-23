@@ -205,7 +205,7 @@ public interface CfnThingGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnThingGroupProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnThingGroupProps,
   ) : CdkObject(cdkObject), CfnThingGroupProps {
     /**
      * The parent thing group name.

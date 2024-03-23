@@ -157,7 +157,7 @@ public interface StageDeploymentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.StageDeploymentProps,
+    cdkObject: software.amazon.awscdk.pipelines.StageDeploymentProps,
   ) : CdkObject(cdkObject), StageDeploymentProps {
     /**
      * Additional steps to run after all of the stacks in the stage.

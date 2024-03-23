@@ -574,7 +574,7 @@ public interface CfnSubnetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetProps,
   ) : CdkObject(cdkObject), CfnSubnetProps {
     /**
      * Indicates whether a network interface created in this subnet receives an IPv6 address. The

@@ -92,8 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html)
  */
-public open class CfnEnvironment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment,
+public open class CfnEnvironment(
+  cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1340,7 +1340,8 @@ public open class CfnEnvironment internal constructor(
         CfnEnvironment = CfnEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironment):
-        software.amazon.awscdk.services.mwaa.CfnEnvironment = wrapped.cdkObject
+        software.amazon.awscdk.services.mwaa.CfnEnvironment = wrapped.cdkObject as
+        software.amazon.awscdk.services.mwaa.CfnEnvironment
   }
 
   /**
@@ -1666,8 +1667,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mwaa.CfnEnvironment.LoggingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment.LoggingConfigurationProperty,
     ) : CdkObject(cdkObject), LoggingConfigurationProperty {
       /**
        * Defines the processing logs sent to CloudWatch Logs and the logging level to send.
@@ -1863,8 +1863,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mwaa.CfnEnvironment.ModuleLoggingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment.ModuleLoggingConfigurationProperty,
     ) : CdkObject(cdkObject), ModuleLoggingConfigurationProperty {
       /**
        * The ARN of the CloudWatch Logs log group for each type of Apache Airflow log type that you
@@ -2054,8 +2053,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty,
     ) : CdkObject(cdkObject), NetworkConfigurationProperty {
       /**
        * A list of one or more security group IDs.

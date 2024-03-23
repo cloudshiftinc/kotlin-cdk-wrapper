@@ -514,7 +514,7 @@ public interface CfnChannelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.medialive.CfnChannelProps,
+    cdkObject: software.amazon.awscdk.services.medialive.CfnChannelProps,
   ) : CdkObject(cdkObject), CfnChannelProps {
     /**
      * Specification of CDI inputs for this channel.

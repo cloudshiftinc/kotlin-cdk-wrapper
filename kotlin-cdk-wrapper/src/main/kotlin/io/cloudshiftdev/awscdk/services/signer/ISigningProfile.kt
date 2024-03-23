@@ -36,7 +36,7 @@ public interface ISigningProfile : IResource {
   public fun signingProfileVersionArn(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.signer.ISigningProfile,
+    cdkObject: software.amazon.awscdk.services.signer.ISigningProfile,
   ) : CdkObject(cdkObject), ISigningProfile {
     /**
      * Apply the given removal policy to this resource.

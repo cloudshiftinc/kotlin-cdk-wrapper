@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html)
  */
-public open class CfnLocationNFS internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS,
+public open class CfnLocationNFS(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -475,7 +475,8 @@ public open class CfnLocationNFS internal constructor(
         CfnLocationNFS = CfnLocationNFS(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationNFS):
-        software.amazon.awscdk.services.datasync.CfnLocationNFS = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnLocationNFS = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationNFS
   }
 
   /**
@@ -574,8 +575,7 @@ public open class CfnLocationNFS internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty,
     ) : CdkObject(cdkObject), MountOptionsProperty {
       /**
        * Specifies the NFS version that you want DataSync to use when mounting your NFS share.
@@ -685,8 +685,7 @@ public open class CfnLocationNFS internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty,
     ) : CdkObject(cdkObject), OnPremConfigProperty {
       /**
        * The Amazon Resource Names (ARNs) of the agents connecting to a transfer location.

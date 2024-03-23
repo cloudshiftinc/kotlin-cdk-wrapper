@@ -199,7 +199,7 @@ public interface FairshareSchedulingPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.FairshareSchedulingPolicyProps,
+    cdkObject: software.amazon.awscdk.services.batch.FairshareSchedulingPolicyProps,
   ) : CdkObject(cdkObject), FairshareSchedulingPolicyProps {
     /**
      * Used to calculate the percentage of the maximum available vCPU to reserve for share

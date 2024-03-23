@@ -25,8 +25,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class JournaldLogDriver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.JournaldLogDriver,
+public open class JournaldLogDriver(
+  cdkObject: software.amazon.awscdk.services.ecs.JournaldLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.ecs.JournaldLogDriver()
   )
@@ -236,6 +236,7 @@ public open class JournaldLogDriver internal constructor(
         JournaldLogDriver = JournaldLogDriver(cdkObject)
 
     internal fun unwrap(wrapped: JournaldLogDriver):
-        software.amazon.awscdk.services.ecs.JournaldLogDriver = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.JournaldLogDriver = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.JournaldLogDriver
   }
 }

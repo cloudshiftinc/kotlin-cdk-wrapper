@@ -32,9 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class UnmanagedComputeEnvironment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment,
+public open class UnmanagedComputeEnvironment(
+  cdkObject: software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment,
 ) : Resource(cdkObject), IUnmanagedComputeEnvironment, IComputeEnvironment {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -257,6 +256,7 @@ public open class UnmanagedComputeEnvironment internal constructor(
         UnmanagedComputeEnvironment = UnmanagedComputeEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: UnmanagedComputeEnvironment):
-        software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment
   }
 }

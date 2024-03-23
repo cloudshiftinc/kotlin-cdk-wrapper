@@ -57,7 +57,7 @@ public interface AuroraClusterEngineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.AuroraClusterEngineProps,
+    cdkObject: software.amazon.awscdk.services.rds.AuroraClusterEngineProps,
   ) : CdkObject(cdkObject), AuroraClusterEngineProps {
     /**
      * The version of the Aurora cluster engine.

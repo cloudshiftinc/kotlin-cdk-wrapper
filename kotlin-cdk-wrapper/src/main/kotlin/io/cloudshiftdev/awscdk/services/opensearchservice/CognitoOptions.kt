@@ -109,7 +109,7 @@ public interface CognitoOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.opensearchservice.CognitoOptions,
+    cdkObject: software.amazon.awscdk.services.opensearchservice.CognitoOptions,
   ) : CdkObject(cdkObject), CognitoOptions {
     /**
      * The Amazon Cognito identity pool ID that you want Amazon OpenSearch Service to use for

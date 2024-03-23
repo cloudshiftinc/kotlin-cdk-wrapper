@@ -178,7 +178,7 @@ public interface CfnSourceApiAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.CfnSourceApiAssociationProps,
+    cdkObject: software.amazon.awscdk.services.appsync.CfnSourceApiAssociationProps,
   ) : CdkObject(cdkObject), CfnSourceApiAssociationProps {
     /**
      * The description field of the association configuration.

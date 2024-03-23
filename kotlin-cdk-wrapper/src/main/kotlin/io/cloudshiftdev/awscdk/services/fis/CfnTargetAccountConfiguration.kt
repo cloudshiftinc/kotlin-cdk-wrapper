@@ -37,9 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-targetaccountconfiguration.html)
  */
-public open class CfnTargetAccountConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.fis.CfnTargetAccountConfiguration,
+public open class CfnTargetAccountConfiguration(
+  cdkObject: software.amazon.awscdk.services.fis.CfnTargetAccountConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -221,6 +220,7 @@ public open class CfnTargetAccountConfiguration internal constructor(
         CfnTargetAccountConfiguration = CfnTargetAccountConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnTargetAccountConfiguration):
-        software.amazon.awscdk.services.fis.CfnTargetAccountConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.fis.CfnTargetAccountConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.fis.CfnTargetAccountConfiguration
   }
 }

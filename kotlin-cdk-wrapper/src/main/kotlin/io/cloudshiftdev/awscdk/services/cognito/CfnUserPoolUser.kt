@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html)
  */
-public open class CfnUserPoolUser internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUser,
+public open class CfnUserPoolUser(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUser,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -806,7 +806,8 @@ public open class CfnUserPoolUser internal constructor(
         CfnUserPoolUser = CfnUserPoolUser(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPoolUser):
-        software.amazon.awscdk.services.cognito.CfnUserPoolUser = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.CfnUserPoolUser = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnUserPoolUser
   }
 
   /**
@@ -882,8 +883,7 @@ public open class CfnUserPoolUser internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolUser.AttributeTypeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUser.AttributeTypeProperty,
     ) : CdkObject(cdkObject), AttributeTypeProperty {
       /**
        * The name of the attribute.

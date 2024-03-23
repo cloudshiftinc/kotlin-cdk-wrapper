@@ -98,7 +98,7 @@ public interface LambdaActionConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.LambdaActionConfig,
+    cdkObject: software.amazon.awscdk.services.ses.LambdaActionConfig,
   ) : CdkObject(cdkObject), LambdaActionConfig {
     /**
      * The Amazon Resource Name (ARN) of the AWS Lambda function.

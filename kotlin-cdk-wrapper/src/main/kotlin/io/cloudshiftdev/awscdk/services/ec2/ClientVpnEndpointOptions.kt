@@ -506,7 +506,7 @@ public interface ClientVpnEndpointOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpointOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpointOptions,
   ) : CdkObject(cdkObject), ClientVpnEndpointOptions {
     /**
      * Whether to authorize all users to the VPC CIDR.

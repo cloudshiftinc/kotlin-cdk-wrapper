@@ -162,7 +162,7 @@ public interface IntelligentTieringConfiguration {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.IntelligentTieringConfiguration,
+    cdkObject: software.amazon.awscdk.services.s3.IntelligentTieringConfiguration,
   ) : CdkObject(cdkObject), IntelligentTieringConfiguration {
     /**
      * When enabled, Intelligent-Tiering will automatically move objects that haven’t been accessed

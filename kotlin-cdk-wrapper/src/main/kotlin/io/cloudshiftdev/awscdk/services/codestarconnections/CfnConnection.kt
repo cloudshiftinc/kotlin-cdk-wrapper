@@ -42,9 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html)
  */
-public open class CfnConnection internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codestarconnections.CfnConnection,
+public open class CfnConnection(
+  cdkObject: software.amazon.awscdk.services.codestarconnections.CfnConnection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -284,6 +283,7 @@ public open class CfnConnection internal constructor(
         CfnConnection = CfnConnection(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnection):
-        software.amazon.awscdk.services.codestarconnections.CfnConnection = wrapped.cdkObject
+        software.amazon.awscdk.services.codestarconnections.CfnConnection = wrapped.cdkObject as
+        software.amazon.awscdk.services.codestarconnections.CfnConnection
   }
 }

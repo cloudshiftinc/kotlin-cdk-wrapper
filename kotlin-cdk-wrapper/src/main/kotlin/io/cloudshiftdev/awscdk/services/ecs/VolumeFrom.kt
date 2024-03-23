@@ -82,7 +82,7 @@ public interface VolumeFrom {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.VolumeFrom,
+    cdkObject: software.amazon.awscdk.services.ecs.VolumeFrom,
   ) : CdkObject(cdkObject), VolumeFrom {
     /**
      * Specifies whether the container has read-only access to the volume.

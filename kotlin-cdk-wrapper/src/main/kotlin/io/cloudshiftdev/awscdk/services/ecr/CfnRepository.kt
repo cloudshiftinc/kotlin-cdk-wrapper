@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html)
  */
-public open class CfnRepository internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.CfnRepository,
+public open class CfnRepository(
+  cdkObject: software.amazon.awscdk.services.ecr.CfnRepository,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecr.CfnRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -712,7 +712,7 @@ public open class CfnRepository internal constructor(
         CfnRepository(cdkObject)
 
     internal fun unwrap(wrapped: CfnRepository): software.amazon.awscdk.services.ecr.CfnRepository =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecr.CfnRepository
   }
 
   /**
@@ -859,8 +859,7 @@ public open class CfnRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty,
     ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
       /**
        * The encryption type to use.
@@ -1002,8 +1001,7 @@ public open class CfnRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty,
     ) : CdkObject(cdkObject), ImageScanningConfigurationProperty {
       /**
        * The setting that determines whether images are scanned after being pushed to a repository.
@@ -1118,8 +1116,7 @@ public open class CfnRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty,
     ) : CdkObject(cdkObject), LifecyclePolicyProperty {
       /**
        * The JSON repository policy text to apply to the repository.

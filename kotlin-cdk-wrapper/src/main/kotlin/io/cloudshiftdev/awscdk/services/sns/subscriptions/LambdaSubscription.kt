@@ -36,9 +36,8 @@ import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesL
  * .build());
  * ```
  */
-public open class LambdaSubscription internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription,
+public open class LambdaSubscription(
+  cdkObject: software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
@@ -162,6 +161,7 @@ public open class LambdaSubscription internal constructor(
         LambdaSubscription = LambdaSubscription(cdkObject)
 
     internal fun unwrap(wrapped: LambdaSubscription):
-        software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription = wrapped.cdkObject
+        software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription = wrapped.cdkObject as
+        software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription
   }
 }

@@ -20,8 +20,8 @@ import kotlin.String
  * ContainerImage ecrImage = EcrImage.fromDockerImageAsset(dockerImageAsset);
  * ```
  */
-public open class EcrImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.EcrImage,
+public open class EcrImage(
+  cdkObject: software.amazon.awscdk.services.ecs.EcrImage,
 ) : ContainerImage(cdkObject) {
   public constructor(repository: IRepository, tagOrDigest: String) :
       this(software.amazon.awscdk.services.ecs.EcrImage(repository.let(IRepository::unwrap),
@@ -52,6 +52,6 @@ public open class EcrImage internal constructor(
         EcrImage(cdkObject)
 
     internal fun unwrap(wrapped: EcrImage): software.amazon.awscdk.services.ecs.EcrImage =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecs.EcrImage
   }
 }

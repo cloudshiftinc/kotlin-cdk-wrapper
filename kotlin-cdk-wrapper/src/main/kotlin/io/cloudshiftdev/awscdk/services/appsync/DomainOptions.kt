@@ -100,7 +100,7 @@ public interface DomainOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.DomainOptions,
+    cdkObject: software.amazon.awscdk.services.appsync.DomainOptions,
   ) : CdkObject(cdkObject), DomainOptions {
     /**
      * The certificate to use with the domain name.

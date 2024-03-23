@@ -84,7 +84,7 @@ public interface LambdaDeploymentConfigProps : BaseDeploymentConfigOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigProps,
+    cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigProps,
   ) : CdkObject(cdkObject), LambdaDeploymentConfigProps {
     /**
      * The physical, human-readable name of the Deployment Configuration.

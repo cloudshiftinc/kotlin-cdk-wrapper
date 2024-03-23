@@ -21,8 +21,8 @@ import kotlin.jvm.JvmName
  * Tokens can be embedded into strings while retaining their original
  * semantics.
  */
-public open class Token internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Token,
+public open class Token(
+  cdkObject: software.amazon.awscdk.Token,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun asAny(`value`: Any): IResolvable =
@@ -58,6 +58,7 @@ public open class Token internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Token): Token = Token(cdkObject)
 
-    internal fun unwrap(wrapped: Token): software.amazon.awscdk.Token = wrapped.cdkObject
+    internal fun unwrap(wrapped: Token): software.amazon.awscdk.Token = wrapped.cdkObject as
+        software.amazon.awscdk.Token
   }
 }

@@ -402,7 +402,7 @@ public interface DestroyOptions : DefaultCdkOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.DestroyOptions,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.DestroyOptions,
   ) : CdkObject(cdkObject), DestroyOptions {
     /**
      * Deploy all stacks.

@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-corenetwork.html)
  */
-public open class CfnCoreNetwork internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork,
+public open class CfnCoreNetwork(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -315,7 +315,8 @@ public open class CfnCoreNetwork internal constructor(
         CfnCoreNetwork = CfnCoreNetwork(cdkObject)
 
     internal fun unwrap(wrapped: CfnCoreNetwork):
-        software.amazon.awscdk.services.networkmanager.CfnCoreNetwork = wrapped.cdkObject
+        software.amazon.awscdk.services.networkmanager.CfnCoreNetwork = wrapped.cdkObject as
+        software.amazon.awscdk.services.networkmanager.CfnCoreNetwork
   }
 
   /**
@@ -423,8 +424,7 @@ public open class CfnCoreNetwork internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty,
     ) : CdkObject(cdkObject), CoreNetworkEdgeProperty {
       /**
        * The ASN of a core network edge.
@@ -585,8 +585,7 @@ public open class CfnCoreNetwork internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty,
     ) : CdkObject(cdkObject), CoreNetworkSegmentProperty {
       /**
        * The Regions where the edges are located.

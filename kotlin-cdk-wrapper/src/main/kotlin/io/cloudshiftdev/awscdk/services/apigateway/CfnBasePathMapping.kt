@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html)
  */
-public open class CfnBasePathMapping internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnBasePathMapping,
+public open class CfnBasePathMapping(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnBasePathMapping,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -248,6 +248,7 @@ public open class CfnBasePathMapping internal constructor(
         CfnBasePathMapping = CfnBasePathMapping(cdkObject)
 
     internal fun unwrap(wrapped: CfnBasePathMapping):
-        software.amazon.awscdk.services.apigateway.CfnBasePathMapping = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CfnBasePathMapping = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnBasePathMapping
   }
 }

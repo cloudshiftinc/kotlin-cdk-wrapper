@@ -19,9 +19,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class UserPoolClientIdentityProvider internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider,
+public open class UserPoolClientIdentityProvider(
+  cdkObject: software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider,
 ) : CdkObject(cdkObject) {
   /**
    * The name of the identity provider as recognized by CloudFormation property
@@ -54,5 +53,6 @@ public open class UserPoolClientIdentityProvider internal constructor(
 
     internal fun unwrap(wrapped: UserPoolClientIdentityProvider):
         software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider = wrapped.cdkObject
+        as software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider
   }
 }

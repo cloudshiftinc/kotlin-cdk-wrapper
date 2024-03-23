@@ -99,7 +99,7 @@ public interface NumberAttributeProps : NumberAttributeConstraints, CustomAttrib
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.NumberAttributeProps,
+    cdkObject: software.amazon.awscdk.services.cognito.NumberAttributeProps,
   ) : CdkObject(cdkObject), NumberAttributeProps {
     /**
      * Maximum value of this attribute.

@@ -110,7 +110,7 @@ public interface CfnStreamKeyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ivs.CfnStreamKeyProps,
+    cdkObject: software.amazon.awscdk.services.ivs.CfnStreamKeyProps,
   ) : CdkObject(cdkObject), CfnStreamKeyProps {
     /**
      * Channel ARN for the stream.

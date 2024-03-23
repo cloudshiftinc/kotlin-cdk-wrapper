@@ -24,7 +24,7 @@ public interface IUserPoolDomain : IResource {
   public fun domainName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.IUserPoolDomain,
+    cdkObject: software.amazon.awscdk.services.cognito.IUserPoolDomain,
   ) : CdkObject(cdkObject), IUserPoolDomain {
     /**
      * Apply the given removal policy to this resource.

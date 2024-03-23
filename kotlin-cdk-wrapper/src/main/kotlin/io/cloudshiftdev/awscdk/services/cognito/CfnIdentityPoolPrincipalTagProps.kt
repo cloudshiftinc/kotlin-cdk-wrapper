@@ -158,8 +158,7 @@ public interface CfnIdentityPoolPrincipalTagProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTagProps,
+    cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTagProps,
   ) : CdkObject(cdkObject), CfnIdentityPoolPrincipalTagProps {
     /**
      * The identity pool that you want to associate with this principal tag map.

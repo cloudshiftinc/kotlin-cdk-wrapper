@@ -31,8 +31,8 @@ import io.cloudshiftdev.awscdk.common.CdkObject
  * proxy.grantConnect(role, "admin");
  * ```
  */
-public open class ProxyTarget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.ProxyTarget,
+public open class ProxyTarget(
+  cdkObject: software.amazon.awscdk.services.rds.ProxyTarget,
 ) : CdkObject(cdkObject) {
   /**
    * Bind this target to the specified database proxy.
@@ -53,6 +53,6 @@ public open class ProxyTarget internal constructor(
         ProxyTarget(cdkObject)
 
     internal fun unwrap(wrapped: ProxyTarget): software.amazon.awscdk.services.rds.ProxyTarget =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.rds.ProxyTarget
   }
 }

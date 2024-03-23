@@ -170,8 +170,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)
  */
-public open class CfnEC2Fleet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet,
+public open class CfnEC2Fleet(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1088,7 +1088,7 @@ public open class CfnEC2Fleet internal constructor(
         CfnEC2Fleet(cdkObject)
 
     internal fun unwrap(wrapped: CfnEC2Fleet): software.amazon.awscdk.services.ec2.CfnEC2Fleet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnEC2Fleet
   }
 
   /**
@@ -1179,8 +1179,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorCountRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorCountRequestProperty,
     ) : CdkObject(cdkObject), AcceleratorCountRequestProperty {
       /**
        * The maximum number of accelerators.
@@ -1303,8 +1302,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty,
     ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBRequestProperty {
       /**
        * The maximum amount of accelerator memory, in MiB.
@@ -1431,8 +1429,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty,
     ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsRequestProperty {
       /**
        * The maximum baseline bandwidth, in Mbps.
@@ -1598,8 +1595,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty,
     ) : CdkObject(cdkObject), CapacityRebalanceProperty {
       /**
        * The replacement strategy to use. Only available for fleets of type `maintain` .
@@ -1748,8 +1744,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty,
     ) : CdkObject(cdkObject), CapacityReservationOptionsRequestProperty {
       /**
        * Indicates whether to use unused Capacity Reservations for fulfilling On-Demand capacity.
@@ -2025,8 +2020,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty,
     ) : CdkObject(cdkObject), FleetLaunchTemplateConfigRequestProperty {
       /**
        * The launch template to use.
@@ -2516,8 +2510,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateOverridesRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateOverridesRequestProperty,
     ) : CdkObject(cdkObject), FleetLaunchTemplateOverridesRequestProperty {
       /**
        * The Availability Zone in which to launch the instances.
@@ -2774,8 +2767,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty,
     ) : CdkObject(cdkObject), FleetLaunchTemplateSpecificationRequestProperty {
       /**
        * The ID of the launch template.
@@ -3179,16 +3171,16 @@ public open class CfnEC2Fleet internal constructor(
      *
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *
-     * To indicate no price protection threshold, specify a high value, such as `999999` .
-     *
      * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
      * is based on the per vCPU or per memory price instead of the per instance price.
      *
      *
      * Only one of `SpotMaxPricePercentageOverLowestPrice` or
      * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify either,
-     * then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter defaults
-     * to `100` .
+     * Amazon EC2 will automatically apply optimal price protection to consistently select from a wide
+     * range of instance types. To indicate no price protection threshold for Spot Instances, meaning
+     * you want to consider all instance types that match your attributes, include one of these
+     * parameters and specify a high value, such as `999999` .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-instancerequirementsrequest.html#cfn-ec2-ec2fleet-instancerequirementsrequest-maxspotpriceaspercentageofoptimalondemandprice)
@@ -3291,8 +3283,6 @@ public open class CfnEC2Fleet internal constructor(
      *
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *
-     * To indicate no price protection threshold, specify a high value, such as `999999` .
-     *
      * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
      * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
      * price.
@@ -3306,8 +3296,10 @@ public open class CfnEC2Fleet internal constructor(
      *
      * Only one of `SpotMaxPricePercentageOverLowestPrice` or
      * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify either,
-     * then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter defaults
-     * to `100` .
+     * Amazon EC2 will automatically apply optimal price protection to consistently select from a wide
+     * range of instance types. To indicate no price protection threshold for Spot Instances, meaning
+     * you want to consider all instance types that match your attributes, include one of these
+     * parameters and specify a high value, such as `999999` .
      *
      *
      * Default: `100`
@@ -3728,16 +3720,16 @@ public open class CfnEC2Fleet internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
        * is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 will automatically apply optimal price protection to consistently select
+       * from a wide range of instance types. To indicate no price protection threshold for Spot
+       * Instances, meaning you want to consider all instance types that match your attributes, include
+       * one of these parameters and specify a high value, such as `999999` .
        */
       public
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number)
@@ -3900,8 +3892,6 @@ public open class CfnEC2Fleet internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
        * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
        * price.
@@ -3915,8 +3905,10 @@ public open class CfnEC2Fleet internal constructor(
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 will automatically apply optimal price protection to consistently select
+       * from a wide range of instance types. To indicate no price protection threshold for Spot
+       * Instances, meaning you want to consider all instance types that match your attributes, include
+       * one of these parameters and specify a high value, such as `999999` .
        *
        *
        * Default: `100`
@@ -4406,16 +4398,16 @@ public open class CfnEC2Fleet internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
        * is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 will automatically apply optimal price protection to consistently select
+       * from a wide range of instance types. To indicate no price protection threshold for Spot
+       * Instances, meaning you want to consider all instance types that match your attributes, include
+       * one of these parameters and specify a high value, such as `999999` .
        */
       override
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
@@ -4607,8 +4599,6 @@ public open class CfnEC2Fleet internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
        * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
        * price.
@@ -4622,8 +4612,10 @@ public open class CfnEC2Fleet internal constructor(
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 will automatically apply optimal price protection to consistently select
+       * from a wide range of instance types. To indicate no price protection threshold for Spot
+       * Instances, meaning you want to consider all instance types that match your attributes, include
+       * one of these parameters and specify a high value, such as `999999` .
        *
        *
        * Default: `100`
@@ -4687,8 +4679,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.InstanceRequirementsRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.InstanceRequirementsRequestProperty,
     ) : CdkObject(cdkObject), InstanceRequirementsRequestProperty {
       /**
        * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) on an
@@ -4939,16 +4930,16 @@ public open class CfnEC2Fleet internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
        * is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 will automatically apply optimal price protection to consistently select
+       * from a wide range of instance types. To indicate no price protection threshold for Spot
+       * Instances, meaning you want to consider all instance types that match your attributes, include
+       * one of these parameters and specify a high value, such as `999999` .
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-instancerequirementsrequest.html#cfn-ec2-ec2fleet-instancerequirementsrequest-maxspotpriceaspercentageofoptimalondemandprice)
@@ -5053,8 +5044,6 @@ public open class CfnEC2Fleet internal constructor(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
        * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
        * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
        * price.
@@ -5068,8 +5057,10 @@ public open class CfnEC2Fleet internal constructor(
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
        * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
+       * either, Amazon EC2 will automatically apply optimal price protection to consistently select
+       * from a wide range of instance types. To indicate no price protection threshold for Spot
+       * Instances, meaning you want to consider all instance types that match your attributes, include
+       * one of these parameters and specify a high value, such as `999999` .
        *
        *
        * Default: `100`
@@ -5208,8 +5199,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MaintenanceStrategiesProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MaintenanceStrategiesProperty,
     ) : CdkObject(cdkObject), MaintenanceStrategiesProperty {
       /**
        * The strategy to use when Amazon EC2 emits a signal that your Spot Instance is at an
@@ -5320,8 +5310,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty,
     ) : CdkObject(cdkObject), MemoryGiBPerVCpuRequestProperty {
       /**
        * The maximum amount of memory per vCPU, in GiB.
@@ -5440,8 +5429,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty,
     ) : CdkObject(cdkObject), MemoryMiBRequestProperty {
       /**
        * The maximum amount of memory, in MiB.
@@ -5572,8 +5560,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkBandwidthGbpsRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkBandwidthGbpsRequestProperty,
     ) : CdkObject(cdkObject), NetworkBandwidthGbpsRequestProperty {
       /**
        * The maximum amount of network bandwidth, in Gbps.
@@ -5696,8 +5683,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty,
     ) : CdkObject(cdkObject), NetworkInterfaceCountRequestProperty {
       /**
        * The maximum number of network interfaces.
@@ -6060,8 +6046,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.OnDemandOptionsRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.OnDemandOptionsRequestProperty,
     ) : CdkObject(cdkObject), OnDemandOptionsRequestProperty {
       /**
        * The strategy that determines the order of the launch template overrides to use in
@@ -6442,7 +6427,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty,
     ) : CdkObject(cdkObject), PlacementProperty {
       /**
        * The affinity setting for the instance on the Dedicated Host.
@@ -6972,8 +6957,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty,
     ) : CdkObject(cdkObject), SpotOptionsRequestProperty {
       /**
        * Indicates how to allocate the target Spot Instance capacity across the Spot Instance pools
@@ -7194,8 +7178,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty,
     ) : CdkObject(cdkObject), TagSpecificationProperty {
       /**
        * The type of resource to tag.
@@ -7383,8 +7366,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty,
     ) : CdkObject(cdkObject), TargetCapacitySpecificationRequestProperty {
       /**
        * The default target capacity type.
@@ -7528,8 +7510,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TotalLocalStorageGBRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TotalLocalStorageGBRequestProperty,
     ) : CdkObject(cdkObject), TotalLocalStorageGBRequestProperty {
       /**
        * The maximum amount of total local storage, in GB.
@@ -7651,8 +7632,7 @@ public open class CfnEC2Fleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty,
     ) : CdkObject(cdkObject), VCpuCountRangeRequestProperty {
       /**
        * The maximum number of vCPUs.

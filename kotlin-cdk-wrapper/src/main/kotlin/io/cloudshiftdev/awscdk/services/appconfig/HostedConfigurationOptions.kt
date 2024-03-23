@@ -225,7 +225,7 @@ public interface HostedConfigurationOptions : ConfigurationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.HostedConfigurationOptions,
+    cdkObject: software.amazon.awscdk.services.appconfig.HostedConfigurationOptions,
   ) : CdkObject(cdkObject), HostedConfigurationOptions {
     /**
      * The content of the hosted configuration.

@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-knowledgebase.html)
  */
-public open class CfnKnowledgeBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase,
+public open class CfnKnowledgeBase(
+  cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -621,7 +621,8 @@ public open class CfnKnowledgeBase internal constructor(
         CfnKnowledgeBase = CfnKnowledgeBase(cdkObject)
 
     internal fun unwrap(wrapped: CfnKnowledgeBase):
-        software.amazon.awscdk.services.wisdom.CfnKnowledgeBase = wrapped.cdkObject
+        software.amazon.awscdk.services.wisdom.CfnKnowledgeBase = wrapped.cdkObject as
+        software.amazon.awscdk.services.wisdom.CfnKnowledgeBase
   }
 
   /**
@@ -882,8 +883,7 @@ public open class CfnKnowledgeBase internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.AppIntegrationsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.AppIntegrationsConfigurationProperty,
     ) : CdkObject(cdkObject), AppIntegrationsConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the AppIntegrations DataIntegration to use for ingesting
@@ -1060,8 +1060,7 @@ public open class CfnKnowledgeBase internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty,
     ) : CdkObject(cdkObject), RenderingConfigurationProperty {
       /**
        * A URI template containing exactly one variable in `${variableName}` format.
@@ -1182,8 +1181,7 @@ public open class CfnKnowledgeBase internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty,
     ) : CdkObject(cdkObject), ServerSideEncryptionConfigurationProperty {
       /**
        * The customer managed key used for encryption.
@@ -1314,8 +1312,7 @@ public open class CfnKnowledgeBase internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty,
     ) : CdkObject(cdkObject), SourceConfigurationProperty {
       /**
        * Configuration information for Amazon AppIntegrations to automatically ingest content.

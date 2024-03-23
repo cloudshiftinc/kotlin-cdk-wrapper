@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html)
  */
-public open class CfnCustomDBEngineVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion,
+public open class CfnCustomDBEngineVersion(
+  cdkObject: software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -533,6 +533,7 @@ public open class CfnCustomDBEngineVersion internal constructor(
         CfnCustomDBEngineVersion = CfnCustomDBEngineVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomDBEngineVersion):
-        software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion
   }
 }

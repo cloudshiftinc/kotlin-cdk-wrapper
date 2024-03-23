@@ -29,8 +29,8 @@ import kotlin.jvm.JvmName
  * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(80));
  * ```
  */
-public abstract class NatProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.NatProvider,
+public abstract class NatProvider(
+  cdkObject: software.amazon.awscdk.services.ec2.NatProvider,
 ) : CdkObject(cdkObject) {
   /**
    * Called by the VPC to configure NAT.
@@ -73,7 +73,7 @@ public abstract class NatProvider internal constructor(
       unwrap(this).getConfiguredGateways().map(GatewayConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.NatProvider,
+    cdkObject: software.amazon.awscdk.services.ec2.NatProvider,
   ) : NatProvider(cdkObject)
 
   public companion object {

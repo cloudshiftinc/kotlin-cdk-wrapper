@@ -48,9 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-readinesscheck.html)
  */
-public open class CfnReadinessCheck internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheck,
+public open class CfnReadinessCheck(
+  cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheck,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -243,6 +242,7 @@ public open class CfnReadinessCheck internal constructor(
 
     internal fun unwrap(wrapped: CfnReadinessCheck):
         software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheck =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheck
   }
 }

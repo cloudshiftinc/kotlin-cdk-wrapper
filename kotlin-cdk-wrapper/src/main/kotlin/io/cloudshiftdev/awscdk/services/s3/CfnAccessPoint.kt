@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html)
  */
-public open class CfnAccessPoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint,
+public open class CfnAccessPoint(
+  cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -481,7 +481,7 @@ public open class CfnAccessPoint internal constructor(
         = CfnAccessPoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessPoint): software.amazon.awscdk.services.s3.CfnAccessPoint
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.s3.CfnAccessPoint
   }
 
   /**
@@ -784,8 +784,7 @@ public open class CfnAccessPoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnAccessPoint.PublicAccessBlockConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint.PublicAccessBlockConfigurationProperty,
     ) : CdkObject(cdkObject), PublicAccessBlockConfigurationProperty {
       /**
        * Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket
@@ -918,8 +917,7 @@ public open class CfnAccessPoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty,
     ) : CdkObject(cdkObject), VpcConfigurationProperty {
       /**
        * If this field is specified, the access point will only allow connections from the specified

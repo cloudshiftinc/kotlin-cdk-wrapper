@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-plan.html)
  */
-public open class CfnPlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan,
+public open class CfnPlan(
+  cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -295,7 +295,7 @@ public open class CfnPlan internal constructor(
         CfnPlan(cdkObject)
 
     internal fun unwrap(wrapped: CfnPlan): software.amazon.awscdk.services.ssmcontacts.CfnPlan =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ssmcontacts.CfnPlan
   }
 
   /**
@@ -374,8 +374,7 @@ public open class CfnPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmcontacts.CfnPlan.ChannelTargetInfoProperty,
+      cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.ChannelTargetInfoProperty,
     ) : CdkObject(cdkObject), ChannelTargetInfoProperty {
       /**
        * The Amazon Resource Name (ARN) of the contact channel.
@@ -501,8 +500,7 @@ public open class CfnPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmcontacts.CfnPlan.ContactTargetInfoProperty,
+      cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.ContactTargetInfoProperty,
     ) : CdkObject(cdkObject), ContactTargetInfoProperty {
       /**
        * The Amazon Resource Name (ARN) of the contact.
@@ -653,7 +651,7 @@ public open class CfnPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.StageProperty,
+      cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.StageProperty,
     ) : CdkObject(cdkObject), StageProperty {
       /**
        * The time to wait until beginning the next stage.
@@ -828,7 +826,7 @@ public open class CfnPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty,
+      cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty,
     ) : CdkObject(cdkObject), TargetsProperty {
       /**
        * Information about the contact channel that Incident Manager engages.

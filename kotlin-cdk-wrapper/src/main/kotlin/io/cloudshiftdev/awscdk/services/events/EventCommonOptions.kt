@@ -173,7 +173,7 @@ public interface EventCommonOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.EventCommonOptions,
+    cdkObject: software.amazon.awscdk.services.events.EventCommonOptions,
   ) : CdkObject(cdkObject), EventCommonOptions {
     /**
      * The scope to use if the source of the rule and its target are in different Stacks (but in the

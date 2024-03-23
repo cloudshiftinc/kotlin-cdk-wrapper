@@ -91,7 +91,7 @@ public interface MachineImageConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.MachineImageConfig,
+    cdkObject: software.amazon.awscdk.services.ec2.MachineImageConfig,
   ) : CdkObject(cdkObject), MachineImageConfig {
     /**
      * The AMI ID of the image to use.

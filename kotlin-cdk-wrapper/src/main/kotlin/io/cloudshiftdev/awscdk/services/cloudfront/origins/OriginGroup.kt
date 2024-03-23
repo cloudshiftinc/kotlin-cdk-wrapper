@@ -35,8 +35,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class OriginGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.origins.OriginGroup,
+public open class OriginGroup(
+  cdkObject: software.amazon.awscdk.services.cloudfront.origins.OriginGroup,
 ) : CdkObject(cdkObject), IOrigin {
   public constructor(props: OriginGroupProps) :
       this(software.amazon.awscdk.services.cloudfront.origins.OriginGroup(props.let(OriginGroupProps::unwrap))
@@ -169,6 +169,7 @@ public open class OriginGroup internal constructor(
         OriginGroup = OriginGroup(cdkObject)
 
     internal fun unwrap(wrapped: OriginGroup):
-        software.amazon.awscdk.services.cloudfront.origins.OriginGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.origins.OriginGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.origins.OriginGroup
   }
 }

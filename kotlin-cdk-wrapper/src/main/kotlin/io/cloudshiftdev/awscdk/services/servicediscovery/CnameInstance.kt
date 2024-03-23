@@ -29,8 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class CnameInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicediscovery.CnameInstance,
+public open class CnameInstance(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.CnameInstance,
 ) : InstanceBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -174,6 +174,7 @@ public open class CnameInstance internal constructor(
         CnameInstance = CnameInstance(cdkObject)
 
     internal fun unwrap(wrapped: CnameInstance):
-        software.amazon.awscdk.services.servicediscovery.CnameInstance = wrapped.cdkObject
+        software.amazon.awscdk.services.servicediscovery.CnameInstance = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicediscovery.CnameInstance
   }
 }

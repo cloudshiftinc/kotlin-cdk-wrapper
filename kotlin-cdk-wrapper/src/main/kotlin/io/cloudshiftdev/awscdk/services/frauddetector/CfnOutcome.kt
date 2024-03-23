@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-outcome.html)
  */
-public open class CfnOutcome internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnOutcome,
+public open class CfnOutcome(
+  cdkObject: software.amazon.awscdk.services.frauddetector.CfnOutcome,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -247,6 +247,7 @@ public open class CfnOutcome internal constructor(
         CfnOutcome = CfnOutcome(cdkObject)
 
     internal fun unwrap(wrapped: CfnOutcome):
-        software.amazon.awscdk.services.frauddetector.CfnOutcome = wrapped.cdkObject
+        software.amazon.awscdk.services.frauddetector.CfnOutcome = wrapped.cdkObject as
+        software.amazon.awscdk.services.frauddetector.CfnOutcome
   }
 }

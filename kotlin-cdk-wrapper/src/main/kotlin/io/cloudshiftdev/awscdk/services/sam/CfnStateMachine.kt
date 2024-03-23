@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html)
  */
-public open class CfnStateMachine internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine,
+public open class CfnStateMachine(
+  cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sam.CfnStateMachine(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -763,7 +763,8 @@ public open class CfnStateMachine internal constructor(
         CfnStateMachine = CfnStateMachine(cdkObject)
 
     internal fun unwrap(wrapped: CfnStateMachine):
-        software.amazon.awscdk.services.sam.CfnStateMachine = wrapped.cdkObject
+        software.amazon.awscdk.services.sam.CfnStateMachine = wrapped.cdkObject as
+        software.amazon.awscdk.services.sam.CfnStateMachine
   }
 
   /**
@@ -851,7 +852,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty,
     ) : CdkObject(cdkObject), ApiEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-method)
@@ -993,8 +994,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty,
     ) : CdkObject(cdkObject), CloudWatchEventEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-eventbusname)
@@ -1086,8 +1086,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty,
     ) : CdkObject(cdkObject), CloudWatchLogsLogGroupProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatchlogsloggroup.html#cfn-serverless-statemachine-cloudwatchlogsloggroup-loggrouparn)
@@ -1219,8 +1218,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.EventBridgeRuleEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.EventBridgeRuleEventProperty,
     ) : CdkObject(cdkObject), EventBridgeRuleEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventbridgeruleevent.html#cfn-serverless-statemachine-eventbridgeruleevent-eventbusname)
@@ -1440,8 +1438,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty,
     ) : CdkObject(cdkObject), EventSourceProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventsource.html#cfn-serverless-statemachine-eventsource-properties)
@@ -1520,8 +1517,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty,
     ) : CdkObject(cdkObject), FunctionSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-functionsampt.html#cfn-serverless-statemachine-functionsampt-functionname)
@@ -1614,8 +1610,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty,
     ) : CdkObject(cdkObject), IAMPolicyDocumentProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-iampolicydocument.html#cfn-serverless-statemachine-iampolicydocument-statement)
@@ -1725,8 +1720,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty,
     ) : CdkObject(cdkObject), LogDestinationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-logdestination.html#cfn-serverless-statemachine-logdestination-cloudwatchlogsloggroup)
@@ -1877,8 +1871,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.LoggingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.LoggingConfigurationProperty,
     ) : CdkObject(cdkObject), LoggingConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-loggingconfiguration.html#cfn-serverless-statemachine-loggingconfiguration-destinations)
@@ -1999,8 +1992,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-s3location.html#cfn-serverless-statemachine-s3location-bucket)
@@ -2166,8 +2158,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.SAMPolicyTemplateProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.SAMPolicyTemplateProperty,
     ) : CdkObject(cdkObject), SAMPolicyTemplateProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-sampolicytemplate.html#cfn-serverless-statemachine-sampolicytemplate-lambdainvokepolicy)
@@ -2266,8 +2257,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.ScheduleEventProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.ScheduleEventProperty,
     ) : CdkObject(cdkObject), ScheduleEventProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-scheduleevent.html#cfn-serverless-statemachine-scheduleevent-input)
@@ -2347,8 +2337,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty,
     ) : CdkObject(cdkObject), StateMachineSAMPTProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-statemachinesampt.html#cfn-serverless-statemachine-statemachinesampt-statemachinename)
@@ -2436,8 +2425,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.TracingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.TracingConfigurationProperty,
     ) : CdkObject(cdkObject), TracingConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-tracingconfiguration.html#cfn-serverless-statemachine-tracingconfiguration-enabled)

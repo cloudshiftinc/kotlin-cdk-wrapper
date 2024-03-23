@@ -9,7 +9,7 @@ public interface IConstruct : IDependable {
   public fun node(): Node
 
   private class Wrapper(
-    override val cdkObject: software.constructs.IConstruct,
+    cdkObject: software.constructs.IConstruct,
   ) : CdkObject(cdkObject), IConstruct {
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
   }

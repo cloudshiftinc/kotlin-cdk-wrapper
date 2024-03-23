@@ -139,8 +139,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-userprofile.html)
  */
-public open class CfnUserProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile,
+public open class CfnUserProfile(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -517,7 +517,8 @@ public open class CfnUserProfile internal constructor(
         CfnUserProfile = CfnUserProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserProfile):
-        software.amazon.awscdk.services.sagemaker.CfnUserProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnUserProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnUserProfile
   }
 
   /**
@@ -653,8 +654,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.CodeEditorAppSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.CodeEditorAppSettingsProperty,
     ) : CdkObject(cdkObject), CodeEditorAppSettingsProperty {
       /**
        * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
@@ -745,8 +745,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.CodeRepositoryProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.CodeRepositoryProperty,
     ) : CdkObject(cdkObject), CodeRepositoryProperty {
       /**
        * The URL of the Git repository.
@@ -865,8 +864,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.CustomFileSystemConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.CustomFileSystemConfigProperty,
     ) : CdkObject(cdkObject), CustomFileSystemConfigProperty {
       /**
        * The settings for a custom Amazon EFS file system.
@@ -995,8 +993,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.CustomImageProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.CustomImageProperty,
     ) : CdkObject(cdkObject), CustomImageProperty {
       /**
        * The name of the AppImageConfig.
@@ -1115,8 +1112,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.CustomPosixUserConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.CustomPosixUserConfigProperty,
     ) : CdkObject(cdkObject), CustomPosixUserConfigProperty {
       /**
        * The POSIX group ID.
@@ -1231,8 +1227,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.DefaultEbsStorageSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.DefaultEbsStorageSettingsProperty,
     ) : CdkObject(cdkObject), DefaultEbsStorageSettingsProperty {
       /**
        * The default size of the EBS storage volume for a private space.
@@ -1358,8 +1353,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.DefaultSpaceStorageSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.DefaultSpaceStorageSettingsProperty,
     ) : CdkObject(cdkObject), DefaultSpaceStorageSettingsProperty {
       /**
        * The default EBS storage settings for a private space.
@@ -1470,8 +1464,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.EFSFileSystemConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.EFSFileSystemConfigProperty,
     ) : CdkObject(cdkObject), EFSFileSystemConfigProperty {
       /**
        * The ID of your Amazon EFS file system.
@@ -1751,8 +1744,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.JupyterLabAppSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.JupyterLabAppSettingsProperty,
     ) : CdkObject(cdkObject), JupyterLabAppSettingsProperty {
       /**
        * A list of Git repositories that SageMaker automatically displays to users for cloning in
@@ -1901,8 +1893,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.JupyterServerAppSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.JupyterServerAppSettingsProperty,
     ) : CdkObject(cdkObject), JupyterServerAppSettingsProperty {
       /**
        * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
@@ -2109,8 +2100,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.KernelGatewayAppSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.KernelGatewayAppSettingsProperty,
     ) : CdkObject(cdkObject), KernelGatewayAppSettingsProperty {
       /**
        * A list of custom SageMaker images that are configured to run as a KernelGateway app.
@@ -2238,8 +2228,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.RStudioServerProAppSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.RStudioServerProAppSettingsProperty,
     ) : CdkObject(cdkObject), RStudioServerProAppSettingsProperty {
       /**
        * Indicates whether the current user has access to the `RStudioServerPro` app.
@@ -2389,8 +2378,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.ResourceSpecProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.ResourceSpecProperty,
     ) : CdkObject(cdkObject), ResourceSpecProperty {
       /**
        * The instance type that the image version runs on.
@@ -2550,8 +2538,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.SharingSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.SharingSettingsProperty,
     ) : CdkObject(cdkObject), SharingSettingsProperty {
       /**
        * Whether to include the notebook cell output when sharing the notebook.
@@ -3332,8 +3319,7 @@ public open class CfnUserProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnUserProfile.UserSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.UserSettingsProperty,
     ) : CdkObject(cdkObject), UserSettingsProperty {
       /**
        * The Code Editor application settings.

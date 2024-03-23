@@ -347,7 +347,7 @@ public interface CfnTrackerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.location.CfnTrackerProps,
+    cdkObject: software.amazon.awscdk.services.location.CfnTrackerProps,
   ) : CdkObject(cdkObject), CfnTrackerProps {
     /**
      * An optional description for the tracker resource.

@@ -113,8 +113,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html)
  */
-public open class CfnWorkGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup,
+public open class CfnWorkGroup(
+  cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -758,7 +758,7 @@ public open class CfnWorkGroup internal constructor(
         = CfnWorkGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkGroup): software.amazon.awscdk.services.athena.CfnWorkGroup
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.athena.CfnWorkGroup
   }
 
   /**
@@ -841,8 +841,7 @@ public open class CfnWorkGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty,
     ) : CdkObject(cdkObject), AclConfigurationProperty {
       /**
        * The Amazon S3 canned ACL that Athena should specify when storing query results.
@@ -938,8 +937,7 @@ public open class CfnWorkGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty,
     ) : CdkObject(cdkObject), CustomerContentEncryptionConfigurationProperty {
       /**
        * The customer managed KMS key that is used to encrypt the user's data stores in Athena.
@@ -1061,8 +1059,7 @@ public open class CfnWorkGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty,
     ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
       /**
        * Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys ( `SSE_S3`
@@ -1199,8 +1196,7 @@ public open class CfnWorkGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.EngineVersionProperty,
+      cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.EngineVersionProperty,
     ) : CdkObject(cdkObject), EngineVersionProperty {
       /**
        * Read only.
@@ -1556,8 +1552,7 @@ public open class CfnWorkGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty,
     ) : CdkObject(cdkObject), ResultConfigurationProperty {
       /**
        * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query
@@ -2135,8 +2130,7 @@ public open class CfnWorkGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationUpdatesProperty,
+      cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationUpdatesProperty,
     ) : CdkObject(cdkObject), ResultConfigurationUpdatesProperty {
       /**
        * The ACL configuration for the query results.
@@ -2747,8 +2741,7 @@ public open class CfnWorkGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty,
     ) : CdkObject(cdkObject), WorkGroupConfigurationProperty {
       /**
        * Specifies a user defined JSON string that is passed to the session engine.
@@ -3362,8 +3355,7 @@ public open class CfnWorkGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationUpdatesProperty,
+      cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationUpdatesProperty,
     ) : CdkObject(cdkObject), WorkGroupConfigurationUpdatesProperty {
       /**
        * Additional Configuration that are passed to Athena Spark Calculations running in this

@@ -88,8 +88,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html)
  */
-public open class CfnSecret internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret,
+public open class CfnSecret(
+  cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.secretsmanager.CfnSecret(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -764,7 +764,8 @@ public open class CfnSecret internal constructor(
         CfnSecret = CfnSecret(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecret):
-        software.amazon.awscdk.services.secretsmanager.CfnSecret = wrapped.cdkObject
+        software.amazon.awscdk.services.secretsmanager.CfnSecret = wrapped.cdkObject as
+        software.amazon.awscdk.services.secretsmanager.CfnSecret
   }
 
   /**
@@ -1154,8 +1155,7 @@ public open class CfnSecret internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.secretsmanager.CfnSecret.GenerateSecretStringProperty,
+      cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret.GenerateSecretStringProperty,
     ) : CdkObject(cdkObject), GenerateSecretStringProperty {
       /**
        * A string of the characters that you don't want in the password.
@@ -1346,8 +1346,7 @@ public open class CfnSecret internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty,
+      cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty,
     ) : CdkObject(cdkObject), ReplicaRegionProperty {
       /**
        * The ARN, key ID, or alias of the KMS key to encrypt the secret.

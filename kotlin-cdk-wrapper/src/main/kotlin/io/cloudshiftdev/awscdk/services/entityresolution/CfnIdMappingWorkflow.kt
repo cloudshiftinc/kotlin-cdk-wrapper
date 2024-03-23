@@ -70,9 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html)
  */
-public open class CfnIdMappingWorkflow internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow,
+public open class CfnIdMappingWorkflow(
+  cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -577,7 +576,8 @@ public open class CfnIdMappingWorkflow internal constructor(
         CfnIdMappingWorkflow = CfnIdMappingWorkflow(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdMappingWorkflow):
-        software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow = wrapped.cdkObject
+        software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow = wrapped.cdkObject as
+        software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow
   }
 
   /**
@@ -697,8 +697,7 @@ public open class CfnIdMappingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingTechniquesProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingTechniquesProperty,
     ) : CdkObject(cdkObject), IdMappingTechniquesProperty {
       /**
        * The type of ID mapping.
@@ -810,8 +809,7 @@ public open class CfnIdMappingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowInputSourceProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowInputSourceProperty,
     ) : CdkObject(cdkObject), IdMappingWorkflowInputSourceProperty {
       /**
        * An AWS Glue table ARN for the input source table.
@@ -931,8 +929,7 @@ public open class CfnIdMappingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty,
     ) : CdkObject(cdkObject), IdMappingWorkflowOutputSourceProperty {
       /**
        * Customer AWS KMS ARN for encryption at rest.
@@ -1031,8 +1028,7 @@ public open class CfnIdMappingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty,
     ) : CdkObject(cdkObject), IntermediateSourceConfigurationProperty {
       /**
        * The Amazon S3 location (bucket and prefix).
@@ -1225,8 +1221,7 @@ public open class CfnIdMappingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty,
     ) : CdkObject(cdkObject), ProviderPropertiesProperty {
       /**
        * The Amazon S3 location that temporarily stores your data while it processes.

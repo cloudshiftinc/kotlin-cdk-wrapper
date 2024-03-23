@@ -15,7 +15,7 @@ import kotlin.String
  */
 public interface IGatewayVpcEndpoint : IVpcEndpoint {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IGatewayVpcEndpoint,
+    cdkObject: software.amazon.awscdk.services.ec2.IGatewayVpcEndpoint,
   ) : CdkObject(cdkObject), IGatewayVpcEndpoint {
     /**
      * Apply the given removal policy to this resource.

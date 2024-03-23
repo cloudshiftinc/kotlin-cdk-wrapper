@@ -295,7 +295,7 @@ public interface CfnQueueProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnQueueProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnQueueProps,
   ) : CdkObject(cdkObject), CfnQueueProps {
     /**
      * The description of the queue.

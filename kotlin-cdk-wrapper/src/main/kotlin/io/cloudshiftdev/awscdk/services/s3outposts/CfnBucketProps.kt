@@ -357,7 +357,7 @@ public interface CfnBucketProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucketProps,
+    cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucketProps,
   ) : CdkObject(cdkObject), CfnBucketProps {
     /**
      * A name for the S3 on Outposts bucket.

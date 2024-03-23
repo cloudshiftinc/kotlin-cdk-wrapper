@@ -25,8 +25,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Specifies a Classic Load Balancer.
  *
- * You can specify the `AvailabilityZones` or `Subnets` property, but not both.
- *
  * If this resource has a public IP address and is also in a VPC that is defined in the same
  * template, you must use the [DependsOn
  * attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
@@ -104,9 +102,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html)
  */
-public open class CfnLoadBalancer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer,
+public open class CfnLoadBalancer(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -214,26 +211,20 @@ public open class CfnLoadBalancer internal constructor(
       unwrap(this).getAttrSourceSecurityGroupOwnerAlias()
 
   /**
-   * The Availability Zones for the load balancer.
-   *
-   * For load balancers in a VPC, specify `Subnets` instead.
+   * The Availability Zones for a load balancer in a default VPC.
    */
   public open fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?:
       emptyList()
 
   /**
-   * The Availability Zones for the load balancer.
-   *
-   * For load balancers in a VPC, specify `Subnets` instead.
+   * The Availability Zones for a load balancer in a default VPC.
    */
   public open fun availabilityZones(`value`: List<String>) {
     unwrap(this).setAvailabilityZones(`value`)
   }
 
   /**
-   * The Availability Zones for the load balancer.
-   *
-   * For load balancers in a VPC, specify `Subnets` instead.
+   * The Availability Zones for a load balancer in a default VPC.
    */
   public open fun availabilityZones(vararg `value`: String): Unit =
       availabilityZones(`value`.toList())
@@ -611,28 +602,28 @@ public open class CfnLoadBalancer internal constructor(
     public fun appCookieStickinessPolicy(vararg appCookieStickinessPolicy: Any)
 
     /**
-     * The Availability Zones for the load balancer. For load balancers in a VPC, specify `Subnets`
-     * instead.
+     * The Availability Zones for a load balancer in a default VPC.
+     *
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
      *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-availabilityzones)
-     * @param availabilityZones The Availability Zones for the load balancer. For load balancers in
-     * a VPC, specify `Subnets` instead. 
+     * @param availabilityZones The Availability Zones for a load balancer in a default VPC. 
      */
     public fun availabilityZones(availabilityZones: List<String>)
 
     /**
-     * The Availability Zones for the load balancer. For load balancers in a VPC, specify `Subnets`
-     * instead.
+     * The Availability Zones for a load balancer in a default VPC.
+     *
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
      *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-availabilityzones)
-     * @param availabilityZones The Availability Zones for the load balancer. For load balancers in
-     * a VPC, specify `Subnets` instead. 
+     * @param availabilityZones The Availability Zones for a load balancer in a default VPC. 
      */
     public fun availabilityZones(vararg availabilityZones: String)
 
@@ -1086,30 +1077,30 @@ public open class CfnLoadBalancer internal constructor(
         appCookieStickinessPolicy(appCookieStickinessPolicy.toList())
 
     /**
-     * The Availability Zones for the load balancer. For load balancers in a VPC, specify `Subnets`
-     * instead.
+     * The Availability Zones for a load balancer in a default VPC.
+     *
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
      *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-availabilityzones)
-     * @param availabilityZones The Availability Zones for the load balancer. For load balancers in
-     * a VPC, specify `Subnets` instead. 
+     * @param availabilityZones The Availability Zones for a load balancer in a default VPC. 
      */
     override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
 
     /**
-     * The Availability Zones for the load balancer. For load balancers in a VPC, specify `Subnets`
-     * instead.
+     * The Availability Zones for a load balancer in a default VPC.
+     *
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
      *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-availabilityzones)
-     * @param availabilityZones The Availability Zones for the load balancer. For load balancers in
-     * a VPC, specify `Subnets` instead. 
+     * @param availabilityZones The Availability Zones for a load balancer in a default VPC. 
      */
     override fun availabilityZones(vararg availabilityZones: String): Unit =
         availabilityZones(availabilityZones.toList())
@@ -1555,7 +1546,8 @@ public open class CfnLoadBalancer internal constructor(
         CfnLoadBalancer = CfnLoadBalancer(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoadBalancer):
-        software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer
   }
 
   /**
@@ -1699,8 +1691,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AccessLoggingPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AccessLoggingPolicyProperty,
     ) : CdkObject(cdkObject), AccessLoggingPolicyProperty {
       /**
        * The interval for publishing the access logs. You can specify an interval of either 5
@@ -1839,8 +1830,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AppCookieStickinessPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AppCookieStickinessPolicyProperty,
     ) : CdkObject(cdkObject), AppCookieStickinessPolicyProperty {
       /**
        * The name of the application cookie used for stickiness.
@@ -1969,8 +1959,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty,
     ) : CdkObject(cdkObject), ConnectionDrainingPolicyProperty {
       /**
        * Specifies whether connection draining is enabled for the load balancer.
@@ -2063,8 +2052,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionSettingsProperty,
     ) : CdkObject(cdkObject), ConnectionSettingsProperty {
       /**
        * The time, in seconds, that the connection is allowed to be idle (no data has been sent over
@@ -2287,8 +2275,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.HealthCheckProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.HealthCheckProperty,
     ) : CdkObject(cdkObject), HealthCheckProperty {
       /**
        * The number of consecutive health checks successes required before moving the instance to
@@ -2456,8 +2443,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty,
     ) : CdkObject(cdkObject), LBCookieStickinessPolicyProperty {
       /**
        * The time period, in seconds, after which the cookie should be considered stale.
@@ -2700,8 +2686,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty,
     ) : CdkObject(cdkObject), ListenersProperty {
       /**
        * The port on which the instance is listening.
@@ -2973,8 +2958,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty,
     ) : CdkObject(cdkObject), PoliciesProperty {
       /**
        * The policy attributes.

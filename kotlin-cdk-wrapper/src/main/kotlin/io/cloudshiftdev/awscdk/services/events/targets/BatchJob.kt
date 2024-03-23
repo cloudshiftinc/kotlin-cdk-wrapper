@@ -63,8 +63,8 @@ import software.constructs.IConstruct as SoftwareConstructsIConstruct
  * .build());
  * ```
  */
-public open class BatchJob internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.targets.BatchJob,
+public open class BatchJob(
+  cdkObject: software.amazon.awscdk.services.events.targets.BatchJob,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(
     jobQueueArn: String,
@@ -344,6 +344,6 @@ public open class BatchJob internal constructor(
         = BatchJob(cdkObject)
 
     internal fun unwrap(wrapped: BatchJob): software.amazon.awscdk.services.events.targets.BatchJob
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.events.targets.BatchJob
   }
 }

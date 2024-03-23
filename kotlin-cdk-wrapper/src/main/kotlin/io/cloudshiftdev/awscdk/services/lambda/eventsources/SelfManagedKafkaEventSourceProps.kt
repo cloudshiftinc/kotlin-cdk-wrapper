@@ -395,8 +395,7 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSourceProps,
+    cdkObject: software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSourceProps,
   ) : CdkObject(cdkObject), SelfManagedKafkaEventSourceProps {
     /**
      * The authentication method for your Kafka cluster.

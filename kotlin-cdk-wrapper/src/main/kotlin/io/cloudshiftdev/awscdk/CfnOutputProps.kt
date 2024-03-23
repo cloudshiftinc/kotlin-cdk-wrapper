@@ -165,7 +165,7 @@ public interface CfnOutputProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnOutputProps,
+    cdkObject: software.amazon.awscdk.CfnOutputProps,
   ) : CdkObject(cdkObject), CfnOutputProps {
     /**
      * A condition to associate with this output value.

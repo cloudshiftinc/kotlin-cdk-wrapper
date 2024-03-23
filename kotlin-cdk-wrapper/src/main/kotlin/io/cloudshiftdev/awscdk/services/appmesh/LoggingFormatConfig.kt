@@ -80,7 +80,7 @@ public interface LoggingFormatConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.LoggingFormatConfig,
+    cdkObject: software.amazon.awscdk.services.appmesh.LoggingFormatConfig,
   ) : CdkObject(cdkObject), LoggingFormatConfig {
     /**
      * CFN configuration for Access Logging Format.

@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html)
  */
-public open class LaunchTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplate,
+public open class LaunchTemplate(
+  cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplate,
 ) : Resource(cdkObject), ILaunchTemplate, IGrantable, IConnectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.LaunchTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -889,6 +889,6 @@ public open class LaunchTemplate internal constructor(
         = LaunchTemplate(cdkObject)
 
     internal fun unwrap(wrapped: LaunchTemplate): software.amazon.awscdk.services.ec2.LaunchTemplate
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.ec2.LaunchTemplate
   }
 }

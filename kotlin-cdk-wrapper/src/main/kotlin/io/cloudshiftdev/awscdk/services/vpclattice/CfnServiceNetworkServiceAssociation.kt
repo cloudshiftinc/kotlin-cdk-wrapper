@@ -60,9 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html)
  */
-public open class CfnServiceNetworkServiceAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation,
+public open class CfnServiceNetworkServiceAssociation(
+  cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -399,7 +398,8 @@ public open class CfnServiceNetworkServiceAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnServiceNetworkServiceAssociation):
         software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation
   }
 
   /**
@@ -476,8 +476,7 @@ public open class CfnServiceNetworkServiceAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation.DnsEntryProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation.DnsEntryProperty,
     ) : CdkObject(cdkObject), DnsEntryProperty {
       /**
        * The domain name of the service.

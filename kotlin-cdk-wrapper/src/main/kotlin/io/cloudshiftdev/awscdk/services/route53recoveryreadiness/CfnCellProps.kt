@@ -136,7 +136,7 @@ public interface CfnCellProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnCellProps,
+    cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnCellProps,
   ) : CdkObject(cdkObject), CfnCellProps {
     /**
      * The name of the cell to create.

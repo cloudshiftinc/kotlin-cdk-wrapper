@@ -94,7 +94,7 @@ public interface SourceApi {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.SourceApi,
+    cdkObject: software.amazon.awscdk.services.appsync.SourceApi,
   ) : CdkObject(cdkObject), SourceApi {
     /**
      * Description of the Source API asssociation.

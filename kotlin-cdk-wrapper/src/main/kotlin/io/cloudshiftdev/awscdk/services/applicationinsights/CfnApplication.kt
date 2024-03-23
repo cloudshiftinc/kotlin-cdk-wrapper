@@ -201,9 +201,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html)
  */
-public open class CfnApplication internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.applicationinsights.CfnApplication,
+public open class CfnApplication(
+  cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -941,7 +940,8 @@ public open class CfnApplication internal constructor(
         CfnApplication = CfnApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplication):
-        software.amazon.awscdk.services.applicationinsights.CfnApplication = wrapped.cdkObject
+        software.amazon.awscdk.services.applicationinsights.CfnApplication = wrapped.cdkObject as
+        software.amazon.awscdk.services.applicationinsights.CfnApplication
   }
 
   /**
@@ -1012,8 +1012,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty,
     ) : CdkObject(cdkObject), AlarmMetricProperty {
       /**
        * The name of the metric to be monitored for the component.
@@ -1121,8 +1120,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmProperty,
     ) : CdkObject(cdkObject), AlarmProperty {
       /**
        * The name of the CloudWatch alarm to be monitored for the component.
@@ -1347,8 +1345,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentConfigurationProperty,
     ) : CdkObject(cdkObject), ComponentConfigurationProperty {
       /**
        * The configuration settings.
@@ -1797,8 +1794,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty,
     ) : CdkObject(cdkObject), ComponentMonitoringSettingProperty {
       /**
        * The ARN of the component.
@@ -2304,8 +2300,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.ConfigurationDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ConfigurationDetailsProperty,
     ) : CdkObject(cdkObject), ConfigurationDetailsProperty {
       /**
        * A list of metrics to monitor for the component.
@@ -2470,8 +2465,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty,
     ) : CdkObject(cdkObject), CustomComponentProperty {
       /**
        * The name of the component.
@@ -2570,8 +2564,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty,
     ) : CdkObject(cdkObject), HAClusterPrometheusExporterProperty {
       /**
        * The target port to which Prometheus sends metrics.
@@ -2772,8 +2765,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty,
     ) : CdkObject(cdkObject), HANAPrometheusExporterProperty {
       /**
        * Designates whether you agree to install the HANA DB client.
@@ -2942,8 +2934,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty,
     ) : CdkObject(cdkObject), JMXPrometheusExporterProperty {
       /**
        * The host and port to connect to through remote JMX.
@@ -3095,8 +3086,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty,
     ) : CdkObject(cdkObject), LogPatternProperty {
       /**
        * A regular expression that defines the log pattern.
@@ -3257,8 +3247,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty,
     ) : CdkObject(cdkObject), LogPatternSetProperty {
       /**
        * A list of objects that define the log patterns that belong to `LogPatternSet` .
@@ -3490,8 +3479,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty,
     ) : CdkObject(cdkObject), LogProperty {
       /**
        * The type of encoding of the logs to be monitored.
@@ -3770,8 +3758,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentConfigurationDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentConfigurationDetailsProperty,
     ) : CdkObject(cdkObject), SubComponentConfigurationDetailsProperty {
       /**
        * A list of metrics to monitor for the component.
@@ -3947,8 +3934,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentTypeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentTypeConfigurationProperty,
     ) : CdkObject(cdkObject), SubComponentTypeConfigurationProperty {
       /**
        * The configuration settings of the sub-components.
@@ -4136,8 +4122,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty,
     ) : CdkObject(cdkObject), WindowsEventProperty {
       /**
        * The levels of event to log.

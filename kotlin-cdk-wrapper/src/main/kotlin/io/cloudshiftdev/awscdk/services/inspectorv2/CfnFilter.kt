@@ -187,8 +187,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html)
  */
-public open class CfnFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter,
+public open class CfnFilter(
+  cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -427,7 +427,7 @@ public open class CfnFilter internal constructor(
         CfnFilter(cdkObject)
 
     internal fun unwrap(wrapped: CfnFilter): software.amazon.awscdk.services.inspectorv2.CfnFilter =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.inspectorv2.CfnFilter
   }
 
   /**
@@ -502,8 +502,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty,
     ) : CdkObject(cdkObject), DateFilterProperty {
       /**
        * A timestamp representing the end of the time period filtered on.
@@ -2067,8 +2066,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.FilterCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.FilterCriteriaProperty,
     ) : CdkObject(cdkObject), FilterCriteriaProperty {
       /**
        * Details of the AWS account IDs used to filter findings.
@@ -2399,8 +2397,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty,
     ) : CdkObject(cdkObject), MapFilterProperty {
       /**
        * The operator to use when comparing values in the filter.
@@ -2514,8 +2511,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty,
     ) : CdkObject(cdkObject), NumberFilterProperty {
       /**
        * The lowest number to be included in the filter.
@@ -2895,8 +2891,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.PackageFilterProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.PackageFilterProperty,
     ) : CdkObject(cdkObject), PackageFilterProperty {
       /**
        * An object that contains details on the package architecture type to filter on.
@@ -3032,8 +3027,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.PortRangeFilterProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.PortRangeFilterProperty,
     ) : CdkObject(cdkObject), PortRangeFilterProperty {
       /**
        * The port number the port range begins at.
@@ -3140,8 +3134,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.StringFilterProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.StringFilterProperty,
     ) : CdkObject(cdkObject), StringFilterProperty {
       /**
        * The operator to use when comparing values in the filter.

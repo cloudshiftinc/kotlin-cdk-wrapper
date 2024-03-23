@@ -101,8 +101,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html)
  */
-public open class CfnGameServerGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup,
+public open class CfnGameServerGroup(
+  cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1054,7 +1054,8 @@ public open class CfnGameServerGroup internal constructor(
         CfnGameServerGroup = CfnGameServerGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnGameServerGroup):
-        software.amazon.awscdk.services.gamelift.CfnGameServerGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.gamelift.CfnGameServerGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.gamelift.CfnGameServerGroup
   }
 
   /**
@@ -1215,8 +1216,7 @@ public open class CfnGameServerGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.AutoScalingPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.AutoScalingPolicyProperty,
     ) : CdkObject(cdkObject), AutoScalingPolicyProperty {
       /**
        * Length of time, in seconds, it takes for a new instance to start new game server processes
@@ -1359,8 +1359,7 @@ public open class CfnGameServerGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.InstanceDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.InstanceDefinitionProperty,
     ) : CdkObject(cdkObject), InstanceDefinitionProperty {
       /**
        * An Amazon EC2 instance type designation.
@@ -1510,8 +1509,7 @@ public open class CfnGameServerGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty,
     ) : CdkObject(cdkObject), LaunchTemplateProperty {
       /**
        * A unique identifier for an existing Amazon EC2 launch template.
@@ -1620,8 +1618,7 @@ public open class CfnGameServerGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty,
     ) : CdkObject(cdkObject), TargetTrackingConfigurationProperty {
       /**
        * Desired value to use with a game server group target-based scaling policy.

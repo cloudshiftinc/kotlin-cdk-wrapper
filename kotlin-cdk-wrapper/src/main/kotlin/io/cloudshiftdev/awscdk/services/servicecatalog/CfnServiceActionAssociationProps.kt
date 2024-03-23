@@ -114,8 +114,7 @@ public interface CfnServiceActionAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociationProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociationProps,
   ) : CdkObject(cdkObject), CfnServiceActionAssociationProps {
     /**
      * The product identifier.

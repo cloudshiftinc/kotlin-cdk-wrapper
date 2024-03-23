@@ -34,9 +34,8 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkListener a
  * .build();
  * ```
  */
-public open class HttpNlbIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration,
+public open class HttpNlbIntegration(
+  cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration,
 ) : HttpRouteIntegration(cdkObject) {
   public constructor(id: String,
       listener: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkListener) :
@@ -203,5 +202,6 @@ public open class HttpNlbIntegration internal constructor(
 
     internal fun unwrap(wrapped: HttpNlbIntegration):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration = wrapped.cdkObject
+        as software.amazon.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration
   }
 }

@@ -193,7 +193,7 @@ public interface ReplicaTableProps : TableOptionsV2 {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.ReplicaTableProps,
+    cdkObject: software.amazon.awscdk.services.dynamodb.ReplicaTableProps,
   ) : CdkObject(cdkObject), ReplicaTableProps {
     /**
      * Whether CloudWatch contributor insights is enabled.

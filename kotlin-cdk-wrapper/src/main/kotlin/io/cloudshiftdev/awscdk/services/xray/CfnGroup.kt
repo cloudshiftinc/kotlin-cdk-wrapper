@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-group.html)
  */
-public open class CfnGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.xray.CfnGroup,
+public open class CfnGroup(
+  cdkObject: software.amazon.awscdk.services.xray.CfnGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -349,7 +349,7 @@ public open class CfnGroup internal constructor(
         CfnGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnGroup): software.amazon.awscdk.services.xray.CfnGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.xray.CfnGroup
   }
 
   /**
@@ -464,8 +464,7 @@ public open class CfnGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.xray.CfnGroup.InsightsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.xray.CfnGroup.InsightsConfigurationProperty,
     ) : CdkObject(cdkObject), InsightsConfigurationProperty {
       /**
        * Set the InsightsEnabled value to true to enable insights or false to disable insights.

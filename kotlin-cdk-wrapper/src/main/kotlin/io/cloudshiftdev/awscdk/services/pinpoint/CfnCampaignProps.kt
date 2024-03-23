@@ -1098,7 +1098,7 @@ public interface CfnCampaignProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaignProps,
+    cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaignProps,
   ) : CdkObject(cdkObject), CfnCampaignProps {
     /**
      * An array of requests that defines additional treatments for the campaign, in addition to the

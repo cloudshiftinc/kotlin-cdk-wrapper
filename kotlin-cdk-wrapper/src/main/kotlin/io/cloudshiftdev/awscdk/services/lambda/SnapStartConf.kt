@@ -18,11 +18,11 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
  * Version version = fn.getCurrentVersion();
  * ```
  */
-public abstract class SnapStartConf internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.SnapStartConf,
+public abstract class SnapStartConf(
+  cdkObject: software.amazon.awscdk.services.lambda.SnapStartConf,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.SnapStartConf,
+    cdkObject: software.amazon.awscdk.services.lambda.SnapStartConf,
   ) : SnapStartConf(cdkObject)
 
   public companion object {

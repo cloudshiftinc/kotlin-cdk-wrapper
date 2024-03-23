@@ -287,7 +287,7 @@ public interface CfnApplicationInstanceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstanceProps,
+    cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstanceProps,
   ) : CdkObject(cdkObject), CfnApplicationInstanceProps {
     /**
      * The ID of an application instance to replace with the new instance.

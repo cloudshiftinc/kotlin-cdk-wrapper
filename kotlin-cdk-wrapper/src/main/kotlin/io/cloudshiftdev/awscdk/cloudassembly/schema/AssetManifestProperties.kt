@@ -98,7 +98,7 @@ public interface AssetManifestProperties : AssetManifestOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties,
   ) : CdkObject(cdkObject), AssetManifestProperties {
     /**
      * SSM parameter where the bootstrap stack version number can be found.

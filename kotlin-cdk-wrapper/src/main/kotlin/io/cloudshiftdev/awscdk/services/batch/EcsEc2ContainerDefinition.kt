@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * ecsJob.grantSubmitJob(user, queue);
  * ```
  */
-public open class EcsEc2ContainerDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition,
+public open class EcsEc2ContainerDefinition(
+  cdkObject: software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IEcsEc2ContainerDefinition, IEcsContainerDefinition
     {
   public constructor(
@@ -652,6 +652,7 @@ public open class EcsEc2ContainerDefinition internal constructor(
         EcsEc2ContainerDefinition = EcsEc2ContainerDefinition(cdkObject)
 
     internal fun unwrap(wrapped: EcsEc2ContainerDefinition):
-        software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition
   }
 }

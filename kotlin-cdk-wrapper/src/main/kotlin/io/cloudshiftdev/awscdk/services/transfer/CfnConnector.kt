@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html)
  */
-public open class CfnConnector internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.transfer.CfnConnector,
+public open class CfnConnector(
+  cdkObject: software.amazon.awscdk.services.transfer.CfnConnector,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -454,7 +454,8 @@ public open class CfnConnector internal constructor(
         CfnConnector = CfnConnector(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnector):
-        software.amazon.awscdk.services.transfer.CfnConnector = wrapped.cdkObject
+        software.amazon.awscdk.services.transfer.CfnConnector = wrapped.cdkObject as
+        software.amazon.awscdk.services.transfer.CfnConnector
   }
 
   /**
@@ -796,8 +797,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty,
     ) : CdkObject(cdkObject), As2ConfigProperty {
       /**
        * Provides Basic authentication support to the AS2 Connectors API.
@@ -1151,8 +1151,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty,
     ) : CdkObject(cdkObject), SftpConfigProperty {
       /**
        * The public portion of the host key, or keys, that are used to identify the external server

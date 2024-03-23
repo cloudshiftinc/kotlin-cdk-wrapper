@@ -64,7 +64,7 @@ public interface TarballImageAssetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecr.assets.TarballImageAssetProps,
+    cdkObject: software.amazon.awscdk.services.ecr.assets.TarballImageAssetProps,
   ) : CdkObject(cdkObject), TarballImageAssetProps {
     /**
      * Absolute path to the tarball.

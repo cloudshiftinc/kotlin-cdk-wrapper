@@ -43,7 +43,7 @@ public interface ISchema {
   public fun bind(api: IGraphqlApi, options: SchemaBindOptions.Builder.() -> Unit): ISchemaConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.ISchema,
+    cdkObject: software.amazon.awscdk.services.appsync.ISchema,
   ) : CdkObject(cdkObject), ISchema {
     /**
      * Binds a schema string to a GraphQlApi.

@@ -57,8 +57,8 @@ import kotlin.String
  * table.grantWriteData(sm);
  * ```
  */
-public open class Errors internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Errors,
+public open class Errors(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Errors,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.stepfunctions.Errors()
   )
@@ -93,6 +93,6 @@ public open class Errors internal constructor(
         Errors(cdkObject)
 
     internal fun unwrap(wrapped: Errors): software.amazon.awscdk.services.stepfunctions.Errors =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.Errors
   }
 }

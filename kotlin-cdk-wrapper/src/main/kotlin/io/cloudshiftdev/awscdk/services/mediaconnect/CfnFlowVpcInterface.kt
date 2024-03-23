@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html)
  */
-public open class CfnFlowVpcInterface internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface,
+public open class CfnFlowVpcInterface(
+  cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -327,6 +327,7 @@ public open class CfnFlowVpcInterface internal constructor(
         CfnFlowVpcInterface = CfnFlowVpcInterface(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlowVpcInterface):
-        software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface = wrapped.cdkObject
+        software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface
   }
 }

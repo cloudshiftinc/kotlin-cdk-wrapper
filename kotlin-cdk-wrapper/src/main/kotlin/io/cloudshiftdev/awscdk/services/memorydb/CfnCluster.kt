@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html)
  */
-public open class CfnCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.memorydb.CfnCluster,
+public open class CfnCluster(
+  cdkObject: software.amazon.awscdk.services.memorydb.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1204,7 +1204,7 @@ public open class CfnCluster internal constructor(
         CfnCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCluster): software.amazon.awscdk.services.memorydb.CfnCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.memorydb.CfnCluster
   }
 
   /**
@@ -1280,7 +1280,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.memorydb.CfnCluster.EndpointProperty,
+      cdkObject: software.amazon.awscdk.services.memorydb.CfnCluster.EndpointProperty,
     ) : CdkObject(cdkObject), EndpointProperty {
       /**
        * The DNS hostname of the node.

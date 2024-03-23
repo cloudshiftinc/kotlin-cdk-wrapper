@@ -580,7 +580,7 @@ public interface CfnClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.msk.CfnClusterProps,
+    cdkObject: software.amazon.awscdk.services.msk.CfnClusterProps,
   ) : CdkObject(cdkObject), CfnClusterProps {
     /**
      * Information about the broker nodes in the cluster.

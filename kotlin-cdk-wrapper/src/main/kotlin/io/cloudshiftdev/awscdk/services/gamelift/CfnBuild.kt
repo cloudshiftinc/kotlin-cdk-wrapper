@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html)
  */
-public open class CfnBuild internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnBuild,
+public open class CfnBuild(
+  cdkObject: software.amazon.awscdk.services.gamelift.CfnBuild,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.gamelift.CfnBuild(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -409,7 +409,7 @@ public open class CfnBuild internal constructor(
         CfnBuild(cdkObject)
 
     internal fun unwrap(wrapped: CfnBuild): software.amazon.awscdk.services.gamelift.CfnBuild =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.gamelift.CfnBuild
   }
 
   /**
@@ -546,8 +546,7 @@ public open class CfnBuild internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnBuild.StorageLocationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnBuild.StorageLocationProperty,
     ) : CdkObject(cdkObject), StorageLocationProperty {
       /**
        * An Amazon S3 bucket identifier. The name of the S3 bucket.

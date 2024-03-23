@@ -443,8 +443,7 @@ public interface AthenaStartQueryExecutionProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.AthenaStartQueryExecutionProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AthenaStartQueryExecutionProps,
   ) : CdkObject(cdkObject), AthenaStartQueryExecutionProps {
     /**
      * Unique string string to ensure idempotence.

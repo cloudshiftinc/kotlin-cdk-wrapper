@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html)
  */
-public open class CfnCollaboration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration,
+public open class CfnCollaboration(
+  cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -694,7 +694,8 @@ public open class CfnCollaboration internal constructor(
         CfnCollaboration = CfnCollaboration(cdkObject)
 
     internal fun unwrap(wrapped: CfnCollaboration):
-        software.amazon.awscdk.services.cleanrooms.CfnCollaboration = wrapped.cdkObject
+        software.amazon.awscdk.services.cleanrooms.CfnCollaboration = wrapped.cdkObject as
+        software.amazon.awscdk.services.cleanrooms.CfnCollaboration
   }
 
   /**
@@ -889,8 +890,7 @@ public open class CfnCollaboration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty,
     ) : CdkObject(cdkObject), DataEncryptionMetadataProperty {
       /**
        * Indicates whether encrypted tables can contain cleartext data ( `TRUE` ) or are to
@@ -1135,8 +1135,7 @@ public open class CfnCollaboration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty,
     ) : CdkObject(cdkObject), MemberSpecificationProperty {
       /**
        * The identifier used to reference members of the collaboration.
@@ -1284,8 +1283,7 @@ public open class CfnCollaboration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty,
     ) : CdkObject(cdkObject), PaymentConfigurationProperty {
       /**
        * The collaboration member's payment responsibilities set by the collaboration creator for
@@ -1427,8 +1425,7 @@ public open class CfnCollaboration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty,
     ) : CdkObject(cdkObject), QueryComputePaymentConfigProperty {
       /**
        * Indicates whether the collaboration creator has configured the collaboration member to pay

@@ -114,7 +114,7 @@ public interface AlbControllerProps : AlbControllerOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.AlbControllerProps,
+    cdkObject: software.amazon.awscdk.services.eks.AlbControllerProps,
   ) : CdkObject(cdkObject), AlbControllerProps {
     /**
      * [disable-awslint:ref-via-interface] Cluster to install the controller onto.

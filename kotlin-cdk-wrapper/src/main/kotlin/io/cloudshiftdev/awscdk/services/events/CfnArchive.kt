@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html)
  */
-public open class CfnArchive internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.CfnArchive,
+public open class CfnArchive(
+  cdkObject: software.amazon.awscdk.services.events.CfnArchive,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -260,6 +260,6 @@ public open class CfnArchive internal constructor(
         CfnArchive(cdkObject)
 
     internal fun unwrap(wrapped: CfnArchive): software.amazon.awscdk.services.events.CfnArchive =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.CfnArchive
   }
 }

@@ -189,7 +189,7 @@ public interface CfnSubscriptionFilterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.CfnSubscriptionFilterProps,
+    cdkObject: software.amazon.awscdk.services.logs.CfnSubscriptionFilterProps,
   ) : CdkObject(cdkObject), CfnSubscriptionFilterProps {
     /**
      * The Amazon Resource Name (ARN) of the destination.

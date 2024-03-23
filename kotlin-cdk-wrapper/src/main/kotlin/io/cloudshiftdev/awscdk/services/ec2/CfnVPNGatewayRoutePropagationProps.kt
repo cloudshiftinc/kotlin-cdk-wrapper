@@ -111,7 +111,7 @@ public interface CfnVPNGatewayRoutePropagationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagationProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagationProps,
   ) : CdkObject(cdkObject), CfnVPNGatewayRoutePropagationProps {
     /**
      * The ID of the route table.

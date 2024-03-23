@@ -91,8 +91,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-httpapi.html)
  */
-public open class CfnHttpApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi,
+public open class CfnHttpApi(
+  cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sam.CfnHttpApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -959,7 +959,7 @@ public open class CfnHttpApi internal constructor(
         CfnHttpApi(cdkObject)
 
     internal fun unwrap(wrapped: CfnHttpApi): software.amazon.awscdk.services.sam.CfnHttpApi =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sam.CfnHttpApi
   }
 
   /**
@@ -1028,8 +1028,7 @@ public open class CfnHttpApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnHttpApi.AccessLogSettingProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.AccessLogSettingProperty,
     ) : CdkObject(cdkObject), AccessLogSettingProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-accesslogsetting.html#cfn-serverless-httpapi-accesslogsetting-destinationarn)
@@ -1256,8 +1255,7 @@ public open class CfnHttpApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnHttpApi.CorsConfigurationObjectProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.CorsConfigurationObjectProperty,
     ) : CdkObject(cdkObject), CorsConfigurationObjectProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-corsconfigurationobject.html#cfn-serverless-httpapi-corsconfigurationobject-allowcredentials)
@@ -1375,7 +1373,7 @@ public open class CfnHttpApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty,
     ) : CdkObject(cdkObject), HttpApiAuthProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapiauth.html#cfn-serverless-httpapi-httpapiauth-authorizers)
@@ -1631,8 +1629,7 @@ public open class CfnHttpApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiDomainConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiDomainConfigurationProperty,
     ) : CdkObject(cdkObject), HttpApiDomainConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapidomainconfiguration.html#cfn-serverless-httpapi-httpapidomainconfiguration-basepath)
@@ -1769,8 +1766,7 @@ public open class CfnHttpApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnHttpApi.MutualTlsAuthenticationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.MutualTlsAuthenticationProperty,
     ) : CdkObject(cdkObject), MutualTlsAuthenticationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-mutualtlsauthentication.html#cfn-serverless-httpapi-mutualtlsauthentication-truststoreuri)
@@ -1947,8 +1943,7 @@ public open class CfnHttpApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty,
     ) : CdkObject(cdkObject), Route53ConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-distributeddomainname)
@@ -2138,7 +2133,7 @@ public open class CfnHttpApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty,
     ) : CdkObject(cdkObject), RouteSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-datatraceenabled)
@@ -2268,7 +2263,7 @@ public open class CfnHttpApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-bucket)

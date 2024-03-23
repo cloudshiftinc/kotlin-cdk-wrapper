@@ -27,8 +27,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class AwsIntegration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.AwsIntegration,
+public open class AwsIntegration(
+  cdkObject: software.amazon.awscdk.services.apigateway.AwsIntegration,
 ) : Integration(cdkObject) {
   public constructor(props: AwsIntegrationProps) :
       this(software.amazon.awscdk.services.apigateway.AwsIntegration(props.let(AwsIntegrationProps::unwrap))
@@ -272,6 +272,7 @@ public open class AwsIntegration internal constructor(
         AwsIntegration = AwsIntegration(cdkObject)
 
     internal fun unwrap(wrapped: AwsIntegration):
-        software.amazon.awscdk.services.apigateway.AwsIntegration = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.AwsIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.AwsIntegration
   }
 }

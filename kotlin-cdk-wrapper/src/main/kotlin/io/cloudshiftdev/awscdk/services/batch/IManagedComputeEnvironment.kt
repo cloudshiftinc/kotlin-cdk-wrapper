@@ -125,7 +125,7 @@ public interface IManagedComputeEnvironment : IComputeEnvironment, IConnectable,
       unwrap(this).getVpcSubnets()?.let(SubnetSelection::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.IManagedComputeEnvironment,
+    cdkObject: software.amazon.awscdk.services.batch.IManagedComputeEnvironment,
   ) : CdkObject(cdkObject), IManagedComputeEnvironment {
     /**
      * Apply the given removal policy to this resource.

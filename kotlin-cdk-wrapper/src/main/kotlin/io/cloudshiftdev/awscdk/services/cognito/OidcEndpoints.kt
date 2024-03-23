@@ -108,7 +108,7 @@ public interface OidcEndpoints {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.OidcEndpoints,
+    cdkObject: software.amazon.awscdk.services.cognito.OidcEndpoints,
   ) : CdkObject(cdkObject), OidcEndpoints {
     /**
      * Authorization endpoint.

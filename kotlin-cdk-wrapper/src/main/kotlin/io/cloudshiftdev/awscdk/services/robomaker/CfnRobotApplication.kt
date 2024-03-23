@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robotapplication.html)
  */
-public open class CfnRobotApplication internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication,
+public open class CfnRobotApplication(
+  cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -412,7 +412,8 @@ public open class CfnRobotApplication internal constructor(
         CfnRobotApplication = CfnRobotApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnRobotApplication):
-        software.amazon.awscdk.services.robomaker.CfnRobotApplication = wrapped.cdkObject
+        software.amazon.awscdk.services.robomaker.CfnRobotApplication = wrapped.cdkObject as
+        software.amazon.awscdk.services.robomaker.CfnRobotApplication
   }
 
   /**
@@ -498,8 +499,7 @@ public open class CfnRobotApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty,
+      cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty,
     ) : CdkObject(cdkObject), RobotSoftwareSuiteProperty {
       /**
        * The name of the robot software suite.
@@ -632,8 +632,7 @@ public open class CfnRobotApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.robomaker.CfnRobotApplication.SourceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication.SourceConfigProperty,
     ) : CdkObject(cdkObject), SourceConfigProperty {
       /**
        * The target processor architecture for the application.

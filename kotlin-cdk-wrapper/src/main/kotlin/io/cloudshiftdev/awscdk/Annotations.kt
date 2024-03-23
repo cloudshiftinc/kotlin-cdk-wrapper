@@ -39,8 +39,8 @@ import kotlin.String
  * }
  * ```
  */
-public open class Annotations internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Annotations,
+public open class Annotations(
+  cdkObject: software.amazon.awscdk.Annotations,
 ) : CdkObject(cdkObject) {
   /**
    * Acknowledge a warning. When a warning is acknowledged for a scope all warnings that match the
@@ -171,6 +171,6 @@ public open class Annotations internal constructor(
         Annotations(cdkObject)
 
     internal fun unwrap(wrapped: Annotations): software.amazon.awscdk.Annotations =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.Annotations
   }
 }

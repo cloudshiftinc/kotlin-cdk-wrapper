@@ -103,8 +103,7 @@ public interface CfnApplicationEntitlementAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociationProps,
+    cdkObject: software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociationProps,
   ) : CdkObject(cdkObject), CfnApplicationEntitlementAssociationProps {
     /**
      * The identifier of the application.

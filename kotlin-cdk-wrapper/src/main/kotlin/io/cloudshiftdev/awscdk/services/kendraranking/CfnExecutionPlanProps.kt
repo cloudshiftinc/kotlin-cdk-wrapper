@@ -225,7 +225,7 @@ public interface CfnExecutionPlanProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kendraranking.CfnExecutionPlanProps,
+    cdkObject: software.amazon.awscdk.services.kendraranking.CfnExecutionPlanProps,
   ) : CdkObject(cdkObject), CfnExecutionPlanProps {
     /**
      * You can set additional capacity units to meet the needs of your rescore execution plan.

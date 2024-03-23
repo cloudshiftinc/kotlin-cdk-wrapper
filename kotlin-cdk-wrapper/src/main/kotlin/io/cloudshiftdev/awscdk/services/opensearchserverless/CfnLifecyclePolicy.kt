@@ -37,9 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-lifecyclepolicy.html)
  */
-public open class CfnLifecyclePolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.opensearchserverless.CfnLifecyclePolicy,
+public open class CfnLifecyclePolicy(
+  cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnLifecyclePolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -225,5 +224,6 @@ public open class CfnLifecyclePolicy internal constructor(
 
     internal fun unwrap(wrapped: CfnLifecyclePolicy):
         software.amazon.awscdk.services.opensearchserverless.CfnLifecyclePolicy = wrapped.cdkObject
+        as software.amazon.awscdk.services.opensearchserverless.CfnLifecyclePolicy
   }
 }

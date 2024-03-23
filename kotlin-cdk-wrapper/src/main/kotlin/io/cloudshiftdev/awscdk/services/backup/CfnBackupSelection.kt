@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupselection.html)
  */
-public open class CfnBackupSelection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection,
+public open class CfnBackupSelection(
+  cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -275,7 +275,8 @@ public open class CfnBackupSelection internal constructor(
         CfnBackupSelection = CfnBackupSelection(cdkObject)
 
     internal fun unwrap(wrapped: CfnBackupSelection):
-        software.amazon.awscdk.services.backup.CfnBackupSelection = wrapped.cdkObject
+        software.amazon.awscdk.services.backup.CfnBackupSelection = wrapped.cdkObject as
+        software.amazon.awscdk.services.backup.CfnBackupSelection
   }
 
   /**
@@ -620,8 +621,7 @@ public open class CfnBackupSelection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupSelection.BackupSelectionResourceTypeProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.BackupSelectionResourceTypeProperty,
     ) : CdkObject(cdkObject), BackupSelectionResourceTypeProperty {
       /**
        * A list of conditions that you define to assign resources to your backup plans using tags.
@@ -797,8 +797,7 @@ public open class CfnBackupSelection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty,
     ) : CdkObject(cdkObject), ConditionParameterProperty {
       /**
        * The key in a key-value pair.
@@ -946,8 +945,7 @@ public open class CfnBackupSelection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionResourceTypeProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionResourceTypeProperty,
     ) : CdkObject(cdkObject), ConditionResourceTypeProperty {
       /**
        * The key in a key-value pair.
@@ -1265,8 +1263,7 @@ public open class CfnBackupSelection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionsProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionsProperty,
     ) : CdkObject(cdkObject), ConditionsProperty {
       /**
        * Filters the values of your tagged resources for only those resources that you tagged with

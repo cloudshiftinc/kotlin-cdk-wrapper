@@ -26,9 +26,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class ApiGatewayv2DomainProperties internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53.targets.ApiGatewayv2DomainProperties,
+public open class ApiGatewayv2DomainProperties(
+  cdkObject: software.amazon.awscdk.services.route53.targets.ApiGatewayv2DomainProperties,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(regionalDomainName: String, regionalHostedZoneId: String) :
       this(software.amazon.awscdk.services.route53.targets.ApiGatewayv2DomainProperties(regionalDomainName,
@@ -61,6 +60,7 @@ public open class ApiGatewayv2DomainProperties internal constructor(
 
     internal fun unwrap(wrapped: ApiGatewayv2DomainProperties):
         software.amazon.awscdk.services.route53.targets.ApiGatewayv2DomainProperties =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.targets.ApiGatewayv2DomainProperties
   }
 }

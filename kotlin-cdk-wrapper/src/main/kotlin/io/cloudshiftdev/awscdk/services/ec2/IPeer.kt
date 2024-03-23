@@ -33,7 +33,7 @@ public interface IPeer : IConnectable {
   public fun uniqueId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IPeer,
+    cdkObject: software.amazon.awscdk.services.ec2.IPeer,
   ) : CdkObject(cdkObject), IPeer {
     /**
      * Whether the rule can be inlined into a SecurityGroup or not.

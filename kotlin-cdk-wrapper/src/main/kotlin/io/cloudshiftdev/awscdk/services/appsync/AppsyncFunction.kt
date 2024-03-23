@@ -29,8 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class AppsyncFunction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunction,
+public open class AppsyncFunction(
+  cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunction,
 ) : Resource(cdkObject), IAppsyncFunction {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -263,6 +263,7 @@ public open class AppsyncFunction internal constructor(
         AppsyncFunction = AppsyncFunction(cdkObject)
 
     internal fun unwrap(wrapped: AppsyncFunction):
-        software.amazon.awscdk.services.appsync.AppsyncFunction = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.AppsyncFunction = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.AppsyncFunction
   }
 }

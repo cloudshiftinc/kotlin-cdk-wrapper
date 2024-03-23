@@ -41,9 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-monitoringsubscription.html)
  */
-public open class CfnMonitoringSubscription internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription,
+public open class CfnMonitoringSubscription(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -230,7 +229,8 @@ public open class CfnMonitoringSubscription internal constructor(
         CfnMonitoringSubscription = CfnMonitoringSubscription(cdkObject)
 
     internal fun unwrap(wrapped: CfnMonitoringSubscription):
-        software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription
   }
 
   /**
@@ -333,8 +333,7 @@ public open class CfnMonitoringSubscription internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty,
     ) : CdkObject(cdkObject), MonitoringSubscriptionProperty {
       /**
        * A subscription configuration for additional CloudWatch metrics.
@@ -421,8 +420,7 @@ public open class CfnMonitoringSubscription internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty,
     ) : CdkObject(cdkObject), RealtimeMetricsSubscriptionConfigProperty {
       /**
        * A flag that indicates whether additional CloudWatch metrics are enabled for a given

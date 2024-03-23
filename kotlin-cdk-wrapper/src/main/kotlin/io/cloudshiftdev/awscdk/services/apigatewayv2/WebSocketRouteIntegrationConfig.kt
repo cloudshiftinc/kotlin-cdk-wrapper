@@ -205,8 +205,7 @@ public interface WebSocketRouteIntegrationConfig {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig,
   ) : CdkObject(cdkObject), WebSocketRouteIntegrationConfig {
     /**
      * Credentials role.

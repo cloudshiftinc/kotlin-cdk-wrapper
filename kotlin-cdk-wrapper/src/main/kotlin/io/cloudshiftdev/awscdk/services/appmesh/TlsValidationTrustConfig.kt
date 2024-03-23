@@ -89,7 +89,7 @@ public interface TlsValidationTrustConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig,
+    cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig,
   ) : CdkObject(cdkObject), TlsValidationTrustConfig {
     /**
      * VirtualNode CFN configuration for client policy's TLS Validation Trust.

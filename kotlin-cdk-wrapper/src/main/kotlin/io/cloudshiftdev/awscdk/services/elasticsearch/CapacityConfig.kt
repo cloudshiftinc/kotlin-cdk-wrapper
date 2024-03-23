@@ -231,7 +231,7 @@ public interface CapacityConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticsearch.CapacityConfig,
+    cdkObject: software.amazon.awscdk.services.elasticsearch.CapacityConfig,
   ) : CdkObject(cdkObject), CapacityConfig {
     /**
      * (deprecated) The instance type for your data nodes, such as `m3.medium.elasticsearch`. For

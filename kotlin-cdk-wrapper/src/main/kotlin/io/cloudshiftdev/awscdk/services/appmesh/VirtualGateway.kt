@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html)
  */
-public open class VirtualGateway internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGateway,
+public open class VirtualGateway(
+  cdkObject: software.amazon.awscdk.services.appmesh.VirtualGateway,
 ) : Resource(cdkObject), IVirtualGateway {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -322,6 +322,7 @@ public open class VirtualGateway internal constructor(
         VirtualGateway = VirtualGateway(cdkObject)
 
     internal fun unwrap(wrapped: VirtualGateway):
-        software.amazon.awscdk.services.appmesh.VirtualGateway = wrapped.cdkObject
+        software.amazon.awscdk.services.appmesh.VirtualGateway = wrapped.cdkObject as
+        software.amazon.awscdk.services.appmesh.VirtualGateway
   }
 }

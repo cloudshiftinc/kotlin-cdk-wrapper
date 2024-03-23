@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-distributed.html)
  */
-public open class DistributedMap internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.DistributedMap,
+public open class DistributedMap(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.DistributedMap,
 ) : MapBase(cdkObject), INextable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.DistributedMap(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -722,6 +722,7 @@ public open class DistributedMap internal constructor(
         DistributedMap = DistributedMap(cdkObject)
 
     internal fun unwrap(wrapped: DistributedMap):
-        software.amazon.awscdk.services.stepfunctions.DistributedMap = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.DistributedMap = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.DistributedMap
   }
 }

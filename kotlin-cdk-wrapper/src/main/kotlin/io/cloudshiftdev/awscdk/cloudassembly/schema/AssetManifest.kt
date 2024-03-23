@@ -153,7 +153,7 @@ public interface AssetManifest {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.AssetManifest,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.AssetManifest,
   ) : CdkObject(cdkObject), AssetManifest {
     /**
      * The Docker image assets in this manifest.

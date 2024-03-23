@@ -179,7 +179,7 @@ public interface CfnSchemaProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eventschemas.CfnSchemaProps,
+    cdkObject: software.amazon.awscdk.services.eventschemas.CfnSchemaProps,
   ) : CdkObject(cdkObject), CfnSchemaProps {
     /**
      * The source of the schema definition.

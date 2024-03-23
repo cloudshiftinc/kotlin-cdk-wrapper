@@ -465,7 +465,7 @@ public interface CfnDomainConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfigurationProps,
   ) : CdkObject(cdkObject), CfnDomainConfigurationProps {
     /**
      * An object that specifies the authorization service for a domain.

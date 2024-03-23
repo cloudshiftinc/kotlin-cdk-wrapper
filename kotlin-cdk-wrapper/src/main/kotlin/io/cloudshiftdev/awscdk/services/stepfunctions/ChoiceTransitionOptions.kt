@@ -62,7 +62,7 @@ public interface ChoiceTransitionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions,
   ) : CdkObject(cdkObject), ChoiceTransitionOptions {
     /**
      * An optional description for the choice transition.

@@ -103,7 +103,7 @@ public interface CachingConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.CachingConfig,
+    cdkObject: software.amazon.awscdk.services.appsync.CachingConfig,
   ) : CdkObject(cdkObject), CachingConfig {
     /**
      * The caching keys for a resolver that has caching enabled.

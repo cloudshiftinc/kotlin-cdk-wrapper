@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-capability.html)
  */
-public open class CfnCapability internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability,
+public open class CfnCapability(
+  cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -485,7 +485,7 @@ public open class CfnCapability internal constructor(
         = CfnCapability(cdkObject)
 
     internal fun unwrap(wrapped: CfnCapability): software.amazon.awscdk.services.b2bi.CfnCapability
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.b2bi.CfnCapability
   }
 
   /**
@@ -590,8 +590,7 @@ public open class CfnCapability internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.b2bi.CfnCapability.CapabilityConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.CapabilityConfigurationProperty,
     ) : CdkObject(cdkObject), CapabilityConfigurationProperty {
       /**
        * An EDI (electronic data interchange) configuration object.
@@ -846,8 +845,7 @@ public open class CfnCapability internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.b2bi.CfnCapability.EdiConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.EdiConfigurationProperty,
     ) : CdkObject(cdkObject), EdiConfigurationProperty {
       /**
        * Contains the Amazon S3 bucket and prefix for the location of the input file, which is
@@ -1006,7 +1004,7 @@ public open class CfnCapability internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.EdiTypeProperty,
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.EdiTypeProperty,
     ) : CdkObject(cdkObject), EdiTypeProperty {
       /**
        * Returns the details for the EDI standard that is being used for the transformer.
@@ -1111,7 +1109,7 @@ public open class CfnCapability internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * Specifies the name of the Amazon S3 bucket.
@@ -1226,7 +1224,7 @@ public open class CfnCapability internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty,
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty,
     ) : CdkObject(cdkObject), X12DetailsProperty {
       /**
        * Returns an enumerated type where each value identifies an X12 transaction set.

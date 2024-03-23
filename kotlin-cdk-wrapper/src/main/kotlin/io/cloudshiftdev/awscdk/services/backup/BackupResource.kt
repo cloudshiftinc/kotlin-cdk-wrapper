@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class BackupResource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backup.BackupResource,
+public open class BackupResource(
+  cdkObject: software.amazon.awscdk.services.backup.BackupResource,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.backup.BackupResource()
   )
@@ -228,6 +228,7 @@ public open class BackupResource internal constructor(
         BackupResource = BackupResource(cdkObject)
 
     internal fun unwrap(wrapped: BackupResource):
-        software.amazon.awscdk.services.backup.BackupResource = wrapped.cdkObject
+        software.amazon.awscdk.services.backup.BackupResource = wrapped.cdkObject as
+        software.amazon.awscdk.services.backup.BackupResource
   }
 }

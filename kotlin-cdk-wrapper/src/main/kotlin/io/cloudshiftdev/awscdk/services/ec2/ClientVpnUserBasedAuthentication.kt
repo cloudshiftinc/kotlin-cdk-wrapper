@@ -27,9 +27,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public abstract class ClientVpnUserBasedAuthentication internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication,
+public abstract class ClientVpnUserBasedAuthentication(
+  cdkObject: software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication,
 ) : CdkObject(cdkObject) {
   /**
    * Renders the user based authentication.
@@ -37,7 +36,7 @@ public abstract class ClientVpnUserBasedAuthentication internal constructor(
   public open fun render(): Any = unwrap(this).render()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication,
+    cdkObject: software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication,
   ) : ClientVpnUserBasedAuthentication(cdkObject)
 
   public companion object {

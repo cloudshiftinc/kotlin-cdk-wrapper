@@ -73,8 +73,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html)
  */
-public open class CfnFindingsFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter,
+public open class CfnFindingsFilter(
+  cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -475,7 +475,8 @@ public open class CfnFindingsFilter internal constructor(
         CfnFindingsFilter = CfnFindingsFilter(cdkObject)
 
     internal fun unwrap(wrapped: CfnFindingsFilter):
-        software.amazon.awscdk.services.macie.CfnFindingsFilter = wrapped.cdkObject
+        software.amazon.awscdk.services.macie.CfnFindingsFilter = wrapped.cdkObject as
+        software.amazon.awscdk.services.macie.CfnFindingsFilter
   }
 
   /**
@@ -681,8 +682,7 @@ public open class CfnFindingsFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.macie.CfnFindingsFilter.CriterionAdditionalPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter.CriterionAdditionalPropertiesProperty,
     ) : CdkObject(cdkObject), CriterionAdditionalPropertiesProperty {
       /**
        * The value for the specified property matches (equals) the specified value.
@@ -835,8 +835,7 @@ public open class CfnFindingsFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingCriteriaProperty,
     ) : CdkObject(cdkObject), FindingCriteriaProperty {
       /**
        * Specifies a condition that defines the property, operator, and one or more values to use to
@@ -934,8 +933,7 @@ public open class CfnFindingsFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingsFilterListItemProperty,
+      cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingsFilterListItemProperty,
     ) : CdkObject(cdkObject), FindingsFilterListItemProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-findingsfilterlistitem.html#cfn-macie-findingsfilter-findingsfilterlistitem-id)

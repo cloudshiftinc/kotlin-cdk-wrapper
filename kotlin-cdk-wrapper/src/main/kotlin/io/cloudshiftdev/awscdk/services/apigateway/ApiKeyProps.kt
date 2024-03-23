@@ -364,7 +364,7 @@ public interface ApiKeyProps : ApiKeyOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.ApiKeyProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.ApiKeyProps,
   ) : CdkObject(cdkObject), ApiKeyProps {
     /**
      * A name for the API key.

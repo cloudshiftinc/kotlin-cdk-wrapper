@@ -24,8 +24,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class Spacer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Spacer,
+public open class Spacer(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.Spacer,
 ) : CdkObject(cdkObject), IWidget {
   public constructor() : this(software.amazon.awscdk.services.cloudwatch.Spacer()
   )
@@ -125,6 +125,6 @@ public open class Spacer internal constructor(
         Spacer(cdkObject)
 
     internal fun unwrap(wrapped: Spacer): software.amazon.awscdk.services.cloudwatch.Spacer =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudwatch.Spacer
   }
 }

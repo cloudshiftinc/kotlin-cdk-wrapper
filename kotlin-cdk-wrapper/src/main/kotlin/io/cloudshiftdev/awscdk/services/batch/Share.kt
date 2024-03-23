@@ -125,7 +125,7 @@ public interface Share {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.Share,
+    cdkObject: software.amazon.awscdk.services.batch.Share,
   ) : CdkObject(cdkObject), Share {
     /**
      * The identifier of this Share.

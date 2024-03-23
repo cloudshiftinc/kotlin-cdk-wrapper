@@ -17,8 +17,8 @@ import kotlin.String
  * Assign assign = new Assign("attr", "arg");
  * ```
  */
-public open class Assign internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.Assign,
+public open class Assign(
+  cdkObject: software.amazon.awscdk.services.appsync.Assign,
 ) : CdkObject(cdkObject) {
   public constructor(attr: String, arg: String) :
       this(software.amazon.awscdk.services.appsync.Assign(attr, arg)
@@ -41,6 +41,6 @@ public open class Assign internal constructor(
         Assign(cdkObject)
 
     internal fun unwrap(wrapped: Assign): software.amazon.awscdk.services.appsync.Assign =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.Assign
   }
 }

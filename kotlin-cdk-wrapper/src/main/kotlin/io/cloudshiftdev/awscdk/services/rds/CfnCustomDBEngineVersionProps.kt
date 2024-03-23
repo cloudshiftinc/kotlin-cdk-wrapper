@@ -384,7 +384,7 @@ public interface CfnCustomDBEngineVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnCustomDBEngineVersionProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnCustomDBEngineVersionProps,
   ) : CdkObject(cdkObject), CfnCustomDBEngineVersionProps {
     /**
      * The name of an Amazon S3 bucket that contains database installation files for your CEV.

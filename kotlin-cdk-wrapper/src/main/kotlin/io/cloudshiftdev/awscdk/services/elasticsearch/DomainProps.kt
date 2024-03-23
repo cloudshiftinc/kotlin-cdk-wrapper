@@ -985,7 +985,7 @@ public interface DomainProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticsearch.DomainProps,
+    cdkObject: software.amazon.awscdk.services.elasticsearch.DomainProps,
   ) : CdkObject(cdkObject), DomainProps {
     /**
      * (deprecated) Domain Access policies.

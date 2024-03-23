@@ -175,7 +175,7 @@ public interface CfnDBSecurityGroupIngressProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnDBSecurityGroupIngressProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnDBSecurityGroupIngressProps,
   ) : CdkObject(cdkObject), CfnDBSecurityGroupIngressProps {
     /**
      * The IP range to authorize.

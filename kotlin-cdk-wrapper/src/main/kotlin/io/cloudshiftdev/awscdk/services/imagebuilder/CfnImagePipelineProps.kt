@@ -518,7 +518,7 @@ public interface CfnImagePipelineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipelineProps,
+    cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipelineProps,
   ) : CdkObject(cdkObject), CfnImagePipelineProps {
     /**
      * The Amazon Resource Name (ARN) of the container recipe that is used for this pipeline.

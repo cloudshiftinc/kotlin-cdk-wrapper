@@ -293,8 +293,7 @@ public interface CfnStackSetConstraintProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraintProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraintProps,
   ) : CdkObject(cdkObject), CfnStackSetConstraintProps {
     /**
      * The language code.

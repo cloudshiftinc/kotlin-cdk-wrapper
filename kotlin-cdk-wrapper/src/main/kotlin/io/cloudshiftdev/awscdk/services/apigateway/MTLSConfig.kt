@@ -100,7 +100,7 @@ public interface MTLSConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.MTLSConfig,
+    cdkObject: software.amazon.awscdk.services.apigateway.MTLSConfig,
   ) : CdkObject(cdkObject), MTLSConfig {
     /**
      * The bucket that the trust store is hosted in.

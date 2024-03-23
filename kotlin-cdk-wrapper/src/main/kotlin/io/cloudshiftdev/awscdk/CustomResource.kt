@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class CustomResource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CustomResource,
+public open class CustomResource(
+  cdkObject: software.amazon.awscdk.CustomResource,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -337,6 +337,6 @@ public open class CustomResource internal constructor(
         CustomResource(cdkObject)
 
     internal fun unwrap(wrapped: CustomResource): software.amazon.awscdk.CustomResource =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.CustomResource
   }
 }

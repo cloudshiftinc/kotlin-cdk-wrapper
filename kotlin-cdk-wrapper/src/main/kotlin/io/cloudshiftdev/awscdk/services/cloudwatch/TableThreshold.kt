@@ -21,8 +21,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class TableThreshold internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.TableThreshold,
+public open class TableThreshold(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.TableThreshold,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -60,6 +60,7 @@ public open class TableThreshold internal constructor(
         TableThreshold = TableThreshold(cdkObject)
 
     internal fun unwrap(wrapped: TableThreshold):
-        software.amazon.awscdk.services.cloudwatch.TableThreshold = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.TableThreshold = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.TableThreshold
   }
 }

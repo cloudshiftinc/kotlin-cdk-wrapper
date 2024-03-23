@@ -55,9 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationaggregator.html)
  */
-public open class CfnConfigurationAggregator internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.config.CfnConfigurationAggregator,
+public open class CfnConfigurationAggregator(
+  cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.config.CfnConfigurationAggregator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -399,7 +398,8 @@ public open class CfnConfigurationAggregator internal constructor(
         CfnConfigurationAggregator = CfnConfigurationAggregator(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationAggregator):
-        software.amazon.awscdk.services.config.CfnConfigurationAggregator = wrapped.cdkObject
+        software.amazon.awscdk.services.config.CfnConfigurationAggregator = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnConfigurationAggregator
   }
 
   /**
@@ -530,8 +530,7 @@ public open class CfnConfigurationAggregator internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty,
     ) : CdkObject(cdkObject), AccountAggregationSourceProperty {
       /**
        * The 12-digit account ID of the account being aggregated.
@@ -695,8 +694,7 @@ public open class CfnConfigurationAggregator internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty,
     ) : CdkObject(cdkObject), OrganizationAggregationSourceProperty {
       /**
        * If true, aggregate existing AWS Config regions and future regions.

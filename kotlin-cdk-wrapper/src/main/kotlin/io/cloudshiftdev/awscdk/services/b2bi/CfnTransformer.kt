@@ -44,7 +44,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .name("name")
  * .status("status")
  * // the properties below are optional
- * .modifiedAt("modifiedAt")
  * .sampleDocument("sampleDocument")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -55,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html)
  */
-public open class CfnTransformer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer,
+public open class CfnTransformer(
+  cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -82,7 +81,8 @@ public open class CfnTransformer internal constructor(
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
   /**
-   *
+   * Returns a timestamp representing the date and time for the most recent change for the
+   * transformer object.
    */
   public open fun attrModifiedAt(): String = unwrap(this).getAttrModifiedAt()
 
@@ -164,20 +164,6 @@ public open class CfnTransformer internal constructor(
    */
   public open fun mappingTemplate(`value`: String) {
     unwrap(this).setMappingTemplate(`value`)
-  }
-
-  /**
-   * Returns a timestamp representing the date and time for the most recent change for the
-   * transformer object.
-   */
-  public open fun modifiedAt(): String? = unwrap(this).getModifiedAt()
-
-  /**
-   * Returns a timestamp representing the date and time for the most recent change for the
-   * transformer object.
-   */
-  public open fun modifiedAt(`value`: String) {
-    unwrap(this).setModifiedAt(`value`)
   }
 
   /**
@@ -297,16 +283,6 @@ public open class CfnTransformer internal constructor(
      * for processing the EDI data. 
      */
     public fun mappingTemplate(mappingTemplate: String)
-
-    /**
-     * Returns a timestamp representing the date and time for the most recent change for the
-     * transformer object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-modifiedat)
-     * @param modifiedAt Returns a timestamp representing the date and time for the most recent
-     * change for the transformer object. 
-     */
-    public fun modifiedAt(modifiedAt: String)
 
     /**
      * Returns the descriptive name for the transformer.
@@ -433,18 +409,6 @@ public open class CfnTransformer internal constructor(
     }
 
     /**
-     * Returns a timestamp representing the date and time for the most recent change for the
-     * transformer object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-modifiedat)
-     * @param modifiedAt Returns a timestamp representing the date and time for the most recent
-     * change for the transformer object. 
-     */
-    override fun modifiedAt(modifiedAt: String) {
-      cdkBuilder.modifiedAt(modifiedAt)
-    }
-
-    /**
      * Returns the descriptive name for the transformer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-name)
@@ -521,7 +485,8 @@ public open class CfnTransformer internal constructor(
         CfnTransformer = CfnTransformer(cdkObject)
 
     internal fun unwrap(wrapped: CfnTransformer):
-        software.amazon.awscdk.services.b2bi.CfnTransformer = wrapped.cdkObject
+        software.amazon.awscdk.services.b2bi.CfnTransformer = wrapped.cdkObject as
+        software.amazon.awscdk.services.b2bi.CfnTransformer
   }
 
   /**
@@ -630,7 +595,7 @@ public open class CfnTransformer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty,
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty,
     ) : CdkObject(cdkObject), EdiTypeProperty {
       /**
        * Returns the details for the EDI standard that is being used for the transformer.
@@ -750,8 +715,7 @@ public open class CfnTransformer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty,
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty,
     ) : CdkObject(cdkObject), X12DetailsProperty {
       /**
        * Returns an enumerated type where each value identifies an X12 transaction set.

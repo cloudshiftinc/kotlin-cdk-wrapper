@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html)
  */
-public open class CfnParameter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnParameter,
+public open class CfnParameter(
+  cdkObject: software.amazon.awscdk.services.ssm.CfnParameter,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -305,11 +305,6 @@ public open class CfnParameter internal constructor(
     /**
      * The type of parameter.
      *
-     *
-     * Although `SecureString` is included in the list of valid values, AWS CloudFormation does
-     * *not* currently support creating `SecureString` parameters.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-type)
      * @param type The type of parameter. 
      */
@@ -433,11 +428,6 @@ public open class CfnParameter internal constructor(
     /**
      * The type of parameter.
      *
-     *
-     * Although `SecureString` is included in the list of valid values, AWS CloudFormation does
-     * *not* currently support creating `SecureString` parameters.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-type)
      * @param type The type of parameter. 
      */
@@ -480,6 +470,6 @@ public open class CfnParameter internal constructor(
         CfnParameter(cdkObject)
 
     internal fun unwrap(wrapped: CfnParameter): software.amazon.awscdk.services.ssm.CfnParameter =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ssm.CfnParameter
   }
 }

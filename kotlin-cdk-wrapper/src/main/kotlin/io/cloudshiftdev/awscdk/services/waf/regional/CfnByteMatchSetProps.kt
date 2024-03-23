@@ -136,7 +136,7 @@ public interface CfnByteMatchSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnByteMatchSetProps,
+    cdkObject: software.amazon.awscdk.services.waf.regional.CfnByteMatchSetProps,
   ) : CdkObject(cdkObject), CfnByteMatchSetProps {
     /**
      * Specifies the bytes (typically a string that corresponds with ASCII characters) that you want

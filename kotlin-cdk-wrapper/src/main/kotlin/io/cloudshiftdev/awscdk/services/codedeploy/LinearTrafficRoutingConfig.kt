@@ -79,7 +79,7 @@ public interface LinearTrafficRoutingConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig,
+    cdkObject: software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig,
   ) : CdkObject(cdkObject), LinearTrafficRoutingConfig {
     /**
      * The number of minutes between each incremental traffic shift of a `TimeBasedLinear`

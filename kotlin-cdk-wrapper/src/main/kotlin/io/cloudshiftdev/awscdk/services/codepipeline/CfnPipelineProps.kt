@@ -732,7 +732,7 @@ public interface CfnPipelineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipelineProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipelineProps,
   ) : CdkObject(cdkObject), CfnPipelineProps {
     /**
      * The S3 bucket where artifacts for the pipeline are stored.

@@ -160,7 +160,7 @@ public interface CfnDBSubnetGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnDBSubnetGroupProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnDBSubnetGroupProps,
   ) : CdkObject(cdkObject), CfnDBSubnetGroupProps {
     /**
      * The description for the DB subnet group.

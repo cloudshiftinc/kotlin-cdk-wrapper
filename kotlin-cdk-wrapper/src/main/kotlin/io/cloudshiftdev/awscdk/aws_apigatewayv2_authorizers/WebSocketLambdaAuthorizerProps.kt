@@ -108,8 +108,7 @@ public interface WebSocketLambdaAuthorizerProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizerProps,
+    cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizerProps,
   ) : CdkObject(cdkObject), WebSocketLambdaAuthorizerProps {
     /**
      * The name of the authorizer.

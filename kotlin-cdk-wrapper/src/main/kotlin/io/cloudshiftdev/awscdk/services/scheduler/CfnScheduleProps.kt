@@ -485,7 +485,7 @@ public interface CfnScheduleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.scheduler.CfnScheduleProps,
+    cdkObject: software.amazon.awscdk.services.scheduler.CfnScheduleProps,
   ) : CdkObject(cdkObject), CfnScheduleProps {
     /**
      * The description you specify for the schedule.

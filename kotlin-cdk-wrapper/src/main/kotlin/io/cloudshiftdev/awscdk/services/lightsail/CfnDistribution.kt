@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-distribution.html)
  */
-public open class CfnDistribution internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution,
+public open class CfnDistribution(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -809,7 +809,8 @@ public open class CfnDistribution internal constructor(
         CfnDistribution = CfnDistribution(cdkObject)
 
     internal fun unwrap(wrapped: CfnDistribution):
-        software.amazon.awscdk.services.lightsail.CfnDistribution = wrapped.cdkObject
+        software.amazon.awscdk.services.lightsail.CfnDistribution = wrapped.cdkObject as
+        software.amazon.awscdk.services.lightsail.CfnDistribution
   }
 
   /**
@@ -1009,8 +1010,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty,
     ) : CdkObject(cdkObject), CacheBehaviorPerPathProperty {
       /**
        * The cache behavior for the specified path.
@@ -1174,8 +1174,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorProperty,
     ) : CdkObject(cdkObject), CacheBehaviorProperty {
       /**
        * The cache behavior of the distribution.
@@ -1642,8 +1641,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CacheSettingsProperty,
     ) : CdkObject(cdkObject), CacheSettingsProperty {
       /**
        * The HTTP methods that are processed and forwarded to the distribution's origin.
@@ -1872,8 +1870,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty,
     ) : CdkObject(cdkObject), CookieObjectProperty {
       /**
        * The specific cookies to forward to your distribution's origin.
@@ -2035,8 +2032,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty,
     ) : CdkObject(cdkObject), HeaderObjectProperty {
       /**
        * The specific headers to forward to your distribution's origin.
@@ -2183,8 +2179,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.InputOriginProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.InputOriginProperty,
     ) : CdkObject(cdkObject), InputOriginProperty {
       /**
        * The name of the origin resource.
@@ -2360,8 +2355,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.QueryStringObjectProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.QueryStringObjectProperty,
     ) : CdkObject(cdkObject), QueryStringObjectProperty {
       /**
        * Indicates whether the distribution forwards and caches based on query strings.

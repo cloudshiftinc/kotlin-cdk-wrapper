@@ -84,7 +84,7 @@ public interface AwsIamConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.AwsIamConfig,
+    cdkObject: software.amazon.awscdk.services.appsync.AwsIamConfig,
   ) : CdkObject(cdkObject), AwsIamConfig {
     /**
      * The signing region for AWS IAM authorization.

@@ -142,8 +142,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
  */
-public open class CfnDomain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain,
+public open class CfnDomain(
+  cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.opensearchservice.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1973,7 +1973,8 @@ public open class CfnDomain internal constructor(
         CfnDomain = CfnDomain(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomain):
-        software.amazon.awscdk.services.opensearchservice.CfnDomain = wrapped.cdkObject
+        software.amazon.awscdk.services.opensearchservice.CfnDomain = wrapped.cdkObject as
+        software.amazon.awscdk.services.opensearchservice.CfnDomain
   }
 
   /**
@@ -2298,8 +2299,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.AdvancedSecurityOptionsInputProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.AdvancedSecurityOptionsInputProperty,
     ) : CdkObject(cdkObject), AdvancedSecurityOptionsInputProperty {
       /**
        * Date and time when the migration period will be disabled.
@@ -2917,8 +2917,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ClusterConfigProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ClusterConfigProperty,
     ) : CdkObject(cdkObject), ClusterConfigProperty {
       /**
        * Container for cold storage configuration options.
@@ -3226,8 +3225,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty,
     ) : CdkObject(cdkObject), CognitoOptionsProperty {
       /**
        * Whether to enable or disable Amazon Cognito authentication for OpenSearch Dashboards.
@@ -3364,8 +3362,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty,
     ) : CdkObject(cdkObject), ColdStorageOptionsProperty {
       /**
        * Whether to enable or disable cold storage on the domain.
@@ -3603,8 +3600,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.DomainEndpointOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.DomainEndpointOptionsProperty,
     ) : CdkObject(cdkObject), DomainEndpointOptionsProperty {
       /**
        * The fully qualified URL for your custom endpoint.
@@ -3865,8 +3861,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty,
     ) : CdkObject(cdkObject), EBSOptionsProperty {
       /**
        * Specifies whether Amazon EBS volumes are attached to data nodes in the OpenSearch Service
@@ -4083,8 +4078,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty,
     ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
       /**
        * Specify `true` to enable encryption at rest. Required if you enable fine-grained access
@@ -4207,8 +4201,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty,
     ) : CdkObject(cdkObject), IdpProperty {
       /**
        * The unique entity ID of the application in the SAML identity provider.
@@ -4351,8 +4344,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty,
     ) : CdkObject(cdkObject), LogPublishingOptionProperty {
       /**
        * Specifies the CloudWatch log group to publish to.
@@ -4546,8 +4538,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty,
     ) : CdkObject(cdkObject), MasterUserOptionsProperty {
       /**
        * Amazon Resource Name (ARN) for the master user.
@@ -4692,8 +4683,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty,
     ) : CdkObject(cdkObject), NodeToNodeEncryptionOptionsProperty {
       /**
        * Specifies to enable or disable node-to-node encryption on the domain.
@@ -4845,8 +4835,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty,
     ) : CdkObject(cdkObject), OffPeakWindowOptionsProperty {
       /**
        * Specifies whether off-peak window settings are enabled for the domain.
@@ -4970,8 +4959,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty,
     ) : CdkObject(cdkObject), OffPeakWindowProperty {
       /**
        * The desired start time for an off-peak maintenance window.
@@ -5229,8 +5217,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty,
     ) : CdkObject(cdkObject), SAMLOptionsProperty {
       /**
        * True to enable SAML authentication for a domain.
@@ -5565,8 +5552,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ServiceSoftwareOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ServiceSoftwareOptionsProperty,
     ) : CdkObject(cdkObject), ServiceSoftwareOptionsProperty {
       /**
        * The timestamp, in Epoch time, until which you can manually request a service software
@@ -5721,8 +5707,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty,
     ) : CdkObject(cdkObject), SnapshotOptionsProperty {
       /**
        * The hour in UTC during which the service takes an automated daily snapshot of the indexes
@@ -5826,8 +5811,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty,
     ) : CdkObject(cdkObject), SoftwareUpdateOptionsProperty {
       /**
        * Specifies whether automatic service software updates are enabled for the domain.
@@ -6023,8 +6007,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.VPCOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.VPCOptionsProperty,
     ) : CdkObject(cdkObject), VPCOptionsProperty {
       /**
        * The list of security group IDs that are associated with the VPC endpoints for the domain.
@@ -6164,8 +6147,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty,
     ) : CdkObject(cdkObject), WindowStartTimeProperty {
       /**
        * The start hour of the window in Coordinated Universal Time (UTC), using 24-hour time.
@@ -6268,8 +6250,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty,
     ) : CdkObject(cdkObject), ZoneAwarenessConfigProperty {
       /**
        * If you enabled multiple Availability Zones (AZs), the number of AZs that you want the

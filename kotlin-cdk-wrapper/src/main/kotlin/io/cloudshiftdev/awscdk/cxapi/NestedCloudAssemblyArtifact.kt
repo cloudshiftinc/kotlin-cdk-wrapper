@@ -70,8 +70,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class NestedCloudAssemblyArtifact internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.cxapi.NestedCloudAssemblyArtifact,
+public open class NestedCloudAssemblyArtifact(
+  cdkObject: software.amazon.awscdk.cxapi.NestedCloudAssemblyArtifact,
 ) : CloudArtifact(cdkObject) {
   public constructor(
     assembly: CloudAssembly,
@@ -435,6 +435,7 @@ public open class NestedCloudAssemblyArtifact internal constructor(
         NestedCloudAssemblyArtifact = NestedCloudAssemblyArtifact(cdkObject)
 
     internal fun unwrap(wrapped: NestedCloudAssemblyArtifact):
-        software.amazon.awscdk.cxapi.NestedCloudAssemblyArtifact = wrapped.cdkObject
+        software.amazon.awscdk.cxapi.NestedCloudAssemblyArtifact = wrapped.cdkObject as
+        software.amazon.awscdk.cxapi.NestedCloudAssemblyArtifact
   }
 }

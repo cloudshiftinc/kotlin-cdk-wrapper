@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class FargateService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.FargateService,
+public open class FargateService(
+  cdkObject: software.amazon.awscdk.services.ecs.FargateService,
 ) : BaseService(cdkObject), IFargateService {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -891,6 +891,6 @@ public open class FargateService internal constructor(
         = FargateService(cdkObject)
 
     internal fun unwrap(wrapped: FargateService): software.amazon.awscdk.services.ecs.FargateService
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.ecs.FargateService
   }
 }

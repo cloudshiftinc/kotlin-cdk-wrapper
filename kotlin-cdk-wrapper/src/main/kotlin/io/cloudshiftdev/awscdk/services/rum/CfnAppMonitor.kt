@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html)
  */
-public open class CfnAppMonitor internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor,
+public open class CfnAppMonitor(
+  cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -664,7 +664,7 @@ public open class CfnAppMonitor internal constructor(
         CfnAppMonitor(cdkObject)
 
     internal fun unwrap(wrapped: CfnAppMonitor): software.amazon.awscdk.services.rum.CfnAppMonitor =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.rum.CfnAppMonitor
   }
 
   /**
@@ -1141,8 +1141,7 @@ public open class CfnAppMonitor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rum.CfnAppMonitor.AppMonitorConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.AppMonitorConfigurationProperty,
     ) : CdkObject(cdkObject), AppMonitorConfigurationProperty {
       /**
        * If you set this to `true` , the CloudWatch RUM web client sets two cookies, a session
@@ -1325,8 +1324,7 @@ public open class CfnAppMonitor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rum.CfnAppMonitor.CustomEventsProperty,
+      cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.CustomEventsProperty,
     ) : CdkObject(cdkObject), CustomEventsProperty {
       /**
        * Set this to `ENABLED` to allow the web client to send custom events for this app monitor.
@@ -1611,8 +1609,7 @@ public open class CfnAppMonitor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDefinitionProperty,
     ) : CdkObject(cdkObject), MetricDefinitionProperty {
       /**
        * This field is a map of field paths to dimension names.
@@ -1881,8 +1878,7 @@ public open class CfnAppMonitor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty,
     ) : CdkObject(cdkObject), MetricDestinationProperty {
       /**
        * Defines the destination to send the metrics to.

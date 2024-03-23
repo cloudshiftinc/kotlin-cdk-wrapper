@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-instance.html)
  */
-public open class CfnInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnInstance,
+public open class CfnInstance(
+  cdkObject: software.amazon.awscdk.services.connect.CfnInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -387,7 +387,7 @@ public open class CfnInstance internal constructor(
         CfnInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstance): software.amazon.awscdk.services.connect.CfnInstance =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.connect.CfnInstance
   }
 
   /**
@@ -653,8 +653,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnInstance.AttributesProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnInstance.AttributesProperty,
     ) : CdkObject(cdkObject), AttributesProperty {
       /**
        * Boolean flag which enables AUTO_RESOLVE_BEST_VOICES on an instance.

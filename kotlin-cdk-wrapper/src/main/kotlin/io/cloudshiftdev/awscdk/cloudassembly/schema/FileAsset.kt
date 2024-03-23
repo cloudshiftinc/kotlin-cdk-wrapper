@@ -100,7 +100,7 @@ public interface FileAsset {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.FileAsset,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.FileAsset,
   ) : CdkObject(cdkObject), FileAsset {
     /**
      * Destinations for this file asset.

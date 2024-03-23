@@ -58,8 +58,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class PrimaryKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.PrimaryKey,
+public open class PrimaryKey(
+  cdkObject: software.amazon.awscdk.services.appsync.PrimaryKey,
 ) : CdkObject(cdkObject) {
   public constructor(pkey: Assign) :
       this(software.amazon.awscdk.services.appsync.PrimaryKey(pkey.let(Assign::unwrap))
@@ -83,6 +83,6 @@ public open class PrimaryKey internal constructor(
         PrimaryKey(cdkObject)
 
     internal fun unwrap(wrapped: PrimaryKey): software.amazon.awscdk.services.appsync.PrimaryKey =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.PrimaryKey
   }
 }

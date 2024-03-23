@@ -91,8 +91,7 @@ public interface CompleteScalingInterval {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.autoscaling.common.CompleteScalingInterval,
+    cdkObject: software.amazon.awscdk.services.autoscaling.common.CompleteScalingInterval,
   ) : CdkObject(cdkObject), CompleteScalingInterval {
     /**
      *

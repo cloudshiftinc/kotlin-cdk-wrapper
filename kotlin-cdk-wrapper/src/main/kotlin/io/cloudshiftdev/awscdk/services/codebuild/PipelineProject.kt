@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class PipelineProject internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.PipelineProject,
+public open class PipelineProject(
+  cdkObject: software.amazon.awscdk.services.codebuild.PipelineProject,
 ) : Project(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codebuild.PipelineProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -895,6 +895,7 @@ public open class PipelineProject internal constructor(
         PipelineProject = PipelineProject(cdkObject)
 
     internal fun unwrap(wrapped: PipelineProject):
-        software.amazon.awscdk.services.codebuild.PipelineProject = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.PipelineProject = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.PipelineProject
   }
 }

@@ -29,8 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html)
  */
-public open class Group internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.Group,
+public open class Group(
+  cdkObject: software.amazon.awscdk.services.iam.Group,
 ) : Resource(cdkObject), IGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.Group(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -322,6 +322,6 @@ public open class Group internal constructor(
         Group(cdkObject)
 
     internal fun unwrap(wrapped: Group): software.amazon.awscdk.services.iam.Group =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.Group
   }
 }

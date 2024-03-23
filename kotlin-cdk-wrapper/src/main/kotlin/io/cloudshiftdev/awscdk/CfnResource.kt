@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * }
  * ```
  */
-public open class CfnResource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnResource,
+public open class CfnResource(
+  cdkObject: software.amazon.awscdk.CfnResource,
 ) : CfnRefElement(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -433,6 +433,6 @@ public open class CfnResource internal constructor(
         CfnResource(cdkObject)
 
     internal fun unwrap(wrapped: CfnResource): software.amazon.awscdk.CfnResource =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.CfnResource
   }
 }

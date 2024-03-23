@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html)
  */
-public open class CfnMaintenanceWindowTarget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget,
+public open class CfnMaintenanceWindowTarget(
+  cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -370,7 +370,8 @@ public open class CfnMaintenanceWindowTarget internal constructor(
         CfnMaintenanceWindowTarget = CfnMaintenanceWindowTarget(cdkObject)
 
     internal fun unwrap(wrapped: CfnMaintenanceWindowTarget):
-        software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget = wrapped.cdkObject
+        software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget
   }
 
   /**
@@ -489,8 +490,7 @@ public open class CfnMaintenanceWindowTarget internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget.TargetsProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget.TargetsProperty,
     ) : CdkObject(cdkObject), TargetsProperty {
       /**
        * User-defined criteria for sending commands that target managed nodes that meet the

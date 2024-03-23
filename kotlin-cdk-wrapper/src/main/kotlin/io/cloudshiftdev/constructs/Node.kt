@@ -12,8 +12,8 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
-public open class Node internal constructor(
-  internal override val cdkObject: software.constructs.Node,
+public open class Node(
+  cdkObject: software.constructs.Node,
 ) : CdkObject(cdkObject) {
   public constructor(
     host: Construct,
@@ -120,6 +120,7 @@ public open class Node internal constructor(
 
     internal fun wrap(cdkObject: software.constructs.Node): Node = Node(cdkObject)
 
-    internal fun unwrap(wrapped: Node): software.constructs.Node = wrapped.cdkObject
+    internal fun unwrap(wrapped: Node): software.constructs.Node = wrapped.cdkObject as
+        software.constructs.Node
   }
 }

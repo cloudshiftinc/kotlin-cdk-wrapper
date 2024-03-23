@@ -304,8 +304,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html)
  */
-public open class CfnModelPackage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage,
+public open class CfnModelPackage(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sagemaker.CfnModelPackage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1845,7 +1845,8 @@ public open class CfnModelPackage internal constructor(
         CfnModelPackage = CfnModelPackage(cdkObject)
 
     internal fun unwrap(wrapped: CfnModelPackage):
-        software.amazon.awscdk.services.sagemaker.CfnModelPackage = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnModelPackage = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnModelPackage
   }
 
   /**
@@ -2137,8 +2138,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty,
     ) : CdkObject(cdkObject), AdditionalInferenceSpecificationDefinitionProperty {
       /**
        * The Amazon ECR registry path of the Docker image that contains the inference code.
@@ -2405,8 +2405,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.BiasProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.BiasProperty,
     ) : CdkObject(cdkObject), BiasProperty {
       /**
        * The post-training bias report for a model.
@@ -2530,8 +2529,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty,
     ) : CdkObject(cdkObject), DataSourceProperty {
       /**
        * The S3 location of the data source that is associated with a channel.
@@ -2871,8 +2869,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBaselinesProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBaselinesProperty,
     ) : CdkObject(cdkObject), DriftCheckBaselinesProperty {
       /**
        * Represents the drift check bias baselines that can be used when the model monitor is set
@@ -3119,8 +3116,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty,
     ) : CdkObject(cdkObject), DriftCheckBiasProperty {
       /**
        * The bias config file for a model.
@@ -3302,8 +3298,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty,
     ) : CdkObject(cdkObject), DriftCheckExplainabilityProperty {
       /**
        * The explainability config file for the model.
@@ -3478,8 +3473,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty,
     ) : CdkObject(cdkObject), DriftCheckModelDataQualityProperty {
       /**
        * The drift check model data quality constraints.
@@ -3655,8 +3649,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty,
     ) : CdkObject(cdkObject), DriftCheckModelQualityProperty {
       /**
        * The drift check model quality constraints.
@@ -3776,8 +3769,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty,
     ) : CdkObject(cdkObject), ExplainabilityProperty {
       /**
        * The explainability report for a model.
@@ -3899,8 +3891,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty,
     ) : CdkObject(cdkObject), FileSourceProperty {
       /**
        * The digest of the file source.
@@ -4190,8 +4181,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.InferenceSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.InferenceSpecificationProperty,
     ) : CdkObject(cdkObject), InferenceSpecificationProperty {
       /**
        * The Amazon ECR registry path of the Docker image that contains the inference code.
@@ -4369,8 +4359,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty,
     ) : CdkObject(cdkObject), MetadataPropertiesProperty {
       /**
        * The commit ID.
@@ -4513,8 +4502,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty,
     ) : CdkObject(cdkObject), MetricsSourceProperty {
       /**
        * The hash key used for the metrics source.
@@ -4694,8 +4682,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty,
     ) : CdkObject(cdkObject), ModelDataQualityProperty {
       /**
        * Data quality constraints for a model.
@@ -4783,8 +4770,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty,
     ) : CdkObject(cdkObject), ModelInputProperty {
       /**
        * The input configuration object for the model.
@@ -5084,8 +5070,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty,
     ) : CdkObject(cdkObject), ModelMetricsProperty {
       /**
        * Metrics that measure bias in a model.
@@ -5420,8 +5405,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty,
     ) : CdkObject(cdkObject), ModelPackageContainerDefinitionProperty {
       /**
        * The DNS host name for the Docker container.
@@ -5608,8 +5592,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusDetailsProperty,
     ) : CdkObject(cdkObject), ModelPackageStatusDetailsProperty {
       /**
        * The validation status of the model package.
@@ -5734,8 +5717,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty,
     ) : CdkObject(cdkObject), ModelPackageStatusItemProperty {
       /**
        * if the overall status is `Failed` , the reason for the failure.
@@ -5914,8 +5896,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty,
     ) : CdkObject(cdkObject), ModelQualityProperty {
       /**
        * Model quality constraints.
@@ -6174,8 +6155,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty,
     ) : CdkObject(cdkObject), S3DataSourceProperty {
       /**
        * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix.
@@ -6364,8 +6344,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty,
     ) : CdkObject(cdkObject), SourceAlgorithmProperty {
       /**
        * The name of an algorithm that was used to create the model package.
@@ -6492,8 +6471,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty,
     ) : CdkObject(cdkObject), SourceAlgorithmSpecificationProperty {
       /**
        * A list of the algorithms that were used to create a model package.
@@ -6777,8 +6755,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty,
     ) : CdkObject(cdkObject), TransformInputProperty {
       /**
        * If your transform data is compressed, specify the compression type.
@@ -7197,8 +7174,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformJobDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformJobDefinitionProperty,
     ) : CdkObject(cdkObject), TransformJobDefinitionProperty {
       /**
        * A string that determines the number of records included in a single mini-batch.
@@ -7509,8 +7485,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformOutputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformOutputProperty,
     ) : CdkObject(cdkObject), TransformOutputProperty {
       /**
        * The MIME type used to specify the output data.
@@ -7774,8 +7749,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty,
     ) : CdkObject(cdkObject), TransformResourcesProperty {
       /**
        * The number of ML compute instances to use in the transform job.
@@ -7991,8 +7965,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty,
     ) : CdkObject(cdkObject), ValidationProfileProperty {
       /**
        * The name of the profile for the model package.
@@ -8168,8 +8141,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationSpecificationProperty,
     ) : CdkObject(cdkObject), ValidationSpecificationProperty {
       /**
        * An array of `ModelPackageValidationProfile` objects, each of which specifies a batch

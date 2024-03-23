@@ -28,8 +28,8 @@ import kotlin.jvm.JvmName
  *
  * [Documentation](https://aws.amazon.com/releasenotes/available-deep-learning-containers-images)
  */
-public open class LinuxGpuBuildImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage,
+public open class LinuxGpuBuildImage(
+  cdkObject: software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage,
 ) : CdkObject(cdkObject), IBindableBuildImage {
   /**
    * Function that allows the build image access to the construct tree.
@@ -185,6 +185,7 @@ public open class LinuxGpuBuildImage internal constructor(
         LinuxGpuBuildImage = LinuxGpuBuildImage(cdkObject)
 
     internal fun unwrap(wrapped: LinuxGpuBuildImage):
-        software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage
   }
 }

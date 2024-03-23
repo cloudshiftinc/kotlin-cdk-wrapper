@@ -17,9 +17,8 @@ import kotlin.collections.List
  * The base class for ApplicationMultipleTargetGroupsEc2Service and
  * ApplicationMultipleTargetGroupsFargateService classes.
  */
-public abstract class ApplicationMultipleTargetGroupsServiceBase internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsServiceBase,
+public abstract class ApplicationMultipleTargetGroupsServiceBase(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsServiceBase,
 ) : Construct(cdkObject) {
   /**
    * The cluster that hosts the service.
@@ -71,8 +70,7 @@ public abstract class ApplicationMultipleTargetGroupsServiceBase internal constr
       unwrap(this).getTargetGroups().map(ApplicationTargetGroup::wrap)
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsServiceBase,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsServiceBase,
   ) : ApplicationMultipleTargetGroupsServiceBase(cdkObject)
 
   public companion object {

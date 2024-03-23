@@ -11,11 +11,11 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
  * If you're implementing your own IAction,
  * prefer to use the Action class from the codepipeline module.
  */
-public abstract class Action internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codepipeline.actions.Action,
+public abstract class Action(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.Action,
 ) : io.cloudshiftdev.awscdk.services.codepipeline.Action(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.actions.Action,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.Action,
   ) : Action(cdkObject)
 
   public companion object {

@@ -25,8 +25,8 @@ import kotlin.Unit
  * ContainerImage repositoryImage = RepositoryImage.fromDockerImageAsset(dockerImageAsset);
  * ```
  */
-public open class RepositoryImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.RepositoryImage,
+public open class RepositoryImage(
+  cdkObject: software.amazon.awscdk.services.ecs.RepositoryImage,
 ) : ContainerImage(cdkObject) {
   public constructor(imageName: String) :
       this(software.amazon.awscdk.services.ecs.RepositoryImage(imageName)
@@ -98,6 +98,7 @@ public open class RepositoryImage internal constructor(
         RepositoryImage = RepositoryImage(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryImage):
-        software.amazon.awscdk.services.ecs.RepositoryImage = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.RepositoryImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.RepositoryImage
   }
 }

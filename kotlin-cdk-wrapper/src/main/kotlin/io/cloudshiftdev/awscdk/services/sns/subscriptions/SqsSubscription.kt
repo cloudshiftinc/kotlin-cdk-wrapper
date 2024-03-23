@@ -27,9 +27,8 @@ import software.amazon.awscdk.services.sqs.IQueue as AmazonAwscdkServicesSqsIQue
  * myTopic.addSubscription(new SqsSubscription(queue));
  * ```
  */
-public open class SqsSubscription internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.sns.subscriptions.SqsSubscription,
+public open class SqsSubscription(
+  cdkObject: software.amazon.awscdk.services.sns.subscriptions.SqsSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue) :
       this(software.amazon.awscdk.services.sns.subscriptions.SqsSubscription(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap))
@@ -175,6 +174,7 @@ public open class SqsSubscription internal constructor(
         SqsSubscription = SqsSubscription(cdkObject)
 
     internal fun unwrap(wrapped: SqsSubscription):
-        software.amazon.awscdk.services.sns.subscriptions.SqsSubscription = wrapped.cdkObject
+        software.amazon.awscdk.services.sns.subscriptions.SqsSubscription = wrapped.cdkObject as
+        software.amazon.awscdk.services.sns.subscriptions.SqsSubscription
   }
 }

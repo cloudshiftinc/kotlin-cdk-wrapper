@@ -162,7 +162,7 @@ public interface CfnCustomEntityTypeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.glue.CfnCustomEntityTypeProps,
+    cdkObject: software.amazon.awscdk.services.glue.CfnCustomEntityTypeProps,
   ) : CdkObject(cdkObject), CfnCustomEntityTypeProps {
     /**
      * A list of context words.

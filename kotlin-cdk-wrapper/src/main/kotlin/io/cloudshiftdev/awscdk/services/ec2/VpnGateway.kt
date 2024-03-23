@@ -26,8 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class VpnGateway internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.VpnGateway,
+public open class VpnGateway(
+  cdkObject: software.amazon.awscdk.services.ec2.VpnGateway,
 ) : Resource(cdkObject), IVpnGateway {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -116,6 +116,6 @@ public open class VpnGateway internal constructor(
         VpnGateway(cdkObject)
 
     internal fun unwrap(wrapped: VpnGateway): software.amazon.awscdk.services.ec2.VpnGateway =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.VpnGateway
   }
 }

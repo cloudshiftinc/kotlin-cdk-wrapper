@@ -367,7 +367,7 @@ public interface CfnEmailIdentityProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentityProps,
+    cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentityProps,
   ) : CdkObject(cdkObject), CfnEmailIdentityProps {
     /**
      * Used to associate a configuration set with an email identity.

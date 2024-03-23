@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html)
  */
-public open class CfnRegistry internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistry,
+public open class CfnRegistry(
+  cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistry,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.eventschemas.CfnRegistry(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -234,7 +234,8 @@ public open class CfnRegistry internal constructor(
         CfnRegistry = CfnRegistry(cdkObject)
 
     internal fun unwrap(wrapped: CfnRegistry):
-        software.amazon.awscdk.services.eventschemas.CfnRegistry = wrapped.cdkObject
+        software.amazon.awscdk.services.eventschemas.CfnRegistry = wrapped.cdkObject as
+        software.amazon.awscdk.services.eventschemas.CfnRegistry
   }
 
   /**
@@ -309,8 +310,7 @@ public open class CfnRegistry internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eventschemas.CfnRegistry.TagsEntryProperty,
+      cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistry.TagsEntryProperty,
     ) : CdkObject(cdkObject), TagsEntryProperty {
       /**
        * The key of a key-value pair.

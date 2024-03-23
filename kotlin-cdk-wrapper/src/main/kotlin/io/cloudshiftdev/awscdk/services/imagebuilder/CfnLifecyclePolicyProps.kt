@@ -309,7 +309,7 @@ public interface CfnLifecyclePolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicyProps,
+    cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicyProps,
   ) : CdkObject(cdkObject), CfnLifecyclePolicyProps {
     /**
      * Optional description for the lifecycle policy.

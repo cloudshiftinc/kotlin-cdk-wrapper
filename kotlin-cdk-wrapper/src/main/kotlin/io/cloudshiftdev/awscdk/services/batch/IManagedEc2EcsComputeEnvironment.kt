@@ -156,7 +156,7 @@ public interface IManagedEc2EcsComputeEnvironment : IManagedComputeEnvironment {
   public fun useOptimalInstanceClasses(): Boolean? = unwrap(this).getUseOptimalInstanceClasses()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.IManagedEc2EcsComputeEnvironment,
+    cdkObject: software.amazon.awscdk.services.batch.IManagedEc2EcsComputeEnvironment,
   ) : CdkObject(cdkObject), IManagedEc2EcsComputeEnvironment {
     /**
      * Add an instance class to this compute environment.

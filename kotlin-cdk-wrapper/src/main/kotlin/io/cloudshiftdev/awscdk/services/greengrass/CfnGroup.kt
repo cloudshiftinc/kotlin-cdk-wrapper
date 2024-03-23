@@ -93,8 +93,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
  */
-public open class CfnGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.greengrass.CfnGroup,
+public open class CfnGroup(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -466,7 +466,7 @@ public open class CfnGroup internal constructor(
         CfnGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnGroup): software.amazon.awscdk.services.greengrass.CfnGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.greengrass.CfnGroup
   }
 
   /**
@@ -680,8 +680,7 @@ public open class CfnGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnGroup.GroupVersionProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnGroup.GroupVersionProperty,
     ) : CdkObject(cdkObject), GroupVersionProperty {
       /**
        * The Amazon Resource Name (ARN) of the connector definition version that contains the

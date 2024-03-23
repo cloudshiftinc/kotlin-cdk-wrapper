@@ -10,9 +10,8 @@ import kotlin.String
 /**
  * Base class for listeners.
  */
-public abstract class BaseListener internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener,
+public abstract class BaseListener(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener,
 ) : Resource(cdkObject), IListener {
   /**
    * ARN of the listener.
@@ -20,7 +19,7 @@ public abstract class BaseListener internal constructor(
   public override fun listenerArn(): String = unwrap(this).getListenerArn()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener,
   ) : BaseListener(cdkObject)
 
   public companion object {

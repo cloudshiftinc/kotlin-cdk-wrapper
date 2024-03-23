@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-proton-environmenttemplate.html)
  */
-public open class CfnEnvironmentTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.proton.CfnEnvironmentTemplate,
+public open class CfnEnvironmentTemplate(
+  cdkObject: software.amazon.awscdk.services.proton.CfnEnvironmentTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.proton.CfnEnvironmentTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -378,6 +378,7 @@ public open class CfnEnvironmentTemplate internal constructor(
         CfnEnvironmentTemplate = CfnEnvironmentTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironmentTemplate):
-        software.amazon.awscdk.services.proton.CfnEnvironmentTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.proton.CfnEnvironmentTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.proton.CfnEnvironmentTemplate
   }
 }

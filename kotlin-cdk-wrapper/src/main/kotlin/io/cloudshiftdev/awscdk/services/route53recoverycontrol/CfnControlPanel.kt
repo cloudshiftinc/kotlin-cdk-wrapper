@@ -44,9 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-controlpanel.html)
  */
-public open class CfnControlPanel internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanel,
+public open class CfnControlPanel(
+  cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -255,5 +254,6 @@ public open class CfnControlPanel internal constructor(
 
     internal fun unwrap(wrapped: CfnControlPanel):
         software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanel = wrapped.cdkObject
+        as software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanel
   }
 }

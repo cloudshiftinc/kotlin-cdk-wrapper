@@ -997,7 +997,7 @@ public interface CfnDBClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.docdb.CfnDBClusterProps,
+    cdkObject: software.amazon.awscdk.services.docdb.CfnDBClusterProps,
   ) : CdkObject(cdkObject), CfnDBClusterProps {
     /**
      * A list of Amazon EC2 Availability Zones that instances in the cluster can be created in.

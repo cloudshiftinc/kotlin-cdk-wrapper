@@ -157,8 +157,7 @@ public interface CfnStreamingDistributionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cloudfront.CfnStreamingDistributionProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistributionProps,
   ) : CdkObject(cdkObject), CfnStreamingDistributionProps {
     /**
      * The current configuration information for the RTMP distribution.

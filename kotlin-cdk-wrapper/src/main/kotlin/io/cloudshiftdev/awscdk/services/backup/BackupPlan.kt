@@ -22,8 +22,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * BackupPlan plan = BackupPlan.dailyWeeklyMonthly5YearRetention(this, "Plan");
  * ```
  */
-public open class BackupPlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backup.BackupPlan,
+public open class BackupPlan(
+  cdkObject: software.amazon.awscdk.services.backup.BackupPlan,
 ) : Resource(cdkObject), IBackupPlan {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.backup.BackupPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -312,6 +312,6 @@ public open class BackupPlan internal constructor(
         BackupPlan(cdkObject)
 
     internal fun unwrap(wrapped: BackupPlan): software.amazon.awscdk.services.backup.BackupPlan =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.backup.BackupPlan
   }
 }

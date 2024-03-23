@@ -36,9 +36,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class PhysicalResourceIdReference internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.customresources.PhysicalResourceIdReference,
+public open class PhysicalResourceIdReference(
+  cdkObject: software.amazon.awscdk.customresources.PhysicalResourceIdReference,
 ) : CdkObject(cdkObject), IResolvable {
   public constructor() : this(software.amazon.awscdk.customresources.PhysicalResourceIdReference()
   )
@@ -71,6 +70,7 @@ public open class PhysicalResourceIdReference internal constructor(
         PhysicalResourceIdReference = PhysicalResourceIdReference(cdkObject)
 
     internal fun unwrap(wrapped: PhysicalResourceIdReference):
-        software.amazon.awscdk.customresources.PhysicalResourceIdReference = wrapped.cdkObject
+        software.amazon.awscdk.customresources.PhysicalResourceIdReference = wrapped.cdkObject as
+        software.amazon.awscdk.customresources.PhysicalResourceIdReference
   }
 }

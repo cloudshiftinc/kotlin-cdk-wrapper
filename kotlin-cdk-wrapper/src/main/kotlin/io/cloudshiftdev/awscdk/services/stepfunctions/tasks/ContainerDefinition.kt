@@ -26,9 +26,8 @@ import kotlin.Unit
  *
  * [Documentation](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html)
  */
-public open class ContainerDefinition internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinition,
+public open class ContainerDefinition(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinition,
 ) : CdkObject(cdkObject), IContainerDefinition {
   public constructor(options: ContainerDefinitionOptions) :
       this(software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinition(options.let(ContainerDefinitionOptions::unwrap))
@@ -218,5 +217,6 @@ public open class ContainerDefinition internal constructor(
 
     internal fun unwrap(wrapped: ContainerDefinition):
         software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinition = wrapped.cdkObject
+        as software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinition
   }
 }

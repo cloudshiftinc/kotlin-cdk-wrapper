@@ -32,8 +32,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class Lambda internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.actions.Lambda,
+public open class Lambda(
+  cdkObject: software.amazon.awscdk.services.ses.actions.Lambda,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
   public constructor(props: LambdaProps) :
       this(software.amazon.awscdk.services.ses.actions.Lambda(props.let(LambdaProps::unwrap))
@@ -129,6 +129,6 @@ public open class Lambda internal constructor(
         Lambda(cdkObject)
 
     internal fun unwrap(wrapped: Lambda): software.amazon.awscdk.services.ses.actions.Lambda =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ses.actions.Lambda
   }
 }

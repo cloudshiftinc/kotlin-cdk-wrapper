@@ -35,8 +35,8 @@ import kotlin.collections.Map
  * "eu-west-1", "ami-12345678"));
  * ```
  */
-public open class GenericLinuxImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.GenericLinuxImage,
+public open class GenericLinuxImage(
+  cdkObject: software.amazon.awscdk.services.ec2.GenericLinuxImage,
 ) : CdkObject(cdkObject), IMachineImage {
   public constructor(amiMap: Map<String, String>) :
       this(software.amazon.awscdk.services.ec2.GenericLinuxImage(amiMap)
@@ -105,6 +105,7 @@ public open class GenericLinuxImage internal constructor(
         GenericLinuxImage = GenericLinuxImage(cdkObject)
 
     internal fun unwrap(wrapped: GenericLinuxImage):
-        software.amazon.awscdk.services.ec2.GenericLinuxImage = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.GenericLinuxImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.GenericLinuxImage
   }
 }

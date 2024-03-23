@@ -75,9 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html)
  */
-public open class CfnResourceSet internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet,
+public open class CfnResourceSet(
+  cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -369,6 +368,7 @@ public open class CfnResourceSet internal constructor(
 
     internal fun unwrap(wrapped: CfnResourceSet):
         software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet = wrapped.cdkObject
+        as software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet
   }
 
   /**
@@ -548,8 +548,7 @@ public open class CfnResourceSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty,
     ) : CdkObject(cdkObject), DNSTargetResourceProperty {
       /**
        * The domain name that acts as an ingress point to a portion of the customer application.
@@ -661,8 +660,7 @@ public open class CfnResourceSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.NLBResourceProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.NLBResourceProperty,
     ) : CdkObject(cdkObject), NLBResourceProperty {
       /**
        * The Network Load Balancer resource Amazon Resource Name (ARN).
@@ -764,8 +762,7 @@ public open class CfnResourceSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.R53ResourceRecordProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.R53ResourceRecordProperty,
     ) : CdkObject(cdkObject), R53ResourceRecordProperty {
       /**
        * The DNS target domain name.
@@ -1006,8 +1003,7 @@ public open class CfnResourceSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.ResourceProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.ResourceProperty,
     ) : CdkObject(cdkObject), ResourceProperty {
       /**
        * The component identifier of the resource, generated when DNS target resource is used.
@@ -1199,8 +1195,7 @@ public open class CfnResourceSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty,
     ) : CdkObject(cdkObject), TargetResourceProperty {
       /**
        * The Network Load Balancer resource that a DNS target resource points to.

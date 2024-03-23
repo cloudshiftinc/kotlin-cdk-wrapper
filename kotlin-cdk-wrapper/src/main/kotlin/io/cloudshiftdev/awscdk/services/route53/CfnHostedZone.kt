@@ -94,8 +94,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html)
  */
-public open class CfnHostedZone internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone,
+public open class CfnHostedZone(
+  cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53.CfnHostedZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1194,7 +1194,8 @@ public open class CfnHostedZone internal constructor(
         CfnHostedZone = CfnHostedZone(cdkObject)
 
     internal fun unwrap(wrapped: CfnHostedZone):
-        software.amazon.awscdk.services.route53.CfnHostedZone = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.CfnHostedZone = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.CfnHostedZone
   }
 
   /**
@@ -1253,8 +1254,7 @@ public open class CfnHostedZone internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty,
     ) : CdkObject(cdkObject), HostedZoneConfigProperty {
       /**
        * Any comments that you want to include about the hosted zone.
@@ -1388,8 +1388,7 @@ public open class CfnHostedZone internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty,
     ) : CdkObject(cdkObject), HostedZoneTagProperty {
       /**
        * The value of `Key` depends on the operation that you want to perform:.
@@ -1492,8 +1491,7 @@ public open class CfnHostedZone internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnHostedZone.QueryLoggingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.QueryLoggingConfigProperty,
     ) : CdkObject(cdkObject), QueryLoggingConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is
@@ -1618,7 +1616,7 @@ public open class CfnHostedZone internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty,
     ) : CdkObject(cdkObject), VPCProperty {
       /**
        * *Private hosted zones only:* The ID of an Amazon VPC.

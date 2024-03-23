@@ -30,8 +30,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class ItemBatcher internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.ItemBatcher,
+public open class ItemBatcher(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.ItemBatcher,
 ) : CdkObject(cdkObject) {
   public constructor(props: ItemBatcherProps) :
       this(software.amazon.awscdk.services.stepfunctions.ItemBatcher(props.let(ItemBatcherProps::unwrap))
@@ -214,6 +214,7 @@ public open class ItemBatcher internal constructor(
         ItemBatcher = ItemBatcher(cdkObject)
 
     internal fun unwrap(wrapped: ItemBatcher):
-        software.amazon.awscdk.services.stepfunctions.ItemBatcher = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.ItemBatcher = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.ItemBatcher
   }
 }

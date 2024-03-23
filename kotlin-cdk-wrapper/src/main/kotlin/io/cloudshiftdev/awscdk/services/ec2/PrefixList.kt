@@ -22,8 +22,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class PrefixList internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.PrefixList,
+public open class PrefixList(
+  cdkObject: software.amazon.awscdk.services.ec2.PrefixList,
 ) : Resource(cdkObject), IPrefixList {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.PrefixList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -213,6 +213,6 @@ public open class PrefixList internal constructor(
         PrefixList(cdkObject)
 
     internal fun unwrap(wrapped: PrefixList): software.amazon.awscdk.services.ec2.PrefixList =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.PrefixList
   }
 }

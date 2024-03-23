@@ -117,7 +117,7 @@ public interface ResponseHeadersFrameOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersFrameOptions,
+    cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersFrameOptions,
   ) : CdkObject(cdkObject), ResponseHeadersFrameOptions {
     /**
      * The value of the X-Frame-Options HTTP response header.

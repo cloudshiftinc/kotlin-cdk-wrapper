@@ -650,7 +650,7 @@ public interface StandardAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.StandardAttributes,
+    cdkObject: software.amazon.awscdk.services.cognito.StandardAttributes,
   ) : CdkObject(cdkObject), StandardAttributes {
     /**
      * The user's postal address.

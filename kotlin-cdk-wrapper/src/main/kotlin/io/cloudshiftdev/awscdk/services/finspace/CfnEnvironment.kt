@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-finspace-environment.html)
  */
-public open class CfnEnvironment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment,
+public open class CfnEnvironment(
+  cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -577,7 +577,8 @@ public open class CfnEnvironment internal constructor(
         CfnEnvironment = CfnEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironment):
-        software.amazon.awscdk.services.finspace.CfnEnvironment = wrapped.cdkObject
+        software.amazon.awscdk.services.finspace.CfnEnvironment = wrapped.cdkObject as
+        software.amazon.awscdk.services.finspace.CfnEnvironment
   }
 
   /**
@@ -672,8 +673,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty,
+      cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty,
     ) : CdkObject(cdkObject), AttributeMapItemsProperty {
       /**
        * The key name of the tag.
@@ -935,8 +935,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.finspace.CfnEnvironment.FederationParametersProperty,
+      cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.FederationParametersProperty,
     ) : CdkObject(cdkObject), FederationParametersProperty {
       /**
        * The redirect or sign-in URL that should be entered into the SAML 2.0 compliant identity
@@ -1101,8 +1100,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.finspace.CfnEnvironment.SuperuserParametersProperty,
+      cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.SuperuserParametersProperty,
     ) : CdkObject(cdkObject), SuperuserParametersProperty {
       /**
        * The email address of the superuser.

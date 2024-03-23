@@ -755,7 +755,7 @@ public interface CfnCampaignProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaignProps,
+    cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaignProps,
   ) : CdkObject(cdkObject), CfnCampaignProps {
     /**
      * Specifies how to update a campaign. The action can be one of the following:.

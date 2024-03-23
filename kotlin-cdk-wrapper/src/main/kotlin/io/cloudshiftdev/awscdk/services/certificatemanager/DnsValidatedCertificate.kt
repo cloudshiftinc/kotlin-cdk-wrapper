@@ -57,9 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * @deprecated use [Certificate ] instead
  */
-public open class DnsValidatedCertificate internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificate,
+public open class DnsValidatedCertificate(
+  cdkObject: software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificate,
 ) : Resource(cdkObject), ICertificate, ITaggable {
   @Deprecated(message = "deprecated in CDK")
   public constructor(
@@ -509,6 +508,7 @@ public open class DnsValidatedCertificate internal constructor(
 
     internal fun unwrap(wrapped: DnsValidatedCertificate):
         software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificate =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificate
   }
 }

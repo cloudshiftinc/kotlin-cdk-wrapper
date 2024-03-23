@@ -426,7 +426,7 @@ public interface CfnClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.docdbelastic.CfnClusterProps,
+    cdkObject: software.amazon.awscdk.services.docdbelastic.CfnClusterProps,
   ) : CdkObject(cdkObject), CfnClusterProps {
     /**
      * The name of the Amazon DocumentDB elastic clusters administrator.

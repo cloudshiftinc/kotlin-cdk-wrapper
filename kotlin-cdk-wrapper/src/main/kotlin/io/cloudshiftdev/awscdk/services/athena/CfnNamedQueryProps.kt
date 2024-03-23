@@ -140,7 +140,7 @@ public interface CfnNamedQueryProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.athena.CfnNamedQueryProps,
+    cdkObject: software.amazon.awscdk.services.athena.CfnNamedQueryProps,
   ) : CdkObject(cdkObject), CfnNamedQueryProps {
     /**
      * The database to which the query belongs.

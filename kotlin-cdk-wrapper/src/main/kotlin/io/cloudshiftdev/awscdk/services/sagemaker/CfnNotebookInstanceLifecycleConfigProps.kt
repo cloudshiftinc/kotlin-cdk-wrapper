@@ -177,8 +177,7 @@ public interface CfnNotebookInstanceLifecycleConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfigProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfigProps,
   ) : CdkObject(cdkObject), CfnNotebookInstanceLifecycleConfigProps {
     /**
      * The name of the lifecycle configuration.

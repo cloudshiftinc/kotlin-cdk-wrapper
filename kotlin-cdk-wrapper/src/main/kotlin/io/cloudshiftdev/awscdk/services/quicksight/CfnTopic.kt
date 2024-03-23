@@ -238,8 +238,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html)
  */
-public open class CfnTopic internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic,
+public open class CfnTopic(
+  cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.quicksight.CfnTopic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -539,7 +539,7 @@ public open class CfnTopic internal constructor(
         CfnTopic(cdkObject)
 
     internal fun unwrap(wrapped: CfnTopic): software.amazon.awscdk.services.quicksight.CfnTopic =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.quicksight.CfnTopic
   }
 
   /**
@@ -625,8 +625,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.CellValueSynonymProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.CellValueSynonymProperty,
     ) : CdkObject(cdkObject), CellValueSynonymProperty {
       /**
        * The cell value.
@@ -724,8 +723,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.CollectiveConstantProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.CollectiveConstantProperty,
     ) : CdkObject(cdkObject), CollectiveConstantProperty {
       /**
        * A list of values for the collective constant.
@@ -869,8 +867,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.ComparativeOrderProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.ComparativeOrderProperty,
     ) : CdkObject(cdkObject), ComparativeOrderProperty {
       /**
        * The list of columns to be used in the ordering.
@@ -993,8 +990,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.DataAggregationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.DataAggregationProperty,
     ) : CdkObject(cdkObject), DataAggregationProperty {
       /**
        * The level of time precision that is used to aggregate `DateTime` values.
@@ -1528,8 +1524,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.DatasetMetadataProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.DatasetMetadataProperty,
     ) : CdkObject(cdkObject), DatasetMetadataProperty {
       /**
        * The list of calculated field definitions.
@@ -1731,8 +1726,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.DefaultFormattingProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.DefaultFormattingProperty,
     ) : CdkObject(cdkObject), DefaultFormattingProperty {
       /**
        * The display format.
@@ -2111,8 +2105,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.DisplayFormatOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.DisplayFormatOptionsProperty,
     ) : CdkObject(cdkObject), DisplayFormatOptionsProperty {
       /**
        * Determines the blank cell format.
@@ -2326,8 +2319,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.NamedEntityDefinitionMetricProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.NamedEntityDefinitionMetricProperty,
     ) : CdkObject(cdkObject), NamedEntityDefinitionMetricProperty {
       /**
        * The aggregation of a named entity.
@@ -2542,8 +2534,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.NamedEntityDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.NamedEntityDefinitionProperty,
     ) : CdkObject(cdkObject), NamedEntityDefinitionProperty {
       /**
        * The name of the entity.
@@ -2675,8 +2666,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.NegativeFormatProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.NegativeFormatProperty,
     ) : CdkObject(cdkObject), NegativeFormatProperty {
       /**
        * The prefix for a negative format.
@@ -2783,8 +2773,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.RangeConstantProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.RangeConstantProperty,
     ) : CdkObject(cdkObject), RangeConstantProperty {
       /**
        * The maximum value for a range constant.
@@ -2925,8 +2914,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.SemanticEntityTypeProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.SemanticEntityTypeProperty,
     ) : CdkObject(cdkObject), SemanticEntityTypeProperty {
       /**
        * The semantic entity sub type name.
@@ -3177,8 +3165,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.SemanticTypeProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.SemanticTypeProperty,
     ) : CdkObject(cdkObject), SemanticTypeProperty {
       /**
        * The semantic type falsey cell value.
@@ -3881,8 +3868,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.TopicCalculatedFieldProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicCalculatedFieldProperty,
     ) : CdkObject(cdkObject), TopicCalculatedFieldProperty {
       /**
        * The default aggregation.
@@ -4182,8 +4168,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.TopicCategoryFilterConstantProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicCategoryFilterConstantProperty,
     ) : CdkObject(cdkObject), TopicCategoryFilterConstantProperty {
       /**
        * A collective constant used in a category filter.
@@ -4404,8 +4389,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.TopicCategoryFilterProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicCategoryFilterProperty,
     ) : CdkObject(cdkObject), TopicCategoryFilterProperty {
       /**
        * The category filter function.
@@ -5080,8 +5064,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.TopicColumnProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicColumnProperty,
     ) : CdkObject(cdkObject), TopicColumnProperty {
       /**
        * The type of aggregation that is performed on the column data when it's queried.
@@ -5369,8 +5352,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.TopicDateRangeFilterProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicDateRangeFilterProperty,
     ) : CdkObject(cdkObject), TopicDateRangeFilterProperty {
       /**
        * The constant used in a date range filter.
@@ -5875,8 +5857,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.TopicFilterProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicFilterProperty,
     ) : CdkObject(cdkObject), TopicFilterProperty {
       /**
        * The category filter that is associated with this filter.
@@ -6191,8 +6172,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.TopicNamedEntityProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicNamedEntityProperty,
     ) : CdkObject(cdkObject), TopicNamedEntityProperty {
       /**
        * The definition of a named entity.
@@ -6365,8 +6345,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.TopicNumericEqualityFilterProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicNumericEqualityFilterProperty,
     ) : CdkObject(cdkObject), TopicNumericEqualityFilterProperty {
       /**
        * An aggregation function that specifies how to calculate the value of a numeric field for a
@@ -6579,8 +6558,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.TopicNumericRangeFilterProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicNumericRangeFilterProperty,
     ) : CdkObject(cdkObject), TopicNumericRangeFilterProperty {
       /**
        * An aggregation function that specifies how to calculate the value of a numeric field for a
@@ -6746,8 +6724,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.TopicRangeFilterConstantProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicRangeFilterConstantProperty,
     ) : CdkObject(cdkObject), TopicRangeFilterConstantProperty {
       /**
        * The data type of the constant value that is used in a range filter.
@@ -6918,8 +6895,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.TopicRelativeDateFilterProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicRelativeDateFilterProperty,
     ) : CdkObject(cdkObject), TopicRelativeDateFilterProperty {
       /**
        * The constant used in a relative date filter.
@@ -7045,8 +7021,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTopic.TopicSingularFilterConstantProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicSingularFilterConstantProperty,
     ) : CdkObject(cdkObject), TopicSingularFilterConstantProperty {
       /**
        * The type of the singular filter constant.

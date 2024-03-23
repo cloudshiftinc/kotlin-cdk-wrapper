@@ -153,7 +153,7 @@ public interface CfnPackageProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.panorama.CfnPackageProps,
+    cdkObject: software.amazon.awscdk.services.panorama.CfnPackageProps,
   ) : CdkObject(cdkObject), CfnPackageProps {
     /**
      * A name for the package.

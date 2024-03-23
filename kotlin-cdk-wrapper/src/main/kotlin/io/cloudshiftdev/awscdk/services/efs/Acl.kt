@@ -124,7 +124,7 @@ public interface Acl {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.efs.Acl,
+    cdkObject: software.amazon.awscdk.services.efs.Acl,
   ) : CdkObject(cdkObject), Acl {
     /**
      * Specifies the POSIX group ID to apply to the RootDirectory.

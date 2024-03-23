@@ -56,9 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ApplicationLoadBalancedFargateService internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateService,
+public open class ApplicationLoadBalancedFargateService(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateService,
 ) : ApplicationLoadBalancedServiceBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1450,6 +1449,7 @@ public open class ApplicationLoadBalancedFargateService internal constructor(
 
     internal fun unwrap(wrapped: ApplicationLoadBalancedFargateService):
         software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateService =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateService
   }
 }

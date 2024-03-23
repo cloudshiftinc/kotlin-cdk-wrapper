@@ -31,9 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-defaultviewassociation.html)
  */
-public open class CfnDefaultViewAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociation,
+public open class CfnDefaultViewAssociation(
+  cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -150,6 +149,7 @@ public open class CfnDefaultViewAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnDefaultViewAssociation):
         software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociation
   }
 }

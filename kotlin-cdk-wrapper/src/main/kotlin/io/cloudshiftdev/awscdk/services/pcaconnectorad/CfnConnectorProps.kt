@@ -158,7 +158,7 @@ public interface CfnConnectorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnConnectorProps,
+    cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnConnectorProps,
   ) : CdkObject(cdkObject), CfnConnectorProps {
     /**
      * The Amazon Resource Name (ARN) of the certificate authority being used.

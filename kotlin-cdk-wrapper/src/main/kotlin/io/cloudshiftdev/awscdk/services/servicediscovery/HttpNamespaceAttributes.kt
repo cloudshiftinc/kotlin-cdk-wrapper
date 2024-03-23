@@ -90,8 +90,7 @@ public interface HttpNamespaceAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicediscovery.HttpNamespaceAttributes,
+    cdkObject: software.amazon.awscdk.services.servicediscovery.HttpNamespaceAttributes,
   ) : CdkObject(cdkObject), HttpNamespaceAttributes {
     /**
      * Namespace ARN for the Namespace.

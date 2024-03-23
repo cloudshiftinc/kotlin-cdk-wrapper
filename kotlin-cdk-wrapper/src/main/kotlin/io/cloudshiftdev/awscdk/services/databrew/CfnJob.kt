@@ -169,8 +169,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html)
  */
-public open class CfnJob internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.databrew.CfnJob,
+public open class CfnJob(
+  cdkObject: software.amazon.awscdk.services.databrew.CfnJob,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1378,7 +1378,7 @@ public open class CfnJob internal constructor(
         CfnJob(cdkObject)
 
     internal fun unwrap(wrapped: CfnJob): software.amazon.awscdk.services.databrew.CfnJob =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.databrew.CfnJob
   }
 
   /**
@@ -1450,8 +1450,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.AllowedStatisticsProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.AllowedStatisticsProperty,
     ) : CdkObject(cdkObject), AllowedStatisticsProperty {
       /**
        * One or more column statistics to allow for columns that contain detected entities.
@@ -1553,8 +1552,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.ColumnSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.ColumnSelectorProperty,
     ) : CdkObject(cdkObject), ColumnSelectorProperty {
       /**
        * The name of a column from a dataset.
@@ -1750,8 +1748,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.ColumnStatisticsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.ColumnStatisticsConfigurationProperty,
     ) : CdkObject(cdkObject), ColumnStatisticsConfigurationProperty {
       /**
        * List of column selectors.
@@ -1847,8 +1844,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.CsvOutputOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.CsvOutputOptionsProperty,
     ) : CdkObject(cdkObject), CsvOutputOptionsProperty {
       /**
        * A single character that specifies the delimiter used to create CSV job output.
@@ -2141,8 +2137,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.DataCatalogOutputProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.DataCatalogOutputProperty,
     ) : CdkObject(cdkObject), DataCatalogOutputProperty {
       /**
        * The unique identifier of the AWS account that holds the Data Catalog that stores the data.
@@ -2355,8 +2350,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.DatabaseOutputProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.DatabaseOutputProperty,
     ) : CdkObject(cdkObject), DatabaseOutputProperty {
       /**
        * Represents options that specify how and where DataBrew writes the database output generated
@@ -2517,8 +2511,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.DatabaseTableOutputOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.DatabaseTableOutputOptionsProperty,
     ) : CdkObject(cdkObject), DatabaseTableOutputOptionsProperty {
       /**
        * A prefix for the name of a table DataBrew will create in the database.
@@ -2799,8 +2792,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.EntityDetectorConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.EntityDetectorConfigurationProperty,
     ) : CdkObject(cdkObject), EntityDetectorConfigurationProperty {
       /**
        * Configuration of statistics that are allowed to be run on columns that contain detected
@@ -2970,7 +2962,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnJob.JobSampleProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.JobSampleProperty,
     ) : CdkObject(cdkObject), JobSampleProperty {
       /**
        * A value that determines whether the profile job is run on the entire dataset or a specified
@@ -3105,8 +3097,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.OutputFormatOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.OutputFormatOptionsProperty,
     ) : CdkObject(cdkObject), OutputFormatOptionsProperty {
       /**
        * Represents a set of options that define the structure of comma-separated value (CSV) job
@@ -3226,8 +3217,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.OutputLocationProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.OutputLocationProperty,
     ) : CdkObject(cdkObject), OutputLocationProperty {
       /**
        * The Amazon S3 bucket name.
@@ -3539,7 +3529,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnJob.OutputProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.OutputProperty,
     ) : CdkObject(cdkObject), OutputProperty {
       /**
        * The compression algorithm used to compress the output text of the job.
@@ -3935,8 +3925,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.ProfileConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.ProfileConfigurationProperty,
     ) : CdkObject(cdkObject), ProfileConfigurationProperty {
       /**
        * List of configurations for column evaluations.
@@ -4073,7 +4062,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnJob.RecipeProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.RecipeProperty,
     ) : CdkObject(cdkObject), RecipeProperty {
       /**
        * The unique name for the recipe.
@@ -4200,7 +4189,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnJob.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * The Amazon S3 bucket name.
@@ -4335,8 +4324,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.S3TableOutputOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.S3TableOutputOptionsProperty,
     ) : CdkObject(cdkObject), S3TableOutputOptionsProperty {
       /**
        * Represents an Amazon S3 location (bucket name and object key) where DataBrew can write
@@ -4450,8 +4438,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.StatisticOverrideProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.StatisticOverrideProperty,
     ) : CdkObject(cdkObject), StatisticOverrideProperty {
       /**
        * A map that includes overrides of an evaluation’s parameters.
@@ -4607,8 +4594,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.StatisticsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.StatisticsConfigurationProperty,
     ) : CdkObject(cdkObject), StatisticsConfigurationProperty {
       /**
        * List of included evaluations.
@@ -4737,8 +4723,7 @@ public open class CfnJob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnJob.ValidationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnJob.ValidationConfigurationProperty,
     ) : CdkObject(cdkObject), ValidationConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) for the ruleset to be validated in the profile job.

@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class ScalableTaskCount internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.ScalableTaskCount,
+public open class ScalableTaskCount(
+  cdkObject: software.amazon.awscdk.services.ecs.ScalableTaskCount,
 ) : BaseScalableAttribute(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -324,6 +324,7 @@ public open class ScalableTaskCount internal constructor(
         ScalableTaskCount = ScalableTaskCount(cdkObject)
 
     internal fun unwrap(wrapped: ScalableTaskCount):
-        software.amazon.awscdk.services.ecs.ScalableTaskCount = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.ScalableTaskCount = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.ScalableTaskCount
   }
 }

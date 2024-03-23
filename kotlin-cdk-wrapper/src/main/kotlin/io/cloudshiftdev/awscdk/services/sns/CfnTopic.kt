@@ -67,8 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html)
  */
-public open class CfnTopic internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sns.CfnTopic,
+public open class CfnTopic(
+  cdkObject: software.amazon.awscdk.services.sns.CfnTopic,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sns.CfnTopic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -950,7 +950,7 @@ public open class CfnTopic internal constructor(
         CfnTopic(cdkObject)
 
     internal fun unwrap(wrapped: CfnTopic): software.amazon.awscdk.services.sns.CfnTopic =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sns.CfnTopic
   }
 
   /**
@@ -1089,7 +1089,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sns.CfnTopic.LoggingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sns.CfnTopic.LoggingConfigProperty,
     ) : CdkObject(cdkObject), LoggingConfigProperty {
       /**
        * The IAM role ARN to be used when logging failed message deliveries in Amazon CloudWatch.
@@ -1249,7 +1249,7 @@ public open class CfnTopic internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sns.CfnTopic.SubscriptionProperty,
+      cdkObject: software.amazon.awscdk.services.sns.CfnTopic.SubscriptionProperty,
     ) : CdkObject(cdkObject), SubscriptionProperty {
       /**
        * The endpoint that receives notifications from the Amazon SNS topic.

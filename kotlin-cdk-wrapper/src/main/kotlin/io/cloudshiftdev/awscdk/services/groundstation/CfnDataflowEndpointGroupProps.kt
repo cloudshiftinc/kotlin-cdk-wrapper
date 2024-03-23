@@ -226,8 +226,7 @@ public interface CfnDataflowEndpointGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroupProps,
+    cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroupProps,
   ) : CdkObject(cdkObject), CfnDataflowEndpointGroupProps {
     /**
      * Amount of time, in seconds, after a contact ends that the Ground Station Dataflow Endpoint

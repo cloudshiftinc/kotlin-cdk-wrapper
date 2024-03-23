@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html)
  */
-public open class CfnModelPackageGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackageGroup,
+public open class CfnModelPackageGroup(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackageGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -291,6 +291,7 @@ public open class CfnModelPackageGroup internal constructor(
         CfnModelPackageGroup = CfnModelPackageGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnModelPackageGroup):
-        software.amazon.awscdk.services.sagemaker.CfnModelPackageGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnModelPackageGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnModelPackageGroup
   }
 }

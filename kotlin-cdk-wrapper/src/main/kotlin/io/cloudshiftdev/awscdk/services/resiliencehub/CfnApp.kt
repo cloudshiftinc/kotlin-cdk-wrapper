@@ -84,8 +84,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-app.html)
  */
-public open class CfnApp internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp,
+public open class CfnApp(
+  cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1072,7 +1072,7 @@ public open class CfnApp internal constructor(
         CfnApp(cdkObject)
 
     internal fun unwrap(wrapped: CfnApp): software.amazon.awscdk.services.resiliencehub.CfnApp =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.resiliencehub.CfnApp
   }
 
   /**
@@ -1194,8 +1194,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty,
+      cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty,
     ) : CdkObject(cdkObject), EventSubscriptionProperty {
       /**
        * The type of event you would like to subscribe and get notification for.
@@ -1430,8 +1429,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty,
+      cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty,
     ) : CdkObject(cdkObject), PermissionModelProperty {
       /**
        * Defines a list of role Amazon Resource Names (ARNs) to be used in other accounts.
@@ -1695,8 +1693,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty,
+      cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty,
     ) : CdkObject(cdkObject), PhysicalResourceIdProperty {
       /**
        * The AWS account that owns the physical resource.
@@ -1982,8 +1979,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty,
+      cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty,
     ) : CdkObject(cdkObject), ResourceMappingProperty {
       /**
        * Name of the Amazon Elastic Kubernetes Service cluster and namespace that this resource is

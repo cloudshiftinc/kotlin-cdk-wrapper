@@ -355,7 +355,7 @@ public interface CorsOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CorsOptions,
+    cdkObject: software.amazon.awscdk.services.apigateway.CorsOptions,
   ) : CdkObject(cdkObject), CorsOptions {
     /**
      * The Access-Control-Allow-Credentials response header tells browsers whether to expose the

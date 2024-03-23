@@ -122,7 +122,7 @@ public interface UtilizationScalingProps : BaseTargetTrackingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.UtilizationScalingProps,
+    cdkObject: software.amazon.awscdk.services.dynamodb.UtilizationScalingProps,
   ) : CdkObject(cdkObject), UtilizationScalingProps {
     /**
      * Indicates whether scale in by the target tracking policy is disabled.

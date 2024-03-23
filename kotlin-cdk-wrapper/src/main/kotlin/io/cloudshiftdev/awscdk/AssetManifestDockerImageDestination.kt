@@ -116,7 +116,7 @@ public interface AssetManifestDockerImageDestination {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.AssetManifestDockerImageDestination,
+    cdkObject: software.amazon.awscdk.AssetManifestDockerImageDestination,
   ) : CdkObject(cdkObject), AssetManifestDockerImageDestination {
     /**
      * Prefix to add to the asset hash to make the Docker image tag.

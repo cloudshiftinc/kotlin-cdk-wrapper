@@ -95,7 +95,7 @@ public interface ApiDefinitionS3Location {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinitionS3Location,
+    cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinitionS3Location,
   ) : CdkObject(cdkObject), ApiDefinitionS3Location {
     /**
      * The S3 bucket.

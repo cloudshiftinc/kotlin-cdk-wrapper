@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EcsFargateContainerDefinition internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.batch.EcsFargateContainerDefinition,
+public open class EcsFargateContainerDefinition(
+  cdkObject: software.amazon.awscdk.services.batch.EcsFargateContainerDefinition,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IEcsFargateContainerDefinition,
     IEcsContainerDefinition {
   public constructor(
@@ -670,6 +669,7 @@ public open class EcsFargateContainerDefinition internal constructor(
         EcsFargateContainerDefinition = EcsFargateContainerDefinition(cdkObject)
 
     internal fun unwrap(wrapped: EcsFargateContainerDefinition):
-        software.amazon.awscdk.services.batch.EcsFargateContainerDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.EcsFargateContainerDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.EcsFargateContainerDefinition
   }
 }

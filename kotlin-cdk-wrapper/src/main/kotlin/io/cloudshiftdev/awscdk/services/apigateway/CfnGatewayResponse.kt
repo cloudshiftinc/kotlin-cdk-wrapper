@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html)
  */
-public open class CfnGatewayResponse internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnGatewayResponse,
+public open class CfnGatewayResponse(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnGatewayResponse,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -326,6 +326,7 @@ public open class CfnGatewayResponse internal constructor(
         CfnGatewayResponse = CfnGatewayResponse(cdkObject)
 
     internal fun unwrap(wrapped: CfnGatewayResponse):
-        software.amazon.awscdk.services.apigateway.CfnGatewayResponse = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CfnGatewayResponse = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnGatewayResponse
   }
 }

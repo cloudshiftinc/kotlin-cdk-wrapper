@@ -128,7 +128,7 @@ public interface CfnDestinationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.CfnDestinationProps,
+    cdkObject: software.amazon.awscdk.services.logs.CfnDestinationProps,
   ) : CdkObject(cdkObject), CfnDestinationProps {
     /**
      * The name of the destination.

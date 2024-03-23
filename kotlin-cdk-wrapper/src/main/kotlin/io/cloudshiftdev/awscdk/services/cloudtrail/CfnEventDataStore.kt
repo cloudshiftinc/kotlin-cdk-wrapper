@@ -69,8 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html)
  */
-public open class CfnEventDataStore internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore,
+public open class CfnEventDataStore(
+  cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudtrail.CfnEventDataStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1225,7 +1225,8 @@ public open class CfnEventDataStore internal constructor(
         CfnEventDataStore = CfnEventDataStore(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventDataStore):
-        software.amazon.awscdk.services.cloudtrail.CfnEventDataStore = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudtrail.CfnEventDataStore = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudtrail.CfnEventDataStore
   }
 
   /**
@@ -1368,8 +1369,7 @@ public open class CfnEventDataStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty,
     ) : CdkObject(cdkObject), AdvancedEventSelectorProperty {
       /**
        * Contains all selector statements in an advanced event selector.
@@ -3016,8 +3016,7 @@ public open class CfnEventDataStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty,
     ) : CdkObject(cdkObject), AdvancedFieldSelectorProperty {
       /**
        * An operator that includes events that match the last few characters of the event record
@@ -3615,8 +3614,7 @@ public open class CfnEventDataStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty,
     ) : CdkObject(cdkObject), InsightSelectorProperty {
       /**
        * The type of Insights events to log on an event data store. `ApiCallRateInsight` and

@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-session.html)
  */
-public open class CfnSession internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.macie.CfnSession,
+public open class CfnSession(
+  cdkObject: software.amazon.awscdk.services.macie.CfnSession,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.macie.CfnSession(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -206,6 +206,6 @@ public open class CfnSession internal constructor(
         CfnSession(cdkObject)
 
     internal fun unwrap(wrapped: CfnSession): software.amazon.awscdk.services.macie.CfnSession =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.macie.CfnSession
   }
 }

@@ -17,7 +17,7 @@ import kotlin.String
  */
 public interface IFargateTaskDefinition : ITaskDefinition {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.IFargateTaskDefinition,
+    cdkObject: software.amazon.awscdk.services.ecs.IFargateTaskDefinition,
   ) : CdkObject(cdkObject), IFargateTaskDefinition {
     /**
      * Apply the given removal policy to this resource.

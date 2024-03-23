@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-authpolicy.html)
  */
-public open class CfnAuthPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnAuthPolicy,
+public open class CfnAuthPolicy(
+  cdkObject: software.amazon.awscdk.services.vpclattice.CfnAuthPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -173,6 +173,7 @@ public open class CfnAuthPolicy internal constructor(
         CfnAuthPolicy = CfnAuthPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnAuthPolicy):
-        software.amazon.awscdk.services.vpclattice.CfnAuthPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.vpclattice.CfnAuthPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.vpclattice.CfnAuthPolicy
   }
 }

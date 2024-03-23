@@ -112,7 +112,7 @@ public interface EdgeLambda {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.EdgeLambda,
+    cdkObject: software.amazon.awscdk.services.cloudfront.EdgeLambda,
   ) : CdkObject(cdkObject), EdgeLambda {
     /**
      * The type of event in response to which should the function be invoked.

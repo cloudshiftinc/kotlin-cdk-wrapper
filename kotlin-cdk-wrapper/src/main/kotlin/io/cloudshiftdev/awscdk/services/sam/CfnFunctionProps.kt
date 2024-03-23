@@ -1148,7 +1148,7 @@ public interface CfnFunctionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sam.CfnFunctionProps,
+    cdkObject: software.amazon.awscdk.services.sam.CfnFunctionProps,
   ) : CdkObject(cdkObject), CfnFunctionProps {
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-function.html#cfn-serverless-function-architectures)

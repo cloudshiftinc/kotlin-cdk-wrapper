@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * highPriorityQueue.addComputeEnvironment(sharedComputeEnv, 1);
  * ```
  */
-public open class FargateComputeEnvironment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.FargateComputeEnvironment,
+public open class FargateComputeEnvironment(
+  cdkObject: software.amazon.awscdk.services.batch.FargateComputeEnvironment,
 ) : Resource(cdkObject), IFargateComputeEnvironment, IManagedComputeEnvironment, IComputeEnvironment
     {
   public constructor(
@@ -617,6 +617,7 @@ public open class FargateComputeEnvironment internal constructor(
         FargateComputeEnvironment = FargateComputeEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: FargateComputeEnvironment):
-        software.amazon.awscdk.services.batch.FargateComputeEnvironment = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.FargateComputeEnvironment = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.FargateComputeEnvironment
   }
 }

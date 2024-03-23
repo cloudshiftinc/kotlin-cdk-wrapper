@@ -74,8 +74,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html)
  */
-public open class CfnFunctionConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration,
+public open class CfnFunctionConfiguration(
+  cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -755,7 +755,8 @@ public open class CfnFunctionConfiguration internal constructor(
         CfnFunctionConfiguration = CfnFunctionConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnFunctionConfiguration):
-        software.amazon.awscdk.services.appsync.CfnFunctionConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.CfnFunctionConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.CfnFunctionConfiguration
   }
 
   /**
@@ -843,8 +844,7 @@ public open class CfnFunctionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty,
     ) : CdkObject(cdkObject), AppSyncRuntimeProperty {
       /**
        * The `name` of the runtime to use.
@@ -940,8 +940,7 @@ public open class CfnFunctionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty,
     ) : CdkObject(cdkObject), LambdaConflictHandlerConfigProperty {
       /**
        * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
@@ -1133,8 +1132,7 @@ public open class CfnFunctionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty,
     ) : CdkObject(cdkObject), SyncConfigProperty {
       /**
        * The Conflict Detection strategy to use.

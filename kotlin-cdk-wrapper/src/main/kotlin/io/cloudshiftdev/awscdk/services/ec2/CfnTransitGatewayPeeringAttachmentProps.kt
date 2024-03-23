@@ -157,8 +157,7 @@ public interface CfnTransitGatewayPeeringAttachmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachmentProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachmentProps,
   ) : CdkObject(cdkObject), CfnTransitGatewayPeeringAttachmentProps {
     /**
      * The ID of the AWS account that owns the transit gateway.

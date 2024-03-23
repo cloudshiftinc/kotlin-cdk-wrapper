@@ -35,8 +35,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class Duration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Duration,
+public open class Duration(
+  cdkObject: software.amazon.awscdk.Duration,
 ) : CdkObject(cdkObject) {
   /**
    * Returns stringified number of duration.
@@ -243,6 +243,7 @@ public open class Duration internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Duration): Duration = Duration(cdkObject)
 
-    internal fun unwrap(wrapped: Duration): software.amazon.awscdk.Duration = wrapped.cdkObject
+    internal fun unwrap(wrapped: Duration): software.amazon.awscdk.Duration = wrapped.cdkObject as
+        software.amazon.awscdk.Duration
   }
 }

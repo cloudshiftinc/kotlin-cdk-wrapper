@@ -168,7 +168,7 @@ public interface ParameterOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.ParameterOptions,
+    cdkObject: software.amazon.awscdk.services.ssm.ParameterOptions,
   ) : CdkObject(cdkObject), ParameterOptions {
     /**
      * A regular expression used to validate the parameter value.

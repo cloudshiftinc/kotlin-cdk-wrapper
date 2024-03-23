@@ -84,8 +84,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html)
  */
-public open class CfnPatchBaseline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline,
+public open class CfnPatchBaseline(
+  cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1035,7 +1035,8 @@ public open class CfnPatchBaseline internal constructor(
         CfnPatchBaseline = CfnPatchBaseline(cdkObject)
 
     internal fun unwrap(wrapped: CfnPatchBaseline):
-        software.amazon.awscdk.services.ssm.CfnPatchBaseline = wrapped.cdkObject
+        software.amazon.awscdk.services.ssm.CfnPatchBaseline = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssm.CfnPatchBaseline
   }
 
   /**
@@ -1124,8 +1125,7 @@ public open class CfnPatchBaseline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty,
     ) : CdkObject(cdkObject), PatchFilterGroupProperty {
       /**
        * The set of patch filters that make up the group.
@@ -1271,8 +1271,7 @@ public open class CfnPatchBaseline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty,
     ) : CdkObject(cdkObject), PatchFilterProperty {
       /**
        * The key for the filter.
@@ -1480,8 +1479,7 @@ public open class CfnPatchBaseline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty,
     ) : CdkObject(cdkObject), PatchSourceProperty {
       /**
        * The value of the yum repo configuration. For example:.
@@ -1631,8 +1629,7 @@ public open class CfnPatchBaseline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty,
     ) : CdkObject(cdkObject), RuleGroupProperty {
       /**
        * The rules that make up the rule group.
@@ -1897,7 +1894,7 @@ public open class CfnPatchBaseline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty,
     ) : CdkObject(cdkObject), RuleProperty {
       /**
        * The number of days after the release date of each patch matched by the rule that the patch

@@ -112,7 +112,7 @@ public interface IRule : IResource {
   public fun onReEvaluationStatus(id: String, options: OnEventOptions.Builder.() -> Unit): Rule
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.config.IRule,
+    cdkObject: software.amazon.awscdk.services.config.IRule,
   ) : CdkObject(cdkObject), IRule {
     /**
      * Apply the given removal policy to this resource.

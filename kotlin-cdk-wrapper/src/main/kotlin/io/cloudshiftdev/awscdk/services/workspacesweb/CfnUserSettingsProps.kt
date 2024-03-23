@@ -367,7 +367,7 @@ public interface CfnUserSettingsProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettingsProps,
+    cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettingsProps,
   ) : CdkObject(cdkObject), CfnUserSettingsProps {
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-additionalencryptioncontext)

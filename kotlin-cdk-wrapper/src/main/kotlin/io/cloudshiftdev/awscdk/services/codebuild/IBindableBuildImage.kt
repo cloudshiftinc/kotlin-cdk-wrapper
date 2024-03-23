@@ -45,7 +45,7 @@ public interface IBindableBuildImage : IBuildImage {
   ): BuildImageConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.IBindableBuildImage,
+    cdkObject: software.amazon.awscdk.services.codebuild.IBindableBuildImage,
   ) : CdkObject(cdkObject), IBindableBuildImage {
     /**
      * Function that allows the build image access to the construct tree.

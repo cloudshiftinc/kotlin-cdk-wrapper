@@ -126,7 +126,7 @@ public interface CfnApplicationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.CfnApplicationProps,
+    cdkObject: software.amazon.awscdk.services.appconfig.CfnApplicationProps,
   ) : CdkObject(cdkObject), CfnApplicationProps {
     /**
      * A description of the application.

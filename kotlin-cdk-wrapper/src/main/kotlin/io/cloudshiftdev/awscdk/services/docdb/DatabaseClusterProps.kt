@@ -676,7 +676,7 @@ public interface DatabaseClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.docdb.DatabaseClusterProps,
+    cdkObject: software.amazon.awscdk.services.docdb.DatabaseClusterProps,
   ) : CdkObject(cdkObject), DatabaseClusterProps {
     /**
      * Backup settings.

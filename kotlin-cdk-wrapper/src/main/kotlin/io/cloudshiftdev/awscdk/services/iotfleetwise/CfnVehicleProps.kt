@@ -205,7 +205,7 @@ public interface CfnVehicleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnVehicleProps,
+    cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnVehicleProps,
   ) : CdkObject(cdkObject), CfnVehicleProps {
     /**
      * (Optional) An option to create a new AWS IoT thing when creating a vehicle, or to validate an

@@ -26,8 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "metadataKey", "MetadataValue");
  * ```
  */
-public open class CfnCondition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnCondition,
+public open class CfnCondition(
+  cdkObject: software.amazon.awscdk.CfnCondition,
 ) : CfnElement(cdkObject), ICfnConditionExpression, IResolvable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.CfnCondition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -120,6 +120,6 @@ public open class CfnCondition internal constructor(
         CfnCondition(cdkObject)
 
     internal fun unwrap(wrapped: CfnCondition): software.amazon.awscdk.CfnCondition =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.CfnCondition
   }
 }

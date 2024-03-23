@@ -152,7 +152,7 @@ public interface CfnMacroProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnMacroProps,
+    cdkObject: software.amazon.awscdk.CfnMacroProps,
   ) : CdkObject(cdkObject), CfnMacroProps {
     /**
      * A description of the macro.

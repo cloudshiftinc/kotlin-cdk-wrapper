@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ScheduledAction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.ScheduledAction,
+public open class ScheduledAction(
+  cdkObject: software.amazon.awscdk.services.autoscaling.ScheduledAction,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -288,6 +288,7 @@ public open class ScheduledAction internal constructor(
         ScheduledAction = ScheduledAction(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledAction):
-        software.amazon.awscdk.services.autoscaling.ScheduledAction = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.ScheduledAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.ScheduledAction
   }
 }

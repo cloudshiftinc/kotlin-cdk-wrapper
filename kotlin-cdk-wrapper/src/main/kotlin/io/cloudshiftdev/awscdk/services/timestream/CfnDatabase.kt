@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html)
  */
-public open class CfnDatabase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.timestream.CfnDatabase,
+public open class CfnDatabase(
+  cdkObject: software.amazon.awscdk.services.timestream.CfnDatabase,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.timestream.CfnDatabase(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -238,6 +238,7 @@ public open class CfnDatabase internal constructor(
         CfnDatabase = CfnDatabase(cdkObject)
 
     internal fun unwrap(wrapped: CfnDatabase):
-        software.amazon.awscdk.services.timestream.CfnDatabase = wrapped.cdkObject
+        software.amazon.awscdk.services.timestream.CfnDatabase = wrapped.cdkObject as
+        software.amazon.awscdk.services.timestream.CfnDatabase
   }
 }

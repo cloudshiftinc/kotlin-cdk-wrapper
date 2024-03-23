@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html)
  */
-public open class CfnWebACL internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL,
+public open class CfnWebACL(
+  cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -399,7 +399,7 @@ public open class CfnWebACL internal constructor(
         = CfnWebACL(cdkObject)
 
     internal fun unwrap(wrapped: CfnWebACL): software.amazon.awscdk.services.waf.regional.CfnWebACL
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.waf.regional.CfnWebACL
   }
 
   /**
@@ -489,7 +489,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * For actions that are associated with a rule, the action that AWS WAF takes when a web
@@ -678,7 +678,7 @@ public open class CfnWebACL internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL.RuleProperty,
+      cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL.RuleProperty,
     ) : CdkObject(cdkObject), RuleProperty {
       /**
        * The action that AWS WAF takes when a web request matches all conditions in the rule, such

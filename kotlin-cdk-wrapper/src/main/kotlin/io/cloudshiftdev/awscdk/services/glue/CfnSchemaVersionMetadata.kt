@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversionmetadata.html)
  */
-public open class CfnSchemaVersionMetadata internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersionMetadata,
+public open class CfnSchemaVersionMetadata(
+  cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersionMetadata,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -183,6 +183,7 @@ public open class CfnSchemaVersionMetadata internal constructor(
         CfnSchemaVersionMetadata = CfnSchemaVersionMetadata(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchemaVersionMetadata):
-        software.amazon.awscdk.services.glue.CfnSchemaVersionMetadata = wrapped.cdkObject
+        software.amazon.awscdk.services.glue.CfnSchemaVersionMetadata = wrapped.cdkObject as
+        software.amazon.awscdk.services.glue.CfnSchemaVersionMetadata
   }
 }

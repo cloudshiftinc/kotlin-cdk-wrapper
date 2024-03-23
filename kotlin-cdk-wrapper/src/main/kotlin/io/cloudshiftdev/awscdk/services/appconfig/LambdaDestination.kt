@@ -23,8 +23,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class LambdaDestination internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.LambdaDestination,
+public open class LambdaDestination(
+  cdkObject: software.amazon.awscdk.services.appconfig.LambdaDestination,
 ) : CdkObject(cdkObject), IEventDestination {
   public constructor(func: IFunction) :
       this(software.amazon.awscdk.services.appconfig.LambdaDestination(func.let(IFunction::unwrap))
@@ -51,6 +51,7 @@ public open class LambdaDestination internal constructor(
         LambdaDestination = LambdaDestination(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDestination):
-        software.amazon.awscdk.services.appconfig.LambdaDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.appconfig.LambdaDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.appconfig.LambdaDestination
   }
 }

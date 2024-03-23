@@ -48,7 +48,7 @@ public interface IParameter : IResource {
   public fun parameterType(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.IParameter,
+    cdkObject: software.amazon.awscdk.services.ssm.IParameter,
   ) : CdkObject(cdkObject), IParameter {
     /**
      * Apply the given removal policy to this resource.

@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html)
  */
-public open class CfnThingPrincipalAttachment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnThingPrincipalAttachment,
+public open class CfnThingPrincipalAttachment(
+  cdkObject: software.amazon.awscdk.services.iot.CfnThingPrincipalAttachment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -167,6 +167,7 @@ public open class CfnThingPrincipalAttachment internal constructor(
         CfnThingPrincipalAttachment = CfnThingPrincipalAttachment(cdkObject)
 
     internal fun unwrap(wrapped: CfnThingPrincipalAttachment):
-        software.amazon.awscdk.services.iot.CfnThingPrincipalAttachment = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnThingPrincipalAttachment = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnThingPrincipalAttachment
   }
 }

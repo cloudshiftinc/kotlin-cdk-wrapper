@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-project.html)
  */
-public open class CfnProject internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot1click.CfnProject,
+public open class CfnProject(
+  cdkObject: software.amazon.awscdk.services.iot1click.CfnProject,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -271,7 +271,7 @@ public open class CfnProject internal constructor(
         CfnProject(cdkObject)
 
     internal fun unwrap(wrapped: CfnProject): software.amazon.awscdk.services.iot1click.CfnProject =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iot1click.CfnProject
   }
 
   /**
@@ -342,8 +342,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty,
+      cdkObject: software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty,
     ) : CdkObject(cdkObject), DeviceTemplateProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot1click-project-devicetemplate.html#cfn-iot1click-project-devicetemplate-callbackoverrides)
@@ -490,8 +489,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot1click.CfnProject.PlacementTemplateProperty,
+      cdkObject: software.amazon.awscdk.services.iot1click.CfnProject.PlacementTemplateProperty,
     ) : CdkObject(cdkObject), PlacementTemplateProperty {
       /**
        * The default attributes (key-value pairs) to be applied to all placements using this

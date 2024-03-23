@@ -41,8 +41,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class DataProtectionPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.DataProtectionPolicy,
+public open class DataProtectionPolicy(
+  cdkObject: software.amazon.awscdk.services.logs.DataProtectionPolicy,
 ) : CdkObject(cdkObject) {
   public constructor(props: DataProtectionPolicyProps) :
       this(software.amazon.awscdk.services.logs.DataProtectionPolicy(props.let(DataProtectionPolicyProps::unwrap))
@@ -241,6 +241,7 @@ public open class DataProtectionPolicy internal constructor(
         DataProtectionPolicy = DataProtectionPolicy(cdkObject)
 
     internal fun unwrap(wrapped: DataProtectionPolicy):
-        software.amazon.awscdk.services.logs.DataProtectionPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.logs.DataProtectionPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.logs.DataProtectionPolicy
   }
 }

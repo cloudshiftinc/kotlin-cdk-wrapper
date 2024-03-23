@@ -38,8 +38,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class DashboardVariable internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.DashboardVariable,
+public open class DashboardVariable(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.DashboardVariable,
 ) : CdkObject(cdkObject), IVariable {
   public constructor(options: DashboardVariableOptions) :
       this(software.amazon.awscdk.services.cloudwatch.DashboardVariable(options.let(DashboardVariableOptions::unwrap))
@@ -226,6 +226,7 @@ public open class DashboardVariable internal constructor(
         DashboardVariable = DashboardVariable(cdkObject)
 
     internal fun unwrap(wrapped: DashboardVariable):
-        software.amazon.awscdk.services.cloudwatch.DashboardVariable = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.DashboardVariable = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.DashboardVariable
   }
 }

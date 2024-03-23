@@ -72,9 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html)
  */
-public open class CfnCloudFormationProvisionedProduct internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct,
+public open class CfnCloudFormationProvisionedProduct(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -839,7 +838,8 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
 
     internal fun unwrap(wrapped: CfnCloudFormationProvisionedProduct):
         software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct
   }
 
   /**
@@ -917,8 +917,7 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningParameterProperty,
+      cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningParameterProperty,
     ) : CdkObject(cdkObject), ProvisioningParameterProperty {
       /**
        * The parameter key.
@@ -1431,8 +1430,7 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty,
+      cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty,
     ) : CdkObject(cdkObject), ProvisioningPreferencesProperty {
       /**
        * One or more AWS accounts where the provisioned product will be available.

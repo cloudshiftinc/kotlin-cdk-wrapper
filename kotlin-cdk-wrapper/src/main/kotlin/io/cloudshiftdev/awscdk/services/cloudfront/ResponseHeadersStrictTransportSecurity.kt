@@ -166,8 +166,7 @@ public interface ResponseHeadersStrictTransportSecurity {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cloudfront.ResponseHeadersStrictTransportSecurity,
+    cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersStrictTransportSecurity,
   ) : CdkObject(cdkObject), ResponseHeadersStrictTransportSecurity {
     /**
      * A number that CloudFront uses as the value for the max-age directive in the

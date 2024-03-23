@@ -204,7 +204,7 @@ public interface JobDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.JobDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.batch.JobDefinitionProps,
   ) : CdkObject(cdkObject), JobDefinitionProps {
     /**
      * The name of this job definition.

@@ -105,7 +105,7 @@ public interface CfnSecurityKeyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnSecurityKeyProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnSecurityKeyProps,
   ) : CdkObject(cdkObject), CfnSecurityKeyProps {
     /**
      * The Amazon Resource Name (ARN) of the instance.

@@ -18,9 +18,8 @@ import kotlin.String
  * LaunchTemplateSpecialVersions();
  * ```
  */
-public open class LaunchTemplateSpecialVersions internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.LaunchTemplateSpecialVersions,
+public open class LaunchTemplateSpecialVersions(
+  cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateSpecialVersions,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.ec2.LaunchTemplateSpecialVersions()
   )
@@ -36,6 +35,7 @@ public open class LaunchTemplateSpecialVersions internal constructor(
         LaunchTemplateSpecialVersions = LaunchTemplateSpecialVersions(cdkObject)
 
     internal fun unwrap(wrapped: LaunchTemplateSpecialVersions):
-        software.amazon.awscdk.services.ec2.LaunchTemplateSpecialVersions = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.LaunchTemplateSpecialVersions = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.LaunchTemplateSpecialVersions
   }
 }

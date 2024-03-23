@@ -59,9 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-dataintegration.html)
  */
-public open class CfnDataIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.appintegrations.CfnDataIntegration,
+public open class CfnDataIntegration(
+  cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -531,7 +530,8 @@ public open class CfnDataIntegration internal constructor(
         CfnDataIntegration = CfnDataIntegration(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataIntegration):
-        software.amazon.awscdk.services.appintegrations.CfnDataIntegration = wrapped.cdkObject
+        software.amazon.awscdk.services.appintegrations.CfnDataIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.appintegrations.CfnDataIntegration
   }
 
   /**
@@ -620,8 +620,7 @@ public open class CfnDataIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty,
     ) : CdkObject(cdkObject), FileConfigurationProperty {
       /**
        * Restrictions for what files should be pulled from the source.
@@ -754,8 +753,7 @@ public open class CfnDataIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty,
     ) : CdkObject(cdkObject), ScheduleConfigProperty {
       /**
        * The start date for objects to import in the first flow run as an Unix/epoch timestamp in

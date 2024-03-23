@@ -66,6 +66,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .destinationPrefixListId("destinationPrefixListId")
  * .destinationSecurityGroupId("destinationSecurityGroupId")
  * .fromPort(123)
+ * .sourceSecurityGroupId("sourceSecurityGroupId")
  * .toPort(123)
  * .build()))
  * .securityGroupIngress(List.of(IngressProperty.builder()
@@ -91,8 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html)
  */
-public open class CfnSecurityGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup,
+public open class CfnSecurityGroup(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -116,7 +117,7 @@ public open class CfnSecurityGroup internal constructor(
   public open fun attrGroupId(): String = unwrap(this).getAttrGroupId()
 
   /**
-   *
+   * The group name or group ID depending on whether the SG is created in default or specific VPC.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -520,7 +521,8 @@ public open class CfnSecurityGroup internal constructor(
         CfnSecurityGroup = CfnSecurityGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityGroup):
-        software.amazon.awscdk.services.ec2.CfnSecurityGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnSecurityGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnSecurityGroup
   }
 
   /**
@@ -557,6 +559,7 @@ public open class CfnSecurityGroup internal constructor(
    * .destinationPrefixListId("destinationPrefixListId")
    * .destinationSecurityGroupId("destinationSecurityGroupId")
    * .fromPort(123)
+   * .sourceSecurityGroupId("sourceSecurityGroupId")
    * .toPort(123)
    * .build();
    * ```
@@ -652,6 +655,11 @@ public open class CfnSecurityGroup internal constructor(
     public fun ipProtocol(): String
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-sourcesecuritygroupid)
+     */
+    public fun sourceSecurityGroupId(): String? = unwrap(this).getSourceSecurityGroupId()
+
+    /**
      * If the protocol is TCP or UDP, this is the end of the port range.
      *
      * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the start
@@ -732,6 +740,11 @@ public open class CfnSecurityGroup internal constructor(
        * traffic for all types and codes is allowed.
        */
       public fun ipProtocol(ipProtocol: String)
+
+      /**
+       * @param sourceSecurityGroupId the value to be set.
+       */
+      public fun sourceSecurityGroupId(sourceSecurityGroupId: String)
 
       /**
        * @param toPort If the protocol is TCP or UDP, this is the end of the port range.
@@ -828,6 +841,13 @@ public open class CfnSecurityGroup internal constructor(
       }
 
       /**
+       * @param sourceSecurityGroupId the value to be set.
+       */
+      override fun sourceSecurityGroupId(sourceSecurityGroupId: String) {
+        cdkBuilder.sourceSecurityGroupId(sourceSecurityGroupId)
+      }
+
+      /**
        * @param toPort If the protocol is TCP or UDP, this is the end of the port range.
        * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the
        * start port is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
@@ -841,7 +861,7 @@ public open class CfnSecurityGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty,
     ) : CdkObject(cdkObject), EgressProperty {
       /**
        * The IPv4 address range, in CIDR format.
@@ -930,6 +950,11 @@ public open class CfnSecurityGroup internal constructor(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-ipprotocol)
        */
       override fun ipProtocol(): String = unwrap(this).getIpProtocol()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-sourcesecuritygroupid)
+       */
+      override fun sourceSecurityGroupId(): String? = unwrap(this).getSourceSecurityGroupId()
 
       /**
        * If the protocol is TCP or UDP, this is the end of the port range.
@@ -1342,7 +1367,7 @@ public open class CfnSecurityGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.IngressProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.IngressProperty,
     ) : CdkObject(cdkObject), IngressProperty {
       /**
        * The IPv4 address range, in CIDR format.

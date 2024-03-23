@@ -510,7 +510,7 @@ public interface AwsCustomResourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.customresources.AwsCustomResourceProps,
+    cdkObject: software.amazon.awscdk.customresources.AwsCustomResourceProps,
   ) : CdkObject(cdkObject), AwsCustomResourceProps {
     /**
      * A name for the singleton Lambda function implementing this custom resource.

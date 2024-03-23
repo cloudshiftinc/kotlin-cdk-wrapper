@@ -18,8 +18,8 @@ import kotlin.collections.List
  * CachedMethods cachedMethods = CachedMethods.CACHE_GET_HEAD;
  * ```
  */
-public open class CachedMethods internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CachedMethods,
+public open class CachedMethods(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CachedMethods,
 ) : CdkObject(cdkObject) {
   /**
    * HTTP methods supported.
@@ -37,6 +37,7 @@ public open class CachedMethods internal constructor(
         CachedMethods = CachedMethods(cdkObject)
 
     internal fun unwrap(wrapped: CachedMethods):
-        software.amazon.awscdk.services.cloudfront.CachedMethods = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CachedMethods = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CachedMethods
   }
 }

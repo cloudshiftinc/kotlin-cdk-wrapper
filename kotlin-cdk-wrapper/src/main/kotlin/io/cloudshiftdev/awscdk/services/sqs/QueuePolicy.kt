@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class QueuePolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sqs.QueuePolicy,
+public open class QueuePolicy(
+  cdkObject: software.amazon.awscdk.services.sqs.QueuePolicy,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -128,6 +128,6 @@ public open class QueuePolicy internal constructor(
         QueuePolicy(cdkObject)
 
     internal fun unwrap(wrapped: QueuePolicy): software.amazon.awscdk.services.sqs.QueuePolicy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sqs.QueuePolicy
   }
 }

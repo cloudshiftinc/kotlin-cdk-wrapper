@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html)
  */
-public open class CfnSAMLProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CfnSAMLProvider,
+public open class CfnSAMLProvider(
+  cdkObject: software.amazon.awscdk.services.iam.CfnSAMLProvider,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -318,6 +318,7 @@ public open class CfnSAMLProvider internal constructor(
         CfnSAMLProvider = CfnSAMLProvider(cdkObject)
 
     internal fun unwrap(wrapped: CfnSAMLProvider):
-        software.amazon.awscdk.services.iam.CfnSAMLProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.CfnSAMLProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.CfnSAMLProvider
   }
 }

@@ -81,7 +81,7 @@ public interface ReplicaRegion {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.ReplicaRegion,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.ReplicaRegion,
   ) : CdkObject(cdkObject), ReplicaRegion {
     /**
      * The customer-managed encryption key to use for encrypting the secret value.

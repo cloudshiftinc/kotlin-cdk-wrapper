@@ -120,8 +120,7 @@ public interface SparkSubmitJobDriver {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver,
   ) : CdkObject(cdkObject), SparkSubmitJobDriver {
     /**
      * The entry point of job application.

@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html)
  */
-public open class CfnReportPlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan,
+public open class CfnReportPlan(
+  cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -335,7 +335,8 @@ public open class CfnReportPlan internal constructor(
         CfnReportPlan = CfnReportPlan(cdkObject)
 
     internal fun unwrap(wrapped: CfnReportPlan):
-        software.amazon.awscdk.services.backup.CfnReportPlan = wrapped.cdkObject
+        software.amazon.awscdk.services.backup.CfnReportPlan = wrapped.cdkObject as
+        software.amazon.awscdk.services.backup.CfnReportPlan
   }
 
   /**
@@ -460,8 +461,7 @@ public open class CfnReportPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty,
     ) : CdkObject(cdkObject), ReportDeliveryChannelProperty {
       /**
        * A list of the format of your reports: `CSV` , `JSON` , or both.
@@ -694,8 +694,7 @@ public open class CfnReportPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty,
     ) : CdkObject(cdkObject), ReportSettingProperty {
       /**
        * These are the accounts to be included in the report.

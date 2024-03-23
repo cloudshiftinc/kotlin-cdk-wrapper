@@ -142,7 +142,7 @@ public interface OriginBindConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginBindConfig,
+    cdkObject: software.amazon.awscdk.services.cloudfront.OriginBindConfig,
   ) : CdkObject(cdkObject), OriginBindConfig {
     /**
      * The failover configuration for this Origin.

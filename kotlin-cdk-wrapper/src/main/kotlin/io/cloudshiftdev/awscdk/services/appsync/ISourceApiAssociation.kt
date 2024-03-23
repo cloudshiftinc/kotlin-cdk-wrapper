@@ -36,7 +36,7 @@ public interface ISourceApiAssociation : IResource {
   public fun sourceApi(): IGraphqlApi
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.ISourceApiAssociation,
+    cdkObject: software.amazon.awscdk.services.appsync.ISourceApiAssociation,
   ) : CdkObject(cdkObject), ISourceApiAssociation {
     /**
      * Apply the given removal policy to this resource.

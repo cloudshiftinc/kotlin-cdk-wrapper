@@ -323,8 +323,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachmentProps,
+    cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachmentProps,
   ) : CdkObject(cdkObject), CfnUserPoolRiskConfigurationAttachmentProps {
     /**
      * The account takeover risk configuration object, including the `NotifyConfiguration` object

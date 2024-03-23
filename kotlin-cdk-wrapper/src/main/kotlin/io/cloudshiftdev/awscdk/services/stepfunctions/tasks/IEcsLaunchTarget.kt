@@ -35,7 +35,7 @@ public interface IEcsLaunchTarget {
       launchTargetOptions: LaunchTargetBindOptions.Builder.() -> Unit): EcsLaunchTargetConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.IEcsLaunchTarget,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.IEcsLaunchTarget,
   ) : CdkObject(cdkObject), IEcsLaunchTarget {
     /**
      * called when the ECS launch target is configured on RunTask.

@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-permission.html)
  */
-public open class CfnPermission internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ram.CfnPermission,
+public open class CfnPermission(
+  cdkObject: software.amazon.awscdk.services.ram.CfnPermission,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -342,6 +342,6 @@ public open class CfnPermission internal constructor(
         CfnPermission(cdkObject)
 
     internal fun unwrap(wrapped: CfnPermission): software.amazon.awscdk.services.ram.CfnPermission =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ram.CfnPermission
   }
 }

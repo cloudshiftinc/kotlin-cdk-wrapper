@@ -294,7 +294,7 @@ public interface CfnEventSubscriptionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.docdb.CfnEventSubscriptionProps,
+    cdkObject: software.amazon.awscdk.services.docdb.CfnEventSubscriptionProps,
   ) : CdkObject(cdkObject), CfnEventSubscriptionProps {
     /**
      * A Boolean value;

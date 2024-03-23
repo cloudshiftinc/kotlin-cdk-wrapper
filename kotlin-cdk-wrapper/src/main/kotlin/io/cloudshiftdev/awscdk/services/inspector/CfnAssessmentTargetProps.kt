@@ -93,7 +93,7 @@ public interface CfnAssessmentTargetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTargetProps,
+    cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTargetProps,
   ) : CdkObject(cdkObject), CfnAssessmentTargetProps {
     /**
      * The name of the Amazon Inspector assessment target.

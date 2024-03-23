@@ -181,7 +181,7 @@ public interface SingleStateOptions : ParallelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.SingleStateOptions,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.SingleStateOptions,
   ) : CdkObject(cdkObject), SingleStateOptions {
     /**
      * An optional description for this state.

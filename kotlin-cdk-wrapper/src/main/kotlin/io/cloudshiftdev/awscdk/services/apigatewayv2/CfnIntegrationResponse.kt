@@ -43,9 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integrationresponse.html)
  */
-public open class CfnIntegrationResponse internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponse,
+public open class CfnIntegrationResponse(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponse,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -391,6 +390,7 @@ public open class CfnIntegrationResponse internal constructor(
         CfnIntegrationResponse = CfnIntegrationResponse(cdkObject)
 
     internal fun unwrap(wrapped: CfnIntegrationResponse):
-        software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponse = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponse = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponse
   }
 }

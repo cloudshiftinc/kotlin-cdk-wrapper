@@ -488,8 +488,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html)
  */
-public open class CfnCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster,
+public open class CfnCluster(
+  cdkObject: software.amazon.awscdk.services.emr.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1367,6 +1367,8 @@ public open class CfnCluster internal constructor(
     /**
      * The name of the cluster.
      *
+     * This parameter can't contain the characters &lt;, &gt;, $, |, or ` (backtick).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-name)
      * @param name The name of the cluster. 
      */
@@ -1949,6 +1951,8 @@ public open class CfnCluster internal constructor(
     /**
      * The name of the cluster.
      *
+     * This parameter can't contain the characters &lt;, &gt;, $, |, or ` (backtick).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-name)
      * @param name The name of the cluster. 
      */
@@ -2178,7 +2182,7 @@ public open class CfnCluster internal constructor(
         CfnCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCluster): software.amazon.awscdk.services.emr.CfnCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.emr.CfnCluster
   }
 
   /**
@@ -2340,7 +2344,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty,
     ) : CdkObject(cdkObject), ApplicationProperty {
       /**
        * This option is for advanced users only.
@@ -2573,8 +2577,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty,
     ) : CdkObject(cdkObject), AutoScalingPolicyProperty {
       /**
        * The upper and lower Amazon EC2 instance limits for an automatic scaling policy.
@@ -2677,8 +2680,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty,
     ) : CdkObject(cdkObject), AutoTerminationPolicyProperty {
       /**
        * Specifies the amount of idle time in seconds after which the cluster automatically
@@ -2824,8 +2826,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty,
     ) : CdkObject(cdkObject), BootstrapActionConfigProperty {
       /**
        * The name of the bootstrap action.
@@ -3137,8 +3138,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.CloudWatchAlarmDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.CloudWatchAlarmDefinitionProperty,
     ) : CdkObject(cdkObject), CloudWatchAlarmDefinitionProperty {
       /**
        * Determines how the metric specified by `MetricName` is compared to the value specified by
@@ -3423,7 +3423,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ComputeLimitsProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ComputeLimitsProperty,
     ) : CdkObject(cdkObject), ComputeLimitsProperty {
       /**
        * The upper boundary of Amazon EC2 units.
@@ -3646,7 +3646,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty,
     ) : CdkObject(cdkObject), ConfigurationProperty {
       /**
        * The classification within a configuration.
@@ -3817,8 +3817,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty,
     ) : CdkObject(cdkObject), EbsBlockDeviceConfigProperty {
       /**
        * EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that
@@ -3980,8 +3979,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty,
     ) : CdkObject(cdkObject), EbsConfigurationProperty {
       /**
        * An array of Amazon EBS volume specifications attached to a cluster instance.
@@ -4185,8 +4183,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty,
     ) : CdkObject(cdkObject), HadoopJarStepConfigProperty {
       /**
        * A list of command line arguments passed to the JAR file's main function when executed.
@@ -4572,8 +4569,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty,
     ) : CdkObject(cdkObject), InstanceFleetConfigProperty {
       /**
        * The instance type configurations that define the Amazon EC2 instances in the instance
@@ -4860,8 +4856,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty,
     ) : CdkObject(cdkObject), InstanceFleetProvisioningSpecificationsProperty {
       /**
        * The launch specification for On-Demand Instances in the instance fleet, which determines
@@ -5334,8 +5329,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty,
     ) : CdkObject(cdkObject), InstanceGroupConfigProperty {
       /**
        * `AutoScalingPolicy` is a subproperty of the
@@ -5733,8 +5727,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty,
     ) : CdkObject(cdkObject), InstanceTypeConfigProperty {
       /**
        * The bid price for each Amazon EC2 Spot Instance type as defined by `InstanceType` .
@@ -6388,6 +6381,9 @@ public open class CfnCluster internal constructor(
     public fun terminationProtected(): Any? = unwrap(this).getTerminationProtected()
 
     /**
+     * Indicates whether Amazon EMR should gracefully replace core nodes that have degraded within
+     * the cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-unhealthynodereplacement)
      */
     public fun unhealthyNodeReplacement(): Any? = unwrap(this).getUnhealthyNodeReplacement()
@@ -6720,12 +6716,14 @@ public open class CfnCluster internal constructor(
       public fun terminationProtected(terminationProtected: IResolvable)
 
       /**
-       * @param unhealthyNodeReplacement the value to be set.
+       * @param unhealthyNodeReplacement Indicates whether Amazon EMR should gracefully replace core
+       * nodes that have degraded within the cluster.
        */
       public fun unhealthyNodeReplacement(unhealthyNodeReplacement: Boolean)
 
       /**
-       * @param unhealthyNodeReplacement the value to be set.
+       * @param unhealthyNodeReplacement Indicates whether Amazon EMR should gracefully replace core
+       * nodes that have degraded within the cluster.
        */
       public fun unhealthyNodeReplacement(unhealthyNodeReplacement: IResolvable)
     }
@@ -7122,14 +7120,16 @@ public open class CfnCluster internal constructor(
       }
 
       /**
-       * @param unhealthyNodeReplacement the value to be set.
+       * @param unhealthyNodeReplacement Indicates whether Amazon EMR should gracefully replace core
+       * nodes that have degraded within the cluster.
        */
       override fun unhealthyNodeReplacement(unhealthyNodeReplacement: Boolean) {
         cdkBuilder.unhealthyNodeReplacement(unhealthyNodeReplacement)
       }
 
       /**
-       * @param unhealthyNodeReplacement the value to be set.
+       * @param unhealthyNodeReplacement Indicates whether Amazon EMR should gracefully replace core
+       * nodes that have degraded within the cluster.
        */
       override fun unhealthyNodeReplacement(unhealthyNodeReplacement: IResolvable) {
         cdkBuilder.unhealthyNodeReplacement(unhealthyNodeReplacement.let(IResolvable::unwrap))
@@ -7141,8 +7141,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.JobFlowInstancesConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.JobFlowInstancesConfigProperty,
     ) : CdkObject(cdkObject), JobFlowInstancesConfigProperty {
       /**
        * A list of additional Amazon EC2 security group IDs for the master node.
@@ -7337,6 +7336,9 @@ public open class CfnCluster internal constructor(
       override fun terminationProtected(): Any? = unwrap(this).getTerminationProtected()
 
       /**
+       * Indicates whether Amazon EMR should gracefully replace core nodes that have degraded within
+       * the cluster.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-unhealthynodereplacement)
        */
       override fun unhealthyNodeReplacement(): Any? = unwrap(this).getUnhealthyNodeReplacement()
@@ -7521,8 +7523,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty,
     ) : CdkObject(cdkObject), KerberosAttributesProperty {
       /**
        * The Active Directory password for `ADDomainJoinUser` .
@@ -7660,7 +7661,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty,
     ) : CdkObject(cdkObject), KeyValueProperty {
       /**
        * The unique identifier of a key-value pair.
@@ -7807,8 +7808,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty,
     ) : CdkObject(cdkObject), ManagedScalingPolicyProperty {
       /**
        * The Amazon EC2 unit limits for a managed scaling policy.
@@ -7918,8 +7918,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty,
     ) : CdkObject(cdkObject), MetricDimensionProperty {
       /**
        * The dimension name.
@@ -8025,8 +8024,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty,
     ) : CdkObject(cdkObject), OnDemandProvisioningSpecificationProperty {
       /**
        * Specifies the strategy to use in launching On-Demand instance fleets.
@@ -8150,8 +8148,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty,
     ) : CdkObject(cdkObject), PlacementGroupConfigProperty {
       /**
        * Role of the instance in the cluster.
@@ -8253,7 +8250,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty,
     ) : CdkObject(cdkObject), PlacementTypeProperty {
       /**
        * The Amazon EC2 Availability Zone for the cluster.
@@ -8408,7 +8405,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty,
     ) : CdkObject(cdkObject), ScalingActionProperty {
       /**
        * Not available for instance groups.
@@ -8537,8 +8534,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty,
     ) : CdkObject(cdkObject), ScalingConstraintsProperty {
       /**
        * The upper boundary of Amazon EC2 instances in an instance group beyond which scaling
@@ -8786,7 +8782,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty,
     ) : CdkObject(cdkObject), ScalingRuleProperty {
       /**
        * The conditions that trigger an automatic scaling activity.
@@ -8952,7 +8948,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty,
     ) : CdkObject(cdkObject), ScalingTriggerProperty {
       /**
        * The definition of a CloudWatch metric alarm.
@@ -9072,8 +9068,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty,
     ) : CdkObject(cdkObject), ScriptBootstrapActionConfigProperty {
       /**
        * A list of command line arguments to pass to the bootstrap action script.
@@ -9262,8 +9257,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty,
     ) : CdkObject(cdkObject), SimpleScalingPolicyConfigurationProperty {
       /**
        * The way in which Amazon EC2 instances are added (if `ScalingAdjustment` is a positive
@@ -9543,8 +9537,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.SpotProvisioningSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.SpotProvisioningSpecificationProperty,
     ) : CdkObject(cdkObject), SpotProvisioningSpecificationProperty {
       /**
        * Specifies one of the following strategies to launch Spot Instance fleets:
@@ -9764,7 +9757,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty,
     ) : CdkObject(cdkObject), StepConfigProperty {
       /**
        * The action to take when the cluster step fails.
@@ -9938,8 +9931,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.VolumeSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.VolumeSpecificationProperty,
     ) : CdkObject(cdkObject), VolumeSpecificationProperty {
       /**
        * The number of I/O operations per second (IOPS) that the volume supports.

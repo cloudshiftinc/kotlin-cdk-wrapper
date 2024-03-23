@@ -120,7 +120,7 @@ public interface PrivateSubnetProps : SubnetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.PrivateSubnetProps,
+    cdkObject: software.amazon.awscdk.services.ec2.PrivateSubnetProps,
   ) : CdkObject(cdkObject), PrivateSubnetProps {
     /**
      * Indicates whether a network interface created in this subnet receives an IPv6 address.

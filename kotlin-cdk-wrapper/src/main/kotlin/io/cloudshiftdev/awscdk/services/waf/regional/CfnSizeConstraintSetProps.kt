@@ -116,7 +116,7 @@ public interface CfnSizeConstraintSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSetProps,
+    cdkObject: software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSetProps,
   ) : CdkObject(cdkObject), CfnSizeConstraintSetProps {
     /**
      * The name, if any, of the `SizeConstraintSet` .

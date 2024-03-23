@@ -109,8 +109,7 @@ public interface CfnSecurityGroupIngressProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticache.CfnSecurityGroupIngressProps,
+    cdkObject: software.amazon.awscdk.services.elasticache.CfnSecurityGroupIngressProps,
   ) : CdkObject(cdkObject), CfnSecurityGroupIngressProps {
     /**
      * The name of the Cache Security Group to authorize.

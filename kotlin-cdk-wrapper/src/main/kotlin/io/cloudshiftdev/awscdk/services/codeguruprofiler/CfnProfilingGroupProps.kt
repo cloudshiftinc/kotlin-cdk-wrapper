@@ -254,7 +254,7 @@ public interface CfnProfilingGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroupProps,
+    cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroupProps,
   ) : CdkObject(cdkObject), CfnProfilingGroupProps {
     /**
      * The agent permissions attached to this profiling group.

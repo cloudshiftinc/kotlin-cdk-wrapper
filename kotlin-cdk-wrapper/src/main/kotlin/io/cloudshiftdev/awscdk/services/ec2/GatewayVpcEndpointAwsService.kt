@@ -35,8 +35,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class GatewayVpcEndpointAwsService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpointAwsService,
+public open class GatewayVpcEndpointAwsService(
+  cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpointAwsService,
 ) : CdkObject(cdkObject), IGatewayVpcEndpointService {
   public constructor(name: String) :
       this(software.amazon.awscdk.services.ec2.GatewayVpcEndpointAwsService(name)
@@ -62,6 +62,7 @@ public open class GatewayVpcEndpointAwsService internal constructor(
         GatewayVpcEndpointAwsService = GatewayVpcEndpointAwsService(cdkObject)
 
     internal fun unwrap(wrapped: GatewayVpcEndpointAwsService):
-        software.amazon.awscdk.services.ec2.GatewayVpcEndpointAwsService = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.GatewayVpcEndpointAwsService = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.GatewayVpcEndpointAwsService
   }
 }

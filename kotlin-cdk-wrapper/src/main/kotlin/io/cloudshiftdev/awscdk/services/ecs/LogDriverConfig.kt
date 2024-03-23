@@ -166,7 +166,7 @@ public interface LogDriverConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.LogDriverConfig,
+    cdkObject: software.amazon.awscdk.services.ecs.LogDriverConfig,
   ) : CdkObject(cdkObject), LogDriverConfig {
     /**
      * The log driver to use for the container.

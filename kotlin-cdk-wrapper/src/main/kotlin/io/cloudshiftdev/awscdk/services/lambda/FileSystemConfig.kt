@@ -181,7 +181,7 @@ public interface FileSystemConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.FileSystemConfig,
+    cdkObject: software.amazon.awscdk.services.lambda.FileSystemConfig,
   ) : CdkObject(cdkObject), FileSystemConfig {
     /**
      * ARN of the access point.

@@ -30,8 +30,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class JsonFileLogDriver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.JsonFileLogDriver,
+public open class JsonFileLogDriver(
+  cdkObject: software.amazon.awscdk.services.ecs.JsonFileLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.ecs.JsonFileLogDriver()
   )
@@ -315,6 +315,7 @@ public open class JsonFileLogDriver internal constructor(
         JsonFileLogDriver = JsonFileLogDriver(cdkObject)
 
     internal fun unwrap(wrapped: JsonFileLogDriver):
-        software.amazon.awscdk.services.ecs.JsonFileLogDriver = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.JsonFileLogDriver = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.JsonFileLogDriver
   }
 }

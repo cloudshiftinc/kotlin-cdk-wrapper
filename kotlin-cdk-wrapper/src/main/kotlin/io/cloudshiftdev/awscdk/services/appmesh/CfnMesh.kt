@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-mesh.html)
  */
-public open class CfnMesh internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh,
+public open class CfnMesh(
+  cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appmesh.CfnMesh(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -358,7 +358,7 @@ public open class CfnMesh internal constructor(
         CfnMesh(cdkObject)
 
     internal fun unwrap(wrapped: CfnMesh): software.amazon.awscdk.services.appmesh.CfnMesh =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appmesh.CfnMesh
   }
 
   /**
@@ -442,7 +442,7 @@ public open class CfnMesh internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty,
     ) : CdkObject(cdkObject), EgressFilterProperty {
       /**
        * The egress filter type.
@@ -535,8 +535,7 @@ public open class CfnMesh internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty,
     ) : CdkObject(cdkObject), MeshServiceDiscoveryProperty {
       /**
        * The IP version to use to control traffic within the mesh.
@@ -701,7 +700,7 @@ public open class CfnMesh internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshSpecProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshSpecProperty,
     ) : CdkObject(cdkObject), MeshSpecProperty {
       /**
        * The egress filter rules for the service mesh.

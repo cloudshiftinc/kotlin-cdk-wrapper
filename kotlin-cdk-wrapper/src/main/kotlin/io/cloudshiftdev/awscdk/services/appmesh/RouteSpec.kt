@@ -33,8 +33,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class RouteSpec internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.RouteSpec,
+public abstract class RouteSpec(
+  cdkObject: software.amazon.awscdk.services.appmesh.RouteSpec,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the RouteSpec type is initialized.
@@ -48,7 +48,7 @@ public abstract class RouteSpec internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(RouteSpecConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.RouteSpec,
+    cdkObject: software.amazon.awscdk.services.appmesh.RouteSpec,
   ) : RouteSpec(cdkObject)
 
   public companion object {

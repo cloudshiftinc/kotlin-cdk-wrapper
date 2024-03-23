@@ -113,7 +113,7 @@ public interface LambdaAuthorizerConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.LambdaAuthorizerConfig,
+    cdkObject: software.amazon.awscdk.services.appsync.LambdaAuthorizerConfig,
   ) : CdkObject(cdkObject), LambdaAuthorizerConfig {
     /**
      * The authorizer lambda function.

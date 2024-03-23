@@ -282,7 +282,7 @@ public interface CaaRecordProps : RecordSetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.CaaRecordProps,
+    cdkObject: software.amazon.awscdk.services.route53.CaaRecordProps,
   ) : CdkObject(cdkObject), CaaRecordProps {
     /**
      * A comment to add on the record.

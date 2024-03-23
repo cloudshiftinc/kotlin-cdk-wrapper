@@ -1198,7 +1198,7 @@ public interface DatabaseClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterProps,
+    cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterProps,
   ) : CdkObject(cdkObject), DatabaseClusterProps {
     /**
      * The number of seconds to set a cluster's target backtrack window to.

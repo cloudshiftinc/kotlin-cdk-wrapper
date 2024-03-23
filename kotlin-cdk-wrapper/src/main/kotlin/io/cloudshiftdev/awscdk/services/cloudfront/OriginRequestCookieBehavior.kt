@@ -31,9 +31,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class OriginRequestCookieBehavior internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.OriginRequestCookieBehavior,
+public open class OriginRequestCookieBehavior(
+  cdkObject: software.amazon.awscdk.services.cloudfront.OriginRequestCookieBehavior,
 ) : CdkObject(cdkObject) {
   /**
    * The behavior of cookies: allow all, none or an allow list.
@@ -64,5 +63,6 @@ public open class OriginRequestCookieBehavior internal constructor(
 
     internal fun unwrap(wrapped: OriginRequestCookieBehavior):
         software.amazon.awscdk.services.cloudfront.OriginRequestCookieBehavior = wrapped.cdkObject
+        as software.amazon.awscdk.services.cloudfront.OriginRequestCookieBehavior
   }
 }

@@ -126,7 +126,7 @@ public interface CfnPlacementProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot1click.CfnPlacementProps,
+    cdkObject: software.amazon.awscdk.services.iot1click.CfnPlacementProps,
   ) : CdkObject(cdkObject), CfnPlacementProps {
     /**
      * The devices to associate with the placement, as defined by a mapping of zero or more

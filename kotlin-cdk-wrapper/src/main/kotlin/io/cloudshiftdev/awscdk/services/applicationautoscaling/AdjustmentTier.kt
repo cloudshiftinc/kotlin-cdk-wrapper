@@ -127,7 +127,7 @@ public interface AdjustmentTier {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.applicationautoscaling.AdjustmentTier,
+    cdkObject: software.amazon.awscdk.services.applicationautoscaling.AdjustmentTier,
   ) : CdkObject(cdkObject), AdjustmentTier {
     /**
      * What number to adjust the capacity with.

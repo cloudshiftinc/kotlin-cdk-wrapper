@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-realtimelogconfig.html)
  */
-public open class CfnRealtimeLogConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig,
+public open class CfnRealtimeLogConfig(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -351,7 +351,8 @@ public open class CfnRealtimeLogConfig internal constructor(
         CfnRealtimeLogConfig = CfnRealtimeLogConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnRealtimeLogConfig):
-        software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig
   }
 
   /**
@@ -471,8 +472,7 @@ public open class CfnRealtimeLogConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty,
     ) : CdkObject(cdkObject), EndPointProperty {
       /**
        * Contains information about the Amazon Kinesis data stream where you are sending real-time
@@ -601,8 +601,7 @@ public open class CfnRealtimeLogConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty,
     ) : CdkObject(cdkObject), KinesisStreamConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that

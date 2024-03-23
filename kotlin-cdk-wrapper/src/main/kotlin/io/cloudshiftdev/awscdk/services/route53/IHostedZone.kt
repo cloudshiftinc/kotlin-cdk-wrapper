@@ -50,7 +50,7 @@ public interface IHostedZone : IResource {
   public fun zoneName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.IHostedZone,
+    cdkObject: software.amazon.awscdk.services.route53.IHostedZone,
   ) : CdkObject(cdkObject), IHostedZone {
     /**
      * Apply the given removal policy to this resource.

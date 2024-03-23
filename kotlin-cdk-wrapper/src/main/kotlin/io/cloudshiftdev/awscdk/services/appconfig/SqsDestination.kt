@@ -23,8 +23,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class SqsDestination internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.SqsDestination,
+public open class SqsDestination(
+  cdkObject: software.amazon.awscdk.services.appconfig.SqsDestination,
 ) : CdkObject(cdkObject), IEventDestination {
   public constructor(queue: IQueue) :
       this(software.amazon.awscdk.services.appconfig.SqsDestination(queue.let(IQueue::unwrap))
@@ -51,6 +51,7 @@ public open class SqsDestination internal constructor(
         SqsDestination = SqsDestination(cdkObject)
 
     internal fun unwrap(wrapped: SqsDestination):
-        software.amazon.awscdk.services.appconfig.SqsDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.appconfig.SqsDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.appconfig.SqsDestination
   }
 }

@@ -165,7 +165,7 @@ public interface CfnModelPackageGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackageGroupProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackageGroupProps,
   ) : CdkObject(cdkObject), CfnModelPackageGroupProps {
     /**
      * The description for the model group.

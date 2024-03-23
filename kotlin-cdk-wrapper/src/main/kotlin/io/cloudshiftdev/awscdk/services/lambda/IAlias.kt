@@ -38,7 +38,7 @@ public interface IAlias : IFunction {
   public fun version(): IVersion
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.IAlias,
+    cdkObject: software.amazon.awscdk.services.lambda.IAlias,
   ) : CdkObject(cdkObject), IAlias {
     /**
      * Adds an event source to this function.

@@ -105,8 +105,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html)
  */
-public open class CfnConnector internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector,
+public open class CfnConnector(
+  cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1003,7 +1003,8 @@ public open class CfnConnector internal constructor(
         CfnConnector = CfnConnector(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnector):
-        software.amazon.awscdk.services.kafkaconnect.CfnConnector = wrapped.cdkObject
+        software.amazon.awscdk.services.kafkaconnect.CfnConnector = wrapped.cdkObject as
+        software.amazon.awscdk.services.kafkaconnect.CfnConnector
   }
 
   /**
@@ -1115,8 +1116,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ApacheKafkaClusterProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ApacheKafkaClusterProperty,
     ) : CdkObject(cdkObject), ApacheKafkaClusterProperty {
       /**
        * The bootstrap servers of the cluster.
@@ -1348,8 +1348,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty,
     ) : CdkObject(cdkObject), AutoScalingProperty {
       /**
        * The maximum number of workers allocated to the connector.
@@ -1549,8 +1548,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CapacityProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.CapacityProperty,
     ) : CdkObject(cdkObject), CapacityProperty {
       /**
        * Information about the auto scaling parameters for the connector.
@@ -1675,8 +1673,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty,
     ) : CdkObject(cdkObject), CloudWatchLogsLogDeliveryProperty {
       /**
        * Whether log delivery to Amazon CloudWatch Logs is enabled.
@@ -1785,8 +1782,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CustomPluginProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.CustomPluginProperty,
     ) : CdkObject(cdkObject), CustomPluginProperty {
       /**
        * The Amazon Resource Name (ARN) of the custom plugin.
@@ -1915,8 +1911,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.FirehoseLogDeliveryProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.FirehoseLogDeliveryProperty,
     ) : CdkObject(cdkObject), FirehoseLogDeliveryProperty {
       /**
        * The name of the Kinesis Data Firehose delivery stream that is the destination for log
@@ -2014,8 +2009,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterClientAuthenticationProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterClientAuthenticationProperty,
     ) : CdkObject(cdkObject), KafkaClusterClientAuthenticationProperty {
       /**
        * The type of client authentication used to connect to the Apache Kafka cluster.
@@ -2101,8 +2095,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty,
     ) : CdkObject(cdkObject), KafkaClusterEncryptionInTransitProperty {
       /**
        * The type of encryption in transit to the Apache Kafka cluster.
@@ -2219,8 +2212,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterProperty,
     ) : CdkObject(cdkObject), KafkaClusterProperty {
       /**
        * The Apache Kafka cluster to which the connector is connected.
@@ -2354,8 +2346,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.LogDeliveryProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.LogDeliveryProperty,
     ) : CdkObject(cdkObject), LogDeliveryProperty {
       /**
        * The workers can send worker logs to different destination types.
@@ -2467,8 +2458,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.PluginProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.PluginProperty,
     ) : CdkObject(cdkObject), PluginProperty {
       /**
        * Details about a custom plugin.
@@ -2577,8 +2567,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty,
     ) : CdkObject(cdkObject), ProvisionedCapacityProperty {
       /**
        * The number of microcontroller units (MCUs) allocated to each connector worker.
@@ -2725,8 +2714,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty,
     ) : CdkObject(cdkObject), S3LogDeliveryProperty {
       /**
        * The name of the S3 bucket that is the destination for log delivery.
@@ -2824,8 +2812,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty,
     ) : CdkObject(cdkObject), ScaleInPolicyProperty {
       /**
        * Specifies the CPU utilization percentage threshold at which you want connector scale in to
@@ -2910,8 +2897,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty,
     ) : CdkObject(cdkObject), ScaleOutPolicyProperty {
       /**
        * The CPU utilization percentage threshold at which you want connector scale out to be
@@ -3033,7 +3019,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty,
     ) : CdkObject(cdkObject), VpcProperty {
       /**
        * The security groups for the connector.
@@ -3141,8 +3127,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty,
     ) : CdkObject(cdkObject), WorkerConfigurationProperty {
       /**
        * The revision of the worker configuration.
@@ -3369,8 +3354,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty,
+      cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty,
     ) : CdkObject(cdkObject), WorkerLogDeliveryProperty {
       /**
        * Details about delivering logs to Amazon CloudWatch Logs.

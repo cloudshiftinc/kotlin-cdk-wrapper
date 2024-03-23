@@ -56,9 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html)
  */
-public open class CfnEndpointGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup,
+public open class CfnEndpointGroup(
+  cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -644,7 +643,8 @@ public open class CfnEndpointGroup internal constructor(
         CfnEndpointGroup = CfnEndpointGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpointGroup):
-        software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup
   }
 
   /**
@@ -879,8 +879,7 @@ public open class CfnEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty,
     ) : CdkObject(cdkObject), EndpointConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints
@@ -1056,8 +1055,7 @@ public open class CfnEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty,
+      cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty,
     ) : CdkObject(cdkObject), PortOverrideProperty {
       /**
        * The endpoint port that you want a listener port to be mapped to.

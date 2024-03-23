@@ -98,7 +98,7 @@ public interface ColumnRestriction {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.ColumnRestriction,
+    cdkObject: software.amazon.awscdk.services.logs.ColumnRestriction,
   ) : CdkObject(cdkObject), ColumnRestriction {
     /**
      * Comparison operator to use.

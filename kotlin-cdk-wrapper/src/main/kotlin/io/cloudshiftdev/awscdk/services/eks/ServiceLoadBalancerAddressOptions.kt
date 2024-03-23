@@ -81,7 +81,7 @@ public interface ServiceLoadBalancerAddressOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.ServiceLoadBalancerAddressOptions,
+    cdkObject: software.amazon.awscdk.services.eks.ServiceLoadBalancerAddressOptions,
   ) : CdkObject(cdkObject), ServiceLoadBalancerAddressOptions {
     /**
      * The namespace the service belongs to.

@@ -54,9 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html)
  */
-public open class CfnIdentityPoolRoleAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment,
+public open class CfnIdentityPoolRoleAttachment(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -290,7 +289,8 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
         CfnIdentityPoolRoleAttachment = CfnIdentityPoolRoleAttachment(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentityPoolRoleAttachment):
-        software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment
   }
 
   /**
@@ -422,8 +422,7 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.MappingRuleProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.MappingRuleProperty,
     ) : CdkObject(cdkObject), MappingRuleProperty {
       /**
        * The claim name that must be present in the token.
@@ -684,8 +683,7 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty,
     ) : CdkObject(cdkObject), RoleMappingProperty {
       /**
        * If you specify Token or Rules as the `Type` , `AmbiguousRoleResolution` is required.
@@ -844,8 +842,7 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty,
     ) : CdkObject(cdkObject), RulesConfigurationTypeProperty {
       /**
        * The rules.

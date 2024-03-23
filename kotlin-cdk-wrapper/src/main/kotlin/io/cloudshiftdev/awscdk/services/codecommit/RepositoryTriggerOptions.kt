@@ -161,7 +161,7 @@ public interface RepositoryTriggerOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codecommit.RepositoryTriggerOptions,
+    cdkObject: software.amazon.awscdk.services.codecommit.RepositoryTriggerOptions,
   ) : CdkObject(cdkObject), RepositoryTriggerOptions {
     /**
      * The names of the branches in the AWS CodeCommit repository that contain events that you want

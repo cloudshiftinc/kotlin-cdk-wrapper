@@ -154,8 +154,7 @@ public interface CognitoUserPoolsAuthorizerProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizerProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizerProps,
   ) : CdkObject(cdkObject), CognitoUserPoolsAuthorizerProps {
     /**
      * An optional human friendly name for the authorizer.

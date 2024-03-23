@@ -111,7 +111,7 @@ public interface CommonActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.CommonActionProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.CommonActionProps,
   ) : CdkObject(cdkObject), CommonActionProps {
     /**
      * The physical, human-readable name of the Action.

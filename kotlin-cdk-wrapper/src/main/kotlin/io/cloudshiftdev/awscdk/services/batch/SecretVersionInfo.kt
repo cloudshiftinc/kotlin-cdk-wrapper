@@ -76,7 +76,7 @@ public interface SecretVersionInfo {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.SecretVersionInfo,
+    cdkObject: software.amazon.awscdk.services.batch.SecretVersionInfo,
   ) : CdkObject(cdkObject), SecretVersionInfo {
     /**
      * version id of the secret.

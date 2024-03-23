@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class SubnetNetworkAclAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation,
+public open class SubnetNetworkAclAssociation(
+  cdkObject: software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation,
 ) : Resource(cdkObject), ISubnetNetworkAclAssociation {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -161,6 +161,7 @@ public open class SubnetNetworkAclAssociation internal constructor(
         SubnetNetworkAclAssociation = SubnetNetworkAclAssociation(cdkObject)
 
     internal fun unwrap(wrapped: SubnetNetworkAclAssociation):
-        software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation
   }
 }

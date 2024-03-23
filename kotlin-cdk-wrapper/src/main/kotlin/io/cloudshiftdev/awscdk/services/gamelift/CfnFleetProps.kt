@@ -1391,7 +1391,7 @@ public interface CfnFleetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.gamelift.CfnFleetProps,
+    cdkObject: software.amazon.awscdk.services.gamelift.CfnFleetProps,
   ) : CdkObject(cdkObject), CfnFleetProps {
     /**
      * Amazon GameLift Anywhere configuration options.

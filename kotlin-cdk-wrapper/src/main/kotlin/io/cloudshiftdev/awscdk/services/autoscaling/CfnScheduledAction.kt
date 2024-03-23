@@ -61,8 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scheduledaction.html)
  */
-public open class CfnScheduledAction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnScheduledAction,
+public open class CfnScheduledAction(
+  cdkObject: software.amazon.awscdk.services.autoscaling.CfnScheduledAction,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -438,6 +438,7 @@ public open class CfnScheduledAction internal constructor(
         CfnScheduledAction = CfnScheduledAction(cdkObject)
 
     internal fun unwrap(wrapped: CfnScheduledAction):
-        software.amazon.awscdk.services.autoscaling.CfnScheduledAction = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.CfnScheduledAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.CfnScheduledAction
   }
 }

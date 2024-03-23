@@ -204,7 +204,7 @@ public interface HttpRouteSpecOptions : RouteSpecOptionsBase {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.HttpRouteSpecOptions,
+    cdkObject: software.amazon.awscdk.services.appmesh.HttpRouteSpecOptions,
   ) : CdkObject(cdkObject), HttpRouteSpecOptions {
     /**
      * The criterion for determining a request match for this Route.

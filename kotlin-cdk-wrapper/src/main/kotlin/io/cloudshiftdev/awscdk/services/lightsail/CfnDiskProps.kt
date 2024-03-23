@@ -294,7 +294,7 @@ public interface CfnDiskProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDiskProps,
+    cdkObject: software.amazon.awscdk.services.lightsail.CfnDiskProps,
   ) : CdkObject(cdkObject), CfnDiskProps {
     /**
      * An array of add-ons for the disk.

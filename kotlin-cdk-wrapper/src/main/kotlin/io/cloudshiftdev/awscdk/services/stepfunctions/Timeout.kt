@@ -23,8 +23,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public abstract class Timeout internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Timeout,
+public abstract class Timeout(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Timeout,
 ) : CdkObject(cdkObject) {
   /**
    * Path for this timeout.
@@ -37,7 +37,7 @@ public abstract class Timeout internal constructor(
   public open fun seconds(): Number? = unwrap(this).getSeconds()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.Timeout,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.Timeout,
   ) : Timeout(cdkObject)
 
   public companion object {

@@ -26,9 +26,8 @@ import io.cloudshiftdev.constructs.Construct
  * .build());
  * ```
  */
-public open class LambdaDestination internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.s3.notifications.LambdaDestination,
+public open class LambdaDestination(
+  cdkObject: software.amazon.awscdk.services.s3.notifications.LambdaDestination,
 ) : CdkObject(cdkObject), IBucketNotificationDestination {
   public constructor(fn: IFunction) :
       this(software.amazon.awscdk.services.s3.notifications.LambdaDestination(fn.let(IFunction::unwrap))
@@ -54,6 +53,7 @@ public open class LambdaDestination internal constructor(
         LambdaDestination = LambdaDestination(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDestination):
-        software.amazon.awscdk.services.s3.notifications.LambdaDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.s3.notifications.LambdaDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3.notifications.LambdaDestination
   }
 }

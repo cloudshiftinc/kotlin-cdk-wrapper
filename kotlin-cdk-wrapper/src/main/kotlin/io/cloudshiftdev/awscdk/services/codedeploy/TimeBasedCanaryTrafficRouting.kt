@@ -23,9 +23,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class TimeBasedCanaryTrafficRouting internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting,
+public open class TimeBasedCanaryTrafficRouting(
+  cdkObject: software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting,
 ) : TrafficRouting(cdkObject) {
   public constructor(props: TimeBasedCanaryTrafficRoutingProps) :
       this(software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting(props.let(TimeBasedCanaryTrafficRoutingProps::unwrap))
@@ -113,5 +112,6 @@ public open class TimeBasedCanaryTrafficRouting internal constructor(
 
     internal fun unwrap(wrapped: TimeBasedCanaryTrafficRouting):
         software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting = wrapped.cdkObject
+        as software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting
   }
 }

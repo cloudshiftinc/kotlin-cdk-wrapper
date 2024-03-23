@@ -18,9 +18,8 @@ import kotlin.String
  * ListenerCertificate listenerCertificate = ListenerCertificate.fromArn("certificateArn");
  * ```
  */
-public open class ListenerCertificate internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCertificate,
+public open class ListenerCertificate(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCertificate,
 ) : CdkObject(cdkObject), IListenerCertificate {
   /**
    * The ARN of the certificate to use.
@@ -40,6 +39,7 @@ public open class ListenerCertificate internal constructor(
 
     internal fun unwrap(wrapped: ListenerCertificate):
         software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCertificate =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCertificate
   }
 }

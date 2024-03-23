@@ -234,7 +234,7 @@ public interface IntegManifest {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.IntegManifest,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.IntegManifest,
   ) : CdkObject(cdkObject), IntegManifest {
     /**
      * Enable lookups for this test.

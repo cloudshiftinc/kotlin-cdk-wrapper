@@ -185,7 +185,7 @@ public interface CfnVpcConnectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.msk.CfnVpcConnectionProps,
+    cdkObject: software.amazon.awscdk.services.msk.CfnVpcConnectionProps,
   ) : CdkObject(cdkObject), CfnVpcConnectionProps {
     /**
      * The type of private link authentication.

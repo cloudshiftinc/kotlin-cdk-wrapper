@@ -150,7 +150,7 @@ public interface ListParameterAttributes : CommonStringParameterAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.ListParameterAttributes,
+    cdkObject: software.amazon.awscdk.services.ssm.ListParameterAttributes,
   ) : CdkObject(cdkObject), ListParameterAttributes {
     /**
      * The type of the string list parameter value.

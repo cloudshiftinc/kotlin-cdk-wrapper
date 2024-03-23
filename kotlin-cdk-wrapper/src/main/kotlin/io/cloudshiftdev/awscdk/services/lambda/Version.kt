@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Version internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.Version,
+public open class Version(
+  cdkObject: software.amazon.awscdk.services.lambda.Version,
 ) : QualifiedFunctionBase(cdkObject), IVersion {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -439,6 +439,6 @@ public open class Version internal constructor(
         Version(cdkObject)
 
     internal fun unwrap(wrapped: Version): software.amazon.awscdk.services.lambda.Version =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lambda.Version
   }
 }

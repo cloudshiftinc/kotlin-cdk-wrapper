@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class Pipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codepipeline.Pipeline,
+public open class Pipeline(
+  cdkObject: software.amazon.awscdk.services.codepipeline.Pipeline,
 ) : Resource(cdkObject), IPipeline {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codepipeline.Pipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -570,7 +570,8 @@ public open class Pipeline internal constructor(
     /**
      * Type of the pipeline.
      *
-     * Default: - PipelineType.V1
+     * Default: - PipelineType.V2 if the feature flag `CODEPIPELINE_DEFAULT_PIPELINE_TYPE_TO_V2`
+     * is true, PipelineType.V1 otherwise
      *
      * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html)
      * @param pipelineType Type of the pipeline. 
@@ -784,7 +785,8 @@ public open class Pipeline internal constructor(
     /**
      * Type of the pipeline.
      *
-     * Default: - PipelineType.V1
+     * Default: - PipelineType.V2 if the feature flag `CODEPIPELINE_DEFAULT_PIPELINE_TYPE_TO_V2`
+     * is true, PipelineType.V1 otherwise
      *
      * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html)
      * @param pipelineType Type of the pipeline. 
@@ -939,6 +941,6 @@ public open class Pipeline internal constructor(
         Pipeline(cdkObject)
 
     internal fun unwrap(wrapped: Pipeline): software.amazon.awscdk.services.codepipeline.Pipeline =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.codepipeline.Pipeline
   }
 }

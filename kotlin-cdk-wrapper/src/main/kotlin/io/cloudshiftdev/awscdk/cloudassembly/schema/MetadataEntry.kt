@@ -185,7 +185,7 @@ public interface MetadataEntry {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.MetadataEntry,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.MetadataEntry,
   ) : CdkObject(cdkObject), MetadataEntry {
     /**
      * The data.

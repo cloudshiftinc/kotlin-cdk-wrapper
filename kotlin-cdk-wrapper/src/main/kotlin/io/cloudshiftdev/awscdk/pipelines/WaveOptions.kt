@@ -112,7 +112,7 @@ public interface WaveOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.WaveOptions,
+    cdkObject: software.amazon.awscdk.pipelines.WaveOptions,
   ) : CdkObject(cdkObject), WaveOptions {
     /**
      * Additional steps to run after all of the stages in the wave.

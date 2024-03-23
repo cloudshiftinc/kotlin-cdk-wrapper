@@ -305,7 +305,7 @@ public interface CfnDataIntegrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegrationProps,
+    cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegrationProps,
   ) : CdkObject(cdkObject), CfnDataIntegrationProps {
     /**
      * A description of the DataIntegration.

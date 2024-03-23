@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_services.html)
  */
-public open class VirtualService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualService,
+public open class VirtualService(
+  cdkObject: software.amazon.awscdk.services.appmesh.VirtualService,
 ) : Resource(cdkObject), IVirtualService {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -169,6 +169,7 @@ public open class VirtualService internal constructor(
         VirtualService = VirtualService(cdkObject)
 
     internal fun unwrap(wrapped: VirtualService):
-        software.amazon.awscdk.services.appmesh.VirtualService = wrapped.cdkObject
+        software.amazon.awscdk.services.appmesh.VirtualService = wrapped.cdkObject as
+        software.amazon.awscdk.services.appmesh.VirtualService
   }
 }

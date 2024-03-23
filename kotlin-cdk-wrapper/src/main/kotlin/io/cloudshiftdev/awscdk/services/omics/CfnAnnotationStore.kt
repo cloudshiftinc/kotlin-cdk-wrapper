@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html)
  */
-public open class CfnAnnotationStore internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore,
+public open class CfnAnnotationStore(
+  cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -533,7 +533,8 @@ public open class CfnAnnotationStore internal constructor(
         CfnAnnotationStore = CfnAnnotationStore(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnnotationStore):
-        software.amazon.awscdk.services.omics.CfnAnnotationStore = wrapped.cdkObject
+        software.amazon.awscdk.services.omics.CfnAnnotationStore = wrapped.cdkObject as
+        software.amazon.awscdk.services.omics.CfnAnnotationStore
   }
 
   /**
@@ -589,8 +590,7 @@ public open class CfnAnnotationStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnAnnotationStore.ReferenceItemProperty,
+      cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.ReferenceItemProperty,
     ) : CdkObject(cdkObject), ReferenceItemProperty {
       /**
        * The reference's ARN.
@@ -691,8 +691,7 @@ public open class CfnAnnotationStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty,
+      cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty,
     ) : CdkObject(cdkObject), SseConfigProperty {
       /**
        * An encryption key ARN.
@@ -813,8 +812,7 @@ public open class CfnAnnotationStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty,
     ) : CdkObject(cdkObject), StoreOptionsProperty {
       /**
        * Formatting options for a TSV file.
@@ -949,8 +947,7 @@ public open class CfnAnnotationStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnAnnotationStore.TsvStoreOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.TsvStoreOptionsProperty,
     ) : CdkObject(cdkObject), TsvStoreOptionsProperty {
       /**
        * The store's annotation type.

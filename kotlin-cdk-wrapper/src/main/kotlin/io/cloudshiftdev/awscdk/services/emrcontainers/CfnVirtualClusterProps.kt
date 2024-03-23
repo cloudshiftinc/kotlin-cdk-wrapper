@@ -172,7 +172,7 @@ public interface CfnVirtualClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualClusterProps,
+    cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualClusterProps,
   ) : CdkObject(cdkObject), CfnVirtualClusterProps {
     /**
      * The container provider of the virtual cluster.

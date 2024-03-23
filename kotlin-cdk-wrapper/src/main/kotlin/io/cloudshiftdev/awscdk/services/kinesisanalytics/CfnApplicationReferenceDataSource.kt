@@ -80,9 +80,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationreferencedatasource.html)
  */
-public open class CfnApplicationReferenceDataSource internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource,
+public open class CfnApplicationReferenceDataSource(
+  cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -306,7 +305,8 @@ public open class CfnApplicationReferenceDataSource internal constructor(
 
     internal fun unwrap(wrapped: CfnApplicationReferenceDataSource):
         software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource
   }
 
   /**
@@ -399,8 +399,7 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.CSVMappingParametersProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.CSVMappingParametersProperty,
     ) : CdkObject(cdkObject), CSVMappingParametersProperty {
       /**
        * Column delimiter.
@@ -494,8 +493,7 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.JSONMappingParametersProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.JSONMappingParametersProperty,
     ) : CdkObject(cdkObject), JSONMappingParametersProperty {
       /**
        * Path to the top-level parent that contains the records.
@@ -676,8 +674,7 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.MappingParametersProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.MappingParametersProperty,
     ) : CdkObject(cdkObject), MappingParametersProperty {
       /**
        * Provides additional mapping information when the record format uses delimiters (for
@@ -828,8 +825,7 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.RecordColumnProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.RecordColumnProperty,
     ) : CdkObject(cdkObject), RecordColumnProperty {
       /**
        * Reference to the data element in the streaming input or the reference data source.
@@ -1001,8 +997,7 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.RecordFormatProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.RecordFormatProperty,
     ) : CdkObject(cdkObject), RecordFormatProperty {
       /**
        * When configuring application input at the time of creating or updating an application,
@@ -1260,8 +1255,7 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.ReferenceDataSourceProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.ReferenceDataSourceProperty,
     ) : CdkObject(cdkObject), ReferenceDataSourceProperty {
       /**
        * Describes the format of the data in the streaming source, and how each data element maps to
@@ -1476,8 +1470,7 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.ReferenceSchemaProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.ReferenceSchemaProperty,
     ) : CdkObject(cdkObject), ReferenceSchemaProperty {
       /**
        * A list of RecordColumn objects.
@@ -1633,8 +1626,7 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty,
     ) : CdkObject(cdkObject), S3ReferenceDataSourceProperty {
       /**
        * Amazon Resource Name (ARN) of the S3 bucket.

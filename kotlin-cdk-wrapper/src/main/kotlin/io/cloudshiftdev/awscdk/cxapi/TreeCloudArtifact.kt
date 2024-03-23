@@ -67,8 +67,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class TreeCloudArtifact internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.cxapi.TreeCloudArtifact,
+public open class TreeCloudArtifact(
+  cdkObject: software.amazon.awscdk.cxapi.TreeCloudArtifact,
 ) : CloudArtifact(cdkObject) {
   public constructor(
     assembly: CloudAssembly,
@@ -414,6 +414,6 @@ public open class TreeCloudArtifact internal constructor(
         = TreeCloudArtifact(cdkObject)
 
     internal fun unwrap(wrapped: TreeCloudArtifact): software.amazon.awscdk.cxapi.TreeCloudArtifact
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.cxapi.TreeCloudArtifact
   }
 }

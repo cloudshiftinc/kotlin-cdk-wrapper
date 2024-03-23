@@ -207,7 +207,7 @@ public interface VpcContextQuery {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.VpcContextQuery,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.VpcContextQuery,
   ) : CdkObject(cdkObject), VpcContextQuery {
     /**
      * Query account.

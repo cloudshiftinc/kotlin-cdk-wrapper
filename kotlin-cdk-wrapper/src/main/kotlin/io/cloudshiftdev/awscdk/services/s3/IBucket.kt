@@ -804,7 +804,7 @@ public interface IBucket : IResource {
       options: VirtualHostedStyleUrlOptions.Builder.() -> Unit): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.IBucket,
+    cdkObject: software.amazon.awscdk.services.s3.IBucket,
   ) : CdkObject(cdkObject), IBucket {
     /**
      * Adds a bucket notification event destination.

@@ -85,7 +85,7 @@ public interface EmailSettings {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.EmailSettings,
+    cdkObject: software.amazon.awscdk.services.cognito.EmailSettings,
   ) : CdkObject(cdkObject), EmailSettings {
     /**
      * The 'from' address on the emails received by the user.

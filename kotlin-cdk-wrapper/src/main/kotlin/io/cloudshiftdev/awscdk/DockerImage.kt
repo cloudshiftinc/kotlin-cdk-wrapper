@@ -25,8 +25,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class DockerImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.DockerImage,
+public open class DockerImage(
+  cdkObject: software.amazon.awscdk.DockerImage,
 ) : CdkObject(cdkObject) {
   public constructor(image: String) : this(software.amazon.awscdk.DockerImage(image)
   )
@@ -118,6 +118,6 @@ public open class DockerImage internal constructor(
         DockerImage(cdkObject)
 
     internal fun unwrap(wrapped: DockerImage): software.amazon.awscdk.DockerImage =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.DockerImage
   }
 }

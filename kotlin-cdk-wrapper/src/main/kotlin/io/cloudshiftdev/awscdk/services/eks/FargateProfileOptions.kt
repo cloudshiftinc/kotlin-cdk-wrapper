@@ -233,7 +233,7 @@ public interface FargateProfileOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.FargateProfileOptions,
+    cdkObject: software.amazon.awscdk.services.eks.FargateProfileOptions,
   ) : CdkObject(cdkObject), FargateProfileOptions {
     /**
      * The name of the Fargate profile.

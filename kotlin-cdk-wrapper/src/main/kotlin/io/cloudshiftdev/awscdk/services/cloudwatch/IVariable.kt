@@ -16,7 +16,7 @@ public interface IVariable {
   public fun toJson(): Any
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.IVariable,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.IVariable,
   ) : CdkObject(cdkObject), IVariable {
     /**
      * Return the variable JSON for use in the dashboard.

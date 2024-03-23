@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html)
  */
-public open class CfnAssessmentTarget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTarget,
+public open class CfnAssessmentTarget(
+  cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTarget,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.inspector.CfnAssessmentTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -174,6 +174,7 @@ public open class CfnAssessmentTarget internal constructor(
         CfnAssessmentTarget = CfnAssessmentTarget(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssessmentTarget):
-        software.amazon.awscdk.services.inspector.CfnAssessmentTarget = wrapped.cdkObject
+        software.amazon.awscdk.services.inspector.CfnAssessmentTarget = wrapped.cdkObject as
+        software.amazon.awscdk.services.inspector.CfnAssessmentTarget
   }
 }

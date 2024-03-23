@@ -247,7 +247,7 @@ public interface CfnAnalyzerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzerProps,
+    cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzerProps,
   ) : CdkObject(cdkObject), CfnAnalyzerProps {
     /**
      * Contains information about the configuration of an unused access analyzer for an AWS

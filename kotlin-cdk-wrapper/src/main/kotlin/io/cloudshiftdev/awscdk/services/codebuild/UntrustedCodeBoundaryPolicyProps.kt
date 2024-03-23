@@ -95,8 +95,7 @@ public interface UntrustedCodeBoundaryPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicyProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicyProps,
   ) : CdkObject(cdkObject), UntrustedCodeBoundaryPolicyProps {
     /**
      * Additional statements to add to the default set of statements.

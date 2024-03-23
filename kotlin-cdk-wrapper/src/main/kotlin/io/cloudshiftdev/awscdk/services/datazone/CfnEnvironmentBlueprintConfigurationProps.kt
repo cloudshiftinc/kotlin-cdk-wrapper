@@ -213,8 +213,7 @@ public interface CfnEnvironmentBlueprintConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfigurationProps,
   ) : CdkObject(cdkObject), CfnEnvironmentBlueprintConfigurationProps {
     /**
      * The identifier of the Amazon DataZone domain in which an environment blueprint exists.

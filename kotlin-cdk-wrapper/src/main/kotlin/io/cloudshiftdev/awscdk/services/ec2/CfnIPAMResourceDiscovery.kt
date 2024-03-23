@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscovery.html)
  */
-public open class CfnIPAMResourceDiscovery internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery,
+public open class CfnIPAMResourceDiscovery(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -357,7 +357,8 @@ public open class CfnIPAMResourceDiscovery internal constructor(
         CfnIPAMResourceDiscovery = CfnIPAMResourceDiscovery(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAMResourceDiscovery):
-        software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery
   }
 
   /**
@@ -421,8 +422,7 @@ public open class CfnIPAMResourceDiscovery internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery.IpamOperatingRegionProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery.IpamOperatingRegionProperty,
     ) : CdkObject(cdkObject), IpamOperatingRegionProperty {
       /**
        * The name of the operating Region.

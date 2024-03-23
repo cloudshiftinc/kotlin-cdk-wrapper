@@ -666,7 +666,7 @@ public interface NodegroupOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.NodegroupOptions,
+    cdkObject: software.amazon.awscdk.services.eks.NodegroupOptions,
   ) : CdkObject(cdkObject), NodegroupOptions {
     /**
      * The AMI type for your node group.

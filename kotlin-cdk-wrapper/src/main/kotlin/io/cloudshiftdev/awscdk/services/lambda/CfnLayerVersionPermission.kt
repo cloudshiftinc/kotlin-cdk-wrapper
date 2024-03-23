@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversionpermission.html)
  */
-public open class CfnLayerVersionPermission internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersionPermission,
+public open class CfnLayerVersionPermission(
+  cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersionPermission,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -250,6 +250,7 @@ public open class CfnLayerVersionPermission internal constructor(
         CfnLayerVersionPermission = CfnLayerVersionPermission(cdkObject)
 
     internal fun unwrap(wrapped: CfnLayerVersionPermission):
-        software.amazon.awscdk.services.lambda.CfnLayerVersionPermission = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.CfnLayerVersionPermission = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.CfnLayerVersionPermission
   }
 }

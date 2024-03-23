@@ -91,7 +91,7 @@ public interface DomainAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticsearch.DomainAttributes,
+    cdkObject: software.amazon.awscdk.services.elasticsearch.DomainAttributes,
   ) : CdkObject(cdkObject), DomainAttributes {
     /**
      * (deprecated) The ARN of the Elasticsearch domain.

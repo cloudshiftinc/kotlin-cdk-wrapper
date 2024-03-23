@@ -24,8 +24,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html)
  */
-public open class ManagedRuleIdentifiers internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.ManagedRuleIdentifiers,
+public open class ManagedRuleIdentifiers(
+  cdkObject: software.amazon.awscdk.services.config.ManagedRuleIdentifiers,
 ) : CdkObject(cdkObject) {
   public companion object {
     public val ACCESS_KEYS_ROTATED: String =
@@ -911,6 +911,7 @@ public open class ManagedRuleIdentifiers internal constructor(
         ManagedRuleIdentifiers = ManagedRuleIdentifiers(cdkObject)
 
     internal fun unwrap(wrapped: ManagedRuleIdentifiers):
-        software.amazon.awscdk.services.config.ManagedRuleIdentifiers = wrapped.cdkObject
+        software.amazon.awscdk.services.config.ManagedRuleIdentifiers = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.ManagedRuleIdentifiers
   }
 }

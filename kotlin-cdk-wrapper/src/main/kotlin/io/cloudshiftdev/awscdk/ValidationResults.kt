@@ -21,8 +21,8 @@ import kotlin.collections.List
  * ValidationResults validationResults = new ValidationResults(List.of(validationResult));
  * ```
  */
-public open class ValidationResults internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.ValidationResults,
+public open class ValidationResults(
+  cdkObject: software.amazon.awscdk.ValidationResults,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.ValidationResults()
   )
@@ -85,6 +85,6 @@ public open class ValidationResults internal constructor(
         ValidationResults(cdkObject)
 
     internal fun unwrap(wrapped: ValidationResults): software.amazon.awscdk.ValidationResults =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.ValidationResults
   }
 }

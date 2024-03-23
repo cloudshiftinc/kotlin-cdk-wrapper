@@ -18,8 +18,8 @@ import kotlin.String
  * ComparablePrincipal comparablePrincipal = new ComparablePrincipal();
  * ```
  */
-public open class ComparablePrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.ComparablePrincipal,
+public open class ComparablePrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.ComparablePrincipal,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.iam.ComparablePrincipal()
   )
@@ -35,6 +35,7 @@ public open class ComparablePrincipal internal constructor(
         ComparablePrincipal = ComparablePrincipal(cdkObject)
 
     internal fun unwrap(wrapped: ComparablePrincipal):
-        software.amazon.awscdk.services.iam.ComparablePrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.ComparablePrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.ComparablePrincipal
   }
 }

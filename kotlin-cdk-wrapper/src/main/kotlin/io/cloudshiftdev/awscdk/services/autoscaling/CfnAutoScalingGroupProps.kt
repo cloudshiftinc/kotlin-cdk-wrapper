@@ -1866,7 +1866,7 @@ public interface CfnAutoScalingGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroupProps,
+    cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroupProps,
   ) : CdkObject(cdkObject), CfnAutoScalingGroupProps {
     /**
      * The name of the Auto Scaling group. This name must be unique per Region per account.

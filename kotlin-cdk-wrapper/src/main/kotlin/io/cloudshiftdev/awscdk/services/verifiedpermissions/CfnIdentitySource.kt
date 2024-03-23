@@ -74,9 +74,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html)
  */
-public open class CfnIdentitySource internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource,
+public open class CfnIdentitySource(
+  cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -401,7 +400,8 @@ public open class CfnIdentitySource internal constructor(
         CfnIdentitySource = CfnIdentitySource(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentitySource):
-        software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource = wrapped.cdkObject
+        software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource = wrapped.cdkObject as
+        software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource
   }
 
   /**
@@ -509,8 +509,7 @@ public open class CfnIdentitySource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty,
     ) : CdkObject(cdkObject), CognitoUserPoolConfigurationProperty {
       /**
        * The unique application client IDs that are associated with the specified Amazon Cognito
@@ -664,8 +663,7 @@ public open class CfnIdentitySource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceConfigurationProperty,
     ) : CdkObject(cdkObject), IdentitySourceConfigurationProperty {
       /**
        * A structure that contains configuration information used when creating or updating an
@@ -860,8 +858,7 @@ public open class CfnIdentitySource internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty,
     ) : CdkObject(cdkObject), IdentitySourceDetailsProperty {
       /**
        * The application client IDs associated with the specified Amazon Cognito user pool that are

@@ -31,9 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceactionassociation.html)
  */
-public open class CfnServiceActionAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociation,
+public open class CfnServiceActionAssociation(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -201,6 +200,7 @@ public open class CfnServiceActionAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnServiceActionAssociation):
         software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociation
   }
 }

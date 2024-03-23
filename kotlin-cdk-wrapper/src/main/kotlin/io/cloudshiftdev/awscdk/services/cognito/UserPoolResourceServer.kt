@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class UserPoolResourceServer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolResourceServer,
+public open class UserPoolResourceServer(
+  cdkObject: software.amazon.awscdk.services.cognito.UserPoolResourceServer,
 ) : Resource(cdkObject), IUserPoolResourceServer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -198,6 +198,7 @@ public open class UserPoolResourceServer internal constructor(
         UserPoolResourceServer = UserPoolResourceServer(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolResourceServer):
-        software.amazon.awscdk.services.cognito.UserPoolResourceServer = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.UserPoolResourceServer = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.UserPoolResourceServer
   }
 }

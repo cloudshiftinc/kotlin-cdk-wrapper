@@ -44,7 +44,7 @@ public interface IResource : IConstruct {
   public fun stack(): Stack
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IResource,
+    cdkObject: software.amazon.awscdk.IResource,
   ) : CdkObject(cdkObject), IResource {
     /**
      * Apply the given removal policy to this resource.

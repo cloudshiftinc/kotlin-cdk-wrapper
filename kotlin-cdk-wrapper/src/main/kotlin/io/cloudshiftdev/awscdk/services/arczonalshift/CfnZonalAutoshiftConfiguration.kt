@@ -58,9 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-arczonalshift-zonalautoshiftconfiguration.html)
  */
-public open class CfnZonalAutoshiftConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration,
+public open class CfnZonalAutoshiftConfiguration(
+  cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -403,7 +402,8 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
 
     internal fun unwrap(wrapped: CfnZonalAutoshiftConfiguration):
         software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration
   }
 
   /**
@@ -502,8 +502,7 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty,
+      cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty,
     ) : CdkObject(cdkObject), ControlConditionProperty {
       /**
        * The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control
@@ -833,8 +832,7 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty,
     ) : CdkObject(cdkObject), PracticeRunConfigurationProperty {
       /**
        * An array of one or more dates that you can specify when AWS does not start practice runs

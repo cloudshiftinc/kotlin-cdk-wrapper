@@ -59,7 +59,7 @@ public interface IEngine {
   public fun parameterGroupFamily(): String? = unwrap(this).getParameterGroupFamily()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.IEngine,
+    cdkObject: software.amazon.awscdk.services.rds.IEngine,
   ) : CdkObject(cdkObject), IEngine {
     /**
      * The default name of the master database user if one was not provided explicitly.

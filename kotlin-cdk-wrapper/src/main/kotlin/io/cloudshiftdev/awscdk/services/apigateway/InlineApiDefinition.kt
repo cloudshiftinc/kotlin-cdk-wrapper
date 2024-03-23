@@ -18,8 +18,8 @@ import kotlin.Any
  * InlineApiDefinition inlineApiDefinition = new InlineApiDefinition(definition);
  * ```
  */
-public open class InlineApiDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.InlineApiDefinition,
+public open class InlineApiDefinition(
+  cdkObject: software.amazon.awscdk.services.apigateway.InlineApiDefinition,
 ) : ApiDefinition(cdkObject) {
   public constructor(definition: Any) :
       this(software.amazon.awscdk.services.apigateway.InlineApiDefinition(definition)
@@ -39,6 +39,7 @@ public open class InlineApiDefinition internal constructor(
         InlineApiDefinition = InlineApiDefinition(cdkObject)
 
     internal fun unwrap(wrapped: InlineApiDefinition):
-        software.amazon.awscdk.services.apigateway.InlineApiDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.InlineApiDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.InlineApiDefinition
   }
 }

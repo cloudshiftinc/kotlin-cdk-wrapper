@@ -15,7 +15,7 @@ public interface IGrantable {
   public fun grantPrincipal(): IPrincipal
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.IGrantable,
+    cdkObject: software.amazon.awscdk.services.iam.IGrantable,
   ) : CdkObject(cdkObject), IGrantable {
     /**
      * The principal to grant permissions to.

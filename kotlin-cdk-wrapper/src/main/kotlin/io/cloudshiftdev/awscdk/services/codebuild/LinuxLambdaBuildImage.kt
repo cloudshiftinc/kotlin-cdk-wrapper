@@ -25,8 +25,8 @@ import kotlin.jvm.JvmName
  *
  * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html)
  */
-public open class LinuxLambdaBuildImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.LinuxLambdaBuildImage,
+public open class LinuxLambdaBuildImage(
+  cdkObject: software.amazon.awscdk.services.codebuild.LinuxLambdaBuildImage,
 ) : CdkObject(cdkObject), IBuildImage {
   /**
    * The default `ComputeType` to use with this image, if one was not specified in
@@ -106,6 +106,7 @@ public open class LinuxLambdaBuildImage internal constructor(
         LinuxLambdaBuildImage = LinuxLambdaBuildImage(cdkObject)
 
     internal fun unwrap(wrapped: LinuxLambdaBuildImage):
-        software.amazon.awscdk.services.codebuild.LinuxLambdaBuildImage = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.LinuxLambdaBuildImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.LinuxLambdaBuildImage
   }
 }

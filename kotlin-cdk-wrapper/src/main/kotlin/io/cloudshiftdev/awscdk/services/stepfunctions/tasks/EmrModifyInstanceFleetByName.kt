@@ -32,9 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EmrModifyInstanceFleetByName internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByName,
+public open class EmrModifyInstanceFleetByName(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByName,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -518,6 +517,7 @@ public open class EmrModifyInstanceFleetByName internal constructor(
 
     internal fun unwrap(wrapped: EmrModifyInstanceFleetByName):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByName =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByName
   }
 }

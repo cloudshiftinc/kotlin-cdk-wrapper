@@ -180,7 +180,7 @@ public interface MethodProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.MethodProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.MethodProps,
   ) : CdkObject(cdkObject), MethodProps {
     /**
      * The HTTP method ("GET", "POST", "PUT", ...) that clients use to call this method.

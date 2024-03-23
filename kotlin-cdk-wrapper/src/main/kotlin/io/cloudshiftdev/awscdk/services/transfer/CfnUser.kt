@@ -66,8 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html)
  */
-public open class CfnUser internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.transfer.CfnUser,
+public open class CfnUser(
+  cdkObject: software.amazon.awscdk.services.transfer.CfnUser,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -909,7 +909,7 @@ public open class CfnUser internal constructor(
         CfnUser(cdkObject)
 
     internal fun unwrap(wrapped: CfnUser): software.amazon.awscdk.services.transfer.CfnUser =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.transfer.CfnUser
   }
 
   /**
@@ -1030,8 +1030,7 @@ public open class CfnUser internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty,
     ) : CdkObject(cdkObject), HomeDirectoryMapEntryProperty {
       /**
        * Represents an entry for `HomeDirectoryMappings` .
@@ -1209,7 +1208,7 @@ public open class CfnUser internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty,
     ) : CdkObject(cdkObject), PosixProfileProperty {
       /**
        * The POSIX group ID used for all EFS operations by this user.

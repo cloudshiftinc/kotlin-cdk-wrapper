@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html)
  */
-public open class CfnIPAM internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAM,
+public open class CfnIPAM(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnIPAM,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnIPAM(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -422,7 +422,7 @@ public open class CfnIPAM internal constructor(
         CfnIPAM(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAM): software.amazon.awscdk.services.ec2.CfnIPAM =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnIPAM
   }
 
   /**
@@ -484,8 +484,7 @@ public open class CfnIPAM internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnIPAM.IpamOperatingRegionProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnIPAM.IpamOperatingRegionProperty,
     ) : CdkObject(cdkObject), IpamOperatingRegionProperty {
       /**
        * The name of the operating Region.

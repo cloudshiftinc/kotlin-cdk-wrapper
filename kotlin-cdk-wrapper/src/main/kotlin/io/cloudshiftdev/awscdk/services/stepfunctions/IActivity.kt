@@ -27,7 +27,7 @@ public interface IActivity : IResource {
   public fun activityName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.IActivity,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.IActivity,
   ) : CdkObject(cdkObject), IActivity {
     /**
      * The ARN of the activity.

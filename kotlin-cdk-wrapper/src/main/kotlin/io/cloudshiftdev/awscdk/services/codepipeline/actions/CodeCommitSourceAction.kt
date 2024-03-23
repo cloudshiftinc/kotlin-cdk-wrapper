@@ -70,9 +70,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class CodeCommitSourceAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceAction,
+public open class CodeCommitSourceAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceAction,
 ) : Action(cdkObject) {
   public constructor(props: CodeCommitSourceActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceAction(props.let(CodeCommitSourceActionProps::unwrap))
@@ -374,6 +373,7 @@ public open class CodeCommitSourceAction internal constructor(
 
     internal fun unwrap(wrapped: CodeCommitSourceAction):
         software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceAction =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceAction
   }
 }

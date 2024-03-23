@@ -58,7 +58,7 @@ public interface OriginAccessIdentityProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps,
   ) : CdkObject(cdkObject), OriginAccessIdentityProps {
     /**
      * Any comments you want to include about the origin access identity.

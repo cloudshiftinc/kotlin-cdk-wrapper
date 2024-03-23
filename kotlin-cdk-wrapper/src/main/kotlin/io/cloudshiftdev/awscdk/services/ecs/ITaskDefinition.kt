@@ -59,7 +59,7 @@ public interface ITaskDefinition : IResource {
   public fun taskRole(): IRole
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ITaskDefinition,
+    cdkObject: software.amazon.awscdk.services.ecs.ITaskDefinition,
   ) : CdkObject(cdkObject), ITaskDefinition {
     /**
      * Apply the given removal policy to this resource.

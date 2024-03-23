@@ -165,7 +165,7 @@ public interface GrpcGatewayRouteMatch {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GrpcGatewayRouteMatch,
+    cdkObject: software.amazon.awscdk.services.appmesh.GrpcGatewayRouteMatch,
   ) : CdkObject(cdkObject), GrpcGatewayRouteMatch {
     /**
      * Create host name based gRPC gateway route match.

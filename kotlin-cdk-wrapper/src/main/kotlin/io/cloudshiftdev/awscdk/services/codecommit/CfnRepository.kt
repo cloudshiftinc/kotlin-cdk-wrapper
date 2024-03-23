@@ -61,8 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html)
  */
-public open class CfnRepository internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository,
+public open class CfnRepository(
+  cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -574,7 +574,8 @@ public open class CfnRepository internal constructor(
         CfnRepository = CfnRepository(cdkObject)
 
     internal fun unwrap(wrapped: CfnRepository):
-        software.amazon.awscdk.services.codecommit.CfnRepository = wrapped.cdkObject
+        software.amazon.awscdk.services.codecommit.CfnRepository = wrapped.cdkObject as
+        software.amazon.awscdk.services.codecommit.CfnRepository
   }
 
   /**
@@ -712,7 +713,7 @@ public open class CfnRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty,
+      cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty,
     ) : CdkObject(cdkObject), CodeProperty {
       /**
        * Optional.
@@ -961,8 +962,7 @@ public open class CfnRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty,
+      cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty,
     ) : CdkObject(cdkObject), RepositoryTriggerProperty {
       /**
        * The branches to be included in the trigger configuration.
@@ -1159,7 +1159,7 @@ public open class CfnRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.S3Property,
+      cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.S3Property,
     ) : CdkObject(cdkObject), S3Property {
       /**
        * The name of the Amazon S3 bucket that contains the ZIP file with the content that will be

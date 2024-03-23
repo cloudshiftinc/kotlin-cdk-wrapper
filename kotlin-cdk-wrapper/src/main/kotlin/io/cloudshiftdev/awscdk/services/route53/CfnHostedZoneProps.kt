@@ -1013,7 +1013,7 @@ public interface CfnHostedZoneProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.CfnHostedZoneProps,
+    cdkObject: software.amazon.awscdk.services.route53.CfnHostedZoneProps,
   ) : CdkObject(cdkObject), CfnHostedZoneProps {
     /**
      * A complex type that contains an optional comment.

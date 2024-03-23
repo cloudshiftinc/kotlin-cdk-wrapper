@@ -138,7 +138,7 @@ public interface BackupPlanProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.backup.BackupPlanProps,
+    cdkObject: software.amazon.awscdk.services.backup.BackupPlanProps,
   ) : CdkObject(cdkObject), BackupPlanProps {
     /**
      * The display name of the backup plan.

@@ -353,7 +353,7 @@ public interface CfnSegmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegmentProps,
+    cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegmentProps,
   ) : CdkObject(cdkObject), CfnSegmentProps {
     /**
      * The unique identifier for the Amazon Pinpoint application that the segment is associated

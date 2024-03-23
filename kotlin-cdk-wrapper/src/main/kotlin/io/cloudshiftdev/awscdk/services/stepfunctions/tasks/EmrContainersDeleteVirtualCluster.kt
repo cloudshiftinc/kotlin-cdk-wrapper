@@ -31,9 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.amazonaws.cn/en_us/step-functions/latest/dg/connect-emr-eks.html)
  */
-public open class EmrContainersDeleteVirtualCluster internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersDeleteVirtualCluster,
+public open class EmrContainersDeleteVirtualCluster(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersDeleteVirtualCluster,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -458,6 +457,7 @@ public open class EmrContainersDeleteVirtualCluster internal constructor(
 
     internal fun unwrap(wrapped: EmrContainersDeleteVirtualCluster):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersDeleteVirtualCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersDeleteVirtualCluster
   }
 }

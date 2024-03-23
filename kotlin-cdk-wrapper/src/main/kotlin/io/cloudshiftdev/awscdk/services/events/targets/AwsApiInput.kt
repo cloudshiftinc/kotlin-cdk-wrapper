@@ -161,7 +161,7 @@ public interface AwsApiInput {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.targets.AwsApiInput,
+    cdkObject: software.amazon.awscdk.services.events.targets.AwsApiInput,
   ) : CdkObject(cdkObject), AwsApiInput {
     /**
      * The service action to call.

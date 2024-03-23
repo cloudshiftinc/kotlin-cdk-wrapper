@@ -156,7 +156,7 @@ public interface HttpHealthCheckOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.HttpHealthCheckOptions,
+    cdkObject: software.amazon.awscdk.services.appmesh.HttpHealthCheckOptions,
   ) : CdkObject(cdkObject), HttpHealthCheckOptions {
     /**
      * The number of consecutive successful health checks that must occur before declaring listener

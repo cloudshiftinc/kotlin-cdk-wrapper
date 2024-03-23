@@ -59,9 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EmrCreateCluster internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster,
+public open class EmrCreateCluster(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1021,7 +1020,8 @@ public open class EmrCreateCluster internal constructor(
         EmrCreateCluster = EmrCreateCluster(cdkObject)
 
     internal fun unwrap(wrapped: EmrCreateCluster):
-        software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
   }
 
   /**
@@ -1162,8 +1162,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ApplicationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ApplicationConfigProperty,
     ) : CdkObject(cdkObject), ApplicationConfigProperty {
       /**
        * This option is for advanced users only.
@@ -1360,8 +1359,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.AutoScalingPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.AutoScalingPolicyProperty,
     ) : CdkObject(cdkObject), AutoScalingPolicyProperty {
       /**
        * The upper and lower EC2 instance limits for an automatic scaling policy.
@@ -1492,8 +1490,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.BootstrapActionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.BootstrapActionConfigProperty,
     ) : CdkObject(cdkObject), BootstrapActionConfigProperty {
       /**
        * The name of the bootstrap action.
@@ -1808,8 +1805,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.CloudWatchAlarmDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.CloudWatchAlarmDefinitionProperty,
     ) : CdkObject(cdkObject), CloudWatchAlarmDefinitionProperty {
       /**
        * Determines how the metric specified by MetricName is compared to the value specified by
@@ -2147,8 +2143,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ConfigurationProperty,
     ) : CdkObject(cdkObject), ConfigurationProperty {
       /**
        * The classification within a configuration.
@@ -2298,8 +2293,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.EbsBlockDeviceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.EbsBlockDeviceConfigProperty,
     ) : CdkObject(cdkObject), EbsBlockDeviceConfigProperty {
       /**
        * EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested
@@ -2475,8 +2469,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.EbsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.EbsConfigurationProperty,
     ) : CdkObject(cdkObject), EbsConfigurationProperty {
       /**
        * An array of Amazon EBS volume specifications attached to a cluster instance.
@@ -2821,8 +2814,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceFleetConfigProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceFleetConfigProperty,
     ) : CdkObject(cdkObject), InstanceFleetConfigProperty {
       /**
        * The node type that the instance fleet hosts.
@@ -3079,8 +3071,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceFleetProvisioningSpecificationsProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceFleetProvisioningSpecificationsProperty,
     ) : CdkObject(cdkObject), InstanceFleetProvisioningSpecificationsProperty {
       /**
        * The launch specification for On-Demand Instances in the instance fleet, which determines
@@ -3453,8 +3444,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceGroupConfigProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceGroupConfigProperty,
     ) : CdkObject(cdkObject), InstanceGroupConfigProperty {
       /**
        * An automatic scaling policy for a core instance group or task instance group in an Amazon
@@ -3824,8 +3814,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceTypeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceTypeConfigProperty,
     ) : CdkObject(cdkObject), InstanceTypeConfigProperty {
       /**
        * The bid price for each EC2 Spot instance type as defined by InstanceType. Expressed in USD.
@@ -4395,8 +4384,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstancesConfigProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstancesConfigProperty,
     ) : CdkObject(cdkObject), InstancesConfigProperty {
       /**
        * A list of additional Amazon EC2 security group IDs for the master node.
@@ -4717,8 +4705,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.KerberosAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.KerberosAttributesProperty,
     ) : CdkObject(cdkObject), KerberosAttributesProperty {
       /**
        * The Active Directory password for ADDomainJoinUser.
@@ -4858,8 +4845,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.MetricDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.MetricDimensionProperty,
     ) : CdkObject(cdkObject), MetricDimensionProperty {
       /**
        * The dimension name.
@@ -4997,8 +4983,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.OnDemandProvisioningSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.OnDemandProvisioningSpecificationProperty,
     ) : CdkObject(cdkObject), OnDemandProvisioningSpecificationProperty {
       /**
        * Specifies the strategy to use in launching On-Demand instance fleets.
@@ -5138,8 +5123,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.PlacementTypeProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.PlacementTypeProperty,
     ) : CdkObject(cdkObject), PlacementTypeProperty {
       /**
        * The Amazon EC2 Availability Zone for the cluster.
@@ -5295,8 +5279,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingActionProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingActionProperty,
     ) : CdkObject(cdkObject), ScalingActionProperty {
       /**
        * Not available for instance groups.
@@ -5453,8 +5436,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingConstraintsProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingConstraintsProperty,
     ) : CdkObject(cdkObject), ScalingConstraintsProperty {
       /**
        * The upper boundary of EC2 instances in an instance group beyond which scaling activities
@@ -5668,8 +5650,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingRuleProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingRuleProperty,
     ) : CdkObject(cdkObject), ScalingRuleProperty {
       /**
        * The conditions that trigger an automatic scaling activity.
@@ -5819,8 +5800,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingTriggerProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingTriggerProperty,
     ) : CdkObject(cdkObject), ScalingTriggerProperty {
       /**
        * The definition of a CloudWatch metric alarm.
@@ -5938,8 +5918,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScriptBootstrapActionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScriptBootstrapActionConfigProperty,
     ) : CdkObject(cdkObject), ScriptBootstrapActionConfigProperty {
       /**
        * A list of command line arguments to pass to the bootstrap action script.
@@ -6096,8 +6075,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.SimpleScalingPolicyConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.SimpleScalingPolicyConfigurationProperty,
     ) : CdkObject(cdkObject), SimpleScalingPolicyConfigurationProperty {
       /**
        * The way in which EC2 instances are added (if ScalingAdjustment is a positive number) or
@@ -6380,8 +6358,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.SpotProvisioningSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.SpotProvisioningSpecificationProperty,
     ) : CdkObject(cdkObject), SpotProvisioningSpecificationProperty {
       /**
        * Specifies the strategy to use in launching Spot Instance fleets.
@@ -6587,8 +6564,7 @@ public open class EmrCreateCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.VolumeSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.VolumeSpecificationProperty,
     ) : CdkObject(cdkObject), VolumeSpecificationProperty {
       /**
        * The number of I/O operations per second (IOPS) that the volume supports.

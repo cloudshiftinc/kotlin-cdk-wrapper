@@ -200,8 +200,7 @@ public interface CfnPublicDnsNamespaceProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespaceProps,
+    cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespaceProps,
   ) : CdkObject(cdkObject), CfnPublicDnsNamespaceProps {
     /**
      * A description for the namespace.

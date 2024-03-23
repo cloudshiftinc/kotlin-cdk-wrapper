@@ -9,8 +9,8 @@ import kotlin.String
 /**
  * User pool third-party identity providers.
  */
-public open class UserPoolIdentityProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProvider,
+public open class UserPoolIdentityProvider(
+  cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProvider,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun fromProviderName(
@@ -25,6 +25,7 @@ public open class UserPoolIdentityProvider internal constructor(
         UserPoolIdentityProvider = UserPoolIdentityProvider(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolIdentityProvider):
-        software.amazon.awscdk.services.cognito.UserPoolIdentityProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.UserPoolIdentityProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.UserPoolIdentityProvider
   }
 }

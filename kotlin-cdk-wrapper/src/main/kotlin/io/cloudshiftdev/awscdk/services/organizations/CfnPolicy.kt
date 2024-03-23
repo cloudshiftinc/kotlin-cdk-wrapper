@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-policy.html)
  */
-public open class CfnPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.organizations.CfnPolicy,
+public open class CfnPolicy(
+  cdkObject: software.amazon.awscdk.services.organizations.CfnPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -551,6 +551,6 @@ public open class CfnPolicy internal constructor(
         = CfnPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicy): software.amazon.awscdk.services.organizations.CfnPolicy
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.organizations.CfnPolicy
   }
 }

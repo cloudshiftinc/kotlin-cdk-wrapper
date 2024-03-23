@@ -338,7 +338,7 @@ public interface CfnPricingRuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRuleProps,
+    cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRuleProps,
   ) : CdkObject(cdkObject), CfnPricingRuleProps {
     /**
      * The seller of services provided by AWS , their affiliates, or third-party providers selling

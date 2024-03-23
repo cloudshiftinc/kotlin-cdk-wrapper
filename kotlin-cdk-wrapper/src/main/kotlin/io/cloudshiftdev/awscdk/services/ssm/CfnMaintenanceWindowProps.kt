@@ -352,7 +352,7 @@ public interface CfnMaintenanceWindowProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowProps,
+    cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowProps,
   ) : CdkObject(cdkObject), CfnMaintenanceWindowProps {
     /**
      * Enables a maintenance window task to run on managed instances, even if you have not

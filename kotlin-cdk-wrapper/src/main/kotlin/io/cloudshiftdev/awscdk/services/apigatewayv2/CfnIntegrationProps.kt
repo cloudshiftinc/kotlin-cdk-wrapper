@@ -118,6 +118,9 @@ public interface CfnIntegrationProps {
   /**
    * Specifies the integration's HTTP method type.
    *
+   * For WebSocket APIs, if you use a Lambda integration, you must set the integration method to
+   * `POST` .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html#cfn-apigatewayv2-integration-integrationmethod)
    */
   public fun integrationMethod(): String? = unwrap(this).getIntegrationMethod()
@@ -350,6 +353,8 @@ public interface CfnIntegrationProps {
 
     /**
      * @param integrationMethod Specifies the integration's HTTP method type.
+     * For WebSocket APIs, if you use a Lambda integration, you must set the integration method to
+     * `POST` .
      */
     public fun integrationMethod(integrationMethod: String)
 
@@ -576,6 +581,8 @@ public interface CfnIntegrationProps {
 
     /**
      * @param integrationMethod Specifies the integration's HTTP method type.
+     * For WebSocket APIs, if you use a Lambda integration, you must set the integration method to
+     * `POST` .
      */
     override fun integrationMethod(integrationMethod: String) {
       cdkBuilder.integrationMethod(integrationMethod)
@@ -766,7 +773,7 @@ public interface CfnIntegrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegrationProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegrationProps,
   ) : CdkObject(cdkObject), CfnIntegrationProps {
     /**
      * The API identifier.
@@ -835,6 +842,9 @@ public interface CfnIntegrationProps {
 
     /**
      * Specifies the integration's HTTP method type.
+     *
+     * For WebSocket APIs, if you use a Lambda integration, you must set the integration method to
+     * `POST` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html#cfn-apigatewayv2-integration-integrationmethod)
      */

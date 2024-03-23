@@ -104,8 +104,7 @@ public interface CfnUserAccessLoggingSettingsProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettingsProps,
+    cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettingsProps,
   ) : CdkObject(cdkObject), CfnUserAccessLoggingSettingsProps {
     /**
      * The ARN of the Kinesis stream.

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import io.cloudshiftdev.awscdk.services.ecs.CapacityProviderStrategy
@@ -33,21 +34,21 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Cluster cluster;
- * NetworkLoadBalancedFargateService loadBalancedFargateService =
+ * Vpc vpc;
+ * SecurityGroup securityGroup;
+ * NetworkLoadBalancedFargateService queueProcessingFargateService =
  * NetworkLoadBalancedFargateService.Builder.create(this, "Service")
- * .cluster(cluster)
- * .memoryLimitMiB(1024)
- * .cpu(512)
+ * .vpc(vpc)
+ * .memoryLimitMiB(512)
  * .taskImageOptions(NetworkLoadBalancedTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
  * .build())
+ * .securityGroups(List.of(securityGroup))
  * .build();
  * ```
  */
-public open class NetworkLoadBalancedFargateService internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedFargateService,
+public open class NetworkLoadBalancedFargateService(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedFargateService,
 ) : NetworkLoadBalancedServiceBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -473,6 +474,28 @@ public open class NetworkLoadBalancedFargateService internal constructor(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b43a8571f7171bf65fd0a976dc3084cacbd2d34ac9a47260c33220b627022a26")
     public fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit)
+
+    /**
+     * The security groups to associate with the service.
+     *
+     * If you do not specify a security group, a new security group is created.
+     *
+     * Default: - A new security group is created.
+     *
+     * @param securityGroups The security groups to associate with the service. 
+     */
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    /**
+     * The security groups to associate with the service.
+     *
+     * If you do not specify a security group, a new security group is created.
+     *
+     * Default: - A new security group is created.
+     *
+     * @param securityGroups The security groups to associate with the service. 
+     */
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     /**
      * The name of the service.
@@ -1004,6 +1027,31 @@ public open class NetworkLoadBalancedFargateService internal constructor(
         runtimePlatform(RuntimePlatform(runtimePlatform))
 
     /**
+     * The security groups to associate with the service.
+     *
+     * If you do not specify a security group, a new security group is created.
+     *
+     * Default: - A new security group is created.
+     *
+     * @param securityGroups The security groups to associate with the service. 
+     */
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+    }
+
+    /**
+     * The security groups to associate with the service.
+     *
+     * If you do not specify a security group, a new security group is created.
+     *
+     * Default: - A new security group is created.
+     *
+     * @param securityGroups The security groups to associate with the service. 
+     */
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
+
+    /**
      * The name of the service.
      *
      * Default: - CloudFormation-generated name.
@@ -1119,6 +1167,7 @@ public open class NetworkLoadBalancedFargateService internal constructor(
 
     internal fun unwrap(wrapped: NetworkLoadBalancedFargateService):
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedFargateService =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedFargateService
   }
 }

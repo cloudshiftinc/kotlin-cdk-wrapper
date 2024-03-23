@@ -24,8 +24,8 @@ import io.cloudshiftdev.constructs.Construct
  * node.addBackend(Backend.virtualService(virtualService));
  * ```
  */
-public abstract class VirtualServiceProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProvider,
+public abstract class VirtualServiceProvider(
+  cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProvider,
 ) : CdkObject(cdkObject) {
   /**
    * Enforces mutual exclusivity for VirtualService provider types.
@@ -36,7 +36,7 @@ public abstract class VirtualServiceProvider internal constructor(
       unwrap(this).bind(construct.let(Construct::unwrap)).let(VirtualServiceProviderConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProvider,
+    cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProvider,
   ) : VirtualServiceProvider(cdkObject)
 
   public companion object {

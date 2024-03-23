@@ -15,7 +15,7 @@ public interface IConnectable {
   public fun connections(): Connections
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IConnectable,
+    cdkObject: software.amazon.awscdk.services.ec2.IConnectable,
   ) : CdkObject(cdkObject), IConnectable {
     /**
      * The network connections associated with this resource.

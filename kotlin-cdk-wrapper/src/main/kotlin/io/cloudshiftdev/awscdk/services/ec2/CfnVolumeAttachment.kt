@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volumeattachment.html)
  */
-public open class CfnVolumeAttachment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVolumeAttachment,
+public open class CfnVolumeAttachment(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVolumeAttachment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -211,6 +211,7 @@ public open class CfnVolumeAttachment internal constructor(
         CfnVolumeAttachment = CfnVolumeAttachment(cdkObject)
 
     internal fun unwrap(wrapped: CfnVolumeAttachment):
-        software.amazon.awscdk.services.ec2.CfnVolumeAttachment = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVolumeAttachment = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVolumeAttachment
   }
 }

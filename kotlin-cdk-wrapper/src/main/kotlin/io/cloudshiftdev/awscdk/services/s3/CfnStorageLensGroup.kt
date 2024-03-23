@@ -98,8 +98,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-storagelensgroup.html)
  */
-public open class CfnStorageLensGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup,
+public open class CfnStorageLensGroup(
+  cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -353,7 +353,8 @@ public open class CfnStorageLensGroup internal constructor(
         CfnStorageLensGroup = CfnStorageLensGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnStorageLensGroup):
-        software.amazon.awscdk.services.s3.CfnStorageLensGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.s3.CfnStorageLensGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3.CfnStorageLensGroup
   }
 
   /**
@@ -633,7 +634,7 @@ public open class CfnStorageLensGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.AndProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.AndProperty,
     ) : CdkObject(cdkObject), AndProperty {
       /**
        * This property contains a list of prefixes.
@@ -1136,7 +1137,7 @@ public open class CfnStorageLensGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.FilterProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.FilterProperty,
     ) : CdkObject(cdkObject), FilterProperty {
       /**
        * This property contains the `And` logical operator, which allows multiple filter conditions
@@ -1296,8 +1297,7 @@ public open class CfnStorageLensGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLensGroup.MatchObjectAgeProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.MatchObjectAgeProperty,
     ) : CdkObject(cdkObject), MatchObjectAgeProperty {
       /**
        * This property indicates the minimum object age in days.
@@ -1415,8 +1415,7 @@ public open class CfnStorageLensGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLensGroup.MatchObjectSizeProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.MatchObjectSizeProperty,
     ) : CdkObject(cdkObject), MatchObjectSizeProperty {
       /**
        * This property specifies the minimum object size in bytes.
@@ -1732,7 +1731,7 @@ public open class CfnStorageLensGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.OrProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.OrProperty,
     ) : CdkObject(cdkObject), OrProperty {
       /**
        * This property contains a list of prefixes.

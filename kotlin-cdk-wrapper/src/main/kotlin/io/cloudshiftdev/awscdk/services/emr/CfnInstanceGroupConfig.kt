@@ -121,8 +121,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html)
  */
-public open class CfnInstanceGroupConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig,
+public open class CfnInstanceGroupConfig(
+  cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -745,7 +745,8 @@ public open class CfnInstanceGroupConfig internal constructor(
         CfnInstanceGroupConfig = CfnInstanceGroupConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceGroupConfig):
-        software.amazon.awscdk.services.emr.CfnInstanceGroupConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.emr.CfnInstanceGroupConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.emr.CfnInstanceGroupConfig
   }
 
   /**
@@ -931,8 +932,7 @@ public open class CfnInstanceGroupConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.AutoScalingPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.AutoScalingPolicyProperty,
     ) : CdkObject(cdkObject), AutoScalingPolicyProperty {
       /**
        * The upper and lower Amazon EC2 instance limits for an automatic scaling policy.
@@ -1248,8 +1248,7 @@ public open class CfnInstanceGroupConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty,
     ) : CdkObject(cdkObject), CloudWatchAlarmDefinitionProperty {
       /**
        * Determines how the metric specified by `MetricName` is compared to the value specified by
@@ -1507,8 +1506,7 @@ public open class CfnInstanceGroupConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ConfigurationProperty,
     ) : CdkObject(cdkObject), ConfigurationProperty {
       /**
        * The classification within a configuration.
@@ -1681,8 +1679,7 @@ public open class CfnInstanceGroupConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty,
     ) : CdkObject(cdkObject), EbsBlockDeviceConfigProperty {
       /**
        * EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that
@@ -1844,8 +1841,7 @@ public open class CfnInstanceGroupConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsConfigurationProperty,
     ) : CdkObject(cdkObject), EbsConfigurationProperty {
       /**
        * An array of Amazon EBS volume specifications attached to a cluster instance.
@@ -1960,8 +1956,7 @@ public open class CfnInstanceGroupConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.MetricDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.MetricDimensionProperty,
     ) : CdkObject(cdkObject), MetricDimensionProperty {
       /**
        * The dimension name.
@@ -2121,8 +2116,7 @@ public open class CfnInstanceGroupConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingActionProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingActionProperty,
     ) : CdkObject(cdkObject), ScalingActionProperty {
       /**
        * Not available for instance groups.
@@ -2253,8 +2247,7 @@ public open class CfnInstanceGroupConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingConstraintsProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingConstraintsProperty,
     ) : CdkObject(cdkObject), ScalingConstraintsProperty {
       /**
        * The upper boundary of Amazon EC2 instances in an instance group beyond which scaling
@@ -2503,8 +2496,7 @@ public open class CfnInstanceGroupConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingRuleProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingRuleProperty,
     ) : CdkObject(cdkObject), ScalingRuleProperty {
       /**
        * The conditions that trigger an automatic scaling activity.
@@ -2673,8 +2665,7 @@ public open class CfnInstanceGroupConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingTriggerProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingTriggerProperty,
     ) : CdkObject(cdkObject), ScalingTriggerProperty {
       /**
        * The definition of a CloudWatch metric alarm.
@@ -2858,8 +2849,7 @@ public open class CfnInstanceGroupConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty,
     ) : CdkObject(cdkObject), SimpleScalingPolicyConfigurationProperty {
       /**
        * The way in which Amazon EC2 instances are added (if `ScalingAdjustment` is a positive
@@ -3054,8 +3044,7 @@ public open class CfnInstanceGroupConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.VolumeSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.VolumeSpecificationProperty,
     ) : CdkObject(cdkObject), VolumeSpecificationProperty {
       /**
        * The number of I/O operations per second (IOPS) that the volume supports.

@@ -65,8 +65,7 @@ public interface CfnEipEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpointProps,
+    cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpointProps,
   ) : CdkObject(cdkObject), CfnEipEndpointProps {
     /**
      * Endpoint weight across all endpoints in the group.

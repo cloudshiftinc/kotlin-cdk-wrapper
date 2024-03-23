@@ -60,9 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html)
  */
-public open class CfnConfigurationSet internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet,
+public open class CfnConfigurationSet(
+  cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -627,7 +626,8 @@ public open class CfnConfigurationSet internal constructor(
         CfnConfigurationSet = CfnConfigurationSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationSet):
-        software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
   }
 
   /**
@@ -686,8 +686,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.DeliveryOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.DeliveryOptionsProperty,
     ) : CdkObject(cdkObject), DeliveryOptionsProperty {
       /**
        * The name of the dedicated IP pool that you want to associate with the configuration set.
@@ -792,8 +791,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty,
     ) : CdkObject(cdkObject), ReputationOptionsProperty {
       /**
        * If `true` , tracking of reputation metrics is enabled for the configuration set.
@@ -896,8 +894,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.SendingOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.SendingOptionsProperty,
     ) : CdkObject(cdkObject), SendingOptionsProperty {
       /**
        * If `true` , email sending is enabled for the configuration set.
@@ -990,8 +987,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.TrackingOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.TrackingOptionsProperty,
     ) : CdkObject(cdkObject), TrackingOptionsProperty {
       /**
        * The domain that you want to use for tracking open and click events.

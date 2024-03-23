@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Provider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.customresources.Provider,
+public open class Provider(
+  cdkObject: software.amazon.awscdk.customresources.Provider,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -493,6 +493,6 @@ public open class Provider internal constructor(
         Provider(cdkObject)
 
     internal fun unwrap(wrapped: Provider): software.amazon.awscdk.customresources.Provider =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.customresources.Provider
   }
 }

@@ -135,7 +135,7 @@ public interface ServiceConnectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ServiceConnectProps,
+    cdkObject: software.amazon.awscdk.services.ecs.ServiceConnectProps,
   ) : CdkObject(cdkObject), ServiceConnectProps {
     /**
      * The log driver configuration to use for the Service Connect agent logs.

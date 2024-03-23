@@ -520,7 +520,7 @@ public interface CfnStudioProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.emr.CfnStudioProps,
+    cdkObject: software.amazon.awscdk.services.emr.CfnStudioProps,
   ) : CdkObject(cdkObject), CfnStudioProps {
     /**
      * Specifies whether the Studio authenticates users using IAM Identity Center or IAM.

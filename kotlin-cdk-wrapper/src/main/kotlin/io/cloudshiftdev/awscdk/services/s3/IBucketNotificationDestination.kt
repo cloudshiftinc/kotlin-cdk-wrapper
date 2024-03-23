@@ -23,7 +23,7 @@ public interface IBucketNotificationDestination {
   public fun bind(scope: Construct, bucket: IBucket): BucketNotificationDestinationConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.IBucketNotificationDestination,
+    cdkObject: software.amazon.awscdk.services.s3.IBucketNotificationDestination,
   ) : CdkObject(cdkObject), IBucketNotificationDestination {
     /**
      * Registers this resource to receive notifications for the specified bucket.

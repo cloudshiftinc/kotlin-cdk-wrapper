@@ -123,8 +123,7 @@ public interface CfnCustomerGatewayAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociationProps,
+    cdkObject: software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociationProps,
   ) : CdkObject(cdkObject), CfnCustomerGatewayAssociationProps {
     /**
      * The Amazon Resource Name (ARN) of the customer gateway.

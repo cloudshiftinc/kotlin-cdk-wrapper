@@ -158,7 +158,7 @@ public interface CfnMatchmakingRuleSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSetProps,
+    cdkObject: software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSetProps,
   ) : CdkObject(cdkObject), CfnMatchmakingRuleSetProps {
     /**
      * A unique identifier for the matchmaking rule set.

@@ -130,9 +130,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html)
  */
-public open class CfnListenerRule internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule,
+public open class CfnListenerRule(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -490,6 +489,7 @@ public open class CfnListenerRule internal constructor(
 
     internal fun unwrap(wrapped: CfnListenerRule):
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule = wrapped.cdkObject
+        as software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule
   }
 
   /**
@@ -986,8 +986,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * [HTTPS listeners] Information for using Amazon Cognito to authenticate users.
@@ -1335,8 +1334,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty,
     ) : CdkObject(cdkObject), AuthenticateCognitoConfigProperty {
       /**
        * The query parameters (up to 10) to include in the redirect request to the authorization
@@ -1799,8 +1797,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty,
     ) : CdkObject(cdkObject), AuthenticateOidcConfigProperty {
       /**
        * The query parameters (up to 10) to include in the redirect request to the authorization
@@ -2030,8 +2027,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty,
     ) : CdkObject(cdkObject), FixedResponseConfigProperty {
       /**
        * The content type.
@@ -2228,8 +2224,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty,
     ) : CdkObject(cdkObject), ForwardConfigProperty {
       /**
        * Information about the target group stickiness for a rule.
@@ -2361,8 +2356,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty,
     ) : CdkObject(cdkObject), HostHeaderConfigProperty {
       /**
        * The host names.
@@ -2541,8 +2535,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty,
     ) : CdkObject(cdkObject), HttpHeaderConfigProperty {
       /**
        * The name of the HTTP header field.
@@ -2697,8 +2690,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty,
     ) : CdkObject(cdkObject), HttpRequestMethodConfigProperty {
       /**
        * The name of the request method.
@@ -2833,8 +2825,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty,
     ) : CdkObject(cdkObject), PathPatternConfigProperty {
       /**
        * The path patterns to compare against the request URL.
@@ -3004,8 +2995,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringConfigProperty,
     ) : CdkObject(cdkObject), QueryStringConfigProperty {
       /**
        * The key/value pairs or values to find in the query string.
@@ -3119,8 +3109,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty,
     ) : CdkObject(cdkObject), QueryStringKeyValueProperty {
       /**
        * The key.
@@ -3357,8 +3346,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty,
     ) : CdkObject(cdkObject), RedirectConfigProperty {
       /**
        * The hostname.
@@ -4025,8 +4013,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RuleConditionProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RuleConditionProperty,
     ) : CdkObject(cdkObject), RuleConditionProperty {
       /**
        * The field in the HTTP request. The following are the possible values:.
@@ -4239,8 +4226,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.SourceIpConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.SourceIpConfigProperty,
     ) : CdkObject(cdkObject), SourceIpConfigProperty {
       /**
        * The source IP addresses, in CIDR format. You can use both IPv4 and IPv6 addresses.
@@ -4367,8 +4353,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty,
     ) : CdkObject(cdkObject), TargetGroupStickinessConfigProperty {
       /**
        * The time period, in seconds, during which requests from a client should be routed to the
@@ -4486,8 +4471,7 @@ public open class CfnListenerRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty,
     ) : CdkObject(cdkObject), TargetGroupTupleProperty {
       /**
        * The Amazon Resource Name (ARN) of the target group.

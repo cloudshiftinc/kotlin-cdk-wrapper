@@ -559,7 +559,7 @@ public interface CfnEnvironmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironmentProps,
+    cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironmentProps,
   ) : CdkObject(cdkObject), CfnEnvironmentProps {
     /**
      * The name of the application that is associated with this environment.

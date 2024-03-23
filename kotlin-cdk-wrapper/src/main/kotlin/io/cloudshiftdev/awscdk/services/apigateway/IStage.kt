@@ -54,7 +54,7 @@ public interface IStage : IResource {
   public fun stageName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IStage,
+    cdkObject: software.amazon.awscdk.services.apigateway.IStage,
   ) : CdkObject(cdkObject), IStage {
     /**
      * Add an ApiKey to this Stage.

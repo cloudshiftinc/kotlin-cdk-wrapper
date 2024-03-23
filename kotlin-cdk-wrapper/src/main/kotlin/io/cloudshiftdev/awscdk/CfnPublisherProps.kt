@@ -127,7 +127,7 @@ public interface CfnPublisherProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnPublisherProps,
+    cdkObject: software.amazon.awscdk.CfnPublisherProps,
   ) : CdkObject(cdkObject), CfnPublisherProps {
     /**
      * Whether you accept the [Terms and

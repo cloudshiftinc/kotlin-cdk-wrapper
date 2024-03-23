@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * product.associateTagOptions(tagOptionsForProduct);
  * ```
  */
-public open class TagOptions internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.TagOptions,
+public open class TagOptions(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.TagOptions,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -107,6 +107,7 @@ public open class TagOptions internal constructor(
         TagOptions = TagOptions(cdkObject)
 
     internal fun unwrap(wrapped: TagOptions):
-        software.amazon.awscdk.services.servicecatalog.TagOptions = wrapped.cdkObject
+        software.amazon.awscdk.services.servicecatalog.TagOptions = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.TagOptions
   }
 }

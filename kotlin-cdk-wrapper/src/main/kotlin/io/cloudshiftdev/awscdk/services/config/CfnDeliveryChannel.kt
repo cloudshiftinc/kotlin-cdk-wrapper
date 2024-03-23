@@ -86,8 +86,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html)
  */
-public open class CfnDeliveryChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.CfnDeliveryChannel,
+public open class CfnDeliveryChannel(
+  cdkObject: software.amazon.awscdk.services.config.CfnDeliveryChannel,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -465,7 +465,8 @@ public open class CfnDeliveryChannel internal constructor(
         CfnDeliveryChannel = CfnDeliveryChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeliveryChannel):
-        software.amazon.awscdk.services.config.CfnDeliveryChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.config.CfnDeliveryChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnDeliveryChannel
   }
 
   /**
@@ -558,8 +559,7 @@ public open class CfnDeliveryChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty,
     ) : CdkObject(cdkObject), ConfigSnapshotDeliveryPropertiesProperty {
       /**
        * The frequency with which AWS Config delivers configuration snapshots.

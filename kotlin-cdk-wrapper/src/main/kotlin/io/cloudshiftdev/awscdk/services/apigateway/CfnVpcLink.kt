@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-vpclink.html)
  */
-public open class CfnVpcLink internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnVpcLink,
+public open class CfnVpcLink(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnVpcLink,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -287,6 +287,6 @@ public open class CfnVpcLink internal constructor(
         = CfnVpcLink(cdkObject)
 
     internal fun unwrap(wrapped: CfnVpcLink): software.amazon.awscdk.services.apigateway.CfnVpcLink
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.apigateway.CfnVpcLink
   }
 }

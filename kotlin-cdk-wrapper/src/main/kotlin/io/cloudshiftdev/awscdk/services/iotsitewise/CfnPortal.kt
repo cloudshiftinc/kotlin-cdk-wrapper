@@ -21,15 +21,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Creates a portal, which can contain projects and dashboards.
  *
- * Before you can create a portal, you must enable IAM Identity Center . AWS IoT SiteWise Monitor
- * uses IAM Identity Center to manage user permissions. For more information, see [Enabling IAM
- * Identity
- * Center](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-get-started.html#mon-gs-sso)
- * in the *AWS IoT SiteWise User Guide* .
+ * AWS IoT SiteWise Monitor uses IAM Identity Center or IAM to authenticate portal users and manage
+ * user permissions.
  *
  *
- * Before you can sign in to a new portal, you must add at least one IAM Identity Center user or
- * group to that portal. For more information, see [Adding or removing portal
+ * Before you can sign in to a new portal, you must add at least one identity to that portal. For
+ * more information, see [Adding or removing portal
  * administrators](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/administer-portals.html#portal-change-admins)
  * in the *AWS IoT SiteWise User Guide* .
  *
@@ -59,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html)
  */
-public open class CfnPortal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnPortal,
+public open class CfnPortal(
+  cdkObject: software.amazon.awscdk.services.iotsitewise.CfnPortal,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -270,13 +267,13 @@ public open class CfnPortal internal constructor(
      * The service to use to authenticate users to the portal. Choose from the following options:.
      *
      * * `SSO` – The portal uses AWS IAM Identity Center to authenticate users and manage user
-     * permissions. Before you can create a portal that uses IAM Identity Center , you must enable IAM
-     * Identity Center . For more information, see [Enabling IAM Identity
+     * permissions. Before you can create a portal that uses IAM Identity Center, you must enable IAM
+     * Identity Center. For more information, see [Enabling IAM Identity
      * Center](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-get-started.html#mon-gs-sso)
      * in the *AWS IoT SiteWise User Guide* . This option is only available in AWS Regions other than
      * the China Regions.
-     * * `IAM` – The portal uses AWS Identity and Access Management ( IAM ) to authenticate users
-     * and manage user permissions.
+     * * `IAM` – The portal uses AWS Identity and Access Management to authenticate users and manage
+     * user permissions.
      *
      * You can't change this value after you create a portal.
      *
@@ -399,13 +396,13 @@ public open class CfnPortal internal constructor(
      * The service to use to authenticate users to the portal. Choose from the following options:.
      *
      * * `SSO` – The portal uses AWS IAM Identity Center to authenticate users and manage user
-     * permissions. Before you can create a portal that uses IAM Identity Center , you must enable IAM
-     * Identity Center . For more information, see [Enabling IAM Identity
+     * permissions. Before you can create a portal that uses IAM Identity Center, you must enable IAM
+     * Identity Center. For more information, see [Enabling IAM Identity
      * Center](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-get-started.html#mon-gs-sso)
      * in the *AWS IoT SiteWise User Guide* . This option is only available in AWS Regions other than
      * the China Regions.
-     * * `IAM` – The portal uses AWS Identity and Access Management ( IAM ) to authenticate users
-     * and manage user permissions.
+     * * `IAM` – The portal uses AWS Identity and Access Management to authenticate users and manage
+     * user permissions.
      *
      * You can't change this value after you create a portal.
      *
@@ -514,7 +511,7 @@ public open class CfnPortal internal constructor(
         CfnPortal(cdkObject)
 
     internal fun unwrap(wrapped: CfnPortal): software.amazon.awscdk.services.iotsitewise.CfnPortal =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iotsitewise.CfnPortal
   }
 
   /**
@@ -614,7 +611,7 @@ public open class CfnPortal internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnPortal.AlarmsProperty,
+      cdkObject: software.amazon.awscdk.services.iotsitewise.CfnPortal.AlarmsProperty,
     ) : CdkObject(cdkObject), AlarmsProperty {
       /**
        * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of

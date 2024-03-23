@@ -91,8 +91,7 @@ public interface HttpLambdaIntegrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegrationProps,
+    cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegrationProps,
   ) : CdkObject(cdkObject), HttpLambdaIntegrationProps {
     /**
      * Specifies how to transform HTTP requests before sending them to the backend.

@@ -99,7 +99,7 @@ public interface BucketMetrics {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.BucketMetrics,
+    cdkObject: software.amazon.awscdk.services.s3.BucketMetrics,
   ) : CdkObject(cdkObject), BucketMetrics {
     /**
      * The ID used to identify the metrics configuration.

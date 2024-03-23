@@ -391,7 +391,7 @@ public interface CfnTriggerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.glue.CfnTriggerProps,
+    cdkObject: software.amazon.awscdk.services.glue.CfnTriggerProps,
   ) : CdkObject(cdkObject), CfnTriggerProps {
     /**
      * The actions initiated by this trigger.

@@ -300,7 +300,7 @@ public interface Volume {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.Volume,
+    cdkObject: software.amazon.awscdk.services.ecs.Volume,
   ) : CdkObject(cdkObject), Volume {
     /**
      * Indicates if the volume should be configured at launch.

@@ -18,9 +18,8 @@ import kotlin.collections.Map
 /**
  * The base class for QueueProcessingEc2Service and QueueProcessingFargateService services.
  */
-public abstract class QueueProcessingServiceBase internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.patterns.QueueProcessingServiceBase,
+public abstract class QueueProcessingServiceBase(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingServiceBase,
 ) : Construct(cdkObject) {
   /**
    * The cluster where your service will be deployed.
@@ -70,7 +69,7 @@ public abstract class QueueProcessingServiceBase internal constructor(
   public open fun sqsQueue(): IQueue = unwrap(this).getSqsQueue().let(IQueue::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingServiceBase,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingServiceBase,
   ) : QueueProcessingServiceBase(cdkObject)
 
   public companion object {

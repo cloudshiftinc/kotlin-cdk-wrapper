@@ -19,8 +19,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#SysMetadata)
  */
-public open class RepositoryEncryption internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.RepositoryEncryption,
+public open class RepositoryEncryption(
+  cdkObject: software.amazon.awscdk.services.ecr.RepositoryEncryption,
 ) : CdkObject(cdkObject) {
   /**
    * the string value of the encryption.
@@ -38,6 +38,7 @@ public open class RepositoryEncryption internal constructor(
         RepositoryEncryption = RepositoryEncryption(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryEncryption):
-        software.amazon.awscdk.services.ecr.RepositoryEncryption = wrapped.cdkObject
+        software.amazon.awscdk.services.ecr.RepositoryEncryption = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecr.RepositoryEncryption
   }
 }

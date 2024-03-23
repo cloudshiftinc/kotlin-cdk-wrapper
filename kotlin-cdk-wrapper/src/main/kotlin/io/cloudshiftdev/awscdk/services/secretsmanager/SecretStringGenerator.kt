@@ -293,7 +293,7 @@ public interface SecretStringGenerator {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.SecretStringGenerator,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.SecretStringGenerator,
   ) : CdkObject(cdkObject), SecretStringGenerator {
     /**
      * A string that includes characters that shouldn't be included in the generated password.

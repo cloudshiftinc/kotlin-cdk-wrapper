@@ -107,8 +107,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
  */
-public open class CfnCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnCluster,
+public open class CfnCluster(
+  cdkObject: software.amazon.awscdk.services.redshift.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1683,7 +1683,12 @@ public open class CfnCluster internal constructor(
      *
      * Default: `5439`
      *
-     * Valid Values: `1150-65535`
+     * Valid Values:
+     *
+     * * For clusters with ra3 nodes - Select a port within the ranges `5431-5455` or `8191-8215` .
+     * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to
+     * these ranges.)
+     * * For clusters with ds2 or dc2 nodes - Select a port within the range `1150-65535` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-port)
      * @param port The port number on which the cluster accepts incoming connections. 
@@ -2688,7 +2693,12 @@ public open class CfnCluster internal constructor(
      *
      * Default: `5439`
      *
-     * Valid Values: `1150-65535`
+     * Valid Values:
+     *
+     * * For clusters with ra3 nodes - Select a port within the ranges `5431-5455` or `8191-8215` .
+     * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to
+     * these ranges.)
+     * * For clusters with ds2 or dc2 nodes - Select a port within the range `1150-65535` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-port)
      * @param port The port number on which the cluster accepts incoming connections. 
@@ -2937,7 +2947,7 @@ public open class CfnCluster internal constructor(
         CfnCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCluster): software.amazon.awscdk.services.redshift.CfnCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.redshift.CfnCluster
   }
 
   /**
@@ -3020,7 +3030,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.redshift.CfnCluster.EndpointProperty,
+      cdkObject: software.amazon.awscdk.services.redshift.CfnCluster.EndpointProperty,
     ) : CdkObject(cdkObject), EndpointProperty {
       /**
        * The DNS address of the cluster.
@@ -3177,8 +3187,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnCluster.LoggingPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.redshift.CfnCluster.LoggingPropertiesProperty,
     ) : CdkObject(cdkObject), LoggingPropertiesProperty {
       /**
        * The name of an existing S3 bucket where the log files are to be stored.

@@ -75,7 +75,7 @@ public interface FunctionAssociation {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAssociation,
+    cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAssociation,
   ) : CdkObject(cdkObject), FunctionAssociation {
     /**
      * The type of event which should invoke the function.

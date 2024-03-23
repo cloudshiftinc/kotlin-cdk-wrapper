@@ -28,8 +28,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public abstract class LoadBalancer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codedeploy.LoadBalancer,
+public abstract class LoadBalancer(
+  cdkObject: software.amazon.awscdk.services.codedeploy.LoadBalancer,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -43,7 +43,7 @@ public abstract class LoadBalancer internal constructor(
   public open fun name(): String = unwrap(this).getName()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.LoadBalancer,
+    cdkObject: software.amazon.awscdk.services.codedeploy.LoadBalancer,
   ) : LoadBalancer(cdkObject)
 
   public companion object {

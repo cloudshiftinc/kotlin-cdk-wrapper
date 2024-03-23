@@ -726,7 +726,7 @@ public interface CfnMaintenanceWindowTaskProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTaskProps,
+    cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTaskProps,
   ) : CdkObject(cdkObject), CfnMaintenanceWindowTaskProps {
     /**
      * The specification for whether tasks should continue to run after the cutoff time specified in

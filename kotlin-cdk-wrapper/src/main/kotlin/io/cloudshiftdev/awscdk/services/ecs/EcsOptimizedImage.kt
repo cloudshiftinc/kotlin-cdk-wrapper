@@ -40,8 +40,8 @@ import kotlin.jvm.JvmName
  * cluster.addAsgCapacityProvider(capacityProvider);
  * ```
  */
-public open class EcsOptimizedImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.EcsOptimizedImage,
+public open class EcsOptimizedImage(
+  cdkObject: software.amazon.awscdk.services.ecs.EcsOptimizedImage,
 ) : CdkObject(cdkObject), IMachineImage {
   /**
    * Return the correct image.
@@ -115,6 +115,7 @@ public open class EcsOptimizedImage internal constructor(
         EcsOptimizedImage = EcsOptimizedImage(cdkObject)
 
     internal fun unwrap(wrapped: EcsOptimizedImage):
-        software.amazon.awscdk.services.ecs.EcsOptimizedImage = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.EcsOptimizedImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.EcsOptimizedImage
   }
 }

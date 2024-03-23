@@ -62,9 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html)
  */
-public open class CfnGlobalReplicationGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup,
+public open class CfnGlobalReplicationGroup(
+  cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -567,7 +566,8 @@ public open class CfnGlobalReplicationGroup internal constructor(
         CfnGlobalReplicationGroup = CfnGlobalReplicationGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnGlobalReplicationGroup):
-        software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup
   }
 
   /**
@@ -667,8 +667,7 @@ public open class CfnGlobalReplicationGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty,
     ) : CdkObject(cdkObject), GlobalReplicationGroupMemberProperty {
       /**
        * The replication group id of the Global datastore member.
@@ -839,8 +838,7 @@ public open class CfnGlobalReplicationGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty,
     ) : CdkObject(cdkObject), RegionalConfigurationProperty {
       /**
        * The name of the secondary cluster.
@@ -978,8 +976,7 @@ public open class CfnGlobalReplicationGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty,
     ) : CdkObject(cdkObject), ReshardingConfigurationProperty {
       /**
        * Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node

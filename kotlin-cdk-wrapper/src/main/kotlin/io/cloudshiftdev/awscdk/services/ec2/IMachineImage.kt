@@ -18,7 +18,7 @@ public interface IMachineImage {
   public fun image(scope: Construct): MachineImageConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IMachineImage,
+    cdkObject: software.amazon.awscdk.services.ec2.IMachineImage,
   ) : CdkObject(cdkObject), IMachineImage {
     /**
      * Return the image to use in the given context.

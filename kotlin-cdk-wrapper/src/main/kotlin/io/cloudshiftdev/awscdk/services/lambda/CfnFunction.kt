@@ -139,8 +139,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html)
  */
-public open class CfnFunction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnFunction,
+public open class CfnFunction(
+  cdkObject: software.amazon.awscdk.services.lambda.CfnFunction,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -2061,7 +2061,7 @@ public open class CfnFunction internal constructor(
         CfnFunction(cdkObject)
 
     internal fun unwrap(wrapped: CfnFunction): software.amazon.awscdk.services.lambda.CfnFunction =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lambda.CfnFunction
   }
 
   /**
@@ -2262,7 +2262,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.CodeProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.CodeProperty,
     ) : CdkObject(cdkObject), CodeProperty {
       /**
        * URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)
@@ -2388,8 +2388,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty,
     ) : CdkObject(cdkObject), DeadLetterConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
@@ -2497,8 +2496,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty,
     ) : CdkObject(cdkObject), EnvironmentProperty {
       /**
        * Environment variable key-value pairs.
@@ -2584,8 +2582,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty,
     ) : CdkObject(cdkObject), EphemeralStorageProperty {
       /**
        * The size of the function's `/tmp` directory.
@@ -2692,8 +2689,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty,
     ) : CdkObject(cdkObject), FileSystemConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the
@@ -2865,8 +2861,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty,
     ) : CdkObject(cdkObject), ImageConfigProperty {
       /**
        * Specifies parameters that you want to pass in with ENTRYPOINT.
@@ -3063,8 +3058,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty,
     ) : CdkObject(cdkObject), LoggingConfigProperty {
       /**
        * Set this property to filter the application logs for your function that Lambda sends to
@@ -3270,8 +3264,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty,
     ) : CdkObject(cdkObject), RuntimeManagementConfigProperty {
       /**
        * The ARN of the runtime version you want the function to use.
@@ -3386,7 +3379,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty,
     ) : CdkObject(cdkObject), SnapStartProperty {
       /**
        * Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized execution
@@ -3501,8 +3494,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty,
     ) : CdkObject(cdkObject), SnapStartResponseProperty {
       /**
        * When set to `PublishedVersions` , Lambda creates a snapshot of the execution environment
@@ -3594,8 +3586,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty,
     ) : CdkObject(cdkObject), TracingConfigProperty {
       /**
        * The tracing mode.
@@ -3768,7 +3759,7 @@ public open class CfnFunction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * Allows outbound IPv6 traffic on VPC functions that are connected to dual-stack subnets.

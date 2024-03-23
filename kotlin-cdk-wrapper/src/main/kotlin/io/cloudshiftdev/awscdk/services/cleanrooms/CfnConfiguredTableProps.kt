@@ -325,7 +325,7 @@ public interface CfnConfiguredTableProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableProps,
+    cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableProps,
   ) : CdkObject(cdkObject), CfnConfiguredTableProps {
     /**
      * The columns within the underlying AWS Glue table that can be utilized within collaborations.

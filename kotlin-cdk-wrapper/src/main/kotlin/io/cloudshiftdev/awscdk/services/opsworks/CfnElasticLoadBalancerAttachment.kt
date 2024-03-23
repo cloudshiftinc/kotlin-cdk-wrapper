@@ -29,9 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elasticloadbalancerattachment.html)
  */
-public open class CfnElasticLoadBalancerAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachment,
+public open class CfnElasticLoadBalancerAttachment(
+  cdkObject: software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -164,6 +163,7 @@ public open class CfnElasticLoadBalancerAttachment internal constructor(
 
     internal fun unwrap(wrapped: CfnElasticLoadBalancerAttachment):
         software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachment =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachment
   }
 }

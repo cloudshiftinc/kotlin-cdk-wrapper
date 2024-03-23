@@ -102,7 +102,7 @@ public interface AwsIpamProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.AwsIpamProps,
+    cdkObject: software.amazon.awscdk.services.ec2.AwsIpamProps,
   ) : CdkObject(cdkObject), AwsIpamProps {
     /**
      * Default length for Subnet ipv4 Network mask.

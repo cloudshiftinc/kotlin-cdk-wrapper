@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/working-with-appconfig-extensions.html)
  */
-public open class Extension internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.Extension,
+public open class Extension(
+  cdkObject: software.amazon.awscdk.services.appconfig.Extension,
 ) : Resource(cdkObject), IExtension {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -281,6 +281,6 @@ public open class Extension internal constructor(
         Extension(cdkObject)
 
     internal fun unwrap(wrapped: Extension): software.amazon.awscdk.services.appconfig.Extension =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appconfig.Extension
   }
 }

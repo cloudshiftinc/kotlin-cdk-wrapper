@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robot.html)
  */
-public open class CfnRobot internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.robomaker.CfnRobot,
+public open class CfnRobot(
+  cdkObject: software.amazon.awscdk.services.robomaker.CfnRobot,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -271,6 +271,6 @@ public open class CfnRobot internal constructor(
         CfnRobot(cdkObject)
 
     internal fun unwrap(wrapped: CfnRobot): software.amazon.awscdk.services.robomaker.CfnRobot =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.robomaker.CfnRobot
   }
 }

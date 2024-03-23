@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-instanceprofile.html)
  */
-public open class CfnInstanceProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dms.CfnInstanceProfile,
+public open class CfnInstanceProfile(
+  cdkObject: software.amazon.awscdk.services.dms.CfnInstanceProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.dms.CfnInstanceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -572,6 +572,7 @@ public open class CfnInstanceProfile internal constructor(
         CfnInstanceProfile = CfnInstanceProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceProfile):
-        software.amazon.awscdk.services.dms.CfnInstanceProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.dms.CfnInstanceProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.dms.CfnInstanceProfile
   }
 }

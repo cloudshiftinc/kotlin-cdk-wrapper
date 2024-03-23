@@ -185,7 +185,7 @@ public interface SystemdConfigFileOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.SystemdConfigFileOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.SystemdConfigFileOptions,
   ) : CdkObject(cdkObject), SystemdConfigFileOptions {
     /**
      * Start the service after the networking part of the OS comes up.

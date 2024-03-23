@@ -594,7 +594,7 @@ public interface CfnCertificateAuthorityProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthorityProps,
+    cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthorityProps,
   ) : CdkObject(cdkObject), CfnCertificateAuthorityProps {
     /**
      * Specifies information to be added to the extension section of the certificate signing request

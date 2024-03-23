@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html)
  */
-public open class CfnAlias internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kms.CfnAlias,
+public open class CfnAlias(
+  cdkObject: software.amazon.awscdk.services.kms.CfnAlias,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -266,6 +266,6 @@ public open class CfnAlias internal constructor(
         CfnAlias(cdkObject)
 
     internal fun unwrap(wrapped: CfnAlias): software.amazon.awscdk.services.kms.CfnAlias =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.kms.CfnAlias
   }
 }

@@ -171,7 +171,7 @@ public interface CfnMemberInvitationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.detective.CfnMemberInvitationProps,
+    cdkObject: software.amazon.awscdk.services.detective.CfnMemberInvitationProps,
   ) : CdkObject(cdkObject), CfnMemberInvitationProps {
     /**
      * Whether to send an invitation email to the member account.

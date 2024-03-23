@@ -146,7 +146,7 @@ public interface StageOptions : StageProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.StageOptions,
+    cdkObject: software.amazon.awscdk.services.codepipeline.StageOptions,
   ) : CdkObject(cdkObject), StageOptions {
     /**
      * The list of Actions to create this Stage with.

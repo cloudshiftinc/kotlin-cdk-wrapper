@@ -17,8 +17,8 @@ import kotlin.String
  * CredentialSpec credentialSpec = new CredentialSpec("prefixId", "fileLocation");
  * ```
  */
-public open class CredentialSpec internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.CredentialSpec,
+public open class CredentialSpec(
+  cdkObject: software.amazon.awscdk.services.ecs.CredentialSpec,
 ) : CdkObject(cdkObject) {
   public constructor(prefixId: String, fileLocation: String) :
       this(software.amazon.awscdk.services.ecs.CredentialSpec(prefixId, fileLocation)
@@ -44,6 +44,6 @@ public open class CredentialSpec internal constructor(
         = CredentialSpec(cdkObject)
 
     internal fun unwrap(wrapped: CredentialSpec): software.amazon.awscdk.services.ecs.CredentialSpec
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.ecs.CredentialSpec
   }
 }

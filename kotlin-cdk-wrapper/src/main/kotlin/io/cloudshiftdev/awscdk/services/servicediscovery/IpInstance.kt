@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class IpInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicediscovery.IpInstance,
+public open class IpInstance(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.IpInstance,
 ) : InstanceBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -243,6 +243,7 @@ public open class IpInstance internal constructor(
         IpInstance = IpInstance(cdkObject)
 
     internal fun unwrap(wrapped: IpInstance):
-        software.amazon.awscdk.services.servicediscovery.IpInstance = wrapped.cdkObject
+        software.amazon.awscdk.services.servicediscovery.IpInstance = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicediscovery.IpInstance
   }
 }

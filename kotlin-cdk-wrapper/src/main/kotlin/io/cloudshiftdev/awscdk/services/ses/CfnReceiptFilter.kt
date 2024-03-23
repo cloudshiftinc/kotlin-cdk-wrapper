@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptfilter.html)
  */
-public open class CfnReceiptFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter,
+public open class CfnReceiptFilter(
+  cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -207,7 +207,8 @@ public open class CfnReceiptFilter internal constructor(
         CfnReceiptFilter = CfnReceiptFilter(cdkObject)
 
     internal fun unwrap(wrapped: CfnReceiptFilter):
-        software.amazon.awscdk.services.ses.CfnReceiptFilter = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.CfnReceiptFilter = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.CfnReceiptFilter
   }
 
   /**
@@ -332,7 +333,7 @@ public open class CfnReceiptFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty,
     ) : CdkObject(cdkObject), FilterProperty {
       /**
        * A structure that provides the IP addresses to block or allow, and whether to block or allow
@@ -464,7 +465,7 @@ public open class CfnReceiptFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty,
     ) : CdkObject(cdkObject), IpFilterProperty {
       /**
        * A single IP address or a range of IP addresses to block or allow, specified in Classless

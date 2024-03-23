@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html)
  */
-public open class CfnRegistryPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistryPolicy,
+public open class CfnRegistryPolicy(
+  cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistryPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -191,6 +191,7 @@ public open class CfnRegistryPolicy internal constructor(
         CfnRegistryPolicy = CfnRegistryPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnRegistryPolicy):
-        software.amazon.awscdk.services.eventschemas.CfnRegistryPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.eventschemas.CfnRegistryPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.eventschemas.CfnRegistryPolicy
   }
 }

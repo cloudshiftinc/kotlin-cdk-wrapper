@@ -78,8 +78,7 @@ public interface S3LocationBindOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.S3LocationBindOptions,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3LocationBindOptions,
   ) : CdkObject(cdkObject), S3LocationBindOptions {
     /**
      * Allow reading from the S3 Location.

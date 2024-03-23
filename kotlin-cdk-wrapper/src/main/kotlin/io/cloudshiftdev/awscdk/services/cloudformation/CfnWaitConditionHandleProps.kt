@@ -39,8 +39,7 @@ public interface CfnWaitConditionHandleProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cloudformation.CfnWaitConditionHandleProps,
+    cdkObject: software.amazon.awscdk.services.cloudformation.CfnWaitConditionHandleProps,
   ) : CdkObject(cdkObject), CfnWaitConditionHandleProps
 
   public companion object {

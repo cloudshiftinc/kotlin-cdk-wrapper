@@ -115,7 +115,7 @@ public interface S3LoggingOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.S3LoggingOptions,
+    cdkObject: software.amazon.awscdk.services.codebuild.S3LoggingOptions,
   ) : CdkObject(cdkObject), S3LoggingOptions {
     /**
      * The S3 Bucket to send logs to.

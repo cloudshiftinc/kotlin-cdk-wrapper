@@ -68,9 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html)
  */
-public open class CfnStreamingDistribution internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution,
+public open class CfnStreamingDistribution(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -297,7 +296,8 @@ public open class CfnStreamingDistribution internal constructor(
         CfnStreamingDistribution = CfnStreamingDistribution(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamingDistribution):
-        software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution
   }
 
   /**
@@ -444,8 +444,7 @@ public open class CfnStreamingDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty,
     ) : CdkObject(cdkObject), LoggingProperty {
       /**
        * The Amazon S3 bucket to store the access logs in, for example,
@@ -623,8 +622,7 @@ public open class CfnStreamingDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty,
     ) : CdkObject(cdkObject), S3OriginProperty {
       /**
        * The DNS name of the Amazon S3 origin.
@@ -1033,8 +1031,7 @@ public open class CfnStreamingDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.StreamingDistributionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.StreamingDistributionConfigProperty,
     ) : CdkObject(cdkObject), StreamingDistributionConfigProperty {
       /**
        * A complex type that contains information about CNAMEs (alternate domain names), if any, for
@@ -1242,8 +1239,7 @@ public open class CfnStreamingDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.TrustedSignersProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.TrustedSignersProperty,
     ) : CdkObject(cdkObject), TrustedSignersProperty {
       /**
        * An AWS account number that contains active CloudFront key pairs that CloudFront can use to

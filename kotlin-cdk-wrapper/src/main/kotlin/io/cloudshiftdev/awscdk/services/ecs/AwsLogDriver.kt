@@ -43,8 +43,8 @@ import kotlin.Unit
  * .build());
  * ```
  */
-public open class AwsLogDriver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.AwsLogDriver,
+public open class AwsLogDriver(
+  cdkObject: software.amazon.awscdk.services.ecs.AwsLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor(props: AwsLogDriverProps) :
       this(software.amazon.awscdk.services.ecs.AwsLogDriver(props.let(AwsLogDriverProps::unwrap))
@@ -292,6 +292,6 @@ public open class AwsLogDriver internal constructor(
         AwsLogDriver(cdkObject)
 
     internal fun unwrap(wrapped: AwsLogDriver): software.amazon.awscdk.services.ecs.AwsLogDriver =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecs.AwsLogDriver
   }
 }

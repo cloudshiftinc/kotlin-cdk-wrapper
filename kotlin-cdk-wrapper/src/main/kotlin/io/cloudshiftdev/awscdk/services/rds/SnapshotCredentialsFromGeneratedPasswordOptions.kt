@@ -123,8 +123,7 @@ public interface SnapshotCredentialsFromGeneratedPasswordOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.rds.SnapshotCredentialsFromGeneratedPasswordOptions,
+    cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentialsFromGeneratedPasswordOptions,
   ) : CdkObject(cdkObject), SnapshotCredentialsFromGeneratedPasswordOptions {
     /**
      * KMS encryption key to encrypt the generated secret.

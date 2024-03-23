@@ -900,7 +900,7 @@ public interface JsonSchema {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.JsonSchema,
+    cdkObject: software.amazon.awscdk.services.apigateway.JsonSchema,
   ) : CdkObject(cdkObject), JsonSchema {
     /**
      *

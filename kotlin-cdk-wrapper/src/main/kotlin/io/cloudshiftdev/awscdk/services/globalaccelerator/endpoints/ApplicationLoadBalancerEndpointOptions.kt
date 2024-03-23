@@ -103,8 +103,7 @@ public interface ApplicationLoadBalancerEndpointOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpointOptions,
+    cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpointOptions,
   ) : CdkObject(cdkObject), ApplicationLoadBalancerEndpointOptions {
     /**
      * Forward the client IP address in an `X-Forwarded-For` header.

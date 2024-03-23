@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html)
  */
-public open class CfnVirtualMFADevice internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CfnVirtualMFADevice,
+public open class CfnVirtualMFADevice(
+  cdkObject: software.amazon.awscdk.services.iam.CfnVirtualMFADevice,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -367,6 +367,7 @@ public open class CfnVirtualMFADevice internal constructor(
         CfnVirtualMFADevice = CfnVirtualMFADevice(cdkObject)
 
     internal fun unwrap(wrapped: CfnVirtualMFADevice):
-        software.amazon.awscdk.services.iam.CfnVirtualMFADevice = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.CfnVirtualMFADevice = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.CfnVirtualMFADevice
   }
 }

@@ -37,8 +37,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class MultipartUserData internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.MultipartUserData,
+public open class MultipartUserData(
+  cdkObject: software.amazon.awscdk.services.ec2.MultipartUserData,
 ) : UserData(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.ec2.MultipartUserData()
   )
@@ -271,6 +271,7 @@ public open class MultipartUserData internal constructor(
         MultipartUserData = MultipartUserData(cdkObject)
 
     internal fun unwrap(wrapped: MultipartUserData):
-        software.amazon.awscdk.services.ec2.MultipartUserData = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.MultipartUserData = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.MultipartUserData
   }
 }

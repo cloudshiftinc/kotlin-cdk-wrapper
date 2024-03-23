@@ -33,7 +33,7 @@ public interface IOriginAccessIdentity : IResource, IGrantable {
   public fun originAccessIdentityName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.IOriginAccessIdentity,
+    cdkObject: software.amazon.awscdk.services.cloudfront.IOriginAccessIdentity,
   ) : CdkObject(cdkObject), IOriginAccessIdentity {
     /**
      * Apply the given removal policy to this resource.

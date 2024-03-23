@@ -74,8 +74,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EventSourceMapping internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.EventSourceMapping,
+public open class EventSourceMapping(
+  cdkObject: software.amazon.awscdk.services.lambda.EventSourceMapping,
 ) : Resource(cdkObject), IEventSourceMapping {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -777,6 +777,7 @@ public open class EventSourceMapping internal constructor(
         EventSourceMapping = EventSourceMapping(cdkObject)
 
     internal fun unwrap(wrapped: EventSourceMapping):
-        software.amazon.awscdk.services.lambda.EventSourceMapping = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.EventSourceMapping = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.EventSourceMapping
   }
 }

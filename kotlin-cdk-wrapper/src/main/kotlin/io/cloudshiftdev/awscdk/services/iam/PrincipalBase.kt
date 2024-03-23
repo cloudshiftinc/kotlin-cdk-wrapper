@@ -28,8 +28,8 @@ import kotlin.jvm.JvmName
  * Role.Builder.create(this, "MyRole").assumedBy(principal).build();
  * ```
  */
-public abstract class PrincipalBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.PrincipalBase,
+public abstract class PrincipalBase(
+  cdkObject: software.amazon.awscdk.services.iam.PrincipalBase,
 ) : CdkObject(cdkObject), IAssumeRolePrincipal, IComparablePrincipal {
   /**
    * Add the principal to the AssumeRolePolicyDocument.
@@ -153,7 +153,7 @@ public abstract class PrincipalBase internal constructor(
       unwrap(this).withSessionTags().let(PrincipalBase::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.PrincipalBase,
+    cdkObject: software.amazon.awscdk.services.iam.PrincipalBase,
   ) : PrincipalBase(cdkObject)
 
   public companion object {

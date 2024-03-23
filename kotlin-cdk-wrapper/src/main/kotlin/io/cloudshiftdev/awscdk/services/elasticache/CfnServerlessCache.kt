@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html)
  */
-public open class CfnServerlessCache internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache,
+public open class CfnServerlessCache(
+  cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1006,7 +1006,8 @@ public open class CfnServerlessCache internal constructor(
         CfnServerlessCache = CfnServerlessCache(cdkObject)
 
     internal fun unwrap(wrapped: CfnServerlessCache):
-        software.amazon.awscdk.services.elasticache.CfnServerlessCache = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticache.CfnServerlessCache = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticache.CfnServerlessCache
   }
 
   /**
@@ -1148,8 +1149,7 @@ public open class CfnServerlessCache internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnServerlessCache.CacheUsageLimitsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.CacheUsageLimitsProperty,
     ) : CdkObject(cdkObject), CacheUsageLimitsProperty {
       /**
        * The maximum data storage limit in the cache, expressed in Gigabytes.
@@ -1258,8 +1258,7 @@ public open class CfnServerlessCache internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty,
     ) : CdkObject(cdkObject), DataStorageProperty {
       /**
        * The upper limit for data storage the cache is set to use.
@@ -1351,8 +1350,7 @@ public open class CfnServerlessCache internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnServerlessCache.ECPUPerSecondProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.ECPUPerSecondProperty,
     ) : CdkObject(cdkObject), ECPUPerSecondProperty {
       /**
        * The configuration for the maximum number of ECPUs the cache can consume per second.
@@ -1455,8 +1453,7 @@ public open class CfnServerlessCache internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnServerlessCache.EndpointProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.EndpointProperty,
     ) : CdkObject(cdkObject), EndpointProperty {
       /**
        * The DNS hostname of the cache node.

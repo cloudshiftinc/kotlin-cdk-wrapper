@@ -26,7 +26,7 @@ public interface IFunction : IResource {
   public fun functionName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.IFunction,
+    cdkObject: software.amazon.awscdk.services.cloudfront.IFunction,
   ) : CdkObject(cdkObject), IFunction {
     /**
      * Apply the given removal policy to this resource.

@@ -35,9 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetroutetableassociation.html)
  */
-public open class CfnSubnetRouteTableAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation,
+public open class CfnSubnetRouteTableAssociation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -169,6 +168,7 @@ public open class CfnSubnetRouteTableAssociation internal constructor(
         CfnSubnetRouteTableAssociation = CfnSubnetRouteTableAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubnetRouteTableAssociation):
-        software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation
   }
 }

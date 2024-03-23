@@ -147,7 +147,7 @@ public interface VirtualServiceProviderConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProviderConfig,
+    cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProviderConfig,
   ) : CdkObject(cdkObject), VirtualServiceProviderConfig {
     /**
      * Mesh the Provider is using.

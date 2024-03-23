@@ -19,8 +19,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html#rds-proxy-pinning)
  */
-public open class SessionPinningFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.SessionPinningFilter,
+public open class SessionPinningFilter(
+  cdkObject: software.amazon.awscdk.services.rds.SessionPinningFilter,
 ) : CdkObject(cdkObject) {
   /**
    * Filter name.
@@ -38,6 +38,7 @@ public open class SessionPinningFilter internal constructor(
         SessionPinningFilter = SessionPinningFilter(cdkObject)
 
     internal fun unwrap(wrapped: SessionPinningFilter):
-        software.amazon.awscdk.services.rds.SessionPinningFilter = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.SessionPinningFilter = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.SessionPinningFilter
   }
 }

@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html)
  */
-public open class CfnFlowEntitlement internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement,
+public open class CfnFlowEntitlement(
+  cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -471,7 +471,8 @@ public open class CfnFlowEntitlement internal constructor(
         CfnFlowEntitlement = CfnFlowEntitlement(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlowEntitlement):
-        software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement = wrapped.cdkObject
+        software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement
   }
 
   /**
@@ -743,8 +744,7 @@ public open class CfnFlowEntitlement internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement.EncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement.EncryptionProperty,
     ) : CdkObject(cdkObject), EncryptionProperty {
       /**
        * The type of algorithm that is used for static key encryption (such as aes128, aes192, or

@@ -61,8 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-permissionset.html)
  */
-public open class CfnPermissionSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet,
+public open class CfnPermissionSet(
+  cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -728,7 +728,8 @@ public open class CfnPermissionSet internal constructor(
         CfnPermissionSet = CfnPermissionSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnPermissionSet):
-        software.amazon.awscdk.services.sso.CfnPermissionSet = wrapped.cdkObject
+        software.amazon.awscdk.services.sso.CfnPermissionSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.sso.CfnPermissionSet
   }
 
   /**
@@ -826,8 +827,7 @@ public open class CfnPermissionSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty,
+      cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty,
     ) : CdkObject(cdkObject), CustomerManagedPolicyReferenceProperty {
       /**
        * The name of the IAM policy that you have configured in each account where you want to
@@ -1019,8 +1019,7 @@ public open class CfnPermissionSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sso.CfnPermissionSet.PermissionsBoundaryProperty,
+      cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet.PermissionsBoundaryProperty,
     ) : CdkObject(cdkObject), PermissionsBoundaryProperty {
       /**
        * Specifies the name and path of a customer managed policy.

@@ -46,8 +46,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class EcsTask internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.targets.EcsTask,
+public open class EcsTask(
+  cdkObject: software.amazon.awscdk.services.events.targets.EcsTask,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(props: EcsTaskProps) :
       this(software.amazon.awscdk.services.events.targets.EcsTask(props.let(EcsTaskProps::unwrap))
@@ -598,6 +598,6 @@ public open class EcsTask internal constructor(
         EcsTask(cdkObject)
 
     internal fun unwrap(wrapped: EcsTask): software.amazon.awscdk.services.events.targets.EcsTask =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.targets.EcsTask
   }
 }

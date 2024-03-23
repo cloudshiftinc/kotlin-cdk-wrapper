@@ -33,8 +33,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class InlineCode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.InlineCode,
+public open class InlineCode(
+  cdkObject: software.amazon.awscdk.services.lambda.InlineCode,
 ) : Code(cdkObject) {
   public constructor(code: String) : this(software.amazon.awscdk.services.lambda.InlineCode(code)
   )
@@ -58,6 +58,6 @@ public open class InlineCode internal constructor(
         InlineCode(cdkObject)
 
     internal fun unwrap(wrapped: InlineCode): software.amazon.awscdk.services.lambda.InlineCode =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lambda.InlineCode
   }
 }

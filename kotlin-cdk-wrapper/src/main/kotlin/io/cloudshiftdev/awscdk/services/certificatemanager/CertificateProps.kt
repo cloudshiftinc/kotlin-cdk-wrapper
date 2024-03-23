@@ -216,7 +216,7 @@ public interface CertificateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.certificatemanager.CertificateProps,
+    cdkObject: software.amazon.awscdk.services.certificatemanager.CertificateProps,
   ) : CdkObject(cdkObject), CertificateProps {
     /**
      * The Certificate name.

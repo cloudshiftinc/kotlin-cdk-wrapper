@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-solution.html)
  */
-public open class CfnSolution internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.personalize.CfnSolution,
+public open class CfnSolution(
+  cdkObject: software.amazon.awscdk.services.personalize.CfnSolution,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -490,7 +490,8 @@ public open class CfnSolution internal constructor(
         CfnSolution = CfnSolution(cdkObject)
 
     internal fun unwrap(wrapped: CfnSolution):
-        software.amazon.awscdk.services.personalize.CfnSolution = wrapped.cdkObject
+        software.amazon.awscdk.services.personalize.CfnSolution = wrapped.cdkObject as
+        software.amazon.awscdk.services.personalize.CfnSolution
   }
 
   /**
@@ -690,8 +691,7 @@ public open class CfnSolution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.AlgorithmHyperParameterRangesProperty,
+      cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.AlgorithmHyperParameterRangesProperty,
     ) : CdkObject(cdkObject), AlgorithmHyperParameterRangesProperty {
       /**
        * Provides the name and range of a categorical hyperparameter.
@@ -823,8 +823,7 @@ public open class CfnSolution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty,
+      cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty,
     ) : CdkObject(cdkObject), AutoMLConfigProperty {
       /**
        * The metric to optimize.
@@ -944,8 +943,7 @@ public open class CfnSolution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.CategoricalHyperParameterRangeProperty,
+      cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.CategoricalHyperParameterRangeProperty,
     ) : CdkObject(cdkObject), CategoricalHyperParameterRangeProperty {
       /**
        * The name of the hyperparameter.
@@ -1076,8 +1074,7 @@ public open class CfnSolution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.ContinuousHyperParameterRangeProperty,
+      cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.ContinuousHyperParameterRangeProperty,
     ) : CdkObject(cdkObject), ContinuousHyperParameterRangeProperty {
       /**
        * The maximum allowable value for the hyperparameter.
@@ -1338,8 +1335,7 @@ public open class CfnSolution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.HpoConfigProperty,
+      cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.HpoConfigProperty,
     ) : CdkObject(cdkObject), HpoConfigProperty {
       /**
        * The hyperparameters and their allowable ranges.
@@ -1487,8 +1483,7 @@ public open class CfnSolution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.HpoObjectiveProperty,
+      cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.HpoObjectiveProperty,
     ) : CdkObject(cdkObject), HpoObjectiveProperty {
       /**
        * The name of the metric.
@@ -1618,8 +1613,7 @@ public open class CfnSolution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty,
     ) : CdkObject(cdkObject), HpoResourceConfigProperty {
       /**
        * The maximum number of training jobs when you create a solution version.
@@ -1753,8 +1747,7 @@ public open class CfnSolution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty,
+      cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty,
     ) : CdkObject(cdkObject), IntegerHyperParameterRangeProperty {
       /**
        * The maximum allowable value for the hyperparameter.
@@ -1969,8 +1962,7 @@ public open class CfnSolution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty,
     ) : CdkObject(cdkObject), SolutionConfigProperty {
       /**
        * Lists the algorithm hyperparameters and their values.

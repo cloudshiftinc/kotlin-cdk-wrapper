@@ -24,8 +24,8 @@ import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesL
  * resource.addMethod("GET", new LambdaIntegration(handler));
  * ```
  */
-public open class LambdaIntegration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.LambdaIntegration,
+public open class LambdaIntegration(
+  cdkObject: software.amazon.awscdk.services.apigateway.LambdaIntegration,
 ) : AwsIntegration(cdkObject) {
   public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.services.apigateway.LambdaIntegration(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
@@ -496,6 +496,7 @@ public open class LambdaIntegration internal constructor(
         LambdaIntegration = LambdaIntegration(cdkObject)
 
     internal fun unwrap(wrapped: LambdaIntegration):
-        software.amazon.awscdk.services.apigateway.LambdaIntegration = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.LambdaIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.LambdaIntegration
   }
 }

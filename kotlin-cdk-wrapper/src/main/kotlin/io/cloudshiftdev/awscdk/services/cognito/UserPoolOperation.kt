@@ -30,8 +30,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class UserPoolOperation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolOperation,
+public open class UserPoolOperation(
+  cdkObject: software.amazon.awscdk.services.cognito.UserPoolOperation,
 ) : CdkObject(cdkObject) {
   /**
    * The key to use in `CfnUserPool.LambdaConfigProperty`.
@@ -85,6 +85,7 @@ public open class UserPoolOperation internal constructor(
         UserPoolOperation = UserPoolOperation(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolOperation):
-        software.amazon.awscdk.services.cognito.UserPoolOperation = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.UserPoolOperation = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.UserPoolOperation
   }
 }

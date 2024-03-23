@@ -124,7 +124,7 @@ public interface DatabaseProxyAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.DatabaseProxyAttributes,
+    cdkObject: software.amazon.awscdk.services.rds.DatabaseProxyAttributes,
   ) : CdkObject(cdkObject), DatabaseProxyAttributes {
     /**
      * DB Proxy ARN.

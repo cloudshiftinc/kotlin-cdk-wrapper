@@ -193,7 +193,7 @@ public interface CfnReportPlanProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.backup.CfnReportPlanProps,
+    cdkObject: software.amazon.awscdk.services.backup.CfnReportPlanProps,
   ) : CdkObject(cdkObject), CfnReportPlanProps {
     /**
      * Contains information about where and how to deliver your reports, specifically your Amazon S3

@@ -24,8 +24,8 @@ import kotlin.collections.List
  * .build());
  * ```
  */
-public open class SingleValueWidget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.SingleValueWidget,
+public open class SingleValueWidget(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.SingleValueWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: SingleValueWidgetProps) :
       this(software.amazon.awscdk.services.cloudwatch.SingleValueWidget(props.let(SingleValueWidgetProps::unwrap))
@@ -338,6 +338,7 @@ public open class SingleValueWidget internal constructor(
         SingleValueWidget = SingleValueWidget(cdkObject)
 
     internal fun unwrap(wrapped: SingleValueWidget):
-        software.amazon.awscdk.services.cloudwatch.SingleValueWidget = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.SingleValueWidget = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.SingleValueWidget
   }
 }

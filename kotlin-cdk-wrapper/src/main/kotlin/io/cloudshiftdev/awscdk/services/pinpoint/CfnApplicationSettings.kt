@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html)
  */
-public open class CfnApplicationSettings internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings,
+public open class CfnApplicationSettings(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -606,7 +606,8 @@ public open class CfnApplicationSettings internal constructor(
         CfnApplicationSettings = CfnApplicationSettings(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationSettings):
-        software.amazon.awscdk.services.pinpoint.CfnApplicationSettings = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnApplicationSettings = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnApplicationSettings
   }
 
   /**
@@ -727,8 +728,7 @@ public open class CfnApplicationSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty,
     ) : CdkObject(cdkObject), CampaignHookProperty {
       /**
        * The name or Amazon Resource Name (ARN) of the Lambda function that Amazon Pinpoint invokes
@@ -917,8 +917,7 @@ public open class CfnApplicationSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty,
     ) : CdkObject(cdkObject), LimitsProperty {
       /**
        * The maximum number of messages that a campaign can send to a single endpoint during a
@@ -1073,8 +1072,7 @@ public open class CfnApplicationSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.QuietTimeProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.QuietTimeProperty,
     ) : CdkObject(cdkObject), QuietTimeProperty {
       /**
        * The specific time when quiet time ends.

@@ -281,7 +281,7 @@ public interface AssetProps : AssetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.assets.AssetProps,
+    cdkObject: software.amazon.awscdk.services.s3.assets.AssetProps,
   ) : CdkObject(cdkObject), AssetProps {
     /**
      * Specify a custom hash for this asset.

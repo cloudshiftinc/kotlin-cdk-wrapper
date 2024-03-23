@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html)
  */
-public open class CfnLocationEFS internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationEFS,
+public open class CfnLocationEFS(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationEFS,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -475,7 +475,8 @@ public open class CfnLocationEFS internal constructor(
         CfnLocationEFS = CfnLocationEFS(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationEFS):
-        software.amazon.awscdk.services.datasync.CfnLocationEFS = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnLocationEFS = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationEFS
   }
 
   /**
@@ -597,8 +598,7 @@ public open class CfnLocationEFS internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationEFS.Ec2ConfigProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationEFS.Ec2ConfigProperty,
     ) : CdkObject(cdkObject), Ec2ConfigProperty {
       /**
        * Specifies the Amazon Resource Names (ARNs) of the security groups associated with an Amazon

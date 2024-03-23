@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html)
  */
-public open class CfnRequestValidator internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnRequestValidator,
+public open class CfnRequestValidator(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnRequestValidator,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -301,6 +301,7 @@ public open class CfnRequestValidator internal constructor(
         CfnRequestValidator = CfnRequestValidator(cdkObject)
 
     internal fun unwrap(wrapped: CfnRequestValidator):
-        software.amazon.awscdk.services.apigateway.CfnRequestValidator = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CfnRequestValidator = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnRequestValidator
   }
 }

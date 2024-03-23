@@ -108,7 +108,7 @@ public interface NoncurrentVersionTransition {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.NoncurrentVersionTransition,
+    cdkObject: software.amazon.awscdk.services.s3.NoncurrentVersionTransition,
   ) : CdkObject(cdkObject), NoncurrentVersionTransition {
     /**
      * Indicates the number of noncurrent version objects to be retained.

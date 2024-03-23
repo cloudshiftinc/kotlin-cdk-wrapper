@@ -116,7 +116,7 @@ public interface Tmpfs {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.Tmpfs,
+    cdkObject: software.amazon.awscdk.services.ecs.Tmpfs,
   ) : CdkObject(cdkObject), Tmpfs {
     /**
      * The absolute file path where the tmpfs volume is to be mounted.

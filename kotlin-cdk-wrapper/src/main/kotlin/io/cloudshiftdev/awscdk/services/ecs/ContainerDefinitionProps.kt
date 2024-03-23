@@ -794,7 +794,7 @@ public interface ContainerDefinitionProps : ContainerDefinitionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ContainerDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.ecs.ContainerDefinitionProps,
   ) : CdkObject(cdkObject), ContainerDefinitionProps {
     /**
      * The command that is passed to the container.

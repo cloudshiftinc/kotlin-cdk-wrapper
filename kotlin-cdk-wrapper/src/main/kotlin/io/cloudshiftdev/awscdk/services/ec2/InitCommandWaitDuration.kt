@@ -18,11 +18,11 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
  * InitCommandWaitDuration initCommandWaitDuration = InitCommandWaitDuration.forever();
  * ```
  */
-public abstract class InitCommandWaitDuration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.InitCommandWaitDuration,
+public abstract class InitCommandWaitDuration(
+  cdkObject: software.amazon.awscdk.services.ec2.InitCommandWaitDuration,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.InitCommandWaitDuration,
+    cdkObject: software.amazon.awscdk.services.ec2.InitCommandWaitDuration,
   ) : InitCommandWaitDuration(cdkObject)
 
   public companion object {

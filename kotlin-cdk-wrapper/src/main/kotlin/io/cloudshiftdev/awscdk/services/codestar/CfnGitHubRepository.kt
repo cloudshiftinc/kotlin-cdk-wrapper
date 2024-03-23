@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html)
  */
-public open class CfnGitHubRepository internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepository,
+public open class CfnGitHubRepository(
+  cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepository,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -510,7 +510,8 @@ public open class CfnGitHubRepository internal constructor(
         CfnGitHubRepository = CfnGitHubRepository(cdkObject)
 
     internal fun unwrap(wrapped: CfnGitHubRepository):
-        software.amazon.awscdk.services.codestar.CfnGitHubRepository = wrapped.cdkObject
+        software.amazon.awscdk.services.codestar.CfnGitHubRepository = wrapped.cdkObject as
+        software.amazon.awscdk.services.codestar.CfnGitHubRepository
   }
 
   /**
@@ -605,8 +606,7 @@ public open class CfnGitHubRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codestar.CfnGitHubRepository.CodeProperty,
+      cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepository.CodeProperty,
     ) : CdkObject(cdkObject), CodeProperty {
       /**
        * Information about the Amazon S3 bucket that contains a ZIP file of code to be committed to
@@ -735,8 +735,7 @@ public open class CfnGitHubRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codestar.CfnGitHubRepository.S3Property,
+      cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepository.S3Property,
     ) : CdkObject(cdkObject), S3Property {
       /**
        * The name of the Amazon S3 bucket that contains the ZIP file with the content to be

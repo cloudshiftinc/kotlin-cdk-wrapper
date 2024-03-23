@@ -183,7 +183,7 @@ public interface CfnContactProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContactProps,
+    cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContactProps,
   ) : CdkObject(cdkObject), CfnContactProps {
     /**
      * The unique and identifiable alias of the contact or escalation plan.

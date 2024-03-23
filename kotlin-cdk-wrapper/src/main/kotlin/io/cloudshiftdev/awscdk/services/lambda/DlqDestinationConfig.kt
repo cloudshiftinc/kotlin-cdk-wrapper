@@ -55,7 +55,7 @@ public interface DlqDestinationConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.DlqDestinationConfig,
+    cdkObject: software.amazon.awscdk.services.lambda.DlqDestinationConfig,
   ) : CdkObject(cdkObject), DlqDestinationConfig {
     /**
      * The Amazon Resource Name (ARN) of the destination resource.

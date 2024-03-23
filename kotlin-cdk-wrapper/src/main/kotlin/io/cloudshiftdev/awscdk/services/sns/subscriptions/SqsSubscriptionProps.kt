@@ -120,7 +120,7 @@ public interface SqsSubscriptionProps : SubscriptionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sns.subscriptions.SqsSubscriptionProps,
+    cdkObject: software.amazon.awscdk.services.sns.subscriptions.SqsSubscriptionProps,
   ) : CdkObject(cdkObject), SqsSubscriptionProps {
     /**
      * Queue to be used as dead letter queue.

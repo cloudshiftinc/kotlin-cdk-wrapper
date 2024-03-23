@@ -15,8 +15,8 @@ import kotlin.jvm.JvmName
  * implementations of stack synthesizers. The protected methods give
  * access to functions that are otherwise
  */
-public abstract class StackSynthesizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.StackSynthesizer,
+public abstract class StackSynthesizer(
+  cdkObject: software.amazon.awscdk.StackSynthesizer,
 ) : CdkObject(cdkObject), IStackSynthesizer {
   /**
    * Register a Docker Image Asset.
@@ -117,7 +117,7 @@ public abstract class StackSynthesizer internal constructor(
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.StackSynthesizer,
+    cdkObject: software.amazon.awscdk.StackSynthesizer,
   ) : StackSynthesizer(cdkObject)
 
   public companion object {

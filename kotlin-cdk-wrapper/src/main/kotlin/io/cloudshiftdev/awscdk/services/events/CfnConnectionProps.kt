@@ -225,7 +225,7 @@ public interface CfnConnectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.CfnConnectionProps,
+    cdkObject: software.amazon.awscdk.services.events.CfnConnectionProps,
   ) : CdkObject(cdkObject), CfnConnectionProps {
     /**
      * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters

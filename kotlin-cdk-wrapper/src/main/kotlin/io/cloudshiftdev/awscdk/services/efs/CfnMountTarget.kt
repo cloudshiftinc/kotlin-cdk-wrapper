@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)
  */
-public open class CfnMountTarget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.efs.CfnMountTarget,
+public open class CfnMountTarget(
+  cdkObject: software.amazon.awscdk.services.efs.CfnMountTarget,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -267,6 +267,6 @@ public open class CfnMountTarget internal constructor(
         = CfnMountTarget(cdkObject)
 
     internal fun unwrap(wrapped: CfnMountTarget): software.amazon.awscdk.services.efs.CfnMountTarget
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.efs.CfnMountTarget
   }
 }

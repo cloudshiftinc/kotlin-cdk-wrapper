@@ -95,7 +95,7 @@ public interface CreateIpv6CidrBlocksRequest {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CreateIpv6CidrBlocksRequest,
+    cdkObject: software.amazon.awscdk.services.ec2.CreateIpv6CidrBlocksRequest,
   ) : CdkObject(cdkObject), CreateIpv6CidrBlocksRequest {
     /**
      * The IPv6 CIDR block string representation.

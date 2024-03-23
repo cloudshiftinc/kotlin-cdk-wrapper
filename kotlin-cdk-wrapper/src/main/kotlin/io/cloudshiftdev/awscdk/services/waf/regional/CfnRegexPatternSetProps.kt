@@ -101,7 +101,7 @@ public interface CfnRegexPatternSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnRegexPatternSetProps,
+    cdkObject: software.amazon.awscdk.services.waf.regional.CfnRegexPatternSetProps,
   ) : CdkObject(cdkObject), CfnRegexPatternSetProps {
     /**
      * A friendly name or description of the `RegexPatternSet` .

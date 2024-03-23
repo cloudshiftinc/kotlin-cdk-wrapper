@@ -343,7 +343,7 @@ public interface CfnProtectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.shield.CfnProtectionProps,
+    cdkObject: software.amazon.awscdk.services.shield.CfnProtectionProps,
   ) : CdkObject(cdkObject), CfnProtectionProps {
     /**
      * The automatic application layer DDoS mitigation settings for the protection.

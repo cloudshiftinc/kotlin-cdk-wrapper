@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationazureblob.html)
  */
-public open class CfnLocationAzureBlob internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlob,
+public open class CfnLocationAzureBlob(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlob,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -578,7 +578,8 @@ public open class CfnLocationAzureBlob internal constructor(
         CfnLocationAzureBlob = CfnLocationAzureBlob(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationAzureBlob):
-        software.amazon.awscdk.services.datasync.CfnLocationAzureBlob = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnLocationAzureBlob = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationAzureBlob
   }
 
   /**
@@ -656,8 +657,7 @@ public open class CfnLocationAzureBlob internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.AzureBlobSasConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.AzureBlobSasConfigurationProperty,
     ) : CdkObject(cdkObject), AzureBlobSasConfigurationProperty {
       /**
        * Specifies a SAS token that provides permissions to access your Azure Blob Storage.

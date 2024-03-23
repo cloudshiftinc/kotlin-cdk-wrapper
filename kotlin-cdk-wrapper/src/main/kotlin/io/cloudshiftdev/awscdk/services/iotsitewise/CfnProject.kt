@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-project.html)
  */
-public open class CfnProject internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnProject,
+public open class CfnProject(
+  cdkObject: software.amazon.awscdk.services.iotsitewise.CfnProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -331,6 +331,6 @@ public open class CfnProject internal constructor(
         = CfnProject(cdkObject)
 
     internal fun unwrap(wrapped: CfnProject): software.amazon.awscdk.services.iotsitewise.CfnProject
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.iotsitewise.CfnProject
   }
 }

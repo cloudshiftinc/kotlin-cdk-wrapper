@@ -33,9 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html)
  */
-public open class CfnHookDefaultVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersion,
+public open class CfnHookDefaultVersion(
+  cdkObject: software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -211,6 +210,7 @@ public open class CfnHookDefaultVersion internal constructor(
         CfnHookDefaultVersion = CfnHookDefaultVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnHookDefaultVersion):
-        software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersion
   }
 }

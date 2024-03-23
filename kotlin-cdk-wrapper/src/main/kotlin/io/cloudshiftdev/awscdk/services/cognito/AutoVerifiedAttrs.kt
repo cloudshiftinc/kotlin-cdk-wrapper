@@ -86,7 +86,7 @@ public interface AutoVerifiedAttrs {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.AutoVerifiedAttrs,
+    cdkObject: software.amazon.awscdk.services.cognito.AutoVerifiedAttrs,
   ) : CdkObject(cdkObject), AutoVerifiedAttrs {
     /**
      * Whether the email address of the user should be auto verified at sign up.

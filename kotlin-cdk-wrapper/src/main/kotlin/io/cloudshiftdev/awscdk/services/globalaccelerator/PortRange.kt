@@ -76,7 +76,7 @@ public interface PortRange {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.globalaccelerator.PortRange,
+    cdkObject: software.amazon.awscdk.services.globalaccelerator.PortRange,
   ) : CdkObject(cdkObject), PortRange {
     /**
      * The first port in the range of ports, inclusive.

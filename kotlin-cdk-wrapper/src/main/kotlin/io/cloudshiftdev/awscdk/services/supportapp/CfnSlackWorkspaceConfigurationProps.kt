@@ -90,8 +90,7 @@ public interface CfnSlackWorkspaceConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.supportapp.CfnSlackWorkspaceConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.supportapp.CfnSlackWorkspaceConfigurationProps,
   ) : CdkObject(cdkObject), CfnSlackWorkspaceConfigurationProps {
     /**
      * The team ID in Slack.

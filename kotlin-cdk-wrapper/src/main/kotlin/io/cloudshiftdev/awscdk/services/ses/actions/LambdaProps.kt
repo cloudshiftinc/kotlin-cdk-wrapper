@@ -101,7 +101,7 @@ public interface LambdaProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.actions.LambdaProps,
+    cdkObject: software.amazon.awscdk.services.ses.actions.LambdaProps,
   ) : CdkObject(cdkObject), LambdaProps {
     /**
      * The Lambda function to invoke.

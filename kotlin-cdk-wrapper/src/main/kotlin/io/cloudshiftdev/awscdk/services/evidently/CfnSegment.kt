@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-segment.html)
  */
-public open class CfnSegment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.evidently.CfnSegment,
+public open class CfnSegment(
+  cdkObject: software.amazon.awscdk.services.evidently.CfnSegment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -326,6 +326,6 @@ public open class CfnSegment internal constructor(
         CfnSegment(cdkObject)
 
     internal fun unwrap(wrapped: CfnSegment): software.amazon.awscdk.services.evidently.CfnSegment =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.evidently.CfnSegment
   }
 }

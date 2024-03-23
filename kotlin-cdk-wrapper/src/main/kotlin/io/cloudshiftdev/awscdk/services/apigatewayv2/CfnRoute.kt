@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-route.html)
  */
-public open class CfnRoute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRoute,
+public open class CfnRoute(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRoute,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -571,7 +571,7 @@ public open class CfnRoute internal constructor(
         CfnRoute(cdkObject)
 
     internal fun unwrap(wrapped: CfnRoute): software.amazon.awscdk.services.apigatewayv2.CfnRoute =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigatewayv2.CfnRoute
   }
 
   /**
@@ -637,8 +637,7 @@ public open class CfnRoute internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnRoute.ParameterConstraintsProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRoute.ParameterConstraintsProperty,
     ) : CdkObject(cdkObject), ParameterConstraintsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-route-parameterconstraints.html#cfn-apigatewayv2-route-parameterconstraints-required)

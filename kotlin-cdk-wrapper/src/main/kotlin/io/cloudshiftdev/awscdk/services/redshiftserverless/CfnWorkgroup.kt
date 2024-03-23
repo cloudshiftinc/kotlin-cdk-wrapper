@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html)
  */
-public open class CfnWorkgroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup,
+public open class CfnWorkgroup(
+  cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -782,7 +782,8 @@ public open class CfnWorkgroup internal constructor(
         CfnWorkgroup = CfnWorkgroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkgroup):
-        software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup = wrapped.cdkObject
+        software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup
   }
 
   /**
@@ -866,8 +867,7 @@ public open class CfnWorkgroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.ConfigParameterProperty,
+      cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.ConfigParameterProperty,
     ) : CdkObject(cdkObject), ConfigParameterProperty {
       /**
        * The key of the parameter.
@@ -1030,8 +1030,7 @@ public open class CfnWorkgroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.EndpointProperty,
+      cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.EndpointProperty,
     ) : CdkObject(cdkObject), EndpointProperty {
       /**
        * The DNS address of the VPC endpoint.
@@ -1188,8 +1187,7 @@ public open class CfnWorkgroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty,
+      cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty,
     ) : CdkObject(cdkObject), NetworkInterfaceProperty {
       /**
        * The availability Zone.
@@ -1370,8 +1368,7 @@ public open class CfnWorkgroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.VpcEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.VpcEndpointProperty,
     ) : CdkObject(cdkObject), VpcEndpointProperty {
       /**
        * One or more network interfaces of the endpoint.
@@ -1910,8 +1907,7 @@ public open class CfnWorkgroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.WorkgroupProperty,
+      cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.WorkgroupProperty,
     ) : CdkObject(cdkObject), WorkgroupProperty {
       /**
        * The base data warehouse capacity of the workgroup in Redshift Processing Units (RPUs).

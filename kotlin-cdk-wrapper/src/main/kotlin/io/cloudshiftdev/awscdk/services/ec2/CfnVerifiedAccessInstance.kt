@@ -70,8 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html)
  */
-public open class CfnVerifiedAccessInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance,
+public open class CfnVerifiedAccessInstance(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -525,7 +525,8 @@ public open class CfnVerifiedAccessInstance internal constructor(
         CfnVerifiedAccessInstance = CfnVerifiedAccessInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnVerifiedAccessInstance):
-        software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
   }
 
   /**
@@ -614,8 +615,7 @@ public open class CfnVerifiedAccessInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty,
     ) : CdkObject(cdkObject), CloudWatchLogsProperty {
       /**
        * Indicates whether logging is enabled.
@@ -736,8 +736,7 @@ public open class CfnVerifiedAccessInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty,
     ) : CdkObject(cdkObject), KinesisDataFirehoseProperty {
       /**
        * The ID of the delivery stream.
@@ -896,8 +895,7 @@ public open class CfnVerifiedAccessInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property,
     ) : CdkObject(cdkObject), S3Property {
       /**
        * The bucket name.
@@ -1192,8 +1190,7 @@ public open class CfnVerifiedAccessInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessLogsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessLogsProperty,
     ) : CdkObject(cdkObject), VerifiedAccessLogsProperty {
       /**
        * CloudWatch Logs logging destination.
@@ -1391,8 +1388,7 @@ public open class CfnVerifiedAccessInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessTrustProviderProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessTrustProviderProperty,
     ) : CdkObject(cdkObject), VerifiedAccessTrustProviderProperty {
       /**
        * A description for the AWS Verified Access trust provider.

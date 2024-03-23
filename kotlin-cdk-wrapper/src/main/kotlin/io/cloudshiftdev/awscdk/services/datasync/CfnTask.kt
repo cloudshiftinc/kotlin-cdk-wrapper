@@ -104,8 +104,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html)
  */
-public open class CfnTask internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask,
+public open class CfnTask(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnTask,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1016,7 +1016,7 @@ public open class CfnTask internal constructor(
         CfnTask(cdkObject)
 
     internal fun unwrap(wrapped: CfnTask): software.amazon.awscdk.services.datasync.CfnTask =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.datasync.CfnTask
   }
 
   /**
@@ -1081,7 +1081,7 @@ public open class CfnTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DeletedProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DeletedProperty,
     ) : CdkObject(cdkObject), DeletedProperty {
       /**
        * Specifies whether you want your task report to include only what went wrong with your
@@ -1195,7 +1195,7 @@ public open class CfnTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty,
     ) : CdkObject(cdkObject), DestinationProperty {
       /**
        * Specifies the Amazon S3 bucket where DataSync uploads your task report.
@@ -1304,7 +1304,7 @@ public open class CfnTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.FilterRuleProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.FilterRuleProperty,
     ) : CdkObject(cdkObject), FilterRuleProperty {
       /**
        * The type of filter rule to apply.
@@ -2213,7 +2213,7 @@ public open class CfnTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OptionsProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OptionsProperty,
     ) : CdkObject(cdkObject), OptionsProperty {
       /**
        * A file metadata value that shows the last time that a file was accessed (that is, when the
@@ -2807,7 +2807,7 @@ public open class CfnTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty,
     ) : CdkObject(cdkObject), OverridesProperty {
       /**
        * Specifies the level of reporting for the files, objects, and directories that DataSync
@@ -2965,7 +2965,7 @@ public open class CfnTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.S3Property,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.S3Property,
     ) : CdkObject(cdkObject), S3Property {
       /**
        * Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a
@@ -3070,7 +3070,7 @@ public open class CfnTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty,
     ) : CdkObject(cdkObject), SkippedProperty {
       /**
        * Specifies whether you want your task report to include only what went wrong with your
@@ -3399,8 +3399,7 @@ public open class CfnTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnTask.TaskReportConfigProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskReportConfigProperty,
     ) : CdkObject(cdkObject), TaskReportConfigProperty {
       /**
        * Specifies the Amazon S3 bucket where DataSync uploads your task report.
@@ -3539,7 +3538,7 @@ public open class CfnTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty,
     ) : CdkObject(cdkObject), TaskScheduleProperty {
       /**
        * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a
@@ -3630,7 +3629,7 @@ public open class CfnTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TransferredProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TransferredProperty,
     ) : CdkObject(cdkObject), TransferredProperty {
       /**
        * Specifies whether you want your task report to include only what went wrong with your
@@ -3724,7 +3723,7 @@ public open class CfnTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty,
     ) : CdkObject(cdkObject), VerifiedProperty {
       /**
        * Specifies whether you want your task report to include only what went wrong with your

@@ -30,11 +30,11 @@ import io.cloudshiftdev.awscdk.services.kinesis.IStream
  * .build();
  * ```
  */
-public abstract class Endpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.Endpoint,
+public abstract class Endpoint(
+  cdkObject: software.amazon.awscdk.services.cloudfront.Endpoint,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.Endpoint,
+    cdkObject: software.amazon.awscdk.services.cloudfront.Endpoint,
   ) : Endpoint(cdkObject)
 
   public companion object {

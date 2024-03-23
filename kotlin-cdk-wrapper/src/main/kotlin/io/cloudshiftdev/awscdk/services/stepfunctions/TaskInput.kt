@@ -28,8 +28,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public open class TaskInput internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.TaskInput,
+public open class TaskInput(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.TaskInput,
 ) : CdkObject(cdkObject) {
   /**
    * type of task input.
@@ -57,6 +57,6 @@ public open class TaskInput internal constructor(
         = TaskInput(cdkObject)
 
     internal fun unwrap(wrapped: TaskInput): software.amazon.awscdk.services.stepfunctions.TaskInput
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.TaskInput
   }
 }

@@ -104,7 +104,7 @@ public interface CfnApiKeyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.CfnApiKeyProps,
+    cdkObject: software.amazon.awscdk.services.appsync.CfnApiKeyProps,
   ) : CdkObject(cdkObject), CfnApiKeyProps {
     /**
      * Unique AWS AppSync GraphQL API ID for this API key.

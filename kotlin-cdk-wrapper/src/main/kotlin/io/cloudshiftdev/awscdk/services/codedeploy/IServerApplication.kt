@@ -33,7 +33,7 @@ public interface IServerApplication : IResource {
   public fun applicationName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.IServerApplication,
+    cdkObject: software.amazon.awscdk.services.codedeploy.IServerApplication,
   ) : CdkObject(cdkObject), IServerApplication {
     /**
      *

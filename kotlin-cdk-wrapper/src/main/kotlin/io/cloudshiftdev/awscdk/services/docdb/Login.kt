@@ -142,7 +142,7 @@ public interface Login {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.docdb.Login,
+    cdkObject: software.amazon.awscdk.services.docdb.Login,
   ) : CdkObject(cdkObject), Login {
     /**
      * Specifies characters to not include in generated passwords.

@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-querydefinition.html)
  */
-public open class CfnQueryDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.CfnQueryDefinition,
+public open class CfnQueryDefinition(
+  cdkObject: software.amazon.awscdk.services.logs.CfnQueryDefinition,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -235,6 +235,7 @@ public open class CfnQueryDefinition internal constructor(
         CfnQueryDefinition = CfnQueryDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnQueryDefinition):
-        software.amazon.awscdk.services.logs.CfnQueryDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.logs.CfnQueryDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.logs.CfnQueryDefinition
   }
 }

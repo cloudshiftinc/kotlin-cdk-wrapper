@@ -72,7 +72,7 @@ public interface Tag {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.Tag,
+    cdkObject: software.amazon.awscdk.services.s3.Tag,
   ) : CdkObject(cdkObject), Tag {
     /**
      * key to e tagged.

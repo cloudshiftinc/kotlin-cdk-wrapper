@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
  */
-public open class CfnRole internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CfnRole,
+public open class CfnRole(
+  cdkObject: software.amazon.awscdk.services.iam.CfnRole,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -857,7 +857,7 @@ public open class CfnRole internal constructor(
         CfnRole(cdkObject)
 
     internal fun unwrap(wrapped: CfnRole): software.amazon.awscdk.services.iam.CfnRole =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.CfnRole
   }
 
   /**
@@ -948,7 +948,7 @@ public open class CfnRole internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iam.CfnRole.PolicyProperty,
+      cdkObject: software.amazon.awscdk.services.iam.CfnRole.PolicyProperty,
     ) : CdkObject(cdkObject), PolicyProperty {
       /**
        * The entire contents of the policy that defines permissions.

@@ -281,7 +281,7 @@ public interface CfnDatasetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.forecast.CfnDatasetProps,
+    cdkObject: software.amazon.awscdk.services.forecast.CfnDatasetProps,
   ) : CdkObject(cdkObject), CfnDatasetProps {
     /**
      * The frequency of data collection. This parameter is required for RELATED_TIME_SERIES

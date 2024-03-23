@@ -71,9 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html)
  */
-public open class CfnCertificate internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.certificatemanager.CfnCertificate,
+public open class CfnCertificate(
+  cdkObject: software.amazon.awscdk.services.certificatemanager.CfnCertificate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -695,7 +694,8 @@ public open class CfnCertificate internal constructor(
         CfnCertificate = CfnCertificate(cdkObject)
 
     internal fun unwrap(wrapped: CfnCertificate):
-        software.amazon.awscdk.services.certificatemanager.CfnCertificate = wrapped.cdkObject
+        software.amazon.awscdk.services.certificatemanager.CfnCertificate = wrapped.cdkObject as
+        software.amazon.awscdk.services.certificatemanager.CfnCertificate
   }
 
   /**
@@ -875,8 +875,7 @@ public open class CfnCertificate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.certificatemanager.CfnCertificate.DomainValidationOptionProperty,
+      cdkObject: software.amazon.awscdk.services.certificatemanager.CfnCertificate.DomainValidationOptionProperty,
     ) : CdkObject(cdkObject), DomainValidationOptionProperty {
       /**
        * A fully qualified domain name (FQDN) in the certificate request.

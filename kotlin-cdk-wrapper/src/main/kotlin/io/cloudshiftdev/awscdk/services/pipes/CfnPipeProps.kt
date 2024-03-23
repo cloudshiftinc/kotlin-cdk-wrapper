@@ -689,7 +689,7 @@ public interface CfnPipeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pipes.CfnPipeProps,
+    cdkObject: software.amazon.awscdk.services.pipes.CfnPipeProps,
   ) : CdkObject(cdkObject), CfnPipeProps {
     /**
      * A description of the pipe.

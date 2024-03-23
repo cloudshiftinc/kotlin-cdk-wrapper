@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-notificationchannel.html)
  */
-public open class CfnNotificationChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fms.CfnNotificationChannel,
+public open class CfnNotificationChannel(
+  cdkObject: software.amazon.awscdk.services.fms.CfnNotificationChannel,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -170,6 +170,7 @@ public open class CfnNotificationChannel internal constructor(
         CfnNotificationChannel = CfnNotificationChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnNotificationChannel):
-        software.amazon.awscdk.services.fms.CfnNotificationChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.fms.CfnNotificationChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.fms.CfnNotificationChannel
   }
 }
